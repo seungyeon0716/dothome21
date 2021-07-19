@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font.css">
+    <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism-okaidia.min.css"
+        integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @font-face {
+            font-family: 'NEXON Lv1 Gothic OTF';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'NEXON Lv1 Gothic OTF';
+            line-height: 1.6;
+        }
+
+        body {
+            padding: 5%;
+            margin-bottom: 400px;
+        }
+
+        h1 {
+            padding-bottom: 20px;
+        }
+
+        hr {
+            margin: 5% 0;
+            border-style: dashed;
+            border-color: #E6E6E6;
+            border-width: 1px;
+        }
+
+        img {
+            vertical-align: top;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .sample {
+            border: 1px solid #E6E6E6;
+            border-radius: 5px;
+        }
+
+        .sample h2 {
+            position: relative;
+            font-size: 16px;
+            background-color: #F2F2F2;
+            padding: 15px;
+            border-bottom: 1px solid #E6E6E6;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .sample h2 .dot {
+            width: 10px;
+            height: 10px;
+            background: #989898;
+            display: block;
+            border-radius: 50%;
+            position: absolute;
+            right: 30px;
+            top: 20px;
+        }
+
+        .sample h2 .dot::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #989898;
+            border-radius: 50%;
+            position: absolute;
+            left: -15px;
+            top: 0;
+        }
+
+        .sample h2 .dot::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #989898;
+            position: absolute;
+            border-radius: 50%;
+            right: -15px;
+            top: 0;
+        }
+
+        .sample .ex {
+            padding: 20px;
+        }
+
+        .sample .ex .text {
+            margin: 10px 0;
+        }
+
+        .sample .re {
+            padding: 20px;
+            border-top: 1px solid #E6E6E6;
+        }
+
+        .sample .re a {
+            color: #333;
+            text-decoration: none;
+            border: 1px solid #333;
+            border-radius: 30px;
+            padding: 10px 30px;
+            margin: 5px;
+            display: inline-block;
+        }
+
+        .sample .re a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .sample .problem {
+            padding: 25px;
+            border-bottom: 1px solid #E6E6E6;
+            line-height: 1.6;
+        }
+
+        .sample pre {
+            margin: 0 !important;
+            border-radius: 0;
+            ;
+        }
+
+        .sample .desc {
+            padding: 25px;
+            border-bottom: 1px solid #E6E6E6;
+        }
+
+        .sample .desc dt {
+            padding: 3px 0;
+            margin-bottom: 6px;
+        }
+
+        .sample .desc dd {
+            padding: 3px 0 16px 0;
+            line-height: 1.6;
+        }
+
+        .sample .sam {
+            padding: 25px;
+            border-bottom: 1px solid #E6E6E6;
+        }
+
+        .sample .sam dt {
+            padding: 3px 0;
+            margin-bottom: 6px;
+        }
+
+        .sample .sam dd {
+            padding: 3px 0 16px 0;
+        }
+
+        ol {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+
+        ol li {
+            display: inline;
+            text-align: center;
+            line-height: 40px;
+            margin-bottom: 5px;
+        }
+
+        ol li a {
+            display: inline-block;
+            border-radius: 30px;
+            padding: 2px 20px 0px 20px;
+            border: 1px solid #000;
+        }
+
+        ol li a:hover {
+            background: #000;
+            color: #fff;
+        }
+
+        ol li.active {
+            background: #000;
+        }
+
+        ol li.active a {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Javascript 문법 정리</h1>
+    <ol>
+        <li><a href="#sample1">변수</a></li>
+        <li><a href="#sample4">상수</a></li>
+        <li><a href="#sample5">배열(Array)</a></li>
+        <li><a href="#sample9">객체(Object)</a></li>
+
+    </ol>
+
+    <div id="sample1" class="sample">
+        <h2>01. 변수 : 데이터 저장소 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    var x = 100;            //변수 x에 숫자 100을 저장
+    var y = 200;            //변수 y에 숫자 200을 저장
+    var z = "javascript";   //변수 z에 문자 javascript 저장
+
+    document.write("*** 01. 변수 ***");
+    document.write(x);
+    document.write(y);
+    document.write(z);
+}
+
+</code></pre>
+        </div>
+    </div>
+
+
+    <hr>
+
+    <div id="sample2" class="sample">
+        <h2>02. 변수 : 데이터 저장 + 데이터 변경 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    let x = 100;
+    let y = 200;
+    let z = "javascript";
+    x = 300;    //변수 x에 값이 100에서 300으로 변경
+    y = 400;
+    z = "jquery";
+
+    document.write("*** 02. 변수 : 데이터 저장 + 데이터 변경 ***");
+    document.write(x);
+    document.write(y);
+    document.write(z);
+}
+</code></pre>
+        </div>
+    </div>
+
+
+    <hr>
+
+    <div id="sample3" class="sample">
+        <h2>03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가<span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    let x = 100;
+    let y = 200;
+    let z = "javascript";
+    x += 300;       //x = x + 300; (대입연산자)
+    y += 400;       //y = y + 400;
+    z += "jquery";  //z = z + "jquery";
+
+    document.write("*** 03. 변수 ***");
+    document.write(x);
+    document.write(y);
+    document.write(z);
+}
+
+</code></pre>
+        </div>
+    </div>
+
+
+    <hr>
+
+    <div id="sample4" class="sample">
+        <h2>04. 상수<span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{const x = 100;
+    const y = 200;
+    const z = "javascript";
+    //x = 300;
+    //y = 400;
+    //z = "jquery";
+    //Uncaught TypeError: Assignment to constant variable.
+
+    document.write("*** 04. 상수 ***");
+    document.write(x);
+    document.write(y);
+    document.write(z);
+}
+</code></pre>
+        </div>
+    </div>
+  
+
+    <hr>
+
+    <div id="sample5" class="sample">
+        <h2>05. 배열 : 표현 방법1<span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{const arr = new Array();     //배열 선언
+    arr[0] = 100;                //첫번째 배열 저장소에 숫자 100을 저장
+    arr[1] = 200;                //두번째 배열 저장소에 숫자 200을 저장
+    arr[2] = "javascript";       //세번째 배열 저장소에 문자 javascript을 저장
+
+    document.write("*** 05. 배열 ***");
+    document.write(arr[0]);
+    document.write(arr[1]);
+    document.write(arr[2]);
+}
+</code></pre>
+        </div>
+    </div>
+
+
+    <hr>
+
+    <div id="sample6" class="sample">
+        <h2>06. 배열 : 표현 방법2<span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{const arr = new Array(100, 200, 'javascript');
+
+    document.write("*** 06. 배열 ***");
+    document.write(arr[0]");
+    document.write(arr[1]);
+    document.write(arr[2]);
+}
+</code></pre>
+        </div>
+    </div>
+   
+
+    <hr>
+
+    <div id="sample7" class="sample">
+        <h2>07. 상수<span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{const arr = [];     //배열선언
+    arr[0] = 100;            
+    arr[1] = 200;             
+    arr[2] = "javascript";  
+
+    document.write("*** 07. 배열 ***");
+    document.write(arr[0];
+    document.write(arr[1]);
+    document.write(arr[2]);
+}
+</code></pre>
+        </div>
+    </div>
+
+
+    <hr>
+
+    <div id="sample8" class="sample">
+        <h2>08. 상수<span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{const arr = [100, 200, "javascript"];    //배열선언
+
+    document.write("*** 08. 배열 ***");
+    document.write(arr[0]);
+    document.write(arr[1]);
+    document.write(arr[2]);
+}
+</code></pre>
+        </div>
+    </div>
+
+
+    <hr>
+
+    <div id="sample9" class="sample">
+        <h2>09. 상수<span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+
+}
+</code></pre>
+        </div>
+    </div>
+
+
+    <hr>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
+    <script>
+        //sample1
+        //01. 변수 : 데이터 저장소
+        {
+            var x = 100; //변수 x에 숫자 100을 저장
+            var y = 200; //변수 y에 숫자 200을 저장
+            var z = "javascript"; //변수 z에 문자 javascript 저장
+
+            document.write("*** 01. 변수 ***<br>");
+            document.write(x, "<br>");
+            document.write(y, "<br>");
+            document.write(z, "<br><br>");
+        }
+
+        //sample2
+        //02. 변수 : 데이터 저장 + 데이터 변경
+        {
+            let x = 100;
+            let y = 200;
+            let z = "javascript";
+            x = 300;    //변수 x에 값이 100에서 300으로 변경
+            y = 400;
+            z = "jquery";
+
+            document.write("*** 02. 변수 ***<br>");
+            document.write(x, "<br>");
+            document.write(y, "<br>");
+            document.write(z, "<br><br>");
+        }
+
+        //sample3
+        //변수 : 데이터 저장 + 데이터 변경 + 데이터 추가
+        {
+            let x = 100;
+            let y = 200;
+            let z = "javascript";
+            x += 300;       //x = x + 300; (대입연산자)
+            y += 400;       //y = y + 400;
+            z += "jquery";  //z = z + "jquery";
+
+            document.write("*** 03. 변수 ***<br>");
+            document.write(x, "<br>");
+            document.write(y, "<br>");
+            document.write(z, "<br><br>");
+        }
+
+        //sample4
+        //상수 : 데이터 저장소 : 데이터 값이 변하지 않음
+        {
+            const x = 100;
+            const y = 200;
+            const z = "javascript";
+            //x = 300;
+            //y = 400;
+            //z = "jquery";
+            //Uncaught TypeError: Assignment to constant variable.
+
+            document.write("*** 04. 상수 ***<br>");
+            document.write(x, "<br>");
+            document.write(y, "<br>");
+            document.write(z, "<br><br>");
+        }
+
+        //sample5
+        //배열 : 여러 개의 데이터 저장 : 표현 방법1
+        {
+            const arr = new Array();     //배열 선언
+            arr[0] = 100;                //첫번째 배열 저장소에 숫자 100을 저장
+            arr[1] = 200;                //두번째 배열 저장소에 숫자 200을 저장
+            arr[2] = "javascript";       //세번째 배열 저장소에 문자 javascript을 저장
+
+            document.write("*** 05. 배열 ***<br>");
+            document.write(arr[0], "<br>");
+            document.write(arr[1], "<br>");
+            document.write(arr[2], "<br><br>");
+        }
+
+        //sample6
+        //배열 : 표현 방법2
+        {
+            const arr = new Array(100, 200, 'javascript');
+
+            document.write("*** 06. 배열 ***<br>");
+            document.write(arr[0], "<br>");
+            document.write(arr[1], "<br>");
+            document.write(arr[2], "<br><br>");
+        }
+
+        //sample7
+        //배열 : 표현 방법3
+        { 
+            const arr = [];     //배열선언
+            arr[0] = 100;            
+            arr[1] = 200;             
+            arr[2] = "javascript";  
+
+            document.write("*** 07. 배열 ***<br>");
+            document.write(arr[0], "<br>");
+            document.write(arr[1], "<br>");
+            document.write(arr[2], "<br><br>");
+        }
+
+        //sample8
+        //배열 : 표현 방법4
+        {
+            const arr = [100, 200, "javascript"];    //배열선언
+
+            document.write("*** 08. 배열 ***<br>");
+            document.write(arr[0], "<br>");
+            document.write(arr[1], "<br>");
+            document.write(arr[2], "<br><br>");
+        }
+
+        //sample9
+        //객체 : 데이터 저장소 (키와 값) : 배열 스타일
+        {
+            const obj = new Object();
+            obj[0] = 100;
+            obj[1] = 200;
+            obj[2] = "javascript";
+
+            document.write("*** 09. 객체 ***<br>");
+            document.write(obj[0], "<br>");
+            document.write(obj[1], "<br>");
+            document.write(obj[2], "<br><br>");
+        }
+
+        //sample10
+        //객체 
+        {
+            const obj = new Object();
+            obj.a = 100;
+            obj.b = 200;
+            obj.c = "javascript";
+
+            document.write("*** 10. 객체 ***<br>");
+            document.write(obj.a, "<br>");
+            document.write(obj.b, "<br>");
+            document.write(obj.c, "<br><br>");
+        }
+    </script>
+</body>
+
+</html>

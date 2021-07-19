@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 연습1</title>
+    <style>
+        @font-face {
+            font-family: 'TmonMonsori';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            font-family: 'TmonMonsori';
+            background-color: #fff3e0;
+            color: #fff;
+            font-size: 60px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #header {
+            width: 1200px;
+            height: 100px;
+            line-height: 100px;
+            background-color: #ffe0b2;
+        }
+        #nav {
+            width: 1200px;
+            height: 100px;
+            line-height: 100px;
+            background-color: #ffcc80;
+        }
+        #side {
+            width: 400px;
+            height: 1000px;
+            line-height: 1000px;
+            background-color: #ffb74d;
+            float: left;
+        }
+        #contents {
+            width: 800px;
+            height: 1000px;
+            line-height: 1000px;
+            background-color: #ffa726;
+            float: left;
+        }
+        #footer {
+            width: 1200px;
+            height: 100px;
+            line-height: 100px;
+            background-color: #ff9800;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header">header</div>
+        <div id="nav">nav</div>
+        <div id="side">side</div>
+        <div id="contents">contents</div>
+        <div id="footer">footer</div>
+    </div>
+</body>
+
+</html>
