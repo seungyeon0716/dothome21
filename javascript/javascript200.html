@@ -253,12 +253,12 @@
         <h2>01. if문 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    //true, false, 1, "1", "",  0, null, undrfind, [], {}
+    ///true=true, false=false, 1=true, "1"=true, 0=false, null=false, undefiend=flase, []=true, {}=true, ""=false
     if(true){
-        document.write("***01. if문 ***");
+        document.write("*** 01. if문 ***");
         document.write("조건문이 실행되었습니다. (true)");
     } else {
-        document.write("***01. if문 ***");
+        document.write("*** 01. if문 ***");
         document.write("조건문이 실행되었습니다. (false)");
     }
 }
@@ -276,19 +276,19 @@
     let num = 100;
 
     if( num == 90 ){
-        document.write("***02. 다중 if문 ***");
+        document.write("*** 02. 다중 if문 ***");
         document.write("조건문이 실행되었습니다. (num == 90)");
     } else if ( num == 100){
-        document.write("***02. 다중 if문 ***");
+        document.write("*** 02. 다중 if문 ***");
         document.write("조건문이 실행되었습니다. (num == 100)");
     } else if ( num == 200){
-        document.write("***02. 다중 if문 ***");
+        document.write("*** 02. 다중 if문 ***");
         document.write("조건문이 실행되었습니다. (num == 200)");
     } else if ( num == 300){
-        document.write("***02. 다중 if문 ***");
+        document.write("*** 02. 다중 if문 ***");
         document.write("조건문이 실행되었습니다. (num == 300)");
     } else {
-        document.write("***02. 다중 if문 ***");
+        document.write("*** 02. 다중 if문 ***");
         document.write("조건문이 실행되었습니다. (num == 값이 없음)");
     }
 }
@@ -305,7 +305,7 @@
 <pre class="line-numbers"><code class="language-js">{
     let num = 100;
 
-    if( num ==100) {
+    if( num ==100){
         document.write("***03. 중첩 if문 ***");
         document.write("조건문이 실행되었습니다. (1)");
         if( num ==100){
@@ -335,18 +335,19 @@
     switch( num){
         case 100 : 
             document.write("***04. switch문 ***");
-            document.write("조건문이 실행되었습니다. (nu==100)");
+            document.write("조건문이 실행되었습니다.(num==100)");
         break;
         case 200 : 
             document.write("***04. switch문 ***");
-            document.write("조건문이 실행되었습니다. (nu==200)");
+            document.write("조건문이 실행되었습니다.(num==200)");
         break;
         case 300 : 
             document.write("***04. switch문 ***");
-            document.write("조건문이 실행되었습니다. (nu==300)");
+            document.write("조건문이 실행되었습니다.(num==300)");
         break;
-            default : document.write("***04. switch문 ***");
-            document.write("조건문이 실행되었습니다. (nu==값이 없음)");
+        default : 
+            document.write("***04. switch문 ***");
+            document.write("조건문이 실행되었습니다.(num==값이 없음)");
         break;
     }
 }
@@ -360,7 +361,7 @@
         <h2>05. 삼항 연산자 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    let nom = 100;
+    let num = 100;
 
     //if(num == 100 ){
     //   document.write("true");
@@ -383,7 +384,7 @@
         <h2>06. if문 생략 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    let nom = 100;
+    let num = 100;
 
     document.write("***06. if문 생략 ***");
 
@@ -402,7 +403,7 @@
         //sample1
         //if문 
         {
-            //true, false, 1, "1", 0 (false나옴), null (값이 없을때도 false), undefined (값이 아예없을때 false), [] (배열은 true), {} , ""(false)
+            ///true=true, false=false, 1=true, "1"=true, 0=false, null=false, undefiend=flase, []=true, {}=true, ""=false
             if(true){
                 document.write("***01. if문 ***<br>");
                 document.write("조건문이 실행되었습니다. (true)<br><br>");
@@ -418,7 +419,7 @@
             let num = 100;
 
             if( num == 90 ){
-                document.write("***02. 다중 if문 ***<br><br>");
+                document.write("***02. 다중 if문 ***<br>");
                 document.write("조건문이 실행되었습니다. (num == 90)<br><br>");
             } else if ( num == 100){
                 document.write("***02. 다중 if문 ***<br>");
@@ -442,9 +443,9 @@
 
             if ( num ==100) {
                 document.write("***03. 중첩 if문 ***<br>");
-                document.write("조건문이 실행되었습니다. (1)<br><br>");
+                document.write("조건문이 실행되었습니다. (1)<br>");
                 if ( num ==100){
-                    document.write("조건문이 실행되었습니다. (2)<br><br>");
+                    document.write("조건문이 실행되었습니다. (2)<br>");
                     if ( num ==100){
                         document.write("조건문이 실행되었습니다. (3)<br><br>");
                     }
@@ -463,19 +464,19 @@
             switch( num){
                 case 100 : 
                     document.write("***04. switch문 ***<br>");
-                    document.write("조건문이 실행되었습니다. (nu==100)<br><br>");
+                    document.write("조건문이 실행되었습니다. (num==100)<br><br>");
                 break;
                 case 200 : 
                     document.write("***04. switch문 ***<br>");
-                    document.write("조건문이 실행되었습니다. (nu==200)<br><br>");
+                    document.write("조건문이 실행되었습니다. (num==200)<br><br>");
                 break;
                 case 300 : 
                     document.write("***04. switch문 ***<br>");
-                    document.write("조건문이 실행되었습니다. (nu==300)<br><br>");
+                    document.write("조건문이 실행되었습니다. (num==300)<br><br>");
                 break;
                 default : 
                     document.write("***04. switch문 ***<br>");
-                    document.write("조건문이 실행되었습니다. (nu==값이 없음)<br><br>");
+                    document.write("조건문이 실행되었습니다. (num==값이 없음)<br><br>");
                 break;
                      }
         }
@@ -483,7 +484,7 @@
             //sample5
             //삼항 연산자(조건문 연산자)
         {
-            let nom = 100;
+            let num = 100;
 
             //if(num == 100 ){
             //   document.write("true<br><br>");
@@ -493,14 +494,14 @@
 
             document.write("***05. 조건부 연산자 ***<br>");
 
-            (num == 100) ? document.write("true<br><br>") : document.write("false<br><br><br>");
+            (num == 100) ? document.write("true<br><br>") : document.write("false<br><br>");
             
         }
 
         //sample6
         //if문 생략
         {
-            let nom = 100;
+            let num = 100;
 
             document.write("***06. if문 생략 ***<br>");
 
