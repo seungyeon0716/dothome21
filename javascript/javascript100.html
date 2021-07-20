@@ -322,7 +322,8 @@
     <div id="sample4" class="sample">
         <h2>04. 상수<span class="dot"></span></h2>
         <div class="code">
-            <pre class="line-numbers"><code class="language-js">{const x = 100;
+            <pre class="line-numbers"><code class="language-js">{
+    const x = 100;
     const y = 200;
     const z = "javascript";
     //x = 300;
@@ -345,7 +346,8 @@
     <div id="sample5" class="sample">
         <h2>05. 배열 : 표현 방법1<span class="dot"></span></h2>
         <div class="code">
-            <pre class="line-numbers"><code class="language-js">{const arr = new Array();     //배열 선언
+            <pre class="line-numbers"><code class="language-js">{
+    const arr = new Array();     //배열 선언
     arr[0] = 100;                //첫번째 배열 저장소에 숫자 100을 저장
     arr[1] = 200;                //두번째 배열 저장소에 숫자 200을 저장
     arr[2] = "javascript";       //세번째 배열 저장소에 문자 javascript을 저장
@@ -365,7 +367,8 @@
     <div id="sample6" class="sample">
         <h2>06. 배열 : 표현 방법2<span class="dot"></span></h2>
         <div class="code">
-            <pre class="line-numbers"><code class="language-js">{const arr = new Array(100, 200, 'javascript');
+            <pre class="line-numbers"><code class="language-js">{
+    const arr = new Array(100, 200, 'javascript');
 
     document.write("*** 06. 배열 ***");
     document.write(arr[0]");
@@ -382,7 +385,8 @@
     <div id="sample7" class="sample">
         <h2>07. 배열 : 표현 방법3<span class="dot"></span></h2>
         <div class="code">
-            <pre class="line-numbers"><code class="language-js">{const arr = [];     //배열선언
+            <pre class="line-numbers"><code class="language-js">{
+    const arr = [];     //배열선언
     arr[0] = 100;            
     arr[1] = 200;             
     arr[2] = "javascript";  
@@ -402,7 +406,8 @@
     <div id="sample8" class="sample">
         <h2>08. 객체 : 표현 방법1<span class="dot"></span></h2>
         <div class="code">
-            <pre class="line-numbers"><code class="language-js">{const arr = [100, 200, "javascript"];    //배열선언
+            <pre class="line-numbers"><code class="language-js">{
+    const arr = [100, 200, "javascript"];    //배열선언
 
     document.write("*** 08. 배열 ***");
     document.write(arr[0]);
@@ -419,7 +424,8 @@
     <div id="sample9" class="sample">
         <h2>09. 객체 : 표현 방법1<span class="dot"></span></h2>
         <div class="code">
-            <pre class="line-numbers"><code class="language-js">{const obj = new Object();
+            <pre class="line-numbers"><code class="language-js">{
+    const obj = new Object();
     obj[0] = 100;
     obj[1] = 200;
     obj[2] = "javascript";
@@ -440,7 +446,8 @@
     <div id="sample10" class="sample">
         <h2>10. 객체 : 표현 방법2<span class="dot"></span></h2>
         <div class="code">
-            <pre class="line-numbers"><code class="language-js">{const obj = new Object();
+            <pre class="line-numbers"><code class="language-js">{
+    const obj = new Object();
     obj.a = 100;
     obj.b = 200;
     obj.c = "javascript";
@@ -460,7 +467,8 @@
     <div id="sample11" class="sample">
         <h2>11. 객체 : 표현 방법3<span class="dot"></span></h2>
         <div class="code">
-            <pre class="line-numbers"><code class="language-js">{const obj = {};
+            <pre class="line-numbers"><code class="language-js">{
+    const obj = {};
     obj.a = 100;
     obj.b = 200;
     obj.c = "javascript";
@@ -480,11 +488,8 @@
     <div id="sample12" class="sample">
         <h2>12. 객체 : 표현 방법4<span class="dot"></span></h2>
         <div class="code">
-            <pre class="line-numbers"><code class="language-js">{const obj = {
-        a: 100,
-        b: 200,
-        c: "javascript"
-    };
+            <pre class="line-numbers"><code class="language-js">{
+    const obj = {a: 100, b: 200, c: "javascript"};
 
     document.write("*** 12. 객체 ***");
     document.write(obj.a);
@@ -501,13 +506,10 @@
     <div id="sample13" class="sample">
         <h2>13. 객체 : 표현 방법5<span class="dot"></span></h2>
         <div class="code">
-            <pre class="line-numbers"><code class="language-js">{const obj = [{
-            a: 100,
-            b: 200
-        },
-        {
-            c: "javascript"
-        }
+            <pre class="line-numbers"><code class="language-js">{
+    const obj = [
+    {a: 100, b: 200},
+    {c: "javascript"}
     ];
 
     document.write("*** 13. 객체 ***");
@@ -525,13 +527,13 @@
     <div id="sample14" class="sample">
         <h2>14. 객체 : 표현 방법6<span class="dot"></span></h2>
         <div class="code">
-            <pre class="line-numbers"><code class="language-js">{const obj = {
+            <pre class="line-numbers"><code class="language-js">{
+    const obj = {
         a: 100,
         b: [200, 300],
         c: "javascript"
     }
-
-    document.write("*** 14. 객체 ***<br>");
+    document.write("*** 14. 객체 ***");
     document.write(obj.a);
     document.write(obj.b);
     document.write(obj.b[0]);
@@ -548,15 +550,12 @@
     <div id="sample15" class="sample">
         <h2>15. 객체 : 표현 방법7<span class="dot"></span></h2>
         <div class="code">
-            <pre class="line-numbers"><code class="language-js">{const a = 100;
+            <pre class="line-numbers"><code class="language-js">{
+    const a = 100;
     const b = 200;
     const c = "javascript";
 
-    const obj = {
-        a,
-        b,
-        c
-    }
+    const obj = { a, b, c }
 
     document.write("*** 15. 객체 ***");
     document.write(obj.a);
@@ -573,19 +572,20 @@
     <div id="sample16" class="sample">
         <h2>16. 객체 : 표현 방법8<span class="dot"></span></h2>
         <div class="code">
-            <pre class="line-numbers"><code class="language-js">{const obj = {
+            <pre class="line-numbers"><code class="language-js">{
+    const obj = {
         a: 100,
         b: [200, 300],
         c: "javascript",
-        d: function () {
+        d: function (){
             document.write("javascript가 실행되었습니다.")
         },
-        e: function () {
+        e: function (){
             document.write(obj.c + "가 실행되었습니다.");
         },
-        f: function () {
+        f: function (){
             document.write(this.c + "가 실행되었습니다.");
-        }
+        },
     }
     document.write("*** 16. 객체 ***");
     document.write(obj.a);
@@ -763,11 +763,7 @@
         //sample12
         //객체 : 데이터 저장(키와 값) : 표현 방법 4 
         {
-            const obj = {
-                a: 100,
-                b: 200,
-                c: "javascript"
-            };
+            const obj = { a: 100, b: 200,  c: "javascript"};
 
             document.write("*** 12. 객체 ***<br>");
             document.write(obj.a, "<br>");
@@ -778,13 +774,9 @@
         //sample13
         //객체 : 데이터 저장(키와 값) : 표현 방법 5 : 배열 속에 객체
         {
-            const obj = [{
-                    a: 100,
-                    b: 200
-                },
-                {
-                    c: "javascript"
-                }
+            const obj = [
+                { a: 100, b: 200 },
+                { c: "javascript" }
             ];
 
             document.write("*** 13. 객체 ***<br>");
@@ -817,11 +809,7 @@
             const b = 200;
             const c = "javascript";
 
-            const obj = {
-                a,
-                b,
-                c
-            }
+            const obj = { a,  b, c  }
 
             document.write("*** 15. 객체 ***<br>");
             document.write(obj.a, "<br>");
