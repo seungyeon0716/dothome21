@@ -175,7 +175,6 @@
 
         ol {
             list-style: none;
-            margin-bottom: 40px;
         }
 
         ol li {
@@ -206,6 +205,11 @@
         }
         .mt20{
             margin-top: 20px;
+        }
+        table {border-collapse: collapse;}
+        table tr td {
+            border: 1px solid #989898;
+            padding: 5px;
         }
     </style>
 </head>
@@ -248,7 +252,7 @@
 
     <hr>
 
-    <!-- //sample -->
+    <!-- //sample1 -->
     <div id="sample1" class="sample">
         <h2>01. if문 <span class="dot"></span></h2>
         <div class="code">
@@ -268,7 +272,7 @@
 
     <hr>
 
-    <!-- //sample -->
+    <!-- //sample2 -->
     <div id="sample2" class="sample">
         <h2>02. 다중 if문 <span class="dot"></span></h2>
         <div class="code">
@@ -298,7 +302,7 @@
 
     <hr>
 
-    <!-- //sample -->
+    <!-- //sample3 -->
     <div id="sample3" class="sample">
         <h2>03. 중첩 if문 <span class="dot"></span></h2>
         <div class="code">
@@ -325,7 +329,7 @@
     </div>
 
     <hr>
-
+    <!-- //sample4 -->
     <div id="sample4" class="sample">
         <h2>04. switch문 <span class="dot"></span></h2>
         <div class="code">
@@ -356,9 +360,9 @@
     </div>
 
     <hr>
-
+    <!-- //sample5 -->
     <div id="sample5" class="sample">
-        <h2>05. 삼항 연산자 <span class="dot"></span></h2>
+        <h2>05. 조건부 연산자 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     let num = 100;
@@ -379,7 +383,7 @@
     </div>
 
     <hr>
-
+    <!-- //sample6 -->
     <div id="sample6" class="sample">
         <h2>06. if문 생략 <span class="dot"></span></h2>
         <div class="code">
@@ -395,6 +399,336 @@
         </div>
     </div>
 
+    <hr>
+    <!-- //sample7 -->
+    <div id="sample7" class="sample">
+        <h2>07. while문 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    document.write("***07. while문 ***");
+
+    let num = 1;
+    while( num  &lt;= 10 ){
+        document.write(num + ". 반복문이 실행되었습니다.");
+        num++;
+    }
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+    <!-- //sample8 -->
+    <div id="sample8" class="sample">
+        <h2>08. do while문 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    document.write("***08. do while문 ***");
+            
+    let num = 1;
+    do {
+        document.write(num + ".반복문이 실행되었습니다.");
+        num++;
+    } while ( num &lt;= 10 );
+
+    document.write("");
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+    <!-- //sample9 -->
+    <div id="sample9" class="sample">
+        <h2>09. for문 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    document.write("***09. for문 ***<br>");
+
+    // for(초깃값; 조건식; 증감값){
+    //     //실행문
+    // }
+
+    for( let i=1; i&lt;=10; i++){
+        document.write(i + ".반복문이 실행되었습니다.");
+    }
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+    <!-- //sample10 -->
+    <div id="sample10" class="sample">
+        <h2>10. 중첩 for문 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    document.write("***10. 중첩 for문 ***");
+
+    for( var i=1; i&lt;=5; i++){
+        document.write(i + ".반복문(아이)이 실행되었습니다.");
+        for( var j=1; j&lt;=5; j++){
+            document.write(j + ".반복문(제이)이 실행되었습니다.");
+        }
+    }
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample12 -->
+    <div id="sample12" class="sample">
+        <h2>12. for of문 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample13 -->
+    <div id="sample13" class="sample">
+        <h2>13. break문 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample14 -->
+    <div id="sample14" class="sample">
+        <h2>14. continue문 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+    <hr>
+    <hr>
+
+    <!-- //sample100 -->
+    <div id="sample100" class="sample">
+        <h2>100. 구구단 만들기 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    //2~9(var i=2; i&lt;=9; i++)
+    //1~9 for(var i=1; i&lt;=9; i++)
+    //num1 * num2 = sum 
+
+    // 2 * 1 = 2;           3 * 1 = 1;
+    // 2 * 2 = 4;           3 * 2 = 6;
+    // 2 * 3 = 6;           3 * 3 = 9;
+    // 2 * 4 = 8;           ..........
+    // 2 * 5 = 10;          9 * 1 = 9;
+    // 2 * 6 = 12;          9 * 2 = 18;
+    // 2 * 7 = 14;
+    // 2 * 8 = 16;
+    // 2 * 9 = 18;
+
+    for(var i=2; i&lt;=9; i++){
+        for(var j=1; j&lt;=9; j++){
+            var sum = i * j;
+            document.write(i + " * " + j + " = " + sum, );
+        }
+    }
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample101 -->
+    <div id="sample101" class="sample">
+        <h2>101. 테이블 만들기 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    //2~9(var i=2; i&lt;=9; i++)
+    //1~9 for(var i=1; i&lt;=9; i++)
+    //num1 * num2 = sum 
+
+    // 2 * 1 = 2;           3 * 1 = 1;
+    // 2 * 2 = 4;           3 * 2 = 6;
+    // 2 * 3 = 6;           3 * 3 = 9;
+    // 2 * 4 = 8;           ..........
+    // 2 * 5 = 10;          9 * 1 = 9;
+    // 2 * 6 = 12;          9 * 2 = 18;
+    // 2 * 7 = 14;
+    // 2 * 8 = 16;
+    // 2 * 9 = 18;
+
+    let num = 1;
+    let table = "&lt;table&gt;";
+
+    for( let i=1; i&lt;=10; i++ ){
+        table += "&lt;tr&gt;";
+        for( let j=1; j&lt;=10; j++ ){
+            table += "&lt;td&gt;"+num+"/&lt;td&gt;";
+            num++;
+        }
+        table += "&lt;/tr&gt;";
+    }
+
+    table +=  "&lt;/table&gt;";
+
+    document.write(table);
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample102 -->
+    <div id="sample102" class="sample">
+        <h2>102. 테이블 만들기 숙제<span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+   
+    <hr>
+    <hr>
+
+
+    <!--<table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+        </tr><tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+        </tr>
+    </table>-->
+
+    <hr>
+    <hr>
     <hr>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -507,6 +841,134 @@
 
             if(num == 100 )document.write("true<br><br>");
             else document.write("false<br><br>");
+        }
+
+        //sample7
+        //while문
+        {
+            document.write("***07. while문 ***<br>");
+
+            let num = 1;
+            while( num  <= 10 ){
+                document.write(num + ". 반복문이 실행되었습니다.<br>");
+                num++;
+            }
+
+            document.write("<br>");
+        }
+
+        //sample8
+        //while문
+        {
+            document.write("***08. do while문 ***<br>");
+            
+            let num = 1;
+            do {
+                document.write(num + ".반복문이 실행되었습니다.<br>");
+                num++;
+            } while ( num <= 10 );
+
+            document.write("<br><br>");
+        }
+
+        //sample9
+        //for문 : 반복문
+        {
+            document.write("***09. for문 ***<br>");
+
+            // for(초깃값; 조건식; 증감값){
+            //     //실행문
+            // }
+
+            for( let i=1; i<=10; i++){
+                document.write(i + ".반복문이 실행되었습니다.<br>");
+            }
+
+            document.write("<br><br>");
+        }
+
+        //sample10
+        //중첩 for문 
+        {
+            document.write("***10. 중첩 for문 ***<br>");
+
+            for( var i=1; i<=5; i++){
+                document.write(i + ".반복문(아이)이 실행되었습니다.<br>");
+                for( var j=1; j<=5; j++){
+                    document.write(j + ".반복문(제이)이 실행되었습니다.<br>");
+                }
+            }
+
+            document.write("<br><br>");
+        }
+
+
+        //sample100 :  구구단 만들기
+        {
+            //2~9(var i=2; i<=9; i++)
+            //1~9 for(var i=1; i<=9; i++)
+            //num1 * num2 = sum 
+
+            // 2 * 1 = 2;           3 * 1 = 1;
+            // 2 * 2 = 4;           3 * 2 = 6;
+            // 2 * 3 = 6;           3 * 3 = 9;
+            // 2 * 4 = 8;           ..........
+            // 2 * 5 = 10;          9 * 1 = 9;
+            // 2 * 6 = 12;          9 * 2 = 18;
+            // 2 * 7 = 14;
+            // 2 * 8 = 16;
+            // 2 * 9 = 18;
+
+            for(var i=2; i<=9; i++){
+                for(var j=1; j<=9; j++){
+                    var sum = i * j;
+                    document.write(i + " * " + j + " = " + sum, "<br>");
+                }
+            }
+
+            document.write("<br>");
+        }
+
+        //sample101: 테이블 만들기
+        {
+            let num = 1;
+            let table = "<table>";
+
+            for( let i=1; i<=10; i++ ){
+                table += "<tr>";
+                for( let j=1; j<=10; j++ ){
+                    table += "<td>"+num+"</<td>";
+                    num++;
+                }
+                table += "</tr>";
+            }
+
+            table +=  "</table>";
+
+            document.write(table);
+
+            document.write("<br>");
+        }
+
+        //sample102: 테이블 만들기 숙제
+        {
+            let num = 100;
+            let table = "<table>";
+
+                for( let i=1; i<=10; i++ ){
+                table += "<tr>";
+                for( let j=1; j<=10; j++ ){
+                    table += "<td>"+num+"</<td>";
+                    num++;
+                }
+                table += "</tr>";
+            }
+
+            table +=  "</table>";
+
+            document.write(table);
+
+            document.write("<br>");
         }
 
     </script>
