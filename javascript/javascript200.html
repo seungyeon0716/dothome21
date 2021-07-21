@@ -594,6 +594,21 @@
         <h2>102. 테이블 만들기 숙제<span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
+    let num = 100;
+    let table = "&lt;table&gt;";
+
+        for( let i=1; i&lt;=10; i++ ){
+        table += "&lt;tr&gt;";
+        for( let j=1; j&lt;=10; j++ ){
+            table += "&lt;td&gt;"+ num +"/&lt;td&gt;";
+            num--;
+        }
+        table += "&lt;/tr&gt;";
+    }
+
+    table +=  "&lt;/table&gt;";
+
+    document.write(table);
 }
 </code></pre>
         </div>
@@ -918,6 +933,7 @@
             // 2 * 7 = 14;
             // 2 * 8 = 16;
             // 2 * 9 = 18;
+            document.write("***100. 구구단 만들기***<br>");
 
             for(var i=2; i<=9; i++){
                 for(var j=1; j<=9; j++){
@@ -958,8 +974,8 @@
                 for( let i=1; i<=10; i++ ){
                 table += "<tr>";
                 for( let j=1; j<=10; j++ ){
-                    table += "<td>"+num+"</<td>";
-                    num++;
+                    table += "<td>"+ num +"</<td>";
+                    num--;
                 }
                 table += "</tr>";
             }
