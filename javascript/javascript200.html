@@ -230,6 +230,9 @@
         <li><a href="javascript200.html">조건문</a></li>
         <li><a href="javascript200.html">반복문</a></li>
     </ol>
+    <ol>
+        <li><a href="javascript400.html">알고리즘 연습</a></li>
+    </ol>
 
     <h2 class="mt20">제어문</h2>
     <ul>
@@ -243,10 +246,11 @@
         <li><a href="sample8">08. do while문</a></li>
         <li><a href="sample9">09. for문</a></li>
         <li><a href="sample10">10. 중첩 for문</a></li>
-        <li><a href="sample11">11. for in문</a></li>
-        <li><a href="sample12">12. for of문</a></li>
-        <li><a href="sample13">13. break문</a></li>
-        <li><a href="sample14">14. continue문</a></li>
+        <li><a href="sample11">11. forEach문</a></li>
+        <li><a href="sample12">12. for in문</a></li>
+        <li><a href="sample13">13. for of문</a></li>
+        <li><a href="sample14">14. break문</a></li>
+        <li><a href="sample15">15. continue문</a></li>
            
     </ul>
 
@@ -512,111 +516,6 @@
         </div>
     </div>
 
-    <hr>
-    <hr>
-    <hr>
-
-    <!-- //sample100 -->
-    <div id="sample100" class="sample">
-        <h2>100. 구구단 만들기 <span class="dot"></span></h2>
-        <div class="code">
-<pre class="line-numbers"><code class="language-js">{
-    //2~9(var i=2; i&lt;=9; i++)
-    //1~9 for(var i=1; i&lt;=9; i++)
-    //num1 * num2 = sum 
-
-    // 2 * 1 = 2;           3 * 1 = 1;
-    // 2 * 2 = 4;           3 * 2 = 6;
-    // 2 * 3 = 6;           3 * 3 = 9;
-    // 2 * 4 = 8;           ..........
-    // 2 * 5 = 10;          9 * 1 = 9;
-    // 2 * 6 = 12;          9 * 2 = 18;
-    // 2 * 7 = 14;
-    // 2 * 8 = 16;
-    // 2 * 9 = 18;
-
-    for(var i=2; i&lt;=9; i++){
-        for(var j=1; j&lt;=9; j++){
-            var sum = i * j;
-            document.write(i + " * " + j + " = " + sum, );
-        }
-    }
-}
-</code></pre>
-        </div>
-    </div>
-
-    <hr>
-
-    <!-- //sample101 -->
-    <div id="sample101" class="sample">
-        <h2>101. 테이블 만들기 <span class="dot"></span></h2>
-        <div class="code">
-<pre class="line-numbers"><code class="language-js">{
-    //2~9(var i=2; i&lt;=9; i++)
-    //1~9 for(var i=1; i&lt;=9; i++)
-    //num1 * num2 = sum 
-
-    // 2 * 1 = 2;           3 * 1 = 1;
-    // 2 * 2 = 4;           3 * 2 = 6;
-    // 2 * 3 = 6;           3 * 3 = 9;
-    // 2 * 4 = 8;           ..........
-    // 2 * 5 = 10;          9 * 1 = 9;
-    // 2 * 6 = 12;          9 * 2 = 18;
-    // 2 * 7 = 14;
-    // 2 * 8 = 16;
-    // 2 * 9 = 18;
-
-    let num = 1;
-    let table = "&lt;table&gt;";
-
-    for( let i=1; i&lt;=10; i++ ){
-        table += "&lt;tr&gt;";
-        for( let j=1; j&lt;=10; j++ ){
-            table += "&lt;td&gt;"+num+"/&lt;td&gt;";
-            num++;
-        }
-        table += "&lt;/tr&gt;";
-    }
-
-    table +=  "&lt;/table&gt;";
-
-    document.write(table);
-}
-</code></pre>
-        </div>
-    </div>
-
-    <hr>
-
-    <!-- //sample102 -->
-    <div id="sample102" class="sample">
-        <h2>102. 테이블 만들기 숙제<span class="dot"></span></h2>
-        <div class="code">
-<pre class="line-numbers"><code class="language-js">{
-    let num = 100;
-    let table = "&lt;table&gt;";
-
-        for( let i=1; i&lt;=10; i++ ){
-        table += "&lt;tr&gt;";
-        for( let j=1; j&lt;=10; j++ ){
-            table += "&lt;td&gt;"+ num +"/&lt;td&gt;";
-            num--;
-        }
-        table += "&lt;/tr&gt;";
-    }
-
-    table +=  "&lt;/table&gt;";
-
-    document.write(table);
-}
-</code></pre>
-        </div>
-    </div>
-
-    <hr>
-   
-    <hr>
     <hr>
 
 
@@ -918,102 +817,7 @@
         }
 
 
-        //sample100 :  구구단 만들기
-        {
-            //2~9(var i=2; i<=9; i++)
-            //1~9 for(var i=1; i<=9; i++)
-            //num1 * num2 = sum 
-
-            // 2 * 1 = 2;           3 * 1 = 1;
-            // 2 * 2 = 4;           3 * 2 = 6;
-            // 2 * 3 = 6;           3 * 3 = 9;
-            // 2 * 4 = 8;           ..........
-            // 2 * 5 = 10;          9 * 1 = 9;
-            // 2 * 6 = 12;          9 * 2 = 18;
-            // 2 * 7 = 14;
-            // 2 * 8 = 16;
-            // 2 * 9 = 18;
-            document.write("***100. 구구단 만들기***<br>");
-
-            for(var i=2; i<=9; i++){
-                for(var j=1; j<=9; j++){
-                    var sum = i * j;
-                    document.write(i + " * " + j + " = " + sum, "<br>");
-                }
-            }
-
-            document.write("<br>");
-        }
-
-        //sample101: 테이블 만들기
-        {
-            document.write("***101. 테이블 만들기1***<br>");
-
-            let num = 1;
-            let table = "<table>";
-
-            for( let i=1; i<=10; i++ ){
-                table += "<tr>";
-                for( let j=1; j<=10; j++ ){
-                    table += "<td>"+num+"</<td>";
-                    num++;
-                }
-                table += "</tr>";
-            }
-
-            table +=  "</table>";
-
-            document.write(table);
-
-            document.write("<br>");
-        }
-
-        //sample102: 테이블 만들기2
-        {
-            document.write("***102. 테이블 만들기2***<br>");
-
-            let num = 100;
-            let table = "<table>";
-
-                for( let i=1; i<=10; i++ ){
-                table += "<tr>";
-                for( let j=1; j<=10; j++ ){
-                    table += "<td>"+ num +"</<td>";
-                    num--;
-                }
-                table += "</tr>";
-            }
-
-            table +=  "</table>";
-
-            document.write(table);
-
-            document.write("<br>");
-        }
-
-        //sample103: 테이블 만들기3 (숙제)
-        //짝수만 나오게~
-        {
-            document.write("***102. 테이블 만들기3***<br>");
-
-            let num = 100;
-            let table = "<table>";
-
-                for( let i=1; i<=10; i++ ){
-                table += "<tr>";
-                for( let j=1; j<=10; j++ ){
-                    table += "<td>"+ num +"</<td>";
-                    num--;
-                }
-                table += "</tr>";
-            }
-
-            table +=  "</table>";
-
-            document.write(table);
-
-            document.write("<br>");
-        }
+        
 
     </script>
 </body>
