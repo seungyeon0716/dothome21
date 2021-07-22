@@ -947,6 +947,8 @@
 
         //sample101: 테이블 만들기
         {
+            document.write("***101. 테이블 만들기1***<br>");
+
             let num = 1;
             let table = "<table>";
 
@@ -966,8 +968,34 @@
             document.write("<br>");
         }
 
-        //sample102: 테이블 만들기 숙제
+        //sample102: 테이블 만들기2
         {
+            document.write("***102. 테이블 만들기2***<br>");
+
+            let num = 100;
+            let table = "<table>";
+
+                for( let i=1; i<=10; i++ ){
+                table += "<tr>";
+                for( let j=1; j<=10; j++ ){
+                    table += "<td>"+ num +"</<td>";
+                    num--;
+                }
+                table += "</tr>";
+            }
+
+            table +=  "</table>";
+
+            document.write(table);
+
+            document.write("<br>");
+        }
+
+        //sample103: 테이블 만들기3 (숙제)
+        //짝수만 나오게~
+        {
+            document.write("***102. 테이블 만들기3***<br>");
+
             let num = 100;
             let table = "<table>";
 

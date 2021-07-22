@@ -250,6 +250,11 @@
         <h2>01. 선언적 함수 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
+    function func(){
+        document.write("*** 01. 선언적 함수***");
+        document.write("함수가 실행되었습니다.");
+    }
+    func();
 }
 
 </code></pre>
@@ -262,6 +267,11 @@
         <h2>02. 익명 함수 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
+    const func = function(){
+        document.write("*** 02. 익명 함수***");
+        document.write("함수가 실행되었습니다.");
+    }
+    func();
 }
 
 </code></pre>
@@ -274,6 +284,11 @@
         <h2>03. 매개변수 함수 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
+    function func(str){
+        document.write("*** 03. 매개변수 함수***");
+        document.write(str);
+    }
+    func("함수가 실행되었습니다.");
 }
 
 </code></pre>
@@ -287,6 +302,12 @@
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
 }
+function func(){
+    const str = "함수가 실행되었습니다.";
+    return str;
+}
+
+document.write(fun());
 
 </code></pre>
         </div>
@@ -415,8 +436,49 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
     <script>
         //sample1
-        //선언적 함수
+        //01. 선언적 함수
+        {   
+            function func(){
+                document.write("*** 01. 선언적 함수***<br>");
+                document.write("함수가 실행되었습니다.<br><br>");
+            }
+            func();
+        }
         
+        //sample2
+        //02. 익명 함수(변수 안에 설정)
+        {
+            const func = function(){
+                document.write("*** 02. 익명 함수***<br>");
+                document.write("함수가 실행되었습니다.<br><br>");
+            }
+            func();
+        }
+
+        //sample3
+        //03. 매개변수 함수
+        {   
+            function func(str){
+                document.write("*** 03. 매개변수 함수***<br>");
+                document.write(str);
+            }
+            func("함수가 실행되었습니다.<br><br>");
+        }
+
+        //sample4
+        //04. 리턴값(결과값) 함수
+        {
+            function func(){
+                const str = "함수가 실행되었습니다.<br><br>";
+                return str;
+            }
+
+            document.write("*** 04. 리턴값 함수***<br>");  
+            document.write(fun());
+        }
+
+        //sample5
+        //05. 리턴값(결과값) 함수
     </script>
 </body>
 
