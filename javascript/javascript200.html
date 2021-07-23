@@ -246,7 +246,7 @@
         <li><a href="javascript200.html">반복문</a></li>
     </ol>
     <ol class="ol5">
-        <li><a href="javascript400.html">알고리즘 연습</a></li>
+        <li><a href="javascript400.html">알고리즘</a></li>
     </ol>
 
     <h2 class="mt20">제어문</h2>
@@ -371,7 +371,7 @@
         <h2>05. 조건부 연산자 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    let num = 100;
+    //let num = 100;
 
     //if(num == 100 ){
     //   document.write("true");
@@ -457,8 +457,6 @@
         <h2>10. 중첩 for문 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    document.write("***10. 중첩 for문 ***");
-
     for( var i=1; i&lt;=5; i++){
         document.write(i + ".반복문(아이)이 실행되었습니다.");
         for( var j=1; j&lt;=5; j++){
@@ -477,8 +475,6 @@
         <h2>11. forEach() <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    document.write("***11. forEach() ***");
-
     const num = [100, 200, 300, 400, 500];
 
     document.write(num[0]);
@@ -493,12 +489,12 @@
     }
 
     //forEach()
-        num.forEach(function(el){
-            document.write(el);
-        })
+    num.forEach(function(el){
+        document.write(el);
+    })
 
-        //forEach(element, index, array)
-        num.forEach((element, index, array) => {
+    //forEach(element, index, array)
+    num.forEach((element, index, array) => {
         document.write(element);
         document.write(index);
         document.write(array);
@@ -515,8 +511,6 @@
         <h2>12. for of문 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    document.write("***12. for of문 ***");
-
     const num = [100, 200, 300, 400, 500];
 
     for( let i of num ){
@@ -533,9 +527,7 @@
     <div id="sample13" class="sample">
         <h2>13.  for in문 <span class="dot"></span></h2>
         <div class="code">
-<pre class="line-numbers"><code class="language-js">{
-    document.write("***13. for in문 ***");
-            
+<pre class="line-numbers"><code class="language-js">{         
     //배열
     const num = [100, 200, 300, 400, 500];
 
@@ -567,24 +559,18 @@
     <div id="sample14" class="sample">
         <h2>14. break문 <span class="dot"></span></h2>
         <div class="code">
-<pre class="line-numbers"><code class="language-js">{
-    //while 문을 이용해서 1부터 20까지 출력!
-
-    document.write("***14. break문 ***");
-    
+<pre class="line-numbers"><code class="language-js">{  
     let num = 0;
     while ( num &lt; 20 ){
         num++;
-        document.write(num, " ");
+        document.write(num);
         if ( num == 10 ){
             break;
         }
     }
 
-    //for 문을 이용해서 1부터 20까지 출력!
-
     for(let i=1; i&lt;=20; i++){
-        document.write(i, " ")
+        document.write(i)
         if ( i == 10 ){
             break;
         }
@@ -601,12 +587,10 @@
         <h2>15. continue문 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    document.write("***15. continue문 ***");
-
     let num = 0;
     while( true ){
         num++;
-        if( num == 3){
+         if( num == 3){
             continue;
         }
         if( num &gt; 19 ){

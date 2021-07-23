@@ -244,7 +244,7 @@
         <li><a href="javascript200.html">반복문</a></li>
     </ol>
     <ol class="ol5">
-        <li><a href="javascript400.html">알고리즘 연습</a></li>
+        <li><a href="javascript400.html">알고리즘</a></li>
     </ol>
 
     <h2 class="mt20">알고리즘</h2>
@@ -267,12 +267,9 @@
         <h2>1. 1부터 100까지 출력하기 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-
-    document.write("***01. 1부터 100까지 출력 ***")
-
-        for( let i=1; i&lt;=100; i++ ){
-            document.write(i);
-        }
+    for( let i=1; i&lt;=100; i++ ){
+        document.write(i);
+    }
 }
 </code></pre>
         </div>
@@ -285,16 +282,13 @@
         <h2>2. 1부터 100까지 출력하기:  짝수만 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-
-    document.write("***02. 1부터 100까지 출력(짝수만)***")
-
     //for( let i=1; i&lt;100; i++){
     //    if( i % 2 == 0 ){
     //        document.write(i);
     //    }
     //}
     for( let i=2; i&lt;100; i+=2){
-            document.write(i);
+        document.write(i);
     }
 }
 </code></pre>
@@ -308,8 +302,6 @@
         <h2>3. 1부터 100까지 출력하기 : 5의 배수만 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    document.write("***03. 1부터 100까지 출력(5의 배수만) ***")
-
     for( let i=1; i&lt;100; i++){
         if( i % 5 == 0 ){
             document.write(i);
@@ -326,13 +318,11 @@
         <h2>4. 1부터 100까지 출력하기 : 짝수는 빨간색, 홀수는 파란색 출력 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    document.write("***04. 1부터 100까지 출력 (짝수는 빨간색, 홀수는 파란색 출력 ***")
-
     for( let i=1; i&lt;=100; i++){
         if( i % 2 == 0 ){
-                document.write("<span style='color:red'> "+ i +" </span>");
+            document.write("<span style='color:red'> "+ i +" &lt;/span&gt;");
         } else {
-            document.write("<span style='color:blue'> "+ i +" </span>");
+            document.write("<span style='color:blue'> "+ i +" &lt;/span&gt;");
         }
     }
 }
@@ -347,8 +337,6 @@
         <h2>5. 1부터 100까지의 합 출력하기 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    document.write("***05. 1부터 100까지의 합 출력하기 ***")
-
     let sum = 0;
 
     for( let i=1; i&lt;=100; i++){
@@ -442,8 +430,6 @@
         <h2>8. 테이블 만들기2<span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    document.write("***08. 테이블 만들기2 ***");
-
     let num = 100;
     let table = "&lt;table&gt;";
 
@@ -472,16 +458,14 @@
         <h2>9. 테이블 만들기3 - 짝수만<span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    document.write("***09. 테이블 만들기3 - 짝수만 ***");
-
-    let num = 100;
+    let num = 2;
     let table = "&lt;table&gt;";
 
-        for( let i=1; i&lt;=10; i++ ){
+    for( let i=1; i&lt;=10; i++ ){
         table += "&lt;tr&gt;";
-        for( let j=1; j&lt;=10; j++ ){
+            for( let j=1; j&lt;=10; j++ ){
             table += "&lt;td&gt;"+ num +"&lt;/td&gt;";
-            num--;
+            num += 2;
         }
         table += "&lt;/tr&gt;";
     }
@@ -654,14 +638,14 @@
         {
             document.write("***09. 테이블 만들기3 - 짝수만 ***<br>");
 
-            let num = 100;
+            let num = 2;
             let table = "<table>";
 
                 for( let i=1; i<=10; i++ ){
                 table += "<tr>";
                 for( let j=1; j<=10; j++ ){
                     table += "<td>"+ num +"</<td>";
-                    num--;
+                    num += 2;
                 }
                 table += "</tr>";
             }

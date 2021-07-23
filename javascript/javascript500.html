@@ -241,7 +241,7 @@
         <li><a href="javascript200.html">반복문</a></li>
     </ol>
     <ol class="ol5">
-        <li><a href="javascript400.html">알고리즘 연습</a></li>
+        <li><a href="javascript400.html">알고리즘</a></li>
     </ol>
 
     <h2 class="mt20">데이터 불러오기</h2>
@@ -280,10 +280,9 @@
 <pre class="line-numbers"><code class="language-js">{
     const arr = [100, 200, "javascript"];
 
-    document.write("*** 02. 배열 :  데이터 불러오기 ***<br>");
-    document.write(arr[0], "<br>");
-    document.write(arr[1], "<br>");
-    document.write(arr[2], "<br>");
+    document.write(arr[0]);
+    document.write(arr[1]);
+    document.write(arr[2]);
 }
 
 </code></pre>
@@ -299,12 +298,11 @@
 <pre class="line-numbers"><code class="language-js">{
     const arr = [100, 200, ["javascript", "jquery"]];
 
-    document.write("*** 03. 배열 :  데이터 불러오기 : 2차 배열***");
-    document.write(arr[0], "");
-    document.write(arr[1], "");
-    document.write(arr[2][0], "");
-    document.write(arr[2][1], "");
-    document.write(arr[2], "");
+    document.write(arr[0]);
+    document.write(arr[1]);
+    document.write(arr[2][0]);
+    document.write(arr[2][1]);
+    document.write(arr[2]);
 
     //100
     //200
@@ -324,7 +322,7 @@
         <h2>04. 배열 :  데이터 불러오기 : 갯수 구하기 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    const arr = [100, 200, ["javascript", "jquery"]];
+    const arr = [100, 200, "javascript"];
 
     document.write(arr.length);
 }
