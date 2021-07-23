@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //변수 : 데이터 저장소
+        //100, 200, 300 변수에 저장을 출력을 해보세요!!!
+        {
+            document.write("*** 데이터 출력(변수) ***<br>");
+
+            let x = 100;
+            let y = 200;
+            let z = 300;
+
+            document.write(x,"<br>");
+            document.write(y,"<br>");
+            document.write(z ,"<br><br>");
+        }
+
+        //배열 : 데이터 저장소
+        //100, 200, 300 변수에 저장을 출력을 해보세요!!!
+        {
+            document.write("*** 데이터 출력(배열) ***<br>");
+
+            const arr = new Array();
+            arr[0] = 100;
+            arr[1] = 200;
+            arr[2] = 300;
+
+            document.write(arr[0],"<br>");
+            document.write(arr[1],"<br>");
+            document.write(arr[2] ,"<br><br>");
+        }
+
+        //객체 : 데이터 저장소
+        //100, 200, 300 변수에 저장을 출력을 해보세요!!!
+        {
+            document.write("*** 데이터 출력(객체) ***<br>");
+
+            const obj = new Object();
+            obj[0] = 100;
+            obj[1] = 200;
+            obj[2] = 300;
+
+            document.write(obj[0],"<br>");
+            document.write(obj[1],"<br>");
+            document.write(obj[2] ,"<br><br>");
+        }
+
+        //반복문 
+        //for문을 이용해서 1-50까지 출력!!!
+        {
+            document.write("*** 반복문(for문) ***<br>");
+
+            for(let i=1; i<=50; i++){
+                document.write(i+ ". 반복문이 실행되었습니다. <br>");
+            }
+        }
+
+        //반복문 
+        //for문을 이용해서 50-1까지 출력!!!
+        {
+            document.write("*** 반복문(for문) ***<br>");
+
+            num=50;
+            for(let i=1; i<=50; i++){
+                document.write(num+ ". 반복문이 실행되었습니다. <br>");
+                num--;
+            }
+            document.write("<br><br>");
+        }
+
+        //반복문 
+        //for문을 이용해서 1-50까지 출력(짝수만)!!!
+        {
+            document.write("*** 반복문(짝수만) ***<br>");
+
+            for(let i=2; i<=50; i+=2){
+                document.write(i,"<br>");
+            }
+            document.write("<br><br>");
+        }
+
+        //반복문 
+        //for문을 이용해서 1-50까지 출력(홀수만)!!!
+        {
+            document.write("*** 반복문(홀수만) ***<br>");
+
+            for(let i=1; i<=50; i+=2){
+                document.write(i,"<br>");
+            }
+            document.write("<br><br>");
+        }
+
+        //반복문 
+        //for문을 이용해서 구구단 8단!!!
+        {
+            document.write("*** 구구단(8단) ***<br>")
+            for(let i=8; i==8; i++){
+                for(let j=1; j<=9; j++){
+                    let sum = i * j;
+                    document.write(i + " * " + j + "=" + sum, "<br>");
+                }
+            }
+            document.write("<br><br>");
+        }
+
+         //반복문 
+        //for문을 이용해서 구구단 5-8단!!!
+        {
+            document.write("*** 구구단(5-8단) ***<br>")
+
+            for(let i=5; i<=8; i++){
+                for(let j=1; j<=9; j++){
+                    let sum = i * j;
+                    document.write(i + " * " + j + " = " + sum,"<br>");
+                }
+            }
+            document.write("<br><br>");
+        }
+    </script>
+</body>
+</html>

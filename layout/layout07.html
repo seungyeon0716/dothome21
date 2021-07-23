@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 연습7</title>
+    <style>
+        @font-face {
+            font-family: 'twaysky';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            font-family: 'twaysky';
+            color: #fff;
+            font-size: 60px;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0 auto;
+            padding: auto; 
+        }
+        #header {
+            width: 100%;
+            height: 110px;
+            line-height: 110px;
+            background-color: #d1c4e9;
+        }
+        #banner {
+            width: 100%;
+            height: 750px;
+            line-height: 750px;
+            background-color: #b39ddb;
+        }
+        #content1 {
+            height: 2280px;
+            line-height: 2280px;
+            background-color: #9575cd;
+        }
+        #content2 {
+            width: 100%;
+            height: 1570px;
+            line-height: 1570px;
+            background-color: #7e57c2;
+        }
+        #content3 {
+            width: 100%;
+            height: 530px;
+            line-height: 530px;
+            background-color: #673ab7  ;
+        }
+        #footer {
+            width: 100%;
+            height: 270px;
+            line-height: 270px;
+            background-color: #311b92 ;
+        }
+        .container {
+            width: 1200px;
+            height: inherit;
+            background-color:rgb(0,0,0,0.3);
+            margin: 0 auto;
+        }
+        .title {
+            width: 1200px;
+            height: 200px;
+            line-height: 200px;
+            background-color: #424242;
+        }
+        .box1 {
+            width: 600px;
+            height: 300px;
+            line-height: 300px;
+            background-color: #3949ab;
+            float: left;
+        }
+        .box2 {
+            width: 600px;
+            height: 300px;
+            line-height: 300px;
+            background-color: #030a3a;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container">header</div>
+        </div>
+        <!-- //header-->
+
+        <div id="banner">
+            <div class="container">banner</div>
+        </div>
+        <!-- //banner-->
+
+        <div id="contents">
+            <div id="content1">
+                <div class="container">
+                    <div class="title">title</div>
+                    "content1"
+                </div>
+            </div>
+            <!-- //content1-->
+
+            <div id="content2">
+                <div class="container">
+                    <div class="box1">box1</div>
+                    <div class="box2">box2</div>
+                    "content2"
+                </div>
+            </div>
+            <!-- //content2-->
+
+            <div id="content3">
+                <div class="container">content3</div>
+            </div>
+            <!-- //content3-->
+        </div>
+        <!-- //contents-->
+
+        <div id="footer">
+            <div class="container">footer</div>
+        </div>
+        <!-- //footer-->
+    </div>
+    <!-- //wrap-->
+</body>
+</html>
