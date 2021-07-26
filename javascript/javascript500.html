@@ -218,6 +218,9 @@
         .ol4::before{
             content: "데이터 제어하기 :";
         }
+        .ol5::before{
+            content: "데이터 연습하기 :";
+        }
     </style>
 </head>
 
@@ -231,7 +234,10 @@
         <li><a href="javascript100.html">객체(Object)</a></li>
     </ol>
     <ol class="ol2">
-        <li><a href="javascript500.html">데이터</a></li>
+        <li><a href="javascript500.html">변수</a></li>
+        <li><a href="javascript500.html">상수</a></li>
+        <li><a href="javascript500.html">배열</a></li>
+        <li><a href="javascript500.html">객체</a></li>
     </ol>
     <ol class="ol3">
         <li><a href="javascript300.html">함수(Function)</a></li>
@@ -246,18 +252,35 @@
 
     <h2 class="mt20">데이터 불러오기</h2>
     <ul>
-        <li><a href="sample1">01. 변수 : 데이터 불러오기</a></li>
-        <li><a href="sample2">02. 배열 : 데이터 불러오기</a></li>
-        <li><a href="sample3">03. 배열 : 데이터 불러오기</a></li>
-        <li><a href="sample4">04. 배열 : 데이터 불러오기</a></li>
-        <li><a href="sample5">0. 배열 : 데이터 불러오기</a></li>
+        <li><a href="sample1">01. 변수 : 데이터 불러오기 : 기본</a></li>
+        <li><a href="sample2">02. 상수 : 데이터 불러오기 : 기본</a></li>
+        <li><a href="sample3">03. 배열 : 데이터 불러오기 : 기본</a></li>
+        <li><a href="sample4">04. 배열 : 데이터 불러오기 : 2차 배열</a></li>
+        <li><a href="sample5">05. 배열 : 데이터 불러오기 : 갯수 구하기</a></li>
+        <li><a href="sample6">06. 배열 : 데이터 불러오기 : for문</a></li>
+        <li><a href="sample7">07. 배열 : 데이터 불러오기 : forEach()</a></li>
+        <li><a href="sample8">08. 배열 : 데이터 불러오기 : for of문</a></li>
+        <li><a href="sample9">09. 배열 : 데이터 불러오기 : for in문</a></li>
+        <li><a href="sample10">10. 배열 : 데이터 불러오기 : map()</a></li>
+        <li><a href="sample11">11. 배열 : 데이터 불러오기 : 펼침 연산자</a></li>
+        <li><a href="sample12">12. 객체 : 데이터 불러오기 : 기본</a></li>
+        <li><a href="sample13">13. 객체 : 데이터 불러오기 : Object</a></li>
+        <li><a href="sample14">14. 객체 : 데이터 불러오기 : 변수</a></li>
+        <li><a href="sample15">15. 객체 : 데이터 불러오기 : for in문</a></li>
+        <li><a href="sample16">16. 객체 : 데이터 불러오기 : map문</a></li>
+        <li><a href="sample17">17. 객체 : 데이터 불러오기 : hasOwnProperty()</a></li>
+        <li><a href="sample18">18. 객체 : 데이터 불러오기 : 펼침 연산자- 복사</a></li>
+        <li><a href="sample19">19. 객체 : 데이터 불러오기 : 펼침 연산자- 추가</a></li>
+        <li><a href="sample20">20. 객체 : 데이터 불러오기 : 펼침 연산자- 결합</a></li>
+        <li><a href="sample21">21. 객체 : 데이터 불러오기 : 비구조화 할당 </a></li>
+        <li><a href="sample22">22. 객체 : 데이터 불러오기 : 비구조화 할당 :  별도 이름 저장</a></li>
     </ul>
 
     <hr>
 
     <!-- //sample1 -->
     <div id="sample1" class="sample">
-        <h2>01. 변수 :  데이터 불러오기 <span class="dot"></span></h2>
+        <h2>01. 변수 : 데이터 불러오기 : 기본 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     let x = 100, y = 200, z = "javascript";
@@ -273,9 +296,27 @@
 
     <hr>
 
-     <!-- //sample2 -->
-     <div id="sample2" class="sample">
-        <h2>02. 배열 :  데이터 불러오기 <span class="dot"></span></h2>
+    <!-- //sample2 -->
+    <div id="sample2" class="sample">
+        <h2>02. 상수 : 데이터 불러오기 : 기본 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const x = 100, y = 200, z = "javascript";
+
+    document.write(x);
+    document.write(y);
+    document.write(z);
+}
+
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+     <!-- //sample3 -->
+     <div id="sample3" class="sample">
+        <h2>03. 배열 : 데이터 불러오기 : 기본 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     const arr = [100, 200, "javascript"];
@@ -291,9 +332,9 @@
 
     <hr>
 
-    <!-- //sample3 -->
-    <div id="sample3" class="sample">
-        <h2>03. 배열: 데이터 불러오기 : 2차 배열 <span class="dot"></span></h2>
+    <!-- //sample4 -->
+    <div id="sample4" class="sample">
+        <h2>04. 배열 : 데이터 불러오기 : 2차 배열<span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     const arr = [100, 200, ["javascript", "jquery"]];
@@ -317,9 +358,9 @@
 
     <hr>
 
-    <!-- //sample4 -->
-    <div id="sample4" class="sample">
-        <h2>04. 배열 :  데이터 불러오기 : 갯수 구하기 <span class="dot"></span></h2>
+    <!-- //sample5 -->
+    <div id="sample5" class="sample">
+        <h2>05. 배열 :  데이터 불러오기 : 갯수 구하기 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     const arr = [100, 200, "javascript"];
@@ -333,9 +374,9 @@
 
     <hr>
 
-    <!-- //sample5 -->
-    <div id="sample5" class="sample">
-        <h2>05. 배열: 데이터 불러오기 : for문 <span class="dot"></span></h2>
+    <!-- //sample6 -->
+    <div id="sample6" class="sample">
+        <h2>06. 배열: 데이터 불러오기 : for문 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     const arr = [100, 200, 300, 400, 500];
@@ -350,20 +391,389 @@
 
     <hr>
 
-    <!-- //sample6 -->
-    <div id="sample6" class="sample">
-        <h2>배열 데이터의 합을 출력 <span class="dot"></span></h2>
+    <!-- //sample7 -->
+    <div id="sample7" class="sample">
+        <h2>07. 배열: 데이터 불러오기 : forEach()문  <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const num = [100, 200, 300, 400, 500];
+
+    document.write(num[0]);
+    document.write(num[1]);
+    document.write(num[2]);
+    document.write(num[3]);
+    document.write(num[4]);
+
+    //for문
+    for(let i=0; i&lt;num.length; i++){
+        document.write(num[i]);
+    }
+
+    //forEach()
+    num.forEach(function(el){
+        document.write(el);
+    });
+
+    //forEach(element, index, array)
+    num.forEach((element, index, array) => {
+        document.write(element);
+        document.write(index);
+        document.write(array);
+    });
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample8 -->
+    <div id="sample8" class="sample">
+        <h2>08. 배열: 데이터 불러오기 : for문 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const num = [100, 200, 300, 400, 500];
+
+    for( let i of num ){
+        document.write(i);
+    }
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample9 -->
+    <div id="sample9" class="sample">
+        <h2>09. 배열: 데이터 불러오기 : for in문 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const num = [100, 200, 300, 400, 500];
+
+    for( let i in num ){
+        document.write(i);
+    }
+    for( let i in num ){
+        document.write(num[i]);
+    }
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample10 -->
+    <div id="sample10" class="sample">
+        <h2>10. 배열: 데이터 불러오기 : map() <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const num = [100, 200, 300, 400, 500];
+
+    //num.map(function(){});
+    num.map((el) => {
+        document.write(el)
+        console.log(el);
+    });
+
+    num.map((element, index, array) => {
+        document.write(element);
+        document.write(index);
+        document.write(array);
+    });
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample11 -->
+    <div id="sample11" class="sample">
+        <h2>11. 배열 : 데이터 불러오기 : 펼침 연산자 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     const arr = [100, 200, 300, 400, 500];
 
-    document.write("*** 배열 데이터의 합을 출력 ***");
+    document.write(arr[0]);
+    document.write(arr[1]);
+    document.write(arr[2]);
+    document.write(arr[3]);
+    document.write(arr[4]);
 
-    let num = 0;
-    for( i=0; i&lt;arr.length; i++){
-        num += arr[i]; 
+    document.write(arr);
+
+    document.write(arr[0], arr[1], arr[2], arr[3], arr[4]);
+
+    document.write(...arr);
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample12 -->
+    <div id="sample12" class="sample">
+        <h2>12. 객체 : 데이터 불러오기 : 기본 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const obj = {
+        a : 100,
+        b : 200,
+        c : "javascript",
     }
-    document.write(num);
+
+    document.write(obj.a);
+    document.write(obj.b);
+    document.write(obj.c);
+    document.write(obj['a']);
+    document.write(obj['b']);
+    document.write(obj['c']);
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample13 -->
+    <div id="sample13" class="sample">
+        <h2>13. 객체 : 데이터 불러오기 : Object <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const obj = {
+        a : 100,
+        b : 200,
+        c : "javascript",
+    }
+
+    document.write(Object.keys(obj));
+    document.write(Object.values(obj));
+    document.write(Object.entries(obj));
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample14 -->
+    <div id="sample14" class="sample">
+        <h2>14. 객체 : 데이터 불러오기 : 변수 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const obj = {
+        a : 100,
+        b : 200,
+        c : "javascript",
+    }
+    const name1 = obj.a; 
+    const name2 = obj.b; 
+    const name3 = obj.c; 
+
+    document.write(name1);
+    document.write(name2);
+    document.write(name3);
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample15 -->
+    <div id="sample15" class="sample">
+        <h2>15. 객체 : 데이터 불러오기 : for in문 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const obj = {
+        a : 100,
+        b : 200,
+        c : "javascript",
+    }
+    for(let key in obj){
+       document.write(obj[key];
+    }
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample16 -->
+    <div id="sample16" class="sample">
+        <h2>16. 객체 : 데이터 불러오기 : map문 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const obj = [
+        {a:100, b:200, c:"javascript1"},
+        {a:300, b:400, c:"javascript2"},
+        {a:500, b:600, c:"javascript3"},
+    ];
+
+    document.write(obj[0].a);
+    document.write(obj[0].b);
+    document.write(obj[0].c);
+    document.write(obj[1].a);
+    document.write(obj[1].b);
+    document.write(obj[1].c);
+    document.write(obj[2].a);
+    document.write(obj[2].b);
+    document.write(obj[2].c);
+
+    //obj.map(function(){});
+    //obj.map((el) => {});
+    //obj.map(el => {});
+
+    obj.map(el => {
+        document.write(el.a);
+        document.write(el.b);
+        document.write(el.c);
+    })
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample17 -->
+    <div id="sample17" class="sample">
+        <h2>17. 객체 : 데이터 불러오기 : hasOwnProperty() <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const obj = {
+        a : 100,
+        b : 200,
+        c : "javascript",
+    }
+
+    document.write(obj.hasOwnProperty('a'));      //true
+    document.write(obj.hasOwnProperty('b'));      //true
+    document.write(obj.hasOwnProperty('a'));      //true
+    document.write(obj.hasOwnProperty('100'));    //false
+    document.write('a' in obj);                   //true
+    document.write('b' in obj);                   //true
+    document.write('c' in obj);                   //true
+    document.write('100' in obj);                 //false
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample18 -->
+    <div id="sample18" class="sample">
+        <h2>18. 객체 : 데이터 불러오기 : 펼침 연산자- 복사 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const obj = {
+        a : 100,
+        b : 200,
+        c : "javascript",
+    }
+    const spred = {...obj}  //펼침연산자
+
+    document.write(spred.a);
+    document.write(spred.b);
+    document.write(spred.c);
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample19 -->
+    <div id="sample19" class="sample">
+        <h2>19. 객체 : 데이터 불러오기 : 펼침 연산자- 추가 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const obj = {
+        a : 100,
+        b : 200,
+        c : "javascript",
+    }
+    const spred = {...obj, d:"jquery"}  //추가
+
+    document.write(spred.a);
+    document.write(spred.b);
+    document.write(spred.c);
+    document.write(spred.d);
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample20 -->
+    <div id="sample20" class="sample">
+        <h2>20. 객체 : 데이터 불러오기 : 펼침 연산자- 결합 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const objA = {
+        a : 100,
+        b : 200,
+    }
+    const objB = {
+        c : "javascript",
+        d : "jquery",
+    }
+    const spred = {...objA, ...objB}  //결합
+
+    document.write(spred.a);
+    document.write(spred.b);
+    document.write(spred.c);
+    document.write(spred.d);
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample21 -->
+    <div id="sample21" class="sample">
+        <h2>21. 객체 : 데이터 불러오기 : 비구조화 할당 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const obj = {
+        a: 100,
+        b: 200,
+        c: "javascript",
+    }
+    const { a, b, c } = obj;
+
+    document.write(a);
+    document.write(b);
+    document.write(c);
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample22 -->
+    <div id="sample22" class="sample">
+        <h2>22. 객체 : 데이터 불러오기 : 비구조화 할당 : 별도 이름 저장 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const obj = {
+        a: 100,
+        b: 200,
+        c: "javascript",
+    }
+    const { a:name1, b:name2, c:name3 } = obj;
+
+    document.write(name1);
+    document.write(name2);
+    document.write(name3);
 }
 </code></pre>
         </div>
@@ -390,11 +800,24 @@
         }
 
         //sample2
-        //02. 배열: 데이터 불러오기
+        //02. 상수 : 데이터 불러오기
+        {   
+            const x = 100, y = 200, z = "javascript";
+
+            document.write("*** 02. 상수 :  데이터 불러오기 ***<br>");
+            document.write(x, "<br>");
+            document.write(y, "<br>");
+            document.write(z, "<br>");
+
+            document.write("<br>");
+        }
+
+        //sample3
+        //03. 배열: 데이터 불러오기
         {
             const arr = [100, 200, "javascript"];
 
-            document.write("*** 02. 배열 :  데이터 불러오기 ***<br>");
+            document.write("*** 03. 배열 :  데이터 불러오기 ***<br>");
             document.write(arr[0], "<br>");
             document.write(arr[1], "<br>");
             document.write(arr[2], "<br>");
@@ -402,12 +825,12 @@
             document.write("<br>");
         }
 
-        //sample3
-        //03. 배열: 데이터 불러오기 : 2차 배열
+        //sample4
+        //04. 배열: 데이터 불러오기 : 2차 배열
         {
             const arr = [100, 200, ["javascript", "jquery"]];
 
-            document.write("*** 03. 배열 :  데이터 불러오기 : 2차 배열***<br>");
+            document.write("*** 04. 배열 :  데이터 불러오기 : 2차 배열***<br>");
             document.write(arr[0], "<br>");
             document.write(arr[1], "<br>");
             document.write(arr[2][0], "<br>");
@@ -423,23 +846,23 @@
             //javascriptjquery
         }
 
-        //sample4
-        //04. 배열: 데이터 불러오기 : 갯수 구하기
+        //sample5
+        //05. 배열: 데이터 불러오기 : 갯수 구하기
         {
             const arr = [100, 200, "javascript"];
 
-            document.write("*** 04. 배열 :  데이터 불러오기 : 갯수 구하기 ***<br>");
+            document.write("*** 05. 배열 :  데이터 불러오기 : 갯수 구하기 ***<br>");
             document.write(arr.length, "<br>");
 
             document.write("<br>");
         }
 
-        //sample5
-        //05. 배열: 데이터 불러오기 : for문
+        //sample6
+        //06. 배열: 데이터 불러오기 : for문
         {
             const arr = [100, 200, 300, 400, 500];
 
-            document.write("*** 05. 배열: 데이터 불러오기 : for문 ***<br>");
+            document.write("*** 06. 배열: 데이터 불러오기 : for문 ***<br>");
             for( let i=0; i<arr.length; i++ ){ 
                 document.write(arr[i], "<br>");
             }
@@ -448,22 +871,385 @@
             document.write("<br>");
         }
 
-        //7월 26일 숙제
-        //배열 데이터의 합을 출력
+        //sample7
+        //07. 배열: 데이터 불러오기 : forEach()문
         {
+            document.write("*** 07. 배열: 데이터 불러오기 : forEach()문 ***<br>");
+
+            const num = [100, 200, 300, 400, 500];
+
+            document.write(num[0]);
+            document.write(num[1]);
+            document.write(num[2]);
+            document.write(num[3]);
+            document.write(num[4]);
+
+            document.write("<br><br>"); 
+
+            //for문
+            for(let i=0; i<num.length; i++){
+                document.write(num[i]);
+            }
+
+            document.write("<br><br>");
+
+            //forEach()
+            num.forEach(function(el){
+                document.write(el);
+            });
+
+            document.write("<br><br>");
+
+            //forEach(element, index, array)
+            //num.forEach(function(){});  //es5
+            //num.forEach(()=>{});        //es6
+            num.forEach((element, index, array) => {
+                document.write(element, "<br>");
+                document.write(index, "<br>");
+                document.write(array, "<br>");
+            });
+
+            document.write("<br>");
+        }
+
+        //sample8
+        //08. 배열: 데이터 불러오기 : for of문
+        {
+            document.write("*** 08. 배열: 데이터 불러오기 : for of문 ***<br>");
+
+            const num = [100, 200, 300, 400, 500];
+
+            for( let i of num ){
+                document.write(i, "<br>");
+            }
+
+            document.write("<br>");
+        }
+
+        //sample9
+        //09. 배열: 데이터 불러오기 : for in문 : 객체에서 사용(배열에서도 가능)
+        {
+            document.write("*** 09. 배열: 데이터 불러오기 : for in문 ***<br>");
+
+            const num = [100, 200, 300, 400, 500];
+
+            for( let i in num ){
+                document.write(i, "<br>");
+            }
+
+            for( let i in num ){
+                document.write(num[i], "<br>");
+            }
+
+            document.write("<br>");
+        }
+
+        //sample10
+        //10. 배열: 데이터 불러오기 : map() : 배열로 저장
+        //단순 반복 for문, 배열 데이터 반복 forEach(), 배열 데이터 반복 새로운 배열로 저장 map()
+        {
+            document.write("*** 10. 배열: 데이터 불러오기 : map()***<br>");
+
+            const num = [100, 200, 300, 400, 500];
+
+            //num.map(function(){});
+            num.map((el) => {
+                document.write(el, "<br>")
+                console.log(el);
+            });
+
+            document.write("<br>");
+
+            num.map((element, index, array) => {
+                document.write(element, "<br>");
+                document.write(index, "<br>");
+                document.write(array, "<br>");
+            });
+
+            document.write("<br>");
+        }
+
+        //sample11
+        //11. 배열: 데이터 불러오기 : 펼침 연산자
+        {
+            document.write("*** 11. 배열: 데이터 불러오기 : 펼침 연산자 ***<br>");
+
             const arr = [100, 200, 300, 400, 500];
 
-            document.write("*** 배열 데이터의 합을 출력 ***<br>");
+            document.write(arr[0], "<br>");
+            document.write(arr[1], "<br>");
+            document.write(arr[2], "<br>");
+            document.write(arr[3], "<br>");
+            document.write(arr[4], "<br>");
+            
 
-            let num = 0;
-            for( i=0; i<arr.length; i++){
-                num += arr[i]; 
+            document.write("<br>");
+
+            document.write(arr, "<br>");
+
+            document.write("<br>");
+
+            document.write(arr[0], arr[1], arr[2], arr[3], arr[4], "<br>");
+
+            document.write("<br>");
+
+            document.write(...arr,"<br>");
+
+            document.write("<br>");
+        }
+
+        //sample12
+        //12. 객체: 데이터 불러오기 : 기본
+        {
+            document.write("*** 12. 객체: 데이터 불러오기 : 기본 ***<br>");
+
+            const obj = {
+                a : 100,
+                b : 200,
+                c : "javascript",
             }
-            document.write(num);
+
+            document.write(obj.a, "<br>");
+            document.write(obj.b, "<br>");
+            document.write(obj.c, "<br>");
+            document.write(obj['a'], "<br>");
+            document.write(obj['b'], "<br>");
+            document.write(obj['c'], "<br>");
+
+            document.write("<br>");
+        }
+
+        //sample13
+        //13. 객체: 데이터 불러오기 : Object
+        {
+            document.write("*** 13. 객체: 데이터 불러오기 : Object ***<br>");
+
+            const obj = {
+                a : 100,
+                b : 200,
+                c : "javascript",
+            }
+
+            
+            document.write(Object.keys(obj), "<br>");
+            document.write(Object.values(obj), "<br>");
+            document.write(Object.entries(obj), "<br>");
             
             document.write("<br>");
-            
         }
+
+        //sample14
+        //14. 객체: 데이터 불러오기 : 변수
+        {
+            document.write("*** 14. 객체: 데이터 불러오기 : 변수 ***<br>");
+
+            const obj = {
+                a : 100,
+                b : 200,
+                c : "javascript",
+            }
+            const name1 = obj.a; 
+            const name2 = obj.b; 
+            const name3 = obj.c; 
+
+            document.write(name1, "<br>");
+            document.write(name2, "<br>");
+            document.write(name3, "<br>");
+            
+            document.write("<br>");
+        }
+
+        //sample15
+        //15. 객체: 데이터 불러오기 : for in문
+        {
+            document.write("*** 15. 객체: 데이터 불러오기 : for in문 ***<br>");
+
+            const obj = {
+                a : 100,
+                b : 200,
+                c : "javascript",
+            }
+            for(let key in obj){
+               document.write(obj[key], "<br>");
+            }
+            
+            document.write("<br>");
+        }
+
+        //sample16
+        //16. 객체: 데이터 불러오기 : map() : 배열 속에 객체가 있는 경우
+        {
+            document.write("*** 16. 객체: 데이터 불러오기 : map() ***<br>");
+
+            const obj = [
+                {a:100, b:200, c:"javascript1"},
+                {a:300, b:400, c:"javascript2"},
+                {a:500, b:600, c:"javascript3"},
+            ];
+
+            document.write(obj[0].a, "<br>");
+            document.write(obj[0].b, "<br>");
+            document.write(obj[0].c, "<br>");
+            document.write(obj[1].a, "<br>");
+            document.write(obj[1].b, "<br>");
+            document.write(obj[1].c, "<br>");
+            document.write(obj[2].a, "<br>");
+            document.write(obj[2].b, "<br>");
+            document.write(obj[2].c, "<br><br>");
+
+            //obj.map(function(){});
+            //obj.map((el) => {});
+            //obj.map(el => {});
+
+            obj.map(el => {
+                document.write(el.a, "<br>");
+                document.write(el.b, "<br>");
+                document.write(el.c, "<br>");
+            })
+                  
+            document.write("<br>");
+        }
+
+        //sample17
+        //17. 객체 : 데이터 불러오기 : hasOwnProperty() : 데이터 유무 확인
+        {
+            document.write("*** 17. 객체 : 데이터 불러오기 : hasOwnProperty() ***<br>");
+
+            const obj = {
+                a : 100,
+                b : 200,
+                c : "javascript",
+            }
+
+            document.write(obj.hasOwnProperty('a'), "<br>");      //true
+            document.write(obj.hasOwnProperty('b'), "<br>");      //true
+            document.write(obj.hasOwnProperty('a'), "<br>");      //true
+            document.write(obj.hasOwnProperty('100'), "<br>");    //false
+            document.write('a' in obj, "<br>");                   //true
+            document.write('b' in obj, "<br>");                   //true
+            document.write('c' in obj, "<br>");                   //true
+            document.write('100' in obj, "<br>");                 //false
+
+            document.write("<br>");
+        }
+
+        //sample18
+        //18. 객체 : 데이터 불러오기 : 펼침 연산자- 복사
+        {
+            document.write("*** 18. 객체 : 데이터 불러오기 : 펼침 연산자- 복사 ***<br>");
+
+            const obj = {
+                a : 100,
+                b : 200,
+                c : "javascript",
+            }
+            const spred = {...obj}  //펼침연산자
+
+            document.write(spred.a, "<br>");
+            document.write(spred.b, "<br>");
+            document.write(spred.c, "<br>");
+
+            document.write("<br>");
+        }
+
+        //sample19
+        //19. 객체 : 데이터 불러오기 : 펼침 연산자- 추가
+        {
+            document.write("*** 19. 객체 : 데이터 불러오기 : 펼침 연산자- 추가 ***<br>");
+
+            const obj = {
+                a : 100,
+                b : 200,
+                c : "javascript",
+            }
+            const spred = {...obj, d:"jquery"}  //추가
+
+            document.write(spred.a, "<br>");
+            document.write(spred.b, "<br>");
+            document.write(spred.c, "<br>");
+            document.write(spred.d, "<br><br>");
+
+            document.write("<br>");
+        }
+
+        //sample20
+        //20. 객체 : 데이터 불러오기 : 펼침 연산자- 결합
+        {
+            document.write("*** 20. 객체 : 데이터 불러오기 : 펼침 연산자- 결합 ***<br>");
+
+            const objA = {
+                a : 100,
+                b : 200,
+            }
+            const objB = {
+                c : "javascript",
+                d : "jquery",
+            }
+            const spred = {...objA, ...objB}  //결합
+
+            document.write(spred.a, "<br>");
+            document.write(spred.b, "<br>");
+            document.write(spred.c, "<br>");
+            document.write(spred.d, "<br><br>");
+
+            document.write("<br>");
+        }
+
+        //sample21
+        //21. 객체 : 데이터 불러오기 : 비구조화 할당
+        {
+            document.write("*** 21. 객체 : 데이터 불러오기 : 비구조화 할당 ***<br>");
+
+            const obj = {
+               a: 100,
+               b: 200,
+               c: "javascript",
+            }
+            const { a, b, c } = obj;
+
+            document.write(a, "<br>");
+            document.write(b, "<br>");
+            document.write(c, "<br>");
+        
+            document.write("<br>");
+        }
+
+        //sample22
+        //22. 객체 : 데이터 불러오기 : 비구조화 할당 : 별도 이름 저장
+        {
+            document.write("*** 22. 객체 : 데이터 불러오기 : 비구조화 할당 : 별도 이름 저장 ***<br>");
+
+            const obj = {
+               a: 100,
+               b: 200,
+               c: "javascript",
+            }
+            const { a:name1, b:name2, c:name3 } = obj;
+
+            document.write(name1, "<br>");
+            document.write(name2, "<br>");
+            document.write(name3, "<br>");
+        
+            document.write("<br>");
+        }
+
+
+
+        //7월 26일 숙제
+        //배열 데이터의 합을 출력
+        //{
+        //    const arr = [100, 200, 300, 400, 500];
+        //    
+        //    document.write("*** 배열 데이터의 합을 출력 ***<br>");
+
+        //    let num = 0;
+        //    for( i=0; i<arr.length; i++){
+        //        num += arr[i]; 
+        //    }
+        //    document.write(num);
+            
+        //    document.write("<br>");          
+        //}
     </script>
 </body>
 
