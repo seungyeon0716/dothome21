@@ -5,49 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>레이아웃 연습8</title>
-    <style>
+    <style>    
+        /*
+        float 인해서 영역 깨짐 방지법
+        1. 깨지는 영역에 clear:both를 사용한다.
+        --> 레이아웃이 복잡해지면 어디가 깨지는지 알수가 없음
+        2. float을 사용한 부모박스한테 overflow: hidden을 사용한다.
+        --> overflow의 성질을 이용한 것이 아님. 정상적인 방법은 아님
+        3. clearfix를 만들어 영역을 잡아준다.
+        -->
+        4. display:flex를 사용한다. (가장 추천)
+        */
         * {
             margin: 0;
             padding: 0;
         }
         body {
-            background-color: #fce4ec;
+            background-color: #f3e5f5;
         }
         #wrap {
             width: 1200px;
-            margin: 0 auto;    
+            margin: 0 auto;
         }
         header {
             width: 100%;
             height: 150px;
-            background-color: #f8bbd0;
+            background-color: #e1bee7;
         }
         main {
             overflow: hidden;
         }
         aside {
             width: 30%;
-            height: 600px;
-            background-color: #f48fb1;
+            height: 900px;
+            background-color: #ce93d8;
             float: left;
         }
         section {
             width: 70%;
-            height: 600px;
-            background-color: #f06292 ;
+            height: 900px;
+            background-color: #ba68c8;
             float: left;
         }
         footer {
             width: 100%;
             height: 150px;
-            background-color: #ec407a;
+            background-color: #ab47bc;
         }
-        @media (max-width: 1210px){
+        @media (max-width: 1210px) {
+            #wrap {
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+        @media (max-width: 800px) {
             #wrap {
                 width: 100%;
             }
         }
-        @media (max-width: 600px){
+        @media (max-width: 600px) {
             aside {
                 float: none;
                 width: 100%;
