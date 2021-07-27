@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 연습10</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }  
+        body {
+            background-color: #444;
+        }
+        header {
+            width: 100%;
+            height: 100px;
+            background-color: #e0f7fa;
+        }
+        main {
+            width: 100%;
+            overflow: hidden;
+        }
+        .aside {
+            width: 30%;
+            height: 900px;
+            background-color: #00e5ff;
+            float: left;
+        }
+        .article1 {
+            width: 70%;
+            height: 300px;
+            background-color: #00acc1;
+            float: left;
+        }
+        .article2 {
+            width: 70%;
+            height: 300px;
+            background-color: #0097a7;
+            float: left;
+        }
+        .article3 {
+            width: 70%;
+            height: 300px;
+            background-color: #00838f;
+            float: left;
+        }
+        footer {
+            width: 100%;
+            height: 100px;
+            background-color: #4dd0e1 ;
+        }
+        @media (max-width:1210px){
+            #wrap {
+                 width: 100%;
+            }
+            .article1 {
+                height: 450px;
+            }
+            .article2 {
+                height: 450px;
+            }
+            .article3 {
+                width: 100%;
+                height: 300px;
+            }
+        }
+        @media (max-width:800px){
+            .aside {
+                width: 100%;
+                height: 200px;
+            }
+            .article1 {
+                width: 50%;
+                height: 450px;
+            }
+            .article2 {
+                width: 50%;
+                height: 450px;
+            }  
+        }
+        @media (max-width:600px){
+            .article1 {
+                 width: 100%;
+                 height: 300px;          
+            }
+            .article2 {
+                 width: 100%;
+                 height: 300px;          
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header></header>
+        <main>
+            <aside class="aside"></aside>
+            <article class="article1"></article>
+            <article class="article2"></article>
+            <article class="article3"></article>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>

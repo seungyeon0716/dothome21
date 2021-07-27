@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font.css">
+    <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism-okaidia.min.css"
+        integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @font-face {
+            font-family: 'NEXON Lv1 Gothic OTF';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'NEXON Lv1 Gothic OTF';
+            line-height: 1.6;
+        }
+
+        body {
+            padding: 5%;
+            margin-bottom: 400px;
+        }
+
+        h1 {
+            padding-bottom: 20px;
+        }
+
+        hr {
+            margin: 5% 0;
+            border-style: dashed;
+            border-color: #E6E6E6;
+            border-width: 1px;
+        }
+
+        img {
+            vertical-align: top;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .sample {
+            border: 1px solid #E6E6E6;
+            border-radius: 5px;
+        }
+
+        .sample h2 {
+            position: relative;
+            font-size: 16px;
+            background-color: #F2F2F2;
+            padding: 15px;
+            border-bottom: 1px solid #E6E6E6;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .sample h2 .dot {
+            width: 10px;
+            height: 10px;
+            background: #989898;
+            display: block;
+            border-radius: 50%;
+            position: absolute;
+            right: 30px;
+            top: 20px;
+        }
+
+        .sample h2 .dot::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #989898;
+            border-radius: 50%;
+            position: absolute;
+            left: -15px;
+            top: 0;
+        }
+
+        .sample h2 .dot::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #989898;
+            position: absolute;
+            border-radius: 50%;
+            right: -15px;
+            top: 0;
+        }
+
+        .sample .ex {
+            padding: 20px;
+        }
+
+        .sample .ex .text {
+            margin: 10px 0;
+        }
+
+        .sample .re {
+            padding: 20px;
+            border-top: 1px solid #E6E6E6;
+        }
+
+        .sample .re a {
+            color: #333;
+            text-decoration: none;
+            border: 1px solid #333;
+            border-radius: 30px;
+            padding: 10px 30px;
+            margin: 5px;
+            display: inline-block;
+        }
+
+        .sample .re a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .sample .problem {
+            padding: 25px;
+            border-bottom: 1px solid #E6E6E6;
+            line-height: 1.6;
+        }
+
+        .sample pre {
+            margin: 0 !important;
+            border-radius: 0;
+            ;
+        }
+
+        .sample .desc {
+            padding: 25px;
+            border-bottom: 1px solid #E6E6E6;
+        }
+
+        .sample .desc dt {
+            padding: 3px 0;
+            margin-bottom: 6px;
+        }
+
+        .sample .desc dd {
+            padding: 3px 0 16px 0;
+            line-height: 1.6;
+        }
+
+        .sample .sam {
+            padding: 25px;
+            border-bottom: 1px solid #E6E6E6;
+        }
+
+        .sample .sam dt {
+            padding: 3px 0;
+            margin-bottom: 6px;
+        }
+
+        .sample .sam dd {
+            padding: 3px 0 16px 0;
+        }
+
+        ol {
+            list-style: none;
+        }
+
+        ol li {
+            display: inline;
+            text-align: center;
+            line-height: 40px;
+            margin-bottom: 5px;
+        }
+
+        ol li a {
+            display: inline-block;
+            border-radius: 30px;
+            padding: 2px 20px 0px 20px;
+            border: 1px solid #000;
+        }
+
+        ol li a:hover {
+            background: #000;
+            color: #fff;
+        }
+
+        ol li.active {
+            background: #000;
+        }
+
+        ol li.active a {
+            color: #fff;
+        }
+
+        .mt20 {
+            margin-top: 20px;
+        }
+
+        .ol1::before {
+            content: "데이터 저장하기 :";
+        }
+
+        .ol2::before {
+            content: "데이터 불러오기 :";
+        }
+
+        .ol3::before {
+            content: "데이터 실행하기 :";
+        }
+
+        .ol4::before {
+            content: "데이터 제어하기 :";
+        }
+
+        .ol5::before {
+            content: "데이터 연습하기 :";
+        }
+
+        .ol6::before {
+            content: "데이터 메서드 :";
+        }
+
+        .view {
+            padding: 20px;
+        }
+
+        .view table {
+            width: 100%;
+            /*border-width: 1px; 
+              border-solid */
+            border: 1px solid #e6e6e6;
+            /* 속기형 작성법 */
+            text-align: center;
+            vertical-align: middle;
+            border-collapse: collapse;
+        }
+
+        .view table th {
+            /*  
+                padding-top: 13px;
+                padding-right: 5px; 
+                padding-bottom: 11px;
+                padding-left: 5px;
+                padding: 13px 5px 11px 5px; 위/오른쪽/아래/왼쪽 
+                padding: 13px 5px 11px;     위/왼쪽,오른쪽: 5px/아래: 11px 
+                padding: 13px 5px;          위,아래: 13px /왼쪽, 오른쪽 :5px 
+                padding: 13px;              위/오른쪽/아래/왼쪽: 13px 
+            */
+            padding: 13px 5px 11px 5px;
+        }
+
+        .view table td {
+            border: 1px solid #e6e6e6;
+            padding: 13px 5px 11px 5px;
+        }
+
+        .view table td.result {
+            color: #fff;
+            transition: all 0.3s;
+            cursor: zoom-in;
+        }
+
+        .view table td.result:hover {
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Javascript 문법 정리</h1>
+    <ol class="ol1">
+        <li><a href="javascript100.html">변수</a></li>
+        <li><a href="javascript100.html">상수</a></li>
+        <li><a href="javascript100.html">배열(Array)</a></li>
+        <li><a href="javascript100.html">객체(Object)</a></li>
+    </ol>
+    <ol class="ol2">
+        <li><a href="javascript500.html">변수</a></li>
+        <li><a href="javascript500.html">상수</a></li>
+        <li><a href="javascript500.html">배열</a></li>
+        <li><a href="javascript500.html">객체</a></li>
+    </ol>
+    <ol class="ol3">
+        <li><a href="javascript300.html">함수(Function)</a></li>
+    </ol>
+    <ol class="ol4">
+        <li><a href="javascript200.html">조건문</a></li>
+        <li><a href="javascript200.html">반복문</a></li>
+    </ol>
+    <ol class="ol5">
+        <li><a href="javascript400.html">알고리즘</a></li>
+    </ol>
+    <ol class="ol6">
+        <li><a href="javascript601.html">배열 메서드</a></li>
+        <li><a href="javascript602.html">문자열 메서드</a></li>
+        <li><a href="javascript603.html">브라우저 메서드</a></li>
+        <li><a href="javascript604.html">날짜 메서드</a></li>
+        <li><a href="javascript605.html">이벤트 메서드</a></li>
+    </ol>
+
+    <h2 class="mt20">문자열 메서드</h2>
+    <ul>
+        <li><a href="sample01">01. 문자열 메서드 : 문자열 결합 / 템플릿 문자열</a></li>
+        <li><a href="sample02">02. 문자열 메서드 : length: 문자열 길이 구하기 : 반환(숫자)</a></li>
+        <li><a href="sample03">03. 문자열 메서드 : toUpperCase() : 문자열 대문자 변경하기 : 반환(문자열)</a></li>
+        <li><a href="sample03">03. 문자열 메서드 : toLowerCase() : 문자열 대문자 변경하기 : 반환(문자열)</a></li>
+        <li><a href="sample04">04. 문자열 메서드 : trim() : 문자열 공백 제거하기 : 반환(문자열)</a></li>
+        <li><a href="sample05">05. 문자열 메서드 : indexOf() : 문자열 검색하기 : 반환(숫자)</a></li>
+        <li><a href="sample05">05. 문자열 메서드 : LastIndexOf() : 문자열 검색하기 : 반환(숫자)</a></li>
+        <li><a href="sample05">05. 문자열 메서드 : search() : 문자열 검색하기 : 반환(숫자)</a></li>
+        <li><a href="sample06">05. 문자열 메서드 : includes() : 문자열 포함 여부 : 반환(불린)</a></li>
+        <li><a href="sample06">05. 문자열 메서드 : startsWith() : 문자열 포함 여부 : 반환(불린)</a></li>
+        <li><a href="sample06">05. 문자열 메서드 : endtWith() : 문자열 포함 여부 : 반환(불린)</a></li>
+        <li><a href="sample07">06. 문자열 메서드 : charAt() : 지정한 인덱스의 문자를 추출 : 반환(문자)</a></li>
+        <li><a href="sample08">07. 문자열 메서드 : slice() : 지정한 범위 내 문자열을 추출 : 반환(문자열)</a></li>
+    </ul>
+
+    <hr>
+
+    <!-- //sample01 -->
+    <div id="sample01" class="sample">
+        <h2>01. 문자열 메서드 : 문자열 결합 / 템플릿 문자열 <span class="dot"></span></h2>
+        <div class="view">
+            <table>
+                <colgroup>
+                    <col style="width: 4%;">
+                    <col style="width: 22%;">
+                    <col style="width: 22%;">
+                    <col style="width: 52%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>기본값</th>
+                        <th>메서드</th>
+                        <th>결과값</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="sample01_N1"></td>
+                        <td class="sample01_Q1"></td>
+                        <td class="sample01_M1"></td>
+                        <td class="sample01_R1 result"></td>
+                    </tr>
+                    <tr>
+                        <td class="sample01_N2"></td>
+                        <td class="sample01_Q2"></td>
+                        <td class="sample01_M2"></td>
+                        <td class="sample01_R2 result"></td>
+                    </tr>
+                    <tr>
+                        <td class="sample01_N3"></td>
+                        <td class="sample01_Q3"></td>
+                        <td class="sample01_M3"></td>
+                        <td class="sample01_R3 result"></td>
+                    </tr>
+                    <tr>
+                        <td class="sample01_N4"></td>
+                        <td class="sample01_Q4"></td>
+                        <td class="sample01_M4"></td>
+                        <td class="sample01_R4 result"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const str1 = "자바스크립트";
+    const str2 = "제이쿼리";
+
+    document.querySelector(".sample01_R1").innerHTML = str1 + str2;
+
+    const num1 = 100;
+    const num2 = 200;
+
+    document.querySelector(".sample01_R2").innerHTML = num1 + num2;
+
+    const txt1 = "모던 ";
+    const txt2 = " 자바스크립트 ";
+    const txt3 = "핵심 가이드";
+
+    document.querySelector(".sample01_R3").innerHTML = "나는 " + txt1 + "(modern)" + txt2 + "(javascript) " + txt3 +"를 사고 싶다";
+
+    const tem1 = "모던 ";
+    const tem2 = " 자바스크립트 ";
+    const tem3 = "핵심";
+
+    document.querySelector(".sample01_R4").innerHTML = `나는 ${tem1}(modern) ${tem2}(javascript) ${tem3}을 배우고 싶다`;
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample02 -->
+    <div id="sample02" class="sample">
+        <h2>02. 문자열 메서드 : length: 문자열 길이 구하기 : 반환(숫자) <span class="dot"></span></h2>
+        <div class="view">
+            <table>
+                <colgroup>
+                    <col style="width: 4%;">
+                    <col style="width: 22%;">
+                    <col style="width: 22%;">
+                    <col style="width: 52%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>기본값</th>
+                        <th>메서드</th>
+                        <th>결과값</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="sample02_N1"></td>
+                        <td class="sample02_Q1"></td>
+                        <td class="sample02_M1"></td>
+                        <td class="sample02_R1 result"></td>
+                    </tr>
+                    <tr>
+                        <td class="sample02_N2"></td>
+                        <td class="sample02_Q2"></td>
+                        <td class="sample02_M2"></td>
+                        <td class="sample02_R2 result"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const str1 = "자바스크립트";
+    const currentStr1 = str1.length;
+
+    document.querySelector(".sample02_Q1").innerHTML = "str1";
+    document.querySelector(".sample02_R1").innerHTML = currentStr1;
+
+    const str2 = "javascript";
+    const currentStr2 = str2.length;
+
+    document.querySelector(".sample02_Q2").innerHTML = "str2";
+    document.querySelector(".sample02_R2").innerHTML = currentStr2;
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample03 -->
+    <div id="sample03" class="sample">
+        <h2>03. 문자열 메서드 : toUpperCase() / toLowCase() : 문자열 대문자 변경하기 : 반환(문자열) <span class="dot"></span></h2>
+        <div class="view">
+            <table>
+                <colgroup>
+                    <col style="width: 4%;">
+                    <col style="width: 22%;">
+                    <col style="width: 22%;">
+                    <col style="width: 52%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>기본값</th>
+                        <th>메서드</th>
+                        <th>결과값</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="sample03_N1"></td>
+                        <td class="sample03_Q1"></td>
+                        <td class="sample03_M1"></td>
+                        <td class="sample03_R1 result"></td>
+                    </tr>
+                    <tr>
+                        <td class="sample03_N2"></td>
+                        <td class="sample03_Q2"></td>
+                        <td class="sample03_M2"></td>
+                        <td class="sample03_R2 result"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const str1 = "javascript";
+    const currentStr1 = str1.toUpperCase();
+
+    document.querySelector(".sample03_Q1").innerHTML = str1;
+    document.querySelector(".sample03_R1").innerHTML = currentStr1;
+
+
+    const str2 = "JAVASCRIPT"
+    const currentStr2 = str2.toLowCase();
+
+    document.querySelector(".sample03_Q2").innerHTML = str2;
+    document.querySelector(".sample03_R2").innerHTML = currentStr2;
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample04 -->
+    <div id="sample04" class="sample">
+        <h2>04. 문자열 메서드 : trim() : 문자열 공백 제거하기 : 반환(문자열) <span class="dot"></span></h2>
+        <div class="view">
+            <table>
+                <colgroup>
+                    <col style="width: 4%;">
+                    <col style="width: 33%;">
+                    <col style="width: 33%;">
+                    <col style="width: 33%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>기본값</th>
+                        <th>메서드</th>
+                        <th>결과값</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="sample04_N1"></td>
+                        <td class="sample04_Q1"></td>
+                        <td class="sample04_M1"></td>
+                        <td class="sample04_R1 result"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const str1 = "    'javascript'    ";
+    const currentStr1 = str1.trim();
+
+    document.querySelector(".sample04_R1").innerHTML = currentStr1;
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample05 -->
+    <div id="sample05" class="sample">
+        <h2>05. 문자열 메서드 : indexOf() / lastIndexOf() / search() / includes() : 문자열 검색하기 : 반환(숫자) <span class="dot"></span></h2>
+        <div class="view">
+            <table>
+                <colgroup>
+                    <col style="width: 4%;">
+                    <col style="width: 22%;">
+                    <col style="width: 22%;">
+                    <col style="width: 52%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>기본값</th>
+                        <th>메서드</th>
+                        <th>결과값</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="sample05_N1"></td>
+                        <td class="sample05_Q1"></td>
+                        <td class="sample05_M1"></td>
+                        <td class="sample05_R1 result"></td>
+                    </tr>
+                    <tr>
+                        <td class="sample05_N2"></td>
+                        <td class="sample05_Q2"></td>
+                        <td class="sample05_M2"></td>
+                        <td class="sample05_R2 result"></td>
+                    </tr>
+                    <tr>
+                        <td class="sample05_N3"></td>
+                        <td class="sample05_Q3"></td>
+                        <td class="sample05_M3"></td>
+                        <td class="sample05_R3 result"></td>
+                    </tr>
+                    <tr>
+                        <td class="sample05_N4"></td>
+                        <td class="sample05_Q4"></td>
+                        <td class="sample05_M4"></td>
+                        <td class="sample05_R4 result"></td>
+                    </tr>
+                    <tr>
+                        <td class="sample05_N5"></td>
+                        <td class="sample05_Q5"></td>
+                        <td class="sample05_M5"></td>
+                        <td class="sample05_R5 result"></td>
+                    </tr>
+                    <tr>
+                        <td class="sample05_N6"></td>
+                        <td class="sample05_Q6"></td>
+                        <td class="sample05_M6"></td>
+                        <td class="sample05_R6 result"></td>
+                    </tr>
+                    <tr>
+                        <td class="sample05_N7"></td>
+                        <td class="sample05_Q7"></td>
+                        <td class="sample05_M7"></td>
+                        <td class="sample05_R7 result"></td>
+                    </tr>
+                    <tr>
+                        <td class="sample05_N8"></td>
+                        <td class="sample05_Q8"></td>
+                        <td class="sample05_M8"></td>
+                        <td class="sample05_R8 result"></td>
+                    </tr>
+                    <tr>
+                        <td class="sample05_N9"></td>
+                        <td class="sample05_Q9"></td>
+                        <td class="sample05_M9"></td>
+                        <td class="sample05_R9 result"></td>
+                    </tr>
+                    <tr>
+                        <td class="sample05_N10"></td>
+                        <td class="sample05_Q10"></td>
+                        <td class="sample05_M10"></td>
+                        <td class="sample05_R10 result"></td>
+                    </tr>
+                    <tr>
+                        <td class="sample05_N11"></td>
+                        <td class="sample05_Q11"></td>
+                        <td class="sample05_M11"></td>
+                        <td class="sample05_R11 result"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const str = "자바스크립트(javascript) 공부";
+            
+    const text1 = str.indexOf("javascript");    
+
+    document.querySelector(".sample05_Q1").innerHTML = str;
+    document.querySelector(".sample05_R1").innerHTML = text1;
+
+    const text2 = str.indexOf("자바스크립트");
+
+    document.querySelector(".sample05_Q2").innerHTML = str;
+    document.querySelector(".sample05_R2").innerHTML = text2;
+
+    const text3 = str.indexOf("제이쿼리");
+
+    document.querySelector(".sample05_Q3").innerHTML = str;
+    document.querySelector(".sample05_R3").innerHTML = text3;
+
+    const text4 = str.indexOf("a");
+
+    document.querySelector(".sample05_Q4").innerHTML = str;
+    document.querySelector(".sample05_R4").innerHTML = text4;
+
+    const text5 = str.lastIndexOf("a");
+
+    document.querySelector(".sample05_Q5").innerHTML = str;
+    document.querySelector(".sample05_R5").innerHTML = text5;
+
+    const text6 = str.search(/javascript/);
+
+    document.querySelector(".sample05_Q6").innerHTML = str;
+    document.querySelector(".sample05_R6").innerHTML = text6;
+
+    const text7 = str.search(/jquery/);
+
+    document.querySelector(".sample05_Q7").innerHTML = str;
+    document.querySelector(".sample05_R7").innerHTML = text7;
+
+    const text8 = str.includes("javascript");
+
+    document.querySelector(".sample05_Q8").innerHTML = str;
+    document.querySelector(".sample05_R8").innerHTML = text8;
+
+    const text9 = str.includes("jquery");
+
+    document.querySelector(".sample05_Q9").innerHTML = str;
+    document.querySelector(".sample05_R9").innerHTML = text9;
+
+    const text10 = str.startsWith("자바스크립트");
+
+    document.querySelector(".sample05_Q10").innerHTML = str;
+    document.querySelector(".sample05_R10").innerHTML = text10;
+
+    const text11 = str.endsWith("javascript");
+
+    document.querySelector(".sample05_Q11").innerHTML = str;
+    document.querySelector(".sample05_R11").innerHTML = text11;
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+
+    <hr>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
+    <script>
+        //sample01
+        //문자열 결합
+        {
+            const str1 = "자바스크립트";
+            const str2 = "제이쿼리";
+
+            document.querySelector(".sample01_N1").innerHTML = "1";
+            document.querySelector(".sample01_Q1").innerHTML = "자바스크립트, 제이쿼리";
+            document.querySelector(".sample01_M1").innerHTML = "문자열 결합";
+            document.querySelector(".sample01_R1").innerHTML = str1 + str2;
+
+            const num1 = 100;
+            const num2 = 200;
+
+            document.querySelector(".sample01_N2").innerHTML = "2";
+            document.querySelector(".sample01_Q2").innerHTML = "100, 200";
+            document.querySelector(".sample01_M2").innerHTML = "number 결합";
+            document.querySelector(".sample01_R2").innerHTML = num1 + num2;
+
+            const txt1 = "모던 ";
+            const txt2 = " 자바스크립트 ";
+            const txt3 = "핵심 가이드";
+
+            document.querySelector(".sample01_N3").innerHTML = "3";
+            document.querySelector(".sample01_Q3").innerHTML = "모던, 자바스크립트, 핵심 가이드";
+            document.querySelector(".sample01_M3").innerHTML = "문자열 결합";
+            document.querySelector(".sample01_R3").innerHTML = "나는 " + txt1 + "(modern)" + txt2 + "(javascript) " +
+                txt3 + "를 사고 싶다";
+
+            const tem1 = "모던 ";
+            const tem2 = " 자바스크립트 ";
+            const tem3 = "핵심";
+
+            document.querySelector(".sample01_N4").innerHTML = "4";
+            document.querySelector(".sample01_Q4").innerHTML = "모던, 자바스크립트, 핵심 가이드";
+            document.querySelector(".sample01_M4").innerHTML = "템플릿 문자열";
+            document.querySelector(".sample01_R4").innerHTML = `나는 ${tem1}(modern) ${tem2}(javascript) ${tem3}을 배우고 싶다`;
+        }
+
+        //sample02
+        //02. 문자열 메서드 : length: 문자열 길이 구하기 : 반환(숫자)
+        {
+            const str1 = "자바스크립트";
+            const currentStr1 = str1.length;
+
+            document.querySelector(".sample02_N1").innerHTML = "1";
+            document.querySelector(".sample02_Q1").innerHTML = "자바스크립트";
+            document.querySelector(".sample02_M1").innerHTML = "length";
+            document.querySelector(".sample02_R1").innerHTML = currentStr1;
+
+            const str2 = "javascript";
+            const currentStr2 = str2.length;
+
+            document.querySelector(".sample02_N2").innerHTML = "2";
+            document.querySelector(".sample02_Q2").innerHTML = "javascript";
+            document.querySelector(".sample02_M2").innerHTML = "length";
+            document.querySelector(".sample02_R2").innerHTML = currentStr2;
+        }
+
+        //sample03
+        //03. 문자열 메서드 : toUpperCase() / toLowCase() : 문자열 대문자 변경하기 : 반환(문자열)
+        {
+            const str1 = "javascript";
+            const currentStr1 = str1.toUpperCase();
+
+            document.querySelector(".sample03_N1").innerHTML = "1";
+            document.querySelector(".sample03_Q1").innerHTML = str1;
+            document.querySelector(".sample03_M1").innerHTML = "toUpperCase()";
+            document.querySelector(".sample03_R1").innerHTML = currentStr1;
+
+
+            const str2 = "JAVASCRIPT"
+            const currentStr2 = str2.toLowerCase();
+
+            document.querySelector(".sample03_N2").innerHTML = "2";
+            document.querySelector(".sample03_Q2").innerHTML = str2;
+            document.querySelector(".sample03_M2").innerHTML = "toLowCase()";
+            document.querySelector(".sample03_R2").innerHTML = currentStr2;
+        }
+
+        //sample04
+        //04. 문자열 메서드 : trim() : 문자열 공백 제거하기 : 반환(문자열)
+        {
+            const str1 = "    'javascript'    ";
+            const currentStr1 = str1.trim();
+
+            document.querySelector(".sample04_N1").innerHTML = "1";
+            document.querySelector(".sample04_Q1").innerHTML = "'&nbsp;&nbsp;&nbsp;javascript&nbsp;&nbsp;&nbsp;'";
+            document.querySelector(".sample04_M1").innerHTML = "trim()";
+            document.querySelector(".sample04_R1").innerHTML = currentStr1;
+        }
+
+        //sample05
+        //05. 문자열 메서드 : indexOf() / lastIndexOf() / search() : 문자열 검색하기 : 반환(숫자)
+        //문자열의 인덱스 위치를 반환, 문자열의 첫 번째 문자의 위치는 0, 다섯번째 4
+        //문자열이 없는 경우는 -1
+        //영문 대소문자 구별하여 검색
+        //search는 정규식 표현으로 검섹
+        {
+            const str = "자바스크립트(javascript) 공부";
+            
+            const text1 = str.indexOf("javascript");
+           
+
+            document.querySelector(".sample05_N1").innerHTML = "1";
+            document.querySelector(".sample05_Q1").innerHTML = str;
+            document.querySelector(".sample05_M1").innerHTML = "indexOf('javascript')";
+            document.querySelector(".sample05_R1").innerHTML = text1;
+
+            const text2 = str.indexOf("자바스크립트");
+
+            document.querySelector(".sample05_N2").innerHTML = "2";
+            document.querySelector(".sample05_Q2").innerHTML = str;
+            document.querySelector(".sample05_M2").innerHTML = "indexOf('자바스크립트')";
+            document.querySelector(".sample05_R2").innerHTML = text2;
+
+            const text3 = str.indexOf("제이쿼리");
+
+            document.querySelector(".sample05_N3").innerHTML = "3";
+            document.querySelector(".sample05_Q3").innerHTML = str;
+            document.querySelector(".sample05_M3").innerHTML = "indexOf('제이쿼리')";
+            document.querySelector(".sample05_R3").innerHTML = text3;
+
+            const text4 = str.indexOf("a");
+
+            document.querySelector(".sample05_N4").innerHTML = "4";
+            document.querySelector(".sample05_Q4").innerHTML = str;
+            document.querySelector(".sample05_M4").innerHTML = "idexOf('a')";
+            document.querySelector(".sample05_R4").innerHTML = text4;
+
+            const text5 = str.lastIndexOf("a");
+
+            document.querySelector(".sample05_N5").innerHTML = "5";
+            document.querySelector(".sample05_Q5").innerHTML = str;
+            document.querySelector(".sample05_M5").innerHTML = "lastIndexOf('a')";
+            document.querySelector(".sample05_R5").innerHTML = text5;
+
+            const text6 = str.search(/javascript/);
+
+            document.querySelector(".sample05_N6").innerHTML = "6";
+            document.querySelector(".sample05_Q6").innerHTML = str;
+            document.querySelector(".sample05_M6").innerHTML = "search('/javascript/')";
+            document.querySelector(".sample05_R6").innerHTML = text6;
+
+            const text7 = str.search(/jquery/);
+
+            document.querySelector(".sample05_N7").innerHTML = "7";
+            document.querySelector(".sample05_Q7").innerHTML = str;
+            document.querySelector(".sample05_M7").innerHTML = "search('/jquery/')";
+            document.querySelector(".sample05_R7").innerHTML = text7;
+
+            const text8 = str.includes("javascript");
+
+            document.querySelector(".sample05_N8").innerHTML = "8";
+            document.querySelector(".sample05_Q8").innerHTML = str;
+            document.querySelector(".sample05_M8").innerHTML = "includes('javascript')";
+            document.querySelector(".sample05_R8").innerHTML = text8;
+
+            const text9 = str.includes("jquery");
+
+            document.querySelector(".sample05_N9").innerHTML = "9";
+            document.querySelector(".sample05_Q9").innerHTML = str;
+            document.querySelector(".sample05_M9").innerHTML = "includes('jquery')";
+            document.querySelector(".sample05_R9").innerHTML = text9;
+
+            const text10 = str.startsWith("자바스크립트");
+
+            document.querySelector(".sample05_N10").innerHTML = "10";
+            document.querySelector(".sample05_Q10").innerHTML = str;
+            document.querySelector(".sample05_M10").innerHTML = "startsWith('자바스크립트')";
+            document.querySelector(".sample05_R10").innerHTML = text10;
+
+            const text11 = str.endsWith("javascript");
+
+            document.querySelector(".sample05_N11").innerHTML = "11";
+            document.querySelector(".sample05_Q11").innerHTML = str;
+            document.querySelector(".sample05_M11").innerHTML = "endsWith('javascript')";
+            document.querySelector(".sample05_R11").innerHTML = text11;
+        }
+
+    </script>
+</body>
+
+</html>
