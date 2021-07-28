@@ -124,6 +124,48 @@
             }
             document.write("<br><br>");
         }
+
+        //배열의 갯수를 구하세요
+        {
+            document.write("*** 배열의 갯수 ***<br>")
+
+            const num = [100, 200, 300, 400, 500];
+            
+            document.write(num.length, "<br>");
+
+            document.write("<br><br>");
+
+            document.write("*** 배열의 3번째 값만 출력 ***<br>")
+            document.write(num[2], "<br>");
+
+            document.write("<br><br>");
+
+            document.write("*** for문을 이용 모든 값 출력 ***<br>")
+            for(let i=0; i<num.length; i++){
+                document.write(num[i], "<br>");
+            }
+
+            document.write("<br><br>");
+
+            document.write("*** forEach문을 이용 모든 값 출력 ***<br>")
+            num.forEach((arr) => {
+                document.write(arr, "<br>");
+            });
+
+            document.write("<br><br>");
+
+            document.write("*** for in문을 이용 모든 값 출력 ***<br>")
+            for(let i in num){
+                document.write(num[i], "<br>");
+            }
+
+            document.write("<br><br>");
+
+            document.write("*** for of문을 이용 모든 값 출력 ***<br>")
+            for(let i of num){
+                document.write(i, "<br>");
+            }
+        }
     </script>
 </body>
 </html>

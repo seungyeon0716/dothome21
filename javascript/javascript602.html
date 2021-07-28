@@ -714,6 +714,51 @@
 
     <hr>
 
+    <!-- //sample06 -->
+    <div id="sample06" class="sample">
+        <h2>06. 문자열 메서드 : charAt() : 지정한 인덱스의 문자를 추출 : 반환(문자) <span class="dot"></span></h2>
+        <div class="view">
+            <table>
+                <colgroup>
+                    <col style="width: 4%;">
+                    <col style="width: 22%;">
+                    <col style="width: 22%;">
+                    <col style="width: 52%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>기본값</th>
+                        <th>메서드</th>
+                        <th>결과값</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="sample06_N1"></td>
+                        <td class="sample06_Q1"></td>
+                        <td class="sample06_M1"></td>
+                        <td class="sample06_R1 result"></td>
+                    </tr>
+                    <tr>
+                        <td class="sample06_N2"></td>
+                        <td class="sample06_Q2"></td>
+                        <td class="sample06_M2"></td>
+                        <td class="sample06_R2 result"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
 
     <hr>
 
@@ -899,6 +944,26 @@
             document.querySelector(".sample05_Q11").innerHTML = str;
             document.querySelector(".sample05_M11").innerHTML = "endsWith('javascript')";
             document.querySelector(".sample05_R11").innerHTML = text11;
+        }
+
+        //sample06
+        //06. 문자열 메서드 : charAt() : 지정한 인덱스의 문자를 추출 : 반환(문자)
+        {
+            const str = "자바스크립트(javascript) 공부";
+            const text = str.charAt(4);
+
+            document.querySelector(".sample06_N1").innerHTML = "1";
+            document.querySelector(".sample06_Q1").innerHTML = str;
+            document.querySelector(".sample06_M1").innerHTML = ".charAt(4)";
+            document.querySelector(".sample06_R1").innerHTML = text;
+
+            const str2 = "자바스크립트(javascript) 공부";
+            const text2 = str2.charAt();
+
+            document.querySelector(".sample06_N2").innerHTML = "2";
+            document.querySelector(".sample06_Q2").innerHTML = str2;
+            document.querySelector(".sample06_M2").innerHTML = ".charAt()";
+            document.querySelector(".sample06_R2").innerHTML = text2;
         }
 
     </script>
