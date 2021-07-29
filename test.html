@@ -52,5 +52,61 @@
         <li>포인터 변수에 증감 연산자를 이용하여 배열요소를 참조할 수 있음</li>
         <li>후위 증감 연산자가, 전위 증감 연산자보다 우선순위가 높음</li>
     </ul>
+
+    <script>
+        {
+            let num = 2;
+            do {
+                document.write(num+ ".반복문이 실행되었습니다.");
+                num++;
+            } while (num <= 3);
+        }
+
+        document.write("<br>");
+        {
+            const obj = {
+                a: 100,
+                b: 200
+            };
+
+            for(let key in obj){
+                document.write(key);
+                document.write(obj[key], "<br>");
+            }
+
+            document.write("<br>");
+        }
+
+        {
+            let num = 0;
+
+            while(num < 20){
+                num++;
+                document.write(num);
+                if(num == 10){
+                    break;
+                }
+            }
+
+            document.write("<br>");
+        }
+
+        {
+            let num = "1";
+
+            function gallery(num){
+                if(num){
+                    if(num == 2) direct++;
+                } else {
+                    if(num== 1) drrect--;
+                }
+            }
+            gallery(8);
+
+            document.write(num);
+
+            document.write("<br>");
+        }
+    </script>
 </body>
 </html>
