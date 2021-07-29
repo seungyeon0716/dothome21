@@ -115,7 +115,20 @@
             color: #fff;
             cursor: crosshair;
         }
-
+        .link li {
+            list-style: none;
+        }
+        .link li a {
+            color: #fff;
+            background: #00DB72;
+            padding: 10px;
+            display: inline-block;
+            margin-bottom: 10px;
+            text-decoration: none;
+        }
+        .link li a:hover {
+            background: #000;
+        }
         @media (max-width: 1220px){
             #contents {
                 width: 98%;
@@ -125,21 +138,28 @@
             #contents {
                 width: 96%;
             }
+            #header {
+                padding: 6% 2% 2% 2%;
+            }
             #header h1 {
                 font-size: 16px;
             }
             #header strong {
                 font-size: 14px;
+                bottom: 10%;
             }
             main h2 {
                 font-size: 30px;
+                padding: 22% 5% 5%;
             }
             .refer {
                 padding: 10px;
+                margin-bottom: 100px;
             }
             .refer h3 {
                 margin-bottom: 10px;
                 font-size: 16px;
+                padding: 6px 10px;
             }
             .refer table th {
                 padding: 8px;
@@ -161,6 +181,9 @@
 
     <main id="contents">
         <h2>CSS <em>레퍼런스 북</em></h2>
+        <ul class="link">
+            <li><a href="../javascript/javascript602-sample01.html">CSS 속성 첫 글자 검색하기</a></li>
+        </ul>
         <section class="refer">
             <h3>Alphabet</h3>
             <table>
