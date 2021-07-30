@@ -24,6 +24,7 @@
             padding: 0;
             font-family: 'NEXON Lv1 Gothic OTF';
             line-height: 1.6;
+            word-break: break-all;
         }
 
         body {
@@ -203,26 +204,78 @@
         ol li.active a {
             color: #fff;
         }
-        .mt20{
+
+        .mt20 {
             margin-top: 20px;
         }
+
         .ol1::before {
             content: "데이터 저장하기 :";
         }
+
         .ol2::before {
             content: "데이터 불러오기 :";
         }
+
         .ol3::before {
             content: "데이터 실행하기 :";
         }
-        .ol4::before{
+
+        .ol4::before {
             content: "데이터 제어하기 :";
         }
-        .ol5::before{
+
+        .ol5::before {
             content: "데이터 연습하기 :";
         }
-        .ol6::before{
+
+        .ol6::before {
             content: "데이터 메서드 :";
+        }
+
+        .view {
+            padding: 20px;
+        }
+
+        .view table {
+            width: 100%;
+            /*border-width: 1px; 
+                  border-solid */
+            border: 1px solid #e6e6e6;
+            /* 속기형 작성법 */
+            text-align: center;
+            vertical-align: middle;
+            border-collapse: collapse;
+        }
+
+        .view table th {
+            /*  
+            padding-top: 13px;
+            padding-right: 5px; 
+            padding-bottom: 11px;
+            padding-left: 5px;
+            padding: 13px 5px 11px 5px; 위/오른쪽/아래/왼쪽 
+            padding: 13px 5px 11px;     위/왼쪽,오른쪽: 5px/아래: 11px 
+            padding: 13px 5px;          위,아래: 13px /왼쪽, 오른쪽 :5px 
+            padding: 13px;              위/오른쪽/아래/왼쪽: 13px 
+            */
+            padding: 13px 5px 11px 5px;
+        }
+
+        .view table td {
+            border: 1px solid #e6e6e6;
+            padding: 13px 5px 11px 5px;
+        }
+
+        .view table td.result {
+            color: #fff;
+            transition: all 0.3s;
+            cursor: zoom-in;
+        }
+
+        .view table td.result:hover {
+            color: #000;
+            background-color: #f5f5f5;
         }
     </style>
 </head>
@@ -262,20 +315,374 @@
 
     <h2 class="mt20">배열 메서드</h2>
     <ul>
-        <li><a href="sample1">01. </a></li>
-        <li><a href="sample2">02. </a></li>
+        <li><a href="#sample01">01. 배열 메서드 : length : 배열 길이 구하기 : 반환(숫자)</a></li>
+        <li><a href="#sample02">02. 배열 메서드 : join() : 배열 요소 결합하기 : 반환(문자열)</a></li>
+        <li><a href="#sample03">03. 배열 메서드 : push() : 배열 마지막 요소에 추가하기 : 반환(숫자)</a></li>
+        <li><a href="#sample03">03. 배열 메서드 : unshift() : 배열 처음 요소에 추가하기 : 반환(숫자)</a></li>
+        <li><a href="#sample04">04. 배열 메서드 : shift() : 배열 첫 요소 삭제하기 : 반환(삭제된 요소)</a></li>
+        <li><a href="#sample04">04. 배열 메서드 : pop() : 배열 마지막 요소 삭제하기 : 반환(삭제된 요소)</a></li>
+        <li><a href="#sample05">05. 배열 메서드 : index() : 배열 요소 검색하기 : 반환(숫자)</a></li>
+        <li><a href="#sample05">05. 배열 메서드 : lastIndex() : 배열 요소 끝에서 검색하기 : 반환(숫자)</a></li>
+        <li><a href="#sample05">05. 배열 메서드 : inCludes() : 배열 요소 검색하기 : 반환(불린)</a></li>
+        <li><a href="#sample06">06. 배열 메서드 : find() : 배열 요소 검색하기 : 반환(요소)</a></li>
+        <li><a href="#sample06">06. 배열 메서드 : findIndex() : 배열 첫 요소 검색하기 : 반환(요소)</a></li>
+    </ul>
+    <h2 class="mt20">배열 메서드 샘플</h2>
+    <ul>
+        <li><a href="javascriptSample602-01.html">01. charAt()을 이용한 첫 글자 검색하기</a></li>
+        <li><a href="javascriptSample602-01.html">02. find()을 이용한 CSS글자 검색하기</a></li>
     </ul>
 
     <hr>
 
-    <!-- //sample1 -->
-    <div id="sample1" class="sample">
-        <h2> <span class="dot"></span></h2>
+    <!-- //sample01 -->
+    <div id="sample01" class="sample">
+        <h2>01. 배열 메서드 : length : 배열 길이 구하기 : 반환(숫자) <span class="dot"></span></h2>
+        <div class="view">
+            <table>
+                <colgroup>
+                    <col style="width: 4%;">
+                    <col style="width: 32%;">
+                    <col style="width: 22%;">
+                    <col style="width: 42%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>기본값</th>
+                        <th>메서드</th>
+                        <th>결과값</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="sample01_N1"></td>
+                        <td class="sample01_Q1"></td>
+                        <td class="sample01_M1"></td>
+                        <td class="sample01_R1 result"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
+    const arr = [100, 200, 300, 400, 500];
+    const text = arr.length;
 
+    document.querySelector(".sample01_R1").innerHTML = text;
 }
+</code></pre>
+        </div>
+    </div>
 
+    <hr>
+
+    <!-- //sample02 -->
+    <div id="sample02" class="sample">
+        <h2>02. 배열 메서드 : join() : 배열 요소 결합하기 : 반환(문자열) <span class="dot"></span></h2>
+        <div class="view">
+            <table>
+                <colgroup>
+                    <col style="width: 4%;">
+                    <col style="width: 32%;">
+                    <col style="width: 22%;">
+                    <col style="width: 42%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>기본값</th>
+                        <th>메서드</th>
+                        <th>결과값</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="sample02_N1"></td>
+                        <td class="sample02_Q1"></td>
+                        <td class="sample02_M1"></td>
+                        <td class="sample02_R1 result"></td>
+                    </tr>
+                    <tr>
+                        <td class="sample02_N2"></td>
+                        <td class="sample02_Q2"></td>
+                        <td class="sample02_M2"></td>
+                        <td class="sample02_R2 result"></td>
+                    </tr>
+                    <tr>
+                        <td class="sample02_N3"></td>
+                        <td class="sample02_Q3"></td>
+                        <td class="sample02_M3"></td>
+                        <td class="sample02_R3 result"></td>
+                    </tr>
+                    <tr>
+                        <td class="sample02_N4"></td>
+                        <td class="sample02_Q4"></td>
+                        <td class="sample02_M4"></td>
+                        <td class="sample02_R4 result"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const arr = [100, 200, 300, 400, 500];
+    const text1 = arr.join("*");
+    const text2 = arr.join("-");
+    const text3 = arr.join("");
+    const text4 = arr.join(" ");
+
+    document.querySelector(".sample02_R1").innerHTML = text1;
+    document.querySelector(".sample02_R2").innerHTML = text2;
+    document.querySelector(".sample02_R3").innerHTML = text3;
+    document.querySelector(".sample02_R4").innerHTML = text4;
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample03 -->
+    <div id="sample03" class="sample">
+        <h2>03. 배열 메서드 : push()/unshift() : 배열 마지막 요소에 추가하기 : 반환(숫자) <span class="dot"></span></h2>
+        <div class="view">
+            <table>
+                <colgroup>
+                    <col style="width: 4%;">
+                    <col style="width: 32%;">
+                    <col style="width: 22%;">
+                    <col style="width: 10%;">
+                    <col style="width: 32%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>기본값</th>
+                        <th>메서드</th>
+                        <th>메서드 값</th>
+                        <th>결과값</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="sample03_N1"></td>
+                        <td class="sample03_Q1"></td>
+                        <td class="sample03_M1"></td>
+                        <td class="sample03_P1 result"></td>
+                        <td class="sample03_R1 result"></td>
+                    </tr>
+                    <tr>
+                        <td class="sample03_N2"></td>
+                        <td class="sample03_Q2"></td>
+                        <td class="sample03_M2"></td>
+                        <td class="sample03_P2 result"></td>
+                        <td class="sample03_R2 result"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const arr = [100, 200, 300, 400, 500];
+    const text = arr.push(600);
+
+    document.querySelector(".sample03_R1").innerHTML = text;
+
+    const arr2 = [100, 200, 300, 400, 500];
+    const text2 = arr2.unshift(600);
+
+    document.querySelector(".sample03_R2").innerHTML = text2;
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample04 -->
+    <div id="sample04" class="sample">
+        <h2>04. 배열 메서드 : shift()/pop() : 배열 첫 요소 삭제하기 : 반환(삭제된 요소) <span class="dot"></span></h2>
+        <div class="view">
+            <table>
+                <colgroup>
+                    <col style="width: 4%;">
+                    <col style="width: 32%;">
+                    <col style="width: 22%;">
+                    <col style="width: 10%;">
+                    <col style="width: 32%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>기본값</th>
+                        <th>메서드</th>
+                        <th>메서드 값</th>
+                        <th>결과값</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="sample04_N1"></td>
+                        <td class="sample04_Q1"></td>
+                        <td class="sample04_M1"></td>
+                        <td class="sample04_P1 result"></td>
+                        <td class="sample04_R1 result"></td>
+                    </tr>
+                    <tr>
+                        <td class="sample04_N2"></td>
+                        <td class="sample04_Q2"></td>
+                        <td class="sample04_M2"></td>
+                        <td class="sample04_P2 result"></td>
+                        <td class="sample04_R2 result"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const arr = [100, 200, 300, 400, 500];
+    const text = arr.shift();
+
+    document.querySelector(".sample04_P1").innerHTML = text;
+    document.querySelector(".sample04_R1").innerHTML = arr;
+
+    const arr2 = [100, 200, 300, 400, 500];
+    const text2 = arr2.pop();
+
+    document.querySelector(".sample04_P2").innerHTML = text2;
+    document.querySelector(".sample04_R2").innerHTML = arr2;
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample05 -->
+    <div id="sample05" class="sample">
+        <h2>05. 배열 메서드 : index()/lastIndexOf()/includes() : 배열 요소 검색하기 : 반환(숫자) <span class="dot"></span></h2>
+        <div class="view">
+            <table>
+                <colgroup>
+                    <col style="width: 4%;">
+                    <col style="width: 32%;">
+                    <col style="width: 22%;">
+                    <col style="width: 42%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>기본값</th>
+                        <th>메서드</th>
+                        <th>결과값</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="sample05_N1"></td>
+                        <td class="sample05_Q1"></td>
+                        <td class="sample05_M1"></td>
+                        <td class="sample05_R1 result"></td>
+                    </tr>
+                    <tr>
+                        <td class="sample05_N2"></td>
+                        <td class="sample05_Q2"></td>
+                        <td class="sample05_M2"></td>
+                        <td class="sample05_R2 result"></td>
+                    </tr>
+                    <tr>
+                        <td class="sample05_N3"></td>
+                        <td class="sample05_Q3"></td>
+                        <td class="sample05_M3"></td>
+                        <td class="sample05_R3 result"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const arr = [100, 200, 300, 400, 500];
+    const text = arr.indexOf(200);
+
+    document.querySelector(".sample05_M1").innerHTML = ".indexOf(200)";
+    document.querySelector(".sample05_R1").innerHTML = text;
+
+    const text2 = arr.lastIndexOf(200);
+
+    document.querySelector(".sample05_M2").innerHTML = ".lastIndexOf(200)";
+    document.querySelector(".sample05_R2").innerHTML = text2;
+
+    const text3 = arr.includes(200);
+
+    document.querySelector(".sample05_M3").innerHTML = ".includes(200)";
+    document.querySelector(".sample05_R3").innerHTML = text3;
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample06 -->
+    <div id="sample06" class="sample">
+        <h2>06. 배열 메서드 : find()/findIndex() : 배열 요소 검색하기 : 반환(요소) <span class="dot"></span></h2>
+        <div class="view">
+            <table>
+                <colgroup>
+                    <col style="width: 4%;">
+                    <col style="width: 32%;">
+                    <col style="width: 22%;">
+                    <col style="width: 42%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>기본값</th>
+                        <th>메서드</th>
+                        <th>결과값</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="sample06_N1"></td>
+                        <td class="sample06_Q1"></td>
+                        <td class="sample06_M1"></td>
+                        <td class="sample06_R1 result"></td>
+                    </tr>
+                    <tr>
+                        <td class="sample06_N2"></td>
+                        <td class="sample06_Q2"></td>
+                        <td class="sample06_M2"></td>
+                        <td class="sample06_R2 result"></td>
+                    </tr>
+                    <tr>
+                        <td class="sample06_N3"></td>
+                        <td class="sample06_Q3"></td>
+                        <td class="sample06_M3"></td>
+                        <td class="sample06_R3 result"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const arr = [100, 200, 300, 400, 500];
+
+    const find = arr.find(element => element === 300);
+
+    document.querySelector(".sample06_R1").innerHTML = find;
+
+    const text = ["javascript","react","vue"];
+    const find2 = text.find(element => element === "javascript");
+
+    document.querySelector(".sample06_R2").innerHTML = find2;
+
+    const text3 = ["javascript","react","vue"];
+    const find3 = text3.findIndex(element => element === "javascript");
+
+    document.querySelector(".sample06_R3").innerHTML = find3;
+}
 </code></pre>
         </div>
     </div>
@@ -288,12 +695,171 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
     <script>
-        //sample1
-        //01. 
-        {   
-           
+        //sample01
+        //01. 배열 메서드 : length : 배열 길이 구하기 : 반환(숫자) 
+        {
+            const arr = [100, 200, 300, 400, 500];
+            const text = arr.length;
+
+            document.querySelector(".sample01_N1").innerHTML = "1";
+            document.querySelector(".sample01_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample01_M1").innerHTML = ".length";
+            document.querySelector(".sample01_R1").innerHTML = text;
         }
+
+        //sample02
+        //02. 배열 메서드 : join() : 배열 요소 결합하기 : 반환(문자열) 
+        {
+            const arr = [100, 200, 300, 400, 500];
+            const text1 = arr.join("*");
+            const text2 = arr.join("-");
+            const text3 = arr.join("");
+            const text4 = arr.join(" ");
+
+            document.querySelector(".sample02_N1").innerHTML = "2";
+            document.querySelector(".sample02_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample02_M1").innerHTML = ".join('*')";
+            document.querySelector(".sample02_R1").innerHTML = text1;
+
+            document.querySelector(".sample02_N2").innerHTML = "2";
+            document.querySelector(".sample02_Q2").innerHTML = "[200, 200, 300, 400, 500]";
+            document.querySelector(".sample02_M2").innerHTML = ".join('-')";
+            document.querySelector(".sample02_R2").innerHTML = text2;
+
+            document.querySelector(".sample02_N3").innerHTML = "3";
+            document.querySelector(".sample02_Q3").innerHTML = "[200, 200, 300, 400, 500]";
+            document.querySelector(".sample02_M3").innerHTML = ".join('')";
+            document.querySelector(".sample02_R3").innerHTML = text3;
+
+            document.querySelector(".sample02_N4").innerHTML = "4";
+            document.querySelector(".sample02_Q4").innerHTML = "[200, 200, 300, 400, 500]";
+            document.querySelector(".sample02_M4").innerHTML = ".join(' ')";
+            document.querySelector(".sample02_R4").innerHTML = text4;
+        }
+
+        //sample03
+        //03. 배열 메서드 : push() : 배열 마지막 요소에 추가하기 : 반환(숫자)
+        //03. 배열 메서드 : unshift() : 배열 처음 요소에 추가하기 : 반환(숫자)
+        {
+            const arr = [100, 200, 300, 400, 500];
+            const text = arr.push(600);
             
+            document.querySelector(".sample03_N1").innerHTML = "1";
+            document.querySelector(".sample03_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample03_M1").innerHTML = ".push(600)";
+            document.querySelector(".sample03_P1").innerHTML = text;
+            document.querySelector(".sample03_R1").innerHTML = arr;
+
+            const arr2 = [100, 200, 300, 400, 500];
+            const text2 = arr2.unshift(600);
+
+            document.querySelector(".sample03_N2").innerHTML = "2";
+            document.querySelector(".sample03_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample03_M2").innerHTML = ".unshift(600)";
+            document.querySelector(".sample03_P2").innerHTML = text2;
+            document.querySelector(".sample03_R2").innerHTML = arr2;
+
+        } 
+
+        //sample04
+        //04. 배열 메서드 : shift() : 배열 첫 요소 삭제하기 : 반환(삭제된 요소)
+        //04. 배열 메서드 : pop() : 배열 마지막 요소 삭제하기 : 반환(삭제된 요소)
+        {
+            const arr = [100, 200, 300, 400, 500];
+            const text = arr.shift();
+            
+            document.querySelector(".sample04_N1").innerHTML = "1";
+            document.querySelector(".sample04_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample04_M1").innerHTML = ".shift()";
+            document.querySelector(".sample04_P1").innerHTML = text;
+            document.querySelector(".sample04_R1").innerHTML = arr;
+
+            const arr2 = [100, 200, 300, 400, 500];
+            const text2 = arr2.pop();
+            
+            document.querySelector(".sample04_N2").innerHTML = "2";
+            document.querySelector(".sample04_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample04_M2").innerHTML = ".pop()";
+            document.querySelector(".sample04_P2").innerHTML = text2;
+            document.querySelector(".sample04_R2").innerHTML = arr2;
+        }
+
+        //sample05
+        //05. 배열 메서드 : index() : 배열 요소 검색하기 : 반환(숫자)
+        //05. 배열 메서드 : lastIndex() : 배열 요소 끝에서 검색하기 : 반환(숫자)
+        //05. 배열 메서드 : inCludes() : 배열 요소 검색하기 : 반환(불린)
+        {
+            const arr = [100, 200, 300, 400, 500];
+            const text = arr.indexOf(200);
+
+            document.querySelector(".sample05_N1").innerHTML = "1";
+            document.querySelector(".sample05_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample05_M1").innerHTML = ".indexOf(200)";
+            document.querySelector(".sample05_R1").innerHTML = text;
+
+            const text2 = arr.lastIndexOf(200);
+
+            document.querySelector(".sample05_N2").innerHTML = "2";
+            document.querySelector(".sample05_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample05_M2").innerHTML = ".lastIndexOf(200)";
+            document.querySelector(".sample05_R2").innerHTML = text2;
+
+            const text3 = arr.includes(200);
+
+            document.querySelector(".sample05_N3").innerHTML = "3";
+            document.querySelector(".sample05_Q3").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample05_M3").innerHTML = ".includes(200)";
+            document.querySelector(".sample05_R3").innerHTML = text3;
+        }
+
+        //sample06
+        //06. 배열 메서드 : find() : 배열 요소 검색하기 : 반환(요소)
+        //06. 배열 메서드 : findIndex() : 배열 첫 요소 검색하기 : 반환(요소)
+        {
+            const text1 = [100, 200, 300, 400, 500];
+
+            // //함수 형태
+            // const find = arr.find(function(){});
+
+            // //리턴값 함수
+            // const find = arr.find(function(element){
+            //     return element === 300
+            // });
+
+            // //화살표 함수
+            // const find = arr.find((element) => {
+            //     return element === 300
+            //  });
+             
+            // //화살표 함수 괄호 생략
+            // const find = arr.find(element => {
+            //     return element === 300
+            //  });
+
+            //화살표 함수 괄호,리턴 생략
+            const find = text1.find(element => element === 300);
+            
+            document.querySelector(".sample06_N1").innerHTML = "1";
+            document.querySelector(".sample06_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample06_M1").innerHTML = "찾는 요소 : 300";
+            document.querySelector(".sample06_R1").innerHTML = find;
+
+            const text2 = ["javascript","react","vue"];
+            const find2 = text2.find(element => element === "javascript");
+
+            document.querySelector(".sample06_N2").innerHTML = "2";
+            document.querySelector(".sample06_Q2").innerHTML = "['javascript','react','vue']";
+            document.querySelector(".sample06_M2").innerHTML = "찾는 요소 : javascript";
+            document.querySelector(".sample06_R2").innerHTML = find2;
+
+            const text3 = ["javascript","react","vue"];
+            const find3 = text3.findIndex(element => element === "javascript");
+
+            document.querySelector(".sample06_N3").innerHTML = "3";
+            document.querySelector(".sample06_Q3").innerHTML = "['javascript','react','vue']";
+            document.querySelector(".sample06_M3").innerHTML = "찾는 요소 : javascript";
+            document.querySelector(".sample06_R3").innerHTML = find3;
+        }
     </script>
 </body>
 

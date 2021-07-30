@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-SCompatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML 속성 검색하기</title>
+    <title>CSS 속성 검색하기</title>
     <style>
         @font-face {
             font-family: 'GyeonggiBatang';
@@ -25,27 +25,32 @@
             margin: 0;
             padding: 0;
         }
+
         img {
             width: 100%;
         }
+
         body {
             background-image: url(img/search_bg.jpg);
             background-size: cover;
             background-position: center bottom;
             background-attachment: fixed;
         }
+
         .girl {
             width: 250px;
             position: fixed;
             bottom: -60px;
             right: 5%;
         }
+
         .dog {
             width: 150px;
             position: fixed;
             bottom: -40px;
             left: 5%;
         }
+
         .board {
             margin: 5vw 10vw 10vw 10vw;
             width: 80vw;
@@ -55,6 +60,7 @@
             text-align: center;
             box-sizing: border-box;
         }
+
         .board h1 {
             font-family: 'TmonMonsori';
             color: #223547;
@@ -62,11 +68,13 @@
             margin-top: 10px;
             margin-bottom: 20px;
         }
+
         .board span {
             font-family: 'GyeonggiBatang';
             color: #223547;
             font-size: 20px;
         }
+
         .board .search label {
             font-family: 'GyeonggiBatang';
             background-color: #BFE6FE;
@@ -76,6 +84,7 @@
             border-radius: 40px;
             display: none;
         }
+
         .board .search input {
             font-family: 'GyeonggiBatang';
             font-size: 24px;
@@ -84,10 +93,12 @@
             border-radius: 40px;
             outline: none;
         }
+
         .board .list {
             text-align: left;
             margin-top: 40px;
         }
+
         .board .list ul li {
             font-family: 'GyeonggiBatang';
             line-height: 1.6;
@@ -135,8 +146,8 @@
 <body>
     <div id="wrap">
         <div class="board">
-            <span>속성 중에 첫 글자만 넣어주세요!!</span>
-            <h1>HTML 속성 검색하기</h1>
+            <span>CSS 속성을 넣어주세요!!</span>
+            <h1>CSS 속성 검색하기</h1>
             <div class="search">
                 <label for="search-box">검색하기</label>
                 <input id="search-box" type="text">
@@ -354,6 +365,45 @@
     </div>
 
     <script>
+        const cssProp = [
+            { name: "align-content", desc: "백그라운드 속성을 일괄적으로 설정합니다."},
+            { name: "align-item", desc: "백그라운드 속성을 일괄적으로 설정합니다."},
+            { name: "align-self", desc: "백그라운드 속성을 일괄적으로 설정합니다."},
+            { name: "align-content", desc: "백그라운드 속성을 일괄적으로 설정합니다."},
+            { name: "align-content", desc: "백그라운드 속성을 일괄적으로 설정합니다."},
+            { name: "align-content", desc: "백그라운드 속성을 일괄적으로 설정합니다."},
+            { name: "align-content", desc: "백그라운드 속성을 일괄적으로 설정합니다."},
+            { name: "align-content", desc: "백그라운드 속성을 일괄적으로 설정합니다."},
+            { name: "align-content", desc: "백그라운드 속성을 일괄적으로 설정합니다."},
+            { name: "align-content", desc: "백그라운드 속성을 일괄적으로 설정합니다."},
+            { name: "align-content", desc: "백그라운드 속성을 일괄적으로 설정합니다."},
+            { name: "align-content", desc: "백그라운드 속성을 일괄적으로 설정합니다."},
+            { name: "align-content", desc: "백그라운드 속성을 일괄적으로 설정합니다."},
+            { name: "align-content", desc: "백그라운드 속성을 일괄적으로 설정합니다."},
+            { name: "align-content", desc: "백그라운드 속성을 일괄적으로 설정합니다."},
+            { name: "align-content", desc: "백그라운드 속성을 일괄적으로 설정합니다."},
+            { name: "align-content", desc: "백그라운드 속성을 일괄적으로 설정합니다."},
+            { name: "align-content", desc: "백그라운드 속성을 일괄적으로 설정합니다."},
+            { name: "align-content", desc: "백그라운드 속성을 일괄적으로 설정합니다."},
+            { name: "align-content", desc: "백그라운드 속성을 일괄적으로 설정합니다."},
+            { name: "align-content", desc: "백그라운드 속성을 일괄적으로 설정합니다."},
+            { name: "align-content", desc: "백그라운드 속성을 일괄적으로 설정합니다."},
+            { name: "align-content", desc: "백그라운드 속성을 일괄적으로 설정합니다."},
+            { name: "align-content", desc: "백그라운드 속성을 일괄적으로 설정합니다."},
+            { name: "align-content", desc: "백그라운드 속성을 일괄적으로 설정합니다."},
+            { name: "align-content", desc: "백그라운드 속성을 일괄적으로 설정합니다."},
+            { name: "align-content", desc: "백그라운드 속성을 일괄적으로 설정합니다."},
+            { name: "align-content", desc: "백그라운드 속성을 일괄적으로 설정합니다."},
+        ]
+
+
+
+
+
+
+
+
+
         const searchBox = document.querySelector("#search-box");
         const cssList = document.querySelectorAll(".list ul li");
 
