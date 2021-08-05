@@ -287,11 +287,10 @@
         <h2>01. 변수 : 데이터 저장소 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    var x = 100;            //변수 x에 숫자 100을 저장
-    var y = 200;            //변수 y에 숫자 200을 저장
-    var z = "javascript";   //변수 z에 문자 javascript 저장
+    var x = 100;            
+    var y = 200;            
+    var z = "javascript";  
 
-    document.write("*** 01. 변수 ***");
     document.write(x);
     document.write(y);
     document.write(z);
@@ -310,11 +309,10 @@
     let x = 100;
     let y = 200;
     let z = "javascript";
-    x = 300;    //변수 x에 값이 100에서 300으로 변경
+    x = 300;   
     y = 400;
     z = "jquery";
 
-    document.write("*** 02. 변수 : 데이터 저장 + 데이터 변경 ***");
     document.write(x);
     document.write(y);
     document.write(z);
@@ -333,11 +331,10 @@
     let x = 100;
     let y = 200;
     let z = "javascript";
-    x += 300;       //x = x + 300; (대입연산자)
-    y += 400;       //y = y + 400;
-    z += "jquery";  //z = z + "jquery";
+    x += 300;    
+    y += 400;      
+    z += "jquery";  
 
-    document.write("*** 03. 변수 ***");
     document.write(x);
     document.write(y);
     document.write(z);
@@ -362,7 +359,6 @@
     //z = "jquery";
     //Uncaught TypeError: Assignment to constant variable.
 
-    document.write("*** 04. 상수 ***");
     document.write(x);
     document.write(y);
     document.write(z);
@@ -378,12 +374,11 @@
         <h2>05. 배열 : 표현 방법1<span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    const arr = new Array();     //배열 선언
-    arr[0] = 100;                //첫번째 배열 저장소에 숫자 100을 저장
-    arr[1] = 200;                //두번째 배열 저장소에 숫자 200을 저장
-    arr[2] = "javascript";       //세번째 배열 저장소에 문자 javascript을 저장
+    const arr = new Array();    
+    arr[0] = 100;                
+    arr[1] = 200;             
+    arr[2] = "javascript";  
 
-    document.write("*** 05. 배열 ***");
     document.write(arr[0]);
     document.write(arr[1]);
     document.write(arr[2]);
@@ -401,7 +396,6 @@
 <pre class="line-numbers"><code class="language-js">{
     const arr = new Array(100, 200, 'javascript');
 
-    document.write("*** 06. 배열 ***");
     document.write(arr[0]");
     document.write(arr[1]);
     document.write(arr[2]);
@@ -417,12 +411,11 @@
         <h2>07. 배열 : 표현 방법3<span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    const arr = [];     //배열선언
+    const arr = [];   
     arr[0] = 100;            
     arr[1] = 200;             
     arr[2] = "javascript";  
 
-    document.write("*** 07. 배열 ***");
     document.write(arr[0];
     document.write(arr[1]);
     document.write(arr[2]);
@@ -440,7 +433,6 @@
 <pre class="line-numbers"><code class="language-js">{
     const arr = [100, 200, "javascript"];   
 
-    document.write("*** 08. 배열 ***");
     document.write(arr[0]);
     document.write(arr[1]);
     document.write(arr[2]);
@@ -461,7 +453,6 @@
     obj[1] = 200;
     obj[2] = "javascript";
 
-    document.write("*** 09. 객체 ***");
     document.write(obj[0]);
     document.write(obj[1]);
     document.write(obj[2];
@@ -482,7 +473,6 @@
     obj.b = 200;
     obj.c = "javascript";
 
-    document.write("*** 10. 객체 ***");
     document.write(obj.a);
     document.write(obj.b);
     document.write(obj.c);
@@ -503,7 +493,6 @@
     obj.b = 200;
     obj.c = "javascript";
 
-    document.write("*** 11. 객체 ***");
     document.write(obj.a);
     document.write(obj.b);
     document.write(obj.c);
@@ -521,7 +510,6 @@
 <pre class="line-numbers"><code class="language-js">{
     const obj = {a: 100, b: 200, c: "javascript"};
 
-    document.write("*** 12. 객체 ***");
     document.write(obj.a);
     document.write(obj.b);
     document.write(obj.c);
@@ -542,7 +530,6 @@
         {c: "javascript"}
     ];
 
-    document.write("*** 13. 객체 ***");
     document.write(obj[0].a);
     document.write(obj[0].b);
     document.write(obj[1].c);
