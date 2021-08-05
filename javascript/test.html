@@ -163,8 +163,71 @@
 
             document.write("*** for of문을 이용 모든 값 출력 ***<br>")
             for(let i of num){
-                document.write(i, "<br>");
+                document.write(i, "<br><br>");
             }
+        }
+
+        {
+            document.write("*** for문을 이용해서 각 데이터 출력 ***<br>")
+
+            const arr = [100, 200, 300, 400, 500];
+
+            for(let i=0; i<arr.length; i++){
+                document.write(arr[i], "<br><br>");
+            }
+        }
+
+        {
+            document.write("*** forEach문을 이용해서 각 데이터 출력 ***<br>")
+
+            const arr = [100, 200, 300, 400, 500];
+
+            arr.forEach(function(el){
+                document.write(el, "<br>");
+            })
+
+            document.write("*** for of문을 이용해서 각 데이터 출력 ***<br>")
+
+            for( let element of arr ) document.write(element, "<br>");
+            for( let element in arr ) document.write(element, "<br>");
+            for( let element in arr ) document.write(arr[element], "<br>");
+
+            document.write("*** 배열에서 300 찾은 다음 출력 ***<br>")
+
+            const find = arr.find(element => element === 300);
+
+            document.write(find, "<br><br>");
+        }
+
+        {
+            //"함수가 실행되었습니다"를 function을 이용해서 출력(선언적)
+
+            function func(){
+                document.write("함수가 실행되었습니다.<br>");
+            }
+            func();
+
+            //"함수가 실행되었습니다"를 function을 이용해서 출력(익명)
+
+            //const func2 = function(){
+            //    document.write("함수가 실행되었습니다.<br>");
+            //}
+            //func2();
+
+            //"함수가 실행되었습니다"를 function을 이용해서 출력(매개변수)
+
+            function func2(str){
+                document.write(str);
+            }
+            func2("함수가 실행되었습니다.<br>");
+
+            //"함수가 실행되었습니다"를 function을 이용해서 출력(리턴값)
+
+            function func3(){
+                const str = "함수가 실행되었습니다.<br>";
+                return str;
+            }
+            document.write(func3());
         }
     </script>
 </body>
