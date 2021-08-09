@@ -159,10 +159,9 @@
             </div>
             <div class="search-result">
                 <ul>
-                    <li>align-content</li>
-                    <li>align-items</li>
-                    <li>align-self</li>
-                    <li>all</li>
+                    <li>1.align-content</li>
+                    <li>2.align-items</li>
+                    <li>3.align-self</li>
                 </ul>
             </div>
         </div>
@@ -176,7 +175,7 @@
 
     <script>
         const cssProp = [
-            {
+        {
                 id: 1,
                 name : "align-content"
             },
@@ -202,15 +201,13 @@
 
         function updataList(){
             let listHTML = '';
-
+            
             // document.write(cssProp[0].name)
             // document.write(cssProp[1].name)
             // document.write(cssProp[2].name)
-
             // searchResult.innerHTML = "<li>"+cssProp[0].name+"</li>";
             // searchResult.innerHTML += "<li>"+cssProp[1].name+"</li>";
             // searchResult.innerHTML += "<li>"+cssProp[2].name+"</li>";
-            
             for ( let prop of cssProp ){
                 searchResult.innerHTML += "<li>"+prop.id +" : "+ prop.name+"</li>";
             }
