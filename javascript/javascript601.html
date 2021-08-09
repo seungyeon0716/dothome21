@@ -384,6 +384,7 @@
     const arr = [100, 200, 300, 400, 500];
     const text = arr.length;
 
+    document.querySelector(".sample01_M1").innerHTML = ".length";
     document.querySelector(".sample01_R1").innerHTML = text;
 }
 </code></pre>
@@ -447,9 +448,16 @@
     const text3 = arr.join("");
     const text4 = arr.join(" ");
 
+    document.querySelector(".sample02_M1").innerHTML = ".join('*')";
     document.querySelector(".sample02_R1").innerHTML = text1;
+
+    document.querySelector(".sample02_M2").innerHTML = ".join('-')";
     document.querySelector(".sample02_R2").innerHTML = text2;
+
+    document.querySelector(".sample02_M3").innerHTML = ".join('')";
     document.querySelector(".sample02_R3").innerHTML = text3;
+
+    document.querySelector(".sample02_M4").innerHTML = ".join(' ')";
     document.querySelector(".sample02_R4").innerHTML = text4;
 }
 </code></pre>
@@ -502,11 +510,13 @@
     const arr = [100, 200, 300, 400, 500];
     const text = arr.push(600);
 
+    document.querySelector(".sample03_M1").innerHTML = ".push(600)";
     document.querySelector(".sample03_R1").innerHTML = text;
 
     const arr2 = [100, 200, 300, 400, 500];
     const text2 = arr2.unshift(600);
 
+    document.querySelector(".sample03_M2").innerHTML = ".unshift(600)";
     document.querySelector(".sample03_R2").innerHTML = text2;
 }
 </code></pre>
@@ -559,14 +569,14 @@
     const arr = [100, 200, 300, 400, 500];
     const text = arr.shift();
 
+    document.querySelector(".sample04_M1").innerHTML = ".shift()";
     document.querySelector(".sample04_P1").innerHTML = text;
-    document.querySelector(".sample04_R1").innerHTML = arr;
 
     const arr2 = [100, 200, 300, 400, 500];
     const text2 = arr2.pop();
 
+    document.querySelector(".sample04_M2").innerHTML = ".pop()";
     document.querySelector(".sample04_P2").innerHTML = text2;
-    document.querySelector(".sample04_R2").innerHTML = arr2;
 }
 </code></pre>
         </div>
@@ -753,7 +763,17 @@
         </div>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
+    const arrNum1 = [100, 200, 300];
+    const arrNum2 = [400, 500, 600];
+    const result1 =arrNum1.concat(arrNum2);
 
+    document.querySelector(".sample07_M1").innerHTML = ".concat()";
+    document.querySelector(".sample07_R1").innerHTML = result1;
+
+    const result2 = [...arrNum1, ...arrNum2];
+
+    document.querySelector(".sample07_M2").innerHTML = "[...arrNum1, ...arrNum2]";
+    document.querySelector(".sample07_R2").innerHTML = result2;
 }
 </code></pre>
         </div>
@@ -822,7 +842,31 @@
         </div>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
+    const arrNum1 = [100, 200, 300, 400, 500];
+    const result1 = arrNum1.slice(2);
+    const result2 = arrNum1.slice(2, 3);
+    const result3 = arrNum1.slice(2, 4);
+    const result4 = arrNum1.slice(2, 5);
+    const result5 = arrNum1.slice(-2);
+    const result6 = arrNum1.slice(-2, 5);
 
+    document.querySelector(".sample08_M1").innerHTML = "[arrNum1]";
+    document.querySelector(".sample08_R1").innerHTML = result1;
+
+    document.querySelector(".sample08_M2").innerHTML = "[arrNum1]";
+    document.querySelector(".sample08_R2").innerHTML = result2;
+
+    document.querySelector(".sample08_M3").innerHTML = "[arrNum1]";
+    document.querySelector(".sample08_R3").innerHTML = result3;
+
+    document.querySelector(".sample08_M4").innerHTML = "[arrNum1]";
+    document.querySelector(".sample08_R4").innerHTML = result4;
+
+    document.querySelector(".sample08_M5").innerHTML = "[arrNum1]";
+    document.querySelector(".sample08_R5").innerHTML = result5;
+
+    document.querySelector(".sample08_M6").innerHTML = "[arrNum1]";
+    document.querySelector(".sample08_R6").innerHTML = result6;
 }
 </code></pre>
         </div>
@@ -891,7 +935,17 @@
         </div>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
+    const arrNum1 = [100, 200, 300, 400, 500];
+    const result1 = arrNum1.splice(2);
 
+    document.querySelector(".sample09_M1").innerHTML = ".splice(2)";
+    document.querySelector(".sample09_R1").innerHTML = arrNum1;
+
+    const arrNum2 = [100, 200, 300, 400, 500];
+    const result2 = arrNum2.splice(2, 3);
+
+    document.querySelector(".sample09_M2").innerHTML = ".splice(2, 3)";
+    document.querySelector(".sample09_R2").innerHTML = arrNum2;
 }
 </code></pre>
         </div>
