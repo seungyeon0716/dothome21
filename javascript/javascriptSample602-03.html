@@ -75,7 +75,7 @@
             font-size: 20px;
         }
 
-        .board .search label {
+        /* .board .search label {
             font-family: 'GyeonggiBatang';
             background-color: #BFE6FE;
             font-size: 26px;
@@ -92,14 +92,14 @@
             padding: 10px 10px 10px 30px;
             border-radius: 40px;
             outline: none;
-        }
+        } */
 
         .board .search-result {
             text-align: left;
             margin-top: 40px;
         }
 
-        .board .search-result ul li {
+        .board .search-result li {
             font-family: 'GyeonggiBatang';
             line-height: 1.6;
             list-style: none;
@@ -108,9 +108,13 @@
             padding: 5px 10px;
             border-radius: 4px;
         }
-        .board .search-result ul li.hide {
+        button {
+            font-family: 'GyeonggiBatang';
+            padding: 10px 20px;
+        }      
+        /* .board .search-result li.hide {
             display: none;
-        }
+        } */
         @media (max-width: 800px) {
             .board {
                 width: 92vw;
@@ -124,15 +128,18 @@
             .board span {
                 font-size: 12px;
             }
-            .board .search input {
+            .board .list {
+                margin-top: 20px;
+            }
+            /* .board .search input {
                 width: 100%;
                 box-sizing: border-box;
                 font-size: 16px;
                 padding: 10px 10px 10px 20px;
-            }
-            .board .search-result {
+            } */
+            /* .board .search-result {
                 margin-top: 20px;
-            }
+            } */
             .girl {
                 width: 200px;
             }
@@ -140,10 +147,6 @@
                 width: 100px;
             }
         }
-        button {
-            font-family: 'GyeonggiBatang';
-            padding: 10px 20px;
-        }      
     </style>
 </head>
 
@@ -158,11 +161,11 @@
                 
             </div>
             <div class="search-result">
-                <ul>
-                    <li>1.align-content</li>
-                    <li>2.align-items</li>
-                    <li>3.align-self</li>
-                </ul>
+                <!-- <ul>
+                    <li>1. align-content</li>
+                    <li>2. align-items</li>
+                    <li>3. align-self</li>
+                </ul> -->
             </div>
         </div>
         <div class="girl">
@@ -180,21 +183,13 @@
                 name : "align-content"
             },
             {
-                id: 4,
-                name : "align-selfdd"
-            },
-            {
                 id: 2,
                 name : "align-items"
             },
             {
                 id: 3,
                 name : "align-self"
-            },
-            {
-                id: 5,
-                name : "align-sedd"
-            },
+            }
         ];
         const searchResult = document.querySelector(".search-result");
         const asceButton = document.querySelector(".asce");
