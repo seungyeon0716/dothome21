@@ -1525,14 +1525,14 @@
             const result1 =arrNum1.concat(arrNum2);
 
             document.querySelector(".sample07_N1").innerHTML = "1";
-            document.querySelector(".sample07_Q1").innerHTML = "[100, 200, 300]";
+            document.querySelector(".sample07_Q1").innerHTML = "[100, 200, 300],[400, 500, 600]";
             document.querySelector(".sample07_M1").innerHTML = ".concat()";
             document.querySelector(".sample07_R1").innerHTML = result1;
 
             const result2 = [...arrNum1, ...arrNum2];
 
             document.querySelector(".sample07_N2").innerHTML = "2";
-            document.querySelector(".sample07_Q2").innerHTML = "[100, 200, 300]";
+            document.querySelector(".sample07_Q2").innerHTML = "[100, 200, 300],[400, 500, 600]";
             document.querySelector(".sample07_M2").innerHTML = "[...arrNum1, ...arrNum2]";
             document.querySelector(".sample07_R2").innerHTML = result2;
         }
@@ -1701,7 +1701,7 @@
 
             document.querySelector(".sample11_N1").innerHTML = "1";
             document.querySelector(".sample11_Q1").innerHTML = "[100, 200, 300, 400, 500]";
-            document.querySelector(".sample11_M1").innerHTML = "filter";
+            document.querySelector(".sample11_M1").innerHTML = "filter(el => el === 300)";
             document.querySelector(".sample11_R1").innerHTML = result1;
             console.log(result1);
              
@@ -1710,7 +1710,7 @@
 
             document.querySelector(".sample11_N2").innerHTML = "2";
             document.querySelector(".sample11_Q2").innerHTML = "[100, 200, 300, 400, 500]";
-            document.querySelector(".sample11_M2").innerHTML = "filter";
+            document.querySelector(".sample11_M2").innerHTML = "filter(el => el >= 300)";
             document.querySelector(".sample11_R2").innerHTML = result2;
 
             const arrText1 = ["javascript", "react", "vue"];
@@ -1718,7 +1718,7 @@
 
             document.querySelector(".sample11_N3").innerHTML = "3";
             document.querySelector(".sample11_Q3").innerHTML = "['javascript', 'react', 'vue']";
-            document.querySelector(".sample11_M3").innerHTML = "filter";
+            document.querySelector(".sample11_M3").innerHTML = "filter(el => el === 'javascript')";
             document.querySelector(".sample11_R3").innerHTML = result3;
         }
 
@@ -1735,7 +1735,7 @@
 
             document.querySelector(".sample12_N1").innerHTML = "1";
             document.querySelector(".sample12_Q1").innerHTML = "[100, 200, 300, 400, 500]";
-            document.querySelector(".sample12_M1").innerHTML = "map()";
+            document.querySelector(".sample12_M1").innerHTML = "map(el => el)";
             document.querySelector(".sample12_R1").innerHTML = result1;
             console.log(result1);
 
@@ -1744,7 +1744,7 @@
 
             document.querySelector(".sample12_N2").innerHTML = "2";
             document.querySelector(".sample12_Q2").innerHTML = "[100, 200, 300, 400, 500]";
-            document.querySelector(".sample12_M2").innerHTML = "map()";
+            document.querySelector(".sample12_M2").innerHTML = "map(el => el + 'web')";
             document.querySelector(".sample12_R2").innerHTML = result2;
 
             const arrNum3 = [100, 200, 300, 400, 500];
@@ -1752,7 +1752,7 @@
 
             document.querySelector(".sample12_N3").innerHTML = "3";
             document.querySelector(".sample12_Q3").innerHTML = "[100, 200, 300, 400, 500]";
-            document.querySelector(".sample12_M3").innerHTML = "map()";
+            document.querySelector(".sample12_M3").innerHTML = "map(el => el * 2)";
             document.querySelector(".sample12_R3").innerHTML = result3;
 
             const arrNum4 = [{a: 100},{a: 200},{a: 300}]
@@ -1760,7 +1760,7 @@
 
             document.querySelector(".sample12_N4").innerHTML = "4";
             document.querySelector(".sample12_Q4").innerHTML = "[{a: 100}, {a: 200}, {a: 300}]";
-            document.querySelector(".sample12_M4").innerHTML = "map()";
+            document.querySelector(".sample12_M4").innerHTML = "map(el => el.a)";
             document.querySelector(".sample12_R4").innerHTML = result4;
         }
 
@@ -1774,7 +1774,7 @@
 
             document.querySelector(".sample13_N1").innerHTML = "1";
             document.querySelector(".sample13_Q1").innerHTML = "[100, 200, 300, 400, 500]";
-            document.querySelector(".sample13_M1").innerHTML = "reduce()";
+            document.querySelector(".sample13_M1").innerHTML = "reduce(el => el)";
             document.querySelector(".sample13_R1").innerHTML = result1;
 
             const arrNum2 = [100, 200, 300, 400, 500];
@@ -1809,7 +1809,7 @@
 
             document.querySelector(".sample13_N5").innerHTML = "5";
             document.querySelector(".sample13_Q5").innerHTML = "['javascript', 'react', 'vue']";
-            document.querySelector(".sample13_M5").innerHTML = "reduce()";
+            document.querySelector(".sample13_M5").innerHTML = "reduceRight()";
             document.querySelector(".sample13_R5").innerHTML = result5;
         }
 
@@ -1821,7 +1821,7 @@
 
             document.querySelector(".sample14_N1").innerHTML = "1";
             document.querySelector(".sample14_Q1").innerHTML = "javascript";
-            document.querySelector(".sample14_M1").innerHTML = "Array.from()";
+            document.querySelector(".sample14_M1").innerHTML = "Array.from(text)";
             document.querySelector(".sample14_R1").innerHTML = result;
             console.log(result);
 
@@ -1830,7 +1830,7 @@
 
             document.querySelector(".sample14_N2").innerHTML = "2";
             document.querySelector(".sample14_Q2").innerHTML = "javascript";
-            document.querySelector(".sample14_M2").innerHTML = "Array.from()";
+            document.querySelector(".sample14_M2").innerHTML = "Array.from(text2, el => el + '10')";
             document.querySelector(".sample14_R2").innerHTML = result2;
 
             const text3 = "javascript";
@@ -1838,7 +1838,7 @@
 
             document.querySelector(".sample14_N3").innerHTML = "3";
             document.querySelector(".sample14_Q3").innerHTML = "javascript";
-            document.querySelector(".sample14_M3").innerHTML = "Array.from()";
+            document.querySelector(".sample14_M3").innerHTML = "[...text3].map(el => el)";
             document.querySelector(".sample14_R3").innerHTML = result3;
         }
     </script>
