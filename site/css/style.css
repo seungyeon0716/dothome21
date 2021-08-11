@@ -1,32 +1,32 @@
 
 
 
-/* cardType */
-#cardType {
-    background-color: #FFF3E0;
-}
+/*  Navigation */
+/* 
+    네비게이션 유형1
+    1. 가운데 여역
+    2. 레이아웃 float (구익스 호환성)
+*/
 
-.cardType01 {
-    padding: 100px 0;
+#header {
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid #eee;
 }
-.cardType01 h2 {
-    text-align: center;
-    padding: 40px 20px 20px 20px;
-}
-.cardType01 p {
-    text-align: center;
-    padding-bottom: 100px;
-}
-.cardType01 .card-box {
+.header {
     overflow: hidden;
 }
-.cardType01 .card-box div {
+.header h1 {
+    padding: 30px 0;
     float: left;
-    width: 23.5%;
-    margin-right: 2%;
-    height: 300px;
-    background-color: rgb(0,0,0,0.4);
 }
-.cardType01 .card-box div:last-child {
-    margin-right: 0;
+.header .menu {
+    float: right;
+}
+.header .menu li {
+    display: inline;
+}
+.header .menu li a {
+    padding: 40px 16px;
+    display: inline-block;
 }
