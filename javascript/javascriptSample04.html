@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시계 만들기</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height: 100vh;
+            background-image: linear-gradient(180deg, #e7e7e7, #d7d7d7);
+        }
+        .clock-wrap {
+            width: 250px;
+            height: 250px;
+            background-image: linear-gradient(180deg, #f7f7f7, #e0e0e0);
+            border-radius: 50%;
+            box-shadow: 0 10px 15px rgb(0,0,0,0.15);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }  
+        .clock-base {
+            width: 250px;
+            height: 250px;
+            background-color: #eee;
+            border-radius: 50%;
+            box-shadow: 0 0 5px #eee;
+        }
+        .clock-dial {
+            position: absolute;
+            z-index: 1;
+            top: 15px;
+            left: 15px;
+            width: 230px;
+            height: 230px;
+        }
+        .clock-indicator {
+            position: absolute;
+            width: 2px; height: 4px;
+            margin: 113px 114px;
+            background-color: rgb(27, 18, 18);
+        }
+        .clock-indicator:nth-child(1) {
+            transform: rotate(30deg) translateY(-113px);
+        }
+        .clock-indicator:nth-child(2) {
+            transform: rotate(60deg) translateY(-113px);
+        }
+        .clock-indicator:nth-child(3) {
+            transform: rotate(90deg) translateY(-113px);
+            background-color: #aaa;
+        }
+        .clock-indicator:nth-child(4) {
+            transform: rotate(120deg) translateY(-113px);
+        }
+        .clock-indicator:nth-child(5) {
+            transform: rotate(150deg) translateY(-113px);
+        }
+        .clock-indicator:nth-child(6) {
+            transform: rotate(180deg) translateY(-113px);
+            background-color: #aaa;
+        }
+        .clock-indicator:nth-child(7) {
+            transform: rotate(210deg) translateY(-113px);
+        }
+        .clock-indicator:nth-child(8) {
+            transform: rotate(240deg) translateY(-113px);
+        }
+        .clock-indicator:nth-child(9) {
+            transform: rotate(270deg) translateY(-113px);
+            background-color: #aaa;
+        }
+        .clock-indicator:nth-child(10) {
+            transform: rotate(300deg) translateY(-113px);
+        }
+        .clock-indicator:nth-child(11) {
+            transform: rotate(330deg) translateY(-113px);
+        }
+        .clock-indicator:nth-child(12) {
+            transform: rotate(360deg) translateY(-113px);
+            background-color: #c00;
+        }
+    </style>
+</head>
+<body>
+    <div class="clock-wrap">
+        <div class="clock-base">
+            <div class="clock-dial">
+                <div class="clock-indicator"></div>
+                <div class="clock-indicator"></div>
+                <div class="clock-indicator"></div>
+                <div class="clock-indicator"></div>
+                <div class="clock-indicator"></div>
+                <div class="clock-indicator"></div>
+                <div class="clock-indicator"></div>
+                <div class="clock-indicator"></div>
+                <div class="clock-indicator"></div>
+                <div class="clock-indicator"></div>
+                <div class="clock-indicator"></div>
+                <div class="clock-indicator"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
