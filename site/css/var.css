@@ -1,0 +1,24 @@
+:root {
+    /* 폰트 */
+    font-size: 16px;
+
+    --fontScore1 : 'S-CoreDream-1Thin';
+    --fontScore2 : 'S-CoreDream-2ExtraLight';
+    --fontScore3 : 'S-CoreDream-3Light';
+    --fontScore4 : 'S-CoreDream-4Regular';
+    --fontScore5 : 'S-CoreDream-5Medium';
+    --fontScore6 : 'S-CoreDream-6Bold';
+    --fontScore7 : 'S-CoreDream-7ExtraBold';
+    --fontScore8 : 'S-CoreDream-8Heavy';
+
+    --fontGmarkL : 'GmarketSansLight';
+    --fontGmarkM : 'GmarketSansMedium';
+    --fontGmarkB : 'GmarketSansBold';
+
+    --fontNexon1L : 'NEXON Lv1 Gothic OTF Light';
+    --fontNexon1M : 'NEXON Lv1 Gothic OTF';
+    --fontNexon1B : 'NEXON Lv1 Gothic OTF Bold';
+    --fontNexon2L : 'NEXON Lv2 Gothic Light';
+    --fontNexon2M : 'NEXON Lv2 Gothic';
+    --fontNexon2B : 'NEXON Lv2 Gothic Bold';
+}

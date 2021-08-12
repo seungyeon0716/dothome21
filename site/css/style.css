@@ -10,23 +10,75 @@
 
 #header {
     width: 100%;
-    height: 100px;
+    height: 70px;
+    line-height: 70px;
     border-bottom: 1px solid #eee;
 }
-.header {
-    overflow: hidden;
+
+/* header-one */
+.header-one {
+    text-align: center;
 }
-.header h1 {
-    padding: 30px 0;
+
+/* header-two */
+.header-two {
+    overflow: hidden;
+    font-family: var(--fontNexon1M);
+}
+.header-two h1 {
+    font-family: var(--fontNexon1B);
     float: left;
 }
-.header .menu {
+.header-two .menu {
     float: right;
 }
-.header .menu li {
+.header-two .menu li {
     display: inline;
 }
-.header .menu li a {
-    padding: 40px 16px;
+.heade-twor .menu li a {
+    padding: 0 16px;
     display: inline-block;
+}
+.heade-two .menu li:last-child a {
+    padding-right: 0;
+}
+
+/* header-three */
+.header-three {
+    text-align: center;
+    font-family: var(--fontNexon1M);
+}
+.header-three h1 {
+    font-family: var(--fontNexon1B);
+    position: absolute;
+    left: 2%;
+    top: 0;
+}
+.header-three .menu li {
+    display: inline;
+}
+.header-three .menu li a {
+    padding: 0 16px;
+}
+.header-three .member {
+    position: absolute;
+    right: 2%;
+    top: 0;
+}
+.header-three .member a {
+    margin-left: 10px;
+}
+
+/* header dark-mode */
+.dark #header {
+    background-color: #2e2e2e;
+}
+.dark #header h1 a {
+    color: #fff;
+}
+.dark .menu li a {
+    color: #fff;
+}
+.dark .member a {
+    color: #fff;
 }

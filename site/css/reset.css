@@ -42,7 +42,7 @@ textarea {
     font-size: 14px;
     line-height: 1.5;
     color: #222;
-    font-family: AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
+    font-family: var(--fontNexon1M), AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
 }
 
 /* 링크 초기화 */
