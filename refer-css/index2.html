@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Reference</title>
+    <style>
+        @font-face {
+            font-family: 'GmarketSansMedium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'GmarketSansBold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'GmarketSansLight';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            font-family: 'GmarketSansLight';
+        }
+
+        #header {
+            padding: 3% 2% 0% 2%;
+            border-bottom: 1px solid #000;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 96%;
+            background-color: #f5f5f5;
+            /* width = margin + padding + border */
+        }
+
+        #header h1 {
+            font-family: 'GmarketSansMedium';
+        }
+
+        #header strong {
+            position: absolute;
+            right: 2%;
+            bottom: 2%;
+        }
+
+        main h2 {
+            font-family: 'GmarketSansBold';
+            font-size: 80px;
+            text-align: center;
+            padding: 15% 5% 5%;
+        }
+
+        main h2 em {
+            color: #00DB72;
+            font-style: normal;
+        }
+
+        #contents {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .refer {
+            background-color: #fff;
+            padding: 60px;
+            border: 1px solid #000;
+            margin-bottom: 300px;
+        }
+
+        .refer h3 {
+            display: inline-block;
+            padding: 6px 30px;
+            margin-bottom: 40px;
+            background-color: #00DB72;
+            color: #fff;
+        }
+        .refer h3 a {
+            text-decoration: none;
+            color: #fff;
+        }
+        .refer h3 .active {
+            box-shadow: inset 0 -5px 0 0 #052214;
+        }
+        .refer h4 {
+                margin-bottom: 5px;
+            }
+        .refer table {
+            border: 1px solid #aaa;
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 50px;
+        }
+
+        .refer table th {
+            border: 1px solid #aaa;
+            padding: 15px;
+            font-weight: bold;
+            background-color: #f5f5f5;
+        }
+        .refer table td {
+            border: 1px solid #aaa;
+            padding: 15px;
+        }
+        .refer table tr {
+            transition: all 0.3s;
+        }
+        .refer table tr:hover {
+            background-color: #e2e2e2;
+            cursor: pointer;
+        }
+        .link {
+            margin-bottom: 20px;
+        }
+        .link li {
+            list-style: none;
+            display: inline;
+        }
+        .link li a {
+            color: #fff;
+            background: #000;
+            padding: 13px 15px 10px 15px;
+            display: inline-block;
+            margin-bottom: 10px;
+            text-decoration: none;
+            border-radius: 2px;
+        }
+        .link li a:hover {
+            background: #00DB72;
+        }
+        .page {
+            text-align: right;
+            margin-bottom: 3px;
+        }
+        .page li {
+            display: inline;
+            list-style: none;
+        }
+        .page li a {
+            text-decoration: none;
+            color: #222;
+        }
+        .page li a:hover {
+            color: #b7cfc3;
+         }
+
+        @media (max-width: 1220px){
+            #contents {
+                width: 98%;
+            }
+        }
+        @media (max-width: 800px){
+            #contents {
+                width: 96%;
+            }
+            #header {
+                padding: 6% 2% 2% 2%;
+            }
+            #header h1 {
+                font-size: 16px;
+            }
+            #header strong {
+                font-size: 14px;
+                bottom: 10%;
+            }
+            main h2 {
+                font-size: 30px;
+                padding: 22% 5% 5%;
+            }
+            .refer {
+                padding: 10px;
+                margin-bottom: 100px;
+            }
+            .refer h3 {
+                margin-bottom: 10px;
+                font-size: 16px;
+                padding: 6px 10px;
+            }
+
+            .refer table th {
+                padding: 8px;
+            }
+            .refer table td {
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <h1>라인 중학교 1학년 코딩반</h1>
+        <strong>허승연</strong>
+    </header>
+    <!-- //header-->
+
+    <main id="contents">
+        <h2>CSS <em>레퍼런스 북</em></h2>
+        <ul class="page">
+            <li><a href="../refer-html/index.html">HTML</a></li>
+            <li><a href="../refer-css/index.html">CSS</a></li>
+            <li><a href="../javascript/javascript100.html">JAVASCRIPT</a></li>           
+        </ul>
+        <ul class="link">
+            <li><a href="../javascript/javascriptSample602-02.html">CSS 속성 첫 글자 검색하기</a></li>
+        </ul>
+        <section class="refer">
+            <h3 class="active"><a href="index.html">Alphabet</a></h3>
+            <h3 class="active"><a href="index2.html">Topics</a></h3>
+            <ul class="link">
+                <li><a href="#sample01">animation</a></li>
+                <li><a href="#sample02">background</a></li>
+                <li><a href="#sample03">box</a></li>
+            </ul>
+            
+            <h4>애니메이션</h4>
+            <div id="sample01">
+                <table>
+                    <colgroup>
+                        <col style="width: 10%">
+                        <col style="width: 20%">
+                        <col style="width: 70%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>종류</th>
+                            <th>속성</th>
+                            <th>설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th rowspan="6">변형</th>
+                            <td>transform</td>
+                            <td>transform 속성은 요소의 움직임을 일괄적으로 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>transform-origin</td>
+                            <td>transform-origin 속성은 </td>
+                        </tr>
+                        <tr>
+                            <td>transform-style</td>
+                            <td>transform-style 속성은 </td>
+                        </tr>
+                        <tr>
+                            <td>perspective</td>
+                            <td>perspective 속성은 </td>
+                        </tr>
+                        <tr>
+                            <td>perspective-origin</td>
+                            <td>perspective-origin 속성은 </td>
+                        </tr>
+                        <tr>
+                            <td>backface-visibility</td>
+                            <td>backface-visibility 속성은 </td>
+                        </tr>
+                        <tr>
+                            <th rowspan="8">애니메이션</th>
+                            <td>animation</td>
+                            <td>animation 속성은 </td>
+                        </tr>
+                        <tr>
+                            <td>animation-delay</td>
+                            <td>animation-delay 속성은 </td>
+                        </tr>
+                        <tr>
+                            <td>animation-duration</td>
+                            <td>animation-duration 속성은 </td>
+                        </tr>
+                        <tr>
+                            <td>animation-fill-mode</td>
+                            <td>animation-fill-mode 속성은 </td>
+                        </tr>
+                        <tr>
+                            <td>animation-name</td>
+                            <td>animation-name 속성은 </td>
+                        </tr>
+                        <tr>
+                            <td>animation-play-state</td>
+                            <td>animation-name-state 속성은 </td>
+                        </tr>
+                        <tr>
+                            <td>animation-timing-function</td>
+                            <td>animation-timing-function 속성은 </td>
+                        </tr>
+                        <tr>
+                            <td>@keyframes</td>
+                            <td>@keyframes 속성은 </td>
+                        </tr>
+                        <tr>
+                            <th rowspan="5">트렌지션</th>
+                            <td>transition</td>
+                            <td>transition 속성은 </td>
+                        </tr>
+                        <tr>
+                            <td>transition-delay</td>
+                            <td>transition-delay 속성은 </td>
+                        </tr>
+                        <tr>
+                            <td>transition-duration</td>
+                            <td>transition-duration 속성은 </td>
+                        </tr>
+                        <tr>
+                            <td>transition-property</td>
+                            <td>transition-property 속성은 </td>
+                        </tr>
+                        <tr>
+                            <td>transition-timeing-functind</td>
+                            <td>transition-timeing-functind 속성은 </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- sample02 -->
+            <h4>백그라운드</h4>
+            <div id="sample02">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>종류</th>
+                            <th>속성</th>
+                            <th>설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th rowspan="10">백그라운드</th>
+                            <td>background</td>
+                            <td>background 속성은 백그라운드 속성을 일괄적으로 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>background-attachment</td>
+                            <td>background-attachment 속성은 배경 이미지의 고정 여부를 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>background-blend-mode</td>
+                            <td>background-blend-mode 속성은 배경을 혼합했을 때의 상태를 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>background-clip</td>
+                            <td>background-clip 속성은 백그라운드 이미지의 위치 기준점을 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>background-color</td>
+                            <td>background-color 속성은 백그라운드 색을 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>background-image</td>
+                            <td>background-image 속성은 백그라운드 이미지 및 배경 속성을 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>background-origin</td>
+                            <td>background-origin 속성은 백그라운드 이미지의 위치 기준점을 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>background-position</td>
+                            <td>background-position 속성은 백그라운드 이미지의 위치 영역을 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>background-repeat</td>
+                            <td>background-repeat 속성은 백그라운드 이미지의 반복 여부를 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>background-size</td>
+                            <td>background-size 속성은 백그라운드 이미지의 사이즈를 설정합니다.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- //sample02 -->
+           
+            <!-- sample03 -->
+            <h4>박스 모델</h4>
+            <div id="sample03">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>종류</th>
+                            <th>속성</th>
+                            <th>설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th rowspan="6">크기</th>
+                            <td>width</td>
+                            <td>width 속성은</td>
+                        </tr>
+                            <td>height</td>
+                            <td>height 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>max-width</td>
+                            <td>max-width 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>max-height</td>
+                            <td>max-height 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>min-width</td>
+                            <td>max-width 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>min-height</td>
+                            <td>max-height 속성은</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="5">마진</th>
+                            <td>margin</td>
+                            <td>margin 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>margin-top</td>
+                            <td>margin-top 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>margin-right</td>
+                            <td>margin-right 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>margin-bottom</td>
+                            <td>margin-bottom 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>margin-left</td>
+                            <td>margin-left 속성은</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="5">패딩</th>
+                            <td>padding</td>
+                            <td>padding 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>padding-top</td>
+                            <td>padding-top 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>padding-right</td>
+                            <td>padding-right 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>padding-bottom</td>
+                            <td>padding-bottom 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>padding-left</td>
+                            <td>padding-left 속성은</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="17">보더</th>
+                            <td>border</td>
+                            <td>border 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-color</td>
+                            <td>border-color 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-style</td>
+                            <td>border-style 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-width</td>
+                            <td>border-width 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-top</td>
+                            <td>border-top 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-right</td>
+                            <td>border-right 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-bottom</td>
+                            <td>border-bottom 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-left</td>
+                            <td>border-left 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-top-color</td>
+                            <td>border-top-color 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-top-style</td>
+                            <td>border-top-style 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-top-width</td>
+                            <td>border-top-width 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-right-color</td>
+                            <td>border-right-color 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-right-style</td>
+                            <td>border-right-style 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-right-width</td>
+                            <td>border-right-width 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-left-color</td>
+                            <td>border-left-color 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-left-style</td>
+                            <td>border-left-style 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-left-width</td>
+                            <td>border-left-width 속성은</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="6">보더 이미지</th>
+                            <td>border-image</td>
+                            <td>border-image 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-image-outset</td>
+                            <td>border-image-outset 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-image-repeat</td>
+                            <td>border-image-repeat 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-image-slice</td>
+                            <td>border-image-slice 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-image-source</td>
+                            <td>border-image-source 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-image-width</td>
+                            <td>border-image-width 속성은</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="5">보더 레디우스</th>
+                            <td>border-radius</td>
+                            <td>border-radius 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-top-left-radius</td>
+                            <td>border-top-left-radius 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-top-right-radius</td>
+                            <td>border-top-right-radius 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-bottom-left-radius</td>
+                            <td>border-bottom-left-radius 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-bottom-right-radius</td>
+                            <td>border-bottom-right-radius 속성은</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="5">아웃라인</th>
+                            <td>outline</td>
+                            <td>outline 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>outline-color</td>
+                            <td>outline-color 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>outline-offset</td>
+                            <td>outline-offset 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>outline-style</td>
+                            <td>outline-style 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>outline-width</td>
+                            <td>outline-width 속성은</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="5">보더 테이블</th>
+                            <td>border-collapse</td>
+                            <td>border-collapse 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-spacing</td>
+                            <td>border-spacing 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>table-layout</td>
+                            <td>table-layout 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>empty-cells</td>
+                            <td>empty-cells 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>caption-side</td>
+                            <td>caption-side 속성은</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- //sample03 -->
+
+        </section>
+    </main>
+</body>
+
+</html>

@@ -224,12 +224,33 @@
         .ol6::before{
             content: "데이터 공부하기 :";
         }
+        .page {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+        }
+        .page li {
+            display: inline;
+            list-style: none;
+        }
+        .page li a {
+            text-decoration: none;
+            color: #222;
+        }
+        .page li a:hover {
+            color: #b7cfc3;
+         }
     </style>
 </head>
 
 <body>
 
     <h1>Javascript 문법 정리</h1>
+    <ul class="page">
+        <li><a href="../refer-html/index.html">HTML</a></li>
+        <li><a href="../refer-css/index.html">CSS</a></li>
+        <li><a href="../javascript/javascript100.html">JAVASCRIPT</a></li>           
+    </ul>
     <ol class="ol1">
         <li><a href="javascript100.html">변수</a></li>
         <li><a href="javascript100.html">상수</a></li>
@@ -285,6 +306,14 @@
         <li><a href="#sample17">17. 콜백 함수</a></li>
         <li><a href="#sample18">18. 콜백 함수 : 반복문</a></li>
         <li><a href="#sample19">19. 콜백 함수 : 동기/비동기</a></li>
+    </ul>
+
+    <h2 class="mt20">데이터 실행 : 메서드</h2>
+    <ul>
+        <li>01. setInterval()</li>
+        <li>01. setTimeout()</li>
+        <li>02. clearInterval()</li>
+        <li>02. clearTimeout()</li>
     </ul>
 
     <hr>

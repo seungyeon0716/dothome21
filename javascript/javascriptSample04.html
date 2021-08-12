@@ -1,30 +1,42 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>시계 만들기</title>
+    <title>Document</title>
     <style>
-        * {
+        @font-face {
+            font-family: 'NEXON Lv1 Gothic OTF';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        html,
+        body {
+            height: 100%;
             margin: 0;
             padding: 0;
+            background-image: linear-gradient(#E7E7E7, #D7D7D7);
+            font-family: 'NEXON Lv1 Gothic OTF';
         }
-        body {
-            height: 100vh;
-            background-image: linear-gradient(180deg, #e7e7e7, #d7d7d7);
-        }
-        .clock-wrap {
+
+        .clock-wrapper {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            bottom: 50%;
+            left: 0;
             width: 250px;
             height: 250px;
-            background-image: linear-gradient(180deg, #f7f7f7, #e0e0e0);
+            margin: auto;
+            padding: 5px;
+            background-image: linear-gradient(#F7F7F7, #E0E0E0);
             border-radius: 50%;
-            box-shadow: 0 10px 15px rgb(0,0,0,0.15);
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-        }  
+            box-shadow: 0 10px 15px rgba(0, 0, 0, .15), 0 2px 2px rgba(0, 0, 0, .2);
+        }
+
         .clock-base {
             width: 250px;
             height: 250px;
@@ -32,6 +44,7 @@
             border-radius: 50%;
             box-shadow: 0 0 5px #eee;
         }
+
         .clock-dial {
             position: absolute;
             z-index: 1;
@@ -40,56 +53,161 @@
             width: 230px;
             height: 230px;
         }
-        .clock-indicator {
+
+        .clock-dial .clock-indicator {
             position: absolute;
-            width: 2px; height: 4px;
+            width: 2px;
+            height: 4px;
             margin: 113px 114px;
-            background-color: rgb(27, 18, 18);
+            background-color: #ddd;
         }
+
         .clock-indicator:nth-child(1) {
             transform: rotate(30deg) translateY(-113px);
         }
+
         .clock-indicator:nth-child(2) {
             transform: rotate(60deg) translateY(-113px);
         }
+
         .clock-indicator:nth-child(3) {
             transform: rotate(90deg) translateY(-113px);
             background-color: #aaa;
         }
+
         .clock-indicator:nth-child(4) {
             transform: rotate(120deg) translateY(-113px);
         }
+
         .clock-indicator:nth-child(5) {
             transform: rotate(150deg) translateY(-113px);
         }
+
         .clock-indicator:nth-child(6) {
             transform: rotate(180deg) translateY(-113px);
             background-color: #aaa;
         }
+
         .clock-indicator:nth-child(7) {
             transform: rotate(210deg) translateY(-113px);
         }
+
         .clock-indicator:nth-child(8) {
             transform: rotate(240deg) translateY(-113px);
         }
+
         .clock-indicator:nth-child(9) {
             transform: rotate(270deg) translateY(-113px);
             background-color: #aaa;
         }
+
         .clock-indicator:nth-child(10) {
             transform: rotate(300deg) translateY(-113px);
         }
+
         .clock-indicator:nth-child(11) {
             transform: rotate(330deg) translateY(-113px);
         }
+
         .clock-indicator:nth-child(12) {
             transform: rotate(360deg) translateY(-113px);
             background-color: #c00;
         }
+
+        .clock-hour {
+            position: absolute;
+            z-index: 2;
+            top: 80px;
+            left: 128px;
+            width: 4px;
+            height: 65px;
+            background-color: #555;
+            border-radius: 2px;
+            box-shadow: 0 0 2px rgba(0, 0, 0, .2);
+            transform-origin: 2px 50px;
+        }
+
+        .clock-minute {
+            position: absolute;
+            z-index: 3;
+            top: 60px;
+            left: 128px;
+            width: 4px;
+            height: 85px;
+            background-color: #555;
+            border-radius: 2px;
+            box-shadow: 0 0 2px rgba(0, 0, 0, .2);
+            transform-origin: 2px 70px;
+        }
+
+        .clock-second {
+            position: absolute;
+            z-index: 4;
+            top: 20px;
+            left: 129px;
+            width: 2px;
+            height: 130px;
+            background-color: #a00;
+            box-shadow: 0 0 2px rgba(0, 0, 0, .2);
+            transform-origin: 1px 110px;
+        }
+
+        .clock-second:after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: -5px;
+            bottom: 14px;
+            width: 8px;
+            height: 8px;
+            background-color: #a00;
+            border: solid 2px #a00;
+            border-radius: 50%;
+            box-shadow: 0 0 3px rgba(0, 0, 0, .2);
+        }
+
+        .clock-center {
+            position: absolute;
+            z-index: 1;
+            width: 150px;
+            height: 150px;
+            top: 55px;
+            left: 55px;
+            background-image: linear-gradient(#E3E3E3, #F7F7F7);
+            border-radius: 50%;
+            box-shadow: inset 0 -1px 0 #FAFAFA, inset 0 1px 0 #E3E3E3;
+        }
+
+        .clock-center:after {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin: 65px;
+            background-color: #ddd;
+            border-radius: 50%;
+        }
+        .time {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 20px;
+        }
+        .dday { 
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 20px;
+            line-height: 1.4;
+            white-space: nowrap;
+        }
     </style>
 </head>
+
 <body>
-    <div class="clock-wrap">
+    <div class="clock-wrapper">
         <div class="clock-base">
             <div class="clock-dial">
                 <div class="clock-indicator"></div>
@@ -105,7 +223,58 @@
                 <div class="clock-indicator"></div>
                 <div class="clock-indicator"></div>
             </div>
+            <div class="clock-hour"></div>
+            <div class="clock-minute"></div>
+            <div class="clock-second"></div>
+            <div class="clock-center"></div>
         </div>
     </div>
+
+    <div class="time">00:00:00</div>
+    <div class="dday">앞으로 수료일은 <span class="dday-time">00</span>일 남았습니다.</div>
+
+    <script>
+        setInterval(function () {
+            const today = new Date();
+
+            const nowH = today.getHours();
+            const nowM = today.getMinutes();
+            const nowS = today.getSeconds();
+
+            const degH = nowH * (360 / 12) + nowM * (360 / 12 / 60);
+            const degM = nowM * (360 / 60);
+            const degS = nowS * (360 / 60);
+            
+            const eleH = document.querySelector(".clock-hour");
+            const eleM = document.querySelector(".clock-minute");
+            const eleS = document.querySelector(".clock-second");
+
+            eleH.style.transform = `rotate(${degH}deg)`;
+            eleM.style.transform = `rotate(${degM}deg)`;
+            eleS.style.transform = `rotate(${degS}deg)`;
+
+            // 시간 표시
+            const nowTime = today.toLocaleString();
+
+            const time = document.querySelector(".time");
+            time.innerHTML = nowTime;
+
+
+            //디데이
+            const dDay = new Date("December 20, 2021");
+
+            let interval = today.getTime() - dDay.getTime();
+            interval = Math.floor(interval / (1000 * 60 * 60 *24));
+
+            document.querySelector(".dday-time").innerHTML = interval;
+
+            //요일 표시하기
+            // const day = date.getDay();
+            // const dayList = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
+            // document.querySelector(".sample01_R8").innerHTML = "지금은 " + dayList[day] + " 입니다.";
+
+        }, 1000);
+    </script>
 </body>
+
 </html>
