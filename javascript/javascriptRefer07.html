@@ -166,7 +166,9 @@
             padding: 3px 0 16px 0;
             line-height: 1.6;
         }
-
+        ol {
+            padding-left: 26px;
+        }
         .sample .sam {
             padding: 25px;
             border-bottom: 1px solid #E6E6E6;
@@ -196,6 +198,15 @@
             text-align: center;
             vertical-align: middle;
             border-collapse: collapse;
+        }
+        td {
+            display: table-cell;
+            vertical-align: inherit;
+        }
+        table {
+            border-collapse: separate;
+            text-indent: initial;
+            border-spacing: 2px;
         }
         .view table th {
             padding: 13px 5px 11px 5px;
@@ -292,15 +303,22 @@
                 display: none;
             }
             .view {
-                padding: 5px;
-                max-width: 800px;
+                border-right: 1px solid #E6E6E6;
+                border-left: 1px solid #E6E6E6;
                 overflow: auto;
             }
-            .view th {
-                font-weight: normal;
+            .view table {
+                border-left: 0px;
+                border-right: 0px;
+            }
+            .view table th,
+            .view table td {
+                white-space: nowrap;
+                font-size: 13px;
             }
             .view table td.result {
-                color: #000;
+                color: #BDBDBD;
+                background: #F1F1F1;
             }
         }
     </style>
@@ -339,6 +357,7 @@
 
     <h2 class="mt20">날짜 객체</h2>
     <ul class="list">
+        <ol>
         <li><a href="#sample01">01. 날짜 메서드 : getFullYear() : 연도 불러오기</a></li>
         <li><a href="#sample01">01. 날짜 메서드 : getMonth() : 월 불러오기</a></li>
         <li><a href="#sample01">01. 날짜 메서드 : getDate() : 일 불러오기</a></li>
@@ -351,6 +370,7 @@
         <li><a href="#sample02">02. 날짜 메서드 : toLocalDateString() : 현재 날짜를 문자열 불러오기</a></li>
         <li><a href="#sample02">02. 날짜 메서드 : toLocalTimeString() : 현재 시각을 문자열 불러오기</a></li>
         <li><a href="#sample03">03. 날짜 메서드 : Date.parse() : 날짜 문자열 타임스탬프 불러오기</a></li>
+    </ol>
     </ul>
 
     <hr>

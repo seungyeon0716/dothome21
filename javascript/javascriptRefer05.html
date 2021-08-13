@@ -18,12 +18,14 @@
             font-weight: normal;
             font-style: normal;
         }
+
         @font-face {
             font-family: 'TmonMonsori';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
             font-weight: normal;
             font-style: normal;
         }
+
         * {
             margin: 0;
             padding: 0;
@@ -33,17 +35,19 @@
         }
 
         body {
-            padding: 5%;
-            margin-bottom: 400px;
+            padding: 2%;
+            font-family: 'NEXON Lv1 Gothic OTF';
         }
 
         h1 {
-            padding-top:40px;
+            padding-top: 20px;
             padding-bottom: 20px;
         }
+
         h1 a {
             font-family: 'TmonMonsori';
         }
+
         hr {
             margin: 5% 0;
             border-style: dashed;
@@ -67,8 +71,8 @@
         }
 
         .sample {
-            border: 1px solid #E6E6E6;
             border-radius: 5px;
+            font-family: 'NEXON Lv1 Gothic OTF';
         }
 
         .sample h2 {
@@ -78,6 +82,8 @@
             padding: 15px;
             border-bottom: 1px solid #E6E6E6;
             border-radius: 5px 5px 0 0;
+            line-height: 1.4;
+            font-weight: normal;
         }
 
         .sample h2 .dot {
@@ -168,6 +174,10 @@
             line-height: 1.6;
         }
 
+        ol {
+            padding-left: 26px;
+        }
+
         .sample .sam {
             padding: 25px;
             border-bottom: 1px solid #E6E6E6;
@@ -181,9 +191,11 @@
         .sample .sam dd {
             padding: 3px 0 16px 0;
         }
+
         .mt20 {
             margin-top: 20px;
         }
+
         .view {
             padding: 20px;
         }
@@ -211,6 +223,20 @@
                 padding: 13px;              위/오른쪽/아래/왼쪽: 13px 
             */
             padding: 13px 5px 11px 5px;
+            border-bottom: 1px solid #e6e6e6;
+            font-weight: normal;
+            white-space: nowrap;
+        }
+
+        td {
+            display: table-cell;
+            vertical-align: inherit;
+        }
+
+        table {
+            border-collapse: separate;
+            text-indent: initial;
+            border-spacing: 2px;
         }
 
         .view table td {
@@ -228,31 +254,38 @@
             color: #000;
             background-color: #f5f5f5;
         }
+
         .sam {
             background-color: #000;
             color: #fff;
             border-radius: 30px;
             padding: 0 20px;
         }
+
         .page {
             position: absolute;
             right: 20px;
             top: 15px;
         }
+
         .page li {
             display: inline;
             list-style: none;
         }
+
         .page li a {
             text-decoration: none;
             color: #222;
         }
+
         .page li a:hover {
             color: #b7cfc3;
-         }
-         .menu li {
+        }
+
+        .menu li {
             display: inline;
         }
+
         .menu li a {
             font-family: 'NEXON Lv1 Gothic OTF';
             color: #000;
@@ -264,12 +297,14 @@
             margin: 4px 1px;
             transition: all 0.4s;
         }
+
         .menu li a:hover {
             box-shadow: inset 0 -100px 0 #000;
             color: #fff;
             border-style: solid;
         }
-        @media (max-width: 800px){
+
+        @media (max-width: 800px) {
             .menu li a {
                 font-size: 12px;
                 padding: 5px 20px;
@@ -281,8 +316,8 @@
                 font-size: 12px;
             }
             .sample h2 {
-                font-size: 14px;
-                padding: 12px 10px;
+                font-size: 13px;
+                padding: 12px 10px 10px;
             }
             .sample h2 .dot {
                 display: none;
@@ -291,29 +326,37 @@
                 font-size: 14px;
             }
             body {
-                 font-size: 13px;
-             }
+                padding: 5%;
+                font-size: 13px;
+            }
             h1 {
-             text-align: center;
+                text-align: center;
             }
             .sample h2 {
                 font-size: 14px;
                 font-weight: normal;
                 padding: 7px 5px 5px;
             }
-            .sample h2  .dot {
+            .sample h2 .dot {
                 display: none;
             }
             .view {
-                padding: 5px;
-                max-width: 800px;
+                border-right: 1px solid #E6E6E6;
+                border-left: 1px solid #E6E6E6;
                 overflow: auto;
             }
-            .view th {
-                font-weight: normal;
+            .view table {
+                border-left: 0px;
+                border-right: 0px;
+            }
+            .view table th,
+            .view table td {
+                white-space: nowrap;
+                font-size: 13px;
             }
             .view table td.result {
-                color: #000;
+                color: #BDBDBD;
+                background: #F1F1F1;
             }
         }
     </style>
@@ -325,9 +368,9 @@
     <ul class="page">
         <li><a href="../refer-html/index.html">HTML</a></li>
         <li><a href="../refer-css/index.html">CSS</a></li>
-        <li><a href="../javascript/javascript100.html">JAVASCRIPT</a></li>           
+        <li><a href="../javascript/javascript100.html">JAVASCRIPT</a></li>
     </ul>
-  
+
     <nav class="menu">
         <ul>
             <li><a href="javascriptRefer01.html">데이터 저장하기</a></li>
@@ -352,36 +395,39 @@
 
     <h2 class="mt20">문자열 객체</h2>
     <ul class="list">
-        <li><a href="#sample01">01. 문자열  : 문자열 결합 / 템플릿 문자열</a></li>
-        <li><a href="#sample02">02. 문자열 속성 : length: 문자열 길이 구하기 : 반환(숫자)</a></li>
-        <li><a href="#sample03">03. 문자열 메서드 : toUpperCase() : 문자열 대문자 변경하기 : 반환(문자열)</a></li>
-        <li><a href="#sample03">03. 문자열 메서드 : toLowerCase() : 문자열 소문자 변경하기 : 반환(문자열)</a></li>
-        <li><a href="#sample04">04. 문자열 메서드 : trim() : 문자열 공백 제거하기 : 반환(문자열)</a></li>
-        <li><a href="#sample05">05. 문자열 메서드 : indexOf() : 문자열 검색하기 : 반환(숫자)</a></li>
-        <li><a href="#sample05">05. 문자열 메서드 : lastIndexOf() : 문자열 검색하기 : 반환(숫자)</a></li>
-        <li><a href="#sample05">05. 문자열 메서드 : search() : 문자열 검색하기 : 반환(숫자)</a></li>
-        <li><a href="#sample06">05. 문자열 메서드 : includes() : 문자열 포함 여부 : 반환(불린)</a></li>
-        <li><a href="#sample06">05. 문자열 메서드 : startsWith() : 문자열 포함 여부 : 반환(불린)</a></li>
-        <li><a href="#sample06">05. 문자열 메서드 : endtWith() : 문자열 포함 여부 : 반환(불린)</a></li>
-        <li><a href="#sample06">06. 문자열 메서드 : charAt() : 지정한 인덱스의 문자를 추출 : 반환(문자)</a><a class="sam" href="javascriptSample01.html">sample</a></a></li>
-        <li><a href="#sample07">07. 문자열 메서드 : slice() : 지정한 범위 내 문자열을 추출 : 반환(문자열)</a></li>
-        <li><a href="#sample07">07. 문자열 메서드 : subString() : 지정한 범위 내 문자열을 추출 : 반환(문자열)</a></li>
-        <li><a href="#sample07">07. 문자열 메서드 : substr() : 지정한 범위 내 문자열을 추출 : 반환(문자열)</a></li>
-        <li><a href="#sample08">08. 문자열 메서드 : replace() : 문자열 변경 : 반환(문자열)</a></li>
-        <li><a href="#sample09">09. 문자열 메서드 : split() : 문자열 반환 : 반환(문자열)</a></li>
-        <li><a href="#sample10">10. 문자열 메서드 : padStart() : 문자열 시작 부분에 문자열 추가 : 반환(문자열)</a></li>
-        <li><a href="#sample10">10. 문자열 메서드 : padEnd() : 문자열 끝 부분에 문자열 추가 : 반환(문자열)</a></li>
-        <li><a href="#sample11">11. 문자열 메서드 : encodeURI() : 문자열을 인코딩 : 반환(문자열)</a></li>
-        <li><a href="#sample11">11. 문자열 메서드 : encodeURIComponent() : 문자열을 인코딩 : 반환(문자열)</a></li>
-        <li><a href="#sample11">11. 문자열 메서드 : decodeURI() : 문자열을 디코딩 : 반환(문자열)</a></li>
-        <li><a href="#sample11">11. 문자열 메서드 : decodeURIComponent() : 문자열을 디코딩 : 반환(문자열)</a></li>
+        <ol>
+            <li><a href="#sample01">01. 문자열 : 문자열 결합 / 템플릿 문자열</a></li>
+            <li><a href="#sample02">02. 문자열 속성 : length: 문자열 길이 구하기 : 반환(숫자)</a></li>
+            <li><a href="#sample03">03. 문자열 메서드 : toUpperCase() : 문자열 대문자 변경하기 : 반환(문자열)</a></li>
+            <li><a href="#sample03">03. 문자열 메서드 : toLowerCase() : 문자열 소문자 변경하기 : 반환(문자열)</a></li>
+            <li><a href="#sample04">04. 문자열 메서드 : trim() : 문자열 공백 제거하기 : 반환(문자열)</a></li>
+            <li><a href="#sample05">05. 문자열 메서드 : indexOf() : 문자열 검색하기 : 반환(숫자)</a></li>
+            <li><a href="#sample05">05. 문자열 메서드 : lastIndexOf() : 문자열 검색하기 : 반환(숫자)</a></li>
+            <li><a href="#sample05">05. 문자열 메서드 : search() : 문자열 검색하기 : 반환(숫자)</a></li>
+            <li><a href="#sample06">05. 문자열 메서드 : includes() : 문자열 포함 여부 : 반환(불린)</a></li>
+            <li><a href="#sample06">05. 문자열 메서드 : startsWith() : 문자열 포함 여부 : 반환(불린)</a></li>
+            <li><a href="#sample06">05. 문자열 메서드 : endtWith() : 문자열 포함 여부 : 반환(불린)</a></li>
+            <li><a href="#sample06">06. 문자열 메서드 : charAt() : 지정한 인덱스의 문자를 추출 : 반환(문자)</a><a class="sam"
+                    href="javascriptSample01.html">sample</a></a></li>
+            <li><a href="#sample07">07. 문자열 메서드 : slice() : 지정한 범위 내 문자열을 추출 : 반환(문자열)</a></li>
+            <li><a href="#sample07">07. 문자열 메서드 : subString() : 지정한 범위 내 문자열을 추출 : 반환(문자열)</a></li>
+            <li><a href="#sample07">07. 문자열 메서드 : substr() : 지정한 범위 내 문자열을 추출 : 반환(문자열)</a></li>
+            <li><a href="#sample08">08. 문자열 메서드 : replace() : 문자열 변경 : 반환(문자열)</a></li>
+            <li><a href="#sample09">09. 문자열 메서드 : split() : 문자열 반환 : 반환(문자열)</a></li>
+            <li><a href="#sample10">10. 문자열 메서드 : padStart() : 문자열 시작 부분에 문자열 추가 : 반환(문자열)</a></li>
+            <li><a href="#sample10">10. 문자열 메서드 : padEnd() : 문자열 끝 부분에 문자열 추가 : 반환(문자열)</a></li>
+            <li><a href="#sample11">11. 문자열 메서드 : encodeURI() : 문자열을 인코딩 : 반환(문자열)</a></li>
+            <li><a href="#sample11">11. 문자열 메서드 : encodeURIComponent() : 문자열을 인코딩 : 반환(문자열)</a></li>
+            <li><a href="#sample11">11. 문자열 메서드 : decodeURI() : 문자열을 디코딩 : 반환(문자열)</a></li>
+            <li><a href="#sample11">11. 문자열 메서드 : decodeURIComponent() : 문자열을 디코딩 : 반환(문자열)</a></li>
+        </ol>
     </ul>
 
     <hr>
 
     <!-- //sample01 -->
     <div id="sample01" class="sample">
-        <h2>01. 문자열  : 문자열 결합 / 템플릿 문자열 <span class="dot"></span></h2>
+        <h2>01. 문자열 : 문자열 결합 / 템플릿 문자열 <span class="dot"></span></h2>
         <div class="view">
             <table>
                 <colgroup>
@@ -427,7 +473,7 @@
             </table>
         </div>
         <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+            <pre class="line-numbers"><code class="language-js">{
     const str1 = "자바스크립트";
     const str2 = "제이쿼리";
 
@@ -492,7 +538,7 @@
             </table>
         </div>
         <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+            <pre class="line-numbers"><code class="language-js">{
     const str1 = "자바스크립트";
     const currentStr1 = str1.length;
 
@@ -547,7 +593,7 @@
             </table>
         </div>
         <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+            <pre class="line-numbers"><code class="language-js">{
     const str1 = "javascript";
     const currentStr1 = str1.toUpperCase();
 
@@ -597,7 +643,7 @@
             </table>
         </div>
         <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+            <pre class="line-numbers"><code class="language-js">{
     const str1 = "    'javascript'    ";
     const currentStr1 = str1.trim();
 
@@ -611,7 +657,8 @@
 
     <!-- //sample05 -->
     <div id="sample05" class="sample">
-        <h2>05. 문자열 메서드 : indexOf() / lastIndexOf() / search() / includes() : 문자열 검색하기 : 반환(숫자) <span class="dot"></span></h2>
+        <h2>05. 문자열 메서드 : indexOf() / lastIndexOf() / search() / includes() : 문자열 검색하기 : 반환(숫자) <span
+                class="dot"></span></h2>
         <div class="view">
             <table>
                 <colgroup>
@@ -699,7 +746,7 @@
             </table>
         </div>
         <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+            <pre class="line-numbers"><code class="language-js">{
     const str = "자바스크립트(javascript) 공부";
             
     const text1 = str.indexOf("javascript");    
@@ -799,7 +846,7 @@
             </table>
         </div>
         <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+            <pre class="line-numbers"><code class="language-js">{
     const str = "자바스크립트(javascript) 공부";
     const text = str.charAt(4);
 
@@ -884,7 +931,7 @@
             </table>
         </div>
         <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+            <pre class="line-numbers"><code class="language-js">{
     const str = "자바스크립트(javascript) 공부";
     const text = str.slice(1, 4);
 
@@ -968,7 +1015,7 @@
             </table>
         </div>
         <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+            <pre class="line-numbers"><code class="language-js">{
     const str1 = "자바스크립트(javascript) 공부";
     const text1 = str1.replace("공부", "스터디");
 
@@ -1054,7 +1101,7 @@
             </table>
         </div>
         <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+            <pre class="line-numbers"><code class="language-js">{
     const str1 = "자바스크립트(javascript) 공부";
     const text1 = str1.split('');
 
@@ -1159,7 +1206,7 @@
             </table>
         </div>
         <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+            <pre class="line-numbers"><code class="language-js">{
     const num = "7";
     const text = num.padStart(2, '0');
 
@@ -1208,7 +1255,8 @@
 
     <!-- //sample11 -->
     <div id="sample11" class="sample">
-        <h2>11. 문자열 메서드 : encodeURI() /encodeURIComponent() / decodeURI() / decodeURIComponent() : 문자열을 인코딩 : 반환(문자열) <span class="dot"></span></h2>
+        <h2>11. 문자열 메서드 : encodeURI() /encodeURIComponent() / decodeURI() / decodeURIComponent() : 문자열을 인코딩 : 반환(문자열)
+            <span class="dot"></span></h2>
         <div class="view">
             <table>
                 <colgroup>
@@ -1254,7 +1302,7 @@
             </table>
         </div>
         <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+            <pre class="line-numbers"><code class="language-js">{
     const text = "https://seungyeon716.co.kr/자바스크립트.html";
     const url = encodeURI(text)
 
@@ -1384,9 +1432,9 @@
         //search는 정규식 표현으로 검섹
         {
             const str = "자바스크립트(javascript) 공부";
-            
+
             const text1 = str.indexOf("javascript");
-           
+
 
             document.querySelector(".sample05_N1").innerHTML = "1";
             document.querySelector(".sample05_Q1").innerHTML = str;
@@ -1730,7 +1778,8 @@
             document.querySelector(".sample11_M3").innerHTML = "decodeURI(text)";
             document.querySelector(".sample11_R3").innerHTML = url3;
 
-            const text4 = "https%3A%2F%2Fseungyeon716.co.kr%2F%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8.html";
+            const text4 =
+                "https%3A%2F%2Fseungyeon716.co.kr%2F%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8.html";
             const url4 = decodeURIComponent(text4)
 
             document.querySelector(".sample11_N4").innerHTML = "4";
