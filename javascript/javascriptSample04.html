@@ -203,6 +203,13 @@
             line-height: 1.4;
             white-space: nowrap;
         }
+        /* .week {
+            position: absolute;
+            bottom: 20px;
+            font-size: 20px;
+            left: 50%;
+            transform: translate(-50%);
+        } */
     </style>
 </head>
 
@@ -232,6 +239,7 @@
 
     <div class="time">00:00:00</div>
     <div class="dday">앞으로 수료일은 <span class="dday-time">00</span>일 남았습니다.</div>
+    <!-- <div class="week"><span class="week-time">요일</span></div> -->
 
     <script>
         setInterval(function () {
@@ -269,9 +277,9 @@
             document.querySelector(".dday-time").innerHTML = interval;
 
             //요일 표시하기
-            // const day = date.getDay();
-            // const dayList = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
-            // document.querySelector(".sample01_R8").innerHTML = "지금은 " + dayList[day] + " 입니다.";
+            // const tooday = date.getDay();
+            // const weekList = ['일', '월', '화', '수', '목', '금', '토'];
+            // document.querySelector(".week-time").innerHTML = "지금은 " + weekList[tooday] + " 입니다.";
 
         }, 1000);
     </script>
