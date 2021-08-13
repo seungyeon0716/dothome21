@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font.css">
+    <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism-okaidia.min.css"
+        integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @font-face {
+            font-family: 'NEXON Lv1 Gothic OTF';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'TmonMonsori';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'NEXON Lv1 Gothic OTF';
+            line-height: 1.6;
+        }
+
+        body {
+            padding: 5%;
+            margin-bottom: 400px;
+        }
+
+        h1 {
+            padding-bottom: 20px;
+        }
+        h1 a {
+            font-family: 'TmonMonsori';
+        }
+        hr {
+            margin: 5% 0;
+            border-style: dashed;
+            border-color: #E6E6E6;
+            border-width: 1px;
+        }
+
+        img {
+            vertical-align: top;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .sample {
+            border: 1px solid #E6E6E6;
+            border-radius: 5px;
+        }
+
+        .sample h2 {
+            position: relative;
+            font-size: 16px;
+            background-color: #F2F2F2;
+            padding: 15px;
+            border-bottom: 1px solid #E6E6E6;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .sample h2 .dot {
+            width: 10px;
+            height: 10px;
+            background: #989898;
+            display: block;
+            border-radius: 50%;
+            position: absolute;
+            right: 30px;
+            top: 20px;
+        }
+
+        .sample h2 .dot::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #989898;
+            border-radius: 50%;
+            position: absolute;
+            left: -15px;
+            top: 0;
+        }
+
+        .sample h2 .dot::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #989898;
+            position: absolute;
+            border-radius: 50%;
+            right: -15px;
+            top: 0;
+        }
+
+        .sample .ex {
+            padding: 20px;
+        }
+
+        .sample .ex .text {
+            margin: 10px 0;
+        }
+
+        .sample .re {
+            padding: 20px;
+            border-top: 1px solid #E6E6E6;
+        }
+
+        .sample .re a {
+            color: #333;
+            text-decoration: none;
+            border: 1px solid #333;
+            border-radius: 30px;
+            padding: 10px 30px;
+            margin: 5px;
+            display: inline-block;
+        }
+
+        .sample .re a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .sample .problem {
+            padding: 25px;
+            border-bottom: 1px solid #E6E6E6;
+            line-height: 1.6;
+        }
+
+        .sample pre {
+            margin: 0 !important;
+            border-radius: 0;
+            ;
+        }
+
+        .sample .desc {
+            padding: 25px;
+            border-bottom: 1px solid #E6E6E6;
+        }
+
+        .sample .desc dt {
+            padding: 3px 0;
+            margin-bottom: 6px;
+        }
+
+        .sample .desc dd {
+            padding: 3px 0 16px 0;
+            line-height: 1.6;
+        }
+
+        .sample .sam {
+            padding: 25px;
+            border-bottom: 1px solid #E6E6E6;
+        }
+
+        .sample .sam dt {
+            padding: 3px 0;
+            margin-bottom: 6px;
+        }
+
+        .sample .sam dd {
+            padding: 3px 0 16px 0;
+        }
+        .mt20{
+            margin-top: 20px;
+        }
+        table {border-collapse: collapse;}
+        table tr td {
+            border: 1px solid #989898;
+            padding: 5px;
+        }
+        .page {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+        }
+        .page li {
+            display: inline;
+            list-style: none;
+        }
+        .page li a {
+            text-decoration: none;
+            color: #222;
+        }
+        .page li a:hover {
+            color: #b7cfc3;
+        }
+        .menu li {
+            display: inline;
+        }
+        .menu li a {
+            font-family: 'NEXON Lv1 Gothic OTF';
+            color: #000;
+            border: 1px dashed #000;
+            padding: 10px 30px;
+            display: inline-block;
+            border-radius: 50px;
+            font-size: 16px;
+            margin: 4px 1px;
+            transition: all 0.4s;
+        }
+        .menu li a:hover {
+            box-shadow: inset 0 -100px 0 #000;
+            color: #fff;
+            border-style: solid;
+        }
+        @media (max-width: 800px){
+            .menu li a {
+                font-size: 12px;
+                padding: 5px 20px;
+            }
+            .list li {
+                line-height: 1.3;
+            }
+            .list a {
+                font-size: 12px;
+            }
+            .sample h2 {
+                font-size: 14px;
+                padding: 12px 10px;
+            }
+            .sample h2 .dot {
+                display: none;
+            }
+            .sample pre {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1><a href="index.html">Javascript 레퍼런스</a></h1>
+    <ul class="page">
+        <li><a href="../refer-html/index.html">HTML</a></li>
+        <li><a href="../refer-css/index.html">CSS</a></li>
+        <li><a href="../javascript/javascript100.html">JAVASCRIPT</a></li>           
+    </ul>
+
+    <nav class="menu">
+        <ul>
+            <li><a href="javascriptRefer01.html">데이터 저장하기</a></li>
+            <li><a href="javascriptRefer02.html">데이터 불러오기</a></li>
+            <li><a href="javascriptRefer03.html">데이터 실행하기</a></li>
+            <li><a href="javascriptRefer04.html">데이터 제어하기</a></li>
+        </ul>
+        <ul>
+            <li><a href="javascriptRefer05.html">문자열 객체</a></li>
+            <li><a href="javascriptRefer06.html">배열 객체</a></li>
+            <li><a href="javascriptRefer07.html">날짜 객체</a></li>
+            <li><a href="javascriptRefer08.html">수학 객체</a></li>
+            <li><a href="javascriptRefer09.html">브라우저 객체</a></li>
+            <li><a href="javascriptRefer10.html">요소 객체</a></li>
+            <li><a href="javascriptRefer11.html">이벤트 객체</a></li>
+        </ul>
+        <ul>
+            <li><a href="javascriptRefer12.html">샘플</a></li>
+            <li><a href="javascriptRefer13.html">알고리즘</a></li>
+        </ul>
+    </nav>
+    
+    <h2 class="mt20">알고리즘</h2>
+    <ul class="list">
+        <li><a href="#sample2">01. 1부터 100까지 출력하기</a></li>
+        <li><a href="#sample3">02. 1부터 100까지 출력하기:  짝수만</a></li>
+        <li><a href="#sample4">03. 1부터 100까지 출력하기 : 5의 배수만</a></li>
+        <li><a href="#sample5">04. 1부터 100까지 출력하기 : 짝수는 빨간색, 홀수는 파란색 출력</a></li>
+        <li><a href="#sample5">05. 1부터 100까지의 합 출력하기</a></li>
+        <li><a href="#sample6">06. 구구단 출력하기</a></li>
+        <li><a href="#sample7">07. 테이블 만들기1</a></li>
+        <li><a href="#sample8">08. 테이블 만들기2</a></li>
+        <li><a href="#sample9">09. 테이블 만들기3 - 짝수만</a></li>
+    </ul>
+
+    <hr>
+
+    <!-- //sample1 -->
+    <div id="sample1" class="sample">
+        <h2>1. 1부터 100까지 출력하기 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    for( let i=1; i&lt;=100; i++ ){
+        document.write(i);
+    }
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample2 -->
+    <div id="sample2" class="sample">
+        <h2>2. 1부터 100까지 출력하기:  짝수만 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    //for( let i=1; i&lt;100; i++){
+    //    if( i % 2 == 0 ){
+    //        document.write(i);
+    //    }
+    //}
+    for( let i=2; i&lt;100; i+=2){
+        document.write(i);
+    }
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample3 -->
+    <div id="sample3" class="sample">
+        <h2>3. 1부터 100까지 출력하기 : 5의 배수만 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    for( let i=1; i&lt;100; i++){
+        if( i % 5 == 0 ){
+            document.write(i);
+        }
+    }
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+    <!-- //sample4 -->
+    <div id="sample4" class="sample">
+        <h2>4. 1부터 100까지 출력하기 : 짝수는 빨간색, 홀수는 파란색 출력 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    for( let i=1; i&lt;=100; i++){
+        if( i % 2 == 0 ){
+            document.write("<span style='color:red'> "+ i +" &lt;/span&gt;");
+        } else {
+            document.write("<span style='color:blue'> "+ i +" &lt;/span&gt;");
+        }
+    }
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample5 -->
+    <div id="sample5" class="sample">
+        <h2>5. 1부터 100까지의 합 출력하기 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    let sum = 0;
+
+    for( let i=1; i&lt;=100; i++){
+        //sum = sum + i;
+        sum += i;
+    }
+    document.write(sum);
+
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample100 -->
+    <div id="sample100" class="sample">
+        <h2>100. 구구단 만들기 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    //2~9(var i=2; i&lt;=9; i++)
+    //1~9 for(var i=1; i&lt;=9; i++)
+    //num1 * num2 = sum 
+
+    // 2 * 1 = 2;           3 * 1 = 1;
+    // 2 * 2 = 4;           3 * 2 = 6;
+    // 2 * 3 = 6;           3 * 3 = 9;
+    // 2 * 4 = 8;           ..........
+    // 2 * 5 = 10;          9 * 1 = 9;
+    // 2 * 6 = 12;          9 * 2 = 18;
+    // 2 * 7 = 14;
+    // 2 * 8 = 16;
+    // 2 * 9 = 18;
+
+    for(var i=2; i&lt;=9; i++){
+        for(var j=1; j&lt;=9; j++){
+            var sum = i * j;
+            document.write(i + " * " + j + " = " + sum, );
+        }
+    }
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample101 -->
+    <div id="sample101" class="sample">
+        <h2>101. 테이블 만들기1 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    //2~9(var i=2; i&lt;=9; i++)
+    //1~9 for(var i=1; i&lt;=9; i++)
+    //num1 * num2 = sum 
+
+    // 2 * 1 = 2;           3 * 1 = 1;
+    // 2 * 2 = 4;           3 * 2 = 6;
+    // 2 * 3 = 6;           3 * 3 = 9;
+    // 2 * 4 = 8;           ..........
+    // 2 * 5 = 10;          9 * 1 = 9;
+    // 2 * 6 = 12;          9 * 2 = 18;
+    // 2 * 7 = 14;
+    // 2 * 8 = 16;
+    // 2 * 9 = 18;
+
+    let num = 1;
+    let table = "&lt;table&gt;";
+
+    for( let i=1; i&lt;=10; i++ ){
+        table += "&lt;tr&gt;";
+        for( let j=1; j&lt;=10; j++ ){
+            table += "&lt;td&gt;"+num+"/&lt;td&gt;";
+            num++;
+        }
+        table += "&lt;/tr&gt;";
+    }
+
+    table +=  "&lt;/table&gt;";
+
+    document.write(table);
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample102 -->
+    <div id="sample102" class="sample">
+        <h2>102. 테이블 만들기2<span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    let num = 100;
+    let table = "&lt;table&gt;";
+
+        for( let i=1; i&lt;=10; i++ ){
+        table += "&lt;tr&gt;";
+        for( let j=1; j&lt;=10; j++ ){
+            table += "&lt;td&gt;"+ num +"/&lt;td&gt;";
+            num--;
+        }
+        table += "&lt;/tr&gt;";
+    }
+
+    table +=  "&lt;/table&gt;";
+
+    document.write(table);
+    
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample103-->
+    <div id="sample103" class="sample">
+        <h2>103. 테이블 만들기3 - 짝수만<span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    let num = 2;
+    let table = "&lt;table&gt;";
+
+    for( let i=1; i&lt;=10; i++ ){
+        table += "&lt;tr&gt;";
+            for( let j=1; j&lt;=10; j++ ){
+            table += "&lt;td&gt;"+ num +"&lt;/td&gt;";
+            num += 2;
+        }
+        table += "&lt;/tr&gt;";
+    }
+
+    table +=  "&lt;/table&gt;";
+
+    document.write(table);
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+   
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
+    <script>
+    
+        //sample1
+        //for문을 이용해서 화면에 1부터 100까지 출력
+        {
+            document.write("***01. 1부터 100까지 출력 ***<br>")
+
+            for( let i=1; i<=100; i++ ){
+                document.write(i);
+            }
+
+            document.write("<br><br>");
+        }
+
+        //sample2
+        //for문을 이용해서 화면에 1부터 100까지 출력 (짝수만)
+        {
+            document.write("***02. 1부터 100까지 출력(짝수만)***<br>")
+            //for( let i=1; i<100; i++){
+            //    if( i % 2 == 0 ){
+            //        document.write(i);
+            //    }
+            //    document.write("<br><br>");
+            //}
+            for( let i=2; i<100; i+=2){
+                 document.write(i);
+            }
+            document.write("<br><br>");
+        }
+
+        //sample3
+        //for문을 이용해서 화면에 1부터 100까지 출력 (5의 배수만)
+        {
+            document.write("***03. 1부터 100까지 출력(5의 배수만) ***<br>")
+
+            for( let i=1; i<100; i++){
+                if( i % 5 == 0 ){
+                    document.write(i);
+                }
+            }
+            document.write("<br><br>");
+        }
+
+        //sample4
+        //for문을 이용해서 화면에 1부터 100까지 출력 (짝수는 빨간색, 홀수는 파란색 출력))
+        {
+            document.write("***04. 1부터 100까지 출력 (짝수는 빨간색, 홀수는 파란색 출력 ***<br>")
+
+            for( let i=1; i<=100; i++){
+                if( i % 2 == 0 ){
+                     document.write("<span style='color:red'> "+ i +" </span>");
+                } else {
+                    document.write("<span style='color:blue'> "+ i +" </span>");
+                }
+            }
+
+            document.write("<br><br>");
+        }
+
+        //sample5
+        //1부터 100까지의 합 출력하기
+        {
+            document.write("***05. 1부터 100까지의 합 출력하기 ***<br>")
+
+            let sum = 0;
+
+            for( let i=1; i<=100; i++){
+                //sum = sum + i;
+                sum += i;
+            }
+            document.write(sum);
+
+            document.write("<br><br>");
+        }
+        //sample100
+        //구구단 만들기
+        {
+            //2~9(var i=2; i<=9; i++)
+            //1~9 for(var i=1; i<=9; i++)
+            //num1 * num2 = sum 
+
+            // 2 * 1 = 2;           3 * 1 = 1;
+            // 2 * 2 = 4;           3 * 2 = 6;
+            // 2 * 3 = 6;           3 * 3 = 9;
+            // 2 * 4 = 8;           ..........
+            // 2 * 5 = 10;          9 * 1 = 9;
+            // 2 * 6 = 12;          9 * 2 = 18;
+            // 2 * 7 = 14;
+            // 2 * 8 = 16;
+            // 2 * 9 = 18;
+            document.write("***100. 구구단 만들기 ***<br>");
+
+            for(var i=2; i<=9; i++){
+                for(var j=1; j<=9; j++){
+                    var sum = i * j;
+                    document.write(i + " * " + j + " = " + sum, "<br>");
+                }
+            }
+
+            document.write("<br>");
+        }
+
+        //sample101
+        //테이블 만들기1
+        {
+            document.write("***101. 테이블 만들기1 ***<br>");
+
+            let num = 1;
+            let table = "<table>";
+
+            for( let i=1; i<=10; i++ ){
+                table += "<tr>";
+                for( let j=1; j<=10; j++ ){
+                    table += "<td>"+num+"</<td>";
+                    num++;
+                }
+                table += "</tr>";
+            }
+
+            table +=  "</table>";
+
+            document.write(table);
+
+            document.write("<br>");
+        }
+
+        //sample102
+        //테이블 만들기2
+        {
+            document.write("***102. 테이블 만들기2 ***<br>");
+
+            let num = 100;
+            let table = "<table>";
+
+                for( let i=1; i<=10; i++ ){
+                table += "<tr>";
+                for( let j=1; j<=10; j++ ){
+                    table += "<td>"+ num +"</<td>";
+                    num--;
+                }
+                table += "</tr>";
+            }
+
+            table +=  "</table>";
+
+            document.write(table);
+
+            document.write("<br>");
+        }
+
+        //sample103
+        //테이블 만들기3 - 짝수만
+        {
+            document.write("***103. 테이블 만들기3 - 짝수만 ***<br>");
+
+            let num = 2;
+            let table = "<table>";
+
+                for( let i=1; i<=10; i++ ){
+                table += "<tr>";
+                for( let j=1; j<=10; j++ ){
+                    table += "<td>"+ num +"</<td>";
+                    num += 2;
+                }
+                table += "</tr>";
+            }
+
+            table +=  "</table>";
+
+            document.write(table);
+
+            document.write("<br>");
+        }
+
+    </script>
+</body>
+</html>
