@@ -37,7 +37,7 @@
         }
 
         h1 {
-            padding-top: 20px;
+            padding-top: 40px;
             padding-bottom: 20px;
         }
         h1 a {
@@ -47,7 +47,8 @@
             margin: 5% 0;
             border-style: dashed;
             border-color: #E6E6E6;
-            border-width: 1px;
+            border-width: 0px;
+            border-bottom-width: 1px;
         }
 
         img {
@@ -59,7 +60,9 @@
         ul {
             list-style: none;
         }
-
+        ol {
+            padding-left: 26px;
+        }
         a {
             text-decoration: none;
             color: #333;
@@ -166,22 +169,7 @@
             padding: 3px 0 16px 0;
             line-height: 1.6;
         }
-        ol {
-            padding-left: 26px;
-        }
-        .sample .sam {
-            padding: 25px;
-            border-bottom: 1px solid #E6E6E6;
-        }
 
-        .sample .sam dt {
-            padding: 3px 0;
-            margin-bottom: 6px;
-        }
-
-        .sample .sam dd {
-            padding: 3px 0 16px 0;
-        }
         .mt20{
             margin-top: 20px;
         }
@@ -198,15 +186,6 @@
             text-align: center;
             vertical-align: middle;
             border-collapse: collapse;
-        }
-        td {
-            display: table-cell;
-            vertical-align: inherit;
-        }
-        table {
-            border-collapse: separate;
-            text-indent: initial;
-            border-spacing: 2px;
         }
         .view table th {
             padding: 13px 5px 11px 5px;
@@ -226,12 +205,6 @@
             color: #000;
             background-color: #f5f5f5;
         }
-        .sam {
-            background-color: #000;
-            color: #fff;
-            border-radius: 30px;
-            padding: 0 20px;
-        }
         .page {
             position: absolute;
             right: 20px;
@@ -246,7 +219,7 @@
             color: #222;
         }
         .page li a:hover {
-            color: #b7cfc3;
+            color: #098a4c;
         }
         .menu li {
             display: inline;
@@ -273,14 +246,14 @@
                 padding: 5px 20px;
             }
             .list li {
-                line-height: 1.3;
+                line-height: 1.2;
             }
             .list a {
                 font-size: 12px;
             }
             .sample h2 {
                 font-size: 14px;
-                padding: 12px 10px;
+                padding: 12px 10px 10px;
             }
             .sample h2 .dot {
                 display: none;
@@ -289,7 +262,8 @@
                 font-size: 14px;
             }
             body {
-                 font-size: 13px;
+                padding: 5%;
+                font-size: 13px;
              }
             h1 {
              text-align: center;
@@ -299,26 +273,21 @@
                 font-weight: normal;
                 padding: 7px 5px 5px;
             }
-            .sample h2  .dot {
+            .sample h2 .dot {
                 display: none;
             }
             .view {
-                border-right: 1px solid #E6E6E6;
-                border-left: 1px solid #E6E6E6;
+                padding: 5px;
+                max-width: 800px;
                 overflow: auto;
             }
-            .view table {
-                border-left: 0px;
-                border-right: 0px;
-            }
-            .view table th,
+            .view th,
             .view table td {
                 white-space: nowrap;
-                font-size: 13px;
+                font-weight: normal;
             }
             .view table td.result {
-                color: #BDBDBD;
-                background: #F1F1F1;
+                color: #000;
             }
         }
     </style>
@@ -356,22 +325,22 @@
     </nav>
 
     <h2 class="mt20">날짜 객체</h2>
-    <ul class="list">
+    <div class="list">
         <ol>
-        <li><a href="#sample01">01. 날짜 메서드 : getFullYear() : 연도 불러오기</a></li>
-        <li><a href="#sample01">01. 날짜 메서드 : getMonth() : 월 불러오기</a></li>
-        <li><a href="#sample01">01. 날짜 메서드 : getDate() : 일 불러오기</a></li>
-        <li><a href="#sample01">01. 날짜 메서드 : getHours() : 시간 불러오기</a></li>
-        <li><a href="#sample01">01. 날짜 메서드 : getMinuts() : 분 불러오기</a></li>
-        <li><a href="#sample01">01. 날짜 메서드 : getSeconds() : 초 불러오기</a></li>
-        <li><a href="#sample01">01. 날짜 메서드 : getMilliseconds() : 밀리초 불러오기</a></li>
-        <li><a href="#sample01">01. 날짜 메서드 : getDay() : 요일 불러오기</a></li>
-        <li><a href="#sample02">02. 날짜 메서드 : toLocaleString() : 현재 날짜와 시각을 문자열 불러오기</a></li>
-        <li><a href="#sample02">02. 날짜 메서드 : toLocalDateString() : 현재 날짜를 문자열 불러오기</a></li>
-        <li><a href="#sample02">02. 날짜 메서드 : toLocalTimeString() : 현재 시각을 문자열 불러오기</a></li>
-        <li><a href="#sample03">03. 날짜 메서드 : Date.parse() : 날짜 문자열 타임스탬프 불러오기</a></li>
-    </ol>
-    </ul>
+            <li><a href="#sample01">날짜 메서드 : getFullYear() : 연도 불러오기</a></li>
+            <li><a href="#sample02">날짜 메서드 : getMonth() : 월 불러오기</a></li>
+            <li><a href="#sample03">날짜 메서드 : getDate() : 일 불러오기</a></li>
+            <li><a href="#sample04">날짜 메서드 : getHours() : 시간 불러오기</a></li>
+            <li><a href="#sample05">날짜 메서드 : getMinuts() : 분 불러오기</a></li>
+            <li><a href="#sample06">날짜 메서드 : getSeconds() : 초 불러오기</a></li>
+            <li><a href="#sample07">날짜 메서드 : getMilliseconds() : 밀리초 불러오기</a></li>
+            <li><a href="#sample08">날짜 메서드 : getDay() : 요일 불러오기</a></li>
+            <li><a href="#sample09">날짜 메서드 : toLocaleString() : 현재 날짜와 시각을 문자열 불러오기</a></li>
+            <li><a href="#sample10">날짜 메서드 : toLocalDateString() : 현재 날짜를 문자열 불러오기</a></li>
+            <li><a href="#sample11">날짜 메서드 : toLocalTimeString() : 현재 시각을 문자열 불러오기</a></li>
+            <li><a href="#sample12">날짜 메서드 : Date.parse() : 날짜 문자열 타임스탬프 불러오기</a></li>
+        </ol>
+    </div>
 
     <hr>
 
@@ -450,31 +419,38 @@
 <pre class="line-numbers"><code class="language-js">{
     const date = new Date()
     const year = date.getFullYear()
+    
     document.querySelector(".sample01_R1").innerHTML = "지금은 " + year + "년 입니다.";
 
     const month = date.getMonth() + 1;
+
     document.querySelector(".sample01_R2").innerHTML = "지금은 " + month + "월 입니다.";
 
     const days = date.getDate();
+
     document.querySelector(".sample01_R3").innerHTML = "지금은 " + days + "일 입니다.";
 
     const hours = date.getHours();
+
     document.querySelector(".sample01_R4").innerHTML = "지금은 " + hours + "시 입니다.";
 
     const minuts = date.getMinutes();
+
     document.querySelector(".sample01_R5").innerHTML = "지금은 " + minuts + "분 입니다.";
 
     const seconds = date.getSeconds();
+
     document.querySelector(".sample01_R6").innerHTML = "지금은 " + seconds + "초 입니다.";
 
     const milliseconds = date.getMilliseconds();
+
     document.querySelector(".sample01_R7").innerHTML = "지금은 " + milliseconds + "밀리초 입니다.";
 
     const day = date.getDay();
     const dayList = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
+
     document.querySelector(".sample01_R8").innerHTML = "지금은 " + dayList[day] + " 입니다.";
 }
-
 </code></pre>
         </div>
     </div>
@@ -524,9 +500,19 @@
         </div>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
+    const date = new Date();
+    const locale = date.toLocaleString();
 
+    document.querySelector(".sample02_R1").innerHTML = locale;
+
+    const localeDate = date.toLocaleDateString();
+
+    document.querySelector(".sample02_R2").innerHTML = localeDate;
+
+    const localeTime = date.toLocaleTimeString();
+
+    document.querySelector(".sample02_R3").innerHTML = localeTime;
 }
-
 </code></pre>
         </div>
     </div>
@@ -576,9 +562,18 @@
         </div>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
+    const date = Date.parse("2021/8/11");
 
+    document.querySelector(".sample03_R1").innerHTML = date;
+
+    const date2 = Date.parse("8 11 2021");
+
+    document.querySelector(".sample03_R2").innerHTML = date2;
+
+    const date3 = Date.now();
+
+    document.querySelector(".sample03_R3").innerHTML = date3;
 }
-
 </code></pre>
         </div>
     </div>

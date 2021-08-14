@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,7 +37,7 @@
         }
 
         h1 {
-            padding-top: 20px;
+            padding-top: 40px;
             padding-bottom: 20px;
         }
         h1 a {
@@ -46,7 +47,8 @@
             margin: 5% 0;
             border-style: dashed;
             border-color: #E6E6E6;
-            border-width: 1px;
+            border-width: 0px;
+            border-bottom-width: 1px;
         }
 
         img {
@@ -58,7 +60,9 @@
         ul {
             list-style: none;
         }
-
+        ol {
+            padding-left: 26px;
+        }
         a {
             text-decoration: none;
             color: #333;
@@ -182,11 +186,6 @@
         .mt20{
             margin-top: 20px;
         }
-        table {border-collapse: collapse;}
-        table tr td {
-            border: 1px solid #989898;
-            padding: 5px;
-        }
         .page {
             position: absolute;
             right: 20px;
@@ -201,7 +200,7 @@
             color: #222;
         }
         .page li a:hover {
-            color: #b7cfc3;
+            color: #098a4c;
         }
         .menu li {
             display: inline;
@@ -228,14 +227,14 @@
                 padding: 5px 20px;
             }
             .list li {
-                line-height: 1.3;
+                line-height: 1.2;
             }
             .list a {
                 font-size: 12px;
             }
             .sample h2 {
                 font-size: 14px;
-                padding: 12px 10px;
+                padding: 12px 10px 10px;
             }
             .sample h2 .dot {
                 display: none;
@@ -244,12 +243,13 @@
                 font-size: 14px;
             }
             body {
-                 font-size: 13px;
+                padding: 5%;
+                font-size: 13px;
              }
             h1 {
              text-align: center;
             }
-            .sample h2 {
+            /* .sample h2 {
                 font-size: 14px;
                 font-weight: normal;
                 padding: 7px 5px 5px;
@@ -267,7 +267,7 @@
             }
             .view table td.result {
                 color: #000;
-            }
+            } */
         }
     </style>
 </head>
@@ -303,17 +303,19 @@
     </nav>
     
     <h2 class="mt20">알고리즘</h2>
-    <ul class="list">
-        <li><a href="#sample2">01. 1부터 100까지 출력하기</a></li>
-        <li><a href="#sample3">02. 1부터 100까지 출력하기:  짝수만</a></li>
-        <li><a href="#sample4">03. 1부터 100까지 출력하기 : 5의 배수만</a></li>
-        <li><a href="#sample5">04. 1부터 100까지 출력하기 : 짝수는 빨간색, 홀수는 파란색 출력</a></li>
-        <li><a href="#sample5">05. 1부터 100까지의 합 출력하기</a></li>
-        <li><a href="#sample6">06. 구구단 출력하기</a></li>
-        <li><a href="#sample7">07. 테이블 만들기1</a></li>
-        <li><a href="#sample8">08. 테이블 만들기2</a></li>
-        <li><a href="#sample9">09. 테이블 만들기3 - 짝수만</a></li>
-    </ul>
+    <div class="list">
+        <ol>
+            <li><a href="#sample2">1부터 100까지 출력하기</a></li>
+            <li><a href="#sample3">1부터 100까지 출력하기:  짝수만</a></li>
+            <li><a href="#sample4">1부터 100까지 출력하기 : 5의 배수만</a></li>
+            <li><a href="#sample5">1부터 100까지 출력하기 : 짝수는 빨간색, 홀수는 파란색 출력</a></li>
+            <li><a href="#sample5">1부터 100까지의 합 출력하기</a></li>
+            <li><a href="#sample6">구구단 출력하기</a></li>
+            <li><a href="#sample7">테이블 만들기1</a></li>
+            <li><a href="#sample8">테이블 만들기2</a></li>
+            <li><a href="#sample9">테이블 만들기3 - 짝수만</a></li>
+        </ol>
+    </div>
 
     <hr>
 

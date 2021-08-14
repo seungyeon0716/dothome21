@@ -31,16 +31,15 @@
             padding: 0;
             font-family: 'NEXON Lv1 Gothic OTF';
             line-height: 1.6;
-            word-break: break-all;
         }
 
         body {
-            padding: 2%;
-            font-family: 'NEXON Lv1 Gothic OTF';
+            padding: 5%;
+            margin-bottom: 400px;
         }
 
         h1 {
-            padding-top: 20px;
+            padding-top: 40px;
             padding-bottom: 20px;
         }
 
@@ -52,7 +51,8 @@
             margin: 5% 0;
             border-style: dashed;
             border-color: #E6E6E6;
-            border-width: 1px;
+            border-width: 0px;
+            border-bottom-width: 1px;
         }
 
         img {
@@ -64,15 +64,17 @@
         ul {
             list-style: none;
         }
-
+        ol {
+            padding-left: 26px;
+        }
         a {
             text-decoration: none;
             color: #333;
         }
 
         .sample {
+            border: 1px solid #e6e6e6;
             border-radius: 5px;
-            font-family: 'NEXON Lv1 Gothic OTF';
         }
 
         .sample h2 {
@@ -82,8 +84,6 @@
             padding: 15px;
             border-bottom: 1px solid #E6E6E6;
             border-radius: 5px 5px 0 0;
-            line-height: 1.4;
-            font-weight: normal;
         }
 
         .sample h2 .dot {
@@ -174,10 +174,6 @@
             line-height: 1.6;
         }
 
-        ol {
-            padding-left: 26px;
-        }
-
         .sample .sam {
             padding: 25px;
             border-bottom: 1px solid #E6E6E6;
@@ -212,38 +208,12 @@
         }
 
         .view table th {
-            /*  
-                padding-top: 13px;
-                padding-right: 5px; 
-                padding-bottom: 11px;
-                padding-left: 5px;
-                padding: 13px 5px 11px 5px; 위/오른쪽/아래/왼쪽 
-                padding: 13px 5px 11px;     위/왼쪽,오른쪽: 5px/아래: 11px 
-                padding: 13px 5px;          위,아래: 13px /왼쪽, 오른쪽 :5px 
-                padding: 13px;              위/오른쪽/아래/왼쪽: 13px 
-            */
             padding: 13px 5px 11px 5px;
-            border-bottom: 1px solid #e6e6e6;
-            font-weight: normal;
-            white-space: nowrap;
         }
-
-        td {
-            display: table-cell;
-            vertical-align: inherit;
-        }
-
-        table {
-            border-collapse: separate;
-            text-indent: initial;
-            border-spacing: 2px;
-        }
-
         .view table td {
             border: 1px solid #e6e6e6;
             padding: 13px 5px 11px 5px;
         }
-
         .view table td.result {
             color: #fff;
             transition: all 0.3s;
@@ -255,6 +225,16 @@
             background-color: #f5f5f5;
         }
 
+        /* td {
+            display: table-cell;
+            vertical-align: inherit;
+        }
+
+        table {
+            border-collapse: separate;
+            text-indent: initial;
+            border-spacing: 2px;
+        } */
         .sam {
             background-color: #000;
             color: #fff;
@@ -279,7 +259,7 @@
         }
 
         .page li a:hover {
-            color: #b7cfc3;
+            color: #098a4c;
         }
 
         .menu li {
@@ -304,19 +284,19 @@
             border-style: solid;
         }
 
-        @media (max-width: 800px) {
+        @media (max-width: 800px){
             .menu li a {
                 font-size: 12px;
                 padding: 5px 20px;
             }
             .list li {
-                line-height: 1.3;
+                line-height: 1.2;
             }
             .list a {
                 font-size: 12px;
             }
             .sample h2 {
-                font-size: 13px;
+                font-size: 14px;
                 padding: 12px 10px 10px;
             }
             .sample h2 .dot {
@@ -341,22 +321,17 @@
                 display: none;
             }
             .view {
-                border-right: 1px solid #E6E6E6;
-                border-left: 1px solid #E6E6E6;
+                padding: 5px;
+                max-width: 800px;
                 overflow: auto;
             }
-            .view table {
-                border-left: 0px;
-                border-right: 0px;
-            }
-            .view table th,
+            .view th,
             .view table td {
                 white-space: nowrap;
-                font-size: 13px;
+                font-weight: normal;
             }
             .view table td.result {
-                color: #BDBDBD;
-                background: #F1F1F1;
+                color: #000;
             }
         }
     </style>
@@ -394,35 +369,35 @@
     </nav>
 
     <h2 class="mt20">문자열 객체</h2>
-    <ul class="list">
+    <div class="list">
         <ol>
-            <li><a href="#sample01">01. 문자열 : 문자열 결합 / 템플릿 문자열</a></li>
-            <li><a href="#sample02">02. 문자열 속성 : length: 문자열 길이 구하기 : 반환(숫자)</a></li>
-            <li><a href="#sample03">03. 문자열 메서드 : toUpperCase() : 문자열 대문자 변경하기 : 반환(문자열)</a></li>
-            <li><a href="#sample03">03. 문자열 메서드 : toLowerCase() : 문자열 소문자 변경하기 : 반환(문자열)</a></li>
-            <li><a href="#sample04">04. 문자열 메서드 : trim() : 문자열 공백 제거하기 : 반환(문자열)</a></li>
-            <li><a href="#sample05">05. 문자열 메서드 : indexOf() : 문자열 검색하기 : 반환(숫자)</a></li>
-            <li><a href="#sample05">05. 문자열 메서드 : lastIndexOf() : 문자열 검색하기 : 반환(숫자)</a></li>
-            <li><a href="#sample05">05. 문자열 메서드 : search() : 문자열 검색하기 : 반환(숫자)</a></li>
-            <li><a href="#sample06">05. 문자열 메서드 : includes() : 문자열 포함 여부 : 반환(불린)</a></li>
-            <li><a href="#sample06">05. 문자열 메서드 : startsWith() : 문자열 포함 여부 : 반환(불린)</a></li>
-            <li><a href="#sample06">05. 문자열 메서드 : endtWith() : 문자열 포함 여부 : 반환(불린)</a></li>
-            <li><a href="#sample06">06. 문자열 메서드 : charAt() : 지정한 인덱스의 문자를 추출 : 반환(문자)</a><a class="sam"
+            <li><a href="#sample01">문자열 : 문자열 결합 / 템플릿 문자열</a></li>
+            <li><a href="#sample02">문자열 속성 : length: 문자열 길이 구하기 : 반환(숫자)</a></li>
+            <li><a href="#sample03">문자열 메서드 : toUpperCase() : 문자열 대문자 변경하기 : 반환(문자열)</a></li>
+            <li><a href="#sample03">문자열 메서드 : toLowerCase() : 문자열 소문자 변경하기 : 반환(문자열)</a></li>
+            <li><a href="#sample04">문자열 메서드 : trim() : 문자열 공백 제거하기 : 반환(문자열)</a></li>
+            <li><a href="#sample05">문자열 메서드 : indexOf() : 문자열 검색하기 : 반환(숫자)</a></li>
+            <li><a href="#sample05">문자열 메서드 : lastIndexOf() : 문자열 검색하기 : 반환(숫자)</a></li>
+            <li><a href="#sample05">문자열 메서드 : search() : 문자열 검색하기 : 반환(숫자)</a></li>
+            <li><a href="#sample06">문자열 메서드 : includes() : 문자열 포함 여부 : 반환(불린)</a></li>
+            <li><a href="#sample06">문자열 메서드 : startsWith() : 문자열 포함 여부 : 반환(불린)</a></li>
+            <li><a href="#sample06">문자열 메서드 : endtWith() : 문자열 포함 여부 : 반환(불린)</a></li>
+            <li><a href="#sample06">문자열 메서드 : charAt() : 지정한 인덱스의 문자를 추출 : 반환(문자)</a><a class="sam"
                     href="javascriptSample01.html">sample</a></a></li>
-            <li><a href="#sample07">07. 문자열 메서드 : slice() : 지정한 범위 내 문자열을 추출 : 반환(문자열)</a></li>
-            <li><a href="#sample07">07. 문자열 메서드 : subString() : 지정한 범위 내 문자열을 추출 : 반환(문자열)</a></li>
-            <li><a href="#sample07">07. 문자열 메서드 : substr() : 지정한 범위 내 문자열을 추출 : 반환(문자열)</a></li>
-            <li><a href="#sample08">08. 문자열 메서드 : replace() : 문자열 변경 : 반환(문자열)</a></li>
-            <li><a href="#sample09">09. 문자열 메서드 : split() : 문자열 반환 : 반환(문자열)</a></li>
-            <li><a href="#sample10">10. 문자열 메서드 : padStart() : 문자열 시작 부분에 문자열 추가 : 반환(문자열)</a></li>
-            <li><a href="#sample10">10. 문자열 메서드 : padEnd() : 문자열 끝 부분에 문자열 추가 : 반환(문자열)</a></li>
-            <li><a href="#sample11">11. 문자열 메서드 : encodeURI() : 문자열을 인코딩 : 반환(문자열)</a></li>
-            <li><a href="#sample11">11. 문자열 메서드 : encodeURIComponent() : 문자열을 인코딩 : 반환(문자열)</a></li>
-            <li><a href="#sample11">11. 문자열 메서드 : decodeURI() : 문자열을 디코딩 : 반환(문자열)</a></li>
-            <li><a href="#sample11">11. 문자열 메서드 : decodeURIComponent() : 문자열을 디코딩 : 반환(문자열)</a></li>
+            <li><a href="#sample07">문자열 메서드 : slice() : 지정한 범위 내 문자열을 추출 : 반환(문자열)</a></li>
+            <li><a href="#sample07">문자열 메서드 : subString() : 지정한 범위 내 문자열을 추출 : 반환(문자열)</a></li>
+            <li><a href="#sample07">문자열 메서드 : substr() : 지정한 범위 내 문자열을 추출 : 반환(문자열)</a></li>
+            <li><a href="#sample08">문자열 메서드 : replace() : 문자열 변경 : 반환(문자열)</a></li>
+            <li><a href="#sample09">문자열 메서드 : split() : 문자열 반환 : 반환(문자열)</a></li>
+            <li><a href="#sample10">문자열 메서드 : padStart() : 문자열 시작 부분에 문자열 추가 : 반환(문자열)</a></li>
+            <li><a href="#sample10">문자열 메서드 : padEnd() : 문자열 끝 부분에 문자열 추가 : 반환(문자열)</a></li>
+            <li><a href="#sample11">문자열 메서드 : encodeURI() : 문자열을 인코딩 : 반환(문자열)</a></li>
+            <li><a href="#sample11">문자열 메서드 : encodeURIComponent() : 문자열을 인코딩 : 반환(문자열)</a></li>
+            <li><a href="#sample11">문자열 메서드 : decodeURI() : 문자열을 디코딩 : 반환(문자열)</a></li>
+            <li><a href="#sample11">문자열 메서드 : decodeURIComponent() : 문자열을 디코딩 : 반환(문자열)</a></li>
         </ol>
-    </ul>
-
+    </div>
+    
     <hr>
 
     <!-- //sample01 -->
@@ -1340,7 +1315,7 @@
 
             document.querySelector(".sample01_N1").innerHTML = "1";
             document.querySelector(".sample01_Q1").innerHTML = "자바스크립트, 제이쿼리";
-            document.querySelector(".sample01_M1").innerHTML = "문자열 결합";
+            document.querySelector(".sample01_M1").innerHTML = "string 결합";
             document.querySelector(".sample01_R1").innerHTML = str1 + str2;
 
             const num1 = 100;
@@ -1353,20 +1328,20 @@
 
             const txt1 = "모던 ";
             const txt2 = " 자바스크립트 ";
-            const txt3 = "핵심 가이드";
+            const txt3 = "핵심";
 
             document.querySelector(".sample01_N3").innerHTML = "3";
-            document.querySelector(".sample01_Q3").innerHTML = "모던, 자바스크립트, 핵심 가이드";
+            document.querySelector(".sample01_Q3").innerHTML = "모던, 자바스크립트, 핵심";
             document.querySelector(".sample01_M3").innerHTML = "문자열 결합";
             document.querySelector(".sample01_R3").innerHTML = "나는 " + txt1 + "(modern)" + txt2 + "(javascript) " +
-                txt3 + "를 사고 싶다";
+                txt3 + "을 배우고 싶다";
 
             const tem1 = "모던 ";
             const tem2 = " 자바스크립트 ";
             const tem3 = "핵심";
 
             document.querySelector(".sample01_N4").innerHTML = "4";
-            document.querySelector(".sample01_Q4").innerHTML = "모던, 자바스크립트, 핵심 가이드";
+            document.querySelector(".sample01_Q4").innerHTML = "모던, 자바스크립트, 핵심";
             document.querySelector(".sample01_M4").innerHTML = "템플릿 문자열";
             document.querySelector(".sample01_R4").innerHTML = `나는 ${tem1}(modern) ${tem2}(javascript) ${tem3}을 배우고 싶다`;
         }

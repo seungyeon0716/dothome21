@@ -35,7 +35,7 @@
             margin-bottom: 400px;
         }
         h1 {
-            padding-top: 20px;
+            padding-top: 40px;
             padding-bottom: 20px;
         }
         h1 a {
@@ -55,6 +55,9 @@
         }
         ul {
             list-style: none;
+        }   
+        ol {
+            padding-left: 26px;
         }
         a {
             text-decoration: none;
@@ -174,7 +177,7 @@
             color: #222;
         }
         .page li a:hover {
-            color: #b7cfc3;
+            color: #098a4c;
         }
         .menu li {
             display: inline;
@@ -201,20 +204,27 @@
                 padding: 5px 20px;
             }
             .list li {
-                line-height: 1.3;
+                line-height: 1.2;
             }
             .list a {
                 font-size: 12px;
             }
             .sample h2 {
                 font-size: 14px;
-                padding: 12px 10px;
+                padding: 12px 10px 10px;
             }
             .sample h2 .dot {
                 display: none;
             }
             .sample pre {
                 font-size: 14px;
+            }
+            body {
+                padding: 5%;
+                font-size: 13px;
+            }
+            h1 {
+                text-align: center;
             }
         }
     </style>
@@ -253,31 +263,35 @@
     </nav>
 
     <h2 class="mt20">데이터 저장하기</h2>
-    <ul class="list">
-        <li><a href="#sample1">01. 변수 : 데이터 저장</a></li>
-        <li><a href="#sample2">02. 변수 : 데이터 저장 + 데이터 변경</a></li>
-        <li><a href="#sample3">03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가</a></li>
-        <li><a href="#sample4">04. 상수 : 데이터 저장(변하지 않음)</a></li>
-        <li><a href="#sample5">05. 배열 : 데이터 저장(여러개) : 표현 방법1</a></li>
-        <li><a href="#sample6">06. 배열 : 데이터 저장(여러개) : 표현 방법2</a></li>
-        <li><a href="#sample7">07. 배열 : 데이터 저장(여러개) : 표현 방법3</a></li>
-        <li><a href="#sample8">08. 배열 : 데이터 저장(여러개) : 표현 방법4</a></li>
-        <li><a href="#sample9">09. 객체 : 데이터 저장(키와 값) : 표현 방법1 : 배열 스타일</a></li>
-        <li><a href="#sample10">10. 객체 : 데이터 저장(키와 값) : 표현 방법2 : 객체 스타일</a></li>
-        <li><a href="#sample11">11. 객체 : 데이터 저장(키와 값) : 표현 방법3</a></li>
-        <li><a href="#sample12">12. 객체 : 데이터 저장(키와 값) : 표현 방법4</a></li>
-        <li><a href="#sample13">13. 객체 : 데이터 저장(키와 값) : 표현 방법5 : 배열 속에 객체</a></li>
-        <li><a href="#sample14">14. 객체 : 데이터 저장(키와 값) : 표현 방법6 : 객체 속에 배열</a></li>
-        <li><a href="#sample15">15. 객체 : 데이터 저장(키와 값) : 표현 방법7 : 객체 속에 변수</a></li>
-        <li><a href="#sample16">16. 객체 : 데이터 저장(키와 값) : 표현 방법8 : 객체 속에 함수</a></li>
-    </ul>
+    <div class="list">
+        <ol>
+            <li><a href="#sample1">변수 : 데이터 저장</a></li>
+            <li><a href="#sample2">변수 : 데이터 저장 + 데이터 변경</a></li>
+            <li><a href="#sample3">변수 : 데이터 저장 + 데이터 변경 + 데이터 추가</a></li>
+            <li><a href="#sample4">상수 : 데이터 저장(변하지 않음)</a></li>
+            <li><a href="#sample5">배열 : 데이터 저장(여러개) : 표현 방법1</a></li>
+            <li><a href="#sample6">배열 : 데이터 저장(여러개) : 표현 방법2</a></li>
+            <li><a href="#sample7">배열 : 데이터 저장(여러개) : 표현 방법3</a></li>
+            <li><a href="#sample8">배열 : 데이터 저장(여러개) : 표현 방법4</a></li>
+            <li><a href="#sample9">객체 : 데이터 저장(키와 값) : 표현 방법1 : 배열 스타일</a></li>
+            <li><a href="#sample10">객체 : 데이터 저장(키와 값) : 표현 방법2 : 객체 스타일</a></li>
+            <li><a href="#sample11">객체 : 데이터 저장(키와 값) : 표현 방법3</a></li>
+            <li><a href="#sample12">객체 : 데이터 저장(키와 값) : 표현 방법4</a></li>
+            <li><a href="#sample13">객체 : 데이터 저장(키와 값) : 표현 방법5 : 배열 속에 객체</a></li>
+            <li><a href="#sample14">객체 : 데이터 저장(키와 값) : 표현 방법6 : 객체 속에 배열</a></li>
+            <li><a href="#sample15">객체 : 데이터 저장(키와 값) : 표현 방법7 : 객체 속에 변수</a></li>
+            <li><a href="#sample16">객체 : 데이터 저장(키와 값) : 표현 방법8 : 객체 속에 함수</a></li>
+        </ol>
+    </div>
 
     <h2 class="mt20">추가</h2>
-    <ul class="list">
-        <li><a href="#sample17">17. 변수의 종류 : 전역변수, 지역변수</a></li>
-        <li><a href="#sample18">18. 변수의 변환 : 형 변환</a></li>
-        <li><a href="#sample19">19. 변수의 유형 : 데이터 타입</a></li>
-    </ul>
+    <div class="list">
+        <ol>
+            <li><a href="#sample01">변수의 종류 : 전역변수, 지역변수</a></li>
+            <li><a href="#sample02">변수의 변환 : 형 변환</a></li>
+            <li><a href="#sample03">변수의 유형 : 데이터 타입</a></li>
+        </ol>
+    </div>
 
     <hr>
 
@@ -618,9 +632,9 @@
 
     <hr>
 
-    <!-- //sample17 -->
-    <div id="sample17" class="sample">
-        <h2>17. 변수의 종류 : 지역변수, 전역변수<span class="dot"></span></h2>
+    <!-- //sample01 -->
+    <div id="sample01" class="sample">
+        <h2>01. 변수의 종류 : 지역변수, 전역변수<span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     let x = 100;        //변수 설정 : 전역 변수
@@ -656,9 +670,9 @@
 
     <hr>
 
-    <!-- //sample18 -->
-    <div id="sample18" class="sample">
-        <h2>18. 변수의 변환 : 형 변환<span class="dot"></span></h2>
+    <!-- //sample02 -->
+    <div id="sample02" class="sample">
+        <h2>02. 변수의 변환 : 형 변환<span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     let x = 100;
@@ -686,9 +700,9 @@
 
     <hr>
 
-    <!-- //sample19 -->
-    <div id="sample19" class="sample">
-        <h2>19. 변수의 유형 : 데이터 타입<span class="dot"></span></h2>
+    <!-- //sample03 -->
+    <div id="sample03" class="sample">
+        <h2>03. 변수의 유형 : 데이터 타입<span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     let num = 100;

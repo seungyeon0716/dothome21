@@ -37,7 +37,7 @@
         }
 
         h1 {
-            padding-top: 20px;
+            padding-top: 40px;
             padding-bottom: 20px;
         }
         h1 a {
@@ -47,7 +47,8 @@
             margin: 5% 0;
             border-style: dashed;
             border-color: #E6E6E6;
-            border-width: 1px;
+            border-width: 0px;
+            border-bottom-width: 1px;
         }
 
         img {
@@ -59,7 +60,9 @@
         ul {
             list-style: none;
         }
-
+        ol {
+            padding-left: 26px;
+        }
         a {
             text-decoration: none;
             color: #333;
@@ -197,7 +200,7 @@
             color: #222;
         }
         .page li a:hover {
-            color: #b7cfc3;
+            color: #098a4c;
          }
         .menu li {
             display: inline;
@@ -224,14 +227,14 @@
                 padding: 5px 20px;
             }
             .list li {
-                line-height: 1.3;
+                line-height: 1.2;
             }
             .list a {
                 font-size: 12px;
             }
             .sample h2 {
                 font-size: 14px;
-                padding: 12px 10px;
+                padding: 12px 10px 10px;
             }
             .sample h2 .dot {
                 display: none;
@@ -240,12 +243,13 @@
                 font-size: 14px;
             }
             body {
-                 font-size: 13px;
+                padding: 5%;
+                font-size: 13px;
              }
             h1 {
              text-align: center;
             }
-            .sample h2 {
+            /* .sample h2 {
                 font-size: 14px;
                 font-weight: normal;
                 padding: 7px 5px 5px;
@@ -263,7 +267,7 @@
             }
             .view table td.result {
                 color: #000;
-            }
+            } */
         }
     </style>
 </head>
@@ -300,18 +304,22 @@
     </nav>
 
     <h2 class="mt20">샘플</h2>
-    <ul class="list">
-        <li><a href="javascriptSample602-01.html">01. CSS 속성 첫 글자만 검색하기</a></li>
-        <li><a href="javascriptSample602-02.html">02. CSS 속성 검색하면 설명 보여주기</a></li>
-        <li><a href="javascriptSample602-03.html">03. CSS 속성 정렬하기</a></li>
-    </ul>
+    <div class="list">
+        <ol>
+            <li><a href="javascriptSample602-01.html">CSS 속성 첫 글자만 검색하기</a></li>
+            <li><a href="javascriptSample602-02.html">CSS 속성 검색하면 설명 보여주기</a></li>
+            <li><a href="javascriptSample602-03.html">CSS 속성 정렬하기</a></li>
+        </ol>
+    </div>
 
     <h2 class="mt20">샘플</h2>
-    <ul class="list">
-        <li><a href="javascriptSample603-01.html">01. HTML 속성 첫 글자만 검색하기</a></li>
-        <li><a href="javascriptSample603-02.html">02. HTML 속성 검색하면 설명 보여주기</a></li>
-        <li><a href="javascriptSample603-03.html">03. HTML 속성 정렬하기</a></li>
-    </ul>
+    <div class="list">
+        <ol>
+            <li><a href="javascriptSample603-01.html">HTML 속성 첫 글자만 검색하기</a></li>
+            <li><a href="javascriptSample603-02.html">HTML 속성 검색하면 설명 보여주기</a></li>
+            <li><a href="javascriptSample603-03.html">HTML 속성 정렬하기</a></li>
+        </ol>
+    </div>
 
     <hr>
 

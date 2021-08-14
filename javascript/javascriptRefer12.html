@@ -37,7 +37,7 @@
         }
 
         h1 {
-            padding-top: 20px;
+            padding-top: 40px;
             padding-bottom: 20px;
         }
         h1 a {
@@ -47,7 +47,8 @@
             margin: 5% 0;
             border-style: dashed;
             border-color: #E6E6E6;
-            border-width: 1px;
+            border-width: 0px;
+            border-bottom-width: 1px;
         }
 
         img {
@@ -59,7 +60,9 @@
         ul {
             list-style: none;
         }
-
+        ol {
+            padding-left: 26px;
+        }
         a {
             text-decoration: none;
             color: #333;
@@ -187,8 +190,7 @@
             background-color: #000;
             color: #fff;
             border-radius: 30px;
-            padding: 0.1em 1.5em;
-            font-size: 0.8em;
+            padding: 0 20px;
         }
         .page {
             position: absolute;
@@ -204,7 +206,7 @@
             color: #222;
         }
         .page li a:hover {
-            color: #b7cfc3;
+            color: #098a4c;
          }
          .menu li {
             display: inline;
@@ -231,14 +233,14 @@
                 padding: 5px 20px;
             }
             .list li {
-                line-height: 1.3;
+                line-height: 1.2;
             }
             .list a {
                 font-size: 12px;
             }
             .sample h2 {
                 font-size: 14px;
-                padding: 12px 10px;
+                padding: 12px 10px 10px;
             }
             .sample h2 .dot {
                 display: none;
@@ -247,7 +249,8 @@
                 font-size: 14px;
             }
             body {
-                 font-size: 13px;
+                padding: 5%;
+                font-size: 13px;
              }
             h1 {
              text-align: center;
@@ -257,10 +260,10 @@
                 font-weight: normal;
                 padding: 7px 5px 5px;
             }
-            .sample h2  .dot {
+            .sample h2 .dot {
                 display: none;
             }
-            .view {
+            /* .view {
                 padding: 5px;
                 max-width: 800px;
                 overflow: auto;
@@ -270,7 +273,7 @@
             }
             .view table td.result {
                 color: #000;
-            }
+            } */
         }
     </style>
 </head>
@@ -307,17 +310,20 @@
     </nav>
 
     <h2 class="mt20">문자열 객체 샘플</h2>
-    <ul class="list">
-        <li><a href="javascriptSample01.html">01. CSS 속성 첫 글자만 검색하기</a> <a class="sam" href="javascript602.html">charAt()</a></a></li>
-        <li><a href="javascriptSample02.html">02. CSS 속성 검색하면 설명 보여주기</a> <a class="sam" href="javascript601.html">find()</a></li>
-        <li><a href="javascriptSample03.html">03. CSS 속성 정렬하기</a> <a class="sam" href="javascript601.html">sort()</a></li>
-    </ul>
+    <div class="list">
+        <ol>
+            <li><a href="javascriptSample01.html">CSS 속성 첫 글자만 검색하기</a> <a class="sam" href="javascript602.html">charAt()</a></a></li>
+            <li><a href="javascriptSample02.html">CSS 속성 검색하면 설명 보여주기</a> <a class="sam" href="javascript601.html">find()</a></li>
+            <li><a href="javascriptSample03.html">CSS 속성 정렬하기</a> <a class="sam" href="javascript601.html">sort()</a></li>
+        </ol>
+    </div>
 
     <h2 class="mt20">날짜 객체 샘플</h2>
-    <ul class="list">
-        <li><a href="javascriptSample04.html">01.시계 만들기</a> <a class="sam" href="javascript604.html">getHours()</a></li>
-
-    </ul>
+    <div class="list">
+        <ol>
+            <li><a href="javascriptSample04.html">시계 만들기</a> <a class="sam" href="javascript604.html">getHours()</a></li>
+        </ol>
+    </div>
 
     <hr>
 

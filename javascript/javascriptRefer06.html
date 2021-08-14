@@ -29,7 +29,6 @@
             padding: 0;
             font-family: 'NEXON Lv1 Gothic OTF';
             line-height: 1.6;
-            word-break: break-all;
         }
 
         body {
@@ -38,7 +37,7 @@
         }
 
         h1 {
-            padding-top: 20px;
+            padding-top: 40px;
             padding-bottom: 20px;
         }
         h1 a {
@@ -48,7 +47,8 @@
             margin: 5% 0;
             border-style: dashed;
             border-color: #E6E6E6;
-            border-width: 1px;
+            border-width: 0px;
+            border-bottom-width: 1px;
         }
 
         img {
@@ -60,7 +60,9 @@
         ul {
             list-style: none;
         }
-
+        ol {
+            padding-left: 26px;
+        }
         a {
             text-decoration: none;
             color: #333;
@@ -167,22 +169,7 @@
             padding: 3px 0 16px 0;
             line-height: 1.6;
         }
-        ol {
-            padding-left: 26px;
-        }
-        .sample .sam {
-            padding: 25px;
-            border-bottom: 1px solid #E6E6E6;
-        }
-
-        .sample .sam dt {
-            padding: 3px 0;
-            margin-bottom: 6px;
-        }
-
-        .sample .sam dd {
-            padding: 3px 0 16px 0;
-        }
+ 
         .mt20 {
             margin-top: 20px;
         }
@@ -202,27 +189,9 @@
         }
 
         .view table th {
-            /*  
-            padding-top: 13px;
-            padding-right: 5px; 
-            padding-bottom: 11px;
-            padding-left: 5px;
-            padding: 13px 5px 11px 5px; 위/오른쪽/아래/왼쪽 
-            padding: 13px 5px 11px;     위/왼쪽,오른쪽: 5px/아래: 11px 
-            padding: 13px 5px;          위,아래: 13px /왼쪽, 오른쪽 :5px 
-            padding: 13px;              위/오른쪽/아래/왼쪽: 13px 
-            */
             padding: 13px 5px 11px 5px;
         }
-        td {
-            display: table-cell;
-            vertical-align: inherit;
-        }
-        table {
-            border-collapse: separate;
-            text-indent: initial;
-            border-spacing: 2px;
-        }
+        
         .view table td {
             border: 1px solid #e6e6e6;
             padding: 13px 5px 11px 5px;
@@ -252,7 +221,7 @@
             color: #222;
         }
         .page li a:hover {
-            color: #b7cfc3;
+            color: #098a4c;
          }
         .menu li {
             display: inline;
@@ -279,14 +248,14 @@
                 padding: 5px 20px;
             }
             .list li {
-                line-height: 1.3;
+                line-height: 1.2;
             }
             .list a {
                 font-size: 12px;
             }
             .sample h2 {
                 font-size: 14px;
-                padding: 12px 10px;
+                padding: 12px 10px 10px;
             }
             .sample h2 .dot {
                 display: none;
@@ -295,7 +264,8 @@
                 font-size: 14px;
             }
             body {
-                 font-size: 13px;
+                padding: 5%;
+                font-size: 13px;
              }
             h1 {
              text-align: center;
@@ -305,26 +275,21 @@
                 font-weight: normal;
                 padding: 7px 5px 5px;
             }
-            .sample h2  .dot {
+            .sample h2 .dot {
                 display: none;
             }
             .view {
-                border-right: 1px solid #E6E6E6;
-                border-left: 1px solid #E6E6E6;
+                padding: 5px;
+                max-width: 800px;
                 overflow: auto;
             }
-            .view table {
-                border-left: 0px;
-                border-right: 0px;
-            }
-            .view table th,
+            .view th,
             .view table td {
                 white-space: nowrap;
-                font-size: 13px;
+                font-weight: normal;
             }
             .view table td.result {
-                color: #BDBDBD;
-                background: #F1F1F1;
+                color: #000;
             }
         }
     </style>
@@ -361,32 +326,32 @@
         </ul>
     </nav>
 
-    <h2 class="mt20">배열 메서드</h2>
-    <ul class="list">
+    <h2 class="mt20">배열 객체</h2>
+    <div class="list">
         <ol>
-        <li><a href="#sample01">01. 배열 메서드 : length : 배열 길이 구하기 : 반환(숫자)</a></li>
-        <li><a href="#sample02">02. 배열 메서드 : join() : 배열 요소 결합하기 : 반환(문자열)</a></li>
-        <li><a href="#sample03">03. 배열 메서드 : push() : 배열 마지막 요소에 추가하기 : 반환(숫자)</a></li>
-        <li><a href="#sample03">03. 배열 메서드 : unshift() : 배열 처음 요소에 추가하기 : 반환(숫자)</a></li>
-        <li><a href="#sample04">04. 배열 메서드 : shift() : 배열 첫 요소 삭제하기 : 반환(삭제된 요소)</a></li>
-        <li><a href="#sample04">04. 배열 메서드 : pop() : 배열 마지막 요소 삭제하기 : 반환(삭제된 요소)</a></li>
-        <li><a href="#sample05">05. 배열 메서드 : index() : 배열 요소 검색하기 : 반환(숫자)</a></li>
-        <li><a href="#sample05">05. 배열 메서드 : lastIndex() : 배열 요소 끝에서 검색하기 : 반환(숫자)</a></li>
-        <li><a href="#sample05">05. 배열 메서드 : inCludes() : 배열 요소 검색하기 : 반환(불린)</a></li>
-        <li><a href="#sample06">06. 배열 메서드 : reverse() : 배열 요소의 순서를 반대로 정렬할 때 : 반환(배열)</a></li>
-        <li><a href="#sample06">06. 배열 메서드 : sort() : 배열 요소의 정렬할 때 : 반환(배열)</a></li>
-        <li><a href="#sample07">07. 배열 메서드 : concat() : 배열 요소를 결합할 때 : 반환(배열)</a></li>
-        <li><a href="#sample08">08. 배열 메서드 : slice() : 배열 요소를 다른 요소 변경할 때 : 반환(배열)</a></li>
-        <li><a href="#sample09">09. 배열 메서드 : splice() : 배열 요소를 다른 요소 변경할 때 : 반환(배열)</a></li>
-        <li><a href="#sample10">10. 배열 메서드 : find() : 배열 요소 검색하기 : 반환(요소)</a></li>
-        <li><a href="#sample10">10. 배열 메서드 : findIndex() : 배열 첫 요소 검색하기 : 반환(요소)</a></li>
-        <li><a href="#sample11">11. 배열 메서드 : filter() : 조건에 만족하는 배열 요소 검색하기 : 반환(배열)</a></li>
-        <li><a href="#sample12">12. 배열 메서드 : map() : 배열 요소 검색하기 : 반환(요소)</a></li>
-        <li><a href="#sample13">13. 배열 메서드 : reduce() : 배열 요소 하나로 만들기 : 반환(결과값)</a></li>
-        <li><a href="#sample13">13. 배열 메서드 : reduceRight() : 배열 요소를 하나로 만들기 : 반환(결과값)</a></li>
-        <li><a href="#sample14">14. 배열 메서드 : Array.from() : 배열로 변환하기 : 반환(배열)</a></li>
+            <li><a href="#sample01">배열 메서드 : length : 배열 길이 구하기 : 반환(숫자)</a></li>
+            <li><a href="#sample02">배열 메서드 : join() : 배열 요소 결합하기 : 반환(문자열)</a></li>
+            <li><a href="#sample03">배열 메서드 : push() : 배열 마지막 요소에 추가하기 : 반환(숫자)</a></li>
+            <li><a href="#sample03">배열 메서드 : unshift() : 배열 처음 요소에 추가하기 : 반환(숫자)</a></li>
+            <li><a href="#sample04">배열 메서드 : shift() : 배열 첫 요소 삭제하기 : 반환(삭제된 요소)</a></li>
+            <li><a href="#sample04">배열 메서드 : pop() : 배열 마지막 요소 삭제하기 : 반환(삭제된 요소)</a></li>
+            <li><a href="#sample05">배열 메서드 : index() : 배열 요소 검색하기 : 반환(숫자)</a></li>
+            <li><a href="#sample05">배열 메서드 : lastIndex() : 배열 요소 끝에서 검색하기 : 반환(숫자)</a></li>
+            <li><a href="#sample05">배열 메서드 : inCludes() : 배열 요소 검색하기 : 반환(불린)</a></li>
+            <li><a href="#sample06">배열 메서드 : reverse() : 배열 요소의 순서를 반대로 정렬할 때 : 반환(배열)</a></li>
+            <li><a href="#sample06">배열 메서드 : sort() : 배열 요소의 정렬할 때 : 반환(배열)</a></li>
+            <li><a href="#sample07">배열 메서드 : concat() : 배열 요소를 결합할 때 : 반환(배열)</a></li>
+            <li><a href="#sample08">배열 메서드 : slice() : 배열 요소를 다른 요소 변경할 때 : 반환(배열)</a></li>
+            <li><a href="#sample09">배열 메서드 : splice() : 배열 요소를 다른 요소 변경할 때 : 반환(배열)</a></li>
+            <li><a href="#sample10">배열 메서드 : find() : 배열 요소 검색하기 : 반환(요소)</a></li>
+            <li><a href="#sample10">배열 메서드 : findIndex() : 배열 첫 요소 검색하기 : 반환(요소)</a></li>
+            <li><a href="#sample11">배열 메서드 : filter() : 조건에 만족하는 배열 요소 검색하기 : 반환(배열)</a></li>
+            <li><a href="#sample12">배열 메서드 : map() : 배열 요소 검색하기 : 반환(요소)</a></li>
+            <li><a href="#sample13">배열 메서드 : reduce() : 배열 요소 하나로 만들기 : 반환(결과값)</a></li>
+            <li><a href="#sample13">배열 메서드 : reduceRight() : 배열 요소를 하나로 만들기 : 반환(결과값)</a></li>
+            <li><a href="#sample14">배열 메서드 : Array.from() : 배열로 변환하기 : 반환(배열)</a></li>
     </ol>
-    </ul>
+</div>
 
     <hr>
 
@@ -1418,7 +1383,7 @@
             const text3 = arr.join("");
             const text4 = arr.join(" ");
 
-            document.querySelector(".sample02_N1").innerHTML = "2";
+            document.querySelector(".sample02_N1").innerHTML = "1";
             document.querySelector(".sample02_Q1").innerHTML = "[100, 200, 300, 400, 500]";
             document.querySelector(".sample02_M1").innerHTML = ".join('*')";
             document.querySelector(".sample02_R1").innerHTML = text1;
