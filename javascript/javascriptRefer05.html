@@ -109,6 +109,7 @@
         .sample h2 {
             position: relative;
             font-size: 16px;
+            line-height: 1.4;
             background-color: #F2F2F2;
             padding: 15px;
             border-radius: 5px 5px 0 0;
@@ -149,35 +150,37 @@
         }
         .sample pre {
             margin: 0 !important;
-            border-radius: 0;
+            border-radius: 0 0 5px 5px;
         }
         .sample code {
             font-family: 'NEXON Lv1 Gothic OTF';
         }
+        .view table {
+            border: 1px solid #E6E6E6;
+            width: 100%;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .view table td {
+            border: 1px solid #E6E6E6;
+            padding: 13px 5px 11px 5px;
+        }
+        .view table td th {
+            padding: 13px 5px 11px 5px;
+            border-bottom: 1px solid #E6E6E6;
+            font-weight: normal;
+            white-space: nowrap;
+        }
+        .view table td.result {
+            transition: all 0.3s;
+            cursor: pointer;
+            color: #fff;
+        }
+        .view table td.result:hover {
+            color: #000;
+            background-color: #f5f5f5;
+        }
         @media (max-width: 800px){
-            .menu {
-                text-align: center;
-            }
-            .menu li a {
-                font-size: 13px;
-                padding: 5px 20px;
-            }
-            .list li a {
-                font-size: 13px;
-            }
-            .sample h2 {
-                font-size: 14px;
-                padding: 12px 10px 10px;
-            }
-            .sample h2 .dot {
-                display: none;
-            }
-            .sample pre {
-                line-height: 1.2 !important;
-            }
-            .sample code {
-                font-size: 13px;
-            }
             body {
                 padding: 5%;
                 font-size: 13px;
@@ -198,6 +201,50 @@
             }
             .title h1 a {
                 font-size: 40px;
+            }
+            .menu {
+                text-align: center;
+            }
+            .menu li a {
+                font-size: 13px;
+                padding: 5px 20px;
+            }
+            .list li a{
+                font-size: 13px;
+            }
+            .list li strong {
+                display: none;
+            }
+            .sample h2 {
+                font-size: 13px;
+                padding: 12px 10px 10px;
+            }
+            .sample h2 .dot {
+                display: none;
+            }
+            .sample pre {
+                font-size: 1.2 !important;
+            }
+            .sample code {
+                font-size: 13px;
+            }
+            .view {
+                border-right: 1px solid #E6E6E6;
+                border-left: 1px solid #E6E6E6;
+                overflow: auto;
+            }
+            .view table {
+                border-right: 0px;
+                border-left: 0px;
+            }
+            .view table th,
+            .view table td {
+                white-space: nowrap;
+                font-size: 13px;
+            }
+            .view table td.result {
+                color: #bdbdbd;
+                background: #f1f1f1;
             }
         }
     </style>
