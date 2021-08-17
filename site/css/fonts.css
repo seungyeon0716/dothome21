@@ -2,117 +2,117 @@
 
 @font-face {
     font-family: 'S-CoreDream-1Thin';
+    font-weight: 100;
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-1Thin.woff') format('woff');
-    font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: 'S-CoreDream-2ExtraLight';
+    font-family: 'S-CoreDream';
+    font-weight: 200;
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff') format('woff');
-    font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: 'S-CoreDream-3Light';
+    font-family: 'S-CoreDream';
+    font-weight: 300;
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
-    font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: 'S-CoreDream-4Regular';
+    font-family: 'S-CoreDream';
+    font-weight: 400;
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
-    font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: 'S-CoreDream-5Medium';
+    font-family: 'S-CoreDream';
+    font-weight: 500;
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
-    font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: 'S-CoreDream-6Bold';
+    font-family: 'S-CoreDream';
+    font-weight: 600;
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
-    font-weight: normal;
     font-style: normal;
     
 }
 @font-face {
-    font-family: 'S-CoreDream-7ExtraBold';
+    font-family: 'S-CoreDream';
+    font-weight: 700;
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7ExtraBold.woff') format('woff');
-    font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: 'S-CoreDream-8Heavy';
+    font-family: 'S-CoreDream';
+    font-weight: 800;
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff');
-    font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'S-CoreDream-9Black';
+    font-family: 'S-CoreDream';
+    font-weight: 900;
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-9Black.woff') format('woff');
-    font-weight: normal;
     font-style: normal;
 }
 
 /* 넥슨 */
 
 @font-face {
-    font-family: 'NEXON Lv1 Gothic OTF Light';
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-weight: 300;
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
-    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NEXON Lv1 Gothic';
+    font-weight: 400;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
     font-style: normal;
 }
 @font-face {
     font-family: 'NEXON Lv1 Gothic OTF';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'NEXON Lv1 Gothic OTF Bold';
+    font-weight: 700;
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'NEXON Lv2 Gothic Light';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Light.woff') format('woff');
-    font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'NEXON Lv2 Gothic';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
-    font-weight: normal;
+    font-weight: 300;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Light.woff') format('woff');
     font-style: normal;
 }
 @font-face {
-    font-family: 'NEXON Lv2 Gothic Bold';
+    font-family: 'NEXON Lv2 Gothic';
+    font-weight: 400;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NEXON Lv2 Gothic';
+    font-weight: 700;
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff') format('woff');
-    font-weight: normal;
     font-style: normal;
 }
 
 /* 지마켓 */
 
 @font-face {
-    font-family: 'GmarketSansLight';
+    font-family: 'GmarketSans';
+    font-weight: 200;
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
-    font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: 'GmarketSansMedium';
+    font-family: 'GmarketSans';
+    font-weight: 400;
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-    font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: 'GmarketSansBold';
+    font-family: 'GmarketSans';
+    font-weight: 700;
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
-    font-weight: normal;
     font-style: normal;
 }

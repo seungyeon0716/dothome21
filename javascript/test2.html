@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //선언적 함수
+        function func1(){
+            document.write("선언적 함수<br>");
+        }
+        func1();
+
+        //익명함수
+        const func2 = function(){
+            document.write("익명함수<br>");
+        }
+        func2();
+        
+        //매개변수 함수
+        function func3(text){
+            document.write(text);
+        }
+        func3("매개변수 함수<br>");
+
+        //리턴값 함수
+        function func4(){
+            const text = "리턴값 함수<br>";
+            return text;
+        }
+        document.write(func4());
+
+        //화살표 함수
+        func5 = () => {
+            document.write("화살표 함수 :  선언적 함수<br>");
+        }
+        func5();
+
+        const func6 = () => {
+            document.write("화살표 함수 : 익명 함수<br>");
+        }
+        func6();
+
+        func7 = () => {
+            const str = "화살표 함수 : 리턴값 함수<br>";
+            return str;
+        }
+        document.write(func7());
+
+        const func8 = (str) => {
+            return str;
+        }
+        document.write(func8("화살표 함수 : 익명함수 + 매개변수 + 리턴값<br>"));
+
+        const func9 = str => {
+            return str;
+        }
+        document.write(func9("화살표 함수 : 익명함수 + 매개변수 + 리턴값<br>"));
+
+        const func10 = str => str;
+
+        document.write(func10("화살표 함수 : 익명함수 + 매개변수 + 리턴값<br>"));
+
+        func11 = str => str;
+        
+        document.write(func11("화살표 함수 : 익명함수 + 매개변수 + 리턴값<br>"));
+
+        function func12(str1, str2){
+            document.write(`${str1}가 ${str2}되었습니다.<br>`);
+        }
+        func12("함수","실행");
+
+        func13 = (str1, str2) => {
+            document.write(`${str1}가 ${str2}되었습니다.<br>`);
+        }
+        func13("함수","실행");
+
+        func14 = (str1, str2) => {
+            document.write(`${str1}가 ${str2}되었습니다.<br>`);
+        }
+        const a = "함수";
+        const b = "실행";
+
+        func14(a,b);
+
+        func15 = (str1, str2) => {
+            document.write(`${str1}가 ${str2}되었습니다.<br>`);
+        }
+        const c = ["함수","실행"];
+        
+        func15(c[0], c[1]);
+
+        func16 = (str1, str2) => {
+            document.write(`${str1}가 ${str2}되었습니다.<br>`);
+        }
+        const d = [{a:"함수"},{b:"실행"}];
+        
+        func16(d[0].a, d[1].b);
+
+        func17 = (str1, str2) => {
+            document.write(`${str1}가 ${str2}되었습니다.<br>`);
+        }
+        const e = {a:"함수",b:"실행"};
+        
+        func17(e.a, e.b);
+
+        const f = {
+            a: "함수",
+            b: "실행",
+            result : () => {
+                document.write(`${f.a}가 ${f.b}되었습니다.<br>`);
+            }
+        }
+        f.result();
+
+    </script>
+</body>
+</html>

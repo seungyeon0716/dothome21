@@ -1,0 +1,59 @@
+/* 카드 타입 유형 */
+
+/* cardType01 */
+#cardType {}
+
+.cardType01 {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    padding: 60px 0;
+}
+.cardType01 h2 {   
+    font-weight: 700;
+    font-size: 50px;
+    margin-bottom: 7px;
+}
+.cardType01 p {
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 1.28;
+    margin-bottom: 40px;
+}
+/* float을 이용한 레이아웃
+.card-wrap {
+    overflow: hidden;
+}
+.card-wrap > div {
+    float: left;
+    width: 387px;
+    margin-right: 19px;
+}
+.card-wrap > div:last-child {
+    margin-right: 0;
+} */
+
+/* flex을 이용한 레이아웃 */
+.card-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.card-wrap > div {
+    width: 387px; 
+}
+
+
+.card {}
+.card .card-img {}
+.card .card-title {
+    display: block;
+    font-size: 32px;
+}
+.card .card-desc {
+    display: block;
+    font-size: 20px;
+    font-weight: 300;
+}
+.card .card-keyword {
+    font-size: 16px;
+    font-weight: 300;
+    opacity: 0.5;
+}

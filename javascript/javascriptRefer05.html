@@ -18,36 +18,39 @@
             font-weight: normal;
             font-style: normal;
         }
-
+        @font-face {
+            font-family: 'NEXON Lv1 Gothic OTF Light';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
         @font-face {
             font-family: 'TmonMonsori';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
             font-weight: normal;
             font-style: normal;
         }
-
         * {
             margin: 0;
             padding: 0;
-            font-family: 'NEXON Lv1 Gothic OTF';
+            box-sizing: border-box;
             line-height: 1.6;
         }
 
         body {
-            padding: 5%;
-            margin-bottom: 400px;
+            padding: 2%;
             line-height: 1.6;
+            font-family: 'NEXON Lv1 Gothic OTF';
         }
-
-        h1 {
-            padding-top: 40px;
-            padding-bottom: 20px;
+        ul {
+            list-style: none;
         }
-
-        h1 a {
-            font-family: 'TmonMonsori';
+        ol {
+            padding-left: 28px;
         }
-
+        a {
+            text-decoration: none;
+        }
         hr {
             margin: 5% 0;
             border-style: dashed;
@@ -55,26 +58,51 @@
             border-width: 0px;
             border-bottom-width: 1px;
         }
-
-        img {
-            vertical-align: top;
-            border-radius: 5px;
-            margin: 5px;
+        .title { 
+            border-top: 3px solid #0e43f1;
+            border-bottom: 1px solid #0e43f1;
+            margin-bottom: 20px;
         }
-
-        ul {
-            list-style: none;
+        .title h1 a {
+            font-family: 'TmonMonsori';
+            color: #0e43f1;
+            font-size: 50px;
+            display: inline-block;
+            padding: 15px 0 12px;
+            text-transform: uppercase;
         }
-        ol {
-            padding-left: 26px;
+        .menu li {
+            display: inline;
         }
-        a {
-            text-decoration: none;
-            color: #333;
+        .menu li a {
+            font-family: 'NEXON Lv1 Gothic OTF';
+            color: #0e43f1;
+            border: 1px dashed #0e43f1;
+            padding: 10px 30px;
+            display: inline-block;
+            border-radius: 50px;
+            font-size: 16px;
+            margin: 4px 1px;
+            box-shadow: inset 0 0 0 #0e43f1;
+            transition: all 0.4s;
         }
-
+        .menu li a:hover {
+            box-shadow: inset 0 -100px 0 #0e43f1;
+            color: #fff;
+            border-style: solid;
+        }
+        .menu li .active a {
+            background: #0e43f1;
+            color: #fff;
+        }
+        .list li a {
+            font-family: 'NEXON Lv1 Gothic OTF';
+            font-size: 14px;
+            line-height: 1.6;
+            color: #000;
+        }
         .sample {
-            border: 1px solid #e6e6e6;
+            font-family: 'NEXON Lv1 Gothic OTF';
             border-radius: 5px;
         }
 
@@ -83,8 +111,8 @@
             font-size: 16px;
             background-color: #F2F2F2;
             padding: 15px;
-            border-bottom: 1px solid #E6E6E6;
             border-radius: 5px 5px 0 0;
+            font-weight: normal;
         }
 
         .sample h2 .dot {
@@ -119,182 +147,23 @@
             right: -15px;
             top: 0;
         }
-
-        .sample .ex {
-            padding: 20px;
-        }
-
-        .sample .ex .text {
-            margin: 10px 0;
-        }
-
-        .sample .re {
-            padding: 20px;
-            border-top: 1px solid #E6E6E6;
-        }
-
-        .sample .re a {
-            color: #333;
-            text-decoration: none;
-            border: 1px solid #333;
-            border-radius: 30px;
-            padding: 10px 30px;
-            margin: 5px;
-            display: inline-block;
-        }
-
-        .sample .re a:hover {
-            background-color: #000;
-            color: #fff;
-        }
-
-        .sample .problem {
-            padding: 25px;
-            border-bottom: 1px solid #E6E6E6;
-            line-height: 1.6;
-        }
-
         .sample pre {
             margin: 0 !important;
             border-radius: 0;
-            ;
         }
-
-        .sample .desc {
-            padding: 25px;
-            border-bottom: 1px solid #E6E6E6;
-        }
-
-        .sample .desc dt {
-            padding: 3px 0;
-            margin-bottom: 6px;
-        }
-
-        .sample .desc dd {
-            padding: 3px 0 16px 0;
-            line-height: 1.6;
-        }
-
-        .sample .sam {
-            padding: 25px;
-            border-bottom: 1px solid #E6E6E6;
-        }
-
-        .sample .sam dt {
-            padding: 3px 0;
-            margin-bottom: 6px;
-        }
-
-        .sample .sam dd {
-            padding: 3px 0 16px 0;
-        }
-
-        .mt20 {
-            margin-top: 20px;
-        }
-
-        .view {
-            padding: 20px;
-        }
-
-        .view table {
-            width: 100%;
-            /*border-width: 1px; 
-              border-solid */
-            border: 1px solid #e6e6e6;
-            /* 속기형 작성법 */
-            text-align: center;
-            vertical-align: middle;
-            border-collapse: collapse;
-        }
-
-        .view table th {
-            padding: 13px 5px 11px 5px;
-        }
-        .view table td {
-            border: 1px solid #e6e6e6;
-            padding: 13px 5px 11px 5px;
-        }
-        .view table td.result {
-            color: #fff;
-            transition: all 0.3s;
-            cursor: zoom-in;
-        }
-
-        .view table td.result:hover {
-            color: #000;
-            background-color: #f5f5f5;
-        }
-
-        /* td {
-            display: table-cell;
-            vertical-align: inherit;
-        }
-
-        table {
-            border-collapse: separate;
-            text-indent: initial;
-            border-spacing: 2px;
-        } */
-        .sam {
-            background-color: #000;
-            color: #fff;
-            border-radius: 30px;
-            padding: 0 20px;
-        }
-
-        .page {
-            position: absolute;
-            right: 20px;
-            top: 15px;
-        }
-
-        .page li {
-            display: inline;
-            list-style: none;
-        }
-
-        .page li a {
-            text-decoration: none;
-            color: #222;
-        }
-
-        .page li a:hover {
-            color: #098a4c;
-        }
-
-        .menu li {
-            display: inline;
-        }
-
-        .menu li a {
+        .sample code {
             font-family: 'NEXON Lv1 Gothic OTF';
-            color: #000;
-            border: 1px dashed #000;
-            padding: 10px 30px;
-            display: inline-block;
-            border-radius: 50px;
-            font-size: 16px;
-            margin: 4px 1px;
-            transition: all 0.4s;
         }
-
-        .menu li a:hover {
-            box-shadow: inset 0 -100px 0 #000;
-            color: #fff;
-            border-style: solid;
-        }
-
         @media (max-width: 800px){
+            .menu {
+                text-align: center;
+            }
             .menu li a {
-                font-size: 12px;
+                font-size: 13px;
                 padding: 5px 20px;
             }
-            .list li {
-                line-height: 1.2;
-            }
-            .list a {
-                font-size: 12px;
+            .list li a {
+                font-size: 13px;
             }
             .sample h2 {
                 font-size: 14px;
@@ -304,100 +173,94 @@
                 display: none;
             }
             .sample pre {
-                font-size: 14px;
+                line-height: 1.2 !important;
+            }
+            .sample code {
+                font-size: 13px;
             }
             body {
                 padding: 5%;
                 font-size: 13px;
             }
-            h1 {
+            #wrap {
+                margin: 0;
+                border-width: 6px;
+                border-radius: 18px;
+            }
+            #contents {
+                border-width: 6px;
+            }
+            .title {
+                border-top-width: 2px;
+            }
+            .title h1 {
                 text-align: center;
             }
-            .sample h2 {
-                font-size: 14px;
-                font-weight: normal;
-                padding: 7px 5px 5px;
-            }
-            .sample h2 .dot {
-                display: none;
-            }
-            .view {
-                padding: 5px;
-                max-width: 800px;
-                overflow: auto;
-            }
-            .view th,
-            .view table td {
-                white-space: nowrap;
-                font-weight: normal;
-            }
-            .view table td.result {
-                color: #000;
+            .title h1 a {
+                font-size: 40px;
             }
         }
     </style>
 </head>
 
 <body>
+    <div id="wrap">
+        <main id="contents">
+            <div class="title">
+                <h1><a href="index.html">문자열 객체</a></h1>
+            </div>
+    
+            <nav class="menu">
+                <ul>
+                    <li><a href="javascriptRefer01.html">데이터 저장하기</a></li>
+                    <li><a href="javascriptRefer02.html">데이터 불러오기</a></li>
+                    <li><a href="javascriptRefer03.html">데이터 실행하기</a></li>
+                    <li><a href="javascriptRefer04.html">데이터 제어하기</a></li>
+                </ul>
+                <ul>
+                    <li><a href="javascriptRefer05.html">문자열 객체</a></li>
+                    <li><a href="javascriptRefer06.html">배열 객체</a></li>
+                    <li><a href="javascriptRefer07.html">날짜 객체</a></li>
+                    <li><a href="javascriptRefer08.html">수학 객체</a></li>
+                    <li><a href="javascriptRefer09.html">브라우저 객체</a></li>
+                    <li><a href="javascriptRefer10.html">요소 객체</a></li>
+                    <li><a href="javascriptRefer11.html">이벤트 객체</a></li>
+                </ul>
+                <ul>
+                    <li><a href="javascriptRefer12.html">샘플</a></li>
+                    <li><a href="javascriptRefer13.html">알고리즘</a></li>
+                </ul>
+            </nav>
 
-    <h1><a href="index.html">Javascript 레퍼런스</a></h1>
-    <ul class="page">
-        <li><a href="../refer-html/index.html">HTML</a></li>
-        <li><a href="../refer-css/index.html">CSS</a></li>
-        <li><a href="../javascript/javascript100.html">JAVASCRIPT</a></li>
-    </ul>
-
-    <nav class="menu">
-        <ul>
-            <li><a href="javascriptRefer01.html">데이터 저장하기</a></li>
-            <li><a href="javascriptRefer02.html">데이터 불러오기</a></li>
-            <li><a href="javascriptRefer03.html">데이터 실행하기</a></li>
-            <li><a href="javascriptRefer04.html">데이터 제어하기</a></li>
-        </ul>
-        <ul>
-            <li><a href="javascriptRefer05.html">문자열 객체</a></li>
-            <li><a href="javascriptRefer06.html">배열 객체</a></li>
-            <li><a href="javascriptRefer07.html">날짜 객체</a></li>
-            <li><a href="javascriptRefer08.html">수학 객체</a></li>
-            <li><a href="javascriptRefer09.html">브라우저 객체</a></li>
-            <li><a href="javascriptRefer10.html">요소 객체</a></li>
-            <li><a href="javascriptRefer11.html">이벤트 객체</a></li>
-        </ul>
-        <ul>
-            <li><a href="javascriptRefer12.html">샘플</a></li>
-            <li><a href="javascriptRefer13.html">알고리즘</a></li>
-        </ul>
-    </nav>
-
-    <h2 class="mt20">문자열 객체</h2>
-    <div class="list">
-        <ol>
-            <li><a href="#sample01">문자열 : 문자열 결합 / 템플릿 문자열</a></li>
-            <li><a href="#sample02">문자열 속성 : length: 문자열 길이 구하기 : 반환(숫자)</a></li>
-            <li><a href="#sample03">문자열 메서드 : toUpperCase() : 문자열 대문자 변경하기 : 반환(문자열)</a></li>
-            <li><a href="#sample03">문자열 메서드 : toLowerCase() : 문자열 소문자 변경하기 : 반환(문자열)</a></li>
-            <li><a href="#sample04">문자열 메서드 : trim() : 문자열 공백 제거하기 : 반환(문자열)</a></li>
-            <li><a href="#sample05">문자열 메서드 : indexOf() : 문자열 검색하기 : 반환(숫자)</a></li>
-            <li><a href="#sample05">문자열 메서드 : lastIndexOf() : 문자열 검색하기 : 반환(숫자)</a></li>
-            <li><a href="#sample05">문자열 메서드 : search() : 문자열 검색하기 : 반환(숫자)</a></li>
-            <li><a href="#sample06">문자열 메서드 : includes() : 문자열 포함 여부 : 반환(불린)</a></li>
-            <li><a href="#sample06">문자열 메서드 : startsWith() : 문자열 포함 여부 : 반환(불린)</a></li>
-            <li><a href="#sample06">문자열 메서드 : endtWith() : 문자열 포함 여부 : 반환(불린)</a></li>
-            <li><a href="#sample06">문자열 메서드 : charAt() : 지정한 인덱스의 문자를 추출 : 반환(문자)</a><a class="sam"
-                    href="javascriptSample01.html">sample</a></a></li>
-            <li><a href="#sample07">문자열 메서드 : slice() : 지정한 범위 내 문자열을 추출 : 반환(문자열)</a></li>
-            <li><a href="#sample07">문자열 메서드 : subString() : 지정한 범위 내 문자열을 추출 : 반환(문자열)</a></li>
-            <li><a href="#sample07">문자열 메서드 : substr() : 지정한 범위 내 문자열을 추출 : 반환(문자열)</a></li>
-            <li><a href="#sample08">문자열 메서드 : replace() : 문자열 변경 : 반환(문자열)</a></li>
-            <li><a href="#sample09">문자열 메서드 : split() : 문자열 반환 : 반환(문자열)</a></li>
-            <li><a href="#sample10">문자열 메서드 : padStart() : 문자열 시작 부분에 문자열 추가 : 반환(문자열)</a></li>
-            <li><a href="#sample10">문자열 메서드 : padEnd() : 문자열 끝 부분에 문자열 추가 : 반환(문자열)</a></li>
-            <li><a href="#sample11">문자열 메서드 : encodeURI() : 문자열을 인코딩 : 반환(문자열)</a></li>
-            <li><a href="#sample11">문자열 메서드 : encodeURIComponent() : 문자열을 인코딩 : 반환(문자열)</a></li>
-            <li><a href="#sample11">문자열 메서드 : decodeURI() : 문자열을 디코딩 : 반환(문자열)</a></li>
-            <li><a href="#sample11">문자열 메서드 : decodeURIComponent() : 문자열을 디코딩 : 반환(문자열)</a></li>
-        </ol>
-    </div>
+    <hr>
+            <div class="list">
+                <ol>
+                    <li><a href="#sample01">문자열 : 문자열 결합 / 템플릿 문자열</a></li>
+                    <li><a href="#sample02">문자열 속성 : length: 문자열 길이 구하기 : 반환(숫자)</a></li>
+                    <li><a href="#sample03">문자열 메서드 : toUpperCase() : 문자열 대문자 변경하기 : 반환(문자열)</a></li>
+                    <li><a href="#sample03">문자열 메서드 : toLowerCase() : 문자열 소문자 변경하기 : 반환(문자열)</a></li>
+                    <li><a href="#sample04">문자열 메서드 : trim() : 문자열 공백 제거하기 : 반환(문자열)</a></li>
+                    <li><a href="#sample05">문자열 메서드 : indexOf() : 문자열 검색하기 : 반환(숫자)</a></li>
+                    <li><a href="#sample05">문자열 메서드 : lastIndexOf() : 문자열 검색하기 : 반환(숫자)</a></li>
+                    <li><a href="#sample05">문자열 메서드 : search() : 문자열 검색하기 : 반환(숫자)</a></li>
+                    <li><a href="#sample06">문자열 메서드 : includes() : 문자열 포함 여부 : 반환(불린)</a></li>
+                    <li><a href="#sample06">문자열 메서드 : startsWith() : 문자열 포함 여부 : 반환(불린)</a></li>
+                    <li><a href="#sample06">문자열 메서드 : endtWith() : 문자열 포함 여부 : 반환(불린)</a></li>
+                    <li><a href="#sample06">문자열 메서드 : charAt() : 지정한 인덱스의 문자를 추출 : 반환(문자)</a><a class="sam"
+                            href="javascriptSample01.html">sample</a></a></li>
+                    <li><a href="#sample07">문자열 메서드 : slice() : 지정한 범위 내 문자열을 추출 : 반환(문자열)</a></li>
+                    <li><a href="#sample07">문자열 메서드 : subString() : 지정한 범위 내 문자열을 추출 : 반환(문자열)</a></li>
+                    <li><a href="#sample07">문자열 메서드 : substr() : 지정한 범위 내 문자열을 추출 : 반환(문자열)</a></li>
+                    <li><a href="#sample08">문자열 메서드 : replace() : 문자열 변경 : 반환(문자열)</a></li>
+                    <li><a href="#sample09">문자열 메서드 : split() : 문자열 반환 : 반환(문자열)</a></li>
+                    <li><a href="#sample10">문자열 메서드 : padStart() : 문자열 시작 부분에 문자열 추가 : 반환(문자열)</a></li>
+                    <li><a href="#sample10">문자열 메서드 : padEnd() : 문자열 끝 부분에 문자열 추가 : 반환(문자열)</a></li>
+                    <li><a href="#sample11">문자열 메서드 : encodeURI() : 문자열을 인코딩 : 반환(문자열)</a></li>
+                    <li><a href="#sample11">문자열 메서드 : encodeURIComponent() : 문자열을 인코딩 : 반환(문자열)</a></li>
+                    <li><a href="#sample11">문자열 메서드 : decodeURI() : 문자열을 디코딩 : 반환(문자열)</a></li>
+                    <li><a href="#sample11">문자열 메서드 : decodeURIComponent() : 문자열을 디코딩 : 반환(문자열)</a></li>
+                </ol>
+            </div>
     
     <hr>
 
@@ -630,6 +493,10 @@
     </div>
 
     <hr>
+
+    </main>
+
+</div>
 
     <!-- //sample05 -->
     <div id="sample05" class="sample">

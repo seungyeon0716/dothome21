@@ -56,3 +56,11 @@ ol,
 ul {
     list-style: none
 }
+
+/* 스타일 초기화 */
+strong {
+    font-weight: normal;
+}
+em {
+    font-style: normal;
+}
