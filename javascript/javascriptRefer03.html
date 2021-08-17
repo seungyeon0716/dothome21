@@ -27,19 +27,24 @@
         * {
             margin: 0;
             padding: 0;
-            font-family: 'NEXON Lv1 Gothic OTF';
+            box-sizing: border-box;
             line-height: 1.6;
         }
         body {
-            padding: 5%;
-            margin-bottom: 400px;
+            padding: 2%;
+            line-height: 1.6;
+            font-family: 'NEXON Lv1 Gothic OTF';
         }
-        h1 {
-            padding-top: 40px;
-            padding-bottom: 20px;
+        
+        ul {
+            list-style: none;
         }
-        h1 a {
-            font-family: 'TmonMonsori';
+        ol {
+            padding-left: 28px;
+        }
+
+        a {
+            text-decoration: none;
         }
         hr {
             margin: 5% 0;
@@ -48,37 +53,60 @@
             border-width: 0px;
             border-bottom-width: 1px;
         }
-
-        img {
-            vertical-align: top;
-            border-radius: 5px;
-            margin: 5px;
+        .title { 
+            border-top: 3px solid #0e43f1;
+            border-bottom: 1px solid #0e43f1;
+            margin-bottom: 20px;
         }
-
-        ul {
-            list-style: none;
+        .title h1 a {
+            font-family: 'TmonMonsori';
+            color: #0e43f1;
+            font-size: 50px;
+            display: inline-block;
+            padding: 15px 0 12px;
+            text-transform: uppercase;
         }
-        ol {
-            padding-left: 26px;
+        .menu li {
+            display: inline;
         }
-
-        a {
-            text-decoration: none;
-            color: #333;
+        .menu li a {
+            font-family: 'NEXON Lv1 Gothic OTF';
+            color: #0e43f1;
+            border: 1px dashed #0e43f1;
+            padding: 10px 30px;
+            display: inline-block;
+            border-radius: 50px;
+            font-size: 16px;
+            margin: 4px 1px;
+            box-shadow: inset 0 0 0 #0e43f1;
+            transition: all 0.4s;
         }
-
+        .menu li a:hover {
+            box-shadow: inset 0 -100px 0 #0e43f1;
+            color: #fff;
+            border-style: solid;
+        }
+        .menu li .active a {
+            background: #0e43f1;
+            color: #fff;
+        }
+        .list li a {
+            font-family: 'NEXON Lv1 Gothic OTF';
+            font-size: 14px;
+            line-height: 1.6;
+            color: #000;
+        }
         .sample {
-            border: 1px solid #E6E6E6;
+            font-family: 'NEXON Lv1 Gothic OTF';
             border-radius: 5px;
         }
-
         .sample h2 {
             position: relative;
             font-size: 16px;
             background-color: #F2F2F2;
             padding: 15px;
-            border-bottom: 1px solid #E6E6E6;
             border-radius: 5px 5px 0 0;
+            font-weight: normal;
         }
 
         .sample h2 .dot {
@@ -113,210 +141,128 @@
             right: -15px;
             top: 0;
         }
-
-        .sample .ex {
-            padding: 20px;
-        }
-
-        .sample .ex .text {
-            margin: 10px 0;
-        }
-
-        .sample .re {
-            padding: 20px;
-            border-top: 1px solid #E6E6E6;
-        }
-
-        .sample .re a {
-            color: #333;
-            text-decoration: none;
-            border: 1px solid #333;
-            border-radius: 30px;
-            padding: 10px 30px;
-            margin: 5px;
-            display: inline-block;
-        }
-
-        .sample .re a:hover {
-            background-color: #000;
-            color: #fff;
-        }
-
-        .sample .problem {
-            padding: 25px;
-            border-bottom: 1px solid #E6E6E6;
-            line-height: 1.6;
-        }
-
         .sample pre {
             margin: 0 !important;
             border-radius: 0;
             ;
         }
-
-        .sample .desc {
-            padding: 25px;
-            border-bottom: 1px solid #E6E6E6;
-        }
-
-        .sample .desc dt {
-            padding: 3px 0;
-            margin-bottom: 6px;
-        }
-
-        .sample .desc dd {
-            padding: 3px 0 16px 0;
-            line-height: 1.6;
-        }
-
-        .sample .sam {
-            padding: 25px;
-            border-bottom: 1px solid #E6E6E6;
-        }
-
-        .sample .sam dt {
-            padding: 3px 0;
-            margin-bottom: 6px;
-        }
-
-        .sample .sam dd {
-            padding: 3px 0 16px 0;
-        }
-        .mt20{
-            margin-top: 20px;
-        }
-        .page {
-            position: absolute;
-            right: 20px;
-            top: 15px;
-        }
-        .page li {
-            display: inline;
-            list-style: none;
-        }
-        .page li a {
-            text-decoration: none;
-            color: #222;
-        }
-        .page li a:hover {
-            color: #098a4c;
-         }
-        .menu li {
-            display: inline;
-        }
-        .menu li a {
+        .sample code {
             font-family: 'NEXON Lv1 Gothic OTF';
-            color: #000;
-            border: 1px dashed #000;
-            padding: 10px 30px;
-            display: inline-block;
-            border-radius: 50px;
-            font-size: 16px;
-            margin: 4px 1px;
-            transition: all 0.4s;
-        }
-        .menu li a:hover {
-            box-shadow: inset 0 -100px 0 #000;
-            color: #fff;
-            border-style: solid;
         }
         @media (max-width: 800px){
+            .menu {
+                text-align: center;
+            }
             .menu li a {
-                font-size: 12px;
+                font-size: 13px;
                 padding: 5px 20px;
             }
-            .list li {
-                line-height: 1.2;
-            }
-            .list a {
-                font-size: 12px;
+            .list li a {
+                font-size: 13px;
             }
             .sample h2 {
-                font-size: 14px;
+                font-size: 13px;
                 padding: 12px 10px 10px;
             }
             .sample h2 .dot {
                 display: none;
             }
             .sample pre {
-                font-size: 14px;
+                line-height: 1.2 !important;
+            }
+            .sample code {
+                font-size: 13px;
             }
             body {
                 padding: 5%;
                 font-size: 13px;
             }
-            h1 {
+            #wrap {
+                margin: 0;
+                border-width: 6px;
+                border-radius: 18px;
+            }
+            #contents {
+                border-width: 6px;
+            }
+            .title {
+                border-top-width: 2px;
+            }
+            .title h1 {
                 text-align: center;
+            }
+            .title h1 a {
+                font-size: 40px;
             }
         }
     </style>
 </head>
 
 <body>
-
-    <h1><a href="index.html">Javascript 레퍼런스</a></h1>
-    <ul class="page">
-        <li><a href="../refer-html/index.html">HTML</a></li>
-        <li><a href="../refer-css/index.html">CSS</a></li>
-        <li><a href="../javascript/javascript100.html">JAVASCRIPT</a></li>           
-    </ul>
+    <div id="wrap">
+        <main id="contents">
+            <div class="title">
+                <h1><a href="index.html">데이터 실행하기</a></h1>
+            </div>
     
-    <nav class="menu">
-        <ul>
-            <li><a href="javascriptRefer01.html">데이터 저장하기</a></li>
-            <li><a href="javascriptRefer02.html">데이터 불러오기</a></li>
-            <li><a href="javascriptRefer03.html">데이터 실행하기</a></li>
-            <li><a href="javascriptRefer04.html">데이터 제어하기</a></li>
-        </ul>
-        <ul>
-            <li><a href="javascriptRefer05.html">문자열 객체</a></li>
-            <li><a href="javascriptRefer06.html">배열 객체</a></li>
-            <li><a href="javascriptRefer07.html">날짜 객체</a></li>
-            <li><a href="javascriptRefer08.html">수학 객체</a></li>
-            <li><a href="javascriptRefer09.html">브라우저 객체</a></li>
-            <li><a href="javascriptRefer10.html">요소 객체</a></li>
-            <li><a href="javascriptRefer11.html">이벤트 객체</a></li>
-        </ul>
-        <ul>
-            <li><a href="javascriptRefer12.html">샘플</a></li>
-            <li><a href="javascriptRefer13.html">알고리즘</a></li>
-        </ul>
-    </nav>
+            <nav class="menu">
+                <ul>
+                    <li><a href="javascriptRefer01.html">데이터 저장하기</a></li>
+                    <li><a href="javascriptRefer02.html">데이터 불러오기</a></li>
+                    <li><a href="javascriptRefer03.html">데이터 실행하기</a></li>
+                    <li><a href="javascriptRefer04.html">데이터 제어하기</a></li>
+                </ul>
+                <ul>
+                    <li><a href="javascriptRefer05.html">문자열 객체</a></li>
+                    <li><a href="javascriptRefer06.html">배열 객체</a></li>
+                    <li><a href="javascriptRefer07.html">날짜 객체</a></li>
+                    <li><a href="javascriptRefer08.html">수학 객체</a></li>
+                    <li><a href="javascriptRefer09.html">브라우저 객체</a></li>
+                    <li><a href="javascriptRefer10.html">요소 객체</a></li>
+                    <li><a href="javascriptRefer11.html">이벤트 객체</a></li>
+                </ul>
+                <ul>
+                    <li><a href="javascriptRefer12.html">샘플</a></li>
+                    <li><a href="javascriptRefer13.html">알고리즘</a></li>
+                </ul>
+            </nav>
 
-    <h2 class="mt20">데이터 실행 : 함수</h2>
-    <div class="list">
-        <ol>
-            <li><a href="#sample1">선언적 함수</a></li>
-            <li><a href="#sample2">익명 함수</a></li>
-            <li><a href="#sample3">매개변수 함수</a></li>
-            <li><a href="#sample4">리턴값 함수</a></li>
-            <li><a href="#sample5">화살표 함수 : 선언적 함수</a></li>
-            <li><a href="#sample6">화살표 함수 : 익명 함수</a></li>
-            <li><a href="#sample7">화살표 함수 : 리턴값 함수</a></li>
-            <li><a href="#sample8">화살표 함수 : 익명함수 + 매개변수 + 리턴값</a></li>
-            <li><a href="#sample9">화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략</a></li>
-            <li><a href="#sample10">화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 매개변수 괄호 생략 + 리턴 생략</a></li>
-            <li><a href="#sample11">화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</a></li>
-            <li><a href="#sample12">내부 함수</a></li>
-            <li><a href="#sample13">즉시실행 함수</a></li>
-            <li><a href="#sample14">파라미터 함수</a></li>
-            <li><a href="#sample15">아규먼트 함수</a></li>
-            <li><a href="#sample16">재귀 함수</a></li>
-            <li><a href="#sample17">콜백 함수</a></li>
-            <li><a href="#sample18">콜백 함수 : 반복문</a></li>
-            <li><a href="#sample19">콜백 함수 : 동기/비동기</a></li>
-        </ol>
-    </div>
-
-    <h2 class="mt20">데이터 실행 : 메서드</h2>
-    <div class="list">
-        <ol>
-            <li><a href="#sample01">setInterval()</a></li>
-            <li><a href="#sample02">setTimeout()</a></li>
-            <li><a href="#sample03">clearInterval()</a></li>
-            <li><a href="#sample04">clearTimeout()</a></li>
-        </ol>
-    </div>
+            <hr>
+            
+            <div class="list">
+                <ol>
+                    <li><a href="#sample1">선언적 함수</a></li>
+                    <li><a href="#sample2">익명 함수</a></li>
+                    <li><a href="#sample3">매개변수 함수</a></li>
+                    <li><a href="#sample4">리턴값 함수</a></li>
+                    <li><a href="#sample5">화살표 함수 : 선언적 함수</a></li>
+                    <li><a href="#sample6">화살표 함수 : 익명 함수</a></li>
+                    <li><a href="#sample7">화살표 함수 : 리턴값 함수</a></li>
+                    <li><a href="#sample8">화살표 함수 : 익명함수 + 매개변수 + 리턴값</a></li>
+                    <li><a href="#sample9">화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략</a></li>
+                    <li><a href="#sample10">화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 매개변수 괄호 생략 + 리턴 생략</a></li>
+                    <li><a href="#sample11">화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</a></li>
+                    <li><a href="#sample12">내부 함수</a></li>
+                    <li><a href="#sample13">즉시실행 함수</a></li>
+                    <li><a href="#sample14">파라미터 함수</a></li>
+                    <li><a href="#sample15">아규먼트 함수</a></li>
+                    <li><a href="#sample16">재귀 함수</a></li>
+                    <li><a href="#sample17">콜백 함수</a></li>
+                    <li><a href="#sample18">콜백 함수 : 반복문</a></li>
+                    <li><a href="#sample19">콜백 함수 : 동기/비동기</a></li>
+                    <li><a href="#sample20">콜백 함수 : 콜백지옥</a></li>
+                    <li><a href="#sample21">함수 유형 : 함수와 매개변수를 이용한 형태</a></li>
+                    <li><a href="#sample22">함수 유형 : 함수와 변수를 이용한 형태</a></li>
+                    <li><a href="#sample23">함수 유형 : 함수와 배열을 이용한 형태</a></li>
+                    <li><a href="#sample24">함수 유형 : 함수와 객체를 이용한 형태</a></li>
+                    <li><a href="#sample25">함수 유형 : 함수와 객체(함수)를 이용한 형태</a></li>
+                    <li><a href="#sample26">함수 유형 : 객체 생성자 함수</a></li>
+                    <li><a href="#sample27">함수 유형 : 프로토타입</a></li>
+                    <li><a href="#sample28">함수 유형 : 객체 리터럴 함수</a></li>
+                    <li><a href="#sample29">함수 유형 : 클래스</a></li>
+                    <li><a href="#sample30">함수 유형 : 클래스 상속</a></li>
+                </ol>
+            </div>
 
     <hr>
 
@@ -515,7 +461,6 @@
     }
     func();
 }
-
 </code></pre>
         </div>
     </div>
@@ -531,7 +476,6 @@
         document.write("함수가 실행되었습니다.")
     })();
 }
-
 </code></pre>
         </div>
     </div>
@@ -548,7 +492,6 @@
     }
     func();
 }
-
 </code></pre>
         </div>
     </div>
@@ -566,7 +509,6 @@
     }
     func("함수A가 실행되었습니다.", "함수B가 실행되었습니다.");
 }
-
 </code></pre>
         </div>
     </div>
@@ -588,7 +530,6 @@
     }
     func(5);
 }
-
 </code></pre>
         </div>
     </div>
@@ -609,7 +550,6 @@
     }
     funcB(funcA);
 }
-
 </code></pre>
         </div>
     </div>
@@ -631,7 +571,6 @@
     }
     callback(func);
 }
-
 </code></pre>
         </div>
     </div>
@@ -677,12 +616,266 @@
     }
     funcE(funcF);
 }
-
 </code></pre>
         </div>
     </div>
 
     <hr>
+
+    <!-- //sample20-->
+    <div id="sample20" class="sample">
+        <h2>20. 콜백 함수 : 콜백지옥 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample21-->
+    <div id="sample21" class="sample">
+        <h2>21. 함수 유형 : 함수와 매개변수를 이용한 형태 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    function func(num, name, job){
+        document.write(num + ". 내 이름은 " + name + "이며, 직업은 " + job + "입니다.");
+    }
+    func("1", "허승연", "웹 퍼블리셔");
+    func("2", "허승연", "프론트앤드 개발자");
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample22-->
+    <div id="sample22" class="sample">
+        <h2>22. 함수 유형 : 함수와 변수를 이용한 형태 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    function func(num, name, job){
+        document.write(num + ". 내 이름은 " + name + "이며, 직업은 " + job + "입니다.");
+    }
+    const youNum1 = "1";
+    const youName1 = "허승연";
+    const youJob1 = "웹퍼블리셔";
+    const youNum2 = "2";
+    const youName2 = "허승연";
+    const youJob2 = "프론트앤드 개발자";
+
+    func(youNum1, youName1, youJob1);
+    func(youNum2, youName2, youJob2);
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+     <!-- //sample23-->
+     <div id="sample23" class="sample">
+        <h2>23. 함수 유형 : 함수와 배열을 이용한 형태 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    function func(num, name, job){
+        document.write(num + ". 내 이름은 " + name + "이며, 직업은 " + job + "입니다.");
+    }
+
+    const info = [
+        {
+            num: 1,
+            name: "허승연",
+            job: "웹 퍼블리셔"
+        },
+        {  
+            num: 2,
+            name: "허승연",
+            job: "프론트앤드 개발자"
+        }
+    ];
+
+    func(info[0].num, info[0].name, info[0].job);
+    func(info[1].num, info[1].name, info[1].job);
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+     <!-- //sample24-->
+     <div id="sample24" class="sample">
+        <h2>24. 함수 유형 : 함수와 객체를 이용한 형태 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    function func(num, name, job){
+        document.write(num + ". 내 이름은 " + name + "이며, 직업은 " + job + "입니다.");
+    }
+
+    const info = {
+        num1: 1,
+        name1: "허승연",
+        job1: "웹 퍼블리셔",
+        num2: 2,
+        name2: "허승연",
+        job2: "프론트앤드 개발자"
+    }
+
+    func(info.num1, info.name1, info.job1);
+    func(info.num2, info.name2, info.job2);
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample25-->
+    <div id="sample25" class="sample">
+        <h2>25. 함수 유형 : 함수와 객체(함수)를 이용한 형태 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const info = {
+        num1: 1,
+        name1: "허승연",
+        job1: "웹 퍼블리셔",
+        num2: 2,
+        name2: "허승연",
+        job2: "프론트앤드 개발자",
+
+        result1 : function(){
+            document.write(info.num1 + ". 내 이름은 " + info.name1 + "이며, 직업은 " + info.job1 + "입니다.");
+        },
+        result2 : function(){
+            document.write(info.num2 + ". 내 이름은 " + info.name2 + "이며, 직업은 " + info.job2 + "입니다.");
+        }
+    }
+    info.result1();
+    info.result2();
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample26-->
+    <div id="sample26" class="sample">
+        <h2>26. 함수 유형 : 객체 생성자 함수 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    function func(num, name, job){
+        this.num = num;
+        this.name = name;
+        this.job = job;
+
+        this.result = function(){
+            document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.");
+        }
+    }
+
+    const info1 = new func("1", "허승연", "웹 퍼블리셔");         
+    const info2 = new func("2", "허승연", "프론트앤드 개발자");  
+
+    info1.result();
+    info2.result();
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample27-->
+    <div id="sample27" class="sample">
+        <h2>27. 함수 유형 : 프로토타입 함수 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    function func(num, name, job){
+        this.num = num;
+        this.name = name;
+        this.job = job;
+    }
+    func.prototype.result = function(){
+        document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.");
+    }
+
+    const info1 = new func("1", "허승연", "웹 퍼블리셔");         
+    const info2 = new func("2", "허승연", "프론트앤드 개발자");   
+
+    info1.result();
+    info2.result();
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample28-->
+    <div id="sample28" class="sample">
+        <h2>28. 함수 유형 : 객체 리터럴 함수 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    function func(num, name, job){
+        this.num = num;
+        this.name = name;
+        this.job = job;
+    }
+    func.prototype = {
+        result1 : function(){
+            document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.");
+        },
+        result2 : function(){
+            document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.");
+        }
+    }
+
+    const info1 = new func("1", "허승연", "웹 퍼블리셔");         
+    const info2 = new func("2", "허승연", "프론트앤드 개발자");  
+
+    info1.result1();
+    info2.result2();
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- //sample29-->
+    <div id="sample29" class="sample">
+        <h2>29. 함수 유형 : 클래스 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    class study {
+        constructor(num, name, job){
+            this.num = num;
+            this.name = name;
+            this.job = job;
+        }
+        result(){
+            document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.");
+        }
+    }
+    const info1 = new study("1", "허승연", "웹 퍼블리셔");        
+    const info2 = new study("2", "허승연", "프론트앤드 개발자");  
+
+    info1.result();
+    info2.result();
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    </main>
+</div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -1007,6 +1200,221 @@
                 console.log("funcF 실행되었습니다.");
             }
             funcE(funcF);
+
+            document.write("<br><br>");
+        }
+
+        //sample20
+        //20. 콜백 지옥
+
+        //sample21
+        //21. 함수 유형 : 함수와 매개변수를 이용한 형태
+        {
+            document.write("*** 21. 함수 유형 : 함수와 매개변수를 이용한 형태  ***<br>");
+
+            function func(num, name, job){
+                document.write(num + ". 내 이름은 " + name + "이며, 직업은 " + job + "입니다.<br>");
+            }
+            func("1", "허승연", "웹 퍼블리셔");
+            func("2", "허승연", "프론트앤드 개발자");
+
+            document.write("<br>")
+        }
+
+        //sample22
+        //22. 함수 유형 : 함수와 변수를 이용한 형태
+        {
+            document.write("*** 22. 함수 유형 : 함수와 변수를 이용한 형태  ***<br>");
+
+            function func(num, name, job){
+                document.write(num + ". 내 이름은 " + name + "이며, 직업은 " + job + "입니다.<br>");
+            }
+            const youNum1 = "1";
+            const youName1 = "허승연";
+            const youJob1 = "웹퍼블리셔";
+            const youNum2 = "2";
+            const youName2 = "허승연";
+            const youJob2 = "프론트앤드 개발자";
+
+            func(youNum1, youName1, youJob1);
+            func(youNum2, youName2, youJob2);
+
+            document.write("<br>")
+        }
+
+        //sample23
+        //23. 함수 유형 : 함수와 배열을 이용한 형태
+        {
+            document.write("*** 23. 함수 유형 : 함수와 배열을 이용한 형태  ***<br>");
+
+            function func(num, name, job){
+                document.write(num + ". 내 이름은 " + name + "이며, 직업은 " + job + "입니다.<br>");
+            }
+
+            const info = [
+                {
+                    num: 1,
+                    name: "허승연",
+                    job: "웹 퍼블리셔"
+                },
+                {  
+                    num: 2,
+                    name: "허승연",
+                    job: "프론트앤드 개발자"
+                }
+            ];
+
+            func(info[0].num, info[0].name, info[0].job);
+            func(info[1].num, info[1].name, info[1].job);
+
+            document.write("<br>")
+        }
+
+        //sample24
+        //24. 함수 유형 : 함수와 객체를 이용한 형태
+        {
+            document.write("*** 24. 함수 유형 : 함수와 객체를 이용한 형태  ***<br>");
+
+            function func(num, name, job){
+                document.write(num + ". 내 이름은 " + name + "이며, 직업은 " + job + "입니다.<br>");
+            }
+
+            const info = {
+                num1: 1,
+                name1: "허승연",
+                job1: "웹 퍼블리셔",
+                num2: 2,
+                name2: "허승연",
+                job2: "프론트앤드 개발자"
+            }
+
+            func(info.num1, info.name1, info.job1);
+            func(info.num2, info.name2, info.job2);
+
+            document.write("<br>")
+        }
+
+        //sample25
+        //25. 함수 유형 : 함수와 객체(함수)를 이용한 형태
+        {
+            document.write("*** 25. 함수 유형 : 함수와 객체(함수)를 이용한 형태  ***<br>");
+
+            const info = {
+                num1: 1,
+                name1: "허승연",
+                job1: "웹 퍼블리셔",
+                num2: 2,
+                name2: "허승연",
+                job2: "프론트앤드 개발자",
+
+                result1 : function(){
+                    document.write(info.num1 + ". 내 이름은 " + info.name1 + "이며, 직업은 " + info.job1 + "입니다.<br>");
+                },
+                result2 : function(){
+                    document.write(info.num2 + ". 내 이름은 " + info.name2 + "이며, 직업은 " + info.job2 + "입니다.<br>");
+                }
+            }
+            info.result1();
+            info.result2();
+
+            document.write("<br>")
+        }
+
+        //sample26
+        //26. 함수 유형 : 객체 생성자 함수
+        {
+            document.write("*** 26. 함수 유형 : 객체 생성자 함수  ***<br>");
+
+            function func(num, name, job){
+                this.num = num;
+                this.name = name;
+                this.job = job;
+
+                this.result = function(){
+                    document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.<br>");
+                }
+            }
+
+            const info1 = new func("1", "허승연", "웹 퍼블리셔");         //인스턴스 생성
+            const info2 = new func("2", "허승연", "프론트앤드 개발자");   //인스턴스 생성
+
+            info1.result();
+            info2.result();
+
+            document.write("<br>")
+        }
+
+        //sample27
+        //27. 함수 유형 : 프로토타입 함수
+        {
+            document.write("*** 27. 함수 유형 : 프로토타입 함수  ***<br>");
+
+            function func(num, name, job){
+                this.num = num;
+                this.name = name;
+                this.job = job;
+            }
+            func.prototype.result = function(){
+                document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.<br>");
+            }
+
+            const info1 = new func("1", "허승연", "웹 퍼블리셔");         //인스턴스 생성
+            const info2 = new func("2", "허승연", "프론트앤드 개발자");   //인스턴스 생성
+
+            info1.result();
+            info2.result();
+
+            document.write("<br>")
+        }
+
+        //sample28
+        //28. 함수 유형 : 객체 리터럴 함수
+        {
+            document.write("*** 28. 함수 유형 : 객체 리터럴 함수  ***<br>");
+
+            function func(num, name, job){
+                this.num = num;
+                this.name = name;
+                this.job = job;
+            }
+            func.prototype = {
+                result1 : function(){
+                    document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.<br>");
+                },
+                result2 : function(){
+                    document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.<br>");
+                }
+            }
+
+            const info1 = new func("1", "허승연", "웹 퍼블리셔");         //인스턴스 생성
+            const info2 = new func("2", "허승연", "프론트앤드 개발자");   //인스턴스 생성
+
+            info1.result1();
+            info2.result2();
+
+            document.write("<br>")
+        }
+
+        //sample29
+        //29. 함수 유형 : 클래스
+        {
+            document.write("*** 29. 함수 유형 : 클래스  ***<br>");
+
+            class study {
+                constructor(num, name, job){
+                    this.num = num;
+                    this.name = name;
+                    this.job = job;
+                }
+                result(){
+                    document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.<br>");
+                }
+            }
+            const info1 = new study("1", "허승연", "웹 퍼블리셔");         //인스턴스 생성
+            const info2 = new study("2", "허승연", "프론트앤드 개발자");   //인스턴스 생성
+
+            info1.result();
+            info2.result();
         }
     </script>
 </body>
