@@ -91,10 +91,14 @@
     width: 248px;
 }
 .card2 {
-    padding: 0 0 336px 0;
+    padding: 15px 15px 0;
+    margin: 40px 31px 336px 0;
+    border: 1px solid #e6e6e6;
+    width: 278px;
+    height: 356px;
 }
 .card2 .card-img {
-    padding: 40px 0 0 0;
+
 }
 .card2 .card-title2 {
     display: block;
