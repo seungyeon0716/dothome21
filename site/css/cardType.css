@@ -76,22 +76,23 @@ body {
 .cardType02 {
     font-family: 'GmarketSans';
     padding: 150px 0;
-    text-align: center;
 }
 .cardType02 h2 {
     font-weight: 500;
     font-size: 50px;
     margin-bottom: 7px;
+    text-align: center;
 }
 .cardType02 p {
     font-weight: 300;
     font-size: 26px;
     text-align: center;
     line-height: 1.28px;
-    margin-bottom: 40px
+    margin-bottom: 40px;
+    text-align: center;
 }
 .cardType02 .card-wrap {
-
+    display: flex;
 }
 .cardType02 .card-wrap .card {
     width: 285px;
@@ -100,6 +101,24 @@ body {
     padding: 15px 15px 16px 14px;
     border-radius: 5px;
     border: 1px solid #e6e6e6;
+}
+
+.cardType02 .card-wrap .card .card-title {
+    display: block;
+    font-size: 24px;
+    font-weight: 500;
+}
+.cardType02 .card-wrap .card .card-desc {
+    display: block;
+}
+.cardType02 .card-wrap .card .card-keyword {}
+.cardType02 .card-wrap .card .card-keyword span {
+    margin: 6px 202px 0 1px;
+    padding: 4px 16px 3px;
+    border-radius: 20px;
+    background-color: #000;
+    display: inline-block;
+    color: #fff;
 }
 
 
