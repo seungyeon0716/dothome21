@@ -78,47 +78,65 @@ body {
     padding: 150px 0;
 }
 .cardType02 h2 {
-    font-weight: 500;
     font-size: 50px;
-    margin-bottom: 7px;
+    font-weight: 500;
     text-align: center;
 }
 .cardType02 p {
-    font-weight: 300;
     font-size: 26px;
+    font-weight: 300;
     text-align: center;
-    line-height: 1.28px;
-    margin-bottom: 40px;
-    text-align: center;
+} 
+/* .cardType02 .card-wrap {
+    overflow: hidden;
 }
-.cardType02 .card-wrap {
+.cardType02 .card-wrap .card  {
+    float: left;
+}
+.cardType02 .card-wrap .card:last-child {
+    margin-right: 0;
+} */
+
+
+/* .cardType02 .card-wrap {
     display: flex;
 }
+.cardType02 .card-wrap .card {} */
+
+.cardType02 .card-wrap {
+    display: grid;
+    grid-template-columns: repeat(4,285px);
+    gap: 20px;
+}
+.cardType02 .card-wrap .card {}
+
+
 .cardType02 .card-wrap .card {
     width: 285px;
     height: 356px;
-    margin: 40px 20px 0 0;
+    margin: 40px 10px 0 0;
     padding: 15px 15px 16px 14px;
     border-radius: 5px;
-    border: 1px solid #e6e6e6;
-}
+    border: solid 1px #e6e6e6;
+    box-sizing: border-box;
 
+}
 .cardType02 .card-wrap .card .card-title {
-    display: block;
     font-size: 24px;
     font-weight: 500;
+    display: block;
 }
 .cardType02 .card-wrap .card .card-desc {
     display: block;
 }
-.cardType02 .card-wrap .card .card-keyword {}
-.cardType02 .card-wrap .card .card-keyword span {
+.cardType02 .card-wrap .card .card-word {}
+.cardType02 .card-wrap .card .card-word span {
     margin: 6px 202px 0 1px;
     padding: 4px 16px 3px;
     border-radius: 20px;
     background-color: #000;
-    display: inline-block;
     color: #fff;
+    display: inline-block;
 }
 
 
