@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font.css">
+    <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism-okaidia.min.css"
+        integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        @font-face {
+            font-family: 'NEXON Lv1 Gothic OTF';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'NEXON Lv1 Gothic OTF Light';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'TmonMonsori';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1.6;
+        }
+        body {
+            padding: 2%;
+            line-height: 1.6;
+            font-family: 'NEXON Lv1 Gothic OTF';
+        }
+        ul {
+            list-style: none;
+        }
+        ol {
+            padding-left: 28px;
+        }
+        a {
+            text-decoration: none;
+        }
+        hr {
+            margin: 5% 0;
+            border-style: dashed;
+            border-color: #E6E6E6;
+            border-width: 0px;
+            border-bottom-width: 1px;
+        }
+        .title { 
+            border-top: 3px solid #0e43f1;
+            border-bottom: 1px solid #0e43f1;
+            margin-bottom: 20px;
+        }
+        .title h1 a {
+            font-family: 'TmonMonsori';
+            color: #0e43f1;
+            font-size: 50px;
+            display: inline-block;
+            padding: 15px 0 12px;
+            text-transform: uppercase;
+        }
+        .menu li {
+            display: inline;
+        }
+        .menu li a {
+            font-family: 'NEXON Lv1 Gothic OTF';
+            color: #0e43f1;
+            border: 1px dashed #0e43f1;
+            padding: 10px 30px;
+            display: inline-block;
+            border-radius: 50px;
+            font-size: 16px;
+            margin: 4px 1px;
+            box-shadow: inset 0 0 0 #0e43f1;
+            transition: all 0.4s;
+        }
+        .menu li a:hover {
+            box-shadow: inset 0 -100px 0 #0e43f1;
+            color: #fff;
+            border-style: solid;
+        }
+        .menu li .active a {
+            background: #0e43f1;
+            color: #fff;
+        }
+        .list li a {
+            font-family: 'NEXON Lv1 Gothic OTF';
+            font-size: 14px;
+            line-height: 1.6;
+            color: #000;
+        }
+        .table table {
+            width: 100%;
+            border: 1px solid #ddd;
+            border-collapse: collapse;
+            border-spacing: 0;
+            text-align: left;
+        }
+        .table table caption {
+            text-align: left;
+            margin-bottom: 4px;
+            font-size: 16px;
+        }
+        .table table tr:nth-child(even) {
+            background-color: #f2f6fd;
+        }
+        .table table th {
+            border-bottom: 2px solid #ddd;
+            border-right: 1px solid #ddd;
+            padding: 10px;
+        }
+        .table table td {
+            border-bottom: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            padding: 10px;
+        }
+        .table table .center {
+            text-align: center;
+        }
+        .sample {
+            font-family: 'NEXON Lv1 Gothic OTF';
+            border-radius: 5px;
+        }
+        .sample h2 {
+            position: relative;
+            font-size: 16px;
+            background-color: #f2f6fd;
+            padding: 15px;
+            border-radius: 5px 5px 0 0;
+            font-weight: normal;
+        }
+        .sample h2 .dot {
+            width: 10px;
+            height: 10px;
+            background: #989898;
+            display: block;
+            border-radius: 50%;
+            position: absolute;
+            right: 30px;
+            top: 20px;
+        }
+        .sample h2 .dot::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #989898;
+            border-radius: 50%;
+            position: absolute;
+            left: -15px;
+            top: 0;
+        }
+        .sample h2 .dot::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #989898;
+            position: absolute;
+            border-radius: 50%;
+            right: -15px;
+            top: 0;
+        }
+        .sample pre {
+            margin: 0 !important;
+            border-radius: 0;
+        }
+        .sample code {
+            font-family: 'NEXON Lv1 Gothic OTF';
+        }
+        @media (max-width: 800px){
+            .menu {
+                text-align: center;
+            }
+            .menu li a {
+                font-size: 13px;
+                padding: 5px 20px;
+            }
+            .list li a {
+                font-size: 13px;
+            }
+            .sample h2 {
+                font-size: 13px;
+                padding: 12px 10px 10px;
+            }
+            .sample h2 .dot {
+                display: none;
+            }
+            .sample pre {
+                line-height: 1.2 !important;
+            }
+            .sample code {
+                font-size: 13px;
+            }
+            body {
+                padding: 5%;
+                font-size: 13px;
+            }
+            #wrap {
+                margin: 0;
+                border-width: 6px;
+                border-radius: 18px;
+            }
+            #contents {
+                border-width: 6px;
+            }
+            .title {
+                border-top-width: 2px;
+            }
+            .title h1 {
+                text-align: center;
+            }
+            .title h1 a {
+                font-size: 40px;
+            }
+        }
+
+        /* option */
+        .view {
+            padding: 20px;
+            border: 1px solid #f2f2f2;
+        }
+        .view ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .view li {
+            border: 1px solid #e6e6e6;
+            padding: 20px;
+            margin: 10px;
+            color: #222;
+            border-radius: 5px;
+            white-space: nowrap;
+        }
+        .view li.red {
+            border: 1px dashed #a51a3d;
+            background: #f9f2f4;
+            color: #a51a3d;
+        }
+        .view li.blue {
+            border: 1px dashed #3d90b7;
+            background: #e7f6fd;
+            color: #3d90b7;
+        }
+        .btn {
+            padding: 20px;
+            border: 1px solid #f2f2f2;
+            border-top: 0;
+        }
+        .btn a {
+            border: 1px solid #e6e6e6;
+            padding: 7px 25px;
+            display: inline-block;
+            border-radius: 40px;
+            margin: 4px 0;
+            color: #222;
+            transition: all 0.2s;
+        }
+        .btn a:hover {
+            background: #000;
+            color: #fff;
+        }
+        @media (max-width: 800px){
+            .view {
+                padding: 10px;
+            }
+            .view li {
+                padding: 10px;
+                margin: 0 8px 0 0;
+            }
+            .btn {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <main id="contents">
+            <div class="title">
+                <h1><a href="index2.html">선택자</a></h1>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li class="active"><a href="jqueryRefer01.html">선택자</a></li>
+                    <li><a href="jqueryRefer02.html">선택 메서드</a></li>
+    
+                </ul>
+                <ul>
+                    <li><a href="jqueryRefer03.html">속성 메서드</a></li>
+                    <li><a href="jqueryRefer04.html">조작 메서드</a></li>
+                    <li><a href="jqueryRefer05.html">데이터 메서드</a></li>
+                    <li><a href="jqueryRefer06.html">애니메이션 메서드</a></li>
+                    <li><a href="jqueryRefer07.html">이벤트 메서드</a></li>
+                </ul>
+                <ul>
+                    <li><a href="jqueryRefer08.html">샘플</a></li>
+                </ul>
+            </nav>
+
+            <hr>
+
+            
+            <div class="table">
+                <table>
+                    <caption>기본 선택자</caption>
+                    <thead>
+                        <tr>
+                            <th class="center">번호</th>
+                            <th>종류</th>
+                            <th>예시</th>
+                            <th>설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="center" rowspan="5"><a href="#sample01">1</a></td>
+                            <td>태그 선택자</td>
+                            <td>$("p")</td>
+                            <td>기본 태그를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>클래스 선택자</td>
+                            <td>$(".class")</td>
+                            <td>클래스를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>아이디 선택자</td>
+                            <td>$("#id")</td>
+                            <td>아이디를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>그룹 선택자</td>
+                            <td>$("#id,.class")</td>
+                            <td>여러개를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>전체 선택자</td>
+                            <td>$("*")</td>
+                            <td>전체를 선택합니다.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <hr>
+
+    <!-- sample01 -->
+    <div id="sample01" class="sample">
+        <h2>01. 기본 선택자<span class="dot"></span></h2>
+        <div class="view view1">
+            <ul>
+                <li>$("li")</li>
+                <li class="class">$(".class")</li>
+                <li id="id">$("#id")</li>
+                <li>$(".class, #id")</li>
+                <li>$("*")</li>
+            </ul>
+        </div>
+        <div class="btn btn1">
+            <a href="#c" class="reset1">리셋</a>
+            <a href="#c" class="btn1-1">클릭하면 클래스(.class)를 선택합니다.</a>
+            <a href="#c" class="btn1-2">클릭하면 아이디(#id)를 선택합니다.</a>
+            <a href="#c" class="btn1-3">클릭하면 기본(li) 태그를 선택합니다.</a>
+            <a href="#c" class="btn1-4">클릭하면 여러가지(#id, .class) 태그를 선택합니다.</a>
+            <a href="#c" class="btn1-5">클릭하면 전체 태그(*)를 선택합니다.</a>
+        </div>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    $(".reset1").click(function(){
+        $(".view1 li").removeClass("blue");
+    });
+    $(".btn1-1").click(function(){
+        $(".view1 .class").addClass("blue");
+    });
+    $(".btn1-2").click(function(){
+        $(".view1 #id").addClass("blue ");
+    });
+    $(".btn1-3").click(function(){
+        $(".view1 li").addClass("blue");
+    });
+    $(".btn1-4").click(function(){
+        $(".view1 .class, .view #id").addClass("blue");
+    });
+    $(".btn1-5").click(function(){
+        $(".view1 *").addClass("blue");
+    });
+}
+</code></pre>
+        </div>
+    </div>
+    <hr>
+    <script>
+        $(".reset1").click(function(){
+            $(".view1 li").removeClass("blue");
+        });
+        $(".btn1-1").click(function(){
+            $(".view1 .class").addClass("blue");
+        });
+        $(".btn1-2").click(function(){
+            $(".view1 #id").addClass("blue");
+        });
+        $(".btn1-3").click(function(){
+            $(".view1 li").addClass("blue");
+        });
+        $(".btn1-4").click(function(){
+            $(".view1 .class, .view #id").addClass("blue");
+        });
+        $(".btn1-5").click(function(){
+            $(".view1 *").addClass("blue");
+        });
+    </script>
+    <!-- //sample01 -->
+
+
+
+
+   </main>
+</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
+    <script>
+        //sample1
+        //01. 변수 : 데이터 저장소
+
+
+    </script>
+</body>
+
+</html>

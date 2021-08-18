@@ -9,226 +9,80 @@
 <body>
     
     <script>
-        //변수 : 데이터 저장소
-        //100, 200, 300 변수에 저장을 출력을 해보세요!!!
-        {
-            document.write("*** 데이터 출력(변수) ***<br>");
-
-            let x = 100;
-            let y = 200;
-            let z = 300;
-
-            document.write(x,"<br>");
-            document.write(y,"<br>");
-            document.write(z ,"<br><br>");
+        function f1(){
+            document.write("함수1<br>");
         }
+        f1();
+        f1();
+        f1();
+        f1();
 
-        //배열 : 데이터 저장소
-        //100, 200, 300 변수에 저장을 출력을 해보세요!!!
-        {
-            document.write("*** 데이터 출력(배열) ***<br>");
-
-            const arr = new Array();
-            arr[0] = 100;
-            arr[1] = 200;
-            arr[2] = 300;
-
-            document.write(arr[0],"<br>");
-            document.write(arr[1],"<br>");
-            document.write(arr[2] ,"<br><br>");
+        let f2 = function(){
+            document.write("익명함수2<br>");
         }
+        f2();
 
-        //객체 : 데이터 저장소
-        //100, 200, 300 변수에 저장을 출력을 해보세요!!!
-        {
-            document.write("*** 데이터 출력(객체) ***<br>");
-
-            const obj = new Object();
-            obj[0] = 100;
-            obj[1] = 200;
-            obj[2] = 300;
-
-            document.write(obj[0],"<br>");
-            document.write(obj[1],"<br>");
-            document.write(obj[2] ,"<br><br>");
+        let f3 = function(txt){
+            document.write(txt)
         }
+        f3("매개 변수<br>");
 
-        //반복문 
-        //for문을 이용해서 1-50까지 출력!!!
-        {
-            document.write("*** 반복문(for문) ***<br>");
+        let f4 = function(){
+            let str = "리턴값 함수<br>";
+            return str;
+        }
+        document.write(f4());
 
-            for(let i=1; i<=50; i++){
-                document.write(i+ ". 반복문이 실행되었습니다. <br>");
+        f5 = () => {
+            document.write("화살표 함수 : 선언적 함수<br>");
+        }
+        f5();
+
+        f6 = (str) => {
+            document.write(str);
+        }
+        f6("화살표 함수 : 매개변수<br>");
+
+        f7 = (str) => {
+            return str;
+        }
+        document.write(f7("화살표 함수 : 리턴값<br>"));
+
+        f8 = (str) => str;
+        document.write(f8("화살표 함수 : 리턴값 생략<br>"));
+
+        function f9(str1, str2){
+            document.write(str1 + str2);
+        }
+        f9("함수가","실행되었습니다.<br>");
+        f9("함수가","실행되었습니다.2<br>");
+        
+        let a1 = "함수";
+        let a2 = "실행되었습니다.<br>";
+        f9(a1, a2);
+
+        let b = ["함수가","실행<br>"];
+        f9(b[0],b[1]);
+
+        let c = {a:"함수",b:"실행<br>"};
+        f9(c.a,c.b);
+
+        let d = [{a:"함수"},{a:"실행<br>"}];
+        f9(d[0].a,d[1].a);
+
+        //객체 생성자 함수
+        function func10(str1, str2){
+            this.str1 = str1;
+            this.str2 = str2;
+            this.result = function(){
+                document.write(str1 + str2);
             }
         }
+        const info1 = new func10("함수","실행");    //인스턴스 생성
+        info1.result();
 
-        //반복문 
-        //for문을 이용해서 50-1까지 출력!!!
-        {
-            document.write("*** 반복문(for문) ***<br>");
+        
 
-            num=50;
-            for(let i=1; i<=50; i++){
-                document.write(num+ ". 반복문이 실행되었습니다. <br>");
-                num--;
-            }
-            document.write("<br><br>");
-        }
-
-        //반복문 
-        //for문을 이용해서 1-50까지 출력(짝수만)!!!
-        {
-            document.write("*** 반복문(짝수만) ***<br>");
-
-            for(let i=2; i<=50; i+=2){
-                document.write(i,"<br>");
-            }
-            document.write("<br><br>");
-        }
-
-        //반복문 
-        //for문을 이용해서 1-50까지 출력(홀수만)!!!
-        {
-            document.write("*** 반복문(홀수만) ***<br>");
-
-            for(let i=1; i<=50; i+=2){
-                document.write(i,"<br>");
-            }
-            document.write("<br><br>");
-        }
-
-        //반복문 
-        //for문을 이용해서 구구단 8단!!!
-        {
-            document.write("*** 구구단(8단) ***<br>")
-            for(let i=8; i==8; i++){
-                for(let j=1; j<=9; j++){
-                    let sum = i * j;
-                    document.write(i + " * " + j + "=" + sum, "<br>");
-                }
-            }
-            document.write("<br><br>");
-        }
-
-         //반복문 
-        //for문을 이용해서 구구단 5-8단!!!
-        {
-            document.write("*** 구구단(5-8단) ***<br>")
-
-            for(let i=5; i<=8; i++){
-                for(let j=1; j<=9; j++){
-                    let sum = i * j;
-                    document.write(i + " * " + j + " = " + sum,"<br>");
-                }
-            }
-            document.write("<br><br>");
-        }
-
-        //배열의 갯수를 구하세요
-        {
-            document.write("*** 배열의 갯수 ***<br>")
-
-            const num = [100, 200, 300, 400, 500];
-            
-            document.write(num.length, "<br>");
-
-            document.write("<br><br>");
-
-            document.write("*** 배열의 3번째 값만 출력 ***<br>")
-            document.write(num[2], "<br>");
-
-            document.write("<br><br>");
-
-            document.write("*** for문을 이용 모든 값 출력 ***<br>")
-            for(let i=0; i<num.length; i++){
-                document.write(num[i], "<br>");
-            }
-
-            document.write("<br><br>");
-
-            document.write("*** forEach문을 이용 모든 값 출력 ***<br>")
-            num.forEach((el) => {
-                document.write(el, "<br>");
-            });
-
-            document.write("<br><br>");
-
-            document.write("*** for in문을 이용 모든 값 출력 ***<br>")
-            for(let i in num){
-                document.write(num[i], "<br>");
-            }
-
-            document.write("<br><br>");
-
-            document.write("*** for of문을 이용 모든 값 출력 ***<br>")
-            for(let i of num){
-                document.write(i, "<br><br>");
-            }
-        }
-
-        {
-            document.write("*** for문을 이용해서 각 데이터 출력 ***<br>")
-
-            const arr = [100, 200, 300, 400, 500];
-
-            for(let i=0; i<arr.length; i++){
-                document.write(arr[i], "<br><br>");
-            }
-        }
-
-        {
-            document.write("*** forEach문을 이용해서 각 데이터 출력 ***<br>")
-
-            const arr = [100, 200, 300, 400, 500];
-
-            arr.forEach(function(el){
-                document.write(el, "<br>");
-            })
-
-            document.write("*** for of문을 이용해서 각 데이터 출력 ***<br>")
-
-            for( let element of arr ) document.write(element, "<br>");
-            for( let element in arr ) document.write(element, "<br>");
-            for( let element in arr ) document.write(arr[element], "<br>");
-
-            document.write("*** 배열에서 300 찾은 다음 출력 ***<br>")
-
-            const find = arr.find(element => element === 300);
-
-            document.write(find, "<br><br>");
-        }
-
-        {
-            //"함수가 실행되었습니다"를 function을 이용해서 출력(선언적)
-
-            function func(){
-                document.write("함수가 실행되었습니다.<br>");
-            }
-            func();
-
-            //"함수가 실행되었습니다"를 function을 이용해서 출력(익명)
-
-            //const func2 = function(){
-            //    document.write("함수가 실행되었습니다.<br>");
-            //}
-            //func2();
-
-            //"함수가 실행되었습니다"를 function을 이용해서 출력(매개변수)
-
-            function func2(str){
-                document.write(str);
-            }
-            func2("함수가 실행되었습니다.<br>");
-
-            //"함수가 실행되었습니다"를 function을 이용해서 출력(리턴값)
-
-            function func3(){
-                const str = "함수가 실행되었습니다.<br>";
-                return str;
-            }
-            document.write(func3());
-        }
-    </script>
+</script>
 </body>
 </html>
