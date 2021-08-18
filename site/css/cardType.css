@@ -35,6 +35,7 @@
 .card-wrap {
     display: flex;
     justify-content: space-between;
+    padding: 45px 0 0 0;
 }
 .card-wrap > div {
     width: 387px; 
@@ -46,14 +47,81 @@
 .card .card-title {
     display: block;
     font-size: 32px;
+    white-space: nowrap;            /* 한줄 효과 */
+    overflow: hidden;
+    text-overflow: ellipsis;        /* //한줄 효과 */        
 }
 .card .card-desc {
     display: block;
     font-size: 20px;
     font-weight: 300;
+    overflow: hidden;               /* 두줄 효과 */
+    display: -webkit-box;           /* 벤더 프리픽스 */
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;   /* //두줄 효과 */
 }
 .card .card-keyword {
     font-size: 16px;
     font-weight: 300;
     opacity: 0.5;
+}
+
+/* cardType02 */
+.cardType02 {
+    font-family: 'GmarketSans';
+    padding: 58px 0;
+}
+.cardType02 h2 {
+    font-weight: 500;
+    font-size: 50px;
+    text-align: center;
+}
+.cardType02 p {
+    font-weight: 300;
+    font-size: 26px;
+    text-align: center;
+    line-height: 1.86;
+    margin-bottom: 18px 0 40px;
+}
+.card-wrap2 {
+    display: flex;
+    justify-content: space-between;
+}
+.card-wrap2 > div {
+    width: 248px;
+}
+.card2 {
+    padding: 0 0 336px 0;
+}
+.card2 .card-img {
+    padding: 40px 0 0 0;
+}
+.card2 .card-title2 {
+    display: block;
+    font-size: 26px;
+    font-weight: 300;
+    white-space: nowrap;            /* 한줄 효과 */
+    overflow: hidden;
+    text-overflow: ellipsis;     
+}
+.card2 .card-desc2 {
+    display: block;
+    font-size: 16px;
+    font-weight: 300;
+    overflow: hidden;          
+    display: -webkit-box;          
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin: 0 0 21px 0 ;
+}
+.card2 .card-btn2 {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.4;
+    border: 1px solid #000;
+    padding: 4px 14px 3px;
+    margin: 21px 195px 0 0;
+    border-radius: 20px;
+    background: #000;
+    color: #fff;
 }
