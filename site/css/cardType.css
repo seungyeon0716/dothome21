@@ -81,11 +81,14 @@ body {
     font-size: 50px;
     font-weight: 500;
     text-align: center;
+    margin-bottom: 7px;
 }
 .cardType02 p {
     font-size: 26px;
     font-weight: 300;
     text-align: center;
+    margin-bottom: 40px;
+    
 } 
 /* .cardType02 .card-wrap {
     overflow: hidden;

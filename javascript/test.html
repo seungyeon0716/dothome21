@@ -7,82 +7,62 @@
     <title>Document</title>
 </head>
 <body>
-    
     <script>
-        function f1(){
-            document.write("함수1<br>");
-        }
-        f1();
-        f1();
-        f1();
-        f1();
-
-        let f2 = function(){
-            document.write("익명함수2<br>");
-        }
-        f2();
-
-        let f3 = function(txt){
-            document.write(txt)
-        }
-        f3("매개 변수<br>");
-
-        let f4 = function(){
-            let str = "리턴값 함수<br>";
-            return str;
-        }
-        document.write(f4());
-
-        f5 = () => {
-            document.write("화살표 함수 : 선언적 함수<br>");
-        }
-        f5();
-
-        f6 = (str) => {
-            document.write(str);
-        }
-        f6("화살표 함수 : 매개변수<br>");
-
-        f7 = (str) => {
-            return str;
-        }
-        document.write(f7("화살표 함수 : 리턴값<br>"));
-
-        f8 = (str) => str;
-        document.write(f8("화살표 함수 : 리턴값 생략<br>"));
-
-        function f9(str1, str2){
-            document.write(str1 + str2);
-        }
-        f9("함수가","실행되었습니다.<br>");
-        f9("함수가","실행되었습니다.2<br>");
         
-        let a1 = "함수";
-        let a2 = "실행되었습니다.<br>";
-        f9(a1, a2);
-
-        let b = ["함수가","실행<br>"];
-        f9(b[0],b[1]);
-
-        let c = {a:"함수",b:"실행<br>"};
-        f9(c.a,c.b);
-
-        let d = [{a:"함수"},{a:"실행<br>"}];
-        f9(d[0].a,d[1].a);
-
-        //객체 생성자 함수
-        function func10(str1, str2){
-            this.str1 = str1;
-            this.str2 = str2;
-            this.result = function(){
-                document.write(str1 + str2);
+            //자바스크립트가 실행되었습니다.
+            //선언적 함수
+            function func(){
+                document.write("자바스크립트가 실행되었습니다.<br>");
             }
-        }
-        const info1 = new func10("함수","실행");    //인스턴스 생성
-        info1.result();
+            func();
 
+            //익명함수
+            const func2 = function(){
+                document.write("자바스크립트가 실행되었습니다.<br>");
+            }
+            func2();
+
+            //리턴값 함수
+            function func3(){
+                str = "자바스크립트가 실행되었습니다.<br>";
+                return str;
+            }
+            document.write(func3());
+
+            //매개변수 함수
+            function func4(str){
+                document.write(str);
+            }
+            func4("자바스크립트가 실행되었습니다.<br>")
         
+            //1부터 10까지 for문을 이용해서 출력
+        
+            for(let i=1; i<=10; i++){
+                document.write(i);
 
-</script>
+                document.write("<br>")
+            }
+    
+             //1부터 10까지 forEach문을 이용해서 출력
+            const num=[1,2,3,4,5]
+            //for문
+            for(let i=0; i<num.length; i++){
+                document.write(num[i],"<br>");
+            }
+
+            //forEach문
+            num.forEach((el) => {
+                document.write(el,"<br>");
+            });
+
+            //for in문
+            for(let i in num){
+                document.write(num[i],"<br>");
+            }
+            //for of문
+            for(let i of num){
+                document.write(i,"<br>");
+            }
+    </script>
 </body>
 </html>
