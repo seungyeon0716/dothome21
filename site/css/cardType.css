@@ -74,7 +74,7 @@ body {
 
 /* cardType02 */
 .cardType02 {
-    font-family: 'GmarketSans';
+    font-family: 'S-CoreDream';
     padding: 150px 0;
 }
 .cardType02 h2 {
@@ -90,26 +90,9 @@ body {
     margin-bottom: 40px;
     
 } 
-/* .cardType02 .card-wrap {
-    overflow: hidden;
-}
-.cardType02 .card-wrap .card  {
-    float: left;
-}
-.cardType02 .card-wrap .card:last-child {
-    margin-right: 0;
-} */
-
-
-/* .cardType02 .card-wrap {
-    display: flex;
-}
-.cardType02 .card-wrap .card {} */
 
 .cardType02 .card-wrap {
-    display: grid;
-    grid-template-columns: repeat(4,285px);
-    gap: 20px;
+    display: flex;
 }
 .cardType02 .card-wrap .card {}
 
@@ -117,7 +100,7 @@ body {
 .cardType02 .card-wrap .card {
     width: 285px;
     height: 356px;
-    margin: 40px 10px 0 0;
+    margin: 40px 20px 0 0;
     padding: 15px 15px 16px 14px;
     border-radius: 5px;
     border: solid 1px #e6e6e6;
@@ -128,18 +111,34 @@ body {
     font-size: 24px;
     font-weight: 500;
     display: block;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .cardType02 .card-wrap .card .card-desc {
-    display: block;
+    margin: 10px 0 16px 1px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.4;
+    overflow: hidden;
+    display: -webkit-box; /* 벤터 프리픽스 */
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
 }
-.cardType02 .card-wrap .card .card-word {}
-.cardType02 .card-wrap .card .card-word span {
-    margin: 6px 202px 0 1px;
+/* .cardType02 .card-wrap .card .card-word {
+    margin: 10px 0 5px;
+    display: inline-block;
+} */
+.cardType02 .card .card-word .site,
+.cardType02 .card .card-word .coding {
+    font-size: 10px;
+    line-height: 1.5;
+    display:inline-block;
+    font-weight: 400;
+    color: #fff;
     padding: 4px 16px 3px;
     border-radius: 20px;
     background-color: #000;
-    color: #fff;
-    display: inline-block;
+    text-transform: uppercase;
 }
-
-
