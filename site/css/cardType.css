@@ -142,3 +142,83 @@ body {
     background-color: #000;
     text-transform: uppercase;
 }
+
+/* cardType03 */
+.cardType03 {
+    font-family: "NanumSquare";
+    padding: 100px 0;
+    position: relative;
+}
+.cardType03 h2 {
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+.cardType03 p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.28;
+    margin-bottom: 50px;
+}
+.cardType03 .popular {
+    position: absolute;
+    right: 0;
+    top: 180;
+    font-size: 18px;
+    line-height: 1.28;
+}
+
+.cardType03 .card-wrap .card {
+    margin-bottom: 28px;
+}
+.cardType03 .card-wrap .card .card-img {
+    width: 285px;
+    height: 185px;
+    position: absolute;    
+}
+.cardType03 .card-wrap .card .right {
+    padding-left: 305px;
+}
+.cardType03 .card-wrap .card .card-cate {
+    font-size: 14px;
+    font-weight: 800;
+
+    color: #fff;
+    border-radius: 20px;
+    padding: 4px 14px 3px 15px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.cardType03 .card-wrap .card .card-cate.red {
+    background-color: #ff5151;
+}
+.cardType03 .card-wrap .card .card-cate.blue {
+    background-color: #5465ff;
+}
+.cardType03 .card-wrap .card .card-cate.green {
+    background-color: #11c865;
+}
+.cardType03 .card-wrap .card .card-tit {
+    display: block;
+    font-weight: bold;
+    font-size: 26px;
+}
+.cardType03 .card-wrap .card .card-desc {
+    font-size: 16px;
+    line-height: 1.53;
+    color: #555;
+    font-weight: normal;
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: 300;
+
+}
+.cardType03 .card-wrap .card .card-date {
+    display: block;
+    color: #555;
+    text-transform: underline;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.4;
+    margin-top: 10px;
+}
