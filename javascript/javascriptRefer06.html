@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>javascript</title>
+    <script type="text/javascript" nonce="6178fcd726714516a553c8bd84b" src="//local.adguard.org?ts=1629523969713&amp;type=content-script&amp;dmn=escape1004.github.io&amp;app=chrome.exe&amp;css=1&amp;js=1&amp;gcss=1&amp;rel=1&amp;rji=1&amp;sbe=0"></script>
+    <script type="text/javascript" nonce="6178fcd726714516a553c8bd84b" src="//local.adguard.org?ts=1629523969713&amp;name=AdGuard%20Popup%20Blocker&amp;name=AdGuard%20Assistant&amp;name=AdGuard%20Extra&amp;type=user-script"></script>
     <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font.css">
     <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism-okaidia.min.css"
@@ -34,7 +36,6 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            line-height: 1.6;
         }
 
         body {
@@ -46,7 +47,7 @@
             list-style: none;
         }
         ol {
-            padding-left: 28px;
+            padding-left: 26px;
         }
         a {
             text-decoration: none;
@@ -91,7 +92,7 @@
             color: #fff;
             border-style: solid;
         }
-        .menu li .active a {
+        .menu li.active a {
             background: #0e43f1;
             color: #fff;
         }
@@ -165,7 +166,7 @@
             border: 1px solid #E6E6E6;
             padding: 13px 5px 11px 5px;
         }
-        .view table td th {
+        .view table th {
             padding: 13px 5px 11px 5px;
             border-bottom: 1px solid #E6E6E6;
             font-weight: normal;
@@ -212,9 +213,6 @@
             .list li a{
                 font-size: 13px;
             }
-            .list li strong {
-                display: none;
-            }
             .sample h2 {
                 font-size: 13px;
                 padding: 12px 10px 10px;
@@ -223,7 +221,7 @@
                 display: none;
             }
             .sample pre {
-                font-size: 1.2 !important;
+                font-size: 1.2;
             }
             .sample code {
                 font-size: 13px;
@@ -266,7 +264,7 @@
                 </ul>
                 <ul>
                     <li><a href="javascriptRefer05.html">문자열 객체</a></li>
-                    <li><a href="javascriptRefer06.html">배열 객체</a></li>
+                    <li class="active"><a href="javascriptRefer06.html">배열 객체</a></li>
                     <li><a href="javascriptRefer07.html">날짜 객체</a></li>
                     <li><a href="javascriptRefer08.html">수학 객체</a></li>
                     <li><a href="javascriptRefer09.html">브라우저 객체</a></li>
