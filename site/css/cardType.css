@@ -303,6 +303,7 @@ body {
     width: 386px;
     height: 386px;
     position: relative;
+   margin: 0 21px 0 0;
 }
 .imageType2 .image-wrap .image .box {
    position: absolute;
