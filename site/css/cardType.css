@@ -221,3 +221,67 @@ body {
     line-height: 1.4;
     margin-top: 10px;
 }
+
+/* imageType */
+.imageType1 {
+    font-family: 'GmarketSans';
+    padding: 100px 0;
+    overflow: hidden;
+}
+.imageType1 h2 {
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 42px;
+}
+.imageType1 .image-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.imageType1 .image-wrap .image {
+    position: relative;
+}
+.imageType1 .image-wrap .image .box {
+    width: 448px;
+    height: 135px;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    
+}
+.imageType1 .image-wrap .image .box .image-img {
+   
+    width: 590px;
+    height: 434px;
+    margin: 42px 20px 0 0;
+
+}
+
+.imageType1 .image-wrap .image .image-title {
+    font-size: 30px;
+    font-weight: 500;
+    display: block;
+    color: #fff;
+    margin: 11px 15px 2px 15px;
+    margin-bottom: 2px;
+}
+.imageType1 .image-wrap .image .image-desc {
+    display: block;
+    color: #fff;
+    margin: 0 15px 9px 15px;
+    line-height: 1.4;
+}
+.imageType1 .image-wrap .image .image-word {
+    margin: 0 15px 15px 15px;
+}
+.imageType1 .image-wrap .image .image-word span {
+    text-transform: underline;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 9px 346px 0 0;
+    padding: 19px 0 0;
+    margin-top: 9px;
+    color: #fff;
+}
+
