@@ -1,0 +1,291 @@
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TmonMonsori';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    padding: 2%;
+    font-family: 'NEXON Lv1 Gothic OTF';
+    line-height: 1.6;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+hr {
+    margin: 5% 0;
+    border-style: dashed;
+    border-color: #E6E6E6;
+    border-width: 0px;
+    border-bottom-width: 1px;
+}
+.title {
+    border-top: 3px solid #0E43F1;
+    border-bottom: 1px solid #0E43F1;
+    margin-bottom: 20px;
+}
+.title h1 a {
+    font-family: 'TmonMonsori';
+    color: #0E43F1;
+    font-size: 50px;
+    display: inline-block;
+    padding: 15px 0 12px;
+    text-transform: uppercase;
+}
+.menu li {
+    display: inline;
+}
+.menu li a {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    color: #0E43F1;
+    border: 1px dashed #0E43F1;
+    padding: 10px 30px;
+    display: inline-block;
+    border-radius: 50px;
+    font-size: 16px;
+    margin: 4px 1px;
+    box-shadow: inset 0 0 0 #0E43F1;
+    transition: all 0.4s;
+}
+.menu li a:hover {
+    box-shadow: inset 0 -100px 0 #0E43F1;
+    color: #fff;
+    border-style: solid;
+}
+.menu li.active a {
+    background: #0E43F1;
+    color: #fff;
+}
+.list li a {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-size: 14px;
+    line-height: 1.6;
+    color: #000;
+}
+.table table {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: left;
+}
+.table table caption {
+    text-align: left;
+    margin-bottom: 4px;
+    font-size: 16px;
+}
+.table table tr:nth-child(even) {
+    background-color: #F2F6FD;
+}
+.table table th {
+    border-bottom: 2px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding: 10px;
+}
+.table table td {
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding: 10px;
+}
+.table table .center {
+    text-align: center;
+}
+.sample {
+    border-radius: 5px;
+    font-family: 'NEXON Lv1 Gothic OTF';
+}
+.sample h2 {
+    position: relative;
+    font-size: 16px;
+    background-color: #F2F6FD;
+    padding: 15px;
+    border-radius: 5px 5px 0 0;
+    font-weight: normal;
+}
+.sample h2 .dot {
+    width: 10px;
+    height: 10px;
+    background: #989898;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+}
+.sample h2 .dot::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #989898;
+    border-radius: 50%;
+    position: absolute;
+    left: -15px;
+    top: 0;
+}
+.sample h2 .dot::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #989898;
+    position: absolute;
+    border-radius: 50%;
+    right: -15px;
+    top: 0;
+}
+.sample pre {
+    margin: 0 !important;
+    border-radius: 0 0 5px 5px;
+}
+.sample code {
+    font-family: 'NEXON Lv1 Gothic OTF';
+}
+@media (max-width: 800px){
+    body {
+        padding: 5%;
+        font-size: 13px;
+    }
+    #wrap {
+        margin: 0;
+        border-width: 6px;
+        border-radius: 18px;
+    }
+    #contents {
+        border-width: 6px;
+    }
+    .title {
+        border-top-width: 2px;
+    }
+    .title h1 {
+        text-align: center;
+    }
+    .title h1 a {
+        font-size: 40px;
+    }
+    .menu {
+        text-align: center;
+    }
+    .menu li a {
+        font-size: 13px;
+        padding: 5px 20px;
+    }
+    .list li a {
+        font-size: 13px;
+    }
+    .sample h2 {
+        font-size: 13px;
+        padding: 12px 10px 10px;
+    }
+    .sample h2 .dot {
+        display: none;
+    }
+    .sample pre {
+        line-height: 1.2 !important;
+    }
+    .sample code {
+        font-size: 13px;
+    }
+}
+/* option */
+.view {
+    padding: 20px;
+    border: 1px solid #F2F2F2;
+}
+.view ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.view li {
+    border: 1px solid #E6E6E6;
+    padding: 20px;
+    margin: 10px;
+    color: #222;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+.view .red {
+    border: 1px dashed #A51A3D;
+    background-color: #F9F2F4;
+    color: #A51A3D;
+}
+.view .blue {
+    border: 1px dashed #3D90B7;
+    background-color: #E7F6FD;
+    color: #3D90B7;
+}
+.btn {
+    padding: 20px;
+    border: 1px solid #F2F2F2;
+    border-top: 0;
+}
+.btn a {
+    border: 1px solid #E6E6E6;
+    padding: 7px 25px;
+    display: inline-block;
+    border-radius: 40px;
+    margin: 4px 0;
+    color: #222;
+    transition: all 0.2s;
+}
+.btn a:hover {
+    background: #000;
+    color: #fff;
+}
+@media (max-width: 800px){
+    .view {
+        padding: 10px 10px 0 10px;
+    }
+    .view li {
+        padding: 10px;
+        margin: 0 8px 8px 0;
+    }
+    .btn {
+        padding: 10px;
+    }
+    .table {
+        overflow: auto;
+    }
+    .table table th {
+        font-weight: normal;
+        white-space: nowrap;
+    }
+    .table table td {
+        white-space: nowrap;
+    }
+}
+.view2 > div span {
+    display: inline-block;
+    border: 1px solid #E6E6E6;
+    padding: 20px;
+    margin: 5px 5px 10px 5px;
+    color: #222;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+.view2 > div em {
+    background: #000;
+    color: #fff;
+    padding: 4px;
+    margin: 5px;
+    border-radius: 5px;
+    font-style: normal;
+}

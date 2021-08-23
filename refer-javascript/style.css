@@ -1,0 +1,225 @@
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TmonMonsori';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    padding: 2%;
+    font-family: 'NEXON Lv1 Gothic OTF';
+    line-height: 1.6;
+}
+ul {
+    list-style: none;
+}
+ol {
+    padding-left: 28px;
+}
+a {
+    text-decoration: none;
+}
+hr {
+    margin: 5% 0;
+    border-style: dashed;
+    border-color: #e6e6e6;
+    border-width: 0px;
+    border-bottom-width: 1px;
+}
+.title {
+    border-top: 3px solid #0e43f1;
+    border-bottom: 1px solid #0e43f1;
+    margin-bottom: 20px;
+}
+.title h1 a {
+    font-family: 'TmonMonsori';
+    color: #0e43f1;
+    font-size: 50px;
+    display: inline-block;
+    padding: 15px 0 12px;
+    text-transform: uppercase;
+}
+.menu li {
+    display: inline;
+}
+.menu li a {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    color: #0e43f1;
+    border: 1px dashed #0e43f1;
+    padding: 10px 30px;
+    display: inline-block;
+    border-radius: 50px;
+    font-size: 16px;
+    margin: 4px 1px;
+    box-shadow: inset 0 0 0 #0e43f1;
+    transition: all 0.4s;
+}
+.menu li a:hover {
+    box-shadow: inset 0 -100px 0 #0e43f1;
+    color: #fff;
+    border-style: solid;
+}
+.menu li.active a {
+    background: #0e43f1;
+    color: #fff;
+}
+.list li a { 
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-size: 14px;
+    line-height: 1.6;
+    color: #000;
+}
+.sample {
+    border-radius: 5px;
+    font-family: 'NEXON Lv1 Gothic OTF';
+}
+.sample h2 {
+    position: relative;
+    font-size: 16px;
+    background-color: #f2f2f2;
+    padding: 15px;
+    border-radius: 5px 5px 0 0;
+    font-weight: normal;
+}
+.sample h2 .dot {
+    width: 10px;
+    height: 10px;
+    background: #989898;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+}
+.sample h2 .dot::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #989898;
+    border-radius: 50%;
+    position: absolute;
+    left: -15px;
+    top: 0;
+}
+.sample h2 .dot::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #989898;
+    position: absolute;
+    border-radius: 50%;
+    right: -15px;
+    top: 0;
+}
+.sample pre {
+    margin: 0 !important;
+    border-radius: 0 0 5px 5px;
+}
+.sample code {
+    font-family: 'NEXON Lv1 Gothic OTF';
+}
+.view table {
+    border: 1px solid #e6e6e6;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+.view table td {
+    border: 1px solid #e6e6e6;
+    padding: 13px 5px 11px 5px;
+    word-break: break-all
+}
+.view table th {
+    padding: 13px 5px 11px 5px;
+    border-bottom: 1px solid #e6e6e6;
+    font-weight: normal;
+}
+.view table td.result {
+    transition: all 0.3s;
+    cursor: pointer;
+    color: #fff;
+}
+.view table td.result:hover {
+    color: #000;
+    background-color: #f5f5f5;
+}
+@media (max-width: 800px){
+    body {
+        padding: 5%;
+        font-size: 13px;
+    }
+    #wrap {
+        margin: 0;
+        border-width: 6px; 
+        border-radius: 18px;
+    }
+    #contents {
+        border-width: 6px;
+    }
+    .title {
+        border-top-width: 2px; 
+    }
+    .title h1 {
+        text-align: center;
+    }
+    .title h1 a {
+        font-size: 40px;
+    }
+    .menu {
+        text-align: center;
+    }
+    .menu li a {
+        font-size: 13px;
+        padding: 5px 20px;
+    }
+    .list li a {
+        font-size: 13px;
+    }
+    .sample h2 {
+        font-size: 13px;
+        padding: 12px 10px 10px;
+    }
+    .sample h2 .dot {
+        display: none;
+    }
+    .sample pre {
+        line-height: 1.2 !important;
+    }
+    .sample code {
+        font-size: 13px;
+    }
+    .view {
+        border-right: 1px solid #e6e6e6;
+        border-left: 1px solid #e6e6e6;
+        overflow: auto;
+    }
+    .view table {
+        border-left: 0px;
+        border-right: 0px;
+    }
+    .view table th,
+    .view table td {
+        white-space: nowrap;
+        font-size: 13px;
+    }
+    .view table td.result {
+        color: #bdbdbd;
+        background: #f1f1f1;
+    }
+}
