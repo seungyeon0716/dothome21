@@ -15,6 +15,76 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* ex1 */
+        .ex1 {
+            display: flex;
+            justify-content: space-between;
+        }
+        .ex1 > div {
+            border: 4px dashed transparent;
+            width: 18%;
+        }
+        .ex1 > div.active {
+            border: 4px dashed #a51a3d;
+            background-color: #a51a3d;
+            border-radius: 5px;
+        }
+        .ex1 > div.active img {
+            opacity: 0.4;
+        }
+        .ex1 > div img {
+            width: 100%;
+            border-radius: 5px;
+            vertical-align: top;
+        }
+
+        /* ex2 */
+        .ex2 {
+            display: flex;
+            justify-content: space-between;
+        }
+        .ex2 > div {
+            border: 4px dashed transparent;
+            width: 18%;
+        }
+        .ex2 > div.active {
+            border: 4px dashed #a51a3d;
+            background-color: #a51a3d;
+            border-radius: 5px;
+        }
+        .ex2 > div.active img {
+            opacity: 0.4;
+        }
+        .ex2 > div img {
+            width: 100%;
+            border-radius: 5px;
+            vertical-align: top;
+        }
+
+        /* ex3 */
+        .ex3 {
+            display: flex;
+            justify-content: space-between;
+        }
+        .ex3 > div {
+            border: 4px dashed transparent;
+            width: 18%;
+        }
+        .ex3 > div.active {
+            border: 4px dashed #a51a3d;
+            background-color: #a51a3d;
+            border-radius: 5px;
+        }
+        .ex3 > div.active img {
+            opacity: 0.4;
+        }
+        .ex3 > div img {
+            width: 100%;
+            border-radius: 5px;
+            vertical-align: top;
+        }
+    </style>
 </head>
 
 <body>
@@ -50,99 +120,243 @@
 
     <div class="list">
         <ol>
-            <li>요소 객체 : 선택자 : querySelector()</li>
-            <li>요소 객체 : 선택자 : querySelectorAll()</li>
-            <li>요소 객체 : 선택자 : getElementById() : 아이디 선택자</li>
+            <li>요소 객체 : 클래스 메서드 : .classList.add()</li>
+            <li>요소 객체 : 클래스 메서드 : .classList.remove()</li>
+            <li>요소 객체 : 클래스 메서드 : .classList.toggle()</li>
+            <li>요소 객체 : 클래스 메서드 : .classList.contains()</li>
         </ol>
     </div>
     <hr>
 
-    <!-- //sample1 -->
-    <div id="sample1" class="sample">
-        <h2> <span class="dot"></span></h2>
-        <div class="view">
-            <table>
-                <colgroup>
-                    <col style="width: 4%;">
-                    <col style="width: 22%;">
-                    <col style="width: 22%;">
-                    <col style="width: 52%;">
-                </colgroup>
-                <thead>
-                    <tr>
-                        <th>번호</th>
-                        <th>기본값</th>
-                        <th>메서드</th>
-                        <th>결과값</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="sample01_N1"></td>
-                        <td class="sample01_Q1"></td>
-                        <td class="sample01_M1"></td>
-                        <td class="sample01_R1"></td>
-                    </tr>
-                    <tr>
-                        <td class="sample01_N2"></td>
-                        <td class="sample01_Q2"></td>
-                        <td class="sample01_M2"></td>
-                        <td class="sample01_R2"></td>
-                    </tr>
-                    <tr>
-                        <td class="sample01_N3"></td>
-                        <td class="sample01_Q3"></td>
-                        <td class="sample01_M3"></td>
-                        <td class="sample01_R3"></td>
-                    </tr>
-                    <tr>
-                        <td class="sample01_N4"></td>
-                        <td class="sample01_Q4"></td>
-                        <td class="sample01_M4"></td>
-                        <td class="sample01_R4"></td>
-                    </tr>
-                    <tr>
-                        <td class="sample01_N5"></td>
-                        <td class="sample01_Q5"></td>
-                        <td class="sample01_M5"></td>
-                        <td class="sample01_R5"></td>
-                    </tr>
-                    <tr>
-                        <td class="sample01_N6"></td>
-                        <td class="sample01_Q6"></td>
-                        <td class="sample01_M6"></td>
-                        <td class="sample01_R6"></td>
-                    </tr>
-                    <tr>
-                        <td class="sample01_N7"></td>
-                        <td class="sample01_Q7"></td>
-                        <td class="sample01_M7"></td>
-                        <td class="sample01_R7"></td>
-                    </tr>
-                    <tr>
-                        <td class="sample01_N8"></td>
-                        <td class="sample01_Q8"></td>
-                        <td class="sample01_M8"></td>
-                        <td class="sample01_R8"></td>
-                    </tr>
-                </tbody>
-            </table>
+     <!-- sample01 -->
+     <div id="sample01" class="sample">
+        <h2>01. .classList.add()/.classList.remove()<span class="dot"></span></h2>
+        <div class="view ex1">
+            <div><img src="img/imge01.jpg" alt="이미지1"></div>
+            <div><img src="img/imge02.jpg" alt="이미지2"></div>
+            <div><img src="img/imge03.jpg" alt="이미지3"></div>
+            <div><img src="img/imge04.jpg" alt="이미지4"></div>
+            <div><img src="img/imge05.jpg" alt="이미지5"></div>
         </div>
+        <div class="btn">
+            <a href="#c" class="btn1-1">클릭하면 모든 이미지에 클래스(active)를 추가합니다.</a>
+            <a href="#c" class="btn1-2">클릭하면 모든 이미지에 클래스(active)를 삭제합니다.</a>
+        </div>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    document.querySelector(".btn1-1").addEventListener("click", function(){
+        document.querySelectorAll(".ex1 div").forEach((el) => {
+            el.classList.add("active");
+        })
+    });
 
+    document.querySelector(".btn1-2").addEventListener("click", function(){
+        document.querySelectorAll(".ex1 div").forEach((el) => {
+            el.classList.remove("active");
+        })
+    })
+}
+</code></pre>
+        </div>
+    </div>
+    <hr>
+    <script>
+        // $(".btn1-1").click(function(){
+        //     $(".ex1 div").addClass("active");
+        // });
+
+        document.querySelector(".btn1-1").addEventListener("click", function(){
+            document.querySelectorAll(".ex1 div").forEach((el) => {
+                el.classList.add("active");
+            })
+        });
+
+
+        // $(".btn1-2").click(function(){
+        //     $(".ex1 div").removeClass("active");
+        // });
+
+        document.querySelector(".btn1-2").addEventListener("click", function(){
+            document.querySelectorAll(".ex1 div").forEach((el) => {
+                el.classList.remove("active");
+            })
+        })
+    </script>
+    <!-- //sample01 -->
+
+    <!-- sample02 -->
+     <div id="sample02" class="sample">
+        <h2>02. .classList.toggle()<span class="dot"></span></h2>
+        <div class="view ex2">
+            <div><img src="img/imge06.jpg" alt="이미지6"></div>
+            <div><img src="img/imge07.jpg" alt="이미지7"></div>
+            <div><img src="img/imge08.jpg" alt="이미지8"></div>
+            <div><img src="img/imge09.jpg" alt="이미지9"></div>
+            <div><img src="img/imge10.jpg" alt="이미지10"></div>
+        </div>
+        <div class="btn">
+            <a href="#c" class="btn2-1">이미지를 클릭하면 클래스(active)를 추가/삭제합니다.</a>
+        </div>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    // 모든 이미지가 선택
+    document.querySelectorAll(".ex2 div").forEach((el) => {
+        el.addEventListener("click", function(){
+            document.querySelectorAll(".ex2 div").forEach((el) => {
+                el.classList.toggle("active");
+            })
+        });
+    })
+
+    // 내가 클릭한 것만 선택
+    document.querySelectorAll(".ex2 div").forEach((el) => {
+        el.addEventListener("click", function(){
+            this.classList.toggle("active")
+        })
+    })
+}
+</code></pre>
+        </div>
+    </div>
+    <hr>
+    <script>
+
+        // 모든 이미지가 선택
+        // document.querySelectorAll(".ex2 div").forEach((el) => {
+        //     el.addEventListener("click", function(){
+        //         document.querySelectorAll(".ex2 div").forEach((el) => {
+        //             el.classList.toggle("active");
+        //         })
+        //     });
+        // })
+
+        // 내가 클릭한 것만 선택
+        document.querySelectorAll(".ex2 div").forEach((el) => {
+            el.addEventListener("click", function(){
+                this.classList.toggle("active")
+            })
+        })
+    </script>
+    <!-- //sample02 -->
+
+    <!-- sample03 -->
+    <div id="sample03" class="sample">
+        <h2>03. .classList.contains()<span class="dot"></span></h2>
+        <div class="view ex3">
+            <div class="active"><img src="img/imge11.jpg" alt="이미지11"></div>
+            <div><img src="img/imge12.jpg" alt="이미지12"></div>
+            <div><img src="img/imge13.jpg" alt="이미지13"></div>
+            <div class="active"><img src="img/imge14.jpg" alt="이미지14"></div>
+            <div><img src="img/imge15.jpg" alt="이미지15"></div>
+        </div>
+        <div class="btn">
+            <a href="#c" class="btn3-0">리셋</a>
+            <a href="#c" class="btn3-1">클릭하면 .active 클래스를 찾은 후에 클래스를 제거합니다.</a>
+        </div>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    document.querySelector(".btn3-0").addEventListener("click", function(){
+        document.querySelector(".ex3 > div:nth-child(1)").classList.add("active");
+        document.querySelector(".ex3 > div:nth-child(4)").classList.add("active");
+    });
+
+    document.querySelector(".btn3-1").addEventListener("click", function(){
+        document.querySelectorAll(".ex3 > div").forEach( el => {
+            if( el.classList.contains("active")){
+                el.classList.remove("active");
+            }
+        })
+    });
+}
+</code></pre>
+        </div>
+    </div>
+    <hr>
+    <script>
+        document.querySelector(".btn3-0").addEventListener("click", function(){
+            document.querySelector(".ex3 > div:nth-child(1)").classList.add("active");
+            document.querySelector(".ex3 > div:nth-child(4)").classList.add("active");
+        });
+
+        document.querySelector(".btn3-1").addEventListener("click", function(){
+            document.querySelectorAll(".ex3 > div").forEach( el => {
+                if( el.classList.contains("active")){
+                    el.classList.remove("active");
+                }
+            })
+        });
+    </script>
+    <!-- //sample03 -->
+
+    <style>
+        .ex4 {
+            min-height: 300px;
+            position: relative;
+        }
+        .ex4 .circle {
+            position: absolute;
+            display: block;
+            height: 100px;
+            width: 100px;
+            padding: 10px;
+            margin: 10px;
+            border: 5px solid #eb97d3;
+            border-radius: 50%;
+            background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <!-- sample04 -->
+    <div id="sample04" class="sample">
+        <h2>04. width(), innerWidth(), outerWidth()<span class="dot"></span></h2>
+        <div class="view ex4">
+           <span class="circle circle4"></span>
+
+           <p class="text text4">여기는 텍스트 영역입니다.</p>
+        </div>
+        <div class="btn">
+            <a href="#c" class="btn4-1">클릭하면 원의 가로(width)값을 구합니다.</a>
+            <a href="#c" class="btn4-2">클릭하면 원의 가로(innerWidth)값을 구합니다.</a>
+            <a href="#c" class="btn4-3">클릭하면 원의 가로(outerWidth)값을 구합니다.</a>
+            <a href="#c" class="btn4-4">클릭하면 원의 가로(height)값을 구합니다.</a>
+            <a href="#c" class="btn4-5">클릭하면 원의 가로(innerHeight)값을 구합니다.</a>
+            <a href="#c" class="btn4-6">클릭하면 원의 가로(outerHeight)값을 구합니다.</a>
+        </div>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
 
 }
-
 </code></pre>
         </div>
     </div>
-
     <hr>
+    <script>
+        function demension(name, size){
+            $(".text4").text("이 원의 "+ name + "값은 " + size + " px 입니다.");
+        }
 
-    <hr>
-    </main>
-</div>
+        $(".btn4-1").click(function(){
+            demension("가로(width)", $(".circle4").width());
+        });
+        $(".btn4-2").click(function(){
+            demension("가로(innerWidth)", $(".circle4").innerWidth());
+        });
+        $(".btn4-3").click(function(){
+            demension("가로(outerWidth)", $(".circle4").outerWidth());
+        });
+        $(".btn4-4").click(function(){
+            demension("세로(height)", $(".circle4").height());
+        });
+        $(".btn4-5").click(function(){
+            demension("세로(innerHeight)", $(".circle4").innerHeight());
+        });
+        $(".btn4-6").click(function(){
+            demension("세로(outerHeight)", $(".circle4").outerHeight());
+        });
+    </script>
+    <!-- //sample04 -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>

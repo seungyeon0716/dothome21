@@ -166,83 +166,83 @@
                         </tr>
                         <tr>
                             <td>.addClass()</td>
-                            <td>-</td>
+                            <td><a href="../refer-javascript/javascriptRefer10.html" target="_blank">.classLise.add()</a></td>
                             <td>클래스를 추가</td>
                         </tr>
                         <tr>
                             <td>.removeClass()</td>
-                            <td>-</td>
+                            <td><a href="../refer-javascript/javascriptRefer10.html" target="_blank">.classLise.remove()</a></td>
                             <td>클래스를 삭제</td>
                         </tr>
                         <tr>
                             <td>.toggleClass()</td>
-                            <td>-</td>
+                            <td><a href="../refer-javascript/javascriptRefer10.html" target="_blank">.classLise.toggle()</a></td>
                             <td>이미지를 클릭하면 클래스를 추가/삭제</td>
                         </tr>
                         <tr>
                             <td>.hasClass()</td>
-                            <td>-</td>
+                            <td><a href="../refer-javascript/javascriptRefer10.html" target="_blank">.classLise.contains()</a></td>
                             <td>클릭하면 .active 클래스를 찾은 후에 클래스를 제거</td>
                         </tr>
                         <tr>
                             <td class="center" rowspan="6">Dimensions</td>
                             <td>.width()</td>
                             <td>-</td>
-                            <td>-</td>
+                            <td>요소의 가로 값을 가져오거나 설정합니다.</td>
                         </tr>
                         <tr>
                             <td>.innerWidth()</td>
                             <td>-</td>
-                            <td>-</td>
+                            <td>요소의 가로(패딩 포함, 보더/마진 미포함) 값을 가져오거나 설정합니다.</td>
                         </tr>
                         <tr>
                             <td>.outerWidth()</td>
                             <td>-</td>
-                            <td>-</td>
+                            <td>요소의 가로(보더/패딩/마진 포함) 값을 가져오거나 설정합니다.</td>
                         </tr>
                         <tr>
                             <td>.hight()</td>
                             <td>-</td>
-                            <td>-</td>
+                            <td>요소의 세로 값을 가져오거나 설정합니다.</td>
                         </tr>
                         <tr>
                             <td>.innerHight()</td>
                             <td>-</td>
-                            <td>-</td>
+                            <td>요소의 세로(패딩 포함, 보더/마진 미포함) 값을 가져오거나 설정합니다.</td>
                         </tr>
                         <tr>
                             <td>.outerHight()</td>
                             <td>-</td>
-                            <td>-</td>
+                            <td>요소의 세로(보더/패딩/마진 포함) 값을 가져오거나 설정합니다.</td>
                         </tr>
                         <tr>
                             <td class="center" rowspan="5">offset</td>
                             <td>.offset()</td>
                             <td>-</td>
-                            <td>-</td>
+                            <td>요소의 좌표 값(문서를 기준)을 가져오거나 설정합니다.</td>
                         </tr>
                         <tr>
                             <td>.offsetParent()</td>
                             <td>-</td>
-                            <td>-</td>
+                            <td>요소의 좌표 값(부모 위치를 기준)을 가져오거나 설정합니다.</td>
                         </tr>
                         <tr>
                             <td>.position()</td>
                             <td>-</td>
-                            <td>-</td>
+                            <td>요소의 좌표 값(기준점 기준)을 가져오거나 설정합니다.</td>
                         </tr>
                         <tr>
                             <td>.scrollLeft()</td>
                             <td>-</td>
-                            <td>-</td>
+                            <td>요소의 가로 스크롤 값을 가져오거나 설정합니다.</td>
                         </tr>
                         <tr>
                             <td>.scrollTop()</td>
                             <td>-</td>
-                            <td>-</td>
+                            <td>요소의 세로 스크롤 값을 가져오거나 설정합니다.</td>
                         </tr>
                         <tr>
-                            <td class="center" rowspan="2">Date()</td>
+                            <td class="center" rowspan="2">Data()</td>
                             <td>.data()</td>
                             <td>-</td>
                             <td>-</td>
@@ -384,6 +384,253 @@
         });
     </script>
     <!-- //sample03 -->
+
+    <style>
+        .ex4 {
+            min-height: 300px;
+            position: relative;
+        }
+        .ex4 .circle {
+            position: absolute;
+            display: block;
+            height: 100px;
+            width: 100px;
+            padding: 10px;
+            margin: 10px;
+            border: 5px solid #eb97d3;
+            border-radius: 50%;
+            background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <!-- sample04 -->
+    <div id="sample04" class="sample">
+        <h2>04. width(), innerWidth(), outerWidth()<span class="dot"></span></h2>
+        <div class="view ex4">
+           <span class="circle circle4"></span>
+
+           <p class="text text4">여기는 텍스트 영역입니다.</p>
+        </div>
+        <div class="btn">
+            <a href="#c" class="btn4-1">클릭하면 원의 가로(width)값을 구합니다.</a>
+            <a href="#c" class="btn4-2">클릭하면 원의 가로(innerWidth)값을 구합니다.</a>
+            <a href="#c" class="btn4-3">클릭하면 원의 가로(outerWidth)값을 구합니다.</a>
+            <a href="#c" class="btn4-4">클릭하면 원의 가로(height)값을 구합니다.</a>
+            <a href="#c" class="btn4-5">클릭하면 원의 가로(innerHeight)값을 구합니다.</a>
+            <a href="#c" class="btn4-6">클릭하면 원의 가로(outerHeight)값을 구합니다.</a>
+        </div>
+        <div class="btn">
+            <a href="#c" class="btn4-7">클릭하면 샘플 박스의 가로 값을 구합니다.</a>
+            <a href="#c" class="btn4-8">클릭하면 문서의 가로 값을 구합니다.</a>
+            <a href="#c" class="btn4-9">클릭하면 브라우저의 가로 값을 구합니다.</a>
+        </div>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    function demension(name, size){
+        $(".text4").text("이 원의 "+ name + "값은 " + size + " px 입니다.");
+    }
+
+    $(".btn4-1").click(function(){
+        demension("가로(width)", $(".circle4").width());
+    });
+    $(".btn4-2").click(function(){
+        demension("가로(innerWidth)", $(".circle4").innerWidth());
+    });
+    $(".btn4-3").click(function(){
+        demension("가로(outerWidth)", $(".circle4").outerWidth());
+    });
+    $(".btn4-4").click(function(){
+        demension("세로(height)", $(".circle4").height());
+    });
+    $(".btn4-5").click(function(){
+        demension("세로(innerHeight)", $(".circle4").innerHeight());
+    });
+    $(".btn4-6").click(function(){
+        demension("세로(outerHeight)", $(".circle4").outerHeight());
+    });
+
+    $(".btn4-7").click(function(){
+        $(".text4").text("이 샘플 박스의 가로 값은 " + $("#sample04").width() + " px 입니다.")
+    });
+    $(".btn4-8").click(function(){
+        $(".text4").text("이 문서의 가로 값은 " + $(document).width() + " px 입니다.")
+    });
+    $(".btn4-9").click(function(){
+        $(".text4").text("이 브라우저의 가로 값은 " + $(window).width() + " px 입니다.")
+    });
+}
+</code></pre>
+        </div>
+    </div>
+    <hr>
+    <script>
+        function demension(name, size){
+            $(".text4").text("이 원의 "+ name + "값은 " + size + " px 입니다.");
+        }
+
+        $(".btn4-1").click(function(){
+            demension("가로(width)", $(".circle4").width());
+        });
+        $(".btn4-2").click(function(){
+            demension("가로(innerWidth)", $(".circle4").innerWidth());
+        });
+        $(".btn4-3").click(function(){
+            demension("가로(outerWidth)", $(".circle4").outerWidth());
+        });
+        $(".btn4-4").click(function(){
+            demension("세로(height)", $(".circle4").height());
+        });
+        $(".btn4-5").click(function(){
+            demension("세로(innerHeight)", $(".circle4").innerHeight());
+        });
+        $(".btn4-6").click(function(){
+            demension("세로(outerHeight)", $(".circle4").outerHeight());
+        });
+
+        $(".btn4-7").click(function(){
+            $(".text4").text("이 샘플 박스의 가로 값은 " + $("#sample04").width() + " px 입니다.")
+        });
+        $(".btn4-8").click(function(){
+            $(".text4").text("이 문서의 가로 값은 " + $(document).width() + " px 입니다.")
+        });
+        $(".btn4-9").click(function(){
+            $(".text4").text("이 브라우저의 가로 값은 " + $(window).width() + " px 입니다.")
+        });
+    </script>
+    <!-- //sample04 -->
+
+    <style>
+        .ex5 {
+            text-align: center;
+        }
+        .ex5 .circle {
+            display: inline-block;
+            height: 100px;
+            width: 100px;
+            padding: 10px;
+            margin: 10px;
+            border: 5px solid #eb97d3;
+            border-radius: 50%;
+            background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+        }
+    </style>
+    <!-- sample05 -->
+    <div id="sample05" class="sample">
+        <h2>05. width()<span class="dot"></span></h2>
+        <div class="view ex5">
+           <span class="circle circle5"></span>
+        </div>
+        <div class="btn">
+            <a href="#c" class="btn5-0">리셋</a>
+            <a href="#c" class="btn5-1">클릭하면 원의 가로 값을 300px로 변경합니다.</a>
+            <a href="#c" class="btn5-2">클릭하면 원의 세로 값을 300px로 변경합니다.</a>
+            <a href="#c" class="btn5-3">클릭하면 원의 가로, 세로 값을 200px로 변경합니다.</a>
+        </div>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    $(".btn5-0").click(function(){
+        $(".circle5").width("70").height("70");
+    });
+    $(".btn5-1").click(function(){
+        $(".circle5").width("300");
+    });
+    $(".btn5-2").click(function(){
+        $(".circle5").height("300");
+    });
+    $(".btn5-3").click(function(){
+        $(".circle5").width("200").height("200");
+    });
+}
+</code></pre>
+        </div>
+    </div>
+    <hr>
+    <script>
+        $(".btn5-0").click(function(){
+            $(".circle5").width("70").height("70");
+        });
+        $(".btn5-1").click(function(){
+            $(".circle5").width("300");
+        });
+        $(".btn5-2").click(function(){
+            $(".circle5").height("300");
+        });
+        $(".btn5-3").click(function(){
+            $(".circle5").width("200").height("200");
+        });
+    </script>
+    <!-- //sample05 -->
+
+    <style>
+        .ex6 {
+            min-height: 300px;
+            position: relative;
+        }
+        .ex6 .circle {
+            position: absolute;
+            display: block;
+            height: 100px;
+            width: 100px;
+            padding: 10px;
+            margin: 10px;
+            border: 5px solid #eb97d3;
+            border-radius: 50%;
+            background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <!-- sample06-->
+    <div id="sample06" class="sample">
+        <h2>06. <span class="dot"></span></h2>
+        <div class="view ex6">
+           <span class="circle circle6"></span>
+
+           <p class="text text6">여기는 텍스트 영역입니다.</p>
+        </div>
+        <div class="btn">
+            <a href="#c" class="btn6-1">클릭하면 원의 x축 위치 값(offset)을 구합니다.</a>
+            <a href="#c" class="btn6-2">클릭하면 원의 y축 위치 값(offset)을 구합니다.</a>
+            <a href="#c" class="btn6-3">클릭하면 원의 x축 위치 값(position)을 구합니다.</a>
+            <a href="#c" class="btn6-4">클릭하면 원의 y축 위치 값(position)을 구합니다.</a>
+        </div>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    $(".btn6-1").click(function(){
+        $(".text6").text( "이 원의 x축 값은 " +  $(".circle6").offset().left + " px 입니다." );
+    });
+    $(".btn6-2").click(function(){
+        $(".text6").text( "이 원의 y축 값은 " +  $(".circle6").offset().top + " px 입니다." );
+    });
+    $(".btn6-3").click(function(){
+        $(".text6").text( "이 원의 x축 값은 " +  $(".circle6").position().left + " px 입니다." );
+    });
+    $(".btn6-4").click(function(){
+        $(".text6").text( "이 원의 y축 값은 " +  $(".circle6").position().top + " px 입니다." );
+    });
+}
+</code></pre>
+        </div>
+    </div>
+    <hr>
+    <script>
+        $(".btn6-1").click(function(){
+            $(".text6").text( "이 원의 x축 값은 " +  $(".circle6").offset().left + " px 입니다." );
+        });
+        $(".btn6-2").click(function(){
+            $(".text6").text( "이 원의 y축 값은 " +  $(".circle6").offset().top + " px 입니다." );
+        });
+        $(".btn6-3").click(function(){
+            $(".text6").text( "이 원의 x축 값은 " +  $(".circle6").position().left + " px 입니다." );
+        });
+        $(".btn6-4").click(function(){
+            $(".text6").text( "이 원의 y축 값은 " +  $(".circle6").position().top + " px 입니다." );
+        });
+    </script>
+    <!-- //sample04 -->
 
 
    

@@ -331,3 +331,56 @@ body {
     color: #fff;
     font-weight: 300;
 }
+
+/* imageType03 */
+.imageType3 {
+    font-family: 'GmarketSans';
+    padding: 100px 0;
+}
+.imageType3 h2 {
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 42px;
+}
+.imageType3 .image-wrap {
+    display: grid;
+    grid-template-columns: repeat(4,285px);
+    grid-template-rows: 285px;
+    gap: 20px;
+}
+.imageType3 .image-wrap .image:first-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+}
+.imageType3 .image-wrap .image{
+    position: relative;
+}
+
+.imageType3 .image-wrap .image .box {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    object-fit: contain;
+}
+
+.imageType3 .image-wrap .image .image-title {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 7px;
+}
+
+.imageType3 .image-wrap .image .image-desc {
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 10px
+}
+.imageType3 .image-wrap .image .image-word {
+    color: #fff;
+}
