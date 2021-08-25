@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <script type="text/javascript" nonce="6178fcd726714516a553c8bd84b" src="//local.adguard.org?ts=1629523969713&amp;type=content-script&amp;dmn=escape1004.github.io&amp;app=chrome.exe&amp;css=1&amp;js=1&amp;gcss=1&amp;rel=1&amp;rji=1&amp;sbe=0"></script>
+    <script type="text/javascript" nonce="6178fcd726714516a553c8bd84b" src="//local.adguard.org?ts=1629523969713&amp;name=AdGuard%20Popup%20Blocker&amp;name=AdGuard%20Assistant&amp;name=AdGuard%20Extra&amp;type=user-script"></script>
+    <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font.css">
+    <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism-okaidia.min.css"
+        integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <main id="contents">
+            <div class="title">
+                <h1><a href="index.html">숫자 객체</a></h1>
+            </div>
+   
+            <nav class="menu">
+                <ul>
+                    <li><a href="javascriptRefer01.html">데이터 저장하기</a></li>
+                    <li><a href="javascriptRefer02.html">데이터 불러오기</a></li>
+                    <li><a href="javascriptRefer03.html">데이터 실행하기</a></li>
+                    <li><a href="javascriptRefer04.html">데이터 제어하기</a></li>
+                </ul>
+                <ul>
+                    <li><a href="javascriptRefer05.html">문자열 객체</a></li>
+                    <li><a href="javascriptRefer06.html">배열 객체</a></li>
+                    <li><a href="javascriptRefer07.html">날짜 객체</a></li>
+                    <li><a href="javascriptRefer08.html">수학 객체</a></li>
+                    <li class="active"><a href="javascriptRefer14.html">숫자 객체</a></li>
+                    <li><a href="javascriptRefer09.html">브라우저 객체</a></li>
+                    <li><a href="javascriptRefer10.html">요소 객체</a></li>
+                    <li><a href="javascriptRefer11.html">이벤트 객체</a></li>
+                </ul>
+                <ul>
+                    <li><a href="javascriptRefer12.html">샘플</a></li>
+                    <li><a href="javascriptRefer13.html">알고리즘</a></li>
+                </ul>
+            </nav>
+
+    <hr>
+
+    <div class="list">
+        <ol>
+            <li><a href="#section01">숫자 객체 : toFixed() : 소수점 이하 자릿수 지정 : 반환(문자열)</a></li>
+            <li><a href="#section01">숫자 객체 : toPrecision() : 지정된 자릿수를 포함하는 문자열을 반환 : 반환(문자열)</a></li>
+            <li><a href="#section01">숫자 객체 : parseInt() : 문자열을 숫자(정수) 유형으로 변경 : 반환(문자열)</a></li>
+            <li><a href="#section01">숫자 객체 : parseFloat() : 문자열을 숫자(소수) 유형으로 변경 : 반환(문자열)</a></li>
+        </ol>
+    </div>
+
+    <hr>
+
+        <!-- sample01 -->
+        <div id="sample01" class="sample">
+            <h2>01. 숫자 객체 : toFixed() : 소수점 이하 자릿수 지정 : 반환(문자열)<span class="dot"></span></h2>
+            <div class="view">
+                <table>
+                    <colgroup>
+                        <col style="width: 4%;">
+                        <col style="width: 22%;">
+                        <col style="width: 22%;">
+                        <col style="width: 52%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>번호</th>
+                            <th>기본값</th>
+                            <th>메서드</th>
+                            <th>결과값</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="sample01_N1"></td>
+                            <td class="sample01_Q1"></td>
+                            <td class="sample01_M1"></td>
+                            <td class="sample01_R1"></td>
+                        </tr>
+                        <tr>
+                            <td class="sample01_N2"></td>
+                            <td class="sample01_Q2"></td>
+                            <td class="sample01_M2"></td>
+                            <td class="sample01_R2"></td>
+                        </tr>
+                        <tr>
+                            <td class="sample01_N3"></td>
+                            <td class="sample01_Q3"></td>
+                            <td class="sample01_M3"></td>
+                            <td class="sample01_R3"></td>
+                        </tr>
+                        <tr>
+                            <td class="sample01_N4"></td>
+                            <td class="sample01_Q4"></td>
+                            <td class="sample01_M4"></td>
+                            <td class="sample01_R4"></td>
+                        </tr>
+                        <tr>
+                            <td class="sample01_N5"></td>
+                            <td class="sample01_Q5"></td>
+                            <td class="sample01_M5"></td>
+                            <td class="sample01_R5"></td>
+                        </tr>
+                        <tr>
+                            <td class="sample01_N6"></td>
+                            <td class="sample01_Q6"></td>
+                            <td class="sample01_M6"></td>
+                            <td class="sample01_R6"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    document.querySelector(".sample01_R1").innerHTML =  (0.88888).toFixed(1);
+    document.querySelector(".sample01_R2").innerHTML =  (0.88888).toFixed(2);
+    document.querySelector(".sample01_R3").innerHTML =  (0.88888).toFixed(3);
+    document.querySelector(".sample01_R4").innerHTML =  (123.88888).toFixed(1);
+    document.querySelector(".sample01_R5").innerHTML =  (123.88888).toFixed(2);
+    document.querySelector(".sample01_R6").innerHTML =  (123.88888).toFixed(3);
+}
+</code></pre>
+            </div>
+        </div>
+    
+        <hr>
+
+         <!-- sample02 -->
+         <div id="sample02" class="sample">
+            <h2>02. 숫자 객체 : toPrecision() : 지정된 자릿수를 포함하는 문자열을 반환 : 반환(문자열)<span class="dot"></span></h2>
+            <div class="view">
+                <table>
+                    <colgroup>
+                        <col style="width: 4%;">
+                        <col style="width: 22%;">
+                        <col style="width: 22%;">
+                        <col style="width: 52%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>번호</th>
+                            <th>기본값</th>
+                            <th>메서드</th>
+                            <th>결과값</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="sample02_N1"></td>
+                            <td class="sample02_Q1"></td>
+                            <td class="sample02_M1"></td>
+                            <td class="sample02_R1"></td>
+                        </tr>
+                        <tr>
+                            <td class="sample02_N2"></td>
+                            <td class="sample02_Q2"></td>
+                            <td class="sample02_M2"></td>
+                            <td class="sample02_R2"></td>
+                        </tr>
+                        <tr>
+                            <td class="sample02_N3"></td>
+                            <td class="sample02_Q3"></td>
+                            <td class="sample02_M3"></td>
+                            <td class="sample02_R3"></td>
+                        </tr>
+                        <tr>
+                            <td class="sample02_N4"></td>
+                            <td class="sample02_Q4"></td>
+                            <td class="sample02_M4"></td>
+                            <td class="sample02_R4"></td>
+                        </tr>
+                        <tr>
+                            <td class="sample02_N5"></td>
+                            <td class="sample02_Q5"></td>
+                            <td class="sample02_M5"></td>
+                            <td class="sample02_R5"></td>
+                        </tr>
+                        <tr>
+                            <td class="sample02_N6"></td>
+                            <td class="sample02_Q6"></td>
+                            <td class="sample02_M6"></td>
+                            <td class="sample02_R6"></td>
+                        </tr>
+                        <tr>
+                            <td class="sample02_N7"></td>
+                            <td class="sample02_Q7"></td>
+                            <td class="sample02_M7"></td>
+                            <td class="sample02_R7"></td>
+                        </tr>
+                        <tr>
+                            <td class="sample02_N8"></td>
+                            <td class="sample02_Q8"></td>
+                            <td class="sample02_M8"></td>
+                            <td class="sample02_R8"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    document.querySelector(".sample02_R1").innerHTML =  (1.23456).toPrecision();
+    document.querySelector(".sample02_R2").innerHTML =  (1.23456).toPrecision(5);
+    document.querySelector(".sample02_R3").innerHTML =  (1.23456).toPrecision(3);
+    document.querySelector(".sample02_R4").innerHTML =  (1.23456).toPrecision(1);
+    document.querySelector(".sample02_R5").innerHTML =  (0.123456).toPrecision()
+    document.querySelector(".sample02_R6").innerHTML =  (0.123456).toPrecision(5);
+    document.querySelector(".sample02_R7").innerHTML =  (0.123456).toPrecision(3);
+    document.querySelector(".sample02_R8").innerHTML =  (0.123456).toPrecision(1);}
+</code></pre>
+            </div>
+        </div>
+    
+        <hr>
+
+        <!-- sample03 -->
+        <div id="sample03" class="sample">
+            <h2>03. 숫자 객체 : parseInt() / parseFloat () : 문자열을 숫자(정수) 유형으로 변경 : 반환(문자열)<span class="dot"></span></h2>
+            <div class="view">
+                <table>
+                    <colgroup>
+                        <col style="width: 4%;">
+                        <col style="width: 22%;">
+                        <col style="width: 22%;">
+                        <col style="width: 52%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>번호</th>
+                            <th>기본값</th>
+                            <th>메서드</th>
+                            <th>결과값</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="sample03_N1"></td>
+                            <td class="sample03_Q1"></td>
+                            <td class="sample03_M1"></td>
+                            <td class="sample03_R1"></td>
+                        </tr>
+                        <tr>
+                            <td class="sample03_N2"></td>
+                            <td class="sample03_Q2"></td>
+                            <td class="sample03_M2"></td>
+                            <td class="sample03_R2"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    document.querySelector(".sample03_R1").innerHTML =  parseInt("1.23456");
+    document.querySelector(".sample03_R2").innerHTML =  parseFloat("1.23456");
+}
+</code></pre>
+            </div>
+        </div>
+    
+        <hr>
+    
+    </main>
+</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
+    <script>
+        //sample1
+        //01. toFixed() : 소수점 이하 자릿수 지정 :  반환(문자열)
+        {   
+            document.querySelector(".sample01_N1").innerHTML = "1";
+            document.querySelector(".sample01_Q1").innerHTML = "0.8888";
+            document.querySelector(".sample01_M1").innerHTML = ".toFixed(1)";
+            document.querySelector(".sample01_R1").innerHTML =  (0.88888).toFixed(1);
+
+            document.querySelector(".sample01_N2").innerHTML = "2";
+            document.querySelector(".sample01_Q2").innerHTML = "0.8888";
+            document.querySelector(".sample01_M2").innerHTML = ".toFixed(2)";
+            document.querySelector(".sample01_R2").innerHTML =  (0.88888).toFixed(2);
+
+            document.querySelector(".sample01_N3").innerHTML = "3";
+            document.querySelector(".sample01_Q3").innerHTML = "0.8888";
+            document.querySelector(".sample01_M3").innerHTML = ".toFixed(3)";
+            document.querySelector(".sample01_R3").innerHTML =  (0.88888).toFixed(3);
+
+            document.querySelector(".sample01_N4").innerHTML = "4";
+            document.querySelector(".sample01_Q4").innerHTML = "123.8888";
+            document.querySelector(".sample01_M4").innerHTML = ".toFixed(1)";
+            document.querySelector(".sample01_R4").innerHTML =  (123.88888).toFixed(1);
+
+            document.querySelector(".sample01_N5").innerHTML = "5";
+            document.querySelector(".sample01_Q5").innerHTML = "123.8888";
+            document.querySelector(".sample01_M5").innerHTML = ".toFixed(2)";
+            document.querySelector(".sample01_R5").innerHTML =  (123.88888).toFixed(2);
+
+            document.querySelector(".sample01_N6").innerHTML = "6";
+            document.querySelector(".sample01_Q6").innerHTML = "123.8888";
+            document.querySelector(".sample01_M6").innerHTML = ".toFixed(3)";
+            document.querySelector(".sample01_R6").innerHTML =  (123.88888).toFixed(3);
+        }
+
+        //sample2
+        //02. toPrecision() : 지정된 자릿수를 포함하는 문자열을 반환 : 반환(문자열)
+        {   
+            document.querySelector(".sample02_N1").innerHTML = "1";
+            document.querySelector(".sample02_Q1").innerHTML = "1.23456";
+            document.querySelector(".sample02_M1").innerHTML = ".toPrecision()";
+            document.querySelector(".sample02_R1").innerHTML =  (1.23456).toPrecision();
+
+            document.querySelector(".sample02_N2").innerHTML = "2";
+            document.querySelector(".sample02_Q2").innerHTML = "1.23456";
+            document.querySelector(".sample02_M2").innerHTML = ".toPrecisiontoPrecision(5)";
+            document.querySelector(".sample02_R2").innerHTML =  (1.23456).toPrecision(5);
+
+            document.querySelector(".sample02_N3").innerHTML = "3";
+            document.querySelector(".sample02_Q3").innerHTML = "1.23456";
+            document.querySelector(".sample02_M3").innerHTML = ".toPrecision(3)";
+            document.querySelector(".sample02_R3").innerHTML =  (1.23456).toPrecision(3);
+
+            document.querySelector(".sample02_N4").innerHTML = "4";
+            document.querySelector(".sample02_Q4").innerHTML = "1.23456";
+            document.querySelector(".sample02_M4").innerHTML = ".toPrecision(1)";
+            document.querySelector(".sample02_R4").innerHTML =  (1.23456).toPrecision(1);
+
+            document.querySelector(".sample02_N5").innerHTML = "5";
+            document.querySelector(".sample02_Q5").innerHTML = "0.123456";
+            document.querySelector(".sample02_M5").innerHTML = ".toPrecision()";
+            document.querySelector(".sample02_R5").innerHTML =  (0.123456).toPrecision()
+
+            document.querySelector(".sample02_N6").innerHTML = "6";
+            document.querySelector(".sample02_Q6").innerHTML = "0.123456";
+            document.querySelector(".sample02_M6").innerHTML = ".toPrecision(5)";
+            document.querySelector(".sample02_R6").innerHTML =  (0.123456).toPrecision(5);
+
+            document.querySelector(".sample02_N7").innerHTML = "7";
+            document.querySelector(".sample02_Q7").innerHTML = "0.123456";
+            document.querySelector(".sample02_M7").innerHTML = ".toPrecision(3)";
+            document.querySelector(".sample02_R7").innerHTML =  (0.123456).toPrecision(3);
+
+            document.querySelector(".sample02_N8").innerHTML = "8";
+            document.querySelector(".sample02_Q8").innerHTML = "0.123456";
+            document.querySelector(".sample02_M8").innerHTML = ".toPrecision(1)";
+            document.querySelector(".sample02_R8").innerHTML =  (0.123456).toPrecision(1);
+        }
+
+        //sample3
+        //03. parseInt() / parseFloat() : 문자열을 숫자(정수) 유형으로 변경 : 반환(문자열)
+        {   
+            document.querySelector(".sample03_N1").innerHTML = "1";
+            document.querySelector(".sample03_Q1").innerHTML = "'1.23456'";
+            document.querySelector(".sample03_M1").innerHTML = ".parseInt()";
+            document.querySelector(".sample03_R1").innerHTML =  parseInt("1.23456");
+
+            document.querySelector(".sample03_N2").innerHTML = "2";
+            document.querySelector(".sample03_Q2").innerHTML = "'1.23456'";
+            document.querySelector(".sample03_M2").innerHTML = ".parseInt()";
+            document.querySelector(".sample03_R2").innerHTML =  parseFloat("1.23456");
+        }
+            
+    </script>
+</body>
+
+</html>

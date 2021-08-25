@@ -1,0 +1,188 @@
+/* imageType */
+body {
+    background-color: #f3f3f3;
+}
+.cardType {
+    margin: 150px 0;
+    background-color: #fff;
+    box-shadow: 0 0 50px rgb(0,0,0,0.1);
+}
+
+/* imageType01 */
+.imageType1 {
+    font-family: 'GmarketSans';
+    padding: 100px 0;
+}
+.imageType1 h2 {
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 36px;
+}
+.imageType1 .image-wrap {
+    overflow: hidden;
+}
+.imageType1 .image {
+    float: left;
+    width: 590px;
+    height: 434px;
+    position: relative;
+}
+.imageType1 .image:first-child {
+    margin-right: 20px;
+}
+
+.imageType1 .image .image-cont {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    color: #fff;
+}
+
+.imageType1 .image .image-title {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+.imageType1 .image .image-desc {
+    font-size: 14px;
+    font-weight: 500;
+    padding-right: 30%;
+    line-height: 1.4;
+}
+.imageType1 .image .image-btn {
+    padding: 8px 18px;
+    display: inline-block;
+    color:#fff;
+    margin-top: 10px;
+}
+
+.imageType1 .image .image-cont.s2 {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 400px;
+    padding: 20px;
+}
+.imageType1 .image .image-cont.s2 .image-desc {
+    padding-right: 0;
+}
+.imageType1 .image .image-cont.s2 .image-btn {
+    padding: 0;
+    border-bottom: 1px solid #fff;
+}
+
+/* imageType02 */
+.imageType2 {
+    font-family: 'GmarketSans';
+    padding: 100px 0;
+}
+.imageType2 h2 {
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 36px;
+}
+.imageType2 .image-wrap {
+    display: flex;
+    justify-content: space-between; /* 가로 정렬 */
+}
+.imageType2 .image {
+    width: 386px;
+    position: relative;
+    perspective: 800px; /*기준점*/
+}
+.imageType2 .image::after {
+    content: '';
+    background: #fff;
+    display: block;
+    position: absolute;
+    left: 30px; top: 30px; right: 30px ;bottom: 30px;
+    opacity: 0;
+    transform: rotateX(-90deg); /* 회전 */
+    transition: all 0.4s ease-in-out;
+}
+.imageType2 .image:hover::after {
+    opacity: 0.9;
+    transform: rotateX(0deg);
+}
+.imageType2 .image .image-img {}
+.imageType2 .image .image-cont {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    transform: translate(-50%, 50%); /* 가운데 정렬 */
+    z-index: 1000;  /* position 이랑 같이 써야함 */
+    transition: all 0.3s ease-out;
+}
+.imageType2 .image:hover .image-cont {
+    opacity: 1;
+    transform: translate(-50%, -50%); /* 가운데 정렬 */
+}
+.imageType2 .image .image-title {
+    font-size: 30px;
+    font-weight: 500;
+    color: #000;
+}
+.imageType2 .image .image-btn {
+    color: #fff;
+    padding: 7px 24px 5px 24px;
+    background: #000;
+    border-radius: 40px;
+    font-weight: 300;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+
+/* imageType03 */
+.imageType3 {
+    font-family: 'GmarketSans';
+    padding: 100px 0;
+}
+.imageType3 h2 {
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 42px;
+}
+.imageType3 .image-wrap {
+    display: grid;
+    grid-template-columns: repeat(4,285px);
+    grid-template-rows: 285px;
+    gap: 20px;
+}
+.imageType3 .image-wrap .image:first-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+}
+.imageType3 .image-wrap .image{
+    position: relative;
+}
+
+.imageType3 .image-wrap .image .box {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    object-fit: contain;
+}
+
+.imageType3 .image-wrap .image .image-title {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 7px;
+}
+
+.imageType3 .image-wrap .image .image-desc {
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 10px
+}
+.imageType3 .image-wrap .image .image-word {
+    color: #fff;
+}

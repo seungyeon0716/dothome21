@@ -7,7 +7,7 @@
     <meta name="author" content="허승연">
     <meta name="description" content="웹 사이트 제작을 위한 사이트입니다.">
     <meta name="keywords"content="허승연, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, SY, publisher, css3, html, markup, design">
-    <title>imageType</title>
+    <title>footerType</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/fonts.css">
@@ -18,37 +18,37 @@
     <link rel="stylesheet" href="css/imageType.css">
 </head>
 <body>
-    <!-- 이미지를 표현하는 방법 
-        1- 이미지를 img 태그 (alt)       ==> 의미가 있을 때
-        2- 이미지를 background 속성      ==> 의미가 없을 때(장식,배경)
-
-        3- 의미가 있는 이미지도 background로 사용  ==> 이미지 스프라이트 기법
-           이미지 스프라이트를 사용하게 되면 접근성이 깨짐  ==> IR 효과(alt)
-
-        4- 이미지 해상도  ==> 이미지 분류  ==> picture 태그, figure 태그
-    -->
-
     <!-- imageType01 -->
-    <section class="imageType">
+    <section class="cardType">
         <div class="container">
             <div class="imageType1">
                 <h2>패스트푸드</h2>
                 <div class="image-wrap">
                     <div class="image">
-                        <img class="image-img" src="img/image01.jpg" alt="햄버거 관련 이미지입니다.">
-                        <div class="image-cont s2">
-                            <h3 class="image-title">햄버거</h3>
-                            <p class="image-desc">미국에서는 공식적으로 '햄버거(hamburger)'는 순수 소고기로 만든 패티를 포함해야만 이 명칭을 쓸 수 있다.</p>
-                            <a class="image-btn" href="#">자세히 보기</a>
-                        </div>
+                        <a href="#">
+                            <img src="img/image01.jpg" alt="햄버거 관련 이미지입니다." class="image-img">
+                            <div class="box">
+                                <em class="image-title">햄버거</em>
+                                <span class="image-desc">미국에서는 공식적으로 '햄버거(hamburger)'는 순수 소고기로 만든
+                                    패티를 포함해야만 이 명칭을 쓸 수 있다. </span>
+                                <span class="image-word">
+                                    <span style="text-decoration: underline;">자세히보기</span>
+                                </span>
+                            </div>
+                        </a>
                     </div>
                     <div class="image">
-                        <img class="image-img" src="img/image02.jpg" alt="피자 관련 이미지입니다.">
-                        <div class="image-cont s2">
-                            <h3 class="image-title">피자</h3>
-                            <p class="image-desc">피자(pizza)는 밀가루로 된 얇고 납작한 반죽에 토마토 소스와 치즈 등(토핑)을 얹어서 구워내는 이탈리아식 파이의 일종이다.</p>
-                            <a class="image-btn" href="#">자세히 보기</a>
-                        </div>
+                        <a href="#">
+                            <img src="img/image02.jpg" alt="피자 관련 이미지입니다." class="image-img">
+                            <div class="box">
+                                <em class="image-title">피자</em>
+                                <span class="image-desc">피자(pizza)는 밀가루로 된 얇고 납작한 반죽에 토마토 소스와 치즈 
+                                    등(토핑)을 얹어서 구워내는 이탈리아식 파이의 일종이다.</span>
+                                <span class="image-word">
+                                    <span style="text-decoration: underline;">자세히보기</span> 
+                                </span>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -57,32 +57,38 @@
     <!-- //imageType01 -->
 
     <!-- imageType02 -->
-    <section class="imageType">
+    <section class="cardType">
         <div class="container">
             <div class="imageType2">
-                <h2>깊은 저 바닷속 해파리</h2>
+                <h2>우주탐험</h2>
                 <div class="image-wrap">
-                    <figure class="image">
-                        <img class="image-img" src="img/imageType03.jpg" alt="해파리 이미지1">
-                        <figcaption class="image-cont">
-                            <h3 class="image-title">해파리 형태</h3>
-                            <a href="#" class="image-btn">자세히 보기</a>
-                        </figcaption>
-                    </figure>
-                    <figure class="image">
-                        <img class="image-img" src="img/imageType04.jpg" alt="해파리 이미지2">
-                        <figcaption class="image-cont">
-                            <h3 class="image-title">해파리 종류</h3>
-                            <a href="#" class="image-btn">자세히 보기</a>
-                        </figcaption>
-                    </figure>
-                    <figure class="image">
-                        <img class="image-img" src="img/imageType05.jpg" alt="해파리 이미지3">
-                        <figcaption class="image-cont">
-                            <h3 class="image-title">위험한 해파리</h3>
-                            <a href="#" class="image-btn">자세히 보기</a>
-                        </figcaption>
-                    </figure>
+                    <div class="image">
+                        <a href="#">
+                            <img src="img/image03.jpg" alt="Galaxy 관련 이미지입니다." class="image-img">
+                            <div class="box">
+                                <em class="image-title">Galaxy</em>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="image">
+                        <a href="#">
+                            <img src="img/image04.jpg" alt="universe 관련 이미지입니다." class="image-img">
+                            <div class="box">
+                                <em class="image-title">universe</em>
+                                <span class="image-word">
+                                    <span>자세히보기</span> 
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="image">
+                        <a href="#">
+                            <img src="img/image05.jpg" alt="Galaxy 관련 이미지입니다." class="image-img">
+                            <div class="box">
+                                <em class="image-title">Galaxy</em>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -90,7 +96,7 @@
     <!-- //imageType02 -->
 
     <!-- imageType03 -->
-    <section class="imageType">
+    <section class="cardType">
         <div class="container">
             <div class="imageType3">
                 <h2>달(MOON)</h2>
