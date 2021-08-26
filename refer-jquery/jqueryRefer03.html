@@ -187,35 +187,60 @@
                             <td>클릭하면 .active 클래스를 찾은 후에 클래스를 제거</td>
                         </tr>
                         <tr>
-                            <td class="center" rowspan="6">Dimensions</td>
+                            <td class="center" rowspan="11">Dimensions</td>
                             <td>.width()</td>
                             <td>-</td>
-                            <td>요소의 가로 값을 가져오거나 설정합니다.</td>
+                            <td>요소의 가로 값(패딩/보더/마진 불포함)을 가져오거나 설정합니다.</td>
                         </tr>
                         <tr>
                             <td>.innerWidth()</td>
-                            <td>-</td>
-                            <td>요소의 가로(패딩 포함, 보더/마진 미포함) 값을 가져오거나 설정합니다.</td>
+                            <td><a href="../refer-javascript/javascriptRefer10.html#sample04" target="_blank">element.clientWidth</a></td>
+                            <td>요소의 가로 값(패딩 포함)을 가져오거나 설정합니다.</td>
                         </tr>
                         <tr>
                             <td>.outerWidth()</td>
+                            <td><a href="../refer-javascript/javascriptRefer10.html#sample04" target="_blank"> element.offsetWidth</a></td>
+                            <td>요소의 가로 값(패딩/보더 포함)을 가져오거나 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>.outerWidth(true)</td>
                             <td>-</td>
-                            <td>요소의 가로(보더/패딩/마진 포함) 값을 가져오거나 설정합니다.</td>
+                            <td>요소의 가로 값(패딩/보더/마진 포함)을 가져오거나 설정합니다.</td>
                         </tr>
                         <tr>
                             <td>.hight()</td>
                             <td>-</td>
-                            <td>요소의 세로 값을 가져오거나 설정합니다.</td>
+                            <td>요소의 세로 값(패딩/보더/마진 불포함)을 가져오거나 설정합니다.</td>
                         </tr>
                         <tr>
-                            <td>.innerHight()</td>
-                            <td>-</td>
-                            <td>요소의 세로(패딩 포함, 보더/마진 미포함) 값을 가져오거나 설정합니다.</td>
+                            <td>.innerHeight()</td>
+                            <td><a href="../refer-javascript/javascriptRefer10.html#sample04" target="_blank">element.clientHeight</a></td>
+                            <td>요소의 세로 값을(패딩 포함) 가져오거나 설정합니다.</td>
                         </tr>
                         <tr>
-                            <td>.outerHight()</td>
+                            <td>.outerHeight()</td>
+                            <td><a href="../refer-javascript/javascriptRefer10.html#sample04" target="_blank"> element.offsetHeight</a></td>
+                            <td>요소의 세로 값을(보더/패딩 포함) 가져오거나 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>.outerHeight(true)</td>
                             <td>-</td>
-                            <td>요소의 세로(보더/패딩/마진 포함) 값을 가져오거나 설정합니다.</td>
+                            <td>요소의 세로 값을(보더/패딩/마진 포함) 가져오거나 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>$(document).width()</td>
+                            <td>-</td>
+                            <td>문서의 가로 값을 가져오거나 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>$(window).width()</td>
+                            <td>window.innerWidth()</td>
+                            <td>브라우저의 가로 값을 가져오거나 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>$(window).height()</td>
+                            <td>window.innerHeight()</td>
+                            <td>브라우저의 세로 값을 가져오거나 설정합니다.</td>
                         </tr>
                         <tr>
                             <td class="center" rowspan="5">offset</td>
@@ -400,6 +425,7 @@
             padding: 10px;
             margin: 10px;
             border: 5px solid #eb97d3;
+            box-sizing: content-box;
             border-radius: 50%;
             background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
             top: 50%;
@@ -409,7 +435,7 @@
     </style>
     <!-- sample04 -->
     <div id="sample04" class="sample">
-        <h2>04. width(), innerWidth(), outerWidth()<span class="dot"></span></h2>
+        <h2>04. width(), innerWidth(), outerWidth(), height(), innerheight(), outerheight()<span class="dot"></span></h2>
         <div class="view ex4">
            <span class="circle circle4"></span>
 
@@ -419,14 +445,16 @@
             <a href="#c" class="btn4-1">클릭하면 원의 가로(width)값을 구합니다.</a>
             <a href="#c" class="btn4-2">클릭하면 원의 가로(innerWidth)값을 구합니다.</a>
             <a href="#c" class="btn4-3">클릭하면 원의 가로(outerWidth)값을 구합니다.</a>
-            <a href="#c" class="btn4-4">클릭하면 원의 가로(height)값을 구합니다.</a>
-            <a href="#c" class="btn4-5">클릭하면 원의 가로(innerHeight)값을 구합니다.</a>
-            <a href="#c" class="btn4-6">클릭하면 원의 가로(outerHeight)값을 구합니다.</a>
+            <a href="#c" class="btn4-4">클릭하면 원의 가로(outerWidth(true))값을 구합니다.</a>
+            <a href="#c" class="btn4-5">클릭하면 원의 가로(height)값을 구합니다.</a>
+            <a href="#c" class="btn4-6">클릭하면 원의 가로(innerHeight)값을 구합니다.</a>
+            <a href="#c" class="btn4-7">클릭하면 원의 가로(outerHeight)값을 구합니다.</a>
+            <a href="#c" class="btn4-8">클릭하면 원의 가로(outerHeight(true))값을 구합니다.</a>
         </div>
         <div class="btn">
-            <a href="#c" class="btn4-7">클릭하면 샘플 박스의 가로 값을 구합니다.</a>
-            <a href="#c" class="btn4-8">클릭하면 문서의 가로 값을 구합니다.</a>
-            <a href="#c" class="btn4-9">클릭하면 브라우저의 가로 값을 구합니다.</a>
+            <a href="#c" class="btn4-9">클릭하면 샘플 박스의 가로/세로 값을 구합니다.</a>
+            <a href="#c" class="btn4-10">클릭하면 문서의 가로/세로 값을 구합니다.</a>
+            <a href="#c" class="btn4-11">클릭하면 브라우저의 가로/세로 값을 구합니다.</a>
         </div>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
@@ -444,23 +472,29 @@
         demension("가로(outerWidth)", $(".circle4").outerWidth());
     });
     $(".btn4-4").click(function(){
-        demension("세로(height)", $(".circle4").height());
+        demension("가로(outerWidth)", $(".circle4").outerWidth(true));
     });
     $(".btn4-5").click(function(){
-        demension("세로(innerHeight)", $(".circle4").innerHeight());
+        demension("세로(height)", $(".circle4").height());
     });
     $(".btn4-6").click(function(){
+        demension("세로(innerHeight)", $(".circle4").innerHeight());
+    });
+    $(".btn4-7").click(function(){
         demension("세로(outerHeight)", $(".circle4").outerHeight());
     });
-
-    $(".btn4-7").click(function(){
-        $(".text4").text("이 샘플 박스의 가로 값은 " + $("#sample04").width() + " px 입니다.")
-    });
     $(".btn4-8").click(function(){
-        $(".text4").text("이 문서의 가로 값은 " + $(document).width() + " px 입니다.")
+        demension("세로(outerHeight)", $(".circle4").outerHeight(true));
     });
+
     $(".btn4-9").click(function(){
-        $(".text4").text("이 브라우저의 가로 값은 " + $(window).width() + " px 입니다.")
+        $(".text4").html("이 샘플 박스의 가로 값은 " + $("#sample04").width() + " px 입니다. <br> 이 샘플 박스의 세로 값은 " + $("#sample04").height() + " px 입니다.")
+    });
+    $(".btn4-10").click(function(){
+        $(".text4").html("이 문서의 가로 값은 " + $(document).width() + " px 입니다. <br> 이 문서의 세로 값은 " + $(document).height() + " px 입니다.")
+    });
+    $(".btn4-11").click(function(){
+        $(".text4").html("이 브라우저의 가로 값은 " + $(window).width() + " px 입니다. <br> 이 브라우저의 세로 값은 " + $(window).height() + " px 입니다.")
     });
 }
 </code></pre>
@@ -482,23 +516,29 @@
             demension("가로(outerWidth)", $(".circle4").outerWidth());
         });
         $(".btn4-4").click(function(){
-            demension("세로(height)", $(".circle4").height());
+            demension("가로(outerWidth)", $(".circle4").outerWidth(true));
         });
         $(".btn4-5").click(function(){
-            demension("세로(innerHeight)", $(".circle4").innerHeight());
+            demension("세로(height)", $(".circle4").height());
         });
         $(".btn4-6").click(function(){
+            demension("세로(innerHeight)", $(".circle4").innerHeight());
+        });
+        $(".btn4-7").click(function(){
             demension("세로(outerHeight)", $(".circle4").outerHeight());
         });
-
-        $(".btn4-7").click(function(){
-            $(".text4").text("이 샘플 박스의 가로 값은 " + $("#sample04").width() + " px 입니다.")
-        });
         $(".btn4-8").click(function(){
-            $(".text4").text("이 문서의 가로 값은 " + $(document).width() + " px 입니다.")
+            demension("세로(outerHeight)", $(".circle4").outerHeight(true));
         });
+
         $(".btn4-9").click(function(){
-            $(".text4").text("이 브라우저의 가로 값은 " + $(window).width() + " px 입니다.")
+            $(".text4").html("이 샘플 박스의 가로 값은 " + $("#sample04").width() + " px 입니다. <br> 이 샘플 박스의 세로 값은 " + $("#sample04").height() + " px 입니다.")
+        });
+        $(".btn4-10").click(function(){
+            $(".text4").html("이 문서의 가로 값은 " + $(document).width() + " px 입니다. <br> 이 문서의 세로 값은 " + $(document).height() + " px 입니다.")
+        });
+        $(".btn4-11").click(function(){
+            $(".text4").html("이 브라우저의 가로 값은 " + $(window).width() + " px 입니다. <br> 이 브라우저의 세로 값은 " + $(window).height() + " px 입니다.")
         });
     </script>
     <!-- //sample04 -->

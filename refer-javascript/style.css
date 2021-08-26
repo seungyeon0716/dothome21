@@ -161,8 +161,7 @@ hr {
 }
 /* option */
 .view {
-    padding: 20px;
-    border: 1px solid #F2F2F2;
+    padding: 3px;
 }
 .view ul {
     display: flex;
