@@ -13,7 +13,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism-okaidia.min.css"
         integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -86,7 +89,34 @@
 
     <hr>
 
-    <!-- //sample1 -->
+    <style>
+        .btn-JS1 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS1  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active1 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample1 -->
     <div id="sample1" class="sample">
         <h2>01. 선언적 함수 <span class="dot"></span></h2>
         <div class="code">
@@ -99,9 +129,49 @@
 </code></pre>
         </div>
     </div>
-
+    <div class="btn-JS1">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result1" style="display:none;">
+        <p class="active1">함수가 실행되었습니다.</p>
+    </div>
+    <script>
+        $(function(){
+            $(".btn-JS1").click(function(){
+            $(".result1").toggle();
+            });
+        });
+    </script>
     <hr>
-    <!-- //sample2 -->
+
+    <style>
+        .btn-JS2 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS2  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active2 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample2 -->
     <div id="sample2" class="sample">
         <h2>02. 익명 함수 <span class="dot"></span></h2>
         <div class="code">
@@ -114,9 +184,49 @@
 </code></pre>
         </div>
     </div>
-
+    <div class="btn-JS2">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result2" style="display:none;">
+        <p class="active2">함수가 실행되었습니다.</p>
+    </div>
+    <script>
+        $(function(){
+            $(".btn-JS2").click(function(){
+            $(".result2").toggle();
+            });
+        });
+    </script>
     <hr>
-    <!-- //sample3 -->
+
+    <style>
+        .btn-JS3 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS3  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active3 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample3 -->
     <div id="sample3" class="sample">
         <h2>03. 매개변수 함수 <span class="dot"></span></h2>
         <div class="code">
@@ -126,17 +236,60 @@
     }
     func("함수가 실행되었습니다.");
 
-    function func(str1, str2){
+    function func2(str1, str2){
         document.write(str1, str2);
     }
-    func("함수가", " 실행되었습니다.");
+    func2("함수가", " 실행되었습니다.");
 }
 </code></pre>
         </div>
     </div>
-
+    <div class="btn-JS3">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result3" style="display:none;">
+        <p class="active3">함수가 실행되었습니다.<br>
+                            <br>
+                            함수가 실행되었습니다.
+            </p>
+    </div>
+    <script>
+        $(function(){
+            $(".btn-JS3").click(function(){
+            $(".result3").toggle();
+            });
+        });
+    </script>
     <hr>
-    <!-- //sample4 -->
+
+    <style>
+        .btn-JS4 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS4  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active4 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample4 -->
     <div id="sample1" class="sample">
         <h2>04. 리턴값 함수 <span class="dot"></span></h2>
         <div class="code">
@@ -150,9 +303,49 @@
 </code></pre>
         </div>
     </div>
-
+    <div class="btn-JS4">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result4" style="display:none;">
+        <p class="active4">함수가 실행되었습니다.</p>
+    </div>
+    <script>
+        $(function(){
+            $(".btn-JS4").click(function(){
+            $(".result4").toggle();
+            });
+        });
+    </script>
     <hr>
-    <!-- //sample5 -->
+
+    <style>
+        .btn-JS5 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS5  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active5 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample5 -->
     <div id="sample5" class="sample">
         <h2>05. 화살표 함수 : 선언적 함수 <span class="dot"></span></h2>
         <div class="code">
@@ -165,10 +358,49 @@
 </code></pre>
         </div>
     </div>
-
+    <div class="btn-JS5">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result5" style="display:none;">
+        <p class="active5">함수가 실행되었습니다.</p>
+    </div>
+    <script>
+        $(function(){
+            $(".btn-JS5").click(function(){
+            $(".result5").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample6 -->
+    <style>
+        .btn-JS6 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS6  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active6 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample6 -->
     <div id="sample6" class="sample">
         <h2>06. 화살표 함수 : 익명 함수 <span class="dot"></span></h2>
         <div class="code">
@@ -181,10 +413,49 @@
 </code></pre>
         </div>
     </div>
-
+    <div class="btn-JS6">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result6" style="display:none;">
+        <p class="active6">함수가 실행되었습니다.</p>
+    </div>
+    <script>
+        $(function(){
+            $(".btn-JS6").click(function(){
+            $(".result6").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample7 -->
+    <style>
+        .btn-JS7 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS7  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active7 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample7 -->
     <div id="sample5" class="sample">
         <h2>07. 화살표 함수 : 리턴값 함수 <span class="dot"></span></h2>
         <div class="code">
@@ -198,10 +469,49 @@
 </code></pre>
         </div>
     </div>
-
+    <div class="btn-JS7">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result7" style="display:none;">
+        <p class="active7">함수가 실행되었습니다.</p>
+    </div>
+    <script>
+        $(function(){
+            $(".btn-JS7").click(function(){
+            $(".result7").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample8 -->
+    <style>
+        .btn-JS8 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS8  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active8 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample8 -->
     <div id="sample8" class="sample">
         <h2>08. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 <span class="dot"></span></h2>
         <div class="code">
@@ -214,10 +524,49 @@
 </code></pre>
         </div>
     </div>
-
+    <div class="btn-JS8">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result8" style="display:none;">
+        <p class="active8">함수가 실행되었습니다.</p>
+    </div>
+    <script>
+        $(function(){
+            $(".btn-JS8").click(function(){
+            $(".result8").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample9 -->
+    <style>
+        .btn-JS9 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS9  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active9 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample9 -->
     <div id="sample9" class="sample">
         <h2>09. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략 <span class="dot"></span></h2>
         <div class="code">
@@ -230,10 +579,49 @@
 </code></pre>
         </div>
     </div>
-
+    <div class="btn-JS9">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result9" style="display:none;">
+        <p class="active9">함수가 실행되었습니다.</p>
+    </div>
+    <script>
+        $(function(){
+            $(".btn-JS9").click(function(){
+            $(".result9").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample10 -->
+    <style>
+        .btn-JS10 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS10  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active10 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample10 -->
     <div id="sample10" class="sample">
         <h2>10. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 매개변수 괄호 생략 + 리턴 생략 <span class="dot"></span></h2>
         <div class="code">
@@ -245,10 +633,49 @@
 </code></pre>
         </div>
     </div>
-
+    <div class="btn-JS10">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result10" style="display:none;">
+        <p class="active10">함수가 실행되었습니다.</p>
+    </div>
+    <script>
+        $(function(){
+            $(".btn-JS10").click(function(){
+            $(".result10").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample11 -->
+    <style>
+        .btn-JS11 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS11  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active11 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample11 -->
     <div id="sample11" class="sample">
         <h2>11.화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략 <span class="dot"></span></h2>
         <div class="code">
@@ -260,10 +687,49 @@
 </code></pre>
         </div>
     </div>
-
+    <div class="btn-JS11">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result11" style="display:none;">
+        <p class="active11">함수가 실행되었습니다.</p>
+    </div>
+    <script>
+        $(function(){
+            $(".btn-JS11").click(function(){
+            $(".result11").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample12 -->
+    <style>
+        .btn-JS12 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS12  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active12 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample12 -->
     <div id="sample12" class="sample">
         <h2>12. 내부 함수<span class="dot"></span></h2>
         <div class="code">
@@ -284,10 +750,51 @@
 </code></pre>
         </div>
     </div>
-
+    <div class="btn-JS12">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result12" style="display:none;">
+        <p class="active12">함수A가 실행되었습니다.<br>
+            함수B가 실행되었습니다.
+            </p>
+    </div>
+    <script>
+        $(function(){
+            $(".btn-JS12").click(function(){
+            $(".result12").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample13 -->
+    <style>
+        .btn-JS13 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS13  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active13 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample13 -->
     <div id="sample13" class="sample">
         <h2>13. 즉시실행 함수 <span class="dot"></span></h2>
         <div class="code">
@@ -299,10 +806,49 @@
 </code></pre>
         </div>
     </div>
-
+    <div class="btn-JS13">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result13" style="display:none;">
+        <p class="active13">함수가 실행되었습니다.</p>
+    </div>
+    <script>
+        $(function(){
+            $(".btn-JS13").click(function(){
+            $(".result13").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample14-->
+    <style>
+        .btn-JS14 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS14  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active14 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample14-->
     <div id="sample14" class="sample">
         <h2>14. 파라미터 함수 <span class="dot"></span></h2>
         <div class="code">
@@ -315,10 +861,49 @@
 </code></pre>
         </div>
     </div>
-
+    <div class="btn-JS14">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result14" style="display:none;">
+        <p class="active14">함수가 실행되었습니다.</p>
+    </div>
+    <script>
+        $(function(){
+            $(".btn-JS14").click(function(){
+            $(".result14").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample15-->
+    <style>
+        .btn-JS15 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS15  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active15 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample15-->
     <div id="sample15" class="sample">
         <h2>15. 아규먼트 함수 <span class="dot"></span></h2>
         <div class="code">
@@ -332,10 +917,50 @@
 </code></pre>
         </div>
     </div>
-
+    <div class="btn-JS15">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result15" style="display:none;">
+        <p class="active15">함수A가 실행되었습니다.<br>
+            함수B가 실행되었습니다.</p>
+    </div>
+    <script>
+        $(function(){
+            $(".btn-JS15").click(function(){
+            $(".result15").toggle();
+            });
+        });
+    </script>
     <hr>
 
-     <!-- //sample16-->
+    <style>
+        .btn-JS16 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS16  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active16 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+     <!-- sample16-->
      <div id="sample16" class="sample">
         <h2>16. 재귀 함수 <span class="dot"></span></h2>
         <div class="code">
@@ -353,10 +978,54 @@
 </code></pre>
         </div>
     </div>
-
+    <div class="btn-JS16">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result16" style="display:none;">
+        <p class="active16">함수가 실행되었습니다.<br>
+                            함수가 실행되었습니다.<br>
+                            함수가 실행되었습니다.<br>
+                            함수가 실행되었습니다.<br>
+                            함수가 실행되었습니다.
+        </p>
+    </div>
+    <script>
+        $(function(){
+            $(".btn-JS16").click(function(){
+            $(".result16").toggle();
+            });
+        });
+    </script>
     <hr>
 
-     <!-- //sample17-->
+    <style>
+        .btn-JS17 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS17  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active17 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+     <!-- sample17-->
      <div id="sample17" class="sample">
         <h2>17. 콜백 함수 <span class="dot"></span></h2>
         <div class="code">
@@ -373,10 +1042,50 @@
 </code></pre>
         </div>
     </div>
-
+    <div class="btn-JS17">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result17" style="display:none;">
+        <p class="active17">함수B가 실행되었습니다.<br>
+            함수A가 실행되었습니다.</p>
+    </div>
+    <script>
+        $(function(){
+            $(".btn-JS17").click(function(){
+            $(".result17").toggle();
+            });
+        });
+    </script>
     <hr>
 
-     <!-- //sample18-->
+    <style>
+        .btn-JS18 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS18  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active18 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+     <!-- sample18-->
      <div id="sample18" class="sample">
         <h2>18. 콜백 함수 : 반복문 <span class="dot"></span></h2>
         <div class="code">
@@ -394,10 +1103,54 @@
 </code></pre>
         </div>
     </div>
-
+    <div class="btn-JS18">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result18" style="display:none;">
+        <p class="active18">함수가 실행되었습니다.<br>
+                            함수가 실행되었습니다.<br>
+                            함수가 실행되었습니다.<br>
+                            함수가 실행되었습니다.<br>
+                            함수가 실행되었습니다.
+        </p>
+    </div>
+    <script>
+        $(function(){
+            $(".btn-JS18").click(function(){
+            $(".result18").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample19-->
+    <style>
+        .btn-JS19 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS19  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active19 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample19-->
     <div id="sample19" class="sample">
         <h2>19. 콜백 함수 : 동기/비동기 <span class="dot"></span></h2>
         <div class="code">
@@ -439,10 +1192,49 @@
 </code></pre>
         </div>
     </div>
-
+    <div class="btn-JS19">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result19" style="display:none;">
+        <p class="active19">funcB가 실행되었습니다. funcA가 실행되었습니다.</p>
+    </div>
+    <script>
+        $(function(){
+            $(".btn-JS19").click(function(){
+            $(".result19").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample20-->
+    <style>
+        .btn-JS20 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS20  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active20 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample20-->
     <div id="sample20" class="sample">
         <h2>20. 콜백 함수 : 콜백지옥 <span class="dot"></span></h2>
         <div class="code">
@@ -452,10 +1244,49 @@
 </code></pre>
         </div>
     </div>
-
+    <div class="btn-JS20">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result20" style="display:none;">
+        <p class="active20"></p>
+    </div>
+    <script>
+        $(function(){
+            $(".btn-JS20").click(function(){
+            $(".result20").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample21-->
+    <style>
+        .btn-JS21 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS21  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active21 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample21-->
     <div id="sample21" class="sample">
         <h2>21. 함수 유형 : 함수와 매개변수를 이용한 형태 <span class="dot"></span></h2>
         <div class="code">
@@ -469,10 +1300,50 @@
 </code></pre>
         </div>
     </div>
-
+    <div class="btn-JS21">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result21" style="display:none;">
+        <p class="active21">1. 내 이름은 허승연이며, 직업은 웹 퍼블리셔입니다.<br>
+                            2. 내 이름은 허승연이며, 직업은 프론트앤드 개발자입니다.</p>
+    </div>
+    <script>
+        $(function(){
+            $(".btn-JS21").click(function(){
+            $(".result21").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample22-->
+    <style>
+        .btn-JS22 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS22  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active22 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample22-->
     <div id="sample22" class="sample">
         <h2>22. 함수 유형 : 함수와 변수를 이용한 형태 <span class="dot"></span></h2>
         <div class="code">
@@ -493,10 +1364,50 @@
 </code></pre>
         </div>
     </div>
-
+    <div class="btn-JS22">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result22" style="display:none;">
+        <p class="active22">1. 내 이름은 허승연이며, 직업은 웹 퍼블리셔입니다.<br>
+                            2. 내 이름은 허승연이며, 직업은 프론트앤드 개발자입니다.</p>
+    </div>
+    <script>
+        $(function(){
+            $(".btn-JS22").click(function(){
+            $(".result22").toggle();
+            });
+        });
+    </script>
     <hr>
 
-     <!-- //sample23-->
+    <style>
+        .btn-JS23 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS23  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active23 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+     <!-- sample23-->
      <div id="sample23" class="sample">
         <h2>23. 함수 유형 : 함수와 배열을 이용한 형태 <span class="dot"></span></h2>
         <div class="code">
@@ -524,10 +1435,50 @@
 </code></pre>
         </div>
     </div>
-
+    <div class="btn-JS23">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result23" style="display:none;">
+        <p class="active23">1. 내 이름은 허승연이며, 직업은 웹 퍼블리셔입니다.<br>
+                            2. 내 이름은 허승연이며, 직업은 프론트앤드 개발자입니다.</p>
+    </div>
+    <script>
+        $(function(){
+            $(".btn-JS23").click(function(){
+            $(".result23").toggle();
+            });
+        });
+    </script>
     <hr>
 
-     <!-- //sample24-->
+    <style>
+        .btn-JS24 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS24  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active24 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+     <!-- sample24-->
      <div id="sample24" class="sample">
         <h2>24. 함수 유형 : 함수와 객체를 이용한 형태 <span class="dot"></span></h2>
         <div class="code">
@@ -551,10 +1502,50 @@
 </code></pre>
         </div>
     </div>
-
+    <div class="btn-JS24">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result24" style="display:none;">
+        <p class="active24">1. 내 이름은 허승연이며, 직업은 웹 퍼블리셔입니다.<br>
+                            2. 내 이름은 허승연이며, 직업은 프론트앤드 개발자입니다.</p>
+    </div>
+    <script>
+        $(function(){
+            $(".btn-JS24").click(function(){
+            $(".result24").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample25-->
+    <style>
+        .btn-JS25 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS25  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active25 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample25-->
     <div id="sample25" class="sample">
         <h2>25. 함수 유형 : 함수와 객체(함수)를 이용한 형태 <span class="dot"></span></h2>
         <div class="code">
@@ -580,10 +1571,50 @@
 </code></pre>
         </div>
     </div>
-
+    <div class="btn-JS25">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result25" style="display:none;">
+        <p class="active25">1. 내 이름은 허승연이며, 직업은 웹 퍼블리셔입니다.<br>
+                            2. 내 이름은 허승연이며, 직업은 프론트앤드 개발자입니다.</p>
+    </div>
+    <script>
+        $(function(){
+            $(".btn-JS25").click(function(){
+            $(".result25").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample26-->
+    <style>
+        .btn-JS26 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS26  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active26 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample26-->
     <div id="sample26" class="sample">
         <h2>26. 함수 유형 : 객체 생성자 함수 <span class="dot"></span></h2>
         <div class="code">
@@ -607,10 +1638,50 @@
 </code></pre>
         </div>
     </div>
-
+    <div class="btn-JS26">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result26" style="display:none;">
+        <p class="active26">1. 내 이름은 허승연이며, 직업은 웹 퍼블리셔입니다.<br>
+                            2. 내 이름은 허승연이며, 직업은 프론트앤드 개발자입니다.</p>
+    </div>
+    <script>
+        $(function(){
+            $(".btn-JS26").click(function(){
+            $(".result26").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample27-->
+    <style>
+        .btn-JS27 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS27  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active27 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample27-->
     <div id="sample27" class="sample">
         <h2>27. 함수 유형 : 프로토타입 함수 <span class="dot"></span></h2>
         <div class="code">
@@ -633,10 +1704,50 @@
 </code></pre>
         </div>
     </div>
-
+    <div class="btn-JS27">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result27" style="display:none;">
+        <p class="active27">1. 내 이름은 허승연이며, 직업은 웹 퍼블리셔입니다.<br>
+                            2. 내 이름은 허승연이며, 직업은 프론트앤드 개발자입니다.</p>
+    </div>
+    <script>
+        $(function(){
+            $(".btn-JS27").click(function(){
+            $(".result27").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample28-->
+    <style>
+        .btn-JS28 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS28  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active28 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample28-->
     <div id="sample28" class="sample">
         <h2>28. 함수 유형 : 객체 리터럴 함수 <span class="dot"></span></h2>
         <div class="code">
@@ -664,10 +1775,50 @@
 </code></pre>
         </div>
     </div>
-
+    <div class="btn-JS28">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result28" style="display:none;">
+        <p class="active28">1. 내 이름은 허승연이며, 직업은 웹 퍼블리셔입니다.<br>
+                            2. 내 이름은 허승연이며, 직업은 프론트앤드 개발자입니다.</p>
+    </div>
+    <script>
+        $(function(){
+            $(".btn-JS28").click(function(){
+            $(".result28").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample29-->
+    <style>
+        .btn-JS29 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS29  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active29 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample29-->
     <div id="sample29" class="sample">
         <h2>29. 함수 유형 : 클래스 <span class="dot"></span></h2>
         <div class="code">
@@ -691,7 +1842,21 @@
 </code></pre>
         </div>
     </div>
-
+    <div class="btn-JS29">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result29" style="display:none;">
+        <p class="active29">1. 내 이름은 허승연이며, 직업은 웹 퍼블리셔입니다.<br>
+                            2. 내 이름은 허승연이며, 직업은 프론트앤드 개발자입니다.
+        </p>
+    </div>
+    <script>
+        $(function(){
+            $(".btn-JS29").click(function(){
+            $(".result29").toggle();
+            });
+        });
+    </script>
     <hr>
 
     </main>
@@ -701,541 +1866,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
     <script>
-        //sample1
-        //01. 선언적 함수
-        {   
-            function func(){
-                document.write("*** 01. 선언적 함수***<br>");
-                document.write("함수가 실행되었습니다.<br><br>");
-            }
-            func();
-        }
-        
-        //sample2
-        //02. 익명 함수(변수 안에 설정)
-        {
-            const func = function(){
-                document.write("*** 02. 익명 함수***<br>");
-                document.write("함수가 실행되었습니다.<br><br>");
-            }
-            func();
-        }
-
-        //sample3
-        //03. 매개변수 함수
-        {   
-            function func(str){
-                document.write("*** 03. 매개변수 함수***<br>");
-                document.write(str);
-            }
-            func("함수가 실행되었습니다.<br><br>");
-
-            function func(str1, str2){
-                document.write(str1, str2);
-            }
-            func("함수가", " 실행되었습니다.<br><br>");
-        }
-
-        //sample4
-        //04. 리턴값(결과값) 함수
-        {
-            function func(){
-                document.write("*** 04. 리턴값 함수***<br>"); 
-                const str = "함수가 실행되었습니다.<br><br>";
-                return str;
-            }
-
-            document.write(func());
-        }
-
-        //sample5
-        //05. 화살표 함수 : 선언적 함수
-        {
-            //  function func(){
-            //      document.write("*** 05. 화살표 함수 : 선언적 함수***<br>");  
-            //      document.write("함수가 실행되었습니다.!")
-            //  }
-            //  func();
-            
-            func = () => {
-                document.write("*** 05. 화살표 함수 : 선언적 함수***<br>");  
-                document.write("함수가 실행되었습니다.!<br>")
-            }
-            func();
-
-            document.write("<br>")
-        }
-
-        //sample6
-        //06. 화살표 함수 : 익명 함수
-        {
-            // const func = function(){
-            //     document.write("*** 06. 화살표 함수 : 익명 함수***<br>");  
-            //     document.write("함수가 실행되었습니다.!<br>")
-            // }
-            // func();
-
-            const func = () => {
-                document.write("*** 06. 화살표 함수 : 익명 함수***<br>");  
-                document.write("함수가 실행되었습니다.!<br>")
-            }
-            func();
-
-            document.write("<br>")
-        }
-
-        //sample7
-        //07. 화살표 함수 : 리턴값 함수
-        {
-            // const str = "함수가 실행되었습니다.<br><br>";  //전역변수
-
-            // function func(){
-            //     document.write("*** 07. 화살표 함수 : 리턴값 함수***<br>"); 
-            //     const str = "함수가 실행되었습니다.<br><br>";  //지역 변수
-            //     return str;
-            // } 
-            // document.write(func());
-
-            func= () => {
-                document.write("*** 07. 화살표 함수 : 리턴값 함수***<br>"); 
-                const str = "함수가 실행되었습니다.<br><br>";
-                return str;
-            }
-            document.write(func());
-        }
-
-        //sample8
-        //08. 화살표 함수 : 익명함수 + 매개변수 + 리턴값
-        {
-            document.write("*** 08. 화살표 함수 : 익명함수 + 매개변수 + 리턴값***<br>"); 
-
-            const func = (str) => {
-                return str;
-            }
-            document.write(func("함수가 실행되었습니다.<br><br>"));
-        }
-
-        //sample9
-        //09. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략
-        //매개 변수가 하나라면 괄호는 생략 가능
-        {
-            document.write("*** 09. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략***<br>"); 
-
-            const func = str => {
-                return str;
-            }
-            document.write(func("함수가 실행되었습니다.<br><br>"));
-        }
-
-        //sample10
-        //10. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 매개변수 괄호 생략 + 리턴 생략
-        {
-            document.write("*** 10. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 매개변수 괄호 생략 + 리턴 생략***<br>"); 
-
-            const func = str => str;
-            
-            document.write(func("함수가 실행되었습니다.<br><br>"));
-        }
-
-        //sample11
-        //11.화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략
-        {
-            document.write("*** 11.화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략***<br>");
-
-            func = str => str;
-            
-            document.write(func("함수가 실행되었습니다.<br><br>"));
-        }
-
-        //sample12
-        //12.내부 함수
-        {
-            document.write("*** 12.내부 함수 ***<br>");
-
-            function func(){
-                function funcA(){
-                    document.write("함수A가 실행되었습니다.<br>")
-                }
-                funcA();
-
-                function funcB(){
-                    document.write("함수B가 실행되었습니다.<br><br>")
-                }
-                funcB();
-            }
-            func();
-        }
-
-        //sample13
-        //13.즉시실행 함수 : 함수의 충돌을 방지하기 위해서
-        {
-            document.write("*** 13.즉시실행 함수 ***<br>");
-
-            // function func(){
-            //     document.write("함수가 실행되었습니다.<br>")
-            // }
-            // func();
-
-            (function (){
-                document.write("함수가 실행되었습니다.<br><br>")
-            })();
-        }
-
-        //sample14
-        //14.파라미터 함수 (시험 x)
-        {
-            document.write("*** 14.파라미터 함수 ***<br>");
-
-            // function func(str){
-            //     if( str == null ){
-            //         str = "함수가 실행되었습니다.<br><br>";
-            //         document.write(str);
-            //     }
-            // }
-            // func();
-
-            function func(str = "함수가 실행되었습니다.<br><br>"){
-                document.write(str);
-            }
-            func();
-        }
-
-        //sample15
-        //15.아규먼트 함수 (시험 x)
-        {
-            document.write("*** 15.아규먼트 함수 ***<br>");
-
-            function func(strA, strB){
-                // document.write(strA, "<br>");
-                // document.write(strB, "<br>");
-                document.write(arguments[0], "<br>");
-                document.write(arguments[1], "<br><br>");
-            }
-            func("함수A가 실행되었습니다.", "함수B가 실행되었습니다.");
-        }
-
-        //sample16
-        //16.재귀 함수 
-        //함수 정의문 내에서 자기 자신을 또 다시 호출하는 함수
-        {
-            document.write("*** 16.재귀 함수  ***<br>");
-
-            // function func(){
-            //     document.write("함수가 실행되었습니다.<br>");
-            //     func();
-            // }
-            // func();
-
-            function func(num){
-                if(num <= 1){
-                    document.write("함수가 실행되었습니다.<br>");
-                } else {
-                    document.write("함수가 실행되었습니다.<br>");
-                    func(num-1);
-                }
-            }
-            func(5);
-
-            document.write("<br>");
-        }
-
-        //sample17
-        //17. 콜백 함수
-        //첫번째 함수가 실행되고 난 뒤 두번째 함수를 다시 호출하는 함수
-        //다른 함수에 매개변수로 넘겨주는 함수
-        {
-            document.write("*** 17. 콜백 함수  ***<br>");
-
-            function funcA(){
-                document.write("함수A가 실행되었습니다.<br>");
-            }
-            function funcB(str){
-                document.write("함수B가 실행되었습니다.<br>");
-                str();  //funcA();
-            }
-            funcB(funcA);
-
-            document.write("<br>");
-        }
-
-        //sample18
-        //18. 콜백함수 : 반복문
-        {
-            document.write("*** 18. 콜백함수 : 반복문  ***<br>");
-
-            function func(){
-                document.write("함수가 실행되었습니다.<br>");
-            }
-            function callback(str){
-                for(let i=1; i<=5; i++){
-                    str(i); 
-                }
-            }
-            callback(func);
-            document.write("<br>");
-
-        }
-
-        //sample19
-        //19. 콜백 함수 : 동기/비동기
-        //동기(순차적) : 동시에 일어나는 것
-        //비동기(비순차적) : 동시에 일어나지 않는 것
-        {
-            document.write("*** 19. 콜백함수 : 동기/비동기  ***<br>");
-
-            //01
-            function funcA(){
-                document.write("funcA가 실행되었습니다.")
-            }
-            function funcB(){
-                document.write("funcB가 실행되었습니다.")
-            }
-            funcB();
-            funcA();
-          
-            //02
-            function funcC(){
-                // setTimeout(function(){
-                //     console.log("funcC 실행되었습니다.")
-                // }, 1000);
-               
-                setTimeout(() => {
-                    console.log("funcC 실행되었습니다.");
-                }, 1000);
-            }
-            function funcD(){
-                console.log("funcD 실행되었습니다.")
-            }
-            funcC();
-            funcD();
-
-            //03
-            function funcE(callback){
-                setTimeout(() => {
-                    console.log("funcE 실행되었습니다.");
-                    callback();
-                }, 1000);
-            }
-            function funcF(){
-                console.log("funcF 실행되었습니다.");
-            }
-            funcE(funcF);
-
-            document.write("<br><br>");
-        }
-
-        //sample20
-        //20. 콜백 지옥
-
-        //sample21
-        //21. 함수 유형 : 함수와 매개변수를 이용한 형태
-        {
-            document.write("*** 21. 함수 유형 : 함수와 매개변수를 이용한 형태  ***<br>");
-
-            function func(num, name, job){
-                document.write(num + ". 내 이름은 " + name + "이며, 직업은 " + job + "입니다.<br>");
-            }
-            func("1", "허승연", "웹 퍼블리셔");
-            func("2", "허승연", "프론트앤드 개발자");
-
-            document.write("<br>")
-        }
-
-        //sample22
-        //22. 함수 유형 : 함수와 변수를 이용한 형태
-        {
-            document.write("*** 22. 함수 유형 : 함수와 변수를 이용한 형태  ***<br>");
-
-            function func(num, name, job){
-                document.write(num + ". 내 이름은 " + name + "이며, 직업은 " + job + "입니다.<br>");
-            }
-            const youNum1 = "1";
-            const youName1 = "허승연";
-            const youJob1 = "웹퍼블리셔";
-            const youNum2 = "2";
-            const youName2 = "허승연";
-            const youJob2 = "프론트앤드 개발자";
-
-            func(youNum1, youName1, youJob1);
-            func(youNum2, youName2, youJob2);
-
-            document.write("<br>")
-        }
-
-        //sample23
-        //23. 함수 유형 : 함수와 배열을 이용한 형태
-        {
-            document.write("*** 23. 함수 유형 : 함수와 배열을 이용한 형태  ***<br>");
-
-            function func(num, name, job){
-                document.write(num + ". 내 이름은 " + name + "이며, 직업은 " + job + "입니다.<br>");
-            }
-
-            const info = [
-                {
-                    num: 1,
-                    name: "허승연",
-                    job: "웹 퍼블리셔"
-                },
-                {  
-                    num: 2,
-                    name: "허승연",
-                    job: "프론트앤드 개발자"
-                }
-            ];
-
-            func(info[0].num, info[0].name, info[0].job);
-            func(info[1].num, info[1].name, info[1].job);
-
-            document.write("<br>")
-        }
-
-        //sample24
-        //24. 함수 유형 : 함수와 객체를 이용한 형태
-        {
-            document.write("*** 24. 함수 유형 : 함수와 객체를 이용한 형태  ***<br>");
-
-            function func(num, name, job){
-                document.write(num + ". 내 이름은 " + name + "이며, 직업은 " + job + "입니다.<br>");
-            }
-
-            const info = {
-                num1: 1,
-                name1: "허승연",
-                job1: "웹 퍼블리셔",
-                num2: 2,
-                name2: "허승연",
-                job2: "프론트앤드 개발자"
-            }
-
-            func(info.num1, info.name1, info.job1);
-            func(info.num2, info.name2, info.job2);
-
-            document.write("<br>")
-        }
-
-        //sample25
-        //25. 함수 유형 : 함수와 객체(함수)를 이용한 형태
-        {
-            document.write("*** 25. 함수 유형 : 함수와 객체(함수)를 이용한 형태  ***<br>");
-
-            const info = {
-                num1: 1,
-                name1: "허승연",
-                job1: "웹 퍼블리셔",
-                num2: 2,
-                name2: "허승연",
-                job2: "프론트앤드 개발자",
-
-                result1 : function(){
-                    document.write(info.num1 + ". 내 이름은 " + info.name1 + "이며, 직업은 " + info.job1 + "입니다.<br>");
-                },
-                result2 : function(){
-                    document.write(info.num2 + ". 내 이름은 " + info.name2 + "이며, 직업은 " + info.job2 + "입니다.<br>");
-                }
-            }
-            info.result1();
-            info.result2();
-
-            document.write("<br>")
-        }
-
-        //sample26
-        //26. 함수 유형 : 객체 생성자 함수
-        {
-            document.write("*** 26. 함수 유형 : 객체 생성자 함수  ***<br>");
-
-            function func(num, name, job){
-                this.num = num;
-                this.name = name;
-                this.job = job;
-
-                this.result = function(){
-                    document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.<br>");
-                }
-            }
-
-            const info1 = new func("1", "허승연", "웹 퍼블리셔");         //인스턴스 생성
-            const info2 = new func("2", "허승연", "프론트앤드 개발자");   //인스턴스 생성
-
-            info1.result();
-            info2.result();
-
-            document.write("<br>")
-        }
-
-        //sample27
-        //27. 함수 유형 : 프로토타입 함수
-        {
-            document.write("*** 27. 함수 유형 : 프로토타입 함수  ***<br>");
-
-            function func(num, name, job){
-                this.num = num;
-                this.name = name;
-                this.job = job;
-            }
-            func.prototype.result = function(){
-                document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.<br>");
-            }
-
-            const info1 = new func("1", "허승연", "웹 퍼블리셔");         //인스턴스 생성
-            const info2 = new func("2", "허승연", "프론트앤드 개발자");   //인스턴스 생성
-
-            info1.result();
-            info2.result();
-
-            document.write("<br>")
-        }
-
-        //sample28
-        //28. 함수 유형 : 객체 리터럴 함수
-        {
-            document.write("*** 28. 함수 유형 : 객체 리터럴 함수  ***<br>");
-
-            function func(num, name, job){
-                this.num = num;
-                this.name = name;
-                this.job = job;
-            }
-            func.prototype = {
-                result1 : function(){
-                    document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.<br>");
-                },
-                result2 : function(){
-                    document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.<br>");
-                }
-            }
-
-            const info1 = new func("1", "허승연", "웹 퍼블리셔");         //인스턴스 생성
-            const info2 = new func("2", "허승연", "프론트앤드 개발자");   //인스턴스 생성
-
-            info1.result1();
-            info2.result2();
-
-            document.write("<br>")
-        }
-
-        //sample29
-        //29. 함수 유형 : 클래스
-        {
-            document.write("*** 29. 함수 유형 : 클래스  ***<br>");
-
-            class study {
-                constructor(num, name, job){
-                    this.num = num;
-                    this.name = name;
-                    this.job = job;
-                }
-                result(){
-                    document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.<br>");
-                }
-            }
-            const info1 = new study("1", "허승연", "웹 퍼블리셔");         //인스턴스 생성
-            const info2 = new study("2", "허승연", "프론트앤드 개발자");   //인스턴스 생성
-
-            info1.result();
-            info2.result();
-        }
     </script>
 </body>
 

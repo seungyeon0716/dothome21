@@ -13,7 +13,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism-okaidia.min.css"
         integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -78,6 +81,33 @@
 
     <hr>
 
+    <style>
+        .btn-JS1 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS1  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active1 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
     <!-- //sample1 -->
     <div id="sample1" class="sample">
         <h2>01. 변수 : 데이터 불러오기 : 기본 <span class="dot"></span></h2>
@@ -93,10 +123,56 @@
 </code></pre>
         </div>
     </div>
+    <div class="btn-JS1">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result1" style="display:none;">
+        <p class="active1">100 200 javascript</p>
+    </div>
+    <script>
+        // document.querySelector(".btn-JS").addEventListener("click", function(){
+        //     document.querySelector(".result").add("show");
+        // });
+
+        $(function(){
+            $(".btn-JS1").click(function(){
+            $(".result1").toggle();
+            });
+        });
+    </script>
 
     <hr>
 
-    <!-- //sample2 -->
+    <hr>
+
+    <style>
+        .btn-JS2 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS2  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active2 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample2 -->
     <div id="sample2" class="sample">
         <h2>02. 상수 : 데이터 불러오기 : 기본 <span class="dot"></span></h2>
         <div class="code">
@@ -111,10 +187,53 @@
 </code></pre>
         </div>
     </div>
+    <div class="btn-JS2">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result2" style="display:none;">
+        <p class="active2">100 200 javascript</p>
+    </div>
+    <script>
+        // document.querySelector(".btn-JS").addEventListener("click", function(){
+        //     document.querySelector(".result").add("show");
+        // });
 
+        $(function(){
+            $(".btn-JS2").click(function(){
+            $(".result2").toggle();
+            });
+        });
+    </script>
     <hr>
 
-     <!-- //sample3 -->
+    <style>
+        .btn-JS3 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS3  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active3 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+     <!-- sample3 -->
      <div id="sample3" class="sample">
         <h2>03. 배열 : 데이터 불러오기 : 기본 <span class="dot"></span></h2>
         <div class="code">
@@ -129,10 +248,53 @@
 </code></pre>
         </div>
     </div>
+    <div class="btn-JS3">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result3" style="display:none;">
+        <p class="active3">100 200 javascript</p>
+    </div>
+    <script>
+        // document.querySelector(".btn-JS").addEventListener("click", function(){
+        //     document.querySelector(".result").add("show");
+        // });
 
+        $(function(){
+            $(".btn-JS3").click(function(){
+            $(".result3").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample4 -->
+    <style>
+        .btn-JS4 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS4  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active4 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample4 -->
     <div id="sample4" class="sample">
         <h2>04. 배열 : 데이터 불러오기 : 2차 배열<span class="dot"></span></h2>
         <div class="code">
@@ -155,10 +317,53 @@
 </code></pre>
         </div>
     </div>
+    <div class="btn-JS4">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result4" style="display:none;">
+        <p class="active4">100 200 javascript jquery javascript, jquery</p>
+    </div>
+    <script>
+        // document.querySelector(".btn-JS").addEventListener("click", function(){
+        //     document.querySelector(".result").add("show");
+        // });
 
+        $(function(){
+            $(".btn-JS4").click(function(){
+            $(".result4").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample5 -->
+    <style>
+        .btn-JS5 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS5  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active5 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample5 -->
     <div id="sample5" class="sample">
         <h2>05. 배열 :  데이터 불러오기 : 갯수 구하기 <span class="dot"></span></h2>
         <div class="code">
@@ -171,10 +376,53 @@
 </code></pre>
         </div>
     </div>
+    <div class="btn-JS5">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result5" style="display:none;">
+        <p class="active5">3</p>
+    </div>
+    <script>
+        // document.querySelector(".btn-JS").addEventListener("click", function(){
+        //     document.querySelector(".result").add("show");
+        // });
 
+        $(function(){
+            $(".btn-JS5").click(function(){
+            $(".result5").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample6 -->
+    <style>
+        .btn-JS6 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS6  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active6 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample6 -->
     <div id="sample6" class="sample">
         <h2>06. 배열: 데이터 불러오기 : for문 <span class="dot"></span></h2>
         <div class="code">
@@ -188,10 +436,53 @@
 </code></pre>
         </div>
     </div>
+    <div class="btn-JS6">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result6" style="display:none;">
+        <p class="active6">100 200 300 400 500</p>
+    </div>
+    <script>
+        // document.querySelector(".btn-JS").addEventListener("click", function(){
+        //     document.querySelector(".result").add("show");
+        // });
 
+        $(function(){
+            $(".btn-JS6").click(function(){
+            $(".result6").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample7 -->
+    <style>
+        .btn-JS7 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS7  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active7 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample7 -->
     <div id="sample7" class="sample">
         <h2>07. 배열: 데이터 불러오기 : forEach()문  <span class="dot"></span></h2>
         <div class="code">
@@ -224,10 +515,61 @@
 </code></pre>
         </div>
     </div>
+    <div class="btn-JS7">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result7" style="display:none;">
+        <p class="active7">100200300400500<br>
+                            100200300400500<br>
+                            100200300400500<br>
+                            100 0 100, 200, 300, 400, 500<br>
+                            200 1 100, 200, 300, 400, 500<br>
+                            300 2 100, 200, 300, 400, 500<br>
+                            400 3 100, 200, 300, 400, 500<br>
+                            500 4 100, 200, 300, 400, 500
+        </p>
+    </div>
+    <script>
+        // document.querySelector(".btn-JS").addEventListener("click", function(){
+        //     document.querySelector(".result").add("show");
+        // });
 
+        $(function(){
+            $(".btn-JS7").click(function(){
+            $(".result7").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample8 -->
+    <style>
+        .btn-JS8 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS8  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active8 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample8 -->
     <div id="sample8" class="sample">
         <h2>08. 배열: 데이터 불러오기 : for문 <span class="dot"></span></h2>
         <div class="code">
@@ -241,10 +583,53 @@
 </code></pre>
         </div>
     </div>
+    <div class="btn-JS8">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result8" style="display:none;">
+        <p class="active8">100 200 300 400 500</p>
+    </div>
+    <script>
+        // document.querySelector(".btn-JS").addEventListener("click", function(){
+        //     document.querySelector(".result").add("show");
+        // });
 
+        $(function(){
+            $(".btn-JS8").click(function(){
+            $(".result8").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample9 -->
+    <style>
+        .btn-JS9 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS9  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active9 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample9 -->
     <div id="sample9" class="sample">
         <h2>09. 배열: 데이터 불러오기 : for in문 <span class="dot"></span></h2>
         <div class="code">
@@ -261,10 +646,55 @@
 </code></pre>
         </div>
     </div>
+    <div class="btn-JS9">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result9" style="display:none;">
+        <p class="active9">0 1 2 3 4 <br>
+                            100 200 300 400 500
+        </p>
+    </div>
+    <script>
+        // document.querySelector(".btn-JS").addEventListener("click", function(){
+        //     document.querySelector(".result").add("show");
+        // });
 
+        $(function(){
+            $(".btn-JS9").click(function(){
+            $(".result9").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample10 -->
+    <style>
+        .btn-JS10 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS10  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active10 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample10 -->
     <div id="sample10" class="sample">
         <h2>10. 배열: 데이터 불러오기 : map() <span class="dot"></span></h2>
         <div class="code">
@@ -286,10 +716,59 @@
 </code></pre>
         </div>
     </div>
+    <div class="btn-JS10">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result10" style="display:none;">
+        <p class="active10">100 200 300 400 500<br>
+                            100 0 100, 200, 300, 400, 500<br>
+                            200 1 100, 200, 300, 400, 500<br>
+                            300 2 100, 200, 300, 400, 500<br>
+                            400 3 100, 200, 300, 400, 500<br>
+                            500 4 100, 200, 300, 400, 500
+        </p>
+    </div>
+    <script>
+        // document.querySelector(".btn-JS").addEventListener("click", function(){
+        //     document.querySelector(".result").add("show");
+        // });
 
+        $(function(){
+            $(".btn-JS10").click(function(){
+            $(".result10").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample11 -->
+    <style>
+        .btn-JS11 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS11  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active11 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample11 -->
     <div id="sample11" class="sample">
         <h2>11. 배열 : 데이터 불러오기 : 펼침 연산자 <span class="dot"></span></h2>
         <div class="code">
@@ -311,10 +790,57 @@
 </code></pre>
         </div>
     </div>
+    <div class="btn-JS11">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result11" style="display:none;">
+        <p class="active11">100 200 300 400 500<br>
+                            100, 200, 300, 400, 500<br>
+                            100200300400500<br>
+                            100200300400500
+        </p>
+    </div>
+    <script>
+        // document.querySelector(".btn-JS").addEventListener("click", function(){
+        //     document.querySelector(".result").add("show");
+        // });
 
+        $(function(){
+            $(".btn-JS11").click(function(){
+            $(".result11").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample12 -->
+    <style>
+        .btn-JS12 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS12  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active12 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample12 -->
     <div id="sample12" class="sample">
         <h2>12. 객체 : 데이터 불러오기 : 기본 <span class="dot"></span></h2>
         <div class="code">
@@ -335,10 +861,55 @@
 </code></pre>
         </div>
     </div>
+    <div class="btn-JS12">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result12" style="display:none;">
+        <p class="active12">100 200 javascript<br>
+                            100 200 javascript
+        </p>
+    </div>
+    <script>
+        // document.querySelector(".btn-JS").addEventListener("click", function(){
+        //     document.querySelector(".result").add("show");
+        // });
 
+        $(function(){
+            $(".btn-JS12").click(function(){
+            $(".result12").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample13 -->
+    <style>
+        .btn-JS13 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS13  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active13 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample13 -->
     <div id="sample13" class="sample">
         <h2>13. 객체 : 데이터 불러오기 : Object <span class="dot"></span></h2>
         <div class="code">
@@ -356,10 +927,56 @@
 </code></pre>
         </div>
     </div>
+    <div class="btn-JS13">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result13" style="display:none;">
+        <p class="active13">a,b,c <br>
+                            100, 200, javascript<br>
+                            a, 100, b, 200, c, javascript
+        </p>
+    </div>
+    <script>
+        // document.querySelector(".btn-JS").addEventListener("click", function(){
+        //     document.querySelector(".result").add("show");
+        // });
 
+        $(function(){
+            $(".btn-JS13").click(function(){
+            $(".result13").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample14 -->
+    <style>
+        .btn-JS14 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS14  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active14 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample14 -->
     <div id="sample14" class="sample">
         <h2>14. 객체 : 데이터 불러오기 : 변수 <span class="dot"></span></h2>
         <div class="code">
@@ -380,10 +997,53 @@
 </code></pre>
         </div>
     </div>
+    <div class="btn-JS14">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result14" style="display:none;">
+        <p class="active14">100 200 javascript</p>
+    </div>
+    <script>
+        // document.querySelector(".btn-JS").addEventListener("click", function(){
+        //     document.querySelector(".result").add("show");
+        // });
 
+        $(function(){
+            $(".btn-JS14").click(function(){
+            $(".result14").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample15 -->
+    <style>
+        .btn-JS15 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS15  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active15 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample15 -->
     <div id="sample15" class="sample">
         <h2>15. 객체 : 데이터 불러오기 : for in문 <span class="dot"></span></h2>
         <div class="code">
@@ -400,10 +1060,53 @@
 </code></pre>
         </div>
     </div>
+    <div class="btn-JS15">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result15" style="display:none;">
+        <p class="active15">100 200 javascript</p>
+    </div>
+    <script>
+        // document.querySelector(".btn-JS").addEventListener("click", function(){
+        //     document.querySelector(".result").add("show");
+        // });
 
+        $(function(){
+            $(".btn-JS15").click(function(){
+            $(".result15").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample16 -->
+    <style>
+        .btn-JS16 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS16  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active16 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample16 -->
     <div id="sample16" class="sample">
         <h2>16. 객체 : 데이터 불러오기 : map문 <span class="dot"></span></h2>
         <div class="code">
@@ -437,10 +1140,60 @@
 </code></pre>
         </div>
     </div>
+    <div class="btn-JS16">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result16" style="display:none;">
+        <p class="active16">100 200 javascript1<br>
+                            300 400 javascript2<br>
+                            500 600 javascript3<br>
+                            <br>
+                            100 200 javascript1<br>
+                            300 400 javascript2<br>
+                            500 600 javascript3
+        </p>
+    </div>
+    <script>
+        // document.querySelector(".btn-JS").addEventListener("click", function(){
+        //     document.querySelector(".result").add("show");
+        // });
 
+        $(function(){
+            $(".btn-JS16").click(function(){
+            $(".result16").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample17 -->
+    <style>
+        .btn-JS17 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS17  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active17 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample17 -->
     <div id="sample17" class="sample">
         <h2>17. 객체 : 데이터 불러오기 : hasOwnProperty() <span class="dot"></span></h2>
         <div class="code">
@@ -463,10 +1216,55 @@
 </code></pre>
         </div>
     </div>
+    <div class="btn-JS17">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result17" style="display:none;">
+        <p class="active17">true true true false<br>
+                            true true true false
+        </p>
+    </div>
+    <script>
+        // document.querySelector(".btn-JS").addEventListener("click", function(){
+        //     document.querySelector(".result").add("show");
+        // });
 
+        $(function(){
+            $(".btn-JS17").click(function(){
+            $(".result17").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample18 -->
+    <style>
+        .btn-JS18 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS18  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active18 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample18 -->
     <div id="sample18" class="sample">
         <h2>18. 객체 : 데이터 불러오기 : 펼침 연산자- 복사 <span class="dot"></span></h2>
         <div class="code">
@@ -485,10 +1283,53 @@
 </code></pre>
         </div>
     </div>
+    <div class="btn-JS18">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result18" style="display:none;">
+        <p class="active18">100 200 javascript</p>
+    </div>
+    <script>
+        // document.querySelector(".btn-JS").addEventListener("click", function(){
+        //     document.querySelector(".result").add("show");
+        // });
 
+        $(function(){
+            $(".btn-JS18").click(function(){
+            $(".result18").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample19 -->
+    <style>
+        .btn-JS19 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS19  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active19 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample19 -->
     <div id="sample19" class="sample">
         <h2>19. 객체 : 데이터 불러오기 : 펼침 연산자- 추가 <span class="dot"></span></h2>
         <div class="code">
@@ -508,10 +1349,53 @@
 </code></pre>
         </div>
     </div>
+    <div class="btn-JS19">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result19" style="display:none;">
+        <p class="active19">100 200 javascript jquery</p>
+    </div>
+    <script>
+        // document.querySelector(".btn-JS").addEventListener("click", function(){
+        //     document.querySelector(".result").add("show");
+        // });
 
+        $(function(){
+            $(".btn-JS19").click(function(){
+            $(".result19").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample20 -->
+    <style>
+        .btn-JS20 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS20  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active20 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample20 -->
     <div id="sample20" class="sample">
         <h2>20. 객체 : 데이터 불러오기 : 펼침 연산자- 결합 <span class="dot"></span></h2>
         <div class="code">
@@ -534,10 +1418,53 @@
 </code></pre>
         </div>
     </div>
+    <div class="btn-JS20">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result20" style="display:none;">
+        <p class="active20">100 200 javascript jquery</p>
+    </div>
+    <script>
+        // document.querySelector(".btn-JS").addEventListener("click", function(){
+        //     document.querySelector(".result").add("show");
+        // });
 
+        $(function(){
+            $(".btn-JS20").click(function(){
+            $(".result20").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample21 -->
+    <style>
+        .btn-JS21 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS21  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active21 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample21 -->
     <div id="sample21" class="sample">
         <h2>21. 객체 : 데이터 불러오기 : 비구조화 할당 <span class="dot"></span></h2>
         <div class="code">
@@ -556,10 +1483,53 @@
 </code></pre>
         </div>
     </div>
+    <div class="btn-JS21">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result21" style="display:none;">
+        <p class="active21">100 200 javascript</p>
+    </div>
+    <script>
+        // document.querySelector(".btn-JS").addEventListener("click", function(){
+        //     document.querySelector(".result").add("show");
+        // });
 
+        $(function(){
+            $(".btn-JS21").click(function(){
+            $(".result21").toggle();
+            });
+        });
+    </script>
     <hr>
 
-    <!-- //sample22 -->
+    <style>
+        .btn-JS22 {
+            display: block;
+            border-radius: 10%;
+            background: #eee;
+            width: 80px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .btn-JS22  a{
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .active22 {
+            background: #272822;
+            color: #fff;
+            border-radius: 0 0 5px 5px ;
+            display: block;
+            width: 1830px;
+            padding: 10px;
+        }
+    </style>
+    <!-- sample22 -->
     <div id="sample22" class="sample">
         <h2>22. 객체 : 데이터 불러오기 : 비구조화 할당 : 별도 이름 저장 <span class="dot"></span></h2>
         <div class="code">
@@ -578,7 +1548,23 @@
 </code></pre>
         </div>
     </div>
+    <div class="btn-JS22">
+        <a href="#c">결과보기</a>
+    </div>
+    <div class="result22" style="display:none;">
+        <p class="active22">100 200 javascript</p>
+    </div>
+    <script>
+        // document.querySelector(".btn-JS").addEventListener("click", function(){
+        //     document.querySelector(".result").add("show");
+        // });
 
+        $(function(){
+            $(".btn-JS22").click(function(){
+            $(".result22").toggle();
+            });
+        });
+    </script>
     <hr>
     <hr>
 
@@ -589,470 +1575,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
     <script>
-        //sample1
-        //01. 변수 : 데이터 불러오기
-        {   
-            let x = 100, y = 200, z = "javascript";
-
-            document.write("*** 01. 변수 :  데이터 불러오기 ***<br>");
-            document.write(x, "<br>");
-            document.write(y, "<br>");
-            document.write(z, "<br>");
-
-            document.write("<br>");
-        }
-
-        //sample2
-        //02. 상수 : 데이터 불러오기
-        {   
-            const x = 100, y = 200, z = "javascript";
-
-            document.write("*** 02. 상수 :  데이터 불러오기 ***<br>");
-            document.write(x, "<br>");
-            document.write(y, "<br>");
-            document.write(z, "<br>");
-
-            document.write("<br>");
-        }
-
-        //sample3
-        //03. 배열: 데이터 불러오기
-        {
-            const arr = [100, 200, "javascript"];
-
-            document.write("*** 03. 배열 :  데이터 불러오기 ***<br>");
-            document.write(arr[0], "<br>");
-            document.write(arr[1], "<br>");
-            document.write(arr[2], "<br>");
-
-            document.write("<br>");
-        }
-
-        //sample4
-        //04. 배열: 데이터 불러오기 : 2차 배열
-        {
-            const arr = [100, 200, ["javascript", "jquery"]];
-
-            document.write("*** 04. 배열 :  데이터 불러오기 : 2차 배열***<br>");
-            document.write(arr[0], "<br>");
-            document.write(arr[1], "<br>");
-            document.write(arr[2][0], "<br>");
-            document.write(arr[2][1], "<br>");
-            document.write(arr[2], "<br>");
-
-            document.write("<br>");
-
-            //100
-            //200
-            //javascript
-            //jquery
-            //javascriptjquery
-        }
-
-        //sample5
-        //05. 배열: 데이터 불러오기 : 갯수 구하기
-        {
-            const arr = [100, 200, "javascript"];
-
-            document.write("*** 05. 배열 :  데이터 불러오기 : 갯수 구하기 ***<br>");
-            document.write(arr.length, "<br>");
-
-            document.write("<br>");
-        }
-
-        //sample6
-        //06. 배열: 데이터 불러오기 : for문
-        {
-            const arr = [100, 200, 300, 400, 500];
-
-            document.write("*** 06. 배열: 데이터 불러오기 : for문 ***<br>");
-            for( let i=0; i<arr.length; i++ ){ 
-                document.write(arr[i], "<br>");
-            }
-            console.log(arr.length)
-
-            document.write("<br>");
-        }
-
-        //sample7
-        //07. 배열: 데이터 불러오기 : forEach()문
-        {
-            document.write("*** 07. 배열: 데이터 불러오기 : forEach()문 ***<br>");
-
-            const num = [100, 200, 300, 400, 500];
-
-            document.write(num[0]);
-            document.write(num[1]);
-            document.write(num[2]);
-            document.write(num[3]);
-            document.write(num[4]);
-
-            document.write("<br><br>"); 
-
-            //for문
-            for(let i=0; i<num.length; i++){
-                document.write(num[i]);
-            }
-
-            document.write("<br><br>");
-
-            //forEach()
-            num.forEach(function(el){
-                document.write(el);
-            });
-
-            document.write("<br><br>");
-
-            //forEach(element, index, array)
-            //num.forEach(function(){});  //es5
-            //num.forEach(()=>{});        //es6
-            num.forEach((element, index, array) => {
-                document.write(element, "<br>");
-                document.write(index, "<br>");
-                document.write(array, "<br>");
-            });
-
-            document.write("<br>");
-        }
-
-        //sample8
-        //08. 배열: 데이터 불러오기 : for of문
-        {
-            document.write("*** 08. 배열: 데이터 불러오기 : for of문 ***<br>");
-
-            const num = [100, 200, 300, 400, 500];
-
-            for( let i of num ){
-                document.write(i, "<br>");
-            }
-
-            document.write("<br>");
-        }
-
-        //sample9
-        //09. 배열: 데이터 불러오기 : for in문 : 객체에서 사용(배열에서도 가능)
-        {
-            document.write("*** 09. 배열: 데이터 불러오기 : for in문 ***<br>");
-
-            const num = [100, 200, 300, 400, 500];
-
-            for( let i in num ){
-                document.write(i, "<br>");
-            }
-
-            for( let i in num ){
-                document.write(num[i], "<br>");
-            }
-
-            document.write("<br>");
-        }
-
-        //sample10
-        //10. 배열: 데이터 불러오기 : map() : 배열로 저장
-        //단순 반복 for문, 배열 데이터 반복 forEach(), 배열 데이터 반복 새로운 배열로 저장 map()
-        {
-            document.write("*** 10. 배열: 데이터 불러오기 : map()***<br>");
-
-            const num = [100, 200, 300, 400, 500];
-
-            //num.map(function(){});
-            num.map((el) => {
-                document.write(el, "<br>")
-                console.log(el);
-            });
-
-            document.write("<br>");
-
-            num.map((element, index, array) => {
-                document.write(element, "<br>");
-                document.write(index, "<br>");
-                document.write(array, "<br>");
-            });
-
-            document.write("<br>");
-        }
-
-        //sample11
-        //11. 배열: 데이터 불러오기 : 펼침 연산자
-        {
-            document.write("*** 11. 배열: 데이터 불러오기 : 펼침 연산자 ***<br>");
-
-            const arr = [100, 200, 300, 400, 500];
-
-            document.write(arr[0], "<br>");
-            document.write(arr[1], "<br>");
-            document.write(arr[2], "<br>");
-            document.write(arr[3], "<br>");
-            document.write(arr[4], "<br>");
-            
-
-            document.write("<br>");
-
-            document.write(arr, "<br>");
-
-            document.write("<br>");
-
-            document.write(arr[0], arr[1], arr[2], arr[3], arr[4], "<br>");
-
-            document.write("<br>");
-
-            document.write(...arr,"<br>");
-
-            document.write("<br>");
-        }
-
-        //sample12
-        //12. 객체: 데이터 불러오기 : 기본
-        {
-            document.write("*** 12. 객체: 데이터 불러오기 : 기본 ***<br>");
-
-            const obj = {
-                a : 100,
-                b : 200,
-                c : "javascript",
-            }
-
-            document.write(obj.a, "<br>");
-            document.write(obj.b, "<br>");
-            document.write(obj.c, "<br>");
-            document.write(obj['a'], "<br>");
-            document.write(obj['b'], "<br>");
-            document.write(obj['c'], "<br>");
-
-            document.write("<br>");
-        }
-
-        //sample13
-        //13. 객체: 데이터 불러오기 : Object
-        {
-            document.write("*** 13. 객체: 데이터 불러오기 : Object ***<br>");
-
-            const obj = {
-                a : 100,
-                b : 200,
-                c : "javascript",
-            }
-
-            
-            document.write(Object.keys(obj), "<br>");
-            document.write(Object.values(obj), "<br>");
-            document.write(Object.entries(obj), "<br>");
-            
-            document.write("<br>");
-        }
-
-        //sample14
-        //14. 객체: 데이터 불러오기 : 변수
-        {
-            document.write("*** 14. 객체: 데이터 불러오기 : 변수 ***<br>");
-
-            const obj = {
-                a : 100,
-                b : 200,
-                c : "javascript",
-            }
-            const name1 = obj.a; 
-            const name2 = obj.b; 
-            const name3 = obj.c; 
-
-            document.write(name1, "<br>");
-            document.write(name2, "<br>");
-            document.write(name3, "<br>");
-            
-            document.write("<br>");
-        }
-
-        //sample15
-        //15. 객체: 데이터 불러오기 : for in문
-        {
-            document.write("*** 15. 객체: 데이터 불러오기 : for in문 ***<br>");
-
-            const obj = {
-                a : 100,
-                b : 200,
-                c : "javascript",
-            }
-            for(let key in obj){
-               document.write(obj[key], "<br>");
-            }
-            
-            document.write("<br>");
-        }
-
-        //sample16
-        //16. 객체: 데이터 불러오기 : map() : 배열 속에 객체가 있는 경우
-        {
-            document.write("*** 16. 객체: 데이터 불러오기 : map() ***<br>");
-
-            const obj = [
-                {a:100, b:200, c:"javascript1"},
-                {a:300, b:400, c:"javascript2"},
-                {a:500, b:600, c:"javascript3"},
-            ];
-
-            document.write(obj[0].a, "<br>");
-            document.write(obj[0].b, "<br>");
-            document.write(obj[0].c, "<br>");
-            document.write(obj[1].a, "<br>");
-            document.write(obj[1].b, "<br>");
-            document.write(obj[1].c, "<br>");
-            document.write(obj[2].a, "<br>");
-            document.write(obj[2].b, "<br>");
-            document.write(obj[2].c, "<br><br>");
-
-            //obj.map(function(){});
-            //obj.map((el) => {});
-            //obj.map(el => {});
-
-            obj.map(el => {
-                document.write(el.a, "<br>");
-                document.write(el.b, "<br>");
-                document.write(el.c, "<br>");
-            })
-                  
-            document.write("<br>");
-        }
-
-        //sample17
-        //17. 객체 : 데이터 불러오기 : hasOwnProperty() : 데이터 유무 확인
-        {
-            document.write("*** 17. 객체 : 데이터 불러오기 : hasOwnProperty() ***<br>");
-
-            const obj = {
-                a : 100,
-                b : 200,
-                c : "javascript",
-            }
-
-            document.write(obj.hasOwnProperty('a'), "<br>");      //true
-            document.write(obj.hasOwnProperty('b'), "<br>");      //true
-            document.write(obj.hasOwnProperty('a'), "<br>");      //true
-            document.write(obj.hasOwnProperty('100'), "<br>");    //false
-            document.write('a' in obj, "<br>");                   //true
-            document.write('b' in obj, "<br>");                   //true
-            document.write('c' in obj, "<br>");                   //true
-            document.write('100' in obj, "<br>");                 //false
-
-            document.write("<br>");
-        }
-
-        //sample18
-        //18. 객체 : 데이터 불러오기 : 펼침 연산자- 복사
-        {
-            document.write("*** 18. 객체 : 데이터 불러오기 : 펼침 연산자- 복사 ***<br>");
-
-            const obj = {
-                a : 100,
-                b : 200,
-                c : "javascript",
-            }
-            const spred = {...obj}  //펼침연산자
-
-            document.write(spred.a, "<br>");
-            document.write(spred.b, "<br>");
-            document.write(spred.c, "<br>");
-
-            document.write("<br>");
-        }
-
-        //sample19
-        //19. 객체 : 데이터 불러오기 : 펼침 연산자- 추가
-        {
-            document.write("*** 19. 객체 : 데이터 불러오기 : 펼침 연산자- 추가 ***<br>");
-
-            const obj = {
-                a : 100,
-                b : 200,
-                c : "javascript",
-            }
-            const spred = {...obj, d:"jquery"}  //추가
-
-            document.write(spred.a, "<br>");
-            document.write(spred.b, "<br>");
-            document.write(spred.c, "<br>");
-            document.write(spred.d, "<br><br>");
-
-            document.write("<br>");
-        }
-
-        //sample20
-        //20. 객체 : 데이터 불러오기 : 펼침 연산자- 결합
-        {
-            document.write("*** 20. 객체 : 데이터 불러오기 : 펼침 연산자- 결합 ***<br>");
-
-            const objA = {
-                a : 100,
-                b : 200,
-            }
-            const objB = {
-                c : "javascript",
-                d : "jquery",
-            }
-            const spred = {...objA, ...objB}  //결합
-
-            document.write(spred.a, "<br>");
-            document.write(spred.b, "<br>");
-            document.write(spred.c, "<br>");
-            document.write(spred.d, "<br><br>");
-
-            document.write("<br>");
-        }
-
-        //sample21
-        //21. 객체 : 데이터 불러오기 : 비구조화 할당
-        {
-            document.write("*** 21. 객체 : 데이터 불러오기 : 비구조화 할당 ***<br>");
-
-            const obj = {
-               a: 100,
-               b: 200,
-               c: "javascript",
-            }
-            const { a, b, c } = obj;
-
-            document.write(a, "<br>");
-            document.write(b, "<br>");
-            document.write(c, "<br>");
         
-            document.write("<br>");
-        }
-
-        //sample22
-        //22. 객체 : 데이터 불러오기 : 비구조화 할당 : 별도 이름 저장
-        {
-            document.write("*** 22. 객체 : 데이터 불러오기 : 비구조화 할당 : 별도 이름 저장 ***<br>");
-
-            const obj = {
-               a: 100,
-               b: 200,
-               c: "javascript",
-            }
-            const { a:name1, b:name2, c:name3 } = obj;
-
-            document.write(name1, "<br>");
-            document.write(name2, "<br>");
-            document.write(name3, "<br>");
-        
-            document.write("<br>");
-        }
-
-
-
-        //7월 26일 숙제
-        //배열 데이터의 합을 출력
-        //{
-        //    const arr = [100, 200, 300, 400, 500];
-        //    
-        //    document.write("*** 배열 데이터의 합을 출력 ***<br>");
-
-        //    let num = 0;
-        //    for( i=0; i<arr.length; i++){
-        //        num += arr[i]; 
-        //    }
-        //    document.write(num);
-            
-        //    document.write("<br>");          
-        //}
     </script>
 </body>
 

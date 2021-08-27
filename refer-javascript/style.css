@@ -30,7 +30,7 @@ ul {
     list-style: none;
 }
 ol {
-    padding-left: 28px;
+    padding-left: 26px;
 }
 a {
     text-decoration: none;
@@ -92,7 +92,8 @@ hr {
 .sample h2 {
     position: relative;
     font-size: 16px;
-    background-color: #f2f2f2;
+    line-height: 1.4;
+    background-color: #f2f6fd;
     padding: 15px;
     border-radius: 5px 5px 0 0;
     font-weight: normal;
@@ -143,12 +144,12 @@ hr {
 .view table td {
     border: 1px solid #e6e6e6;
     padding: 13px 5px 11px 5px;
-    word-break: break-all
 }
 .view table th {
     padding: 13px 5px 11px 5px;
     border-bottom: 1px solid #e6e6e6;
     font-weight: normal;
+    text-overflow: clip;
 }
 .view table td.result {
     transition: all 0.3s;
@@ -161,7 +162,8 @@ hr {
 }
 /* option */
 .view {
-    padding: 3px;
+    padding: 20px;
+    border: 1px solid #f2f2f2;
 }
 .view ul {
     display: flex;
@@ -184,6 +186,18 @@ hr {
     border: 1px dashed #3D90B7;
     background-color: #E7F6FD;
     color: #3D90B7;
+}
+.result-btn {
+    margin-top: 10px;
+    padding: 5px 8px;
+    border-radius: 3px;
+    background-color: rgb(46, 46, 46);
+    display: inline-block;
+    color: #fff;
+}
+a {
+    color: inherit;
+    text-decoration: none;
 }
 .btn {
     padding: 20px;
@@ -243,7 +257,7 @@ hr {
         display: none;
     }
     .sample pre {
-        line-height: 1.2 !important;
+        line-height: 1.2;
     }
     .sample code {
         font-size: 13px;
