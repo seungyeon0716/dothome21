@@ -23,7 +23,7 @@
         }
         .ex1 > div {
             border: 4px dashed transparent;
-            width: 18%;
+            width: 16%;
         }
         .ex1 > div.active {
             border: 4px dashed #a51a3d;
@@ -37,6 +37,7 @@
             width: 100%;
             border-radius: 5px;
             vertical-align: top;
+
         }
 
         /* ex2 */
@@ -46,7 +47,7 @@
         }
         .ex2 > div {
             border: 4px dashed transparent;
-            width: 18%;
+            width: 16%;
         }
         .ex2 > div.active {
             border: 4px dashed #a51a3d;
@@ -69,7 +70,7 @@
         }
         .ex3 > div {
             border: 4px dashed transparent;
-            width: 18%;
+            width: 16%;
         }
         .ex3 > div.active {
             border: 4px dashed #a51a3d;
@@ -84,7 +85,35 @@
             border-radius: 5px;
             vertical-align: top;
         }
-
+        @media (max-width : 800px){
+            .view {
+                padding: 10px;
+            }
+            .ex1 {
+                flex-wrap: wrap;
+            }
+            .ex1 > div {
+                width: 31%;
+                margin: 1%;
+                padding: 1%;
+            }
+            .ex2 {
+                flex-wrap: wrap;
+            }
+            .ex2 > div {
+                width: 31%;
+                margin: 1%;
+                padding: 1%;
+            }
+            .ex3 {
+                flex-wrap: wrap;
+            }
+            .ex3 > div {
+                width: 31%;
+                margin: 1%;
+                padding: 1%;
+            }
+        }
        
     </style>
 </head>
@@ -152,6 +181,7 @@
             <div><img src="img/imge03.jpg" alt="이미지3"></div>
             <div><img src="img/imge04.jpg" alt="이미지4"></div>
             <div><img src="img/imge05.jpg" alt="이미지5"></div>
+            <div><img src="img/imge06.jpg" alt="이미지6"></div>
         </div>
         <div class="btn">
             <a href="#c" class="btn1-1">클릭하면 모든 이미지에 클래스(active)를 추가합니다.</a>
@@ -203,11 +233,12 @@
      <div id="sample02" class="sample">
         <h2>02. .classList.toggle()<span class="dot"></span></h2>
         <div class="view ex2">
-            <div><img src="img/imge06.jpg" alt="이미지6"></div>
             <div><img src="img/imge07.jpg" alt="이미지7"></div>
             <div><img src="img/imge08.jpg" alt="이미지8"></div>
             <div><img src="img/imge09.jpg" alt="이미지9"></div>
             <div><img src="img/imge10.jpg" alt="이미지10"></div>
+            <div><img src="img/imge11.jpg" alt="이미지11"></div>
+            <div><img src="img/imge12.jpg" alt="이미지12"></div>
         </div>
         <div class="btn">
             <a href="#c" class="btn2-1">이미지를 클릭하면 클래스(active)를 추가/삭제합니다.</a>
@@ -258,11 +289,12 @@
     <div id="sample03" class="sample">
         <h2>03. .classList.contains()<span class="dot"></span></h2>
         <div class="view ex3">
-            <div class="active"><img src="img/imge11.jpg" alt="이미지11"></div>
-            <div><img src="img/imge12.jpg" alt="이미지12"></div>
-            <div><img src="img/imge13.jpg" alt="이미지13"></div>
-            <div class="active"><img src="img/imge14.jpg" alt="이미지14"></div>
+            <div class="active"><img src="img/imge13.jpg" alt="이미지13"></div>
+            <div><img src="img/imge14.jpg" alt="이미지14"></div>
             <div><img src="img/imge15.jpg" alt="이미지15"></div>
+            <div class="active"><img src="img/imge16.jpg" alt="이미지16"></div>
+            <div><img src="img/imge17.jpg" alt="이미지17"></div>
+            <div><img src="img/imge18.jpg" alt="이미지18"></div>
         </div>
         <div class="btn">
             <a href="#c" class="btn3-0">리셋</a>
