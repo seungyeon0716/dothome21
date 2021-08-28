@@ -610,8 +610,8 @@
         <div class="result">
             <h3><a href="#">결과보기</a></h3>
             <div>
-                <p>1.내 이름은 허승연이며, 직업은 웹퍼블리셔 입니다.</p>
-                <p>2.내 이름은 허승연이며, 직업은 프론트앤드 개발자 입니다.</p>
+                <span class="result21-1"></span>
+                <span class="result21-2"></span>
             </div>
         </div>
     </div>
@@ -1099,14 +1099,14 @@
             funcE(funcF);
         }
         // 노가다 start
-        // {
-        //     function func(num, name, job){
-        //         document.querySelector(".result21-1").innerHTML = num + ".내 이름은" + name + "이며, 직업은" + job + "입니다.<br>"
-        //         document.querySelector(".result21-2").innerHTML = num + ".내 이름은" + name + "이며, 직업은" + job + "입니다.<br>"
-        //     }
-        //     func("1", "허승연", "웹 퍼블리셔");
-        //     func("2", "허승연", "프론트앤드 개발자");
-        // }
+        {
+            function func(num, name, job){
+                document.querySelector(".result21-" + num).innerHTML = num + ".내 이름은" + name + "이며, 직업은" + job + "입니다.<br>"
+                // document.querySelector(".result21-" + num).innerHTML = num + ".내 이름은" + name + "이며, 직업은" + job + "입니다.<br>"
+            }
+            func("1", "허승연", "웹 퍼블리셔");
+            func("2", "허승연", "프론트앤드 개발자");
+        }
 
         // {
         //     function func(num, name, job){
