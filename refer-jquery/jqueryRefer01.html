@@ -48,27 +48,27 @@
                 <table>
                     <caption>기본 선택자</caption>
                     <colgroup>
-                        <col style="width: 4%;">
+                        <col style="width: 10%;">
+                        <col style="width: 15%;">
                         <col style="width: 20%;">
                         <col style="width: 20%;">
-                        <col style="width: 20%;">
-                        <col style="width: 36%;">
+                        <col style="width: 35%;">
                     </colgroup>
                     <thead>
                         <tr>
-                            <th class="center">번호</th>
-                            <th>종류</th>
-                            <th>jQuery</th>
-                            <th>Javascript</th>
+                            <th class="center">종류</th>
+                            <th>제이쿼리</th>
+                            <th>예시</th>
+                            <th>자바스크립트</th>
                             <th>설명</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="center" rowspan="5"><a href="#sample01">1</a></td>
+                            <td class="center" rowspan="5">기본 선택자</td>
                             <td>태그 선택자</td>
                             <td>$("li")</td>
-                            <td>querySelectorAll("li")</td>
+                            <td>querySelector("li"), querySelectorAll("li")</td>
                             <td>기본 태그를 선택합니다.</td>
                         </tr>
                         <tr>
@@ -95,37 +95,11 @@
                             <td>-</td>
                             <td>전체를 선택합니다.</td>
                         </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <hr>
-
-            <div class="table">
-                <table>
-                    <caption>계층 선택자</caption>
-                    <colgroup>
-                        <col style="width: 4%;">
-                        <col style="width: 20%;">
-                        <col style="width: 20%;">
-                        <col style="width: 20%;">
-                        <col style="width: 36%;">
-                    </colgroup>
-                    <thead>
                         <tr>
-                            <th class="center">번호</th>
-                            <th>종류</th>
-                            <th>jQuery</th>
-                            <th>Jacascript</th>
-                            <th>설명</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="center" rowspan="5"><a href="#sample01">1</a></td>
+                            <td class="center" rowspan="4">계층 선택자</td>
                             <td>하위 선택자</td>
                             <td>$("div p")</td>
-                            <td>querySelectorAll("div p")</td>
+                            <td>querySelector("div p")</td>
                             <td>div 태그 모든 자식 중 p 태그를 모두 선택합니다.</td>
                         </tr>
                         <tr>
@@ -145,6 +119,330 @@
                             <td>$("div ~ p")</td>
                             <td>-</td>
                             <td>div 태그의 인접한 형제 p 태그 중 모든 형제 태그를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td class="center" rowspan="9">속성 선택자</td>
+                            <td>[name|="value"]</td>
+                            <td>$("li a[href|='web']")</td>
+                            <td>-</td>
+                            <td>속성 중에 'web'과 같은 속성 값을 의미합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>[name*="value"]</td>
+                            <td>$("li a[href*='web']")</td>
+                            <td>-</td>
+                            <td>속성 중에 'web'이 포함되어 있는 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>[name~="value"]</td>
+                            <td>$("li a[href~='web']")</td>
+                            <td>-</td>
+                            <td>속성 중에 'web'으로 시작하는 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>[name$="value"]</td>
+                            <td>$("li a[href$='web']")</td>
+                            <td>-</td>
+                            <td>속성 중에 'web'으로 끝나는 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>[name="value"]</td>
+                            <td>$("li a[href='web']")</td>
+                            <td>-</td>
+                            <td>속성 중에 'web'과 일치하는 요소를 택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>[name!="value"]</td>
+                            <td>$("li a[href!='web']")</td>
+                            <td>-</td>
+                            <td>속성 중에 'web'과 일치하지 않는 요소를 택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>[name^="value"]</td>
+                            <td>$("li a[href^='web']")</td>
+                            <td>-</td>
+                            <td>속성 중에 'web'으로 시작하는 요소를 택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>[name]</td>
+                            <td>$("li a[href]")</td>
+                            <td>-</td>
+                            <td>속성 중에 일치하는 속성 요소를 택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>[name="value"][name="value"]</td>
+                            <td>$("li a[href][class]")</td>
+                            <td>-</td>
+                            <td>속성 중에 'href' 속성과 'class' 속성이 모두 있는 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td class="center" rowspan="13">기본 필터 선택자</td>
+                            <td>:animated</td>
+                            <td>$("div:animated")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 애니메이션 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:eq() ★</td>
+                            <td>$("li:eq(2)")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 인덱스 번호를 통해 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:gt()</td>
+                            <td>$("li:gt(2)")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 인덱스 번호보다 큰 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:lt()</td>
+                            <td>$("li:lt(2)")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 인덱스 번호보다 작은 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:header()</td>
+                            <td>$("div:header")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 제목 요소(h1~h6) 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:first()</td>
+                            <td>$("div:first")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 첫 번째 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:last()</td>
+                            <td>$("div:last")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 마지막 번째 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:odd()</td>
+                            <td>$("div:odd")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 홀수 번째 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:even()</td>
+                            <td>$("li:even")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 짝수 번째 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:not()</td>
+                            <td>$("li:not(eq(3))")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 현재 선택한 요소의 반대 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:root</td>
+                            <td>$(":root")</td>
+                            <td>-</td>
+                            <td>문서의 가장 기본 루트 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:lang()</td>
+                            <td>$("div:lang(kr)")</td>
+                            <td>-</td>
+                            <td>선택된 요소 중에서 언어 속성 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:target</td>
+                            <td>$("div:target")</td>
+                            <td>-</td>
+                            <td>선택된 요소 중에서 타겟 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td class="center" rowspan="4">내용 필터 선택자</td>
+                            <td>:contains()</td>
+                            <td>$("div:contains('webs')")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 일치하는 문자열 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:empty()</td>
+                            <td>$("div:empty()")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 텍스트가 없는 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:has() ★</td>
+                            <td>$("div:has(p)")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 일치하는 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:parent</td>
+                            <td>$("div:parent")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 텍스트가 있는 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td class="center" rowspan="2">보임 필터 선택자</td>
+                            <td>:hidden</td>
+                            <td>$("div:hidden")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 보이지 않는 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:visible</td>
+                            <td>$("div:visible")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 보이는 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td class="center" rowspan="10">자식 요소 필터 선택자</td>
+                            <td>:first-child</td>
+                            <td>$("li:first-child")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 첫 번째 자식 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:first-of-type</td>
+                            <td>$("p:first-of-type")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 첫 번째 자식 유형 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:last-child</td>
+                            <td>$("li:last-child")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 마지막 번째 자식 유형 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:last-of-type</td>
+                            <td>$("p:last-of-type")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 마지막 번째 자식 유형 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:nth-child() ★</td>
+                            <td>$("li:nth-child(2)")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 인덱스 번호 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:nth-last-child()</td>
+                            <td>$("li:nth-last-child(2)")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 마지막 인덱스 번호 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:nth-of-type()</td>
+                            <td>$("li:nth-of-type(2)")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 유형 인덱스 번호 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:nth-last-of-type()</td>
+                            <td>$("li:nth-last-of-type(2)")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 마지막 유형 인덱스 번호 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:only-child</td>
+                            <td>$(":only-child")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 유형이 하나인 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:only-of-type()</td>
+                            <td>$(":only-pf-type()")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 유형이 오직 하나인 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td class="center" rowspan="15">폼 선택자</td>
+                            <td>:button</td>
+                            <td>$(":button")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 버튼 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:checkbox</td>
+                            <td>$(":checkbox")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 check 박스 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:checked</td>
+                            <td>$(":checked")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 체크된 박스 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:disabled</td>
+                            <td>$(":disabled")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 disabled된 박스 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:enabled</td>
+                            <td>$(":enabled")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 enabled된 박스 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:focus</td>
+                            <td>$(":focus")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 focus된 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:file</td>
+                            <td>$(":file")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 파일 업로드 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:image</td>
+                            <td>$(":image")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 이미지 입력 양식 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:input</td>
+                            <td>$(":input")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 입력 양식 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:password</td>
+                            <td>$(":password")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 password 양식 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:radio</td>
+                            <td>$(":radio")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 라디오 버튼 양식 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:reset</td>
+                            <td>$(":reset")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 리셋 버튼 양식 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:selected</td>
+                            <td>$(":selected")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 selected된 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:submit</td>
+                            <td>$(":submit")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 전송 버튼 요소를 선택합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:text</td>
+                            <td>$(":text")</td>
+                            <td>-</td>
+                            <td>선택된 요소에서 텍스트 요소를 선택합니다.</td>
                         </tr>
                     </tbody>
                 </table>

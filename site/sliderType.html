@@ -16,12 +16,178 @@
 
     <!-- sliderType CSS -->
     <link rel="stylesheet" href="css/sliderType.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+    <style>
+        .swiper {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+       
+        .swiper-wrapper .swiper-slide:nth-child(1) {
+            background-image: url(img/slider01.jpg);
+            background-size: cover; /* 이미지 크기가 알아서 나옴 */
+            background-repeat: no-repeat; /* 이미지 한장만 나오게 하는 거 */
+            background-position: center; /* 이미지 가운데로 정렬 (반응형일때도) */
+            width: 100%;
+        }
+        .swiper-wrapper .swiper-slide:nth-child(2) {
+            background-image: url(img/slider02.jpg);
+            background-size: cover; /* 이미지 크기가 알아서 나옴 */
+            background-repeat: no-repeat; /* 이미지 한장만 나오게 하는 거 */
+            background-position: center; /* 이미지 가운데로 정렬 (반응형일때도) */
+            width: 100%;
+        }
+        .swiper-wrapper .swiper-slide:nth-child(3) {
+            background-image: url(img/slider03.jpg);
+            background-size: cover; /* 이미지 크기가 알아서 나옴 */
+            background-repeat: no-repeat; /* 이미지 한장만 나오게 하는 거 */
+            background-position: center; /* 이미지 가운데로 정렬 (반응형일때도) */
+            width: 100%;
+        }
+        .swiper-wrapper .swiper-slide:nth-child(4) {
+            background-image: url(img/slider01.jpg);
+            background-size: cover; /* 이미지 크기가 알아서 나옴 */
+            background-repeat: no-repeat; /* 이미지 한장만 나오게 하는 거 */
+            background-position: center; /* 이미지 가운데로 정렬 (반응형일때도) */
+            width: 100%;
+        }
+        .swiper-wrapper .swiper-slide:nth-child(5) {
+            background-image: url(img/slider02.jpg);
+            background-size: cover; /* 이미지 크기가 알아서 나옴 */
+            background-repeat: no-repeat; /* 이미지 한장만 나오게 하는 거 */
+            background-position: center; /* 이미지 가운데로 정렬 (반응형일때도) */
+            width: 100%;
+        }
+        .swiper-wrapper .swiper-slide:nth-child(6) {
+            background-image: url(img/slider03.jpg);
+            background-size: cover; /* 이미지 크기가 알아서 나옴 */
+            background-repeat: no-repeat; /* 이미지 한장만 나오게 하는 거 */
+            background-position: center; /* 이미지 가운데로 정렬 (반응형일때도) */
+            width: 100%;
+        }
+        .swiper-slide .slider-inner {
+            width: 1400px;
+            margin: 0 auto;
+            color: #fff;
+        }
+        .swiper-slide .slider-inner em {
+            font-family: 'NEXONLv1Gothic';
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding-top: 100px;
+            display: block;
+        }
+        .swiper-slide .slider-inner h3 {
+            font-family: 'GmarketSans';
+            font-size: 100px;
+            font-weight: 300;
+            line-height: 1.2;
+            text-indent: -8px; /* 들여쓰기 */
+        }
+        .swiper-slide .slider-inner p {
+            font-family: 'NEXONLv1Gothic';
+            font-size: 20px;
+            font-weight: 300;
+        }
+        .swiper-slide .slider-inner .btn{
+            display: block;
+            padding-bottom: 100px;
+            margin-top: 260px;
+        }
+        .swiper-slide .slider-inner .btn a {
+            width: 200px;
+            height: 50px;
+            display: inline-block; /* 가로 정렬 */
+            text-align: center;
+            line-height: 50px;
+            font-family: 'NEXONLv1Gothic';
+            font-size: 16px;
+            margin-right: 7px;
+        }
+        .swiper-slide .slider-inner .btn a.white {
+            background: #fff;
+            color: #000;
+        }
+        .swiper-slide .slider-inner .btn a.black {
+            background: #000;
+            color: #fff;
+        }
+        .swiper-pagination {
+            position: absolute;
+            left: 50% !important;
+            bottom: 35px;
+            transform: translateX(-50%);
+        }
+        .swiper-pagination .swiper-pagination-bullet {
+            width: 15px; height: 15px;
+            border: 3px solid #fff;
+            display: inline-block;
+            border-radius: 50%;
+            margin: 0 6px;
+            box-sizing: border-box;
+            opacity: 1;
+            background-color: transparent;
+        }
+        .swiper-pagination .swiper-pagination-bullet-active {
+            background-color: #fff;
+        }
+        .swiper-button-prev {
+            width: 21px;
+            height: 41px;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 25px;
+            transform: translateY(-50%);
+            color: #fff;
+        }
+        .swiper-button-next {
+            width: 21px;
+            height: 41px;
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 25px;
+            transform: translateY(-50%);
+            color: #fff;
+        }
+
+        /* swiper2 */
+        .swiper2 {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        .swiper-pagination-fraction {
+            color: #fff;
+            font-size: 18px;
+        }
+
+        /* swiper3 */
+        .swiper3 {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* swiper4 */
+        .swiper4 {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
     <!-- sliderType01 -->
     <section class="sliderType">
         <div class="sliderType01">
-            <div class="slider">
+            <!-- <div class="slider">
                 <div class="slider-inner">
                     <em>GENESIS</em>
                     <h3>G80 SPORT</h3>
@@ -35,7 +201,7 @@
                     <a href="#" class="left">
                         <img src="img/arrow-left.svg" alt="이전 이미지">
                     </a>
-                    <a href="#" class="right">      <!--a링크안에 있는 class는 css에서 한칸 띄우면 안됌-->
+                    <a href="#" class="right">      a링크안에 있는 class는 css에서 한칸 띄우면 안됌
                         <img src="img/arrow-right.svg" alt="다음 이미지">
                     </a>
                 </div>
@@ -52,9 +218,269 @@
                 </div>
             </div>
             <div class="slider"></div>
-            <div class="slider"></div>
+            <div class="slider"></div> --> 
+
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slider-inner">
+                            <em>GENESIS</em>
+                            <h3>G80 SPORT</h3>
+                            <p>당신이 만들어갈 새로운 이야기의 시작</p>
+                            <span class="btn">
+                                <a href="#" class="white">자세히 보기</a>
+                                <a href="#" class="black">견적 내기</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-inner">
+                            <em>GENESIS</em>
+                            <h3>G80</h3>
+                            <p>당신이 만들어갈 새로운 이야기의 시작</p>
+                            <span class="btn">
+                                <a href="#" class="white">자세히 보기</a>
+                                <a href="#" class="black">견적 내기</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-inner">
+                            <em>GENESIS</em>
+                            <h3>GV60</h3>
+                            <p>당신이 만들어갈 새로운 이야기의 시작</p>
+                            <span class="btn">
+                                <a href="#" class="white">자세히 보기</a>
+                                <a href="#" class="black">견적 내기</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
         </div>
     </section>
     <!-- //sliderType01 -->
+
+    <!-- sliderType02 -->
+    <section class="sliderType">
+        <div class="sliderType02">
+            <div class="swiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slider-inner">
+                            <em>GENESIS</em>
+                            <h3>G80 SPORT</h3>
+                            <p>당신이 만들어갈 새로운 이야기의 시작</p>
+                            <span class="btn">
+                                <a href="#" class="white">자세히 보기</a>
+                                <a href="#" class="black">견적 내기</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-inner">
+                            <em>GENESIS</em>
+                            <h3>G80</h3>
+                            <p>당신이 만들어갈 새로운 이야기의 시작</p>
+                            <span class="btn">
+                                <a href="#" class="white">자세히 보기</a>
+                                <a href="#" class="black">견적 내기</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-inner">
+                            <em>GENESIS</em>
+                            <h3>GV60</h3>
+                            <p>당신이 만들어갈 새로운 이야기의 시작</p>
+                            <span class="btn">
+                                <a href="#" class="white">자세히 보기</a>
+                                <a href="#" class="black">견적 내기</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+    <!-- //sliderType02 -->
+
+     <!-- sliderType03 -->
+     <section class="sliderType">
+        <div class="sliderType03">
+            <div class="swiper3">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slider-inner">
+                            <em>GENESIS</em>
+                            <h3>G80 SPORT</h3>
+                            <p>당신이 만들어갈 새로운 이야기의 시작</p>
+                            <span class="btn">
+                                <a href="#" class="white">자세히 보기</a>
+                                <a href="#" class="black">견적 내기</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-inner">
+                            <em>GENESIS</em>
+                            <h3>G80</h3>
+                            <p>당신이 만들어갈 새로운 이야기의 시작</p>
+                            <span class="btn">
+                                <a href="#" class="white">자세히 보기</a>
+                                <a href="#" class="black">견적 내기</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-inner">
+                            <em>GENESIS</em>
+                            <h3>GV60</h3>
+                            <p>당신이 만들어갈 새로운 이야기의 시작</p>
+                            <span class="btn">
+                                <a href="#" class="white">자세히 보기</a>
+                                <a href="#" class="black">견적 내기</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+    <!-- //sliderType03 -->
+
+     <!-- sliderType04 -->
+     <section class="sliderType">
+        <div class="sliderType04">
+            <div class="swiper4">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slider-inner">
+                            <em>GENESIS</em>
+                            <h3>G80 SPORT</h3>
+                            <p>당신이 만들어갈 새로운 이야기의 시작</p>
+                            <span class="btn">
+                                <a href="#" class="white">자세히 보기</a>
+                                <a href="#" class="black">견적 내기</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-inner">
+                            <em>GENESIS</em>
+                            <h3>G80</h3>
+                            <p>당신이 만들어갈 새로운 이야기의 시작</p>
+                            <span class="btn">
+                                <a href="#" class="white">자세히 보기</a>
+                                <a href="#" class="black">견적 내기</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-inner">
+                            <em>GENESIS</em>
+                            <h3>GV60</h3>
+                            <p>당신이 만들어갈 새로운 이야기의 시작</p>
+                            <span class="btn">
+                                <a href="#" class="white">자세히 보기</a>
+                                <a href="#" class="black">견적 내기</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+    <!-- //sliderType04 -->
+
+
+    
+
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        const swiper2 = new Swiper('.swiper2', {
+            direction: 'horizontal',
+
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        const swiper3 = new Swiper('.swiper3', {
+            direction: 'horizontal',
+            loop: true,
+
+            autoplay: {
+                delay: 5000,
+            },
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+        const swiper4 = new Swiper('.swiper4', {
+            direction: 'horizontal',
+            loop: true,
+
+            autoplay: {
+                delay: 5000,
+            },
+
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
 </body>
 </html>

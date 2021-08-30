@@ -17,10 +17,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism-okaidia.min.css"
         integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="style.css">
+
+
 </head>
 
 <body>
@@ -695,12 +697,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
     <script>
-        document.querySelectorAll(".result h3").forEach(el => {
-            el.addEventListener("click",function(e){
-                e.preventDefault();
-                this.parentNode.classList.toggle("show");
-            });
+        //정답보기
+        // document.querySelectorAll(".result h3").forEach(el => {
+        //     el.addEventListener("click",function(e){
+        //         e.preventDefault();
+        //         this.parentNode.classList.toggle("show");
+        //     });
+        // });
+        //.parents()
+        $(".result h3").forEach(function(el){
+           $(el).click(function(e){
+                $(e).preventDefault();
+                $(this).parents.toggleClass("show");
+           });
         });
+        //제이쿼리로 변경
+
         //sample1
         //01. 변수 : 데이터 저장소
         {

@@ -227,18 +227,20 @@ a {
     text-align: center;
     font-size: 14px;
     padding: 10px;
-    display: block;
+    display: inline-block;
+    font-weight: normal;
+    color: #000;
 }
 .result.show h3 {
     
 }
-/* 깜장 박스 */
 .result div {       
     background: #272822;
     margin: 0;
-    border-radius: 0 5px 5px 5px;
+    border-radius: 0 4px 4px 4px;
     color: #fff;
-    padding: 10px;
+    padding: 15px 20px;
+    border: 4px;
     display: none;
 }
 .result.show div {

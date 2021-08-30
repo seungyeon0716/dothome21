@@ -82,7 +82,7 @@ body {
     position: absolute;
     left: 50%;
     bottom: 35px;
-    transform: translateX((-50%));
+    transform: translateX(-50%);
 }
 .sliderType01 .slider .slider-dot a.dot {
     width: 15px; height: 15px;

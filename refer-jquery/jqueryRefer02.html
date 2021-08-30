@@ -48,52 +48,186 @@
                 <table>
                     <caption></caption>
                     <colgroup>
-                        <col style="width: 4%;">
-                        <col style="width: 20%;">
-                        <col style="width: 20%;">
-                        <col style="width: 20%;">
-                        <col style="width: 36%;">
+                        <col style="width: 8%;"/>
+                        <col style="width: 20%;"/>
+                        <col style="width: 20%;"/>
+                        <col style="width: 20%;"/>
+                        <col />
                     </colgroup>
                     <thead>
                         <tr>
-                            <th class="center">번호</th>
-                            <th>종류</th>
-                            <th>jQuery</th>
-                            <th>Javascript</th>
+                            <th class="center">종류</th>
+                            <th>제이쿼리</th>
+                            <th>예시</th>
+                            <th>자바스크립트</th>
                             <th>설명</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="center" rowspan="5"><a href="#sample01">1</a></td>
-                            <td>태그 선택자</td>
-                            <td>$("li")</td>
-                            <td>querySelectorAll("li")</td>
-                            <td>기본 태그를 선택합니다.</td>
-                        </tr>
-                        <tr>
-                            <td>클래스 선택자</td>
-                            <td>$(".class")</td>
-                            <td>querySelector(".class")</td>
-                            <td>클래스를 선택합니다.</td>
-                        </tr>
-                        <tr>
-                            <td>아이디 선택자</td>
-                            <td>$("#id")</td>
-                            <td>getElementById("#id")</td>
-                            <td>아이디를 선택합니다.</td>
-                        </tr>
-                        <tr>
-                            <td>그룹 선택자</td>
-                            <td>$("#id,.class")</td>
+                            <td class="center" rowspan="9">필터링</td>
+                            <td>.eq() ★</td>
+                            <td>$("selector").eq(3) </td>
                             <td>-</td>
-                            <td>여러개를 선택합니다.</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <td>전체 선택자</td>
-                            <td>$("*")</td>
+                            <td>.filter()</td>
+                            <td>$("selector").filter()</td>
                             <td>-</td>
-                            <td>전체를 선택합니다.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>.first()</td>
+                            <td>$("selector").first()</td>
+                            <td>-</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>.has() ★</td>
+                            <td>$("selector").has()</td>
+                            <td>-</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>.is()</td>
+                            <td>$("selector").is()</td>
+                            <td>-</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>.last()</td>
+                            <td>$("selector").last()</td>
+                            <td>-</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>.map()</td>
+                            <td>$("selector").map()</td>
+                            <td>-</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>.not()</td>
+                            <td>$("selector").not()</td>
+                            <td>-</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>.slice()</td>
+                            <td>$("selector").slice()</td>
+                            <td>-</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="center" rowspan="13">트리구조</td>
+                            <td>.children()</td>
+                            <td>$("selector").children()</td>
+                            <td>-</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>.closets()</td>
+                            <td>$("selector").closets()</td>
+                            <td>-</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>.find() ★</td>
+                            <td>$("selector").find()</td>
+                            <td>-</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>.next()</td>
+                            <td>$("selector").next()</td>
+                            <td>-</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>.nextAll()</td>
+                            <td>$("selector").nextAll()</td>
+                            <td>-</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>.nextUntil()</td>
+                            <td>$("selector").nextUntil()</td>
+                            <td>-</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>.parent()</td>
+                            <td>$("selector").parent()</td>
+                            <td>-</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>.parents() ★</td>
+                            <td>$("selector").parents()</td>
+                            <td>parentNode</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>.parentUntil()</td>
+                            <td>$("selector").parentUntil()</td>
+                            <td>-</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>.prev() ★</td>
+                            <td>$("selector").prev()</td>
+                            <td>-</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>.prevAll()</td>
+                            <td>$("selector").prevAll()</td>
+                            <td>-</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>.prevUntil()</td>
+                            <td>$("selector").prevUntil()</td>
+                            <td>-</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>.siblings()</td>
+                            <td>$("selector").siblings()</td>
+                            <td>-</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="center" rowspan="5">기타</td>
+                            <td>.add()</td>
+                            <td>$("selector").add()</td>
+                            <td>-</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>.addBack()</td>
+                            <td>$("selector").addBack()</td>
+                            <td>-</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>.contents()</td>
+                            <td>$("selector").contents()</td>
+                            <td>-</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>.each()  ★</td>
+                            <td>$("selector").each()</td>
+                            <td>forEach</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>.end()</td>
+                            <td>$("selector").end()</td>
+                            <td>-</td>
+                            <td></td>
                         </tr>
                     </tbody>
                 </table>
