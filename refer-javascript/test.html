@@ -10,55 +10,74 @@
 
 <body>
     <script>
-        const obj1 = {
-            a: 1000,
-            b: 2000,
-            c: 3000
+    //    const num = [100, 200, 300, 400, 500];
+       //for문 출력\
+    //    for( let i=0; i<num.length; i++){
+    //        document.write(num[i], "<br>");
+
+    //        document.write("<br>");
+    //    };
+
+    //    //forEach문 출력
+    //    num.forEach(el => {
+    //        document.write(el, "<br>");
+    //    });
+
+       //forEach문 출력
+    //    num.forEach(element, index, array => {
+    //        document.write(element,"<br>");
+    //        document.write(index,"<br>");
+    //        document.write(array,"<br>");
+    //    });
+
+    //    num.forEach((el,index,array) => {
+    //        document.write(el ,"<br>");
+    //        document.write(index ,"<br>");
+    //        document.write(array ,"<br>");
+    //    })
+
+    //    //map
+    // //    num.map(el,index,array => {
+    // //     document.write(el)
+    // //     document.write(index)
+    // //     document.write(array)
+    // //    });
+
+    //    document.write(...num)
+
+        // const obj = [
+        //     {a:100},
+        //     {a:200},
+        //     {a:300},
+        // ]
+
+        // document.write(obj[0].a);
+        // document.write(obj[1].a);
+        // document.write(obj[2].a);
+
+        // // map
+        // obj.map (el => {
+        //     document.write(el.a);
+        // });
+
+        // obj.map (el => document.write(el.a));
+
+        function func(num, name, job){
+            this.num = num;
+            this.name = name;
+            this.job = job;
+
+            this.result = function(){
+                document.write(`${num} 내 이름은${name} 이며 직업은${job} 입니다.`)
+            }
         }
+        const info = new func("1","웹쓰","웹퍼블리셔");
 
-        document.write(obj1.a, "<br>");
-        document.write(obj1.b, "<br>");
-        document.write(obj1.c, "<br>");
-
-        document.write("<br>");
-        document.write(obj1.a+obj1.b+obj1.c,"<br>")
-        document.write(obj1.b+obj1.c,"<br>")
-        document.write(obj1.a+obj1.c,"<br>")
-        document.write(obj1.a/obj1.a,"<br>");
-        document.write(obj1.b/obj1.a,"<br>");
-        document.write(obj1.c/obj1.a,"<br>");
-        document.write(Object.keys(obj1),"<br>");
-
-        document.write("<br>")
-
-        const obj2 = [
-            {a: 1000},
-            {a: 2000},
-            {a: 3000},
-        ];
-
-        document.write(obj2[0].a,"<br>");
-        document.write(obj2[1].a,"<br>");
-        document.write(obj2[2].a,"<br>");
-        document.write(obj2[0].a+obj2[1].a+obj2[2].a,"<br>");
-        document.write(obj2[1].a+obj2[2].a,"<br>");
-        document.write(obj2[0].a+obj2[2].a,"<br>");
-        document.write(obj2[0].a/obj2[0].a,"<br>");
-        document.write(obj2[1].a/obj2[0].a,"<br>");
-        document.write(obj2[2].a/obj2[0].a,"<br>");
-        document.write(Object.keys(obj2),"<br>");
-
-        document.write("<br>");
+        
+        
+       
 
 
-        const obj3 = [1000,2000,3000,"a","b","c"];
-
-        document.write(obj3[0],"<br>");
-        document.write(obj3[1],"<br>");
-        document.write(obj3[2],"<br>");
-        document.write(obj3[3],"<br>");
-        document.write(obj3[4],"<br>");
-        document.write(obj3[5],"<br>");
     </script>
 </body>
 
