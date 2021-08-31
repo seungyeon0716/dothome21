@@ -698,19 +698,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
     <script>
         //정답보기
-        // document.querySelectorAll(".result h3").forEach(el => {
-        //     el.addEventListener("click",function(e){
-        //         e.preventDefault();
-        //         this.parentNode.classList.toggle("show");
-        //     });
-        // });
-        //.parents()
-        $(".result h3").forEach(function(el){
-           $(el).click(function(e){
-                $(e).preventDefault();
-                $(this).parents.toggleClass("show");
-           });
+        document.querySelectorAll(".result h3").forEach(el => {
+            el.addEventListener("click",function(e){
+                e.preventDefault();
+                this.parentNode.classList.toggle("show");
+            });
         });
+        //.parents()
+        // $(".result h3").each(function(){
+        //    $(el).click(function(e){
+        //         $(e).preventDefault();
+        //         $(this).parents.toggleClass("show");
+        //    });
+        // });
         //제이쿼리로 변경
 
         //sample1
