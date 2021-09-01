@@ -1,0 +1,262 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "NEXONLv1Gothic";
+  font-weight: 300;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff") format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "NEXONLv1Gothic";
+  font-weight: 400;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff") format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "NEXONLv1Gothic";
+  font-weight: 700;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff") format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "NEXONLv2Gothic";
+  font-weight: 300;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Light.woff") format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "NEXONLv2Gothic";
+  font-weight: 400;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff") format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "NEXONLv2Gothic";
+  font-weight: 700;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff") format("woff");
+  font-style: normal;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+button,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+.bg {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.bg::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+.bg1 {
+  background-image: url(../img/bg1.jpg);
+}
+
+.bg2 {
+  background-image: url(../img/bg2.jpg);
+}
+
+.bg3 {
+  background-image: url(../img/bg3.jpg);
+}
+
+.bg4 {
+  background-image: url(../img/bg4.jpg);
+}
+
+.bg5 {
+  background-image: url(../img/bg5.jpg);
+}
+
+.bg6 {
+  background-image: url(../img/bg6.jpg);
+}
+
+.bg7 {
+  background-image: url(../img/bg7.jpg);
+}
+
+.bg8 {
+  background-image: url(../img/bg8.jpg);
+}
+
+.bg9 {
+  background-image: url(../img/bg9.jpg);
+}
+
+.bg10 {
+  background-image: url(../img/bg10.jpg);
+}
+
+#main {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #11e8bb;
+  background: linear-gradient(to bottom, #11e8bb 0%, #8200c9 100%);
+}
+#main.menu {
+  background: linear-gradient(to bottom, #a6c0fe 0%, #f68084 100%);
+}
+#main.mouse {
+  background: linear-gradient(to bottom, #e0c3fc 0%, #8ec5fc 100%);
+}
+#main.slider {
+  background: linear-gradient(to bottom, #5ee7df 0%, #b490ca 100%);
+}
+#main.parallax {
+  background: linear-gradient(to bottom, #9890e3 0%, #b1f4cf 100%);
+}
+#main.game {
+  background: linear-gradient(to bottom, #a18cd1 0%, #fbc2eb 100%);
+}
+
+#contents h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10vw;
+  white-space: nowrap;
+  /* 한줄쓰기 */
+  font-family: "Six Caps", sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1vw;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to bottom, #8200c9, #3e035c);
+}
+
+#nav {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 10px;
+  top: auto;
+}
+#nav li {
+  list-style: none;
+  display: inline;
+}
+#nav li a {
+  color: #fff;
+  text-decoration: none;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #fff;
+  display: inline-block;
+  border-radius: 50px;
+  font-size: 14px;
+  text-align: center;
+  margin: 4px;
+  font-family: "NEXONLv1Gothic";
+  box-shadow: inset 0 0 0 #fff;
+  transition: all 0.4s;
+}
+#nav li a:hover {
+  box-shadow: inset 0 -100px 0 #fff;
+  color: #6c4a70;
+}
+
+.info {
+  color: #fff;
+  font-family: "NEXONLv1Gothic";
+  padding: 20px;
+}
+.info.right {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+.info.bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.info h1 {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.6;
+  border-bottom: 1px dashed #fff;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.info p {
+  font-weight: 300;
+  font-size: 16px;
+}
+.info li {
+  list-style: none;
+  display: inline;
+}
+.info li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px dashed #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.info li.active a {
+  background: #fff;
+  color: #000;
+}
+.info button {
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 5px 20px;
+  color: #fff;
+  border-radius: 50px;
+  box-shadow: 0 0 0 #fff inset;
+  transition: all 0.4s;
+}
+.info button:hover {
+  box-shadow: 0 -50px 0 #fff inset;
+  color: #000;
+}
