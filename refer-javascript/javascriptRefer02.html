@@ -107,8 +107,6 @@
    
     <hr>
 
-    <hr>
-
     <!-- sample2 -->
     <div id="sample2" class="sample">
         <h2>02. 상수 : 데이터 불러오기 : 기본 <span class="dot"></span></h2>
@@ -796,12 +794,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
     <script>
-         document.querySelectorAll(".result h3").forEach(el => {
-            el.addEventListener("click",function(e){
+        //  document.querySelectorAll(".result h3").forEach(el => {
+        //     el.addEventListener("click",function(e){
+        //         e.preventDefault();
+        //         this.parentNode.classList.toggle("show");
+        //     });
+        // });
+        $(".result h3").click(function(e){
                 e.preventDefault();
-                this.parentNode.classList.toggle("show");
-            });
-        });
+                $(this).parents().toggleClass("show");
+           });
         
         
         {
