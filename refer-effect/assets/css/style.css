@@ -310,3 +310,23 @@ figcaption {
   -webkit-animation: unfoldOut 1s ease forwards;
           animation: unfoldOut 1s ease forwards;
 }
+
+@media (max-width: 800px) {
+  #contents h1 {
+    font-size: 15vw;
+  }
+
+  ul {
+    display: flex;
+  }
+
+  #nav li a {
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 10px;
+    box-shadow: inset 0 0 0 #fff;
+    transition: all 0.4s;
+  }
+}
