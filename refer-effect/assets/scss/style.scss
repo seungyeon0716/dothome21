@@ -467,12 +467,14 @@ animation: zommOut 0.5s ease forwards;
     .code-view {
         width: 90vw;
         font-size: 15px;
+        overflow: hidden;
+        background: #f8f8f8;
+
     }
     .code-view .view-header .dot {
         padding: 5px;
     }
     .code-view .view-cont {
         height: 50vh;
-        background: #f8f8f8;
     }
 }
