@@ -455,16 +455,25 @@ animation: zommOut 0.5s ease forwards;
         box-shadow: inset 0 0 0 #fff;
         transition: all 0.4s;
     }
+    .info h1 {
+        font-size: 15px;
+    }
     .info li a {
-        margin-right: 3px;
+        margin-right: 2px;
+        width: 15px;
+        height: 15px;
+        line-height: 15px;
     }
     .code-view {
         width: 90vw;
+        font-weight: 10;
+        height: 60vh;
     }
     .code-view .view-header .dot {
         padding: 5px;
     }
     .code-view .view-cont {
-        height: 60vh;
+        height: 50vh;
+        background: #f8f8f8;
     }
 }

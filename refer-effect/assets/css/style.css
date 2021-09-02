@@ -175,7 +175,7 @@ figcaption {
   font-size: 10vw;
   white-space: nowrap;
   /* 한줄쓰기 */
-  font-family: "GmarketSans", sans-serif;
+  font-family: "Six Caps", sans-serif;
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: 1vw;
@@ -484,7 +484,7 @@ figcaption {
 
 @media (max-width: 800px) {
   #contents h1 {
-    font-size: 15vw;
+    font-size: 18vw;
   }
 
   ul {
@@ -492,7 +492,7 @@ figcaption {
   }
 
   #nav li a {
-    width: 70px;
+    width: 50px;
     height: 30px;
     text-align: center;
     line-height: 30px;
@@ -501,12 +501,21 @@ figcaption {
     transition: all 0.4s;
   }
 
+  .info h1 {
+    font-size: 15px;
+  }
+
   .info li a {
-    margin-right: 3px;
+    margin-right: 2px;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
   }
 
   .code-view {
     width: 90vw;
+    font-weight: 10;
+    height: 60vh;
   }
 
   .code-view .view-header .dot {
@@ -514,6 +523,7 @@ figcaption {
   }
 
   .code-view .view-cont {
-    height: 60vh;
+    height: 50vh;
+    background: #f8f8f8;
   }
 }
