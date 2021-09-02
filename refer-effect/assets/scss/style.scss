@@ -37,6 +37,24 @@
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff') format('woff');
     font-style: normal;
 }
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 300;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 500;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 700;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-style: normal;
+}
 // reset
 // 여백 초기화 
 body,
@@ -75,6 +93,7 @@ figcaption {
 $font-Six: 'Six Caps';
 $font-Nexon1:'NEXONLv1Gothic';
 $font-Nexon2: 'NEXONLv2Gothic';
+$font-Gmarket: 'GmarketSans';
 
 
 $gradient1 : linear-gradient(to bottom,  #11e8bb 0%,#8200c9 100%); 
@@ -157,7 +176,7 @@ $gradient6 : linear-gradient(to bottom,  #a18cd1 0%,#fbc2eb 100%);
         @include positionCenter;
         font-size: 10vw;
         white-space: nowrap;    /* 한줄쓰기 */
-        font-family: $font-Six, sans-serif;
+        font-family: $font-Gmarket, sans-serif;
         font-weight: normal;
         text-transform: uppercase;
         letter-spacing: 1vw;
@@ -205,19 +224,23 @@ $gradient6 : linear-gradient(to bottom,  #a18cd1 0%,#fbc2eb 100%);
     color: #fff;
     font-family: $font-Nexon1;
     padding: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
 
     &.right {
-        position: absolute;
+        left: auto;
         right: 0px;
-        top: 0px;
     }
     &.bottom {
-        position: absolute;
+        top: auto;
+        left: auto;
         bottom: 0;
         right: 0;
     }
+
     h1 {
-        font-weight: 300;
+        font-weight: 700;
         font-size: 20px;
         line-height: 1.6;
         border-bottom: 1px dashed #fff;
@@ -258,8 +281,9 @@ $gradient6 : linear-gradient(to bottom,  #a18cd1 0%,#fbc2eb 100%);
         padding: 5px 20px;
         color: #fff;
         border-radius: 50px;
-        box-shadow: 0 -0 0 #fff inset;
+        box-shadow: 0 0 0 #fff inset;
         transition: all 0.4s;
+        cursor: pointer;
 
         &:hover {
             box-shadow: 0 -50px 0 #fff inset;
@@ -267,6 +291,153 @@ $gradient6 : linear-gradient(to bottom,  #a18cd1 0%,#fbc2eb 100%);
         }
     }
 }
+
+// modal
+#modal {
+    position:fixed;
+    left: 0; top: 0;
+    width: 100%; height: 100vh;
+    z-index: 1000;
+    transform: scale(0);
+
+    .modal-bg {
+            background: rgba(0,0,0,0.6);
+            height: 100vh;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+    
+            .modal-cont {
+                h2 {
+                    font-weight: 400;
+                    font-size: 30px;
+                    margin-bottom: 10px;
+                }
+                p {
+                    font-weight: 300;
+                    line-height: 1.6;			
+                }
+                button {
+                    float: right;
+                    border: 1px solid #000;
+                    background: #000;
+                    border-radius: 20px;
+                    color: #fff;
+                    padding: 5px 10px;
+                    cursor: pointer;
+                    font-family: 'NEXONLv2Gothic';
+                    margin-top: 10px;
+                }
+        }
+    }   
+}
+
+
+#modal.show {
+    animation: unfoldIn 1s ease forwards;
+}
+@keyframes unfoldIn {
+    0%    {transform: scaley(0.005) scalex(0);}
+    50%   {transform: scaley(0.005) scalex(1);}
+    100%  {transform: scaley(1) scalex(1);}
+}
+
+#modal.show.hide {
+    animation: unfoldOut 1s ease forwards;
+}
+@keyframes unfoldOut {
+    0%    {transform: scaley(1) scalex(1);}
+    50%   {transform: scaley(0.005) scalex(1);}
+    100%  {transform: scaley(0.005) scalex(0);}
+}
+#modal.show .modal-bg .modal-cont {
+transform: scale(0);
+animation: zommIn 0.5s 0.8s ease forwards;
+}
+
+#modal.show.hide .modal-bg .modal-cont {
+transform: scale(0);
+animation: zommOut 0.5s ease forwards;
+}
+
+@keyframes zommIn {
+    0% { transform: scale(0)}
+    100% { transform: scale(1)}
+}
+@keyframes zommOut {
+    0% { transform: scale(1)}
+    100% { transform: scale(0)}
+}
+
+// code-view
+.code-view {
+    background: #fff;
+    width: 60vw;
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
+    overflow: hidden;
+
+    .view-header {
+        border: 1px solid #f2f2f2;
+
+        .dot {
+            padding: 13px 10px 10px 15px;
+
+            span {
+                width: 12px; height: 12px;
+                display: inline-block;
+                border-radius: 50%;
+                margin: 0 2px;
+            }
+            span:nth-child(1){
+                background-color: #f56565;
+            }
+            span:nth-child(2){
+                background-color: #f6e05e;
+            }
+            span:nth-child(3){
+                background-color: #48bb78;
+            }
+        }
+    }
+    .view-title {
+        border: 1px solid #f2f2f2;
+        padding: 0 11px;
+        font-family: 'NEXONLv2Gothic';
+
+        li {
+            display: inline;
+            list-style: none;
+
+            a {
+                text-decoration: none;
+                color: #cccccc;
+                padding: 10px 10px 12px;
+                margin: 0 5px;
+                display: inline-block;
+            }
+            &.active a {
+                border-top: 2px solid #667eea;
+                color: #4a5568;
+            }
+        }
+    }
+    .view-cont {
+        height: 500px;
+        overflow-y: scroll;
+
+        > div {
+            display: none;
+        }
+        > div:nth-child(1){
+            display: block;
+        }
+    }
+}
+
+
+
+
 @media (max-width: 800px){
     #contents h1 {
         font-size: 15vw;

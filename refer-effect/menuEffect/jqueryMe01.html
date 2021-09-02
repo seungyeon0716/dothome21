@@ -59,14 +59,14 @@
             line-height: 1.6;
         }
 
-        @media (max-width: 800px){
+        /* @media (max-width: 800px){
             .tab-btn li a {
-                padding: 10px;
+                
             }
-        }
+        } */
     </style>
 </head>
-<body class="bg bg1">
+<body class="bg bg2">
 
     <!-- contents -->
     <main>
@@ -108,20 +108,20 @@
 
     <!-- info -->
     <div class="info">
-        <h1>javascript Menu Effect01</h1>
+        <h1>jQuery Menu Effect01</h1>
         <p>메뉴 이펙트 - 탭 메뉴</p>
     </div>
 
     <div class="info right">
         <ul>
-            <li class="active"><a href="javascriptME01.html">1</a></li>
+            <li><a href="javascriptME01.html">1</a></li>
             <li><a href="javascriptME02.html">2</a></li>
             <li><a href="javascriptME03.html">3</a></li>
             <li><a href="javascriptME04.html">4</a></li>
             <li><a href="javascriptME05.html">5</a></li>
         </ul>
         <ul>
-            <li><a href="jqueryMe01.html">1</a></li>
+            <li class="active"><a href="jqueryMe01.html">1</a></li>
             <li><a href="jqueryMe02.html">2</a></li>
             <li><a href="jqueryMe03.html">3</a></li>
             <li><a href="jqueryMe04.html">4</a></li>
@@ -243,7 +243,7 @@
 </code></pre>
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript">const tabBtn = document.querySelectorAll(".tab-btn ul li");
+<pre><code class="language-javascript"> const tabBtn = document.querySelectorAll(".tab-btn ul li");
     const tabCont = document.querySelectorAll(".tab-cont > div");
 
     tabBtn.forEach((element, index) => {
@@ -263,7 +263,7 @@
 </code></pre>
                         </div>
                         <div class="jquery">
-<pre><code class="language-javascript">tabBtn.click(function(){
+<pre><code class="language-javascript"> tabBtn.click(function(){
     let target = $(this);
     tabBtn.removeClass("active");
     target.addClass("active");
@@ -284,25 +284,28 @@
     <!--// modal -->
 
     <!-- script -->
+    <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        const tabBtn = document.querySelectorAll(".tab-btn ul li");
-        const tabCont = document.querySelectorAll(".tab-cont > div");
+        const tabBtn = $(".tab-btn ul li");     //5개의 버튼을 변수에 저장(할당)
+        const tabCont = $(".tab-cont > div");   //5개의 컨텐츠를 변수에 저장(할당)
 
-        tabBtn.forEach((element, index) => {
-            element.addEventListener("click", function(){
+        //1. 버튼을 클릭하면 클릭한 버튼한테 active 추가
+        //2. 버튼을 클릭하지 않은 다른 버튼은 active 제거
+        //3. 버튼 인덱스 설정
+        //4. 첫 번째 버튼은 첫 번째 컨텐츠랑 연결
+        //5. 모든 컨텐츠를 안 보이게 설정
+        //6. 클릭한 버튼의 해당 컨텐츠만 보이게 설정
 
-                tabBtn.forEach( el => {
-                    el.classList.remove("active");
-                });
-                element.classList.add("active");
+        tabBtn.click(function(){
+           let target = $(this);
+           tabBtn.removeClass("active");
+           target.addClass("active");
 
-                tabCont.forEach( el => {        //전체 컨텐츠 안 보이게
-                    el.style.display = "none";
-                });
-                tabCont[index].style.display = "block";
-            });
+           let index = target.index();
+           tabCont.css("display","none");
+           tabCont.eq(index).css("display","block");
         });
     </script>
 </body>
