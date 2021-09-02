@@ -175,7 +175,7 @@ figcaption {
   font-size: 10vw;
   white-space: nowrap;
   /* 한줄쓰기 */
-  font-family: "Six Caps", sans-serif;
+  font-family: "GmarketSans", sans-serif;
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: 1vw;
@@ -484,7 +484,7 @@ figcaption {
 
 @media (max-width: 800px) {
   #contents h1 {
-    font-size: 18vw;
+    font-size: 15vw;
   }
 
   ul {
@@ -492,7 +492,7 @@ figcaption {
   }
 
   #nav li a {
-    width: 50px;
+    width: 70px;
     height: 30px;
     text-align: center;
     line-height: 30px;
@@ -515,7 +515,7 @@ figcaption {
   .code-view {
     width: 90vw;
     font-weight: 10;
-    height: 60vh;
+    height: 55vh;
   }
 
   .code-view .view-header .dot {
