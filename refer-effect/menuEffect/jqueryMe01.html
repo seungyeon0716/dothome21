@@ -243,23 +243,23 @@
 </code></pre>
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript"> const tabBtn = document.querySelectorAll(".tab-btn ul li");
-    const tabCont = document.querySelectorAll(".tab-cont > div");
+<pre><code class="language-javascript">const tabBtn = document.querySelectorAll(".tab-btn ul li");
+const tabCont = document.querySelectorAll(".tab-cont > div");
 
-    tabBtn.forEach((element, index) => {
-        element.addEventListener("click", function(){
+tabBtn.forEach((element, index) => {
+    element.addEventListener("click", function(){
 
-            tabBtn.forEach( el => {
-                el.classList.remove("active");
-            });
-            element.classList.add("active");
-
-            tabCont.forEach( el => {        //전체 컨텐츠 안 보이게
-                el.style.display = "none";
-            });
-            tabCont[index].style.display = "block";
+        tabBtn.forEach( el => {
+            el.classList.remove("active");
         });
+        element.classList.add("active");
+
+        tabCont.forEach( el => {        //전체 컨텐츠 안 보이게
+            el.style.display = "none";
+        });
+        tabCont[index].style.display = "block";
     });
+});
 </code></pre>
                         </div>
                         <div class="jquery">

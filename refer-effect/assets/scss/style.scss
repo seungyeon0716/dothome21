@@ -423,8 +423,9 @@ animation: zommOut 0.5s ease forwards;
         }
     }
     .view-cont {
-        height: 500px;
+        height: 70vh;
         overflow-y: scroll;
+        background: #f8f8f8;
 
         > div {
             display: none;
@@ -453,5 +454,17 @@ animation: zommOut 0.5s ease forwards;
         font-size: 10px;
         box-shadow: inset 0 0 0 #fff;
         transition: all 0.4s;
+    }
+    .info li a {
+        margin-right: 3px;
+    }
+    .code-view {
+        width: 90vw;
+    }
+    .code-view .view-header .dot {
+        padding: 5px;
+    }
+    .code-view .view-cont {
+        height: 60vh;
     }
 }

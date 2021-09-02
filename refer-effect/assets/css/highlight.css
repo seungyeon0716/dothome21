@@ -101,3 +101,9 @@
 .hljs-strong {
   font-weight: bold
 }
+
+@media (max-width: 800px){
+  .hljs {
+    padding: 10px;
+  }
+}

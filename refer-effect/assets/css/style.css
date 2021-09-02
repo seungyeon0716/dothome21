@@ -471,8 +471,9 @@ figcaption {
   color: #4a5568;
 }
 .code-view .view-cont {
-  height: 500px;
+  height: 70vh;
   overflow-y: scroll;
+  background: #f8f8f8;
 }
 .code-view .view-cont > div {
   display: none;
@@ -498,5 +499,21 @@ figcaption {
     font-size: 10px;
     box-shadow: inset 0 0 0 #fff;
     transition: all 0.4s;
+  }
+
+  .info li a {
+    margin-right: 3px;
+  }
+
+  .code-view {
+    width: 90vw;
+  }
+
+  .code-view .view-header .dot {
+    padding: 5px;
+  }
+
+  .code-view .view-cont {
+    height: 60vh;
   }
 }
