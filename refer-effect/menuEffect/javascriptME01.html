@@ -61,12 +61,7 @@
 
         @media (max-width: 800px){
             .tab-btn {
-                width: 70vw;
-            }
-            .tab-btn ul {
-
-            }
-            .tab-btn li {
+                width: 80vw;
             }
             .tab-btn li a {
                 padding: 10px;
@@ -74,6 +69,12 @@
             }
             .tab-cont {
                 padding: 15px;
+            }
+            .tab-cont > div h2 {
+                font-size: 17px;
+            }
+            .tab-cont > div p {
+                font-size: 15px;
             }
         }
     </style>
@@ -163,7 +164,6 @@
                             <li class="active"><a href="#">Html</a></li>
                             <li><a href="#">CSS</a></li>
                             <li><a href="#">Javascript</a></li>
-                            <li><a href="#">jQuery</a></li>
                         </ul>
                     </div>
                     <div class="view-cont">
@@ -272,18 +272,6 @@ tabBtn.forEach((element, index) => {
         tabCont[index].style.display = "block";
     });
 });
-</code></pre>
-                        </div>
-                        <div class="jquery">
-<pre><code class="language-javascript">tabBtn.click(function(){
-    let target = $(this);
-    tabBtn.removeClass("active");
-    target.addClass("active");
-
-    let index = target.index();
-    tabCont.css("display","none");
-    tabCont.eq(index).css("display","block");
- });
 </code></pre>
                         </div>
                     </div>

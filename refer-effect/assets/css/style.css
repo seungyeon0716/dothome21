@@ -506,7 +506,7 @@ figcaption {
   }
 
   .info li a {
-    margin-right: 2px;
+    margin-right: 5px;
     width: 15px;
     height: 15px;
     line-height: 15px;
@@ -514,8 +514,7 @@ figcaption {
 
   .code-view {
     width: 90vw;
-    font-weight: 10;
-    height: 55vh;
+    font-size: 15px;
   }
 
   .code-view .view-header .dot {
