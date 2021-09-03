@@ -58,11 +58,11 @@
                     <li><a href="#sample05">문자열 메서드 : indexOf() : 문자열 검색하기 : 반환(숫자)</a></li>
                     <li><a href="#sample05">문자열 메서드 : lastIndexOf() : 문자열 검색하기 : 반환(숫자)</a></li>
                     <li><a href="#sample05">문자열 메서드 : search() : 문자열 검색하기 : 반환(숫자)</a></li>
+                    <li><a href="#sample05">문자열 메서드 : match() : 문자열 검색하기 : 반환(배열)</a></li>
                     <li><a href="#sample06">문자열 메서드 : includes() : 문자열 포함 여부 : 반환(불린)</a></li>
                     <li><a href="#sample06">문자열 메서드 : startsWith() : 문자열 포함 여부 : 반환(불린)</a></li>
                     <li><a href="#sample06">문자열 메서드 : endtWith() : 문자열 포함 여부 : 반환(불린)</a></li>
-                    <li><a href="#sample06">문자열 메서드 : charAt() : 지정한 인덱스의 문자를 추출 : 반환(문자)</a><a class="sam"
-                            href="javascriptSample01.html">sample</a></a></li>
+                    <li><a href="#sample06">문자열 메서드 : charAt() : 지정한 인덱스의 문자를 추출 : 반환(문자)</a><a class="sam"href="javascriptSample01.html">sample</a></a></li>
                     <li><a href="#sample07">문자열 메서드 : slice() : 지정한 범위 내 문자열을 추출 : 반환(문자열)</a></li>
                     <li><a href="#sample07">문자열 메서드 : subString() : 지정한 범위 내 문자열을 추출 : 반환(문자열)</a></li>
                     <li><a href="#sample07">문자열 메서드 : substr() : 지정한 범위 내 문자열을 추출 : 반환(문자열)</a></li>
@@ -400,67 +400,116 @@
                         <td class="sample05_M11"></td>
                         <td class="sample05_R11 result"></td>
                     </tr>
+                    <tr>
+                        <td class="sample05_N12"></td>
+                        <td class="sample05_Q12"></td>
+                        <td class="sample05_M12"></td>
+                        <td class="sample05_R12 result"></td>
+                    </tr>
+                    <tr>
+                        <td class="sample05_N13"></td>
+                        <td class="sample05_Q13"></td>
+                        <td class="sample05_M13"></td>
+                        <td class="sample05_R13 result"></td>
+                    </tr>
                 </tbody>
             </table>
         </div>
         <div class="code">
-            <pre class="line-numbers"><code class="language-js">{
+<pre class="line-numbers"><code class="language-js">{
     const str = "자바스크립트(javascript) 공부";
-            
-    const text1 = str.indexOf("javascript");    
 
+    const text1 = str.indexOf("javascript");
+
+    document.querySelector(".sample05_N1").innerHTML = "1";
     document.querySelector(".sample05_Q1").innerHTML = str;
+    document.querySelector(".sample05_M1").innerHTML = "indexOf('javascript')";
     document.querySelector(".sample05_R1").innerHTML = text1;
 
     const text2 = str.indexOf("자바스크립트");
 
+    document.querySelector(".sample05_N2").innerHTML = "2";
     document.querySelector(".sample05_Q2").innerHTML = str;
+    document.querySelector(".sample05_M2").innerHTML = "indexOf('자바스크립트')";
     document.querySelector(".sample05_R2").innerHTML = text2;
 
     const text3 = str.indexOf("제이쿼리");
 
+    document.querySelector(".sample05_N3").innerHTML = "3";
     document.querySelector(".sample05_Q3").innerHTML = str;
+    document.querySelector(".sample05_M3").innerHTML = "indexOf('제이쿼리')";
     document.querySelector(".sample05_R3").innerHTML = text3;
 
     const text4 = str.indexOf("a");
 
+    document.querySelector(".sample05_N4").innerHTML = "4";
     document.querySelector(".sample05_Q4").innerHTML = str;
+    document.querySelector(".sample05_M4").innerHTML = "idexOf('a')";
     document.querySelector(".sample05_R4").innerHTML = text4;
 
     const text5 = str.lastIndexOf("a");
 
+    document.querySelector(".sample05_N5").innerHTML = "5";
     document.querySelector(".sample05_Q5").innerHTML = str;
+    document.querySelector(".sample05_M5").innerHTML = "lastIndexOf('a')";
     document.querySelector(".sample05_R5").innerHTML = text5;
 
     const text6 = str.search(/javascript/);
 
+    document.querySelector(".sample05_N6").innerHTML = "6";
     document.querySelector(".sample05_Q6").innerHTML = str;
+    document.querySelector(".sample05_M6").innerHTML = "search('/javascript/')";
     document.querySelector(".sample05_R6").innerHTML = text6;
 
     const text7 = str.search(/jquery/);
 
+    document.querySelector(".sample05_N7").innerHTML = "7";
     document.querySelector(".sample05_Q7").innerHTML = str;
+    document.querySelector(".sample05_M7").innerHTML = "search('/jquery/')";
     document.querySelector(".sample05_R7").innerHTML = text7;
 
-    const text8 = str.includes("javascript");
+    const text8 = str.match(/javascript/);
 
+    document.querySelector(".sample05_N8").innerHTML = "8";
     document.querySelector(".sample05_Q8").innerHTML = str;
+    document.querySelector(".sample05_M8").innerHTML = "match('/javascript/')";
     document.querySelector(".sample05_R8").innerHTML = text8;
+    console.log(text8)
 
-    const text9 = str.includes("jquery");
+    const text9 = str.match(/javascript/);
 
+    document.querySelector(".sample05_N9").innerHTML = "9";
     document.querySelector(".sample05_Q9").innerHTML = str;
+    document.querySelector(".sample05_M9").innerHTML = "search('/jquery/')";
     document.querySelector(".sample05_R9").innerHTML = text9;
 
-    const text10 = str.startsWith("자바스크립트");
+    const text10 = str.includes("javascript");
 
+    document.querySelector(".sample05_N10").innerHTML = "10";
     document.querySelector(".sample05_Q10").innerHTML = str;
+    document.querySelector(".sample05_M10").innerHTML = "includes('javascript')";
     document.querySelector(".sample05_R10").innerHTML = text10;
 
-    const text11 = str.endsWith("javascript");
+    const text11 = str.includes("jquery");
 
+    document.querySelector(".sample05_N11").innerHTML = "11";
     document.querySelector(".sample05_Q11").innerHTML = str;
+    document.querySelector(".sample05_M11").innerHTML = "includes('jquery')";
     document.querySelector(".sample05_R11").innerHTML = text11;
+
+    const text12 = str.startsWith("자바스크립트");
+
+    document.querySelector(".sample05_N12").innerHTML = "12";
+    document.querySelector(".sample05_Q12").innerHTML = str;
+    document.querySelector(".sample05_M12").innerHTML = "startsWith('자바스크립트')";
+    document.querySelector(".sample05_R12").innerHTML = text12;
+
+    const text13 = str.endsWith("javascript");
+
+    document.querySelector(".sample05_N13").innerHTML = "13";
+    document.querySelector(".sample05_Q13").innerHTML = str;
+    document.querySelector(".sample05_M13").innerHTML = "endsWith('javascript')";
+    document.querySelector(".sample05_R13").innerHTML = text13;
 }
 </code></pre>
         </div>
@@ -1141,33 +1190,48 @@
             document.querySelector(".sample05_M7").innerHTML = "search('/jquery/')";
             document.querySelector(".sample05_R7").innerHTML = text7;
 
-            const text8 = str.includes("javascript");
+            const text8 = str.match(/javascript/);
 
             document.querySelector(".sample05_N8").innerHTML = "8";
             document.querySelector(".sample05_Q8").innerHTML = str;
-            document.querySelector(".sample05_M8").innerHTML = "includes('javascript')";
+            document.querySelector(".sample05_M8").innerHTML = "match('/javascript/')";
             document.querySelector(".sample05_R8").innerHTML = text8;
+            console.log(text8)
 
-            const text9 = str.includes("jquery");
+            const text9 = str.match(/javascript/);
 
             document.querySelector(".sample05_N9").innerHTML = "9";
             document.querySelector(".sample05_Q9").innerHTML = str;
-            document.querySelector(".sample05_M9").innerHTML = "includes('jquery')";
+            document.querySelector(".sample05_M9").innerHTML = "search('/jquery/')";
             document.querySelector(".sample05_R9").innerHTML = text9;
 
-            const text10 = str.startsWith("자바스크립트");
+            const text10 = str.includes("javascript");
 
             document.querySelector(".sample05_N10").innerHTML = "10";
             document.querySelector(".sample05_Q10").innerHTML = str;
-            document.querySelector(".sample05_M10").innerHTML = "startsWith('자바스크립트')";
+            document.querySelector(".sample05_M10").innerHTML = "includes('javascript')";
             document.querySelector(".sample05_R10").innerHTML = text10;
 
-            const text11 = str.endsWith("javascript");
+            const text11 = str.includes("jquery");
 
             document.querySelector(".sample05_N11").innerHTML = "11";
             document.querySelector(".sample05_Q11").innerHTML = str;
-            document.querySelector(".sample05_M11").innerHTML = "endsWith('javascript')";
+            document.querySelector(".sample05_M11").innerHTML = "includes('jquery')";
             document.querySelector(".sample05_R11").innerHTML = text11;
+
+            const text12 = str.startsWith("자바스크립트");
+
+            document.querySelector(".sample05_N12").innerHTML = "12";
+            document.querySelector(".sample05_Q12").innerHTML = str;
+            document.querySelector(".sample05_M12").innerHTML = "startsWith('자바스크립트')";
+            document.querySelector(".sample05_R12").innerHTML = text12;
+
+            const text13 = str.endsWith("javascript");
+
+            document.querySelector(".sample05_N13").innerHTML = "13";
+            document.querySelector(".sample05_Q13").innerHTML = str;
+            document.querySelector(".sample05_M13").innerHTML = "endsWith('javascript')";
+            document.querySelector(".sample05_R13").innerHTML = text13;
         }
 
         //sample06

@@ -1,33 +1,40 @@
-&lt;div id="tab-menu"&gt;
-    &lt;div class="tab-btn"&gt;
-        &lt;ul&gt;
-            &lt;li class="active"&gt;&lt;a href="#"&gt;명언1&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;명언2&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;명언3&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;명언4&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;명언5&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;div class="tab-cont"&gt;
-        &lt;div&gt;
-            &lt;h2&gt;루소&lt;/h2&gt;
-            &lt;p&gt;되찾을 수 없는게 세월이니 시시한 일에 시간을 낭비하지 말고 순간순간을 후회 없이 잘 살아야 한다.&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div&gt;
-            &lt;h2&gt;명심보감 &lt;/h2&gt;
-            &lt;p&gt;직접 눈으로 본 일도 오히려 참인지 아닌지 염려스러운데 더구나 등뒤에서 남이 말하는 것이야 어찌 이것을 깊이 믿을 수 있으랴?&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div&gt;
-            &lt;h2&gt;헬렌켈러 &lt;/h2&gt;
-            &lt;p&gt;모든것들에는 나름의 경이로움과 심지어 어둠과 침묵이 있고, 내가 어떤 상태에 있더라도 나는 그속에서 만족하는 법을 배운다&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div&gt;
-            &lt;h2&gt;소포클레스 &lt;/h2&gt;
-            &lt;p&gt; 내가 헛되이 보낸 오늘은 어제 죽어간 이들이 그토록 바라던 하루이다. 단 하루면 인간적인 모든 것을 멸망시킬수도 다시 소생시킬수도 있다.&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div&gt;
-            &lt;h2&gt;알베르트 아인슈타인&lt;/h2&gt;
-            &lt;p&gt;삶을 사는 데는 단 두가지 방법이 있다. 하나는 기적이 전혀 없다고 여기는 것이고, 또 다른 하나는 모든 것이 기적이라고 여기는방식이다.&lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+const btn51 = document.querySelector(".btn5-1");
+        const btn52 = document.querySelector(".btn5-2");
+        const btn53 = document.querySelector(".btn5-3");
+        const btn54 = document.querySelector(".btn5-4");
+        const btn55 = document.querySelector(".btn5-5");
+        const btn56 = document.querySelector(".btn5-6");
+
+        let screenWidth = screen.width;
+        let screenHeight = screen.height;
+        let screenAvailWidth = screen.availWidth;
+        let screenAvailHeight = screen.availHeight;
+        let colorDepth = screen.colorDepth;
+        let pixelDepth = screen.pixelDepth;
+
+        // btn51.addEventListener("click", function(){
+        //     document.querySelector(".text5-1").innerHTML = screenWidth;
+        // });
+        // btn52.addEventListener("click", function(){
+        //     document.querySelector(".text5-2").innerHTML = screenHeight;
+        // });
+        // btn53.addEventListener("click", function(){
+        //     document.querySelector(".text5-3").innerHTML = screenAvailWidth;
+        // });
+        // btn54.addEventListener("click", function(){
+        //     document.querySelector(".text5-4").innerHTML = screenAvailHeight;
+        // });
+        // btn55.addEventListener("click", function(){
+        //     document.querySelector(".text5-5").innerHTML = colorDepth;
+        // });
+        // btn56.addEventListener("click", function(){
+        //     document.querySelector(".text5-6").innerHTML = pixelDepth;
+        // });
+
+       const name = [screenWidth, screenHeight, screenAvailWidth, screenAvailHeight, colorDepth, pixelDepth];
+
+        for (let i = 1; i<=name.length; i++){
+            document.querySelector(".btn5-"+i).addEventListener("click",() => {
+                document.querySelector(".text5-"+i).innerHTML = name[i];
+            });
+        };

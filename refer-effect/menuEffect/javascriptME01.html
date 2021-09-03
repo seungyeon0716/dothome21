@@ -287,6 +287,11 @@ tabBtn.forEach((element, index) => {
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
+        window.onload = function () {
+            agentCheck();       //호환성체크
+        }
+
+
         const tabBtn = document.querySelectorAll(".tab-btn ul li");
         const tabCont = document.querySelectorAll(".tab-cont > div");
 

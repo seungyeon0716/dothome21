@@ -80,8 +80,21 @@
             <li><a href="#c">브라우저 객체 : screen 객체 속성 : window.screen.availHeight : 실제 이용 가능한 화면의 세로 값을 가져옵니다.</a></li>
             <li><a href="#c">브라우저 객체 : screen 객체 속성 : window.screen.colorDepth : 사용 가능한 색상 수를 가져옵니다.</a></li>
             <li><a href="#c">브라우저 객체 : screen 객체 속성 : window.screen.pixelDepth : 한 픽셀 당 비트 수를 가져옵니다.</a></li>
+
+            <br>
+            <li>브라우저 객체 : navigator 객체 속성 : navigator.appCodeName : 브라우저의 코드명을 반환</li>
+            <li>브라우저 객체 : navigator 객체 속성 : navigator.appName : 브라우저의 이름을 반환</li>
+            <li>브라우저 객체 : navigator 객체 속성 : navigator.appVersion : 브라우저의 버전을 반환</li>
+            <li>브라우저 객체 : navigator 객체 속성 : navigator.cookieEnabled : 브라우저의 쿠키 사용 가능 여부를 반환</li>
+            <li>브라우저 객체 : navigator 객체 속성 : navigator.language : 브라우저에서 사용되는 언어를 반환</li>
+            <li>브라우저 객체 : navigator 객체 속성 : navigator.onLine : 브라우저가 온라인인지 여부를 반환</li>
+            <li>브라우저 객체 : navigator 객체 속성 : navigator.platform : 브라우저가 실행되는 플랫폼 정보를 반환</li>
+            <li>브라우저 객체 : navigator 객체 속성 : navigator.product : 브라우저에서 사용되는 엔진 이름을 반환</li>
+            <li>브라우저 객체 : navigator 객체 속성 : navigator.userAgent : 브라우저와 운영체제 정보를 반환</li>
+            <li>브라우저 객체 : navigator 객체 속성 : navigator.onLine : 네트워크 상태 가져오기(225)</li>
         </ol>
     </div>
+
     <hr>
 
    <!-- sample01 -->
@@ -341,7 +354,266 @@
         </script>
         <!-- //sample04 -->
 
-    <hr>
+        <!-- sample05 -->
+    <div id="sample05" class="sample">
+        <h2>05. screen() <span class="dot"></span></h2>
+        <div class="view ex5">
+            <p class="text text5-1"></p>
+            <p class="text text5-2"></p>
+            <p class="text text5-3"></p>
+            <p class="text text5-4"></p>
+            <p class="text text5-5"></p>
+            <p class="text text5-6"></p>
+        </div>
+        <div class="btn">
+            <a href="#c" class="btn5-1">클릭하면 화면의 가로 값을 가져옵니다.</a>
+            <a href="#c" class="btn5-2">클릭하면 화면의 세로 값을 가져옵니다.</a>
+            <a href="#c" class="btn5-3">클릭하면 실제 이용 가능한 화면의 가로 값을 가져옵니다.</a>
+            <a href="#c" class="btn5-4">클릭하면 실제 이용 가능한 화면의 세로 값을 가져옵니다.</a>
+            <a href="#c" class="btn5-5">클릭하면 사용 가능한 색상 수 가져옵니다.</a>
+            <a href="#c" class="btn5-6">클릭하면 픽셀당 비트 수를 가져옵니다.</a>
+        </div>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const btn51 = document.querySelector(".btn5-1");
+    const btn52 = document.querySelector(".btn5-2");
+    const btn53 = document.querySelector(".btn5-3");
+    const btn54 = document.querySelector(".btn5-4");
+    const btn55 = document.querySelector(".btn5-5");
+    const btn56 = document.querySelector(".btn5-6");
+
+    let screenWidth = screen.width;
+    let screenHeight = screen.height;
+    let screenAvailWidth = screen.availWidth;
+    let screenAvailHeight = screen.availHeight;
+    let colorDepth = screen.colorDepth;
+    let pixelDepth = screen.pixelDepth;
+
+    btn51.addEventListener("click", function(){
+        document.querySelector(".text5-1").innerHTML = screenWidth;
+    });
+    btn52.addEventListener("click", function(){
+        document.querySelector(".text5-2").innerHTML = screenHeight;
+    });
+    btn53.addEventListener("click", function(){
+        document.querySelector(".text5-3").innerHTML = screenAvailWidth;
+    });
+    btn54.addEventListener("click", function(){
+        document.querySelector(".text5-4").innerHTML = screenAvailHeight;
+    });
+    btn55.addEventListener("click", function(){
+        document.querySelector(".text5-5").innerHTML = colorDepth;
+    });
+    btn56.addEventListener("click", function(){
+        document.querySelector(".text5-6").innerHTML = pixelDepth;
+    });
+}
+</code></pre>
+            </div>
+        </div>
+        <hr>
+    <script>
+        const btn51 = document.querySelector(".btn5-1");
+        const btn52 = document.querySelector(".btn5-2");
+        const btn53 = document.querySelector(".btn5-3");
+        const btn54 = document.querySelector(".btn5-4");
+        const btn55 = document.querySelector(".btn5-5");
+        const btn56 = document.querySelector(".btn5-6");
+
+        let screenWidth = screen.width;
+        let screenHeight = screen.height;
+        let screenAvailWidth = screen.availWidth;
+        let screenAvailHeight = screen.availHeight;
+        let colorDepth = screen.colorDepth;
+        let pixelDepth = screen.pixelDepth;
+
+        btn51.addEventListener("click", function(){
+            document.querySelector(".text5-1").innerHTML = screenWidth;
+        });
+        btn52.addEventListener("click", function(){
+            document.querySelector(".text5-2").innerHTML = screenHeight;
+        });
+        btn53.addEventListener("click", function(){
+            document.querySelector(".text5-3").innerHTML = screenAvailWidth;
+        });
+        btn54.addEventListener("click", function(){
+            document.querySelector(".text5-4").innerHTML = screenAvailHeight;
+        });
+        btn55.addEventListener("click", function(){
+            document.querySelector(".text5-5").innerHTML = colorDepth;
+        });
+        btn56.addEventListener("click", function(){
+            document.querySelector(".text5-6").innerHTML = pixelDepth;
+        });
+
+    //    const name = [screenWidth, screenHeight, screenAvailWidth, screenAvailHeight, colorDepth, pixelDepth];
+
+    //     for (let i = 1; i<=name.length; i++){
+    //         document.querySelector(".btn5-"+i).addEventListener("click",() => {
+    //             document.querySelector(".text5-"+i).innerHTML = name[i-1];
+    //         });
+    //     };
+
+    //     name.forEach(element, i => {
+    //         document.querySelector(".btn5-"+i).addEventListener("click",() => {
+    //             document.querySelector(".text5-"+i).innerHTML = name[i-1];
+    //         });
+    //     });
+            
+        // const name = [screenWidth, screenHeight, screenAvailWidth, screenAvailHeight, colorDepth, pixelDepth];
+
+        // name.forEach((element, index) => {
+        // document.querySelector(`.btn5-${index+1}`).addEventListener("click", () => {
+        //     document.querySelector(`.text5-${index+1}`).innerHTML = value[index];
+        // });
+    // });
+    </script>
+    <!-- //sample05 -->
+
+    <!-- sample06 -->
+    <div id="sample06" class="sample">
+        <h2>06. navigator <span class="dot"></span></h2>
+        <div class="view ex6">
+            <p class="text text6-1"></p>
+            <p class="text text6-2"></p>
+            <p class="text text6-3"></p>
+            <p class="text text6-4"></p>
+            <p class="text text6-5"></p>
+            <p class="text text6-6"></p>
+            <p class="text text6-7"></p>
+            <p class="text text6-8"></p>
+            <p class="text text6-9"></p>
+        </div>
+        <div class="btn">
+            <a href="#c" class="btn6-1">클릭하면 브라우저의 코드명을 가져옵니다</a>
+            <a href="#c" class="btn6-2">클릭하면 브라우저의 이름을 가져옵니다.</a>
+            <a href="#c" class="btn6-3">클릭하면 브라우저의 버전을 가져옵니다.</a>
+            <a href="#c" class="btn6-4">클릭하면 쿠키 사용 가능 여부 정보를 가져옵니다.</a>
+            <a href="#c" class="btn6-5">클릭하면 브라우저에서 사용되는 언어 정보를 가져옵니다.</a>
+            <a href="#c" class="btn6-6">클릭하면 온라인 여부 정보를 가져옵니다.</a>
+            <a href="#c" class="btn6-7">클릭하면 플랫폼 정보를 가져옵니다.</a>
+            <a href="#c" class="btn6-8">클릭하면 브라우저 엔진 이름을 가져옵니다.</a>
+            <a href="#c" class="btn6-9">클릭하면 운영체제 정보를 가져옵니다.</a>
+        </div>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const btn61 = document.querySelector(".btn6-1");
+    const btn62 = document.querySelector(".btn6-2");
+    const btn63 = document.querySelector(".btn6-3");
+    const btn64 = document.querySelector(".btn6-4");
+    const btn65 = document.querySelector(".btn6-5");
+    const btn66 = document.querySelector(".btn6-6");
+    const btn67 = document.querySelector(".btn6-7");
+    const btn68 = document.querySelector(".btn6-8");
+    const btn69 = document.querySelector(".btn6-9");
+
+    var nowAppCodeName = navigator.appCodeName;
+    var nowName = navigator.appName;
+    var nowVersion = navigator.appVersion;
+    var nowCookieEnabled = navigator.cookieEnabled;
+    var nowLanguage = navigator.language;
+    var nowOnLine = navigator.onLine;
+    var nowPlatform = navigator.platform;
+    var nowProduct = navigator.product;
+    var nowUserAgent = navigator.userAgent;
+
+    btn61.addEventListener("click", function(){
+        document.querySelector(".text6-1").innerHTML = nowAppCodeName;
+    });
+    btn62.addEventListener("click", function(){
+        document.querySelector(".text6-2").innerHTML = nowName;
+    });
+    btn63.addEventListener("click", function(){
+        document.querySelector(".text6-3").innerHTML = nowVersion;
+    });
+    btn64.addEventListener("click", function(){
+        document.querySelector(".text6-4").innerHTML = nowCookieEnabled;
+    });
+    btn65.addEventListener("click", function(){
+        document.querySelector(".text6-5").innerHTML = nowLanguage;
+    });
+    btn66.addEventListener("click", function(){
+        document.querySelector(".text6-6").innerHTML = nowOnLine;
+    });
+    btn67.addEventListener("click", function(){
+        document.querySelector(".text6-7").innerHTML = nowPlatform;
+    });
+    btn68.addEventListener("click", function(){
+        document.querySelector(".text6-8").innerHTML = nowProduct;
+    });
+    btn69.addEventListener("click", function(){
+        document.querySelector(".text6-9").innerHTML = nowUserAgent;
+    });
+}
+</code></pre>
+            </div>
+        </div>
+        <hr>
+    <script>
+        const btn61 = document.querySelector(".btn6-1");
+        const btn62 = document.querySelector(".btn6-2");
+        const btn63 = document.querySelector(".btn6-3");
+        const btn64 = document.querySelector(".btn6-4");
+        const btn65 = document.querySelector(".btn6-5");
+        const btn66 = document.querySelector(".btn6-6");
+        const btn67 = document.querySelector(".btn6-7");
+        const btn68 = document.querySelector(".btn6-8");
+        const btn69 = document.querySelector(".btn6-9");
+
+        var nowAppCodeName = navigator.appCodeName;
+        var nowName = navigator.appName;
+        var nowVersion = navigator.appVersion;
+        var nowCookieEnabled = navigator.cookieEnabled;
+        var nowLanguage = navigator.language;
+        var nowOnLine = navigator.onLine;
+        var nowPlatform = navigator.platform;
+        var nowProduct = navigator.product;
+        var nowUserAgent = navigator.userAgent;
+
+        // btn61.addEventListener("click", function(){
+        //     document.querySelector(".text6-1").innerHTML = nowAppCodeName;
+        // });
+        // btn62.addEventListener("click", function(){
+        //     document.querySelector(".text6-2").innerHTML = nowName;
+        // });
+        // btn63.addEventListener("click", function(){
+        //     document.querySelector(".text6-3").innerHTML = nowVersion;
+        // });
+        // btn64.addEventListener("click", function(){
+        //     document.querySelector(".text6-4").innerHTML = nowCookieEnabled;
+        // });
+        // btn65.addEventListener("click", function(){
+        //     document.querySelector(".text6-5").innerHTML = nowLanguage;
+        // });
+        // btn66.addEventListener("click", function(){
+        //     document.querySelector(".text6-6").innerHTML = nowOnLine;
+        // });
+        // btn67.addEventListener("click", function(){
+        //     document.querySelector(".text6-7").innerHTML = nowPlatform;
+        // });
+        // btn68.addEventListener("click", function(){
+        //     document.querySelector(".text6-8").innerHTML = nowProduct;
+        // });
+        // btn69.addEventListener("click", function(){
+        //     document.querySelector(".text6-9").innerHTML = nowUserAgent;
+        // });
+
+        const name = [nowAppCodeName, nowName, nowVersion, nowCookieEnabled,nowLanguage, nowOnLine, nowPlatform, nowProduct, nowUserAgent];
+
+        // for ( let i=1; i<=name.length; i++) {
+        //         document.querySelector(".btn6-"+i).addEventListener("click", () => {
+        //             document.querySelector(".text6-"+i).innerHTML = name[i-1];
+        //         });
+        //     };
+
+        name.forEach((element, i )=> {
+            document.querySelector(".btn6-"+(i+1)).addEventListener("click", () => {
+                document.querySelector(".text6-"+(i+1)).innerHTML = name[i];
+            });
+        });
+    </script>
+    <!-- //sample06 -->
+
     </main>
 </div>
 
