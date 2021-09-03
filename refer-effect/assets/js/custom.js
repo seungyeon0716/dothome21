@@ -46,6 +46,7 @@ function agentCheck(){
         if(browserList[prop]){
             //console.log(prop)
             document.querySelector("body").classList.add(prop);
+            // document.getElementsByTagName("body").classList.add(prop);  옛날 문법
         }
     }
 }
