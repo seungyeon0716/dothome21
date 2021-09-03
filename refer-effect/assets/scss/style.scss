@@ -123,8 +123,11 @@ $gradient6 : linear-gradient(to bottom,  #a18cd1 0%,#fbc2eb 100%);
 }
 
 // agent
-.iphone .bg {
-    display: none;
+.iphone main {
+    padding: 10px;
+}
+.android main {
+    padding: 10px;
 }
 
 // bg

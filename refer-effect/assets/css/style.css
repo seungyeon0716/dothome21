@@ -86,8 +86,12 @@ figcaption {
   padding: 0;
 }
 
-.iphone .bg {
-  display: none;
+.iphone main {
+  padding: 10px;
+}
+
+.android main {
+  padding: 10px;
 }
 
 .bg {
