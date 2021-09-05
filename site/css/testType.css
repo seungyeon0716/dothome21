@@ -12,7 +12,7 @@ p, a, h1, h2, h3, h4, h5, h6 {      /* 글자 깨짐 방지 */
     
 }
 .wrap {
-   
+   /* position: relative; */
 }
 .menu {
     position: absolute;
@@ -92,73 +92,74 @@ p, a, h1, h2, h3, h4, h5, h6 {      /* 글자 깨짐 방지 */
 
 /* swiper */
 .swiper {
-    position: absolute;
-    left: 50%;
-    top: 80%;
-    transform: translate(-50%, 100%);
-    background: #232323;
+    width: 100%;
+    position: relative;
     overflow: hidden;
 }
 
 .swiper-slide .slider-inner {
-    width: 1200px;
-    height: 500px;
+    width: 1400px;
     margin: 0 auto;
-}
-.swiper-slide .slider-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: relative;
-    border-radius: 50px;
+    color: #fff;
 }
 .swiper-slide .slider-inner em {
-    position: absolute;
-    left: 28%;
-    top: 15%;
-    transform: translate(-50%, -50%);
     font-family: 'NEXONLv1Gothic';
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 700;
-    color: #ebebeb;
+    text-transform: uppercase;
+    padding-top: 100px;
     display: block;
 }
 .swiper-slide .slider-inner h3 {
-    position: absolute;
-    left: 30%;
-    top: 30%;
-    transform: translate(-50%, -50%);
     font-family: 'GmarketSans';
-    font-size: 40px;
-    font-weight: 500;
-    line-height: 1.6;
-    color: #fff;
-    display: block;
+    font-size: 100px;
+    font-weight: 300;
+    line-height: 1.2;
+    text-indent: -8px; /* 들여쓰기 */
 }
-.swiper-slide .slider-inner .btn a{
+.swiper-slide .slider-inner p {
+    font-family: 'NEXONLv1Gothic';
+    font-size: 20px;
+    font-weight: 300;
+}
+.swiper-slide .slider-inner .btn{
     display: block;
     padding-bottom: 100px;
-    margin-top: 30px;
-    padding-left: 50px;
+    margin-top: 260px;
+}
+.swiper-slide .slider-inner .btn a {
+    width: 200px;
+    height: 50px;
+    display: inline-block; /* 가로 정렬 */
+    text-align: center;
+    line-height: 50px;
+    font-family: 'NEXONLv1Gothic';
+    font-size: 16px;
+    margin-right: 7px;
+}
+.swiper-slide .slider-inner .btn a.white {
+    background: #fff;
+    color: #000;
+}
+.swiper-slide .slider-inner .btn a.black {
+    background: #000;
     color: #fff;
-    font-weight: 700;
-    font-size: 15px;
 }
 .swiper-pagination {
     position: absolute;
-    left: -25% !important;
+    left: 50% !important;
     bottom: 35px;
-    transform: translateX(50%);
+    transform: translateX(-50%);
 }
 .swiper-pagination .swiper-pagination-bullet {
-    width: 8px; height: 8px;
+    width: 15px; height: 15px;
+    border: 3px solid #fff;
     display: inline-block;
     border-radius: 50%;
     margin: 0 6px;
     box-sizing: border-box;
     opacity: 1;
-    background-color: #646464;
-    z-index: 2;
+    background-color: transparent;
 }
 .swiper-pagination .swiper-pagination-bullet-active {
     background-color: #fff;
@@ -169,17 +170,9 @@ p, a, h1, h2, h3, h4, h5, h6 {      /* 글자 깨짐 방지 */
     display: block;
     position: absolute;
     top: 50%;
-    left: -50%;
-    transform: translate(-50%,-50%);
+    left: 25px;
+    transform: translateY(-50%);
     color: #fff;
-    background: rgb(56, 56, 56);
-    padding: 20px;
-    border-radius: 50%;
-    opacity: 1;
-}
-.swiper-button-prev:hover {
-    background: #fff;
-    opacity: 0.8;
 }
 .swiper-button-next {
     width: 21px;
@@ -189,12 +182,5 @@ p, a, h1, h2, h3, h4, h5, h6 {      /* 글자 깨짐 방지 */
     top: 50%;
     right: 25px;
     transform: translateY(-50%);
-    background: rgb(56, 56, 56);
-    padding: 20px;
-    border-radius: 50%;
-    opacity: 1;
-}
-.swiper-button-next:hover {
-    background: #fff;
-    opacity: 0.8;
+    color: #fff;
 }
