@@ -304,8 +304,9 @@ $gradient6 : linear-gradient(to bottom,  #a18cd1 0%,#fbc2eb 100%);
 
 // source
 .source {
-    float: right;
-    padding: 20px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
     font-family: $font-Nexon1;
 
     button {

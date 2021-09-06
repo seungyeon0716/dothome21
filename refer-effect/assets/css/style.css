@@ -292,8 +292,9 @@ figcaption {
 }
 
 .source {
-  float: right;
-  padding: 20px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
   font-family: "NEXONLv1Gothic";
 }
 .source button {
