@@ -80,7 +80,7 @@ viewTit.forEach((element, index) => {
 
 
 // Modal
-function modal(){
+function modal() {
     document.querySelector(".info button").addEventListener("click", function(){
         document.querySelector("#modal").classList.add("show");
         document.querySelector("#modal").classList.remove("hide");

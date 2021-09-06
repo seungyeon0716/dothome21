@@ -302,6 +302,29 @@ $gradient6 : linear-gradient(to bottom,  #a18cd1 0%,#fbc2eb 100%);
     }
 }
 
+// source
+.source {
+    float: right;
+    padding: 20px;
+    font-family: $font-Nexon1;
+
+    button {
+        color: #fff;
+        background: transparent;
+        border: 1px solid #fff;
+        border-radius: 50px;
+        padding: 5px 20px;
+        box-shadow: 0 0 0 #fff inset;
+        transition: all 0.4s;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0 -50px 0 #fff inset;
+            color: #000;
+        }
+    }
+}
+
 // modal
 #modal {
     position:fixed;
