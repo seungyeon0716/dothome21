@@ -476,7 +476,7 @@
 </code></pre>
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript">document.querySelectorAll(".paraNav ul li a").forEach(el => {
+<pre><code class="language-javascript"> document.querySelectorAll(".paraNav ul li a").forEach(el => {
     el.addEventListener("click", e => {
         e.preventDefault();
         document.querySelector(el.getAttribute("href")).scrollIntoView({
@@ -487,66 +487,65 @@
 
 window.addEventListener("scroll", function(){
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
-
-    if( scrollTop >= document.getElementById("section1").offsetTop -2  ){
-        document.querySelector(".paraNav ul li").forEach(el => {
+    if( scrollTop >= document.getElementById("section1").offsetTop -2 ){
+        document.querySelectorAll(".paraNav ul li").forEach( el => {
             el.classList.remove("active")
         });
         document.querySelector(".paraNav ul li:nth-child(1)").classList.add("active");
     }
-    if( scrollTop >= document.getElementById("section2").offsetTop -2  ){
-        document.querySelector(".paraNav ul li").forEach(el => {
+    if( scrollTop >= document.getElementById("section2").offsetTop -2 ){
+        document.querySelectorAll(".paraNav ul li").forEach( el => {
             el.classList.remove("active")
         });
         document.querySelector(".paraNav ul li:nth-child(2)").classList.add("active");
     }
-    if( scrollTop >= document.getElementById("section3").offsetTop -2  ){
-        document.querySelector(".paraNav ul li").forEach(el => {
+    if( scrollTop >= document.getElementById("section3").offsetTop -2 ){
+        document.querySelectorAll(".paraNav ul li").forEach( el => {
             el.classList.remove("active")
         });
         document.querySelector(".paraNav ul li:nth-child(3)").classList.add("active");
-    } 
-    if( scrollTop >= document.getElementById("section4").offsetTop -2  ){
-        document.querySelector(".paraNav ul li").forEach(el => {
+    }
+    if( scrollTop >= document.getElementById("section4").offsetTop -2 ){
+        document.querySelectorAll(".paraNav ul li").forEach( el => {
             el.classList.remove("active")
         });
         document.querySelector(".paraNav ul li:nth-child(4)").classList.add("active");
     }
-    if( scrollTop >= document.getElementById("section5").offsetTop -2  ){
-        document.querySelector(".paraNav ul li").forEach(el => {
+    if( scrollTop >= document.getElementById("section5").offsetTop -2 ){
+        document.querySelectorAll(".paraNav ul li").forEach( el => {
             el.classList.remove("active")
         });
         document.querySelector(".paraNav ul li:nth-child(5)").classList.add("active");
     }
-    if( scrollTop >= document.getElementById("section6").offsetTop -2  ){
-        document.querySelector(".paraNav ul li").forEach(el => {
+    if( scrollTop >= document.getElementById("section6").offsetTop -2 ){
+        document.querySelectorAll(".paraNav ul li").forEach( el => {
             el.classList.remove("active")
         });
         document.querySelector(".paraNav ul li:nth-child(6)").classList.add("active");
     }
-    if( scrollTop >= document.getElementById("section7").offsetTop -2  ){
-        document.querySelector(".paraNav ul li").forEach(el => {
+    if( scrollTop >= document.getElementById("section7").offsetTop -2 ){
+        document.querySelectorAll(".paraNav ul li").forEach( el => {
             el.classList.remove("active")
         });
         document.querySelector(".paraNav ul li:nth-child(7)").classList.add("active");
     }
-    if( scrollTop >= document.getElementById("section8").offsetTop -2  ){
-        document.querySelector(".paraNav ul li").forEach(el => {
+    if( scrollTop >= document.getElementById("section8").offsetTop -2 ){
+        document.querySelectorAll(".paraNav ul li").forEach( el => {
             el.classList.remove("active")
         });
         document.querySelector(".paraNav ul li:nth-child(8)").classList.add("active");
     }
     if( scrollTop >= document.getElementById("section9").offsetTop -2 ){
-        document.querySelector(".paraNav ul li").forEach(el => {
+        document.querySelectorAll(".paraNav ul li").forEach( el => {
             el.classList.remove("active")
         });
         document.querySelector(".paraNav ul li:nth-child(9)").classList.add("active");
     }
-
+    //info
     document.querySelector(".paraScroll span").innerText = parseInt(scrollTop) + "px";
 
     for( let i=1; i&lt;10; i++ ){
-        document.querySelector(".offset" + i).innerText = parseInt(document.getElementById("section" + i).offsetTop) + "px";
+        document.querySelector(".offset"+i).innerText = parseInt(document.getElementById("section"+i).offsetTop) + "px";
     }
 });
 </code></pre>
@@ -563,16 +562,7 @@ window.addEventListener("scroll", function(){
     <!-- script -->
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
-    <script>
-        document.querySelector(".source button").addEventListener("click", function(){
-            document.querySelector("#modal").classList.add("show");
-            document.querySelector("#modal").classList.remove("hide");
-        });
-        
-        document.querySelector(".modal-cont button").addEventListener("click", function(){
-            document.querySelector("#modal").classList.add("hide")
-        });
-    </script>
+
     <script>
 
         document.querySelectorAll(".paraNav ul li a").forEach(el => {
@@ -587,83 +577,74 @@ window.addEventListener("scroll", function(){
 
         window.addEventListener("scroll", function(){
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
-
-            if( scrollTop >= document.getElementById("section1").offsetTop -2  ){
-                document.querySelector(".paraNav ul li").forEach(el => {
+            if( scrollTop >= document.getElementById("section1").offsetTop -2 ){
+                document.querySelectorAll(".paraNav ul li").forEach( el => {
                     el.classList.remove("active")
                 });
                 document.querySelector(".paraNav ul li:nth-child(1)").classList.add("active");
             }
-            if( scrollTop >= document.getElementById("section2").offsetTop -2  ){
-                document.querySelector(".paraNav ul li").forEach(el => {
+            if( scrollTop >= document.getElementById("section2").offsetTop -2 ){
+                document.querySelectorAll(".paraNav ul li").forEach( el => {
                     el.classList.remove("active")
                 });
                 document.querySelector(".paraNav ul li:nth-child(2)").classList.add("active");
             }
-            if( scrollTop >= document.getElementById("section3").offsetTop -2  ){
-                document.querySelector(".paraNav ul li").forEach(el => {
+            if( scrollTop >= document.getElementById("section3").offsetTop -2 ){
+                document.querySelectorAll(".paraNav ul li").forEach( el => {
                     el.classList.remove("active")
                 });
                 document.querySelector(".paraNav ul li:nth-child(3)").classList.add("active");
-            } 
-            if( scrollTop >= document.getElementById("section4").offsetTop -2  ){
-                document.querySelector(".paraNav ul li").forEach(el => {
+            }
+            if( scrollTop >= document.getElementById("section4").offsetTop -2 ){
+                document.querySelectorAll(".paraNav ul li").forEach( el => {
                     el.classList.remove("active")
                 });
                 document.querySelector(".paraNav ul li:nth-child(4)").classList.add("active");
             }
-            if( scrollTop >= document.getElementById("section5").offsetTop -2  ){
-                document.querySelector(".paraNav ul li").forEach(el => {
+            if( scrollTop >= document.getElementById("section5").offsetTop -2 ){
+                document.querySelectorAll(".paraNav ul li").forEach( el => {
                     el.classList.remove("active")
                 });
                 document.querySelector(".paraNav ul li:nth-child(5)").classList.add("active");
             }
-            if( scrollTop >= document.getElementById("section6").offsetTop -2  ){
-                document.querySelector(".paraNav ul li").forEach(el => {
+            if( scrollTop >= document.getElementById("section6").offsetTop -2 ){
+                document.querySelectorAll(".paraNav ul li").forEach( el => {
                     el.classList.remove("active")
                 });
                 document.querySelector(".paraNav ul li:nth-child(6)").classList.add("active");
             }
-            if( scrollTop >= document.getElementById("section7").offsetTop -2  ){
-                document.querySelector(".paraNav ul li").forEach(el => {
+            if( scrollTop >= document.getElementById("section7").offsetTop -2 ){
+                document.querySelectorAll(".paraNav ul li").forEach( el => {
                     el.classList.remove("active")
                 });
                 document.querySelector(".paraNav ul li:nth-child(7)").classList.add("active");
             }
-            if( scrollTop >= document.getElementById("section8").offsetTop -2  ){
-                document.querySelector(".paraNav ul li").forEach(el => {
+            if( scrollTop >= document.getElementById("section8").offsetTop -2 ){
+                document.querySelectorAll(".paraNav ul li").forEach( el => {
                     el.classList.remove("active")
                 });
                 document.querySelector(".paraNav ul li:nth-child(8)").classList.add("active");
             }
             if( scrollTop >= document.getElementById("section9").offsetTop -2 ){
-                document.querySelector(".paraNav ul li").forEach(el => {
+                document.querySelectorAll(".paraNav ul li").forEach( el => {
                     el.classList.remove("active")
                 });
                 document.querySelector(".paraNav ul li:nth-child(9)").classList.add("active");
             }
-
-
-
-            // info
+            //info
             document.querySelector(".paraScroll span").innerText = parseInt(scrollTop) + "px";
-
-            //$(".offset1").text(parseInt($("#section1").offset().top) + "px");
-            // document.querySelector(".offset1").innerText = parseInt(document.getElementById("section1").offsetTop) + "px";
-            // document.querySelector(".offset2").innerText = parseInt(document.getElementById("section2").offsetTop) + "px";
-            // document.querySelector(".offset3").innerText = parseInt(document.getElementById("section3").offsetTop) + "px";
-            // document.querySelector(".offset4").innerText = parseInt(document.getElementById("section4").offsetTop) + "px";
-            // document.querySelector(".offset5").innerText = parseInt(document.getElementById("section5").offsetTop) + "px";
-            // document.querySelector(".offset6").innerText = parseInt(document.getElementById("section6").offsetTop) + "px";
-            // document.querySelector(".offset7").innerText = parseInt(document.getElementById("section7").offsetTop) + "px";
-            // document.querySelector(".offset8").innerText = parseInt(document.getElementById("section8").offsetTop) + "px";
-            // document.querySelector(".offset9").innerText = parseInt(document.getElementById("section9").offsetTop) + "px";
-
+            // document.querySelector(“.offset1").innerText = parseInt(document.getElementById(“section1”).offsetTop) + “px”;
+            // document.querySelector(“.offset2”).innerText = parseInt(document.getElementById(“section2").offsetTop) + “px”;
+            // document.querySelector(“.offset3").innerText = parseInt(document.getElementById(“section3”).offsetTop) + “px”;
+            // document.querySelector(“.offset4”).innerText = parseInt(document.getElementById(“section4").offsetTop) + “px”;
+            // document.querySelector(“.offset5").innerText = parseInt(document.getElementById(“section5”).offsetTop) + “px”;
+            // document.querySelector(“.offset6”).innerText = parseInt(document.getElementById(“section6").offsetTop) + “px”;
+            // document.querySelector(“.offset7").innerText = parseInt(document.getElementById(“section7”).offsetTop) + “px”;
+            // document.querySelector(“.offset8”).innerText = parseInt(document.getElementById(“section8").offsetTop) + “px”;
+            // document.querySelector(“.offset9").innerText = parseInt(document.getElementById(“section9”).offsetTop) + “px”;
             for( let i=1; i<10; i++ ){
-                document.querySelector(".offset" + i).innerText = parseInt(document.getElementById("section" + i).offsetTop) + "px";
+                document.querySelector(".offset"+i).innerText = parseInt(document.getElementById("section"+i).offsetTop) + "px";
             }
-
-        
         });
 
         
