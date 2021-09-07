@@ -699,6 +699,54 @@ figcaption {
   background-image: url(../img/bg9.jpg);
 }
 
+.paraFooter {
+  padding: 200px 0;
+}
+.paraFooter h1 {
+  font-size: 8vw;
+  line-height: 1.2;
+  padding: 10vw 8vw 0 8vw;
+  text-transform: uppercase;
+  margin-bottom: 3vw;
+}
+.paraFooter h1 em {
+  display: block;
+  font-family: "Lato";
+  font-weight: 100;
+  padding-left: 18vw;
+}
+.paraFooter .footerInfo {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  padding: 15px 20px;
+  margin-bottom: 2px;
+}
+.paraFooter .footerInfo h2 {
+  padding-right: 20px;
+}
+.paraFooter .footerInfo li {
+  display: inline;
+  list-style: none;
+}
+.paraFooter .footerInfo li a {
+  color: #fff;
+  border: 1px dashed #fff;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 50%;
+  line-height: 30px;
+  text-decoration: none;
+}
+.paraFooter .footerInfo li.active a {
+  background: #fff;
+  color: #000;
+}
+
 @media (max-width: 800px) {
   #contents h1 {
     font-size: 15vw;
