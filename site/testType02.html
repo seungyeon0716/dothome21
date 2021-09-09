@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="허승연">
+    <meta name="description" content="웹 사이트 제작을 위한 사이트입니다.">
+    <meta name="keywords" content="허승연, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, SY, publisher, css3, html, markup, design">
+    <title>testType</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- 나눔 스퀘어 웹 폰트 -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #wrap {
+            font-family: -apple-system,Apple SD Gothic Neo,BlinkMacSystemFont,Roboto,nanumsquare,sans-serif;
+        }
+
+        /* header */
+        #header {
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #fff;
+        }
+
+        #header .logo {
+            display: flex;
+            padding: 30px 180px;
+        }
+        #header .logo:hover {
+            cursor: pointer;
+        }
+        #header .logo .logo_img {
+            display: block;
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+
+        #header .logo strong {
+            text-transform: uppercase;
+            font-size: 13px;
+            font-family: 'GmarketSans';
+            font-weight: bold;
+        }
+
+        #header .menu {
+            display: inline-block;
+            position: relative;
+            color: rgba(0,0,0,0.6);
+        }
+
+        #header .menu span {
+            margin: 30px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        #header .menu span:hover {
+            cursor: pointer;
+            color: #19cf60;
+        }
+        .login {
+            padding: 30px 180px;
+        }
+        .login:hover {
+            cursor: pointer;
+        }
+        .login span {
+            padding: 10px 20px;
+            border: 1px solid #979595;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            color: gray;
+        }
+
+        /* main */
+        #main {
+            background-image: url(img/membership_cover_t@3x.1a3b4c431bef3c3c1d8584d14ad789a5.jpg);
+            background-size: cover;
+            height: 500px;
+            position: relative;
+        }
+        #main .main-box {
+            position: absolute;
+            left: 50%; top: 40%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            color: rgb(246, 244, 244);
+            text-align: center;
+
+        }
+        #main .main-title {
+            display: inline-block;
+            border-bottom: 4px solid rgb(192, 187, 187);
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        #main .main-desc {
+            font-size: 50px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        #main .main-desc2 {
+            font-size: 20px;
+        }
+
+        /* contents */
+        #contents {
+
+        }
+        /* contents1 */
+        #contents .contents1 {
+            background-color: rgb(240, 250, 247);
+            height: 700px;
+        }
+        #contents .contents1 .box {
+            width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            padding-top: 100px;
+        }
+        #contents .contents1 .right {
+            margin-right: 100px;
+            white-space: nowrap;
+        }
+        #contents .contents1 .right h2 {
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        #contents .contents1 .right p {
+            font-size: 20px;
+            color: #979595;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+        #contents .contents1 .right button {
+            background: #0cd796;
+            box-shadow: 0 10px 30px 0 rgb(40 221 111 / 30%);
+            border-radius: 50px;
+            padding: 10px 50px;
+            border: none;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        #contents .contents1 .left {}
+        #contents .contents1 .left .left-img {
+            width: 500px;
+            height: 310px;
+            margin-bottom: 50px;
+        }
+        #contents .contents1 .bottom {
+            width: 1000px;
+            margin: 0 auto;
+            padding: 40px 50px;
+            border : 1px solid #e6f2ec;
+            border-radius: 20px;
+            background: #fff;
+        }
+        #contents .contents1 .bottom .desc1 {
+            display: flex;
+        }
+        #contents .contents1 .bottom .desc1 h2 {
+            color: #12ca8f;
+            margin-right: 30px;
+            margin-bottom: 20px;
+        }
+        #contents .contents1 .bottom .desc1 span {
+            font-size: 18px;
+            font-weight: 400;
+            color: #979595;
+            padding-top: 2px;
+        }
+        #contents .contents1 .bottom .desc2 {
+            display: flex;
+        }
+        #contents .contents1 .bottom .desc2 h2 {
+            color: #12ca8f;
+            margin-right: 30px;
+        }
+        #contents .contents1 .bottom .desc2 span {
+            font-size: 18px;
+            font-weight: 400;
+            color: #979595;
+            padding-top: 2px;
+        }
+
+        /* contents2 */
+        .contents2 {
+            height: 850px;
+        }
+        .contents2 .box {
+            width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            padding-top: 100px;
+            margin-bottom: 50px;
+        }
+        .contents2 .box .right {
+            margin-right: 100px;
+            white-space: nowrap;
+        }
+        .contents2 .box .right .right-img {
+            width: 500px;
+            height: 310px;
+        }
+        .contents2 .box .left {
+            white-space: nowrap;
+        }
+        .contents2 .box .left h2 {
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .contents2 .box .left p {
+            font-size: 20px;
+            color: #979595;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+        .contents2 .box .left button {
+            background: #0cd796;
+            box-shadow: 0 10px 30px 0 rgb(40 221 111 / 30%);
+            border-radius: 50px;
+            padding: 10px 50px;
+            border: none;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .contents2 .bottom {
+            width: 1000px;
+            margin: 0 auto;
+            padding: 40px 50px;
+            border : 1px solid #e6f2ec;
+            border-radius: 20px;
+            background: #fff;
+        }
+        .contents2 .bottom .desc1 {
+            display: flex;
+        }
+        .contents2 .bottom .desc1 h2 {
+            color: #12ca8f;
+            margin-right: 30px;
+            margin-bottom: 20px;
+        }
+        .contents2 .bottom .desc1 p {
+            font-size: 18px;
+            font-weight: 400;
+            color: #979595;
+            padding-top: 2px;
+        }
+        .contents2 .bottom .desc2 {
+            display: flex;
+        }
+        .contents2 .bottom .desc2 h2 {
+            color: #12ca8f;
+            margin-right: 30px;
+            margin-bottom: 20px;
+        }
+        .contents2 .bottom .desc2 p {
+            font-size: 18px;
+            font-weight: 400;
+            color: #979595;
+            padding-top: 2px;
+        }
+        .contents2 .bottom .desc3 {
+            display: flex;
+        }
+        .contents2 .bottom .desc3 h2 {
+            color: #12ca8f;
+            margin-right: 30px;
+            margin-bottom: 20px;
+        }
+        .contents2 .bottom .desc3 p {
+            font-size: 18px;
+            font-weight: 400;
+            color: #979595;
+            padding-top: 2px;
+        }
+
+        /* contents3 */
+        .contents3 {
+            background-color: rgb(240, 247, 250);
+            height: 950px;
+        }
+        .contents3 .box {
+            width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            padding-top: 100px;
+            margin-bottom: 50px; 
+        }
+        .contents3 .box .right {
+            margin-right: 50px;
+            white-space: nowrap;
+        }
+        .contents3 .box .right h2 {
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .contents3 .box .right p {
+            font-size: 20px;
+            color: #979595;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+        .contents3 .box .right .btn .btn1 {
+            background: #0cd796;
+            box-shadow: 0 10px 30px 0 rgb(40 221 111 / 30%);
+            border-radius: 50px;
+            padding: 10px 30px;
+            border: none;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+            margin-right: 10px;
+        }
+        .contents3 .box .right .btn .btn2 {
+            box-shadow: rgb(88 181 243 / 30%) 0px 10px 30px 0px;
+            background: rgb(75, 130, 247);
+            border-radius: 50px;
+            padding: 10px 30px;
+            border: none;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .contents3 .box .left {}
+        .contents3 .box .left .left-img {
+            width: 500px;
+            height: 310px;
+        }
+        .contents3  .bottom {
+            width: 1000px;
+            margin: 0 auto;
+            width: 1000px;
+            margin: 0 auto;
+            padding: 40px 50px;
+            border : 1px solid #e6f2ec;
+            border-radius: 20px;
+            background: #fff;
+        }
+        .contents3  .bottom .desc1 {
+            display: flex;
+        }
+        .contents3  .bottom .desc1 h2 {
+            color: #12ca8f;
+            margin-right: 30px;
+            margin-bottom: 20px;
+        }
+        .contents3  .bottom .desc1 p {
+            font-size: 20px;
+            color: #979595;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+        .contents3  .bottom .desc2 {
+            display: flex;
+        }
+        .contents3  .bottom .desc2 h2 {
+            color: #12ca8f;
+            margin-right: 30px;
+            margin-bottom: 20px;
+        }
+        .contents3  .bottom .desc2 p {
+            font-size: 20px;
+            color: #979595;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+        .contents3  .bottom .desc3 {
+            display: flex;
+        }
+        .contents3  .bottom .desc3 h2 {
+            color: #12ca8f;
+            margin-right: 30px;
+            margin-bottom: 20px;
+        }
+        .contents3  .bottom .desc3 p {
+            font-size: 20px;
+            color: #979595;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+
+        /* footer */
+        #footer {
+            background-color: #000;
+            text-align: center;
+            color: #979595;
+        }
+        #footer .box {
+            border-bottom: 1px solid #222222;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        #footer h2 {
+            padding-top: 20px;
+            text-transform: uppercase;
+            font-size: 15px;
+            font-weight: 300;
+        }
+        #footer button {
+            border: 1px solid #222222;
+            background-color: #222222;
+            border-radius: 5px;
+            padding: 3px 20px;
+            color: #979595;
+            margin-bottom: 25px;
+        }
+        #footer p {
+            font-size: 10px;
+            color: #979595;
+            margin-bottom: 10px;
+        }
+        #footer span {
+            text-transform: uppercase;
+            font-size: 15px;
+            font-weight: 800;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="test02">
+        <div id="wrap">
+            <div id="header">
+                <div class="logo">
+                    <img class="logo_img" src="img/logo.gif" alt="로고">
+                    <strong>naver<br>
+                        influencer center
+                    </strong>
+                </div>
+                <div class="menu">
+                    <span>인플루언서 안내</span>
+                    <span>광고 수익 혜택</span>
+                    <span>성장 지원 프로그램</span>
+                    <span>브랜드커넥트</span>
+                    <span>공지</span>
+                </div>
+                <div class="login">
+                    <span>인플루언서로 로그인</span>
+                </div>
+            </div>
+            <div id="main">
+                <div class="main-box">
+                    <h2 class="main-title">멤버쉽 혜택</h2>
+                    <p class="main-desc">인플루언서 활동에 꼭 필요한<br>
+                        네이버의 다양한 멤버쉽 혜택을 제공합니다.
+                    </p>
+                    <p class="main-desc2">전국 파트너스퀘어의 스튜디오, 편집실 이용부터
+                        네이버플러스 멤버십 이용권 1년 무료 혜택까지.<br>
+                        네이버 인플루언서라면 네이버의 다양한
+                        멤버십 혜택들을 누릴 수 있습니다.
+                    </p>
+                </div>
+            </div>
+            <div id="contents">
+                <div class="contents1">
+                    <div class="box">
+                        <div class="right">
+                            <h2>어디에서든 나를 빛내줄 <br>
+                                온라인 네임카드
+                            </h2>
+                            <p>
+                                네이버 인플루언서라면 누구나 나만의 네임카드 다운받고<br>
+                                홈을 알릴 수 있습니다. 나를 더 예쁘고 멋지게 소개할 수 <br>
+                                있도록 온라인 네임카드를 만들어보세요.
+                            </p>
+                            <button>온라인 네임카드 만들기</button>
+                        </div>
+                        <div class="left">
+                            <img class="left-img" src="img/namecard_p@3x.3720063b76d145202e89d74d9fca7ded.png" alt="">
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <span class="desc1">
+                            <h2>신청 자격</h2>
+                            <span>홈을 개설한 네이버 인플루언서라면 누구나</span>
+                        </span>
+                        <span class="desc2">
+                            <h2>혜택 상세</h2>
+                            <span>운영중인 다른 채널에 내 인플루언서 홈을 홍보할 수 있는 네임카드 이미지 소스를 제공합니다.</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="contents2">
+                    <div class="box">
+                        <div class="right">
+                            <img class="right-img" src="img/place_p@3x.7ac91c0cb38ae987c18c8f99329fe555.png" alt="">
+                        </div>
+                        <div class="left">
+                            <h2>전국 파트너스퀘어<br>
+                                스튜디오, 편집실 제공
+                            </h2>
+                            <p>
+                                파트너스퀘어는 사진/동영상 컨텐츠를 보다 잘 만들 수<br>
+                                있는 지원을 받는 곳입니다. 크리에이터를 위한 다양한<br>
+                                스튜디오를 경험해보세요.
+                            </p>
+                            <button>파트너스퀘어 이용하기</button>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="desc1">
+                            <h2>신청 자격</h2>
+                            <p>홈을 개설한 네이버 인플루언서라면 누구나</p>
+                        </div>
+                        <div class="desc2">
+                            <h2>혜택 상세</h2>
+                            <p>서울(역삼,종로,홍대,상수),부산,광주에 위치한 파트너스퀘어 내 다양한 스튜디오 및 편집실을 이용할 수 있습니다.<br>
+                                (단, <em>홍대점은 전월 기준 팬수 1,000이상</em>인 경우에만 이용 가능합니다.)
+                            </p>
+                        </div>
+                        <div class="desc3">
+                            <h2>이용 방법</h2>
+                            <p>네이버 파트너스퀘어에서 창작자 인증을 해야합니다.<br>
+                                (단, <em>홍대점 경우 당월 인플루언서 승인 시 익월 15일</em>에 이용 권한이 부여됩니다.)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contents3">
+                    <div class="box">
+                        <div class="right">
+                            <h2>네이버플러스 멤버십<br>
+                                1년 무료 제공
+                            </h2>
+                            <p>
+                                키워드 챌린지에 참여한 인플루언서들에게 네이버플러스<br>
+                                멤버십을 선물로 드려요. 오디오클립, 웹툰, 클라우드,<br>
+                                바이브 등 다양한 서비스를 이용해보세요.
+                            </p>
+                            <div class="btn">
+                                <button class="btn1">내 멤버십 확인하기</button>
+                                <button class="btn2">지급조건 상세보기</button>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <img class="left-img" src="img/membership_plus_p@3x.c31add5014195dbe09ff19b81914be5d.png" alt="">
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="desc1">
+                            <h2>신청 자격</h2>
+                            <p>
+                                키워드 챌린지에 참여한 네이버 인플루언서
+                            </p>
+                        </div>
+                        <div class="desc2">
+                            <h2>혜택 상세</h2>
+                            <p>
+                                쇼핑할 때마다 네이버페이 포인트 최대 5% 적립 가능한 네이버플러스 멤버십 12개월 무료 이용권을 드립니다.<br>
+                                (1인당 최초 1회 지급)
+                            </p>
+                        </div>
+                        <div class="desc3">
+                            <h2>제공 방법</h2>
+                            <p>
+                                매일 1일자에 개별 이메일을 통해 이용권 지급이 안내됩니다.<br>
+                                (이번 달에 자격 요건을 달성한 분들은 다음 달 1일자에 이용권이 지급됩니다.)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+                <div class="box">
+                    <h2>top ↑</h2>
+                </div>
+                <button>로그인</button>
+                <p>NAVER Copyright © NAVER Corp. All Rights Reserved.</p>
+                <span>naver</span>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>

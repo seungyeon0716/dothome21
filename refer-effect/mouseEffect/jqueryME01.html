@@ -163,105 +163,126 @@
                     </div>
                     <div class="view-cont">
                         <div class="html">
-<pre><code class="language-html">&lt;div id="tab-menu"&gt;
-    &lt;div class="tab-btn"&gt;
-        &lt;ul&gt;
-            &lt;li class="active"&gt;&lt;a href="#"&gt;명언1&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;명언2&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;명언3&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;명언4&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;명언5&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;div class="tab-cont"&gt;
-        &lt;div&gt;
-            &lt;h2&gt;루소&lt;/h2&gt;
-            &lt;p&gt;되찾을 수 없는게 세월이니 시시한 일에 시간을 낭비하지 말고 순간순간을 후회 없이 잘 살아야 한다.&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div&gt;
-            &lt;h2&gt;명심보감 &lt;/h2&gt;
-            &lt;p&gt;직접 눈으로 본 일도 오히려 참인지 아닌지 염려스러운데 더구나 등뒤에서 남이 말하는 것이야 어찌 이것을 깊이 믿을 수 있으랴?&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div&gt;
-            &lt;h2&gt;헬렌켈러 &lt;/h2&gt;
-            &lt;p&gt;모든것들에는 나름의 경이로움과 심지어 어둠과 침묵이 있고, 내가 어떤 상태에 있더라도 나는 그속에서 만족하는 법을 배운다&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div&gt;
-            &lt;h2&gt;소포클레스 &lt;/h2&gt;
-            &lt;p&gt; 내가 헛되이 보낸 오늘은 어제 죽어간 이들이 그토록 바라던 하루이다. 단 하루면 인간적인 모든 것을 멸망시킬수도 다시 소생시킬수도 있다.&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div&gt;
-            &lt;h2&gt;알베르트 아인슈타인&lt;/h2&gt;
-            &lt;p&gt;삶을 사는 데는 단 두가지 방법이 있다. 하나는 기적이 전혀 없다고 여기는 것이고, 또 다른 하나는 모든 것이 기적이라고 여기는방식이다.&lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+<pre><code class="language-html">&lt;main&gt;
+    &lt;div class="cursor"&gt;&lt;/div&gt;
+
+    &lt;article class="mouseCont"&gt;
+        &lt;p&gt;The &lt;span class="style1"&gt;secret&lt;/span&gt; of&lt;span class="style2"&gt;getting&lt;/span&gt; ahead is &lt;span class="style3"&gt;getting&lt;/span&gt; &lt;span class="style4"&gt;started.&lt;/span&gt;&lt;/p&gt;
+        &lt;h2&gt;앞서가는 방법의 비밀은 &lt;span class="style5"&gt;시작&lt;/span&gt;하는 &lt;span class="style6"&gt;것이다.&lt;/span&gt; &lt;/h2&gt;
+    &lt;/article&gt;
+&lt;/main&gt;
 </code></pre>
                         </div>
                         <div class="css">
-<pre><code class="language-css">#tab-menu {
-    max-width: 600px;
-    background: rgb(148, 197, 160);
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 5px;
-    overflow: hidden;
-    font-family: 'NEXONLv2Gothic';
-    color: #fff;
-}
-.tab-btn {}
-.tab-btn ul {
+<pre><code class="language-css">.mouseCont {
     display: flex;
-}
-.tab-btn li {
-    width: 20%;
-    list-style: none;
-    text-align: center;
-}
-.tab-btn li a {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;  
     color: #fff;
-    text-decoration: none;
-    padding: 15px;
-    display: block;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'NEXONLv1Gothic';
+    cursor: none;
 }
-.tab-btn li.active a {
-    border-bottom: 3px solid rgb(4, 95, 51);
-    color: #000;
+.mouseCont p {
+    font-size: 2.5vw;
+    line-height: 2.3;
+    font-weight: 300;
 }
-.tab-cont {
-    background: #fff;
-    padding: 20px;
-    color: #000;
+.mouseCont h2 {
+    font-size: 3vw;
+    font-weight: normal;
+    font-weight: 500;
 }
-.tab-cont > div {
-    display: none;
+.mouseCont span {
+    font-style: normal;
+    border-bottom: 0.2vw dashed #fff;
 }
-.tab-cont > div:first-child {
-    display: block;
+.cursor {
+    position: absolute;
+    left: 0; top: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.1);
+    user-select: none;
+    pointer-events: none;
+    transition: 
+    background-color .2s,
+    border-color .2s,
+    border-radius .2s,
+    transform .6s;
 }
-.tab-cont > div h2 {
-    margin-bottom: 10px;
+.cursor.style1 {
+    background-color: rgba(255,165,0,0.4);
+    border-color: orange;
 }
-.tab-cont > div p {
-    line-height: 1.6;
+.cursor.style2 {
+    background-color: rgba(196,0, 255,0.4);
+    border-color: rgba(140,0, 255);
+    transform: rotateY(720deg) scale(2);
+}
+.cursor.style3 {
+    background-color: rgba(255, 153, 0, 0.4);
+    border-color: rgb(236, 154, 47);
+    transform: scale(1.5) rotate(380deg);
+    border-radius: 20px;
+}
+.cursor.style4 {
+    background-color: rgba(0, 255, 213, 0.431);
+    border-color: rgb(47, 236, 132);
+    transform: rotate3d(0,1,0,-50deg) rotate(180deg); transform-origin: right;
+    border-radius: 20px;
+}
+.cursor.style5 {
+    background-color: rgba(0, 195, 255, 0.431);
+    border-color: rgb(47, 107, 236);
+    transform: skew(20deg, 20deg) rotate(180deg);
+    border-radius: 20px;
+}
+.cursor.style6 {
+    background-color: rgba(255, 0, 157, 0.431);
+    border-color: rgb(236, 47, 220);
+    background-image: url(../assets/img/bg7.jpg);
+    background-size: cover;
+    transform: rotate(360deg) scale(2);
 }
 </code></pre>
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript">const tabBtn = $(".tab-btn ul li");    
-const tabCont = $(".tab-cont > div");
+<pre><code class="language-javascript"> $(window).mousemove(function(e){
+    $(".clientX").text(e.clientX + "px");   //브라우저 X좌표 기준
+    $(".clientY").text(e.clientY + "px");   //브라우저 Y좌표 기준
+    $(".offsetX").text(e.offsetX + "px");   //요소 X좌표 기준
+    $(".offsetY").text(e.offsetY + "px");   //요소 Y좌표 기준
+    $(".pageX").text(e.pageX + "px");       //페이지 X좌표 기준
+    $(".pageY").text(e.pageY + "px");       //페이지 Y좌표 기준
+    $(".screenX").text(e.screenX + "px");   //디바이스 X좌표 기준
+    $(".screenY").text(e.screenY + "px");   //디바이스 Y좌표 기준
+});
 
-tabBtn.click(function(){
-    let target = $(this);
-    tabBtn.removeClass("active");
-    target.addClass("active");
+$(window).mousemove(function(e){
+    // $(".cursor").css("left", "100px");
+    // $(".cursor").css("top", "100px");
+    // $(".cursor").css({"left":"100px", "top": "100px"});
+    // $(".cursor").css({left:"100px", top: "100px"});
+    // $(".cursor").css({left:100, top: 100});
+    // $(".cursor").css({left:100,"backgroun-color": 100});
+    // $(".cursor").css({left:100,backgrounolor: 100});
 
-    let index = target.index();
-    tabCont.css("display","none");
-    tabCont.eq(index).css("display","block");
-    });
+    $(".cursor").css({left: e.clientX -25, top: e.clientY -25});
+});
+
+$(".mouseCont span").hover(function(){
+    let cla = $(this).attr("class") //cla는 지역변수이기 때문에 밑에 똑같이 넣어주기!
+    $(".cursor").addClass( $(this).attr("class"));
+}, function(){
+    $(".cursor").removeClass( $(this).attr("class"));
+});
 </code></pre>
                         </div>
                     </div>
@@ -302,60 +323,77 @@ tabBtn.click(function(){
             // $(".cursor").css({left:100,backgrounolor: 100});
 
             $(".cursor").css({left: e.clientX -25, top: e.clientY -25});
+        });
 
-            // $(".mouseCont em").mouseover(function(){
-            //     $(".cursor").addClass("active");
-            // });
-            // $(".mouseCont em").mouseout(function(){
-            //     $(".cursor").removeClass("active");
-            // });
+        // $(".mouseCont em").mouseover(function(){
+        //     $(".cursor").addClass("active");
+        // });
+        // $(".mouseCont em").mouseout(function(){
+        //     $(".cursor").removeClass("active");
+        // });
 
-            // $(".mouseCont em").mouseenter(function(){
-            //     $(".cursor").addClass("active");
-            // });
-            // $(".mouseCont em").mouseleave(function(){
-            //     $(".cursor").removeClass("active");
-            // });
+        // $(".mouseCont em").mouseenter(function(){
+        //     $(".cursor").addClass("active");
+        // });
+        // $(".mouseCont em").mouseleave(function(){
+        //     $(".cursor").removeClass("active");
+        // });
 
-            // $(".mouseCont .style1").hover(function(){
-            //     $(".cursor").addClass("style1");
-            // }, function(){
-            //     $(".cursor").removeClass("style1");
-            // });
-            // $(".mouseCont .style2").hover(function(){
-            //     $(".cursor").addClass("style2");
-            // }, function(){
-            //     $(".cursor").removeClass("style2");
-            // });
-            // $(".mouseCont .style3").hover(function(){
-            //     $(".cursor").addClass("style3");
-            // }, function(){
-            //     $(".cursor").removeClass("style3");
-            // });
-            // $(".mouseCont .style4").hover(function(){
-            //     $(".cursor").addClass("style4");
-            // }, function(){
-            //     $(".cursor").removeClass("style4");
-            // });
-            // $(".mouseCont .style5").hover(function(){
-            //     $(".cursor").addClass("style5");
-            // }, function(){
-            //     $(".cursor").removeClass("style5");
-            // });
-            // $(".mouseCont .style6").hover(function(){
-            //     $(".cursor").addClass("style6");
-            // }, function(){
-            //     $(".cursor").removeClass("style6");
-            // });
+        // $(".mouseCont .style1").hover(function(){
+        //     $(".cursor").addClass("style1");
+        // }, function(){
+        //     $(".cursor").removeClass("style1");
+        // });
+        // $(".mouseCont .style2").hover(function(){
+        //     $(".cursor").addClass("style2");
+        // }, function(){
+        //     $(".cursor").removeClass("style2");
+        // });
+        // $(".mouseCont .style3").hover(function(){
+        //     $(".cursor").addClass("style3");
+        // }, function(){
+        //     $(".cursor").removeClass("style3");
+        // });
+        // $(".mouseCont .style4").hover(function(){
+        //     $(".cursor").addClass("style4");
+        // }, function(){
+        //     $(".cursor").removeClass("style4");
+        // });
+        // $(".mouseCont .style5").hover(function(){
+        //     $(".cursor").addClass("style5");
+        // }, function(){
+        //     $(".cursor").removeClass("style5");
+        // });
+        // $(".mouseCont .style6").hover(function(){
+        //     $(".cursor").addClass("style6");
+        // }, function(){
+        //     $(".cursor").removeClass("style6");
+        // });
 
-            for( let i=1; i<=6; i++){
-                $(".mouseCont .style"+i).hover(function(){
-                    $(".cursor").addClass("style"+i);
-                }, function(){
-                    $(".cursor").removeClass("style"+i);
-                });
-            }
+        //for문
+        // for( let i=1; i<=6; i++){
+        //     $(".mouseCont .style"+i).hover(function(){
+        //         $(".cursor").addClass("style"+i);
+        //     }, function(){
+        //         $(".cursor").removeClass("style"+i);
+        //     });
 
+        //each문
+        // $(".mouseCont span").each((el, index) => {
+        //      $(el).hover(function(){
+        //         $(".cursor").addClass(index+1);
+        //     }, function(){
+        //         $(".cursor").removeClass(index+1);
+        //     });
+
+        // });
+
+        //attr()
+        $(".mouseCont span").hover(function(){
+            let cla = $(this).attr("class") //cla는 지역변수이기 때문에 밑에 똑같이 넣어주기!
+            $(".cursor").addClass( $(this).attr("class"));
+        }, function(){
+            $(".cursor").removeClass( $(this).attr("class"));
         });
     </script>
 </body>
