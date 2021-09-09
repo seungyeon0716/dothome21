@@ -597,59 +597,68 @@ window.addEventListener("scroll", function(){
 
         window.addEventListener("scroll", function(){
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
-            if( scrollTop >= document.getElementById("section1").offsetTop -2 ){
-                document.querySelectorAll(".paraNav ul li").forEach( el => {
-                    el.classList.remove("active")
-                });
-                document.querySelector(".paraNav ul li:nth-child(1)").classList.add("active");
-            }
-            if( scrollTop >= document.getElementById("section2").offsetTop -2 ){
-                document.querySelectorAll(".paraNav ul li").forEach( el => {
-                    el.classList.remove("active")
-                });
-                document.querySelector(".paraNav ul li:nth-child(2)").classList.add("active");
-            }
-            if( scrollTop >= document.getElementById("section3").offsetTop -2 ){
-                document.querySelectorAll(".paraNav ul li").forEach( el => {
-                    el.classList.remove("active")
-                });
-                document.querySelector(".paraNav ul li:nth-child(3)").classList.add("active");
-            }
-            if( scrollTop >= document.getElementById("section4").offsetTop -2 ){
-                document.querySelectorAll(".paraNav ul li").forEach( el => {
-                    el.classList.remove("active")
-                });
-                document.querySelector(".paraNav ul li:nth-child(4)").classList.add("active");
-            }
-            if( scrollTop >= document.getElementById("section5").offsetTop -2 ){
-                document.querySelectorAll(".paraNav ul li").forEach( el => {
-                    el.classList.remove("active")
-                });
-                document.querySelector(".paraNav ul li:nth-child(5)").classList.add("active");
-            }
-            if( scrollTop >= document.getElementById("section6").offsetTop -2 ){
-                document.querySelectorAll(".paraNav ul li").forEach( el => {
-                    el.classList.remove("active")
-                });
-                document.querySelector(".paraNav ul li:nth-child(6)").classList.add("active");
-            }
-            if( scrollTop >= document.getElementById("section7").offsetTop -2 ){
-                document.querySelectorAll(".paraNav ul li").forEach( el => {
-                    el.classList.remove("active")
-                });
-                document.querySelector(".paraNav ul li:nth-child(7)").classList.add("active");
-            }
-            if( scrollTop >= document.getElementById("section8").offsetTop -2 ){
-                document.querySelectorAll(".paraNav ul li").forEach( el => {
-                    el.classList.remove("active")
-                });
-                document.querySelector(".paraNav ul li:nth-child(8)").classList.add("active");
-            }
-            if( scrollTop >= document.getElementById("section9").offsetTop -2 ){
-                document.querySelectorAll(".paraNav ul li").forEach( el => {
-                    el.classList.remove("active")
-                });
-                document.querySelector(".paraNav ul li:nth-child(9)").classList.add("active");
+            // if( scrollTop >= document.getElementById("section1").offsetTop -2 ){
+            //     document.querySelectorAll(".paraNav ul li").forEach( el => {
+            //         el.classList.remove("active")
+            //     });
+            //     document.querySelector(".paraNav ul li:nth-child(1)").classList.add("active");
+            // }
+            // if( scrollTop >= document.getElementById("section2").offsetTop -2 ){
+            //     document.querySelectorAll(".paraNav ul li").forEach( el => {
+            //         el.classList.remove("active")
+            //     });
+            //     document.querySelector(".paraNav ul li:nth-child(2)").classList.add("active");
+            // }
+            // if( scrollTop >= document.getElementById("section3").offsetTop -2 ){
+            //     document.querySelectorAll(".paraNav ul li").forEach( el => {
+            //         el.classList.remove("active")
+            //     });
+            //     document.querySelector(".paraNav ul li:nth-child(3)").classList.add("active");
+            // }
+            // if( scrollTop >= document.getElementById("section4").offsetTop -2 ){
+            //     document.querySelectorAll(".paraNav ul li").forEach( el => {
+            //         el.classList.remove("active")
+            //     });
+            //     document.querySelector(".paraNav ul li:nth-child(4)").classList.add("active");
+            // }
+            // if( scrollTop >= document.getElementById("section5").offsetTop -2 ){
+            //     document.querySelectorAll(".paraNav ul li").forEach( el => {
+            //         el.classList.remove("active")
+            //     });
+            //     document.querySelector(".paraNav ul li:nth-child(5)").classList.add("active");
+            // }
+            // if( scrollTop >= document.getElementById("section6").offsetTop -2 ){
+            //     document.querySelectorAll(".paraNav ul li").forEach( el => {
+            //         el.classList.remove("active")
+            //     });
+            //     document.querySelector(".paraNav ul li:nth-child(6)").classList.add("active");
+            // }
+            // if( scrollTop >= document.getElementById("section7").offsetTop -2 ){
+            //     document.querySelectorAll(".paraNav ul li").forEach( el => {
+            //         el.classList.remove("active")
+            //     });
+            //     document.querySelector(".paraNav ul li:nth-child(7)").classList.add("active");
+            // }
+            // if( scrollTop >= document.getElementById("section8").offsetTop -2 ){
+            //     document.querySelectorAll(".paraNav ul li").forEach( el => {
+            //         el.classList.remove("active")
+            //     });
+            //     document.querySelector(".paraNav ul li:nth-child(8)").classList.add("active");
+            // }
+            // if( scrollTop >= document.getElementById("section9").offsetTop -2 ){
+            //     document.querySelectorAll(".paraNav ul li").forEach( el => {
+            //         el.classList.remove("active")
+            //     }); 
+            //     document.querySelector(".paraNav ul li:nth-child(9)").classList.add("active");
+            // }
+
+            for(let i=1;  i<=9; i++){
+                if( scrollTop >= document.getElementById("section"+i).offsetTop -2 ){
+                    document.querySelectorAll(".paraNav ul li").forEach( el => {
+                        el.classList.remove("active")
+                    }); 
+                    document.querySelector(".paraNav ul li:nth-child(i)").classList.add("active");
+                }
             }
             //info
             document.querySelector(".paraScroll span").innerText = parseInt(scrollTop) + "px";
