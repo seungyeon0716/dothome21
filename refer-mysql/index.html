@@ -334,16 +334,16 @@ INSERT INTO member(youEmail, youName, youPass, youBirth, regTime) VALUES('younyc
 
                     <h4>전체 데이터 불러오기</h4>
 <pre class="language-js"><code>MariaDB [test01]> SELECT * FROM member;
-+------------+----------------------+-----------+---------+------------+------------+
-| myMemberID | youEmail             | youName   | youPass | youBirth   | regTime    |
-+------------+----------------------+-----------+---------+------------+------------+
-|          1 | seungyeon@naver      | sy        | 1234    | 1997-07-16 | 2147483647 |
-|          2 | billiejeong08@gmail  | billie    | 1234    | 1995-08-12 |        333 |
-|          3 | seonyoung@gmail.com  | SEONYOUNG | 1234    | 1997-04-03 |        111 |
-|          4 | guswjd8694@naver     | dallae    | 1234    | 2016-05-25 |        333 |
-|          5 | younyc0413@gmail.com | youn      | 0413    | 1992-04-13 |        333 |
-+------------+----------------------+-----------+---------+------------+------------+
-5 rows in set (0.002 sec)
++------------+----------------------+---------+---------+------------+------------+
+| myMemberID | youEmail             | youName | youPass | youBirth   | regTime    |
++------------+----------------------+---------+---------+------------+------------+
+|          1 | seungyeon@naver      | 허승연  | 5678    | 1997-07-16 | 2147483647 |
+|          2 | billie08@gmail       | 김은지  | 5678    | 1999-08-12 |        333 |
+|          3 | seonyoung@gmail.com  | 박선영  | 5678    | 1998-04-03 |        111 |
+|          4 | g8694@naver          | 박현정  | 5678    | 2016-05-25 |        333 |
+|          5 | yo0413@gmail.com     | 김여찬  | 5678    | 1992-04-13 |        333 |
++------------+----------------------+---------+---------+------------+------------+
+5 rows in set (0.000 sec)
 </code></pre>
 
                     <h4 class="pt20">myMemberId가 3번인 경우</h4>
@@ -351,7 +351,7 @@ INSERT INTO member(youEmail, youName, youPass, youBirth, regTime) VALUES('younyc
 +------------+---------------------+-----------+---------+------------+---------+
 | myMemberID | youEmail            | youName   | youPass | youBirth   | regTime |
 +------------+---------------------+-----------+---------+------------+---------+
-|          3 | seonyoung@gmail.com | SEONYOUNG | 1234    | 1997-04-03 |     111 |
+|          3 | seonyoung@gmail.com | SEONYOUNG | 1234    | 1998-04-03 |     111 |
 +------------+---------------------+-----------+---------+------------+---------+
 1 row in set (0.010 sec) 
 </code></pre>
@@ -362,7 +362,7 @@ INSERT INTO member(youEmail, youName, youPass, youBirth, regTime) VALUES('younyc
 | myMemberID | youEmail         | youName | youPass | youBirth   | regTime    |
 +------------+------------------+---------+---------+------------+------------+
 |          1 | seungyeon@naver  | sy      | 1234    | 1997-07-16 | 2147483647 |
-|          4 | guswjd8694@naver | dallae  | 1234    | 2016-05-25 |        333 |
+|          4 | g8694@naver      | dallae  | 1234    | 2016-05-25 |        333 |
 +------------+------------------+---------+---------+------------+------------+
 2 rows in set (0.001 sec)
 </code></pre>
@@ -382,8 +382,8 @@ INSERT INTO member(youEmail, youName, youPass, youBirth, regTime) VALUES('younyc
 +------------+----------------------+-----------+---------+------------+---------+
 | myMemberID | youEmail             | youName   | youPass | youBirth   | regTime |
 +------------+----------------------+-----------+---------+------------+---------+
-|          3 | seonyoung@gmail.com  | SEONYOUNG | 1234    | 1997-04-03 |     111 |
-|          5 | younyc0413@gmail.com | youn      | 0413    | 1992-04-13 |     333 |
+|          3 | seonyoung@gmail.com  | SEONYOUNG | 1234    | 1998-04-03 |     111 |
+|          5 | yo0413@gmail.com     | youn      | 0413    | 1992-04-13 |     333 |
 +------------+----------------------+-----------+---------+------------+---------+
 2 rows in set (0.001 sec)
 </code></pre>
@@ -403,10 +403,10 @@ INSERT INTO member(youEmail, youName, youPass, youBirth, regTime) VALUES('younyc
 +------------+----------------------+-----------+---------+------------+---------+
 | myMemberID | youEmail             | youName   | youPass | youBirth   | regTime |
 +------------+----------------------+-----------+---------+------------+---------+
-|          2 | billiejeong08@gmail  | billie    | 1234    | 1995-08-12 |     333 |
-|          3 | seonyoung@gmail.com  | SEONYOUNG | 1234    | 1997-04-03 |     111 |
-|          4 | guswjd8694@naver     | dallae    | 1234    | 2016-05-25 |     333 |
-|          5 | younyc0413@gmail.com | youn      | 0413    | 1992-04-13 |     333 |
+|          2 | billie08@gmail       | billie    | 1234    | 1999-08-12 |     333 |
+|          3 | seonyoung@gmail.com  | SEONYOUNG | 1234    | 1998-04-03 |     111 |
+|          4 | g8694@naver          | dallae    | 1234    | 2016-05-25 |     333 |
+|          5 | yo0413@gmail.com     | youn      | 0413    | 1992-04-13 |     333 |
 +------------+----------------------+-----------+---------+------------+---------+
 4 rows in set (0.001 sec)
 </code></pre>
@@ -418,8 +418,8 @@ INSERT INTO member(youEmail, youName, youPass, youBirth, regTime) VALUES('younyc
 | myMemberID | youEmail            | youName | youPass | youBirth   | regTime    |
 +------------+---------------------+---------+---------+------------+------------+
 |          1 | seungyeon@naver     | 허승연  | 1234    | 1997-07-16 | 2147483647 |
-|          3 | seonyoung@gmail.com | 김선영  | 1234    | 1997-04-03 |        111 |
-|          4 | guswjd8694@naver    | 김현정  | 1234    | 2016-05-25 |        333 |
+|          3 | seonyoung@gmail.com | 박선영  | 1234    | 1998-04-03 |        111 |
+|          4 | g8694@naver         | 박현정  | 1234    | 2016-05-25 |        333 |
 +------------+---------------------+---------+---------+------------+------------+
 3 rows in set (0.000 sec)
 </code></pre>
@@ -444,10 +444,10 @@ INSERT INTO member(youEmail, youName, youPass, youBirth, regTime) VALUES('younyc
 | myMemberID | youEmail             | youName | youPass | youBirth   | regTime    |
 +------------+----------------------+---------+---------+------------+------------+
 |          1 | seungyeon@naver      | 허승연  | 5678    | 1997-07-16 | 2147483647 |
-|          2 | billiejeong08@gmail  | 정은지  | 5678    | 1995-08-12 |        333 |
-|          3 | seonyoung@gmail.com  | 김선영  | 5678    | 1997-04-03 |        111 |
-|          4 | guswjd8694@naver     | 김현정  | 5678    | 2016-05-25 |        333 |
-|          5 | younyc0413@gmail.com | 윤여찬  | 5678    | 1992-04-13 |        333 |
+|          2 | billie08@gmail       | 김은지  | 5678    | 1999-08-12 |        333 |
+|          3 | seonyoung@gmail.com  | 박선영  | 5678    | 1998-04-03 |        111 |
+|          4 | g8694@naver          | 박현정  | 5678    | 2016-05-25 |        333 |
+|          5 | yo0413@gmail.com     | 김여찬  | 5678    | 1992-04-13 |        333 |
 +------------+----------------------+---------+---------+------------+------------+
 5 rows in set (0.000 sec)
 </code></pre>
@@ -462,9 +462,9 @@ INSERT INTO member(youEmail, youName, youPass, youBirth, regTime) VALUES('younyc
 | myMemberID | youEmail             | youName | youPass | youBirth   | regTime    |
 +------------+----------------------+---------+---------+------------+------------+
 |          1 | seungyeon@naver      | 허승연  | 5678    | 1997-07-16 | 2147483647 |
-|          2 | billiejeong08@gmail  | 정은지  | 5678    | 1995-08-12 |        333 |
-|          4 | guswjd8694@naver     | 김현정  | 5678    | 2016-05-25 |        333 |
-|          5 | younyc0413@gmail.com | 윤여찬  | 5678    | 1992-04-13 |        333 |
+|          2 | billie08@gmail       | 김은지  | 5678    | 1999-08-12 |        333 |
+|          4 | g8694@naver          | 박현정  | 5678    | 2019-05-25 |        333 |
+|          5 | yo0413@gmail.com     | 김여찬  | 5678    | 1999-04-13 |        333 |
 +------------+----------------------+---------+---------+------------+------------+
 4 rows in set (0.000 sec)
 </code></pre>
@@ -475,12 +475,153 @@ INSERT INTO member(youEmail, youName, youPass, youBirth, regTime) VALUES('younyc
 | myMemberID | youEmail            | youName | youPass | youBirth   | regTime    |
 +------------+---------------------+---------+---------+------------+------------+
 |          1 | seungyeon@naver     | 허승연  | 5678    | 1997-07-16 | 2147483647 |
-|          2 | billiejeong08@gmail | 정은지  | 5678    | 1995-08-12 |        333 |
+|          2 | billie08@gmail      | 김은지  | 5678    | 1999-08-12 |        333 |
 +------------+---------------------+---------+---------+------------+------------+
 2 rows in set (0.000 sec)
 </code></pre>
                 </div>
                 <!-- //Intro6 -->
+
+                 <!-- Intro7 -->
+                 <div class="bs-docs-section">
+                    <h2 id="intro7" class="page-header">테이블 Join</h2>
+
+<pre class="language-js"><code>
+create table myMember(
+    myMemberID int(10) unsigned auto_increment,
+    youID varchar(15) not null,
+    youName varchar(10) not null,
+    youPass varchar(30) not null,
+    youEmail varchar(30) not null,
+    regTime int(11) not null,
+    PRIMARY KEY (myMemberID)
+) charset=utf8;
+
+create table myReview(
+    myReviewID int(10) unsigned auto_increment,
+    myMemberID int(10) unsigned,
+    youCont tinytext not null,
+    regTime int(11) not null,
+    PRIMARY KEY (myReviewID)
+) charset=utf8;
+
+MariaDB [test01]> show tables;
++------------------+
+| Tables_in_test01 |
++------------------+
+| mymember         |
+| myreview         |
++------------------+
+2 rows in set (0.001 sec)
+
+MariaDB [test01]> desc mymember;
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| myMemberID | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| youID      | varchar(15)      | NO   |     | NULL    |                |
+| youName    | varchar(10)      | NO   |     | NULL    |                |
+| youPass    | varchar(30)      | NO   |     | NULL    |                |
+| youEmail   | varchar(30)      | NO   |     | NULL    |                |
+| regTime    | int(11)          | NO   |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+6 rows in set (0.016 sec)
+
+MariaDB [test01]> desc myreview;
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| myReviewID | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| myMemberID | int(10) unsigned | YES  |     | NULL    |                |
+| youCont    | tinytext         | NO   |     | NULL    |                |
+| regTime    | int(11)          | NO   |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+4 rows in set (0.021 sec)
+
+INSERT INTO mymember(youID, youName, youPass, youEmail, regTime) VALUES('seungyeon', '허승연', '1234','seungyeon@naver', now());
+INSERT INTO mymember(youID, youName, youPass, youEmail, regTime) VALUES('sysy', '홍길동', '1234','hong@naver', now());
+INSERT INTO mymember(youID, youName, youPass, youEmail, regTime) VALUES('ssss', '김하나', '12345','hana@naver', now());
+INSERT INTO mymember(youID, youName, youPass, youEmail, regTime) VALUES('yyyy', '김두울', '5678','two@naver', now());
+INSERT INTO mymember(youID, youName, youPass, youEmail, regTime) VALUES('hhhh', '허가연', '8888','heo@naver', now());
+
+INSERT INTO myreview(myMemberID, youCont, regTime) VALUES(3, '여기 옷 너무 좋아요', now());
+INSERT INTO myreview(myMemberID, youCont, regTime) VALUES(1, '조금 사이즈가 크네요', now());
+INSERT INTO myreview(myMemberID, youCont, regTime) VALUES(2, '반품할겠습니다', now());
+INSERT INTO myreview(myMemberID, youCont, regTime) VALUES(3, '인생템이에요', now());
+
+MariaDB [test01]> SELECT * FROM mymember;
++------------+-----------+---------+---------+-----------------+------------+
+| myMemberID | youID     | youName | youPass | youEmail        | regTime    |
++------------+-----------+---------+---------+-----------------+------------+
+|          1 | seungyeon | 허승연  | 1234    | seungyeon@naver | 2147483647 |
+|          2 | sysy      | 홍길동  | 1234    | hong@naver      | 2147483647 |
+|          3 | ssss      | 김하나  | 12345   | hana@naver      | 2147483647 |
+|          4 | yyyy      | 김두울  | 5678    | two@naver       | 2147483647 |
+|          5 | hhhh      | 허가연  | 8888    | heo@naver       | 2147483647 |
++------------+-----------+---------+---------+-----------------+------------+
+5 rows in set (0.002 sec)
+
+MariaDB [test01]> SELECT * FROM myreview;
++------------+------------+----------------------+------------+
+| myReviewID | myMemberID | youCont              | regTime    |
++------------+------------+----------------------+------------+
+|          1 |          3 | 여기 옷 너무 좋아요  | 2147483647 |
+|          2 |          1 | 조금 사이즈가 크네요 | 2147483647 |
+|          3 |          2 | 반품할겠습니다       | 2147483647 |
+|          4 |          3 | 인생템이에요         | 2147483647 |
++------------+------------+----------------------+------------+
+4 rows in set (0.001 sec)
+</code></pre>
+
+                    <h3 id="intro7-1" class="pt30">Join문 사용하기</h3>
+                    <div class="bs-callout bs-callout-info">
+                        SELECT 필드명 FROM 테이블명 엘리어스 JOIN 연결할 테이블명 엘리어스 ON(조건문)
+                    </div>
+                    <h4>두개의 테이블 Join하기</h4>
+<pre class="language-js"><code>SELECT m.youName, r.youCont, r.regTime FROM mymember m JOIN myreview r ON (m.myMemberID = r.myMemberID);
+MariaDB [test01]> SELECT m.youName, r.youCont, r.regTime FROM mymember m JOIN myreview r ON (m.myMemberID = r.myReviewID);
++---------+----------------------+------------+
+| youName | youCont              | regTime    |
++---------+----------------------+------------+
+| 허승연  | 조금 사이즈가 크네요 | 2147483647 |
+| 홍길동  | 반품할겠습니다       | 2147483647 |
+| 김하나  | 여기 옷 너무 좋아요  | 2147483647 |
+| 김하나  | 인생템이에요         | 2147483647 |
++---------+----------------------+------------+
+4 rows in set (0.001 sec)
+</code></pre>
+
+                    <h4 class="pt20">필드명 변경하여 표시하는 방법</h4>
+<pre class="language-js"><code>SELECT m.youName, r.youCont, r.regTime AS reviewTime FROM mymember m JOIN myreview r ON (m.myMemberID = r.myMemberID);
+MariaDB [test01]> SELECT m.youName, r.youCont, r.regTime AS reviewTime FROM mymember m JOIN myreview r ON (m.myMemberID = r.myMemberID);
++---------+----------------------+------------+
+| youName | youCont              | reviewTime |
++---------+----------------------+------------+
+| 허승연  | 조금 사이즈가 크네요 | 2147483647 |
+| 홍길동  | 반품할겠습니다       | 2147483647 |
+| 김하나  | 여기 옷 너무 좋아요  | 2147483647 |
+| 김하나  | 인생템이에요         | 2147483647 |
++---------+----------------------+------------+
+4 rows in set (0.001 sec)
+</code></pre>
+
+                    <h4 class="pt20">필드 내용이 없는 경우 표시하는 방법</h4>
+<pre class="language-js"><code>SELECT m.youName, r.youCont, r.regTime FROM mymember m LEFT JOIN myreview r ON (m.myMemberID = r.myMemberID);
+MariaDB [test01]> SELECT m.youName, r.youCont, r.regTime FROM mymember m LEFT JOIN myreview r ON (m.myMemberID = r.myMemberID);
++---------+----------------------+------------+
+| youName | youCont              | regTime    |
++---------+----------------------+------------+
+| 김하나  | 여기 옷 너무 좋아요  | 2147483647 |
+| 허승연  | 조금 사이즈가 크네요 | 2147483647 |
+| 홍길동  | 반품할겠습니다       | 2147483647 |
+| 김하나  | 인생템이에요         | 2147483647 |
+| 김두울  | NULL                 |       NULL |
+| 허가연  | NULL                 |       NULL |
++---------+----------------------+------------+
+6 rows in set (0.002 sec)
+</code></pre>
+                </div>
+                <!-- //Intro7 -->
                 
 
             </div>
@@ -521,6 +662,11 @@ INSERT INTO member(youEmail, youName, youPass, youBirth, regTime) VALUES('younyc
                                 <li><a href="#intro6-2">데이터 불러오기</a></li>
                                 <li><a href="#intro6-3">데이터 수정하기</a></li>
                                 <li><a href="#intro6-4">데이터 삭제하기</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#intro7">테이블 Join</a>
+                            <ul class="nav bs-sidenav">
+                                <li><a href="#intro7-1">Join문 사용하기</a></li>
                             </ul>
                         </li>
                     </ul>
