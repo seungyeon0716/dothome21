@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #test03 {
+            font-family: 'NanumSquare';
+        }
+        /* header */
+        #header {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            color: #000;
+            border-bottom: 1px solid #f2f2f2;
+        }
+        #header .logo {
+            display: flex;
+            margin-left: 450px;
+            margin-right: 120px;
+            font-family: 'GmarketSans';
+            text-transform: uppercase;
+        }
+        #header .logo:hover {
+            cursor: pointer;
+        }
+        #header .logo h2 {
+            font-size: 15px;
+            font-weight: 800;
+            margin-right: 8px;
+            padding-top: 8px;
+        }
+        #header .logo span {
+            font-size: 25px;
+            font-weight: 800;
+        }
+        #header .menu {
+            font-size: 18px;
+            margin-right: 130px;
+        }
+        #header .menu span {
+            margin: 0 35px;
+        }
+        #header .menu span:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        #header .btn {
+            display: flex;
+        }
+        #header .btn .right {
+            border: 1px solid rgba(0,0,0,.4);
+            background: #fff;
+            color: rgba(0,0,0,.8);
+            border-radius: 3px;
+            padding: 5px 15px;
+            display: block;
+            font-size: 15px;
+            font-weight: 500;
+            margin-right: 10px;
+        }
+        #header .btn .left {
+            border: 1px solid rgba(0,0,0,.4);
+            background: #fff;
+            color: rgba(0,0,0,.8);
+            border-radius: 3px;
+            padding: 5px 15px;
+            display: block;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        /*  banner */
+        #banner {
+            background-image: url(img/bridge_banner_01.png);
+            background-size: cover;
+            width: 100%;
+            height: 450px;
+            margin-bottom: 150px;
+        }
+        /* contents */
+        #content {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .contents1 {
+            text-align: center;
+        }
+        .contents1 h2 {
+            font-family: 'GmarketSans';
+            font-weight: 800;
+            font-size: 40px;
+            margin-bottom: 5px;
+        }
+        .contents1 p {
+            font-size: 18px;
+            margin-bottom: 80px;
+        }
+        .contents1 .box1 {
+            display: flex;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        /* article1 */
+        .contents1 .box1 .art1 {
+            border: 1px solid #eee;
+            border-radius: 5px;
+            height: 650px;
+            position: relative;
+        }
+        .contents1 .box1 .art1 .art-img {
+            width: 400px;
+            height: 400px;
+            margin-bottom: 30px;
+        }
+        .contents1 .box1 .art1 em {
+            padding-left: 40px;
+            font-family: 'GmarketSans';
+            font-weight: 800;
+            font-size: 20px;
+            margin-right: 5px;
+        }
+        .contents1 .box1 .art1 .red {
+            border-radius: 50px;
+            background-color: #fa615b;
+            padding: 3px 10px;
+            color: #fff;
+            font-weight: 800;
+        }
+        .contents1 .box1 .art1 p {
+            margin-top: 15px;
+            padding-left: 40px;
+            font-size: 20px;
+            color: #4a4a4a;
+        }
+        .contents1 .box1 .art1 .art-btn {
+            display: flex;
+            position: absolute;
+            left: 9%; top: 570px;
+        }
+        .contents1 .box1 .art1 .art-btn:hover {
+            cursor: pointer;
+        }
+        .contents1 .box1 .art1 .art-btn .green {
+            background-color: #05d686;
+            border-radius: 5px; 
+            padding: 8px 20px;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 800;
+            margin-right: 10px;
+        }
+        .contents1 .box1 .art1 .art-btn .white {
+            border-radius: 5px; 
+            border: 1px solid #e3e3e3;
+            padding: 8px 20px;
+            color: rgba(0,0,0,.6);
+            font-size: 15px;
+            font-weight: 800;
+        }
+
+        /* article2 */
+        .contents1 .box1 .art2 {
+            border: 1px solid #eee;
+            border-radius: 5px;
+            margin: 0 30px;
+            height: 650px;
+            position: relative;
+        }
+        .contents1 .box1 .art2 .art-img {
+            width: 400px;
+            height: 400px;
+            margin-bottom: 30px;
+        }
+        .contents1 .box1 .art2 em {
+            padding-left: 40px;
+            font-family: 'GmarketSans';
+            font-weight: 800;
+            font-size: 20px;
+            margin-right: 5px;
+        }
+        .contents1 .box1 .art2 .red {
+            border-radius: 50px;
+            background-color: #fa615b;
+            padding: 3px 10px;
+            color: #fff;
+            font-weight: 800;
+        }
+        .contents1 .box1 .art2 p {
+            margin-top: 15px;
+            padding-left: 40px;
+            font-size: 20px;
+            color: #4a4a4a;
+        }
+        .contents1 .box1 .art2 .art-btn {
+            display: flex;
+            position: absolute;
+            left: 9%; top: 570px;
+        }
+        .contents1 .box1 .art2 .art-btn:hover {
+            cursor: pointer;
+        }
+        .contents1 .box1 .art2 .art-btn .white {
+            border-radius: 5px; 
+            border: 1px solid #e3e3e3;
+            padding: 8px 20px;
+            color: rgba(0,0,0,.6);
+            font-size: 15px;
+            font-weight: 800;
+        }
+        
+        /* article3 */
+        .contents1 .box1 .art3 {
+            border: 1px solid #eee;
+            border-radius: 5px;
+            height: 650px;
+            position: relative;
+        }
+        .contents1 .box1 .art3 .art-img {
+            width: 400px;
+            height: 400px;
+            margin-bottom: 30px;
+        }
+        .contents1 .box1 .art3 em {
+            padding-left: 40px;
+            font-family: 'GmarketSans';
+            font-weight: 800;
+            font-size: 20px;
+            margin-right: 5px;
+        }
+        .contents1 .box1 .art3 .red {
+            border-radius: 50px;
+            background-color: #fa615b;
+            padding: 3px 10px;
+            color: #fff;
+            font-weight: 800;
+        }
+        .contents1 .box1 .art3 p {
+            margin-top: 15px;
+            padding-left: 40px;
+            font-size: 20px;
+            color: #4a4a4a;
+        }
+        .contents1 .box1 .art3 .art-btn {
+            display: flex;
+            position: absolute;
+            left: 9%; top: 570px;
+        }
+        .contents1 .box1 .art3 .art-btn:hover {
+            cursor: pointer;
+        }
+        .contents1 .box1 .art3 .art-btn .white {
+            border-radius: 5px; 
+            border: 1px solid #e3e3e3;
+            padding: 8px 20px;
+            color: rgba(0,0,0,.6);
+            font-size: 15px;
+            font-weight: 800;
+        }
+
+        /* box2 */
+        .contents1 .box2 {
+            display: flex;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        /* article1 */
+        .contents1 .box2 .art1 {
+            border: 1px solid #eee;
+            border-radius: 5px;
+            height: 650px;
+            position: relative;
+        }
+        .contents1 .box2 .art1 .art-img {
+            width: 400px;
+            height: 400px;
+            margin-bottom: 30px;
+        }
+        .contents1 .box2 .art1 em {
+            padding-left: 40px;
+            font-family: 'GmarketSans';
+            font-weight: 800;
+            font-size: 20px;
+            margin-right: 5px;
+        }
+        .contents1 .box2 .art1 .red {
+            border-radius: 50px;
+            background-color: #fa615b;
+            padding: 3px 10px;
+            color: #fff;
+            font-weight: 800;
+        }
+        .contents1 .box2 .art1 p {
+            margin-top: 15px;
+            padding-left: 40px;
+            font-size: 20px;
+            color: #4a4a4a;
+        }
+        .contents1 .box2 .art1 .art-btn {
+            display: flex;
+            position: absolute;
+            left: 9%; top: 570px;
+        }
+        .contents1 .box2 .art1 .art-btn:hover {
+            cursor: pointer;
+        }
+        .contents1 .box2 .art1 .art-btn .green {
+            background-color: #05d686;
+            border-radius: 5px; 
+            padding: 8px 20px;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 800;
+            margin-right: 10px;
+        }
+        .contents1 .box2 .art1 .art-btn .white {
+            border-radius: 5px; 
+            border: 1px solid #e3e3e3;
+            padding: 8px 20px;
+            color: rgba(0,0,0,.6);
+            font-size: 15px;
+            font-weight: 800;
+        }
+
+        /* article2 */
+        .contents1 .box2 .art2 {
+            border: 1px solid #eee;
+            border-radius: 5px;
+            margin: 0 30px;
+            height: 650px;
+            position: relative;
+        }
+        .contents1 .box2 .art2 .art-img {
+            width: 400px;
+            height: 400px;
+            margin-bottom: 30px;
+        }
+        .contents1 .box2 .art2 em {
+            padding-left: 40px;
+            font-family: 'GmarketSans';
+            font-weight: 800;
+            font-size: 20px;
+            margin-right: 5px;
+        }
+        .contents1 .box2 .art2 .red {
+            border-radius: 50px;
+            background-color: #fa615b;
+            padding: 3px 10px;
+            color: #fff;
+            font-weight: 800;
+        }
+        .contents1 .box2 .art2 p {
+            margin-top: 15px;
+            padding-left: 40px;
+            font-size: 20px;
+            color: #4a4a4a;
+        }
+        .contents1 .box2 .art2 .art-btn {
+            display: flex;
+            position: absolute;
+            left: 9%; top: 570px;
+        }
+        .contents1 .box2 .art2 .art-btn:hover {
+            cursor: pointer;
+        }
+        .contents1 .box2 .art2 .art-btn .white {
+            border-radius: 5px; 
+            border: 1px solid #e3e3e3;
+            padding: 8px 20px;
+            color: rgba(0,0,0,.6);
+            font-size: 15px;
+            font-weight: 800;
+        }
+        
+        /* article3 */
+        .contents1 .box2 .art3 {
+            border: 1px solid #eee;
+            border-radius: 5px;
+            height: 650px;
+            position: relative;
+        }
+        .contents1 .box2 .art3 .art-img {
+            width: 400px;
+            height: 400px;
+            margin-bottom: 30px;
+        }
+        .contents1 .box2 .art3 em {
+            padding-left: 40px;
+            font-family: 'GmarketSans';
+            font-weight: 800;
+            font-size: 20px;
+            margin-right: 5px;
+        }
+        .contents1 .box2 .art3 .red {
+            border-radius: 50px;
+            background-color: #fa615b;
+            padding: 3px 10px;
+            color: #fff;
+            font-weight: 800;
+        }
+        .contents1 .box2 .art3 p {
+            margin-top: 15px;
+            padding-left: 40px;
+            font-size: 20px;
+            color: #4a4a4a;
+        }
+        .contents1 .box2 .art3 .art-btn {
+            display: flex;
+            position: absolute;
+            left: 9%; top: 570px;
+        }
+        .contents1 .box2 .art3 .art-btn:hover {
+            cursor: pointer;
+        }
+        .contents1 .box2 .art3 .art-btn .white {
+            border-radius: 5px; 
+            border: 1px solid #e3e3e3;
+            padding: 8px 20px;
+            color: rgba(0,0,0,.6);
+            font-size: 15px;
+            font-weight: 800;
+        }
+
+         /* box3 */
+         .contents1 .box3 {
+            text-align: left;
+            margin-bottom: 150px;
+            width: 400px;
+        }
+
+        /* article1 */
+        .contents1 .box3 .art1 {
+            border: 1px solid #eee;
+            border-radius: 5px;
+            height: 650px;
+            position: relative;
+        }
+        .contents1 .box3 .art1 .art-img {
+            width: 400px;
+            height: 400px;
+            margin-bottom: 30px;
+        }
+        .contents1 .box3 .art1 em {
+            font-family: 'GmarketSans';
+            font-weight: 800;
+            font-size: 20px;
+            margin-right: 5px;
+            padding-left: 40px;
+        }
+        .contents1 .box3 .art1 .red {
+            border-radius: 50px;
+            background-color: #fa615b;
+            padding: 3px 10px;
+            color: #fff;
+            font-weight: 800;
+        }
+        .contents1 .box3 .art1 p {
+            margin-top: 15px;
+            padding-left: 40px;
+            font-size: 20px;
+            color: #4a4a4a;
+        }
+        .contents1 .box3 .art1 .art-btn {
+            display: flex;
+            position: absolute;
+            left: 9%; top: 570px;
+        }
+        .contents1 .box3 .art1 .art-btn:hover {
+            cursor: pointer;
+        }
+        .contents1 .box3 .art1 .art-btn .white {
+            border-radius: 5px; 
+            border: 1px solid #e3e3e3;
+            padding: 8px 20px;
+            color: rgba(0,0,0,.6);
+            font-size: 15px;
+            font-weight: 800;
+        }
+
+        /* contents2 */
+        .contents2 {
+            text-align: center;
+        }
+        .contents2 h2 {
+            font-family: 'GmarketSans';
+            font-weight: 800;
+            font-size: 40px;
+            margin-bottom: 5px;
+        }
+        .contents2 p {
+            font-size: 18px;
+            margin-bottom: 80px;
+        }
+
+        /* box1 */
+        .contents2 .box1 {
+            display: flex;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+        /* article1 */
+        .contents2 .box1 .art1 {
+            border: 1px solid #eee;
+            border-radius: 5px;
+            height: 650px;
+            position: relative;
+        }
+        .contents2 .box1 .art1 .art-img {
+            width: 400px;
+            height: 400px;
+            margin-bottom: 30px;
+        }
+        .contents2 .box1 .art1 .red {
+            background-color: #c20034;
+            color: #fff;
+            border-radius: 50px;
+            padding: 3px 5px;
+            font-size: 13px;
+            font-weight: 800;
+            margin-left: 40px;
+        }
+        .contents2 .box1 .art1 em {
+            font-family: 'GmarketSans';
+            font-weight: 800;
+            font-size: 20px;
+            margin-right: 5px;
+            padding-left: 40px;
+            display: block;
+            margin-top: 10px;
+        }
+        .contents2 .box1 .art1 p {
+            margin-top: 15px;
+            padding-left: 40px;
+            font-size: 18px;
+            color: #4a4a4a;
+        }
+        .contents2 .box1 .art1 .art-btn {
+            position: absolute;
+            left: 9%; top: 570px;
+            margin-top: 15px;
+        }
+        .contents2 .box1 .art1 .art-btn span {
+            position: absolute;
+            border-radius: 5px; 
+            border: 1px solid #e3e3e3;
+            padding: 8px 20px;
+            color: rgba(0,0,0,.6);
+            font-size: 15px;
+            font-weight: 800;
+            white-space: nowrap;
+        }
+
+        /* article2 */
+        .contents2 .box1 .art2 {
+            border: 1px solid #eee;
+            border-radius: 5px;
+            height: 650px;
+            margin: 0 30px;
+            position: relative;
+        }
+        .contents2 .box1 .art2 .art-img {
+            width: 400px;
+            height: 400px;
+            margin-bottom: 30px;
+        }
+        .contents2 .box1 .art2 .red {
+            background-color: #c20034;
+            color: #fff;
+            border-radius: 50px;
+            padding: 3px 5px;
+            font-size: 13px;
+            font-weight: 800;
+            margin-left: 40px;
+        }
+        .contents2 .box1 .art2 em {
+            font-family: 'GmarketSans';
+            font-weight: 800;
+            font-size: 20px;
+            margin-right: 5px;
+            padding-left: 40px;
+            display: block;
+            margin-top: 10px;
+        }
+        .contents2 .box1 .art2 p {
+            margin-top: 15px;
+            padding-left: 40px;
+            font-size: 18px;
+            color: #4a4a4a;
+        }
+        .contents2 .box1 .art2 .art-btn {
+            position: absolute;
+            left: 9%; top: 570px;
+            margin-top: 15px;
+        }
+        .contents2 .box1 .art2 .art-btn span {
+            position: absolute;
+            border-radius: 5px; 
+            border: 1px solid #e3e3e3;
+            padding: 8px 20px;
+            color: rgba(0,0,0,.6);
+            font-size: 15px;
+            font-weight: 800;
+            white-space: nowrap;
+        }
+
+        /* article3 */
+        .contents2 .box1 .art3 {
+            border: 1px solid #eee;
+            border-radius: 5px;
+            height: 650px;
+            position: relative;
+        }
+        .contents2 .box1 .art3 .art-img {
+            width: 400px;
+            height: 400px;
+            margin-bottom: 30px;
+        }
+        .contents2 .box1 .art3 .red {
+            background-color: #c20034;
+            color: #fff;
+            border-radius: 50px;
+            padding: 3px 5px;
+            font-size: 13px;
+            font-weight: 800;
+            margin-left: 40px;
+        }
+        .contents2 .box1 .art3 em {
+            font-family: 'GmarketSans';
+            font-weight: 800;
+            font-size: 20px;
+            margin-right: 5px;
+            padding-left: 40px;
+            display: block;
+            margin-top: 10px;
+        }
+        .contents2 .box1 .art3 p {
+            margin-top: 15px;
+            padding-left: 40px;
+            font-size: 18px;
+            color: #4a4a4a;
+        }
+        .contents2 .box1 .art3 .art-btn {
+            position: absolute;
+            left: 9%; top: 570px;
+            margin-top: 15px;
+        }
+        .contents2 .box1 .art3 .art-btn span {
+            position: absolute;
+            border-radius: 5px; 
+            border: 1px solid #e3e3e3;
+            padding: 8px 20px;
+            color: rgba(0,0,0,.6);
+            font-size: 15px;
+            font-weight: 800;
+            white-space: nowrap;
+        }
+
+         /* box2 */
+         .contents2 .box2 {
+            text-align: left;
+            margin-bottom: 200px;
+            width: 400px;
+        }
+
+        /* article1 */
+        .contents2 .box2 .art1 {
+            border: 1px solid #eee;
+            border-radius: 5px;
+            height: 650px;
+            position: relative;
+        }
+        .contents2 .box2 .art1 .art-img {
+            width: 400px;
+            height: 400px;
+            margin-bottom: 30px;
+        }
+        .contents2 .box2 .art1 .red {
+            background-color: #c20034;
+            color: #fff;
+            border-radius: 50px;
+            padding: 3px 5px;
+            font-size: 13px;
+            font-weight: 800;
+            margin-left: 40px;
+        }
+        .contents2 .box2 .art1 em {
+            font-family: 'GmarketSans';
+            font-weight: 800;
+            font-size: 20px;
+            margin-right: 5px;
+            padding-left: 40px;
+            display: block;
+            margin-top: 10px;
+        }
+        .contents2 .box2 .art1 p {
+            margin-top: 15px;
+            padding-left: 40px;
+            font-size: 18px;
+            color: #4a4a4a;
+        }
+        .contents2 .box2 .art1 .art-btn {
+            position: absolute;
+            left: 9%; top: 570px;
+            margin-top: 15px;
+        }
+        .contents2 .box2 .art1 .art-btn span {
+            position: absolute;
+            border-radius: 5px; 
+            border: 1px solid #e3e3e3;
+            padding: 8px 20px;
+            color: rgba(0,0,0,.6);
+            font-size: 15px;
+            font-weight: 800;
+            white-space: nowrap;
+        }
+
+        /* article */
+        #article {
+            border-top: 1px solid rgba(0,0,0,.1);
+            background-color: #f7f7f7;
+            width: 100%;
+            height: 340px;
+            margin: 0 auto;
+        }
+        #article .wrap {
+            text-align: center;
+        }
+        #article h2 {
+            padding-top: 80px;
+            font-size: 30px;
+            font-weight: 800;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+        #article p {
+            font-size: 17px;
+            color: rgba(0,0,0,.5);
+            margin-bottom: 40px;
+        }
+        #article .blue {
+            background-color: #2284f5;
+            border-radius: 25px;
+            padding: 15px 30px;
+            font-size: 15px;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        #footer {
+            position: relative;
+            height: 130px;
+            background-color: #191919;
+            min-width: 1240px;
+            color: #666;
+        }
+        #footer .wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #footer .wrap .article {
+        }
+        #footer .wrap .article .art1 {
+            display: flex;
+            padding-top: 30px;
+        }
+        #footer .wrap .article .art1 h2 {
+            padding-right: 7px;
+            text-transform: uppercase;
+            font-family: 'GmarketSans';
+            font-size: 13px;
+            padding-top: 5px;
+        }
+        #footer .wrap .article .art1 span {
+            text-transform: uppercase;
+            font-family: 'GmarketSans';
+            font-size: 20px;
+            font-weight: 800;
+            padding-bottom: 10px;
+        }
+        #footer .wrap .article .art2 {
+            display: flex;
+        }
+        #footer .wrap .article .art2 .desc {
+            font-weight: 600;
+            margin-right: 150px;
+            white-space: nowrap;
+        }
+        #footer .wrap .article .art2 .desc span {
+            margin: 0 10px 0 0;
+        }
+        #footer .wrap .article .art2 p {
+            font-weight: 600;
+            margin-right: 150px;
+        }
+        #footer .wrap .article .art2 .menu {
+            font-weight: 600;
+        }
+        #footer .wrap .article .art2 .menu span {
+            margin: 10px;
+            white-space: nowrap;
+        }
+
+    </style>
+       <!-- CSS -->
+       <link rel="stylesheet" href="css/fonts.css">
+       <link rel="stylesheet" href="css/reset.css">
+       <link rel="stylesheet" href="css/common.css">
+
+     <!-- 나눔 스퀘어 웹 폰트 -->
+     <link rel="stylesheet" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+</head>
+<body>
+    <section id="test03">
+        <div id="header">
+            <div class="logo">
+                <h2>naver</h2>
+                <span>clova</span>
+            </div>
+            <div class="menu">
+                <span>기술·솔루션</span>
+                <span>제품</span>
+                <span>플랫폼</span>
+                <span>파트너</span>
+                <span>리서치</span>
+            </div>
+            <div class="btn">
+                <span class="right">Biz Start</span>
+                <span class="left">비즈니스 문의</span>
+            </div>
+        </div>
+        <div id="banner">
+        </div>
+        <div id="content">
+            <div class="contents1">
+                <h2>AI Devices</h2>
+                <p>AI 기술이 집약된 제품으로 편리한 일상을 만나보세요</p>
+                <div class="box1">
+                    <article class="art1">
+                        <img class="art-img" src="img/img_clova_lamp.png" alt="램프 관련 이미지">
+                        <em>CLOVA Lamp</em>
+                        <span class="red">NEW</span>
+                        <p>책을 읽어주는 아이 친구<br>
+                            프리미엄 기능의 스마트 램프
+                        </p>
+                        <span class="art-btn">
+                            <span class="green">구매하기</span>
+                            <span class="white">알아보기</span>
+                        </span>
+                    </article>
+                    <article class="art2">
+                        <img class="art-img" src="img/img_clova_clock_plus.png" alt="시계 관련 이미지">
+                        <em>CLOVA Clock</em>
+                        <span class="red">NEW</span>
+                        <p>매일의 일상을 편리하게<br>
+                            변화시켜줄 스마트 클락
+                        </p>
+                        <span class="art-btn">
+                            <span class="white">알아보기</span>
+                        </span>
+                    </article>
+                    <article class="art3">
+                        <img class="art-img" src="img/img_clova_friends.png" alt="램프 관련 이미지">
+                        <em>CLOVA Friends</em>
+                        <p>음악 추천부터 네이버 검색까지<br>
+                            다재다능한 스마트 스피커
+                        </p>
+                        <span class="art-btn">
+                            <span class="white">알아보기</span>
+                        </span>
+                    </article>
+                </div>
+                <div class="box2">
+                    <article class="art1">
+                        <img class="art-img" src="img/img_clova_wave.png" alt="램프 관련 이미지">
+                        <em>CLOVA Wave</em>
+                        <p>풍부하고 선명한 사운드로 즐기는<br>
+                            최적의 스마트홈 스피커
+                        </p>
+                        <span class="art-btn">
+                            <span class="white">알아보기</span>
+                        </span>
+                    </article>
+                    <article class="art2">
+                        <img class="art-img" src="img/img_clova_friends_mini.png" alt="시계 관련 이미지">
+                        <em>CLOVA Friends mini</em>
+                        <p>더 작고 더 가벼워진<br>
+                            스마트 스피커
+                        </p>
+                        <span class="art-btn">
+                            <span class="white">알아보기</span>
+                        </span>
+                    </article>
+                    <article class="art3">
+                        <img class="art-img" src="img/img_doraemon_edition.png" alt="램프 관련 이미지">
+                        <em>Doraemon edition</em>
+                        <p>고양이형 만능 로봇 도라에몽을<br>
+                            모티브로 한 스마트 스피커
+                        </p>
+                        <span class="art-btn">
+                            <span class="white">알아보기</span>
+                        </span>
+                    </article>
+                </div>
+                <div class="box3">
+                    <article class="art1">
+                        <img class="art-img" src="img/img_minions_edition.png" alt="램프 관련 이미지">
+                        <em>MINIONS edition</em>
+                        <p>귀여운 악동 미니언즈를<br>
+                            모티브로 한 스마트 스피커
+                        </p>
+                        <span class="art-btn">
+                            <span class="white">알아보기</span>
+                        </span>
+                    </article>
+                </div>
+            </div>
+            <div class="contents2">
+                <h2>With Partners</h2>
+                <p>파트너사와 함께 만든 클로바 스마트 디바이스들을 만나보세요.</p>
+                <div class="box1">
+                    <article class="art1">
+                        <img class="art-img" src="img/img_clova_clock_plus.png" alt="">
+                        <span class="red">with LG U+<br></span>
+                        <em>CLOVA Clock+2</em>
+                        <p>
+                            집 안을 확장하고 연결하는 <br>
+                            우리 집 생활 필수품
+                        </p>
+                        <span class="art-btn">
+                            <span>알아보기</span>
+                        </span>
+                    </article>
+                    <article class="art2">
+                        <img class="art-img" src="img/img_clova_clock_plus.png" alt="">
+                        <span class="red">with LG U+<br></span>
+                        <em>CLOVA Clock+</em>
+                        <p>
+                            매일의 일상을 편리하게 <br>
+                            변화시켜줄 스마트 클락
+                        </p>
+                        <span class="art-btn">
+                            <span>알아보기</span>
+                        </span>
+                    </article>
+                    <article class="art3">
+                        <img class="art-img" src="img/img_clova_friends_plus.png" alt="">
+                        <span class="red">with LG U+<br></span>
+                        <em>CLOVA Friends+</em>
+                        <p>
+                            유플러스 전용 기능을 <br>
+                            더한 스마트 스피커
+                        </p>
+                        <span class="art-btn">
+                            <span>알아보기</span>
+                        </span>
+                    </article>
+                </div>
+                <div class="box2">
+                    <article class="art1">
+                        <img class="art-img" src="img/img_clova_on.png" alt="">
+                        <span class="red">with LG U+<br></span>
+                        <em>CLOVA ON+</em>
+                        <p>
+                            미니멀 디자인의 <br>
+                            컴팩트 스마트 스피커
+                        </p>
+                        <span class="art-btn">
+                            <span>알아보기</span>
+                        </span>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div id="article">
+            <div class="wrap">
+                <h2>인공지능 플랫폼 클로바와 함께<br>
+                    당신의 일상이 더욱 편리해집니다.
+                </h2>
+                <p>스마트 디바이스를 더욱 스마트하게 이용하는 명령어 가이드</p>
+                <span class="blue">클로바 명령어 가이드</span>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="wrap">
+                <div class="article">
+                    <article class="art1">
+                        <h2>naver</h2>
+                        <span>clova</span>
+                    </article>
+                    <article class="art2">
+                        <div class="desc">
+                            <span>고객센터 1833-5387</span>
+                            <span>09:00 - 18:00 (주말,공휴일 휴무)</span>
+                        </div>
+                        <p>Powered by NAVER · LINE</p>
+                        <div class="menu">
+                            <span>공지사항</span>
+                            <span>이용약관</span>
+                            <span>CLOVA</span>
+                            <span>채용안내</span>
+                            <span>CLOVA JP</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
