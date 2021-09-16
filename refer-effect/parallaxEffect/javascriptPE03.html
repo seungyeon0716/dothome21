@@ -542,6 +542,9 @@ $(window).scroll(function(){
     <script>
         document.querySelector(".paraNav ul li").addEventListener("click", function(e){
             e.preventDefault();
+            let target = document.querySelector(this);
+            let index = target.index();
+            let section = document.querySelector(".content-item")
         })
         $(".paraNav ul li").click(function(e){
             e.preventDefault();
