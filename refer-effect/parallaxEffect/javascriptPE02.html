@@ -233,34 +233,19 @@
                     <div class="view-cont">
                         <div class="html">
 <pre><code class="language-html">&lt;main&gt;
-    &lt;div class="paraScroll"&gt;window.scrollY : &lt;span&gt;0&lt;/span&gt;&lt;/div&gt;
+    &lt;div class="paraScroll"&gt;scrollTop() : &lt;span&gt;0&lt;/span&gt;&lt;/div&gt;&lt;!--//scrool--&gt;
 
-    &lt;!--//scrool--&gt;
-    &lt;div class="paraInfo2"&gt;
-        &lt;ul&gt;
-            &lt;li class="active"&gt;section1 offset() : &lt;span class="offset1"&gt;0&lt;/span&gt;&lt;/li&gt;
-            &lt;li&gt;section2 offset() : &lt;span class="offset2"&gt;0&lt;/span&gt;&lt;/li&gt;
-            &lt;li&gt;section3 offset() : &lt;span class="offset3"&gt;0&lt;/span&gt;&lt;/li&gt;
-            &lt;li&gt;section4 offset() : &lt;span class="offset4"&gt;0&lt;/span&gt;&lt;/li&gt;
-            &lt;li&gt;section5 offset() : &lt;span class="offset5"&gt;0&lt;/span&gt;&lt;/li&gt;
-            &lt;li&gt;section6 offset() : &lt;span class="offset6"&gt;0&lt;/span&gt;&lt;/li&gt;
-            &lt;li&gt;section7 offset() : &lt;span class="offset7"&gt;0&lt;/span&gt;&lt;/li&gt;
-            &lt;li&gt;section8 offset() : &lt;span class="offset8"&gt;0&lt;/span&gt;&lt;/li&gt;
-            &lt;li&gt;section9 offset() : &lt;span class="offset9"&gt;0&lt;/span&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-
-    &lt;nav class="paraNav"&gt;
-        &lt;ul&gt;    &lt;!--숫자 자동 더하기 {s$}--&gt;
-            &lt;li class="active"&gt;&lt;a href="#section1"&gt;s1&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section2"&gt;s2&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section3"&gt;s3&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section4"&gt;s4&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section5"&gt;s5&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section6"&gt;s6&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section7"&gt;s7&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section8"&gt;s8&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section9"&gt;s9&lt;/a&gt;&lt;/li&gt;
+    &lt;nav class="paraDot"&gt;
+        &lt;ul&gt;  
+            &lt;li class="active"&gt;&lt;a href="#section1"&gt;&lt;span&gt;section1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section2"&gt;&lt;span&gt;section2&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section3"&gt;&lt;span&gt;section3&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section4"&gt;&lt;span&gt;section4&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section5"&gt;&lt;span&gt;section5&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section6"&gt;&lt;span&gt;section6&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section7"&gt;&lt;span&gt;section7&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section8"&gt;&lt;span&gt;section8&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section9"&gt;&lt;span&gt;section9&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
     &lt;/nav&gt;
     &lt;!--//nav--&gt;
@@ -356,200 +341,76 @@
         &lt;/section&gt;
         &lt;!-- //section9 --&gt;
     &lt;/div&gt;
-    &lt;!-- //contents --&gt;
 &lt;/main&gt;
 </code></pre>
                         </div>
                         <div class="css">
-<pre><code class="language-css">.parallax {
-    background: #222;
-    color: #fff;
-    font-family: 'NEXONLv1Gothic';
-}
-
-.paraScroll {
+<pre><code class="language-css"> .paraDot {
     position: fixed;
-    left: 20px;
-    bottom: 20px;
+    right: 20px;
+    top: 50%;
     z-index: 1000;
+    transform: translateY(-50%);
     background: rgba(0,0,0,0.4);
-    color: #fff;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 12px;
-    padding: 0 20px;
+    padding: 20px 10px;
+    border-radius: 30px;
 }
-.paraInfo2 {
-    position: fixed;
-    left: 20px;
-    bottom: 70px;
-    z-index: 1000;
-    background: rgba(0,0,0,0.4);
-    color: #fff;
-    padding: 20px;
-    font-size: 12px;
-    line-height: 1.8;
-    border-radius: 10px;
+.paraDot li {
+    list-style: none;
 
-    li {
-        list-style: none;
-    }
 }
-
-.paraNav {
-    position: fixed;
-    right: 20px; top: 20px;
-    z-index: 1000;
-    background: raba(0,0,0,0.4);
-    padding: 15px 20px;
-    border-radius: 50px;
-
-    li {
-        display: inline-block;
-        list-style: none;
-
-        a {
-            color: #fff;
-            text-decoration: none;
-            display: inline-block;
-            padding: 5px;
-            width: 30px; height: 30px;
-            text-align: center;
-            line-height: 30px;
-        }
-
-        &.active a {
-            background: #fff;
-            color: #000;
-            border-radius: 50%;
-        }
-    }
-}   
-
-.paraInfo {
-    padding: 20px;
-    h1 {
-        display: inline-block;
-        font-size: 20px;
-        border-bottom: 1px dashed #fff;
-        margin-bottom: 8px;
-        font-weight: 400;
-        a {
-            color: #fff;
-            text-decoration: none;
-        }
-    }
-    p {
-        font-size: 14px;
-        line-height: 1.8;
-    }
+.paraDot li a {
+    width: 20px; 
+    height: 20px;
+    display: block;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin: 8px;
+    position: relative;
+    text-decoration: none;
 }
-.paraCont {
-    width: 100%;
-    overflow: hidden;
-
-    .content-item {
-        width: 1000px;
-        max-width: 70vw;
-        // background: rgba(255,255,255,0.3);
-        margin: 30vw 0;
-        padding-top: 10vw;
-        text-align: right;
-        position: relative;
-
-        .num {
-            font-family: 'Lato';
-            font-weight: 100;
-            font-size: 25vw;
-            opacity: 0.07;
-            position: absolute;
-            right: -5vw; top: -10vw;
-        }
-        .title {
-            padding-bottom: 10px;
-            font-weight: 700;
-        }
-        .img-Wrap {
-            width: 100%;
-            padding-bottom: 56%;
-            background: #000;
-            position: relative;
-            .img {
-                position: absolute;
-                left: 0; top: 0;
-                width: 100%;
-                height: 100%;
-                background-size: cover;
-                background-repeat: no-repeat;
-                filter: saturate(0%);      //흑백
-                transition: all 1s;
-
-                &:hover {
-                    filter: saturate(100%); 
-                }
-            }
-        }
-        .desc {
-            font-size: 6vw;
-            line-height: 1.4;
-            margin-top: -6vw;
-            margin-right: -3vw;
-            position: relative;
-            z-index: 100;
-            word-break: keep-all;
-        }
-        &:nth-child(even){
-            margin-left: auto;
-            text-align: left;
-            .num {
-                right: auto;
-                left: -5vw;
-            }
-            .desc {
-                margin-right: auto;
-                margin-left: -3vw;
-            }
-        }
-    }
+.paraDot li a span {
+    position: absolute;
+    left: -105px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    color: #000;
+    display: block;
+    padding: 2px 15px;
+    border-radius: 30px;
+    opacity: 0;
 }
-@for $i from 1 through 9 {
-    .content-item {
-        &:nth-child(#{$i}){
-            .img {
-                background-image: url(../img/bg#{$i}.jpg);
-            }
-        }
-    }
+.paraDot li.active a {
+    background: #fff;
+}
+.paraDot li.active a span {
+    opacity: 1;
 }
 </code></pre>
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript">  $(".paraNav ul li").click(function(e){
-    e.preventDefault();
-    let target = $(this);
-    let index = target.index();
-    let section = $(".paraCont > section").eq(index);
-    let offset = section.offset().top;
-    $("html, body").animate({ scrollTop : offset }, 600);
+<pre><code class="language-javascript">  document.querySelectorAll(".paraDot ul li a").forEach((element) => {
+    element.addEventListener("click", (e) => {
+        e.preventDefault();
+        document.querySelector(element.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+        });
+    });
 });
 
+window.addEventListener("scroll", () => {
+    let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
 
-$(window).scroll(function(){
-    let scrollTop = $(window).scrollTop();
+    document.querySelector(".paraScroll span").innerText = parseInt(scrollTop) + "px";
 
-    $(".content-item").each(function(index){
-        if( scrollTop >= $(this).offset().top -2){
-            $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+    for( let i=0; i&lt;9; i++){
+        if(scrollTop > document.getElementById("section"+i).offsetTop ){
+            document.querySelectorAll(".paraDot ul li").forEach( (element) => {
+                element.classList.remove("active");
+            })
+            document.querySelector(".paraDot ul li:nth-child(i)").classList.add("active");
         }
-    });
-
-    // info
-    $(".paraScroll span").text(parseInt(scrollTop));
-
-    for( let i=1; i&lt;10; i++ ){
-        $(".offset"+i).text(parseInt($("#section"+i).offset().top) + "px");
     }
 });
 </code></pre>

@@ -155,16 +155,17 @@
                         <div class="html">
 <pre><code class="language-html">&lt;main&gt;
     &lt;div class="cursor"&gt;&lt;/div&gt;
+    &lt;div class="cursor-follower"&gt;&lt;/div&gt;
 
     &lt;article class="mouseCont"&gt;
-        &lt;p&gt;The &lt;span class="style1"&gt;secret&lt;/span&gt; of&lt;span class="style2"&gt;getting&lt;/span&gt; ahead is &lt;span class="style3"&gt;getting&lt;/span&gt; &lt;span class="style4"&gt;started.&lt;/span&gt;&lt;/p&gt;
-        &lt;h2&gt;앞서가는 방법의 비밀은 &lt;span class="style5"&gt;시작&lt;/span&gt;하는 &lt;span class="style6"&gt;것이다.&lt;/span&gt; &lt;/h2&gt;
+        &lt;p&gt; Life is not &lt;em&gt;fair&lt;/em&gt;, get used to it.&lt;/p&gt;
+        &lt;h2&gt;인생이란 결코 &lt;em&gt;공평&lt;/em&gt;하지 않다. 이 사실에 익숙해져라.&lt;/h2&gt;
     &lt;/article&gt;
 &lt;/main&gt;
 </code></pre>
                         </div>
                         <div class="css">
-<pre><code class="language-css">.mouseCont {
+<pre><code class="language-css"> .mouseCont {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -174,7 +175,7 @@
     height: 100vh;
     overflow: hidden;
     font-family: 'NEXONLv1Gothic';
-    cursor: none;
+    /* cursor: none; */
 }
 .mouseCont p {
     font-size: 2.5vw;
@@ -186,92 +187,95 @@
     font-weight: normal;
     font-weight: 500;
 }
-.mouseCont span {
+.mouseCont em {
     font-style: normal;
-    border-bottom: 0.2vw dashed #fff;
+    border-bottom: 0.2vw dashed rgb(245, 198, 111);
+    color: rgb(245, 198, 111);
 }
 .cursor {
     position: absolute;
     left: 0; top: 0;
-    width: 50px;
-    height: 50px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
-    border: 3px solid #fff;
     z-index: 9999;
     background-color: rgba(255, 255, 255, 0.1);
     user-select: none;
     pointer-events: none;
-    transition: 
-    background-color .2s,
-    border-color .2s,
-    border-radius .2s,
-    transform .6s;
+    transition: transform 0.3s, opacity 0.2s;
 }
-.cursor.style1 {
-    background-color: rgba(255,165,0,0.4);
-    border-color: orange;
+.cursor.active {
+    opacity: .5;
+    transform: scale(0);
 }
-.cursor.style2 {
-    background-color: rgba(196,0, 255,0.4);
-    border-color: rgba(140,0, 255);
-    transform: rotateY(720deg) scale(2);
+.cursor.show {
+    opacity: .5;
+    transform: scale(0);
 }
-.cursor.style3 {
-    background-color: rgba(255, 153, 0, 0.4);
-    border-color: rgb(236, 154, 47);
-    transform: scale(1.5) rotate(380deg);
-    border-radius: 20px;
+.cursor.show2 {
+    opacity: .5;
+    transform: scale(0);
 }
-.cursor.style4 {
-    background-color: rgba(0, 255, 213, 0.431);
-    border-color: rgb(47, 236, 132);
-    transform: rotate3d(0,1,0,-50deg) rotate(180deg); transform-origin: right;
-    border-radius: 20px;
+.cursor-follower {
+    position: absolute;
+    width: 30px; height: 30px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    user-select: none;
+    pointer-events: none;
+    transition: transform 0.6s ease-in-out, opacity 0.2s ease-in-out;
 }
-.cursor.style5 {
-    background-color: rgba(0, 195, 255, 0.431);
-    border-color: rgb(47, 107, 236);
-    transform: skew(20deg, 20deg) rotate(180deg);
-    border-radius: 20px;
+.cursor-follower.active {
+    transform: scale(5);
+    background: rgba(255, 166, 0, 0.4);
 }
-.cursor.style6 {
-    background-color: rgba(255, 0, 157, 0.431);
-    border-color: rgb(236, 47, 220);
-    background-image: url(../assets/img/bg7.jpg);
-    background-size: cover;
-    transform: rotate(360deg) scale(2);
+.cursor-follower.show {
+    transform: scale(5);
+    background: rgba(0, 174, 255, 0.4);
+}
+.cursor-follower.show2 {
+    transform: scale(5);
+    background: rgba(29, 230, 29, 0.4);
 }
 </code></pre>
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript"> $(window).mousemove(function(e){
-    $(".clientX").text(e.clientX + "px");   //브라우저 X좌표 기준
-    $(".clientY").text(e.clientY + "px");   //브라우저 Y좌표 기준
-    $(".offsetX").text(e.offsetX + "px");   //요소 X좌표 기준
-    $(".offsetY").text(e.offsetY + "px");   //요소 Y좌표 기준
-    $(".pageX").text(e.pageX + "px");       //페이지 X좌표 기준
-    $(".pageY").text(e.pageY + "px");       //페이지 Y좌표 기준
-    $(".screenX").text(e.screenX + "px");   //디바이스 X좌표 기준
-    $(".screenY").text(e.screenY + "px");   //디바이스 Y좌표 기준
-});
+<pre><code class="language-javascript">const cursor = document.querySelector(".cursor");
+const follower = document.querySelector(".cursor-follower");
 
-$(window).mousemove(function(e){
-    // $(".cursor").css("left", "100px");
-    // $(".cursor").css("top", "100px");
-    // $(".cursor").css({"left":"100px", "top": "100px"});
-    // $(".cursor").css({left:"100px", top: "100px"});
-    // $(".cursor").css({left:100, top: 100});
-    // $(".cursor").css({left:100,"backgroun-color": 100});
-    // $(".cursor").css({left:100,backgrounolor: 100});
+// 움직임 효과
+document.addEventListener("mousemove", (e) => {
+    gsap.to(cursor, {duration: 0.3, left:e.pageX -5,  top:e.pageY -5});
+    gsap.to(follower, {duration: 0.8, left:e.pageX -15,  top:e.pageY -15});
 
-    $(".cursor").css({left: e.clientX -25, top: e.clientY -25});
-});
 
-$(".mouseCont span").hover(function(){
-    let cla = $(this).attr("class") //cla는 지역변수이기 때문에 밑에 똑같이 넣어주기!
-    $(".cursor").addClass( $(this).attr("class"));
-}, function(){
-    $(".cursor").removeClass( $(this).attr("class"));
+    // 오버 효과
+    document.querySelectorAll(".mouseCont em").forEach(em => {
+        em.addEventListener("mouseenter", () => {
+            cursor.classList.add("active");
+            follower.classList.add("active");
+        });
+        em.addEventListener("mouseleave", () => {
+            cursor.classList.remove("active");
+            follower.classList.remove("active");
+        });
+    })
+
+    // 오버 효과2
+    document.querySelectorAll(".info").forEach(em => {
+        em.addEventListener("mouseenter", () => {
+            cursor.classList.add("show");
+            follower.classList.add("show");
+        });
+        em.addEventListener("mouseleave", () => {
+            cursor.classList.remove("show");
+            follower.classList.remove("show");
+        });
+    })
+
+    // 출력용
+    document.querySelector(".pageX").innerText = e.pageX;
+    document.querySelector(".pageY").innerText = e.pageY;
 });
 </code></pre>
                         </div>
