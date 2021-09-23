@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Effect</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/highlight.css">
+    <style>
+        /* slider */
+        .slider-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .slider-img {
+            position: relative;
+            width: 800px;
+            height: 480px;
+        }
+        .slider-img img {
+            width: 100%;
+        }
+        .slider {
+            position: absolute;
+            left: 0; top: 0;
+        }
+
+        .slider::before {
+            position: absolute;
+            left: 5px; top: 5px;
+            background: rgba(0,0,0,0.4);
+            color: #fff;
+            padding: 5px 10px 3px;
+            font-family: 'NEXONLv1Gothic';
+        }
+        .slider::before {content: attr(data-name);}
+        .slider:nth-child(1) {z-index: 5;}
+        .slider:nth-child(2) {z-index: 4;}
+        .slider:nth-child(3) {z-index: 3;}
+        .slider:nth-child(4) {z-index: 2;}
+        .slider:nth-child(5) {z-index: 1;}
+    </style>
+</head>
+<body class="bg bg4 brown">
+
+    <!-- contents -->
+    <main>
+        <div class="slider-wrap">
+            <div class="slider-img">
+                <div class="slider" data-name="이미지1"><img src="../assets/img/bg1.jpg" alt="이미지1"></div>
+                <div class="slider" data-name="이미지2"><img src="../assets/img/bg2.jpg" alt="이미지2"></div>
+                <div class="slider" data-name="이미지3"><img src="../assets/img/bg3.jpg" alt="이미지3"></div>
+                <div class="slider" data-name="이미지4"><img src="../assets/img/bg5.jpg" alt="이미지4"></div>
+                <div class="slider" data-name="이미지5"><img src="../assets/img/bg6.jpg" alt="이미지5"></div>
+            </div>
+        </div>
+    </main>
+    <!-- //contents -->
+
+    <!-- info -->
+    <div class="info">
+        <h1><a href="index.html">Slider Effect01 - jQuery</a></h1>
+        <p>이미지 슬라이드 - 페이드 효과</p>
+    </div>
+
+    <div class="info right">
+        <ul>
+            <li><a href="javascriptSE01.html">1</a></li>
+            <li><a href="javascriptSE02.html">2</a></li>
+            <li><a href="javascriptSE03.html">3</a></li>
+            <li><a href="javascriptSE04.html">4</a></li>
+            <li><a href="javascriptSE05.html">5</a></li>
+        </ul>
+        <ul>
+            <li class="active"><a href="jquerySE01.html">1</a></li>
+            <li><a href="jquerySE02.html">2</a></li>
+            <li><a href="jquerySE03.html">3</a></li>
+            <li><a href="jquerySE04.html">4</a></li>
+            <li><a href="jquerySE05.html">5</a></li>
+        </ul>
+    </div>
+
+    <div class="info bottom">
+        <button>소스보기</button>
+    </div>
+    <!-- //info -->
+
+    <!-- modal -->
+    <div id="modal">
+        <div class="modal-bg">
+            <div class="modal-cont">
+                <div class="code-view">
+                    <div class="view-header">
+                        <div class="dot" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="view-title">
+                        <ul>
+                            <li class="active"><a href="#">Html</a></li>
+                            <li><a href="#">CSS</a></li>
+                            <li><a href="#">Javascript</a></li>
+                        </ul>
+                    </div>
+                    <div class="view-cont">
+                        <div class="html">
+<pre><code class="language-html">&lt;main&gt;
+    &lt;div class="slider-wrap"&gt;
+        &lt;div class="slider-img"&gt;
+            &lt;div class="slider-inner"&gt;
+                &lt;div class="slider" data-name="이미지1"&gt;&lt;img src="../assets/img/bg6.jpg" alt="이미지1"&gt;&lt;/div&gt;
+                &lt;div class="slider" data-name="이미지2"&gt;&lt;img src="../assets/img/bg7.jpg" alt="이미지2"&gt;&lt;/div&gt;
+                &lt;div class="slider" data-name="이미지3"&gt;&lt;img src="../assets/img/bg8.jpg" alt="이미지3"&gt;&lt;/div&gt;
+                &lt;div class="slider" data-name="이미지4"&gt;&lt;img src="../assets/img/bg9.jpg" alt="이미지4"&gt;&lt;/div&gt;
+                &lt;div class="slider" data-name="이미지5"&gt;&lt;img src="../assets/img/bg10.jpg" alt="이미지5"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+</code></pre>
+                        </div>
+                        <div class="css">
+<pre><code class="language-css">  .slider-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.slider-img {
+    position: relative;
+    width: 800px;
+    height: 480px;
+}
+.slider-img img {
+    width: 100%;
+}
+.slider {
+    position: absolute;
+    left: 0; top: 0;
+}
+
+.slider::before {
+    position: absolute;
+    left: 5px; top: 5px;
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    padding: 5px 10px 3px;
+    font-family: 'NEXONLv1Gothic';
+}
+.slider::before {content: attr(data-name);}
+.slider:nth-child(1) {z-index: 5;}
+.slider:nth-child(2) {z-index: 4;}
+.slider:nth-child(3) {z-index: 3;}
+.slider:nth-child(4) {z-index: 2;}
+.slider:nth-child(5) {z-index: 1;}
+</code></pre>
+                        </div>
+                        <div class="javascript">
+<pre><code class="language-javascript">   const sliderWrap = $(".slider-wrap");
+const sliderImg = $(".slider-img");
+const slider = $(".slider");
+
+let currentIndex = 0;               //현재 보이는 이미지(첫 번째 이미지)
+let sliderCount = slider.length;    //이미지 갯수
+
+setInterval(function(){
+    let nextIndex = (currentIndex + 1) % sliderCount;
+
+    slider.eq(currentIndex).fadeOut();             //현재 보이는 이미지 사라지게 작업
+    slider.eq(nextIndex).fadeIn();                //다음 이미지를 나타나게 작업
+
+    currentIndex = nextIndex;
+
+    console.log("currentIndex" + currentIndex);
+    console.log("nextIndex" + nextIndex);
+
+}, 2000);
+</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <button>닫기</button>
+            </div>
+        </div>
+    </div>
+    <!--// modal -->
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        const sliderWrap = $(".slider-wrap");
+        const sliderImg = $(".slider-img");
+        const slider = $(".slider");
+
+        let currentIndex = 0;               //현재 보이는 이미지(첫 번째 이미지)
+        let sliderCount = slider.length;    //이미지 갯수
+        
+        setInterval(function(){
+            let nextIndex = (currentIndex + 1) % sliderCount;
+
+            slider.eq(currentIndex).fadeOut();             //현재 보이는 이미지 사라지게 작업
+            slider.eq(nextIndex).fadeIn();                //다음 이미지를 나타나게 작업
+
+            currentIndex = nextIndex;
+
+            console.log("currentIndex" + currentIndex);
+            console.log("nextIndex" + nextIndex);
+
+            // slider.eq(1).hide();             //현재 보이는 이미지 사라지게 작업
+            // slider.eq(2).show();             //다음 이미지를 나타나게 작업
+
+            // slider.eq(2).hide();             //현재 보이는 이미지 사라지게 작업
+            // slider.eq(3).show();             //다음 이미지를 나타나게 작업
+
+            // slider.eq(3).hide();             //현재 보이는 이미지 사라지게 작업
+            // slider.eq(4).show();             //다음 이미지를 나타나게 작업
+
+            // slider.eq(4).hide();             //현재 보이는 이미지 사라지게 작업
+            // slider.eq(0).show();             //다음 이미지를 나타나게 작업
+
+            // slider.eq(0).hide();             //현재 보이는 이미지 사라지게 작업
+            // slider.eq(1).show();             //다음 이미지를 나타나게 작업
+        }, 2000);
+    </script>
+</body>
+</html>

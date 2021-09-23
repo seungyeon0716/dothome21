@@ -537,6 +537,14 @@ $(window).scroll(function(){
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
+        document.querySelector(".source button").addEventListener("click", function(){
+            document.querySelector("#modal").classList.add("show");
+            document.querySelector("#modal").classList.remove("hide");
+        });
+
+        document.querySelector(".modal-cont button").addEventListener("click", function(){
+            document.querySelector("#modal").classList.add("hide")
+        });
 
         $(".paraNav ul li").click(function(e){
             e.preventDefault();

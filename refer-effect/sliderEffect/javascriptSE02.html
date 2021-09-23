@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Effect</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/highlight.css">
+    <style>
+        /* slider */
+        .slider-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .slider-img img {
+            width: 100%;
+        }
+        .slider-img {
+           position: absolute;
+           left: 50%; top: 50%;
+           transform: translate(-50%, -50%);
+           width: 800px;
+           height: 480px;
+           overflow: hidden;
+        }
+        .slider-inner {
+            position: relative;
+            width: 4000px;
+            height: 480px;
+            overflow: hidden;
+            transition: all 0.6s;
+            left: 0;
+        }
+        .slider-inner .slider {
+            float: left;
+            width: 800px;
+            height: 480px;
+            position: relative;
+        }
+
+        .slider-inner .slider::before {
+            position: absolute;
+            left: 5px; top: 5px;
+            background: rgba(0,0,0,0.4);
+            color: #fff;
+            padding: 5px 10px 3px;
+            font-family: 'NEXONLv1Gothic';
+        }
+        .slider-inner .slider::before {content: attr(data-name);}
+        .slider-inner .slider:nth-child(1) {z-index: 5;}
+        .slider-inner .slider:nth-child(2) {z-index: 4;}
+        .slider-inner .slider:nth-child(3) {z-index: 3;}
+        .slider-inner .slider:nth-child(4) {z-index: 2;}
+        .slider-inner .slider:nth-child(5) {z-index: 1;}
+    </style>
+</head>
+<body class="bg bg4 brown">
+
+    <!-- contents -->
+    <main>
+        <div class="slider-wrap">
+            <div class="slider-img">
+                <div class="slider-inner">
+                    <div class="slider" data-name="이미지1"><img src="../assets/img/bg6.jpg" alt="이미지1"></div>
+                    <div class="slider" data-name="이미지2"><img src="../assets/img/bg7.jpg" alt="이미지2"></div>
+                    <div class="slider" data-name="이미지3"><img src="../assets/img/bg8.jpg" alt="이미지3"></div>
+                    <div class="slider" data-name="이미지4"><img src="../assets/img/bg9.jpg" alt="이미지4"></div>
+                    <div class="slider" data-name="이미지5"><img src="../assets/img/bg10.jpg" alt="이미지5"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- //contents -->
+
+    <!-- info -->
+    <div class="info">
+        <h1><a href="index.html">Slider Effect02 - Javascript</a></h1>
+        <p>이미지 슬라이드 - 좌로 움직이기</p>
+    </div>
+
+    <div class="info right">
+        <ul>
+            <li><a href="javascriptSE01.html">1</a></li>
+            <li class="active"><a href="javascriptSE02.html">2</a></li>
+            <li><a href="javascriptSE03.html">3</a></li>
+            <li><a href="javascriptSE04.html">4</a></li>
+            <li><a href="javascriptSE05.html">5</a></li>
+        </ul>
+        <ul>
+            <li><a href="jquerySE01.html">1</a></li>
+            <li><a href="jquerySE02.html">2</a></li>
+            <li><a href="jquerySE03.html">3</a></li>
+            <li><a href="jquerySE04.html">4</a></li>
+            <li><a href="jquerySE05.html">5</a></li>
+        </ul>
+    </div>
+
+    <div class="info bottom">
+        <button>소스보기</button>
+    </div>
+    <!-- //info -->
+
+    <!-- modal -->
+    <div id="modal">
+        <div class="modal-bg">
+            <div class="modal-cont">
+                <div class="code-view">
+                    <div class="view-header">
+                        <div class="dot" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="view-title">
+                        <ul>
+                            <li class="active"><a href="#">Html</a></li>
+                            <li><a href="#">CSS</a></li>
+                            <li><a href="#">Javascript</a></li>
+                        </ul>
+                    </div>
+                    <div class="view-cont">
+                        <div class="html">
+<pre><code class="language-html">&lt;main&gt;
+    &lt;div class="slider-wrap"&gt;
+        &lt;div class="slider-img"&gt;
+            &lt;div class="slider-inner"&gt;
+                &lt;div class="slider" data-name="이미지1"&gt;&lt;img src="../assets/img/bg6.jpg" alt="이미지1"&gt;&lt;/div&gt;
+                &lt;div class="slider" data-name="이미지2"&gt;&lt;img src="../assets/img/bg7.jpg" alt="이미지2"&gt;&lt;/div&gt;
+                &lt;div class="slider" data-name="이미지3"&gt;&lt;img src="../assets/img/bg8.jpg" alt="이미지3"&gt;&lt;/div&gt;
+                &lt;div class="slider" data-name="이미지4"&gt;&lt;img src="../assets/img/bg9.jpg" alt="이미지4"&gt;&lt;/div&gt;
+                &lt;div class="slider" data-name="이미지5"&gt;&lt;img src="../assets/img/bg10.jpg" alt="이미지5"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+</code></pre>
+                        </div>
+                        <div class="css">
+<pre><code class="language-css">.slider-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.slider-img img {
+    width: 100%;
+}
+.slider-img {
+   position: absolute;
+   left: 50%; top: 50%;
+   transform: translate(-50%, -50%);
+   width: 800px;
+   height: 480px;
+   overflow: hidden;
+}
+.slider-inner {
+    position: relative;
+    width: 4000px;
+    height: 480px;
+    overflow: hidden;
+    transition: all 0.6s;
+    left: 0;
+}
+.slider-inner .slider {
+    float: left;
+    width: 800px;
+    height: 480px;
+    position: relative;
+}
+
+.slider-inner .slider::before {
+    position: absolute;
+    left: 5px; top: 5px;
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    padding: 5px 10px 3px;
+    font-family: 'NEXONLv1Gothic';
+}
+.slider-inner .slider::before {content: attr(data-name);}
+.slider-inner .slider:nth-child(1) {z-index: 5;}
+.slider-inner .slider:nth-child(2) {z-index: 4;}
+.slider-inner .slider:nth-child(3) {z-index: 3;}
+.slider-inner .slider:nth-child(4) {z-index: 2;}
+.slider-inner .slider:nth-child(5) {z-index: 1;}
+</code></pre>
+                        </div>
+                        <div class="javascript">
+<pre><code class="language-javascript">const sliderWrap = document.querySelector(".slider-wrap");
+const sliderImg = sliderWrap.querySelector(".slider-img");
+const sliderInner = sliderImg.querySelector(".slider-inner");
+const slider = sliderInner.querySelectorAll(".slider");
+
+let currentIndex = 0;
+let sliderCount = slider.length;
+let sliderInterval = 2000;
+
+setInterval(() => {
+    currentIndex &lt; sliderCount-1  ? currentIndex++ : currentIndex = 0;
+
+    let sliderPosition = currentIndex * -800 + "px";
+    sliderInner.style.left = sliderPosition;
+
+    console.log(currentIndex)
+}, sliderInterval);
+</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <button>닫기</button>
+            </div>
+        </div>
+    </div>
+    <!--// modal -->
+
+    <!-- script -->
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        const sliderWrap = document.querySelector(".slider-wrap");
+        const sliderImg = sliderWrap.querySelector(".slider-img");
+        const sliderInner = sliderImg.querySelector(".slider-inner");
+        const slider = sliderInner.querySelectorAll(".slider");
+
+        let currentIndex = 0;
+        let sliderCount = slider.length;
+        let sliderInterval = 2000;
+        // sliderInner.style.transition = "all 0.6s";
+        // sliderInner.style.left = 0;
+
+        setInterval(() => {
+            currentIndex < sliderCount-1  ? currentIndex++ : currentIndex = 0;
+
+            let sliderPosition = currentIndex * -800 + "px";
+            sliderInner.style.left = sliderPosition;
+            // sliderInner.style.transition = "all 0.6s";
+
+            console.log(currentIndex)
+        }, sliderInterval);
+    </script>
+</body>
+</html>
