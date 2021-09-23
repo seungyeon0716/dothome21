@@ -232,7 +232,6 @@ setInterval(function(){
         let sliderCount = slider.length;
         let sliderWidth = slider.width();
         let sliderDuration = 600;
-        let sliderEasing = "easeOutExpo";
 
         setInterval(function(){
             //3초에 한번씩 왼쪽으로 800px을 이동 시켜야 함
@@ -258,11 +257,11 @@ setInterval(function(){
             // }
             (currentIndex < sliderCount -1) ?  currentIndex++ : currentIndex = 0;    //삼항연산자
 
-            let sliderPosition = currentIndex * -sliderWindth;
-            sliderInner.animate({ left: sliderPosition }, sliderDuration, sliderEasing);
+            let sliderPosition = currentIndex * -sliderWidth;
+      sliderInner.animate({ left: sliderPosition }, sliderDuration, "easeOutExpo");
 
-            console.log(currentIndex);
-            console.log(sliderPosition);
+            // console.log(currentIndex);
+            // console.log(sliderPosition);
         }, 2000);
     </script>
 </body>
