@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testType04</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .testType {}
+        #header {
+            position: fixed;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            background: #fff;
+            width: 100%;
+        }
+        #header .logo {}
+        #header .logo img {
+            width: 50%;
+            padding: 30px 0 30px 30px;
+        }
+        #header .menu {
+            font-size: 18px;
+            font-weight: 700;
+            color: #2d1d1d;
+        }
+        #header .menu span {
+            margin: 40px;
+        }
+        #header .down {}
+        #header .down button {
+            border: 1px solid #15c5aa;
+            background: #fff;
+            padding: 10px 30px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 5px;
+            color: #15c5aa;
+        }
+        #main {
+            background-color: #333;
+            height: 80px;
+        }
+        #main .list {
+            text-align: center;
+            font-size: 18px;
+            font-weight: 500;
+            padding-top: 30px;
+            padding: 30px 50px;
+        }
+        #main .list .one {
+            color: #15c5aa;
+        }
+        #main .list .two {
+            color: #838383;
+
+            /* border-left: 1px solid #838383; */
+        }
+        #banner {
+            background-image: url(img/top_tasking_bg_m.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 600px;
+            position: relative;
+        }
+        #banner .box {
+            position: absolute;
+            left: 20%; top: 20%;
+            color: #fff;
+            white-space: nowrap;
+        }
+        #banner .box h2 {
+            font-size: 50px;
+            margin-bottom: 30px;
+        }
+        #banner .box p {
+            font-size: 30px;
+            margin-bottom: 50px;
+        }
+        #banner .box span {
+
+        }
+        #banner .box span button {
+            display: flex;
+            background: #05d6b4;
+            border: none;
+            font-size: 30px;
+            font-weight: 500;
+            color: #fff;
+            padding: 20px 50px;
+            border-radius: 50px;
+        }
+        #banner .box span button:hover {
+            cursor: pointer;
+        }
+        #banner .box span img {
+            padding-top: 10px;
+            padding-left: 20px;
+        }
+        #content {}
+        /* cont1 */
+        #content .cont1 {
+            background-color: #ecedf1;
+            padding-top: 300px;
+            height: 60vh;
+        }
+        #content .cont1 .cont-box {
+            display: flex;
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #content .cont1 .cont-title {
+            margin-right: 100px;
+        }
+        #content .cont1 .cont-title h2 img {
+            width: 80px;
+            height: 80px;
+            margin-right: 10px;
+        }
+        #content .cont1 .cont-title h2 {
+            display: flex;
+            font-size: 50px;
+            font-weight: 600;
+            white-space: nowrap;
+            margin-bottom: 30px;
+        }
+        #content .cont1 .cont-title p {
+            font-size: 30px;
+            font-weight: 500;
+            margin-bottom: 80px;
+        }
+        #content .cont1 .cont-title span {
+            display: flex;
+            color: #2d68d2;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        #content .cont1 .cont-title span img {
+            width: 5%;
+            height: 5%;
+            margin-right: 15px;
+            margin-bottom: 50px;
+        }
+        #content .cont1 .cont-title .btn {
+           
+        }
+        #content .cont1 .cont-title .btn img {
+            width: 30%;
+        }
+        #content .cont1 .desc {}
+        #content .cont1 .desc img {
+            height: 400px;
+            width: 100%;
+        }
+
+        /* cont2 */
+        #content .cont2 {
+            padding-top: 300px;
+            height: 60vh;
+        }
+        #content .cont2 .cont-box {
+            display: flex;
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #content .cont2 .cont-title {
+            margin-left: 100px;
+        }
+        #content .cont2 .cont-title h2 img {
+            width: 80px;
+            height: 80px;
+            margin-right: 10px;
+        }
+        #content .cont2 .cont-title h2 {
+            display: flex;
+            font-size: 50px;
+            font-weight: 600;
+            white-space: nowrap;
+            margin-bottom: 30px;
+        }
+        #content .cont2 .cont-title p {
+            font-size: 30px;
+            font-weight: 500;
+            margin-bottom: 50px;
+            white-space: nowrap;
+        }
+        #content .cont2 .cont-title span {
+            display: flex;
+            color: #2d68d2;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        #content .cont2 .cont-title span img {
+            width: 5%;
+            height: 5%;
+            margin-right: 15px;
+            margin-bottom: 20px;
+        }
+        #content .cont2 .cont-title .btn {
+           margin-top: 50px;
+        }
+        #content .cont2 .cont-title .btn img {
+            width: 30%;
+        }
+        #content .cont2 .desc {}
+        #content .cont2 .desc img {
+            height: 400px;
+            width: 100%;
+        }
+
+        /* cont3 */
+        #content .cont3 {
+            background-color: #ecedf1;
+            padding-top: 200px;
+            height: 60vh;
+        }
+        #content .cont3 .cont-box {
+            display: flex;
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #content .cont3 .cont-title {
+            margin-right: 100px;
+        }
+        #content .cont3 .cont-title h2 img {
+            width: 80px;
+            height: 80px;
+            margin-right: 10px;
+        }
+        #content .cont3 .cont-title h2 {
+            display: flex;
+            font-size: 50px;
+            font-weight: 600;
+            white-space: nowrap;
+            margin-bottom: 30px;
+        }
+        #content .cont3 .cont-title p {
+            font-size: 30px;
+            font-weight: 500;
+            margin-bottom: 80px;
+        }
+        #content .cont3 .cont-title span {
+            display: flex;
+            color: #2d68d2;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        #content .cont3 .cont-title span img {
+            width: 5%;
+            height: 5%;
+            margin-right: 15px;
+            margin-bottom: 50px;
+        }
+        #content .cont3 .cont-title .btn {
+           
+        }
+        #content .cont3 .cont-title .btn img {
+            width: 30%;
+        }
+        #content .cont3 .desc {}
+        #content .cont3 .desc img {
+            height: 400px;
+            width: 100%;
+        }
+        #footer {}
+    </style>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+
+    <!-- 나눔 스퀘어 웹 폰트 -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+</head>
+<body>
+    <section class="testType">
+        <div id="header">
+            <div class="logo">
+                <img src="img/logo_whale.svg" alt="로고 이미지">
+            </div>
+            <div class="menu">
+                <span>Why We Whale</span>
+                <span>가이드</span>
+                <span>스토어</span>
+                <span>연구소</span>
+                <span>웨일 스페이스</span>
+                <span>웨일북</span>
+            </div>
+            <div class="down">
+                <button>다운로드</button>
+            </div>
+        </div>
+        <div id="main">
+            <div class="list">
+                <span class="one">옴니태스킹</span>
+                <span class="two">강력한 보안</span>
+                <span class="two">커스터마이징</span>
+            </div>
+        </div>
+        <div id="banner">
+            <img src="img/top_tasking_bg.jpg" alt="">
+            <div class="box">
+                <h2>하고 싶은 일들, 해야 할 일들<br>
+                    네이버 웨일로 한 번에!
+                </h2>
+                <p>네이버 웨일의 다양한 기능을 만나보세요!</p>
+                <span>
+                    <button>다운로드<img src="img/icon_btn_arrow.png" alt=""></button>
+                </span>
+            </div>
+        </div>
+        <div id="content">
+            <div class="cont1">
+                <div class="cont-box">
+                    <div class="cont-title">
+                        <h2><img src="img/icon_why_tab1_05.png" alt="">웨일온(Whale ON)</h2>
+                        <p>시간제한 없는 무료 화상회의!</p>
+                        <span><img src="img/icon_function_detailgo.png" alt="">웨일온, 어떻게 사용하나요?</span>
+                        <span class="btn">
+                            <img src="img/icon_pc.png" alt="">
+                            <img src="img/icon_m.png" alt="">
+                        </span>
+                    </div>
+                    <div class="desc">
+                        <img src="img/ww_01_on.gif" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="cont2">
+                <div class="cont-box">
+                    <div class="desc">
+                        <img src="img/ww_01_sidebar.gif" alt="">
+                    </div>
+                    <div class="cont-title">
+                        <h2><img src="img/icon_why_tab1_01.png" alt="">사이드바</h2>
+                        <p>휴대폰 열지 말고 웨일에서 보세요!</p>
+                        <span><img src="img/icon_function_detailgo.png" alt="">사이드바, 어떻게 사용하나요?</span>
+                        <span><img src="img/icon_function_detailgo.png" alt="">어떤 확장앱이 있는지 궁금하다면?</span>
+                        <span class="btn">
+                            <img src="img/icon_pc.png" alt="">
+                            <img src="img/icon_m.png" alt="">
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="cont3">
+                <div class="cont-box">
+                    <div class="cont-title">
+                        <h2><img src="img/icon_why_tab1_02.png" alt="">퀵서치 & 번역</h2>
+                        <p>궁금한 부분? 드래그해서 바로 확인!</p>
+                        <span><img src="img/icon_function_detailgo.png" alt="">퀵서치, 어떤 기능까지 지원하나요?</span>
+                        <span><img src="img/icon_function_detailgo.png" alt="">번역의 자세한 기능이 궁금하다면?</span>
+                        <span class="btn">
+                            <img src="img/icon_pc.png" alt="">
+                            <img src="img/icon_m.png" alt="">
+                        </span>
+                    </div>
+                    <div class="desc">
+                        <img src="img/ww_01_quick.gif" alt="">
+                    </div>
+                </div>
+        </div>
+        <div id="footer"></div>
+    </section>
+</body>
+</html>
