@@ -159,10 +159,10 @@
             <h2>자바스크립트</h2>
             <ul>
                 <li><a href="javascriptPE01.html">1</a></li>
-                <li><a href="javascriptPE02">2</a></li>
-                <li class="active"><a href="javascriptPE03">3</a></li>
-                <li><a href="javascriptPE04">4</a></li>
-                <li><a href="javascriptPE05">5</a></li>
+                <li><a href="javascriptPE02.html">2</a></li>
+                <li class="active"><a href="javascriptPE03.html">3</a></li>
+                <li><a href="javascriptPE04.html">4</a></li>
+                <li><a href="javascriptPE05.html">5</a></li>
             </ul>
         </div>
         <div class="footerInfo">
@@ -398,15 +398,6 @@ window.addEventListener('scroll', function(e){
             });
         });
 
-        // $(".paraNav ul li").click(function(e){
-        //     e.preventDefault();
-        //     let target = $(this);
-        //     let index = target.index();
-        //     let section = $(".content-item").eq(index);
-        //     let offset = section.offset().top;
-        //     $("html, body").animate({scrollTop : offset }, 600);
-        // });
-
         // $(window).scroll(function(){
         //     let scrollTop = $(window).scrollTop();
 
@@ -423,38 +414,25 @@ window.addEventListener('scroll', function(e){
         window.addEventListener('scroll', function(e){
             let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset; //구버전
 
+            document.querySelector('.paraScroll span').innerText = parseInt(scrollTop);
+
+            // 숨김메뉴
             if (scrollTop > 10) {
                 document.querySelector('.paraNav').classList.add('show');
             } else {
                 document.querySelector('.paraNav').classList.remove('show');
             }
 
-            document.querySelectorAll('.content-item').forEach(function (item, idx) {
+            // 버튼용
+            document.querySelectorAll('.content-item').forEach(function (item, index) {
                 if (scrollTop >= item.offsetTop - 2) {
-                    document.querySelectorAll('.paraNav ul li').forEach((li, liIdx) => {
-                        document.querySelectorAll('.paraNav ul li').forEach(el => el.classList.remove('active'));
+                    document.querySelectorAll('.paraNav ul li').forEach(li => {
+                        li.classList.remove("active");
                     });
-                    document.querySelector('.paraNav ul li:nth-child(' + (idx + 1) + ')').classList.add('active');
+                    document.querySelector('.paraNav ul li:nth-child(' + (index + 1) + ')').classList.add('active');
                 }
             });
-
-            document.querySelector('.paraScroll span').innerText = parseInt(scrollTop);
         });
-
-
-
-
-
-        //     // 버튼용
-        //     $(".content-item").each(function(index, element){
-        //         if( scrollTop >= $(this).offset().top -2){
-        //             $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
-        //         };
-        //     });
-
-        //     //출력용
-        //     $(".paraScroll span").text(scrollTop);
-        // });
     </script>
 </body>
 </html>
