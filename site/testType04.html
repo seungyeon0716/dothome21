@@ -19,6 +19,7 @@
             border-bottom: 1px solid #eee;
             background: #fff;
             width: 100%;
+            z-index: 1000;
         }
         #header:hover {
             cursor: pointer;
@@ -436,32 +437,33 @@
 
         #footer {
             background-color: #f9f9f9;
+            height: 18vh;
         }
         #footer .footer-wrap {
             padding-top: 50px;
-            width: 1200px;
+            width: 1400px;
             margin: 0 auto;
+            position: relative;
         }
         #footer .footer-wrap .foot-logo {
             margin-bottom: 30px;
         }
         #footer .footer-wrap .foot-logo img {
             max-width: 150px;
-            padding-left: 500px;
+            display: block;
+            margin: 0 auto;
         }
         #footer .footer-wrap .foot-box {
-            display: flex;
         }
         #footer .footer-wrap .foot-box .foot-list {
-            padding-left: 150px;
+            text-align: center;
             white-space: nowrap;
         }
         #footer .footer-wrap .foot-box .foot-list ul {
 
         }
         #footer .footer-wrap .foot-box .foot-list ul li {
-            display: inline-block;
-            
+            display:inline-block;
         }
         #footer .footer-wrap .foot-box .foot-list ul li a {
             color: #c0c0c0;
@@ -469,16 +471,17 @@
             padding: 0 20px;
         }
         #footer .footer-wrap .foot-box .foot-btn {
-            margin-left: 100px;
+            position: absolute;
+            right: 0; bottom: -12px;
         }
         #footer .footer-wrap .foot-box .foot-btn button {
             background-color: transparent;
             border: 1px solid #c0c0c0;
             color: #c0c0c0;
             border-radius: 5px;
-            padding: 10px 50px;
+            padding: 10px 20px;
             white-space: nowrap;
-            padding-left: 30px;
+            padding-left: 20px;
         }
         #footer .footer-wrap .foot-box .foot-btn button img {
             max-width: 20px;
@@ -487,10 +490,11 @@
 
         @media (max-width: 800px){
             #header {
-                width: 97.5vw;
+                width: 100vw;
                 justify-content: left;
             }
             #header .menu {
+                width: 100%;
                 display: none;
             }
             #header .logo img {
@@ -501,9 +505,11 @@
                 display: none;
             }
             #main {
+                width: 100%;
                 height: 30px;
             }
             #main .list {
+                width: 100%;
                 text-align: center;
                 font-size: 13px;
                 font-weight: 500;
@@ -520,7 +526,7 @@
                 background-repeat: no-repeat;
                 height: 600px;
                 position: relative;
-                width: 97.5vw;
+                width: 100%;
             }
             #banner::after {
                 content: '';
@@ -529,7 +535,7 @@
                 background-repeat: no-repeat;
                 position: absolute;
                 top: 17%; right: 0;
-                width: 97.5vw;
+                width: 100%;
                 height: 500px;
             }
             #banner .box {
@@ -568,12 +574,17 @@
                 padding-left: 10px;
                 width: 20px;
             }
+            #content {
+                width: 100%;
+            }
             #content .cont1 {
+                width: 100%;
+                height: 55vh;
                 padding-top: 100px;
             }
             #content .cont1 .cont-box {
                 display: block;
-                width: 600px;
+                width: 100%;
                 margin: 0 auto;
             }
             #content .cont1 .cont-title {
@@ -606,15 +617,15 @@
             }
             #content .cont1 .desc img {
                 padding-left: 50px;
-                width: 80%;
+                width: 60%;
             }
             #content .cont2 {
                 padding-top: 100px;
-                height: 65vh;
+                height: 55vh;
             }
             #content .cont2 .cont-box {
                 display: block;
-                width: 600px;
+                width: 100%;
                 margin: 0 auto;
             }
             #content .cont2 .cont-title {
@@ -647,16 +658,16 @@
             }
             #content .cont2 .desc img {
                 padding-left: 50px;
-                width: 80%;
+                width: 60%;
                 
             }
             #content .cont3 {
                 padding-top: 100px;
-                height: 65vh;
+                height: 55vh;
             }
             #content .cont3 .cont-box {
                 display: block;
-                width: 600px;
+                width: 100%;
                 margin: 0 auto;
             }
             #content .cont3 .cont-title {
@@ -689,15 +700,15 @@
             }
             #content .cont3 .desc img {
                 padding-left: 50px;
-                width: 80%;
+                width: 60%;
             }
             #content .cont4 {
                 padding-top: 100px;
-                height: 65vh;
+                height: 55vh;
             }
             #content .cont4 .cont-box {
                 display: block;
-                width: 600px;
+                width: 100%;
                 margin: 0 auto;
             }
             #content .cont4 .cont-title {
@@ -730,15 +741,15 @@
             }
             #content .cont4 .desc img {
                 padding-left: 50px;
-                width: 80%;
+                width: 60%;
             }
             #content .cont5 {
                 padding-top: 100px;
-                height: 65vh;
+                height: 55vh;
             }
             #content .cont5 .cont-box {
                 display: block;
-                width: 600px;
+                width: 100%;
                 margin: 0 auto;
             }
             #content .cont5 .cont-title {
@@ -771,14 +782,14 @@
             }
             #content .cont5 .desc img {
                 padding-left: 50px;
-                width: 80%;
+                width: 60%;
             }
             .cont6 {
                 padding-top: 80px;
                 margin-bottom: 80px;
             }
             .cont6 .cont-box {
-                width: 200px;
+                width: 100%;
                 margin: 0 auto;
                 margin-bottom: 20px;
             }
@@ -797,36 +808,48 @@
                 padding-left: 10px;   
                 width:  25px;
             }
+             #footer {
+                background-color: #f9f9f9;
+                height: 35vh;
+            }
             #footer .footer-wrap {
                 padding-top: 50px;
-                width: 600px;
-                height: 40vh;
+                width: auto;
                 margin: 0 auto;
+                position: static;
             }
             #footer .footer-wrap .foot-logo {
                 margin-bottom: 3px;
             }
             #footer .footer-wrap .foot-logo img {
+                padding-left: 0;
                 max-width: 150px;
-                padding-left: 130px;
             }
             #footer .footer-wrap .foot-box {
+                padding-left: 0;
                 display: block;
             }
             #footer .footer-wrap .foot-box .foot-list {
-                padding-left: 130px;
-                white-space: pre-line;   
+                white-space: pre-line;  
+                padding-left: 0; 
+            }
+            #footer .footer-wrap .foot-box .foot-list ul li a {
+                border-right: none;
+                /* padding: 0 20px; */
             }
             #footer .footer-wrap .foot-box .foot-list ul li a {
                 padding: 0 20px;
             }
             #footer .footer-wrap .foot-box .foot-btn {
-                margin-left: 130px;
+                position: static;
+                display: block;
+                text-align: center;
             }
             #footer .footer-wrap .foot-box .foot-btn button {
                 padding: 10px 20px;
                 white-space: nowrap;
                 padding-left: 20px;
+                
             }
             #footer .footer-wrap .foot-box .foot-btn button img {
                 max-width: 20px;
@@ -845,156 +868,159 @@
 </head>
 <body>
     <section class="testType">
-        <div id="header">
-            <div class="logo">
-                <img src="img/logo_whale.svg" alt="로고 이미지">
-            </div>
-            <div class="menu">
-                <span>Why We Whale</span>
-                <span>가이드</span>
-                <span>스토어</span>
-                <span>연구소</span>
-                <span>웨일 스페이스</span>
-                <span>웨일북</span>
-            </div>
-            <div class="down">
-                <button>다운로드</button>
-            </div>
-        </div>
-        <div id="main">
-            <ul class="list">
-                <li class="one">옴니태스킹</li>
-                <li class="two">강력한 보안</li>
-                <li>커스터마이징</li>
-            </ul>
-        </div>
-        <div id="banner">
-            <div class="box">
-                <h2>하고 싶은 일들, 해야 할 일들<br>
-                    네이버 웨일로 한 번에!
-                </h2>
-                <p>네이버 웨일의 다양한 기능을 만나보세요!</p>
-                <span>
-                    <button>다운로드<img src="img/icon_btn_arrow.png" alt=""></button>
-                </span>
-            </div>
-        </div>
-        <div id="content">
-            <div class="cont1">
-                <div class="cont-box">
-                    <div class="cont-title">
-                        <h2><img src="img/icon_why_tab1_05.png" alt="">웨일온(Whale ON)</h2>
-                        <p>시간제한 없는 무료 화상회의!</p>
-                        <span><img src="img/icon_function_detailgo.png" alt="">웨일온, 어떻게 사용하나요?</span>
-                        <span class="btn">
-                            <img src="img/icon_pc.png" alt="">
-                            <img src="img/icon_m.png" alt="">
-                        </span>
-                    </div>
-                    <div class="desc">
-                        <img src="img/ww_01_on.gif" alt="">
-                    </div>
+        <div class="wrap">
+            <div id="header">
+                <div class="logo">
+                    <img src="img/logo_whale.svg" alt="로고 이미지">
+                </div>
+                <div class="menu">
+                    <span>Why We Whale</span>
+                    <span>가이드</span>
+                    <span>스토어</span>
+                    <span>연구소</span>
+                    <span>웨일 스페이스</span>
+                    <span>웨일북</span>
+                </div>
+                <div class="down">
+                    <button>다운로드</button>
                 </div>
             </div>
-            <div class="cont2">
-                <div class="cont-box">
-                    <div class="desc">
-                        <img src="img/ww_01_sidebar.gif" alt="">
-                    </div>
-                    <div class="cont-title">
-                        <h2><img src="img/icon_why_tab1_01.png" alt="">사이드바</h2>
-                        <p>휴대폰 열지 말고 웨일에서 보세요!</p>
-                        <span><img src="img/icon_function_detailgo.png" alt="">사이드바, 어떻게 사용하나요?</span>
-                        <span><img src="img/icon_function_detailgo.png" alt="">어떤 확장앱이 있는지 궁금하다면?</span>
-                        <span class="btn">
-                            <img src="img/icon_pc.png" alt="">
-                            <img src="img/icon_m.png" alt="">
-                        </span>
-                    </div>
-                </div>
+            <div id="main">
+                <ul class="list">
+                    <li class="one">옴니태스킹</li>
+                    <li class="two">강력한 보안</li>
+                    <li>커스터마이징</li>
+                </ul>
             </div>
-            <div class="cont3">
-                <div class="cont-box">
-                    <div class="cont-title">
-                        <h2><img src="img/icon_why_tab1_02.png" alt="">퀵서치 & 번역</h2>
-                        <p>궁금한 부분? 드래그해서 바로 확인!</p>
-                        <span><img src="img/icon_function_detailgo.png" alt="">퀵서치, 어떤 기능까지 지원하나요?</span>
-                        <span><img src="img/icon_function_detailgo.png" alt="">번역의 자세한 기능이 궁금하다면?</span>
-                        <span class="btn">
-                            <img src="img/icon_pc.png" alt="">
-                            <img src="img/icon_m.png" alt="">
-                        </span>
-                    </div>
-                    <div class="desc">
-                        <img src="img/ww_01_quick.gif" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="cont4">
-                <div class="cont-box">
-                    <div class="desc">
-                        <img src="img/ww_02_duletab.gif" alt="">
-                    </div>
-                    <div class="cont-title">
-                        <h2><img src="img/icon_why_tab1_03.png" alt="">듀얼 탭 & 한글뷰어</h2>
-                        <p>뒤로 가기는 이제 그만!</p>
-                        <span><img src="img/icon_function_detailgo.png" alt="">듀얼 탭의 자세한 기능이 궁금하다면?</span>
-                        <span><img src="img/icon_function_detailgo.png" alt="">한글 문서, 웨일에서 어떻게 볼 수 있나요?</span>
-                        <span class="btn-desc">
-                            <span>듀얼 탭</span>
-                            <span>한글 뷰어</span>
-                        </span>
-                        <span class="btn">
-                            <img src="img/icon_pc.png" alt="">
-                            <img src="img/icon_pc.png" alt="">
-                            <img src="img/icon_m.png" alt="">
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="cont5">
-                <div class="cont-box">
-                    <div class="cont-title">
-                        <h2><img src="img/icon_why_tab1_04.png" alt="">편리한 캡처</h2>
-                        <p>클릭 한 번으로 원하는 영역을 깔끔하게!</p>
-                        <span><img src="img/icon_function_detailgo.png" alt="">캡처의 자세한 기능이 궁금하다면?</span>
-                        <span class="btn">
-                            <img src="img/icon_pc.png" alt="">
-                            <img src="img/icon_m.png" alt="">
-                        </span>
-                    </div>
-                    <div class="desc">
-                        <img src="img/ww_01_capture.gif" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="cont6">
-                <div class="cont-box">
-                    <img src="img/whywewhale.gif" alt="">
-                </div>
-                <span>
-                    <button>다운로드<img src="img/icon_btn_arrow.png" alt=""></button>
-                </span>
-            </div>
-        <div id="footer">
-            <div class="footer-wrap">
-                <div class="foot-logo">
-                    <img src="img/logo_whale_gray.svg" alt="">
-                </div>
-                <div class="foot-box">
-                    <div class="foot-list">
-                        <ul>
-                            <li><a href="#">이용약관</a></li>
-                            <li><a href="#">개인정보 처리방침</a></li>
-                            <li><a href="#">NaverWhale 개인정보 보호를 위한 백서</a></li>
-                            <li><a href="#">제휴 제안</a></li>
-                            <li><a href="#">고객센터</a></li>
-                            <li><a href="#">@NAVER Corp.</a></li>
-                        </ul>
-                    </div>
-                    <span class="foot-btn">
-                        <button><img src="img/beta.svg" alt="">베타 다운로드</button>
+            <div id="banner">
+                <div class="box">
+                    <h2>하고 싶은 일들, 해야 할 일들<br>
+                        네이버 웨일로 한 번에!
+                    </h2>
+                    <p>네이버 웨일의 다양한 기능을 만나보세요!</p>
+                    <span>
+                        <button>다운로드<img src="img/icon_btn_arrow.png" alt=""></button>
                     </span>
+                </div>
+            </div>
+            <div id="content">
+                <div class="cont1">
+                    <div class="cont-box">
+                        <div class="cont-title">
+                            <h2><img src="img/icon_why_tab1_05.png" alt="">웨일온(Whale ON)</h2>
+                            <p>시간제한 없는 무료 화상회의!</p>
+                            <span><img src="img/icon_function_detailgo.png" alt="">웨일온, 어떻게 사용하나요?</span>
+                            <span class="btn">
+                                <img src="img/icon_pc.png" alt="">
+                                <img src="img/icon_m.png" alt="">
+                            </span>
+                        </div>
+                        <div class="desc">
+                            <img src="img/ww_01_on.gif" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="cont2">
+                    <div class="cont-box">
+                        <div class="desc">
+                            <img src="img/ww_01_sidebar.gif" alt="">
+                        </div>
+                        <div class="cont-title">
+                            <h2><img src="img/icon_why_tab1_01.png" alt="">사이드바</h2>
+                            <p>휴대폰 열지 말고 웨일에서 보세요!</p>
+                            <span><img src="img/icon_function_detailgo.png" alt="">사이드바, 어떻게 사용하나요?</span>
+                            <span><img src="img/icon_function_detailgo.png" alt="">어떤 확장앱이 있는지 궁금하다면?</span>
+                            <span class="btn">
+                                <img src="img/icon_pc.png" alt="">
+                                <img src="img/icon_m.png" alt="">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont3">
+                    <div class="cont-box">
+                        <div class="cont-title">
+                            <h2><img src="img/icon_why_tab1_02.png" alt="">퀵서치 & 번역</h2>
+                            <p>궁금한 부분? 드래그해서 바로 확인!</p>
+                            <span><img src="img/icon_function_detailgo.png" alt="">퀵서치, 어떤 기능까지 지원하나요?</span>
+                            <span><img src="img/icon_function_detailgo.png" alt="">번역의 자세한 기능이 궁금하다면?</span>
+                            <span class="btn">
+                                <img src="img/icon_pc.png" alt="">
+                                <img src="img/icon_m.png" alt="">
+                            </span>
+                        </div>
+                        <div class="desc">
+                            <img src="img/ww_01_quick.gif" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="cont4">
+                    <div class="cont-box">
+                        <div class="desc">
+                            <img src="img/ww_02_duletab.gif" alt="">
+                        </div>
+                        <div class="cont-title">
+                            <h2><img src="img/icon_why_tab1_03.png" alt="">듀얼 탭 & 한글뷰어</h2>
+                            <p>뒤로 가기는 이제 그만!</p>
+                            <span><img src="img/icon_function_detailgo.png" alt="">듀얼 탭의 자세한 기능이 궁금하다면?</span>
+                            <span><img src="img/icon_function_detailgo.png" alt="">한글 문서, 웨일에서 어떻게 볼 수 있나요?</span>
+                            <span class="btn-desc">
+                                <span>듀얼 탭</span>
+                                <span>한글 뷰어</span>
+                            </span>
+                            <span class="btn">
+                                <img src="img/icon_pc.png" alt="">
+                                <img src="img/icon_pc.png" alt="">
+                                <img src="img/icon_m.png" alt="">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont5">
+                    <div class="cont-box">
+                        <div class="cont-title">
+                            <h2><img src="img/icon_why_tab1_04.png" alt="">편리한 캡처</h2>
+                            <p>클릭 한 번으로 원하는 영역을 깔끔하게!</p>
+                            <span><img src="img/icon_function_detailgo.png" alt="">캡처의 자세한 기능이 궁금하다면?</span>
+                            <span class="btn">
+                                <img src="img/icon_pc.png" alt="">
+                                <img src="img/icon_m.png" alt="">
+                            </span>
+                        </div>
+                        <div class="desc">
+                            <img src="img/ww_01_capture.gif" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="cont6">
+                    <div class="cont-box">
+                        <img src="img/whywewhale.gif" alt="">
+                    </div>
+                    <span>
+                        <button>다운로드<img src="img/icon_btn_arrow.png" alt=""></button>
+                    </span>
+                </div>
+            </div>
+            <div id="footer">
+                <div class="footer-wrap">
+                    <div class="foot-logo">
+                        <img src="img/logo_whale_gray.svg" alt="">
+                    </div>
+                    <div class="foot-box">
+                        <div class="foot-list">
+                            <ul>
+                                <li><a href="#">이용약관</a></li>
+                                <li><a href="#">개인정보 처리방침</a></li>
+                                <li><a href="#">NaverWhale 개인정보 보호를 위한 백서</a></li>
+                                <li><a href="#">제휴 제안</a></li>
+                                <li><a href="#">고객센터</a></li>
+                                <li><a href="#">@NAVER Corp.</a></li>
+                            </ul>
+                        </div>
+                        <span class="foot-btn">
+                            <button><img src="img/beta.svg" alt="">베타 다운로드</button>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
