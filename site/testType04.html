@@ -504,6 +504,17 @@
             #header .down button {
                 display: none;
             }
+            .ham {
+                display: inline-block;
+                align-items: center;
+                margin-left: 100px;
+            }
+            .ham div {
+                width: 28px;
+                height: 2px;
+                background-color: #333;
+                margin: 7px;
+            }
             #main {
                 width: 100%;
                 height: 30px;
@@ -512,19 +523,19 @@
                 width: 100%;
                 text-align: center;
                 font-size: 13px;
-                font-weight: 500;
+                font-weight: 600;
             }
             #main .list li {
                 color: #838383;
                 display: inline-block;
                 width: 30%;
-                line-height: 10px;
+                line-height: 1.5;
             }
             #banner {
                 background-image: url(img/top_tasking_bg_m.jpg);
                 background-size: cover;
                 background-repeat: no-repeat;
-                height: 600px;
+                height: 70vh;
                 position: relative;
                 width: 100%;
             }
@@ -536,13 +547,14 @@
                 position: absolute;
                 top: 17%; right: 0;
                 width: 100%;
-                height: 500px;
+                height: 58vh;
             }
             #banner .box {
                 position: absolute;
                 left: 5%; top: 10%;
                 color: #fff;
                 white-space: nowrap;
+                z-index: 900;
             }
             #banner .box h2 {
                 font-size: 30px;
@@ -560,27 +572,27 @@
             #banner .box span button {
                 display: flex;
                 background: #05d6b4;
-                font-size: 15px;
-                font-weight: 500;
+                font-size: 20px;
+                font-weight: 600;
                 color: #fff;
-                padding: 15px 30px;
+                padding: 15px 40px;
                 border-radius: 50px;
             }
             #banner .box span button:hover {
                 cursor: pointer;
             }
             #banner .box span img {
-                padding-top: 3px;
+                padding-top: 1px;
                 padding-left: 10px;
-                width: 20px;
+                width: 30px;
             }
             #content {
                 width: 100%;
             }
             #content .cont1 {
                 width: 100%;
-                height: 55vh;
-                padding-top: 100px;
+                height: 60vh;
+                padding-top: 80px;
             }
             #content .cont1 .cont-box {
                 display: block;
@@ -597,31 +609,32 @@
             }
             #content .cont1 .cont-title h2 {
                 font-size: 30px;
+                font-weight: 500;
                 margin-bottom: 20px;
             }
             #content .cont1 .cont-title p {
-                font-size: 15px;
+                font-size: 18px;
                 margin-bottom: 30px;
             }
             #content .cont1 .cont-title span {
-                font-size: 15px;
+                font-size: 14px;
             }
             #content .cont1 .cont-title span img {
-                width: 3%;
-                height: 3%;
+                width: 4%;
+                height: 4%;
                 margin-right: 5px;
                 margin-bottom: 40px;
             }
             #content .cont1 .cont-title .btn img {
-                width: 15%;
+                width: 20%;
             }
             #content .cont1 .desc img {
                 padding-left: 50px;
-                width: 60%;
+                width: 80%;
             }
             #content .cont2 {
-                padding-top: 100px;
                 height: 55vh;
+                padding-top: 50px;
             }
             #content .cont2 .cont-box {
                 display: block;
@@ -658,12 +671,11 @@
             }
             #content .cont2 .desc img {
                 padding-left: 50px;
-                width: 60%;
-                
+                width: 80%;
             }
             #content .cont3 {
-                padding-top: 100px;
-                height: 55vh;
+                height: 60vh;
+                padding-top: 80px;
             }
             #content .cont3 .cont-box {
                 display: block;
@@ -683,28 +695,29 @@
                 margin-bottom: 20px;
             }
             #content .cont3 .cont-title p {
-                font-size: 15px;
+                font-size: 16px;
                 margin-bottom: 30px;
             }
             #content .cont3 .cont-title span {
                 font-size: 15px;
             }
             #content .cont3 .cont-title span img {
-                width: 3%;
-                height: 3%;
+                width: 4%;
+                height: 4%;
                 margin-right: 5px;
-                margin-bottom: 40px;
+                margin-bottom: 15px;
             }
             #content .cont3 .cont-title .btn img {
-                width: 15%;
+                width: 20%;
+                margin-bottom: 50px;
             }
             #content .cont3 .desc img {
                 padding-left: 50px;
-                width: 60%;
+                width: 80%;
             }
             #content .cont4 {
-                padding-top: 100px;
                 height: 55vh;
+                padding-top: 50px;
             }
             #content .cont4 .cont-box {
                 display: block;
@@ -741,11 +754,11 @@
             }
             #content .cont4 .desc img {
                 padding-left: 50px;
-                width: 60%;
+                width: 80%;
             }
             #content .cont5 {
-                padding-top: 100px;
-                height: 55vh;
+                height: 60vh;
+                padding-top: 80px;
             }
             #content .cont5 .cont-box {
                 display: block;
@@ -765,41 +778,42 @@
                 margin-bottom: 20px;
             }
             #content .cont5 .cont-title p {
-                font-size: 15px;
+                font-size: 16px;
                 margin-bottom: 30px;
             }
             #content .cont5 .cont-title span {
                 font-size: 15px;
             }
             #content .cont5 .cont-title span img {
-                width: 3%;
-                height: 3%;
+                width: 4%;
+                height: 4%;
                 margin-right: 5px;
                 margin-bottom: 40px;
             }
             #content .cont5 .cont-title .btn img {
-                width: 15%;
+                width: 20%;
+                margin-bottom: 50px;
             }
             #content .cont5 .desc img {
                 padding-left: 50px;
-                width: 60%;
+                width: 80%;
             }
             .cont6 {
-                padding-top: 80px;
+                padding-top: 50px;
                 margin-bottom: 80px;
+                height: 14vh;
             }
             .cont6 .cont-box {
                 width: 100%;
                 margin: 0 auto;
-                margin-bottom: 20px;
             }
             .cont6 .cont-box img {
                 max-width: 500px;
                 padding-left: 0px;
             }
             .cont6 span button {
-                font-size: 16px;
-                padding: 10px 30px;
+                font-size: 20px;
+                padding: 15px 40px;
                 border-radius: 50px;
                 white-space: nowrap;
             }
@@ -834,7 +848,6 @@
                 padding-left: 0; 
             }
             #footer .footer-wrap .foot-box .foot-list ul li a {
-                border-right: none;
                 /* padding: 0 20px; */
             }
             #footer .footer-wrap .foot-box .foot-list ul li a {
@@ -872,6 +885,11 @@
             <div id="header">
                 <div class="logo">
                     <img src="img/logo_whale.svg" alt="로고 이미지">
+                </div>
+                <div class="ham">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
                 </div>
                 <div class="menu">
                     <span>Why We Whale</span>
