@@ -507,7 +507,8 @@
             .ham {
                 display: inline-block;
                 align-items: center;
-                margin-left: 100px;
+                /* margin-left: 100px; */
+                margin-left: 20%;
             }
             .ham div {
                 width: 28px;
@@ -609,7 +610,7 @@
             }
             #content .cont1 .cont-title h2 {
                 font-size: 30px;
-                font-weight: 500;
+                font-weight: 600;
                 margin-bottom: 20px;
             }
             #content .cont1 .cont-title p {
@@ -637,11 +638,15 @@
                 padding-top: 50px;
             }
             #content .cont2 .cont-box {
-                display: block;
+                display: flex;
+                flex-direction: column;
+                /*  */
                 width: 100%;
                 margin: 0 auto;
             }
             #content .cont2 .cont-title {
+                order: 1;
+                /*  */
                 margin-right: 0;
                 margin-left: 20px;
             }
@@ -664,10 +669,19 @@
                 width: 3%;
                 height: 3%;
                 margin-right: 5px;
-                margin-bottom: 40px;
+                /* margin-bottom: 40px; */
+            }
+            #content .cont2 .cont-title .btn{
+                margin-top: 0px;
+                /* ★ 초기화 위해서 새로 추가 - 조정필요 */
             }
             #content .cont2 .cont-title .btn img {
-                width: 15%;
+                width: 20%;
+                /*  */
+            }
+            #content .cont2 .desc {
+                order: 2;
+                /*  */
             }
             #content .cont2 .desc img {
                 padding-left: 50px;
@@ -720,11 +734,13 @@
                 padding-top: 50px;
             }
             #content .cont4 .cont-box {
-                display: block;
+                display: flex;
+                flex-direction: column;
                 width: 100%;
                 margin: 0 auto;
             }
             #content .cont4 .cont-title {
+                order: 1;
                 margin-right: 0;
                 margin-left: 20px;
             }
@@ -747,10 +763,16 @@
                 width: 3%;
                 height: 3%;
                 margin-right: 5px;
-                margin-bottom: 40px;
+                /* margin-bottom: 40px; */
+            }
+            #content .cont4 .cont-title .btn {
+                margin-top: 0;
             }
             #content .cont4 .cont-title .btn img {
-                width: 15%;
+                width: 20%;
+            }
+            #content .cont4 .desc {
+                order: 2;
             }
             #content .cont4 .desc img {
                 padding-left: 50px;
@@ -849,6 +871,7 @@
             }
             #footer .footer-wrap .foot-box .foot-list ul li a {
                 /* padding: 0 20px; */
+                border-right: none;
             }
             #footer .footer-wrap .foot-box .foot-list ul li a {
                 padding: 0 20px;
