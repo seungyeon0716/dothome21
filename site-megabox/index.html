@@ -48,7 +48,6 @@
    <![endif]-->
 </head>
 <body>
-    <!-- ★★★29:51초부터 보기★★★ -->
     <header id="header">
         <div class="container">
             <div class="row">
@@ -146,7 +145,7 @@
         <div class="container">
             <div class="row">
                 <div class="movie">
-                    <h2 class="ir_so">최신 영화 정보</h2>
+                    <h2 class="ir_so">영화 예매</h2>
                     <div class="movie_title">
                         <ul>
                             <li class="active"><a href="#">박스오피스</a></li>
@@ -395,9 +394,9 @@
                                 <div class="swiper-slide">
                                     <div class="poster">
                                         <figure>
-                                            <img src="img/poster08.jpg" srcset="img/poster08@2.jpg 2x" alt="침묵">
+                                            <img src="img/poster09.jpg" srcset="img/poster09@2.jpg 2x" alt="침묵">
                                         </figure>
-                                        <div class="rank"><strong>4</strong></div>
+                                        <div class="rank"><strong>5</strong></div>
                                         <div class="mx">
                                             <span class="icon m ir_pm">MX</span>
                                             <span class="icon b ir_pm">Boutique</span>
@@ -414,9 +413,9 @@
                                 <div class="swiper-slide">
                                     <div class="poster">
                                         <figure>
-                                            <img src="img/poster08.jpg" srcset="img/poster08@2.jpg 2x" alt="침묵">
+                                            <img src="img/poster10.jpg" srcset="img/poster10@2.jpg 2x" alt="침묵">
                                         </figure>
-                                        <div class="rank"><strong>4</strong></div>
+                                        <div class="rank"><strong>6</strong></div>
                                         <div class="mx">
                                             <span class="icon m ir_pm">MX</span>
                                             <span class="icon b ir_pm">Boutique</span>
@@ -515,9 +514,9 @@
                                 <div class="swiper-slide">
                                     <div class="poster">
                                         <figure>
-                                            <img src="img/poster04.jpg" srcset="img/poster04@2.jpg 2x" alt="침묵">
+                                            <img src="img/poster05.jpg" srcset="img/poster05@2.jpg 2x" alt="침묵">
                                         </figure>
-                                        <div class="rank"><strong>4</strong></div>
+                                        <div class="rank"><strong>5</strong></div>
                                         <div class="mx">
                                             <span class="icon m ir_pm">MX</span>
                                             <span class="icon b ir_pm">Boutique</span>
@@ -534,9 +533,9 @@
                                 <div class="swiper-slide">
                                     <div class="poster">
                                         <figure>
-                                            <img src="img/poster04.jpg" srcset="img/poster04@2.jpg 2x" alt="침묵">
+                                            <img src="img/poster06.jpg" srcset="img/poster06@2.jpg 2x" alt="침묵">
                                         </figure>
-                                        <div class="rank"><strong>4</strong></div>
+                                        <div class="rank"><strong>6</strong></div>
                                         <div class="mx">
                                             <span class="icon m ir_pm">MX</span>
                                             <span class="icon b ir_pm">Boutique</span>
@@ -635,9 +634,9 @@
                                 <div class="swiper-slide">
                                     <div class="poster">
                                         <figure>
-                                            <img src="img/poster08.jpg" srcset="img/poster08@2.jpg 2x" alt="침묵">
+                                            <img src="img/poster07.jpg" srcset="img/poster07@2.jpg 2x" alt="침묵">
                                         </figure>
-                                        <div class="rank"><strong>4</strong></div>
+                                        <div class="rank"><strong>5</strong></div>
                                         <div class="mx">
                                             <span class="icon m ir_pm">MX</span>
                                             <span class="icon b ir_pm">Boutique</span>
@@ -654,9 +653,9 @@
                                 <div class="swiper-slide">
                                     <div class="poster">
                                         <figure>
-                                            <img src="img/poster08.jpg" srcset="img/poster08@2.jpg 2x" alt="침묵">
+                                            <img src="img/poster06.jpg" srcset="img/poster06@2.jpg 2x" alt="침묵">
                                         </figure>
-                                        <div class="rank"><strong>4</strong></div>
+                                        <div class="rank"><strong>6</strong></div>
                                         <div class="mx">
                                             <span class="icon m ir_pm">MX</span>
                                             <span class="icon b ir_pm">Boutique</span>
@@ -688,14 +687,13 @@
     <script src="js/swiper.min.js"></script>
     <script>
         // 배너 이미지 슬라이드
-         var mySwiper = new Swiper('.swiper-container', {
+        var swiper = new Swiper('.swiper-container',{
+            pagination: {
+                el: '.swiper-pagination',
+            },
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                type: 'bullets',
             },
             autoplay: {
                 delay: 5000,
@@ -708,14 +706,28 @@
             spaceBetween: 24,
             mousewheel: {
                invert: true,
-           },
-           keyboard: {
+            },
+            keyboard: {
                 enabled: true,
                 onlyInViewport: false,
             },
             autoplay: {
                 delay: 6000,
             },
+            breakpoints: {
+                600: {
+                    slidesPerView: 1.4,
+                    spaceBetween: 24
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 24
+                },
+                960: {
+                    slidesPerView: 3,
+                    spaceBetween: 24
+                }
+            }
         });
 
         // 영화차트 탭 메뉴

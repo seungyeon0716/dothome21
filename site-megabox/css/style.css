@@ -8,6 +8,7 @@
 }
 #header {
     width: 100%;
+    background-color: #fff;
     border-bottom: 1px solid #c6c6c6;
 }
 #banner {
@@ -259,13 +260,11 @@
     color: #fff;
 }
 .movie_chart {
-    height: 592px;
     overflow: hidden;
 }
 .movie_chart > div > div > div {
     float: left;
     width: 292px;
-    height: 592px;
     margin-right: 18px;
 }
 .movie_chart > div > div > div:last-child {
@@ -349,7 +348,7 @@
     text-align: center;
     background: #f2f2f2;
     font-size: 18px;
-    padding: 15px;
+    padding: 15px 0;
     box-sizing: border-box;
 }
 .movie_chart > div > div > div .infor .infor_btn a:last-child {
@@ -428,9 +427,21 @@
         font-size: 16px;
         padding-top: 35px;
     }
+
+    .movie_title ul {
+        width: auto;
+    }
+    .movie_title li {
+        width: 25%;
+        box-sizing: border-box;
+    } 
 }
 
 @media (max-width: 768px){
+    body {
+        background: #d9d7e0;
+    }
+
     #mNav {
         right: 6px;
     }
@@ -442,6 +453,66 @@
     }
     .header h1 strong {
         display: none;
+    }
+
+    #movie .row {
+        background: #fff;
+        margin: 24px;
+        padding: 24px;
+    }
+    #movie .ir_so {
+        position: static;
+        width: auto;
+        height: auto;
+        line-height: normal;
+        text-indent: 0;
+        font-size: 24px;
+        font-weight: bold;
+        padding-bottom: 20px;
+    }
+    .movie {
+        padding: 0;
+    }
+    .movie_title {
+        margin-bottom: 30px;
+    } 
+    .movie_title ul {
+        position: relative;
+        padding-bottom: 10px;
+    } 
+    .movie_title ul:before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        left: 0; bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: #e1e1e1;
+    } 
+    .movie_title li {
+        width: auto;
+        border: 0;
+    } 
+    .movie_title li a {
+        position: relative;
+        font-size: 18px;
+        color: #666;
+        font-weight: 400;
+        padding: 0;
+        margin-right: 35px;
+    } 
+    .movie_title li.active a:before {
+        content: '';
+        position: absolute;
+        z-index: 2;
+        left: 0; bottom: -10px;
+        width: 100%;
+        height: 2px;
+        background: #666;
+    }
+    .movie_title li.active a {
+        background: none;
+        color: #666;
     }
 }
 
@@ -486,8 +557,95 @@
         width: 13px !important; 
         height: 13px !important;
     }
+
+    #movie .container {}
+    #movie .container:after {
+        content: '';
+        position: absolute;
+        z-index: 20;
+        top: 0; right: 0;
+        width: 8px;
+        height: 100%;
+        background: #d9d7e0;
+    }
+    #movie .row {
+        position: relative;
+        margin: 8px;
+        padding: 16px;
+        margin-right: 0;
+        padding-right: 0;
+    }
+    #movie .row:after {
+        content: '';
+        position: absolute;
+        top: 0; right: 0;
+        z-index: 10;
+        width: 24px;
+        height: 100%;
+        background-color: #fff;
+    }
+
+    #movie .ir_so {
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
+    .movie_title {
+        margin-bottom: 20px;
+    } 
+    .movie_title ul {
+        padding-bottom: 8px;
+        white-space: nowrap;
+        overflow-x: auto;
+    }
+    .movie_title li a {
+        font-size: 14px;
+        margin-right: 15px;
+    }
+    .movie_title li.active a:before {
+        bottom: -8px;
+    }
+    .movie_title {
+        position: relative;
+        z-index: 30;
+    }
+    .movie_chart > div > div > div .infor {
+        padding: 5px;
+    }
+    .movie_chart > div > div > div .infor h3 {
+        text-align: center;
+        margin: 5px 0 10px;
+    }
+    .movie_chart > div > div > div .infor h3 strong {
+        display: block;
+        font-size: 19px;
+        color: #222;
+        font-weight: 300;
+    }
+    .movie_chart > div > div > div .infor h3 span {
+        display: none;
+    }
+    .movie_chart > div > div > div .infor .infor_btn a {
+        width: 52%;
+        margin-left: 24px;
+        display: block;
+        margin-right: 0;
+        padding: 5px;
+        color: #777;
+        margin-bottom: 5px;
+        box-sizing: border-box;
+        font-size: 14px;
+        background: none;
+        border: 1px solid #ddd;
+    }
+    .movie_chart > div > div > div .infor .infor_btn a:last-child {
+        display: none;
+    }
 }
 
 @media (max-width: 480px){}
 
-@media (max-width: 320px){}
+@media (max-width: 320px){
+    .movie_title li {
+        margin-right: 9px;
+    } 
+}
