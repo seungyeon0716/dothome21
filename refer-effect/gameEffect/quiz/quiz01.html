@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+        @font-face {
+            font-family: 'DungGeunMo';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+       *, *:before, *:after {
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        a {
+            text-decoration: none;
+        }
+        li {
+            list-style: none;
+        }
+        body { 
+            font-family: 'DungGeunMo';
+            height: 100vh;
+            background-color: #f6f6f6;
+            background-image:
+            linear-gradient(90deg, #cdcccc 0px, #cdcccc 1px, transparent 1px, transparent 99px,  transparent 100px),
+            linear-gradient(#cdcccc 0px, #cdcccc 1px, transparent 1px, transparent 99px,  transparent 100px),
+            linear-gradient(#e0e0e0 0px, #e0e0e0 1px, transparent 1px, transparent 99px,  transparent 100px),
+            linear-gradient(90deg, #e0e0e0 0px, #e0e0e0 1px, transparent 1px, transparent 99px,  transparent 100px),
+            linear-gradient(transparent 0px, transparent 5px, #f6f6f6 5px, #f6f6f6 95px, transparent 95px, transparent 100px),
+            linear-gradient(90deg, #e0e0e0 0px, #e0e0e0 1px, transparent 1px, transparent 99px, #e0e0e0 99px, #e0e0e0 100px),
+            linear-gradient(90deg, transparent 0px, transparent 5px, #f6f6f6 5px, #f6f6f6 95px, transparent 95px, transparent 100px),
+            linear-gradient(transparent 0px, transparent 1px, #f6f6f6 1px, #f6f6f6 99px, transparent 99px, transparent 100px),
+            linear-gradient(#cdcccc, #cdcccc);
+            background-size:100px 100%, 100% 100px, 100% 10px, 10px 100%, 100% 100px, 100px 100%, 100px 100%, 100px 100px, 100px 100px;
+        }
+        header {
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%;
+            background: #262626;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            z-index: 10;
+        }
+        header::before {
+            content: '';
+            width: calc(100% - 10px);
+            height: calc(100% - 10px);
+            border: 4px ridge #a3a3a3;
+            position: absolute;
+            left: 5px; top: 5px;
+            z-index: -1;
+        }
+        header h1 {
+            padding: 5px 30px 5px 20px;
+        }
+        nav ul {
+            display: flex;
+        }
+        nav li {
+            margin-right: 30px;
+        }
+        nav li a {
+            color: rgb(171,171,171);
+        }
+        nav li a:hover {
+            border-bottom: 1px solid rgb(171,171,171);
+        }
+        nav li.active a {
+            color: #fff;
+        }
+        nav li.active:hover a {
+            border-bottom: 1px solid #fff;
+        }
+        .ham {
+            position: absolute;
+            right: 20px; top: 16px;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: none;
+        }
+        .ham span {
+            width: 20px;
+            height: 3px;
+            background: #fff;
+            display: block;
+            position: absolute;
+            left: 5px; top: 13px;
+        }
+        .ham span::before {
+            width: 20px;
+            height: 3px;
+            content: '';
+            background: #fff;
+            position: absolute;
+            left: 0; top: 7px;
+        }
+        .ham span::after {
+            width: 20px;
+            height: 3px;
+            content: '';    
+            background: #fff;
+            position: absolute;
+            left: 0; bottom: 7px;
+        }
+        .quiz-wrap {
+            max-width: 500px;
+            width: 100%;
+            height: 500px;
+            background: #fff;
+            margin: 100px auto;
+            border: 8px ridge #cacaca;
+        }
+        .quiz-wrap h2 {
+            font-size: 14px;
+            text-align: center;
+            background: #cacaca;
+            height: 5%;
+            color: #3b3b3b;
+            border: 3px ridge #cacaca;
+            padding-top: 3px;
+            position: relative;
+        }
+        .quiz-wrap h2::before {
+            content: '';
+            position: absolute;
+            left: 2px; top: 2px;
+            width: 15px; 
+            height: 15px;
+            background: url("../dot.jpg") no-repeat;
+            background-size: cover;
+        }
+        .quiz-wrap h2::after {
+            content: '';
+            position: absolute;
+            right: 2px; top: 2px;
+            width: 35px; 
+            height: 15px;
+            background: url("../dot.jpg") no-repeat -14px;
+            background-size: cover;
+        }
+        .quiz-wrap .quiz {
+            border: 4px ridge #cacaca;
+            height: 95%;
+        }
+        .quiz-wrap .quiz .question {
+            border-bottom: 6px ridge #cacaca;
+            padding: 13px 30px 20px;
+            font-size: 24px;
+            line-height: 1.4;
+        }
+        .quiz-wrap .quiz .question::before {
+            content: 'Q.';
+            color: #a5e151;
+            font-size: 24px;
+            padding-right: 5px;
+            text-shadow: 1px 1px 1px #000;
+        }
+        .quiz-wrap .quiz .answer {
+            height: 60%;
+            background: #e8e7e8;
+            padding: 20px;
+        }
+
+        @media (max-width:1200px){
+            .ham {display: block;}
+            nav {
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background: #262626;
+                width: 100%;
+                padding: 20px;
+                display: none;
+            }
+            nav.show {
+                display: block;
+            }
+            nav ul {
+                display: block;
+            }
+            nav li {
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Quiz</h1>
+        <nav>
+            <ul>
+                <li class="active"><a href="#">주관식 1문제</a></li>
+                <li><a href="#">주관식 여러 문제</a></li>
+                <li><a href="#">객관식 1문제</a></li>
+                <li><a href="#">객관식 여러 문제</a></li>
+                <li><a href="#">객관식 여러 문제 : 이미지 슬라이드</a></li>
+            </ul>
+        </nav>
+        <div class="ham">
+            <span></span>
+        </div>
+    </header>
+
+    <div class="quiz-wrap">
+        <h2>웹디자인 기능사</h2>
+        <div class="quiz">
+            <h3 class="question">다음 중 디자인의 기본 요소들로 옳은 것은?</h3>
+            <div class="answer">정답 영역</div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector(".ham").addEventListener("click",function(){
+            document.querySelector("nav").classList.toggle("show");
+        })
+    </script>
+</body>
+</html>
