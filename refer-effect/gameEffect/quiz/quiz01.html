@@ -166,7 +166,7 @@
             background: #e8e7e8;
             padding: 20px;
         }
-        .quiz-wrap .quiz .answer .anwer-confirm {
+        .quiz-wrap .quiz .answer .answer-confirm {
             background: #cacaca;
             text-align: center;
             padding: 13px 20px;
@@ -176,10 +176,10 @@
             width: 100%;
             font-family: 'DungGeunMo';
         }
-        .quiz-wrap .quiz .answer .anwer-confirm:active {
+        .quiz-wrap .quiz .answer .answer-confirm:active {
             background: #a3a3a3;
         }
-        .quiz-wrap .quiz .answer .anwer-view {
+        .quiz-wrap .quiz .answer .answer-view {
             text-align: center;
             border: 6px groove #fff;
             padding: 13px 20px;
@@ -590,30 +590,30 @@
                         </div>
                     </div>
                 </div>
-                <button class="anwer-confirm">정답 확인하기</button>
-                <div class="anwer-view"></div>
+                <button class="answer-confirm">정답 확인하기</button>
+                <div class="answer-view"></div>
             </div>
         </div>
     </div>
 
     <script>
         // 퀴즈
-        const anwerqQuestion = document.querySelector(".question");
-        const anwerConfirm = document.querySelector(".anwer-confirm");
-        const anwerView = document.querySelector(".anwer-view");
+        const answerqQuestion = document.querySelector(".question");
+        const answerConfirm = document.querySelector(".answer-confirm");
+        const answerView = document.querySelector(".answer-view");
 
         // 문제 정보
         const quizAsk = "채소 장사꾼이 제일 싫어하는 외국의 도시는?";
         const quizAnswer = "시드니";
 
         // 문제 출력
-        anwerqQuestion.innerHTML = quizAsk;
-        anwerView.innerHTML = quizAnswer;
+        answerqQuestion.innerHTML = quizAsk;
+        answerView.innerHTML = quizAnswer;
 
         // 정답 확인
-        anwerConfirm.addEventListener("click", function(){
-            anwerConfirm.style.display = "none";
-            anwerView.style.display = "block";
+        answerConfirm.addEventListener("click", function(){
+            answerConfirm.style.display = "none";
+            answerView.style.display = "block";
             // 클릭하면 강아지 표정
             document.querySelector(".card").classList.add("good");
         })
