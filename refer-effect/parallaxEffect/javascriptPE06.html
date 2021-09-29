@@ -21,19 +21,22 @@
         }
         .paraNav li a {
             width: auto;    
-            padding: 5px 20px;    
+            padding: 5px; 
+            width: 30px;
+            height: 30px;   
         }
         .paraNav li.active a {
             border-radius: 30px;
         }
+
     </style>
 </head>
 <body class="parallax">
 
      <!-- header -->
      <header class="paraInfo">
-        <h1><a href="index.html">Parallax Effect04 - jQuery</a></h1>
-        <p>패랠랙스 스크로링 효과 - 숨김메뉴2</p>
+        <h1><a href="index.html">Parallax Effect06 - Javascript</a></h1>
+        <p>패랠랙스 스크로링 효과 - 이질감</p>
     </header>
     <!-- //header -->
 ​
@@ -44,15 +47,15 @@
 
         <nav class="paraNav">
             <ul>    <!--숫자 자동 더하기 {s$}-->
-                <li class="active"><a href="#section1">메뉴1</a></li>
-                <li><a href="#section2">메뉴2</a></li>
-                <li><a href="#section3">메뉴3</a></li>
-                <li><a href="#section4">메뉴4</a></li>
-                <li><a href="#section5">메뉴5</a></li>
-                <li><a href="#section6">메뉴6</a></li>
-                <li><a href="#section7">메뉴7</a></li>
-                <li><a href="#section8">메뉴8</a></li>
-                <li><a href="#section9">메뉴9</a></li>
+                <li class="active"><a href="#section1">s1</a></li>
+                <li><a href="#section2">s2</a></li>
+                <li><a href="#section3">s3</a></li>
+                <li><a href="#section4">s4</a></li>
+                <li><a href="#section5">s5</a></li>
+                <li><a href="#section6">s6</a></li>
+                <li><a href="#section7">s7</a></li>
+                <li><a href="#section8">s8</a></li>
+                <li><a href="#section9">s9</a></li>
             </ul>
         </nav>
         <!--//nav-->
@@ -163,7 +166,7 @@
                 <li><a href="javascriptPE03.html">3</a></li>
                 <li><a href="javascriptPE04.html">4</a></li>
                 <li><a href="javascriptPE05.html">5</a></li>
-                <li><a href="javascriptPE06.html">6</a></li>
+                <li class="active"><a href="javascriptPE06.html">6</a></li>
                 <li><a href="javascriptPE07.html">7</a></li>
                 <li><a href="javascriptPE08.html">8</a></li>
             </ul>
@@ -174,7 +177,7 @@
                 <li><a href="jqueryPE01.html">1</a></li>
                 <li><a href="jqueryPE02.html">2</a></li>
                 <li><a href="jqueryPE03.html">3</a></li>
-                <li class="active"><a href="jqueryPE04.html">4</a></li>
+                <li><a href="jqueryPE04.html">4</a></li>
                 <li><a href="jqueryPE05.html">5</a></li>
                 <li><a href="jqueryPE06.html">6</a></li>
                 <li><a href="jqueryPE07.html">7</a></li>
@@ -378,8 +381,6 @@ $(window).scroll(function(){
     <!--// modal -->
 
     <!-- script -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
@@ -392,71 +393,79 @@ $(window).scroll(function(){
             document.querySelector("#modal").classList.add("hide")
         });
 
-        $(".paraNav ul li").click(function(e){
-            e.preventDefault();
-            let target = $(this);
-            let index = target.index();
-            let section = $(".content-item").eq(index);
-            let offset = section.offset().top;
-            $("html, body").animate({scrollTop: offset}, 600, "easeInOutCirc");
-        });
 
-        // $(window).scroll(function(){
-        //     let scrollTop = $(this).scrollTop();
-        //     let lastScrollTop = 0;
-
-        //     if(scrollTop > lastScrollTop){
-        //         $(".paraNav").addClass("hide");
-        //     } else {
-        //         $(".paraNav").removeClass("hide");
-        //     }
-
-                // lastScrollTop = scrollTop;
-        
-                // console.log("scrollTop : " +  scrollTop);
-                // console.log("lastScrollTop : " +  lastScrollTop);
-        // });
+        // click함수화
+        const scrollMenu = function(){
+            document.querySelectorAll('.paraNav ul li a').forEach((li, idx) => {
+                li.addEventListener('click', e => {
+                    e.preventDefault();
+                    document.querySelector(li.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        }
+        scrollMenu();
 
 
+        // 익명 함수
+        const scrollProgress = function(){
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
 
-        let nowScrollTop;
-        let lastScrollTop = 0;
+            // let offset1 = scrollTop - document.getElementById("section1").offsetTop;
+            // let offset2 = scrollTop - document.getElementById("section2").offsetTop;
+            // let offset3 = scrollTop - document.getElementById("section3").offsetTop;
+            // let offset4 = scrollTop - document.getElementById("section4").offsetTop;
+            // let offset5 = scrollTop - document.getElementById("section5").offsetTop;
+            // let offset6 = scrollTop - document.getElementById("section6").offsetTop;
+            // let offset7 = scrollTop - document.getElementById("section7").offsetTop;
+            // let offset8 = scrollTop - document.getElementById("section8").offsetTop;
+            // let offset9 = scrollTop - document.getElementById("section9").offsetTop;
 
-        $(window).scroll(function(){
-            nowScrollTop = true;
+            // document.getElementById("section1").style.transform = "translateX("+offset1+"px)";
+            // document.getElementById("section2").style.transform = "translateX("+offset2+"px)";
+            // document.getElementById("section3").style.transform = "translateX("+offset3+"px)";
+            // document.getElementById("section4").style.transform = "translateX("+offset4+"px)";
+            // document.getElementById("section5").style.transform = "translateX("+offset5+"px)";
+            // document.getElementById("section6").style.transform = "translateX("+offset6+"px)";
+            // document.getElementById("section7").style.transform = "translateX("+offset7+"px)";
+            // document.getElementById("section8").style.transform = "translateX("+offset8+"px)";
+            // document.getElementById("section9").style.transform = "translateX("+offset9+"px)";
 
-            setInterval(() => {
-                if(nowScrollTop){
-                    nowScrollTop = false;
-                    hasScroll();    //true면 hasScroll이 실행됨
-                }
-            }, 500);
-        });
+            // for
+            // for( let i=1; i<10; i++ ){
+            //     let offset = scrollTop - document.getElementById("section"+i).offsetTop;
+            //     document.getElementById("section"+i).style.transform = "translateX("+offset+"px)";
+            // }
 
-        function hasScroll(){
-            let scrollTop = $(this).scrollTop();
+            // forEach
+            document.querySelectorAll(".content-item").forEach(item => {
+                let offset1 = (scrollTop - item.offsetTop) * 0.1;
+                let offset2 = (scrollTop - item.offsetTop) * 0.2;
 
-            if(scrollTop > lastScrollTop){
-                $(".paraNav").addClass("hide");
-            } else {
-                $(".paraNav").removeClass("hide");
-            }
-
-            lastScrollTop = scrollTop;
-
-            // console.log("scrollTop : " +  scrollTop);
-            // console.log("lastScrollTop : " +  lastScrollTop);
-
-            // 출력용
-            $(".paraScroll span").text(scrollTop);
+                // 자바스크립트에서는 querySelector의 find 역할
+                item.querySelector(".img").style.transform = "translateX("+offset1+"px)";
+                item.querySelector(".desc").style.transform = "translateX("+-offset2+"px)";
+            });
 
             // 메뉴
-            $(".content-item").each(function(i){
-                if(scrollTop > $(".content-item").eq(i).offset().top -2){
-                    $(".paraNav ul li").eq(i).addClass("active").siblings().removeClass("active");
+            document.querySelectorAll(".content-item").forEach((item, index) => {
+                if (scrollTop >= item.offsetTop -2) {
+                    document.querySelectorAll(".paraNav ul li").forEach(li => {
+                        li.classList.remove("active");
+                    });
+                    document.querySelector(".paraNav ul li:nth-child(" + (index + 1) + ")").classList.add(
+                        "active");
                 }
             })
+           
+
+            // 출력
+            document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
         }
+
+
+        window.addEventListener("scroll", scrollProgress)
     </script>
 </body>
 </html>

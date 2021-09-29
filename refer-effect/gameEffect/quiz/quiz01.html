@@ -115,7 +115,6 @@
         .quiz-wrap {
             max-width: 500px;
             width: 100%;
-            height: 500px;
             background: #fff;
             margin: 100px auto;
             border: 8px ridge #cacaca;
@@ -124,7 +123,6 @@
             font-size: 14px;
             text-align: center;
             background: #cacaca;
-            height: 5%;
             color: #3b3b3b;
             border: 3px ridge #cacaca;
             padding-top: 3px;
@@ -150,7 +148,6 @@
         }
         .quiz-wrap .quiz {
             border: 4px ridge #cacaca;
-            height: 95%;
         }
         .quiz-wrap .quiz .question {
             border-bottom: 6px ridge #cacaca;
@@ -161,15 +158,35 @@
         .quiz-wrap .quiz .question::before {
             content: 'Q.';
             color: #a5e151;
-            font-size: 24px;
+            font-size: 34px;
             padding-right: 5px;
             text-shadow: 1px 1px 1px #000;
         }
         .quiz-wrap .quiz .answer {
-            height: 60%;
             background: #e8e7e8;
             padding: 20px;
         }
+        .quiz-wrap .quiz .answer .anwer-confirm {
+            background: #cacaca;
+            text-align: center;
+            padding: 13px 20px;
+            border: 6px groove #fff;
+            font-size: 22px;
+            text-shadow: 1px 1px 1px #fff;
+            width: 100%;
+            font-family: 'DungGeunMo';
+        }
+        .quiz-wrap .quiz .answer .anwer-confirm:active {
+            background: #a3a3a3;
+        }
+        .quiz-wrap .quiz .answer .anwer-view {
+            text-align: center;
+            border: 6px groove #fff;
+            padding: 13px 20px;
+            font-size: 22px;
+            text-shadow: 1px 1px 1px #fff;
+            display: none;
+        } 
 
         @media (max-width:1200px){
             .ham {display: block;}
@@ -179,7 +196,6 @@
                 left: 0;
                 background: #262626;
                 width: 100%;
-                padding: 20px;
                 display: none;
             }
             nav.show {
@@ -187,10 +203,345 @@
             }
             nav ul {
                 display: block;
+                position: relative;
+                padding: 20px;
+                z-index: 1;
+            }
+            nav ul::before {
+                content: '';
+                width: calc(100% - 10px);
+                height: calc(100% - 10px);
+                border: 4px ridge #a3a3a3;
+                position: absolute;
+                left: 5px; top: 5px;
+                z-index: -1;
             }
             nav li {
                 padding: 5px;
             }
+        }
+
+        /* dog  */
+        .card {
+            position: relative;
+            width: 360px;
+            margin: 20px auto;
+        }
+        .dog .head,
+        .dog .body {
+            position: relative;
+            width: 115px;
+        }
+        .dog .head {
+            height: 115px;
+            border-radius: 50% 50% 0 0;
+            margin: 0 auto;
+        }
+        .dog .ears {
+            position: relative;
+            top: -14%;
+            width: 100%;
+        }
+        .dog .ears::before, .dog .ears::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 35px;
+            height: 70px;
+            background: #CB7A1D;
+            border-top: 11px solid #F7AA2B;
+            border-left: 7px solid #F7AA2B;
+            border-right: 7px solid #F7AA2B;
+        }
+        .dog .ears::before {
+            left: 0;
+            border-radius: 50% 45% 0 0;
+        }
+        .dog .ears::after {
+            right: 0;
+            border-radius: 45% 50% 0 0;
+        }
+        .dog .face {
+            position: absolute;
+            background: #F7AA2B;
+            width: 100%;
+            height: 100%;
+            border-radius: 50% 50% 0 0;
+        }
+        .dog .face::before, .dog .face::after {
+            content: "";
+            display: block;
+            margin: auto;
+            background: #FEFEFE;
+        }
+        .dog .face::before {
+            width: 15px;
+            height: 35px;
+            margin-top: 24px;
+            border-radius: 20px 20px 0 0;
+        }
+        .dog .face::after {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            width: 60px;
+            height: 65px;
+            border-radius: 45% 45% 0 0;
+        }
+        .dog .eyes {
+            position: relative;
+            top: 29%;
+            text-align: center;
+        }
+        .dog .eyes::before, .dog .eyes::after {
+            content: "";
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 100%;
+            background: #451d1c;
+            margin: 0 14.5%;
+        }
+        .dog .teardrop {
+            position: absolute;
+            top: 125%;
+            left: 19%;
+            width: 6px;
+            height: 6px;
+            border-radius: 0 50% 50% 50%;
+            transform: rotate(45deg);
+            background: #FEFEFE;
+            visibility: hidden;
+        }
+        .dog .nose {
+            position: relative;
+            top: 35%;
+            width: 16px;
+            height: 8px;
+            border-radius: 35px 35px 65px 65px;
+            background: #451d1c;
+            margin: auto;
+        }
+        .dog .mouth {
+            position: relative;
+            top: 34.5%;
+            width: 4px;
+            height: 6px;
+            margin: 0 auto;
+            text-align: center;
+            background: #451d1c;
+        }
+        .dog .mouth::before, .dog .mouth::after {
+            content: "";
+            position: absolute;
+            top: -4px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            border: 4px solid #451d1c;
+            border-left-color: transparent;
+            border-top-color: transparent;
+            z-index: 2;
+        }
+        .dog .mouth::before {
+            transform: translateX(-89%) rotate(45deg);
+        }
+        .dog .mouth::after {
+            transform: translateX(-2px) rotate(45deg);
+        }
+        .dog .tongue {
+            position: relative;
+            z-index: 1;
+        }
+        .dog .tongue::before, .dog .tongue::after {
+            content: "";
+            position: absolute;
+        }
+        .dog .tongue::before {
+            top: 10px;
+            left: -7px;
+            width: 18px;
+            height: 0;
+            border-radius: 50%;
+            background: #451d1c;
+            z-index: -1;
+        }
+        .dog .tongue::after {
+            top: 14px;
+            left: -4px;
+            width: 12px;
+            height: 0;
+            border-radius: 20px;
+            background: #F5534F;
+            z-index: 5;
+        }
+        .dog .chin {
+            position: relative;
+            top: 47.5%;
+            margin: 0 auto;
+            width: 12px;
+            height: 12px;
+            border-top: 10px solid #e8e7ec;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-radius: 2px;
+            z-index: 0;
+        }
+        .dog .body {
+            position: relative;
+            height: 139px;
+            margin: auto;
+            z-index: 0;
+        }
+        .dog .body::before, .dog .body::after {
+            content: "";
+            position: absolute;
+            top: -1px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: block;
+            width: 100%;
+            margin: auto;
+            background: #F7AA2B;
+        }
+        .dog .body::after {
+            top: -2px;
+            bottom: -1px;
+            width: 60px;
+            background: #FEFEFE;
+        }
+        .dog .tail {
+            position: absolute;
+            left: -60%;
+            bottom: 1px;
+            background: #F7AA2B;
+            width: 93px;
+            height: 15px;
+            transform: rotate(45deg);
+            transform-origin: 100% 50%;
+            border-radius: 25px 0 0 25px;
+            z-index: -2;
+        }
+        .dog .legs {
+            position: absolute;
+            bottom: 0;
+            left: -10%;
+            width: 120%;
+            height: 15%;
+            background: #F7AA2B;
+            border-radius: 10px 10px 0 0;
+        }
+        .dog .legs::before, .dog .legs::after {
+            content: "";
+            position: absolute;
+            bottom: 1px;
+            background: #CB7A1D;
+            z-index: -1;
+        }
+        .dog .legs::before {
+            left: -7.5%;
+            width: 115%;
+            height: 55%;
+            border-radius: 5px 5px 0 0;
+        }
+        .dog .legs::after {
+            left: -3.5%;
+            width: 107%;
+            height: 250%;
+            border-radius: 20px 20px 35px 35px;
+        }
+        .card.good .face::before {
+            margin-top: 10px;
+        }
+        .card.good .face::after{
+            height: 85px;
+        }
+        .card.good .eyes {
+            top: 13%;
+        } 
+        .card.good .eyes::before, 
+        .card.good .eyes::after {
+            width: 18px;
+            height: 5px;
+            margin: 0px 12.5%;
+            transform: rotate(-37.5deg);
+            border-radius: 20px;
+        }
+        .card.good .eyes::after {
+            transform: rotate(37.5deg);
+        }
+        .card.good .nose {
+            top: 18%;
+        }
+        .card.good .mouth {
+            top: 16.5%;
+        }
+        .card.good .tongue::before {
+            height: 12px;
+        }
+        .card.good .tongue::after {
+            height: 24px;
+            animation: movetongue 0.1s linear 0.35s infinite alternate forwards;
+        }
+        .card.good .chin {
+            top: 34%;
+        }
+        .card.good .tail {
+            animation: movetail 0.1s linear infinite alternate forwards;
+        }
+
+        .card.bad .ears::before {
+            transform: rotate(-50deg) translate(-7px, 2px);
+        }
+        .card.bad .ears::after {
+            transform: rotate(50deg) translate(7px, 2px);
+        }
+        .card.bad .face::before {
+            margin-top: 28px;
+        }
+        .card.bad .face::after {
+            height: 55px;
+        }
+        .card.bad .eyes {
+            top: 38%;
+        }
+        .card.bad .eyes::before,
+        .card.bad .eyes::after {
+            width: 18px;
+            height: 5px;
+            margin: 0px 14.5%;
+            transform: rotate(-37.5deg);
+            border-radius: 20px;
+        }
+        .card.bad .eyes::after {
+            transform: rotate(37.5deg);
+        }
+        .card.bad .teardrop {
+            animation: cry 0.1s ease-in 0.25s forwards;
+        }
+        .card.bad .nose {
+            top: 44%;
+        }
+        .card.bad .mouth {
+            top: 42%;
+        }
+        .card.bad .chin {
+            top: 52%;
+        }
+        .card.bad .tail {
+            transform: rotate(0);
+        }
+        @keyframes movetongue {
+            100% {height: 27px;}
+        }
+        @keyframes movetail {
+            0% {transform: rotate(37deg);}
+            100% {transform: rotate(52deg);}
+        }
+        @keyframes cry {
+            100% {visibility: visible;}
         }
     </style>
 </head>
@@ -213,17 +564,71 @@
     </header>
 
     <div class="quiz-wrap">
-        <h2>웹디자인 기능사</h2>
+        <h2>넌센스 퀴즈</h2>
         <div class="quiz">
-            <h3 class="question">다음 중 디자인의 기본 요소들로 옳은 것은?</h3>
-            <div class="answer">정답 영역</div>
+            <h3 class="question"></h3>
+            <div class="answer">
+                <div class="answer-img">
+                    <div class="card">
+                        <div class="dog">
+                            <div class="head">
+                                <div class="ears"></div>
+                                <div class="face"></div>
+                                <div class="eyes">
+                                    <div class="teardrop"></div>
+                                </div>
+                                <div class="nose"></div>
+                                <div class="mouth">
+                                    <div class="tongue"></div>
+                                </div>
+                                <div class="chin"></div>
+                            </div>
+                            <div class="body">
+                                <div class="tail"></div>
+                                <div class="legs"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="anwer-confirm">정답 확인하기</button>
+                <div class="anwer-view"></div>
+            </div>
         </div>
     </div>
 
     <script>
+        // 퀴즈
+        const anwerqQuestion = document.querySelector(".question");
+        const anwerConfirm = document.querySelector(".anwer-confirm");
+        const anwerView = document.querySelector(".anwer-view");
+
+        // 문제 정보
+        const quizAsk = "채소 장사꾼이 제일 싫어하는 외국의 도시는?";
+        const quizAnswer = "시드니";
+
+        // 문제 출력
+        anwerqQuestion.innerHTML = quizAsk;
+        anwerView.innerHTML = quizAnswer;
+
+        // 정답 확인
+        anwerConfirm.addEventListener("click", function(){
+            anwerConfirm.style.display = "none";
+            anwerView.style.display = "block";
+            document.querySelector(".card").classList.add("good");
+
+            // 정답을 눌렀을 때 강아지가 웃게 하기
+
+        })
+
+
+
+        // 메뉴
         document.querySelector(".ham").addEventListener("click",function(){
             document.querySelector("nav").classList.toggle("show");
-        })
+        });
+
+
+
     </script>
 </body>
 </html>

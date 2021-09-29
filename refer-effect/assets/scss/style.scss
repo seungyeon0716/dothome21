@@ -622,15 +622,17 @@ animation: zommOut 0.5s ease forwards;
             padding-bottom: 56%;
             background: #000;
             position: relative;
+            overflow: hidden;
+
             .img {
                 position: absolute;
-                left: 0; top: 0;
-                width: 100%;
-                height: 100%;
+                left: -10%; top: -10%;
+                width: 120%;
+                height: 120%;
                 background-size: cover;
                 background-repeat: no-repeat;
                 filter: saturate(0%);      //흑백
-                transition: all 1s;
+                transition: filter 1s;
 
                 &:hover {
                     filter: saturate(100%); 
