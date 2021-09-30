@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+        @font-face {
+            font-family: 'DungGeunMo';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+       *, *:before, *:after {
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        a {
+            text-decoration: none;
+        }
+        li {
+            list-style: none;
+        }
+        body { 
+            font-family: 'DungGeunMo';
+            background-color: #f6f6f6;
+            background-image:
+            linear-gradient(90deg, #cdcccc 0px, #cdcccc 1px, transparent 1px, transparent 99px,  transparent 100px),
+            linear-gradient(#cdcccc 0px, #cdcccc 1px, transparent 1px, transparent 99px,  transparent 100px),
+            linear-gradient(#e0e0e0 0px, #e0e0e0 1px, transparent 1px, transparent 99px,  transparent 100px),
+            linear-gradient(90deg, #e0e0e0 0px, #e0e0e0 1px, transparent 1px, transparent 99px,  transparent 100px),
+            linear-gradient(transparent 0px, transparent 5px, #f6f6f6 5px, #f6f6f6 95px, transparent 95px, transparent 100px),
+            linear-gradient(90deg, #e0e0e0 0px, #e0e0e0 1px, transparent 1px, transparent 99px, #e0e0e0 99px, #e0e0e0 100px),
+            linear-gradient(90deg, transparent 0px, transparent 5px, #f6f6f6 5px, #f6f6f6 95px, transparent 95px, transparent 100px),
+            linear-gradient(transparent 0px, transparent 1px, #f6f6f6 1px, #f6f6f6 99px, transparent 99px, transparent 100px),
+            linear-gradient(#cdcccc, #cdcccc);
+            background-size:100px 100%, 100% 100px, 100% 10px, 10px 100%, 100% 100px, 100px 100%, 100px 100%, 100px 100px, 100px 100px;
+            padding: 100px 0;
+        }
+        header {
+            position: fixed;
+            left: 0; top: 0;
+            width: 100%;
+            background: #262626;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            z-index: 10;
+        }
+        header::before {
+            content: '';
+            width: calc(100% - 10px);
+            height: calc(100% - 10px);
+            border: 4px ridge #a3a3a3;
+            position: absolute;
+            left: 5px; top: 5px;
+            z-index: -1;
+        }
+        header h1 {
+            padding: 5px 30px 5px 20px;
+        }
+        nav ul {
+            display: flex;
+        }
+        nav li {
+            margin-right: 30px;
+        }
+        nav li a {
+            color: rgb(171,171,171);
+        }
+        nav li a:hover {
+            border-bottom: 1px solid rgb(171,171,171);
+        }
+        nav li.active a {
+            color: #fff;
+        }
+        nav li.active:hover a {
+            border-bottom: 1px solid #fff;
+        }
+        .ham {
+            position: absolute;
+            right: 20px; top: 16px;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: none;
+        }
+        .ham span {
+            width: 20px;
+            height: 3px;
+            background: #fff;
+            display: block;
+            position: absolute;
+            left: 5px; top: 13px;
+        }
+        .ham span::before {
+            width: 20px;
+            height: 3px;
+            content: '';
+            background: #fff;
+            position: absolute;
+            left: 0; top: 7px;
+        }
+        .ham span::after {
+            width: 20px;
+            height: 3px;
+            content: '';    
+            background: #fff;
+            position: absolute;
+            left: 0; bottom: 7px;
+        }
+        .quizWrap {
+            max-width: 500px;
+            width: 100%;
+            background: #fff;
+            margin: 30px auto;
+            border: 8px ridge #cacaca;
+        }
+        .quizWrap h2 {
+            font-size: 14px;
+            text-align: center;
+            background: #cacaca;
+            color: #3b3b3b;
+            border: 3px ridge #cacaca;
+            padding: 3px;
+            position: relative;
+        }
+        .quizWrap h2::before {
+            content: '';
+            position: absolute;
+            left: 2px; top: 2px;
+            width: 15px; height: 15px;
+            background: url(dot.jpg) no-repeat;
+            background-size: cover;
+        }
+        .quizWrap h2::after {
+            content: '';
+            position: absolute;
+            right: 2px; top: 2px;
+            width: 35px; height: 15px;
+            background: url(dot.jpg) no-repeat -14px;
+            background-size: cover;
+        }
+        .question__quiz {
+            border: 4px ridge #cacaca;
+        }
+        .question__title {
+            font-size: 34px;
+            padding: 20px;
+            border-bottom: 6px ridge #cacaca;
+        }
+        .question__title__num {
+            color: #A5E151;
+            font-size: 34px;
+            text-shadow: 1px 1px 1px #000;
+        }
+        .question__title__num::after {
+            content: '.';
+        }
+        .question__title__ask {
+            font-size: 24px;
+            line-height: 1.4;
+        }
+        .question__answer {
+            background: #E8E7E8;
+            padding: 20px;
+        }
+        .question__answer__confirm {
+            background: #cacaca;
+            text-align: center;
+            padding: 13px 20px;
+            border: 6px groove #fff;
+            font-size: 22px;
+            text-shadow: 1px 1px 1px #fff;
+            width: 100%;
+            font-family: 'DungGeunMo';
+        }
+        .question__answer__confirm:active {
+            background: #a3a3a3;
+        }
+        .question__answer__view {
+            text-align: center;
+            border: 6px groove #fff;
+            padding: 13px 20px;
+            font-size: 22px;
+            text-shadow: 1px 1px 1px #fff;
+        }
+
+        @media (max-width:1200px){
+            .ham {display: block;}
+            nav {
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background: #262626;
+                width: 100%;
+                display: none;
+            }
+            nav.show {
+                display: block;
+            }
+            nav ul {
+                display: block;
+                position: relative;
+                padding: 20px;
+                z-index: 1;
+            }
+            nav ul::before {
+                content: '';
+                width: calc(100% - 10px);
+                height: calc(100% - 10px);
+                border: 4px ridge #a3a3a3;
+                position: absolute;
+                left: 5px; top: 5px;
+                z-index: -1;
+            }
+            nav li {
+                padding: 5px;
+            }
+        }
+
+        /* dog  */
+        .card {
+            position: relative;
+            width: 360px;
+            margin: 20px auto;
+        }
+        .dog .head,
+        .dog .body {
+            position: relative;
+            width: 115px;
+        }
+        .dog .head {
+            height: 115px;
+            border-radius: 50% 50% 0 0;
+            margin: 0 auto;
+        }
+        .dog .ears {
+            position: relative;
+            top: -14%;
+            width: 100%;
+        }
+        .dog .ears::before, .dog .ears::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 35px;
+            height: 70px;
+            background: #CB7A1D;
+            border-top: 11px solid #F7AA2B;
+            border-left: 7px solid #F7AA2B;
+            border-right: 7px solid #F7AA2B;
+        }
+        .dog .ears::before {
+            left: 0;
+            border-radius: 50% 45% 0 0;
+        }
+        .dog .ears::after {
+            right: 0;
+            border-radius: 45% 50% 0 0;
+        }
+        .dog .face {
+            position: absolute;
+            background: #F7AA2B;
+            width: 100%;
+            height: 100%;
+            border-radius: 50% 50% 0 0;
+        }
+        .dog .face::before, .dog .face::after {
+            content: "";
+            display: block;
+            margin: auto;
+            background: #FEFEFE;
+        }
+        .dog .face::before {
+            width: 15px;
+            height: 35px;
+            margin-top: 24px;
+            border-radius: 20px 20px 0 0;
+        }
+        .dog .face::after {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            width: 60px;
+            height: 65px;
+            border-radius: 45% 45% 0 0;
+        }
+        .dog .eyes {
+            position: relative;
+            top: 29%;
+            text-align: center;
+        }
+        .dog .eyes::before, .dog .eyes::after {
+            content: "";
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 100%;
+            background: #451d1c;
+            margin: 0 14.5%;
+        }
+        .dog .teardrop {
+            position: absolute;
+            top: 125%;
+            left: 19%;
+            width: 6px;
+            height: 6px;
+            border-radius: 0 50% 50% 50%;
+            transform: rotate(45deg);
+            background: #FEFEFE;
+            visibility: hidden;
+        }
+        .dog .nose {
+            position: relative;
+            top: 35%;
+            width: 16px;
+            height: 8px;
+            border-radius: 35px 35px 65px 65px;
+            background: #451d1c;
+            margin: auto;
+        }
+        .dog .mouth {
+            position: relative;
+            top: 34.5%;
+            width: 4px;
+            height: 6px;
+            margin: 0 auto;
+            text-align: center;
+            background: #451d1c;
+        }
+        .dog .mouth::before, .dog .mouth::after {
+            content: "";
+            position: absolute;
+            top: -4px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            border: 4px solid #451d1c;
+            border-left-color: transparent;
+            border-top-color: transparent;
+            z-index: 2;
+        }
+        .dog .mouth::before {
+            transform: translateX(-89%) rotate(45deg);
+        }
+        .dog .mouth::after {
+            transform: translateX(-2px) rotate(45deg);
+        }
+        .dog .tongue {
+            position: relative;
+            z-index: 1;
+        }
+        .dog .tongue::before, .dog .tongue::after {
+            content: "";
+            position: absolute;
+        }
+        .dog .tongue::before {
+            top: 10px;
+            left: -7px;
+            width: 18px;
+            height: 0;
+            border-radius: 50%;
+            background: #451d1c;
+            z-index: -1;
+        }
+        .dog .tongue::after {
+            top: 14px;
+            left: -4px;
+            width: 12px;
+            height: 0;
+            border-radius: 20px;
+            background: #F5534F;
+            z-index: 5;
+        }
+        .dog .chin {
+            position: relative;
+            top: 47.5%;
+            margin: 0 auto;
+            width: 12px;
+            height: 12px;
+            border-top: 10px solid #e8e7ec;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-radius: 2px;
+            z-index: 0;
+        }
+        .dog .body {
+            position: relative;
+            height: 139px;
+            margin: auto;
+            z-index: 0;
+        }
+        .dog .body::before, .dog .body::after {
+            content: "";
+            position: absolute;
+            top: -1px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: block;
+            width: 100%;
+            margin: auto;
+            background: #F7AA2B;
+        }
+        .dog .body::after {
+            top: -2px;
+            bottom: -1px;
+            width: 60px;
+            background: #FEFEFE;
+        }
+        .dog .tail {
+            position: absolute;
+            left: -60%;
+            bottom: 1px;
+            background: #F7AA2B;
+            width: 93px;
+            height: 15px;
+            transform: rotate(45deg);
+            transform-origin: 100% 50%;
+            border-radius: 25px 0 0 25px;
+            z-index: -2;
+        }
+        .dog .legs {
+            position: absolute;
+            bottom: 0;
+            left: -10%;
+            width: 120%;
+            height: 15%;
+            background: #F7AA2B;
+            border-radius: 10px 10px 0 0;
+        }
+        .dog .legs::before, .dog .legs::after {
+            content: "";
+            position: absolute;
+            bottom: 1px;
+            background: #CB7A1D;
+            z-index: -1;
+        }
+        .dog .legs::before {
+            left: -7.5%;
+            width: 115%;
+            height: 55%;
+            border-radius: 5px 5px 0 0;
+        }
+        .dog .legs::after {
+            left: -3.5%;
+            width: 107%;
+            height: 250%;
+            border-radius: 20px 20px 35px 35px;
+        }
+        .card.good .face::before {
+            margin-top: 10px;
+        }
+        .card.good .face::after{
+            height: 85px;
+        }
+        .card.good .eyes {
+            top: 13%;
+        } 
+        .card.good .eyes::before, 
+        .card.good .eyes::after {
+            width: 18px;
+            height: 5px;
+            margin: 0px 12.5%;
+            transform: rotate(-37.5deg);
+            border-radius: 20px;
+        }
+        .card.good .eyes::after {
+            transform: rotate(37.5deg);
+        }
+        .card.good .nose {
+            top: 18%;
+        }
+        .card.good .mouth {
+            top: 16.5%;
+        }
+        .card.good .tongue::before {
+            height: 12px;
+        }
+        .card.good .tongue::after {
+            height: 24px;
+            animation: movetongue 0.1s linear 0.35s infinite alternate forwards;
+        }
+        .card.good .chin {
+            top: 34%;
+        }
+        .card.good .tail {
+            animation: movetail 0.1s linear infinite alternate forwards;
+        }
+
+        .card.bad .ears::before {
+            transform: rotate(-50deg) translate(-7px, 2px);
+        }
+        .card.bad .ears::after {
+            transform: rotate(50deg) translate(7px, 2px);
+        }
+        .card.bad .face::before {
+            margin-top: 28px;
+        }
+        .card.bad .face::after {
+            height: 55px;
+        }
+        .card.bad .eyes {
+            top: 38%;
+        }
+        .card.bad .eyes::before,
+        .card.bad .eyes::after {
+            width: 18px;
+            height: 5px;
+            margin: 0px 14.5%;
+            transform: rotate(-37.5deg);
+            border-radius: 20px;
+        }
+        .card.bad .eyes::after {
+            transform: rotate(37.5deg);
+        }
+        .card.bad .teardrop {
+            animation: cry 0.1s ease-in 0.25s forwards;
+        }
+        .card.bad .nose {
+            top: 44%;
+        }
+        .card.bad .mouth {
+            top: 42%;
+        }
+        .card.bad .chin {
+            top: 52%;
+        }
+        .card.bad .tail {
+            transform: rotate(0);
+        }
+        @keyframes movetongue {
+            100% {height: 27px;}
+        }
+        @keyframes movetail {
+            0% {transform: rotate(37deg);}
+            100% {transform: rotate(52deg);}
+        }
+        @keyframes cry {
+            100% {visibility: visible;}
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Quiz</h1>
+        <nav>
+            <ul>
+                <li><a href="quiz01.html">주관식 1문제</a></li>
+                <li class="active"><a href="quiz02.html">주관식 여러 문제</a></li>
+                <li><a href="quiz03.html">객관식 1문제</a></li>
+                <li><a href="quiz04.html">객관식 여러 문제</a></li>
+                <li><a href="quiz05.html">객관식 여러 문제 : 이미지 슬라이드</a></li>
+            </ul>
+        </nav>
+        <div class="ham">
+            <span></span>
+        </div>
+    </header>
+
+    <div class="quizWrap">
+        <h2>넌센스 퀴즈</h2>
+        <div class="question__quiz">
+            <h3 class="question__title">
+                <span class="question__title__num"></span>
+                <span class="question__title__ask"></span>
+            </h3>
+            <div class="question__answer">
+                <div class="question__answer__img">
+                    <div class="card">
+                        <div class="dog">
+                            <div class="head">
+                                <div class="ears"></div>
+                                <div class="face"></div>
+                                <div class="eyes">
+                                    <div class="teardrop"></div>
+                                </div>
+                                <div class="nose"></div>
+                                <div class="mouth">
+                                    <div class="tongue"></div>
+                                </div>
+                                <div class="chin"></div>
+                            </div>
+                            <div class="body">
+                                <div class="tail"></div>
+                                <div class="legs"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="question__answer__confirm ">정답 확인하기</button>
+                <div class="question__answer__view"></div>
+            </div>
+        </div>
+    </div>
+    <div class="quizWrap">
+        <h2>넌센스 퀴즈</h2>
+        <div class="question__quiz">
+            <h3 class="question__title">
+                <span class="question__title__num"></span>
+                <span class="question__title__ask"></span>
+            </h3>
+            <div class="question__answer">
+                <div class="question__answer__img">
+                    <div class="card">
+                        <div class="dog">
+                            <div class="head">
+                                <div class="ears"></div>
+                                <div class="face"></div>
+                                <div class="eyes">
+                                    <div class="teardrop"></div>
+                                </div>
+                                <div class="nose"></div>
+                                <div class="mouth">
+                                    <div class="tongue"></div>
+                                </div>
+                                <div class="chin"></div>
+                            </div>
+                            <div class="body">
+                                <div class="tail"></div>
+                                <div class="legs"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="question__answer__confirm ">정답 확인하기</button>
+                <div class="question__answer__view"></div>
+            </div>
+        </div>
+    </div>
+    <div class="quizWrap">
+        <h2>넌센스 퀴즈</h2>
+        <div class="question__quiz">
+            <h3 class="question__title ">
+                <span class="question__title__num "></span>
+                <span class="question__title__ask "></span>
+            </h3>
+            <div class="question__answer ">
+                <div class="question__answer__img ">
+                    <div class="card">
+                        <div class="dog">
+                            <div class="head">
+                                <div class="ears"></div>
+                                <div class="face"></div>
+                                <div class="eyes">
+                                    <div class="teardrop"></div>
+                                </div>
+                                <div class="nose"></div>
+                                <div class="mouth">
+                                    <div class="tongue"></div>
+                                </div>
+                                <div class="chin"></div>
+                            </div>
+                            <div class="body">
+                                <div class="tail"></div>
+                                <div class="legs"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="question__answer__confirm ">정답 확인하기</button>
+                <div class="question__answer__view "></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // 선택자
+        const quizWrap = document.querySelector(".quizWrap");
+        const questionQuiz = document.querySelector(".question__quiz");
+        const questionTitle = document.querySelector(".question__title");
+        const questionTitleNum = document.querySelectorAll(".question__title__num");
+        const questionTitleAsk = document.querySelectorAll(".question__title__ask");
+        const questionAnswer = document.querySelector(".question__answer");
+        const questionAnswerImg = document.querySelector(".question__answer__img");
+        const questionAnswerConfirm = document.querySelectorAll(".question__answer__confirm ");
+        const questionAnswerView  = document.querySelectorAll(".question__answer__view ");
+
+        // 문제 정보
+        const quizInfo = [
+            {
+                quizNum : 1,
+                quizAsk : "채소 장사꾼이 제일 싫어하는 외국의 도시는?",
+                quizAnswer : "시드니"
+            },
+            {
+                quizNum : 2,
+                quizAsk : "가장 비싼 새는?",
+                quizAnswer : "백조"
+            },
+            {
+                quizNum : 3,
+                quizAsk : "소녀가 강으로 여행가면?",
+                quizAnswer : "걸리버 여행"
+            }
+        ]
+
+        // 문제 출력
+        // questionTitleNum[0].innerHTML = quizInfo[0].quizNum;
+        // questionTitleNum[1].innerHTML = quizInfo[1].quizNum;
+        // questionTitleNum[2].innerHTML = quizInfo[2].quizNum;
+
+        // questionTitleAsk[0].innerHTML = quizInfo[0].quizAsk;
+        // questionTitleAsk[1].innerHTML = quizInfo[1].quizAsk;
+        // questionTitleAsk[2].innerHTML = quizInfo[2].quizAsk;
+
+        // questionAnswerView[0].innerHTML = quizInfo[0].quizAnswer;
+        // questionAnswerView[1].innerHTML = quizInfo[1].quizAnswer;
+        // questionAnswerView[2].innerHTML = quizInfo[2].quizAnswer;
+
+        // for문
+        // for( let i=0; i<quizInfo.length; i++ ){
+        //     questionTitleNum[i].innerHTML = quizInfo[i].quizNum;
+        //     questionTitleAsk[i].innerHTML = quizInfo[i].quizAsk;
+        //     questionAnswerView[i].innerHTML = quizInfo[i].quizAnswer;
+        // }
+
+        // forEach문
+        quizInfo.forEach((e, i) => {
+            questionTitleNum[i].innerHTML = e.quizNum;
+            questionTitleAsk[i].innerHTML = e.quizAsk;
+            questionAnswerView[i].innerHTML = e.quizAnswer;
+        });
+
+        // 정답 안 보이게 하기
+        questionAnswerView.forEach(el => {
+            el.style.display = "none";
+        })
+
+        // 정답 확인(this 사용)
+        // questionAnswerConfirm.forEach(el => {
+        //     el.addEventListener("click", function(){
+        //         this.style.display = "none";
+        //         this.nextElementSibling.style.display = "block";
+        //     });
+        // })
+
+        questionAnswerConfirm.forEach((confirm,idx) => {
+            confirm.addEventListener('click',() => {
+                confirm.style.display = 'none';
+                questionAnswerView[idx].style.display = 'block';
+                document.querySelectorAll('.card')[idx].classList.add('good');
+            });
+        });
+
+        // 메뉴
+        document.querySelector(".ham").addEventListener("click",function(){
+            document.querySelector("nav").classList.toggle("show");
+        });
+
+
+    </script>
+</body>
+</html>

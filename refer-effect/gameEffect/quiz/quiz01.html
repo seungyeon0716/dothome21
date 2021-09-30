@@ -125,7 +125,7 @@
             background: #cacaca;
             color: #3b3b3b;
             border: 3px ridge #cacaca;
-            padding-top: 3px;
+            padding: 3px;
             position: relative;
         }
         .quiz-wrap h2::before {
@@ -134,7 +134,7 @@
             left: 2px; top: 2px;
             width: 15px; 
             height: 15px;
-            background: url("../dot.jpg") no-repeat;
+            background: url("dot.jpg") no-repeat;
             background-size: cover;
         }
         .quiz-wrap h2::after {
@@ -143,7 +143,7 @@
             right: 2px; top: 2px;
             width: 35px; 
             height: 15px;
-            background: url("../dot.jpg") no-repeat -14px;
+            background: url("dot.jpg") no-repeat -14px;
             background-size: cover;
         }
         .quiz-wrap .quiz {
@@ -551,11 +551,11 @@
         <h1>Quiz</h1>
         <nav>
             <ul>
-                <li class="active"><a href="#">주관식 1문제</a></li>
-                <li><a href="#">주관식 여러 문제</a></li>
-                <li><a href="#">객관식 1문제</a></li>
-                <li><a href="#">객관식 여러 문제</a></li>
-                <li><a href="#">객관식 여러 문제 : 이미지 슬라이드</a></li>
+                <li class="active"><a href="quiz01.html">주관식 1문제</a></li>
+                <li><a href="quiz02.html">주관식 여러 문제</a></li>
+                <li><a href="quiz03.html">객관식 1문제</a></li>
+                <li><a href="quiz04.html">객관식 여러 문제</a></li>
+                <li><a href="quiz05.html">객관식 여러 문제 : 이미지 슬라이드</a></li>
             </ul>
         </nav>
         <div class="ham">
@@ -601,6 +601,7 @@
         const answerqQuestion = document.querySelector(".question");
         const answerConfirm = document.querySelector(".answer-confirm");
         const answerView = document.querySelector(".answer-view");
+        const answerCard = document.querySelector(".answer-img .card");
 
         // 문제 정보
         const quizAsk = "채소 장사꾼이 제일 싫어하는 외국의 도시는?";
