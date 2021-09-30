@@ -238,6 +238,10 @@
         .question__answer__selects input:checked + span::before {
             box-shadow: inset 0 0 0 10px #A5E151;
         }
+        .question__answer__selects p {
+            line-height: 1.4;
+            font-size: 16px;
+        }
 
         @media (max-width:1200px){
             .ham {display: block;}
@@ -301,28 +305,6 @@
                     <span class="question__title__ask">다음 중 틀린 것은?</span>
                 </h3>
                 <div class="question__answer">
-                    <div class="question__answer__img">
-                        <div class="card">
-                            <div class="dog">
-                                <div class="head">
-                                    <div class="ears"></div>
-                                    <div class="face"></div>
-                                    <div class="eyes">
-                                        <div class="teardrop"></div>
-                                    </div>
-                                    <div class="nose"></div>
-                                    <div class="mouth">
-                                        <div class="tongue"></div>
-                                    </div>
-                                    <div class="chin"></div>
-                                </div>
-                                <div class="body">
-                                    <div class="tail"></div>
-                                    <div class="legs"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="question__answer__selects">
                         <label for="select1">
                             <input class="select" type="radio" name="select" id="select1" value="1">
@@ -362,6 +344,7 @@
         const questionAnswerConfirm = document.querySelector(".question__answer__confirm ");
         const questionAnswerView  = document.querySelector(".question__answer__view ");
         const questionAnswerEx  = document.querySelector(".question__answer__ex ");
+       
 
         // 문제 정보
         const quizInfo = [
@@ -410,51 +393,29 @@
             quizInfo.forEach((currentQuestion, questionNumber) => {
                 output.push(`
                 <div class="quizWrap">
-                    <h2>웹디자인 기능사</h2>
+                    <h2>웹디자인 기능사 16년도 03회</h2>
                     <div class="question__quiz">
                         <h3 class="question__title">
                             <span class="question__title__num">${currentQuestion.quizNum}</span>
                             <span class="question__title__ask">${currentQuestion.quizAsk}</span>
                         </h3>
                         <div class="question__answer">
-                            <div class="question__answer__img">
-                                <div class="card">
-                                    <div class="dog">
-                                        <div class="head">
-                                            <div class="ears"></div>
-                                            <div class="face"></div>
-                                            <div class="eyes">
-                                                <div class="teardrop"></div>
-                                            </div>
-                                            <div class="nose"></div>
-                                            <div class="mouth">
-                                                <div class="tongue"></div>
-                                            </div>
-                                            <div class="chin"></div>
-                                        </div>
-                                        <div class="body">
-                                            <div class="tail"></div>
-                                            <div class="legs"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="question__answer__selects">
-                                <label for="select1">
-                                    <input class="select" type="radio" name="select" id="select1" value="1">
-                                    <span class="choice"></span>
+                                <label>
+                                    <input class="select" type="radio" name="select${questionNumber}" value="1">
+                                    <span class="choice">${currentQuestion.quizChoice[1]}</span>
                                 </label>
-                                <label for="select2">
-                                    <input class="select" type="radio" name="select" id="select2" value="2">
-                                    <span class="choice"></span>
+                                <label>
+                                    <input class="select" type="radio" name="select${questionNumber}" value="2">
+                                    <span class="choice">${currentQuestion.quizChoice[2]}</span>
                                 </label>
-                                <label for="select3">
-                                    <input class="select" type="radio" name="select" id="select3" value="3">
-                                    <span class="choice"></span>
+                                <label>
+                                    <input class="select" type="radio" name="select${questionNumber}" value="3">
+                                    <span class="choice">${currentQuestion.quizChoice[3]}</span>
                                 </label>
-                                <label for="select4">
-                                    <input class="select" type="radio" name="select" id="select4" value="4">
-                                    <span class="choice"></span>
+                                <label>
+                                    <input class="select" type="radio" name="select${questionNumber}" value="4">
+                                    <span class="choice">${currentQuestion.quizChoice[4]}</span>
                                 </label>
                             </div>
                         </div>
@@ -465,6 +426,36 @@
             quiz.innerHTML = output.join(' ');
         }
         updateQuiz();
+
+
+        // 결과 확인하기
+        function showResults(){
+            const questionAnswerSelects  = document.querySelectorAll(".question__answer__selects ");
+            let nowScore = 0;
+
+            // 사용자가 클릭한 정답
+            // 데이터 안에 정답
+            quizInfo.forEach((currentQuestion, questionNumber) => {
+                const selectContainer = questionAnswerSelects[questionNumber];
+                const selectChecked = `input[name=select${questionNumber}]:checked`;
+                const selectResult = (selectContainer.querySelector(selectChecked) || {}).value;
+                
+                if( selectResult == currentQuestion.quizAnswer ){
+                    // alert("정답입니다.");
+                    nowScore++;
+                    selectContainer.style.color = "red";
+                } else {
+                    // alert("틀렸습니다.");
+                    selectContainer.style.color = "blue";
+                    const p = document.createElement("p");
+                    selectContainer.appendChild(p).innerHTML = currentQuestion.quizEx;
+                }
+            });
+            questionAnswerView.innerHTML = `${quizInfo.length} 문제 중에 ${nowScore} 문제를 맞추었습니다.`;
+            questionAnswerConfirm.style.display = "none";
+        }
+
+        questionAnswerConfirm.addEventListener("click", showResults);
 
         // 메뉴
         document.querySelector(".ham").addEventListener("click",function(){
