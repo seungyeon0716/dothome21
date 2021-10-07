@@ -549,22 +549,37 @@
 //     let scrollTop = $(this).scrollTop();
 
 //     $(".reveal").each(function(){
-//         //this는 reveal
 //         if( scrollTop + $(window).height() >= $(this).offset().top ){
 //             $(this).addClass("show");
 //         }
 //     });
 // });
+$('.paraNav ul li').click(function (e) {
+    e.preventDefault();
+    let target = $(this);
+    let index = target.index();
+    let section = $('.paraCont > section').eq(index);
+    let offset = section.offset().top;
+
+    $('html, body').animate({
+        scrollTop: offset
+    }, 600);
+});
 
 $(window).scroll(function(){
-    let scrollTop = $(this).scrollTop();
-    $('.reveal').each(function(){
-        if(scrollTop + $(window).height() >= $(this).offset().top){
-            $(this).delay($(this).data('delay')).queue(function(){
-                $(this).addClass('show');
-            });
-        }
-    });
+    let scrollTop = $(this).scrollTop();
+        $('.reveal').each(function(){
+            if(scrollTop + $(window).height() >= $(this).offset().top){
+                $(this).delay($(this).data('delay')).queue(function(){
+                    $(this).addClass('show');
+                });
+            }
+        $(".content-item").each(function(index, element){   
+            if( scrollTop > $(this).offset().top -2){
+                $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+            }
+        });
+    });
 });
 </code></pre>
                         </div>
@@ -597,23 +612,39 @@ $(window).scroll(function(){
         //     let scrollTop = $(this).scrollTop();
 
         //     $(".reveal").each(function(){
-        //         //this는 reveal
         //         if( scrollTop + $(window).height() >= $(this).offset().top ){
         //             $(this).addClass("show");
         //         }
         //     });
         // });
+        $('.paraNav ul li').click(function (e) {
+            e.preventDefault();
+            let target = $(this);
+            let index = target.index();
+            let section = $('.paraCont > section').eq(index);
+            let offset = section.offset().top;
+
+            $('html, body').animate({
+                scrollTop: offset
+            }, 600);
+        });
 
         $(window).scroll(function(){
-            let scrollTop = $(this).scrollTop();
-            $('.reveal').each(function(){
-                if(scrollTop + $(window).height() >= $(this).offset().top){
-                    $(this).delay($(this).data('delay')).queue(function(){
-                        $(this).addClass('show');
-                    });
-                }
-            });
-        });
+            let scrollTop = $(this).scrollTop();
+                $('.reveal').each(function(){
+                    if(scrollTop + $(window).height() >= $(this).offset().top){
+                        $(this).delay($(this).data('delay')).queue(function(){
+                            $(this).addClass('show');
+                        });
+                    }
+                $(".content-item").each(function(index, element){   
+                    if( scrollTop > $(this).offset().top -2){
+                        $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+                    }
+                });
+            });
+        });
+
     </script>
 </body>
 </html>
