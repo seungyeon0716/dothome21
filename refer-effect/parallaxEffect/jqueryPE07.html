@@ -563,26 +563,26 @@ $(window).scroll(function(){
             // }
 
             // for문
-            // for( let i=0; i<10; i++ ){
+            // for( let i=1; i<$(".content-item").length; i++ ){
             //     if($(window).scrollTop() >= $("#section"+i).offset().top ){
-            //         $("#section .desc span"+i).each(e => {
+            //         $("#section"+i+" .desc span").each(i => {
             //             setTimeout(() => {
-            //                 $("#section .desc span"+i).eq(e).addClass("show");
+            //                 $("#section"+i+ ".desc span").eq(i).addClass("show");
             //             }, 50 * i) 
             //         });
             //     }
             // }
 
             // each()
-            $(".content-item .desc span").each(function(){
-                if($(window).scrollTop() >= $(this).offset().top ){
-                    $(this).each(i => {
-                        setTimeout(() => {
-                            $(this).eq(i).addClass("show");
-                        }, 50 * i) 
+            $('.content-item').each(function(index){
+                if($(window).scrollTop() >= $(this).offset().top - $(window).height()/2){
+                    $(this).find('.desc span').each(i => {
+                        setTimeout(()=>{
+                            $(this).find('span').eq(i).addClass('show');
+                        },50 * i);
                     });
                 }
-            })
+            });
 
             // gsap
             $(".content-item").each(function(index){

@@ -424,76 +424,72 @@ $(window).scroll(function(){
             document.querySelector("#modal").classList.add("hide")
         });
 
-        // 글씨 쪼개기
-        // let text = document.querySelector("#section1 .desc").innerText;
-        // let split = text.split('').join("</span><span>");
+        //글자 쪼개기
+        // let text = document.querySelector('#section1 .desc').innerText;
+        // let split = text.split('').join('</span><span>');
         // split = "<span>" + split + "</span>";
-        // document.querySelector("#section1 .desc").innerHTML = split;
+        // document.querySelector('#section1 .desc').innerHTML = split;
 
-        // 다중 글씨 쪼개기
-        document.querySelectorAll(".split").forEach(el => {
+        //다중 글자 쪼개기
+        document.querySelectorAll('.split').forEach(el => {
             let text = el.innerText;
-            let split = text.split('').join("</span><span aria-hidden='true'>");
-            split = "<span aria-hidden='true'>" + split + "</span>";
+            let split = text.split('').join('</span><span aria-hidden="true">');
+            split = '<span aria-hidden="true">' + split + '</span>';
             el.innerHTML = split;
-            el.setAttribute("aria-label",text);
+            el.setAttribute('aria-label', text);
         });
 
-        // 스크롤 이펙트
-        window.addEventListener("scroll", () => {
+        //스크롤 이펙트
+        window.addEventListener('scroll', () => {
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
-            
-            // if( scrollTop >= document.getElementById("section1").offsetTop - window.innerHeight ){
-            //     document.querySelectorAll("#section1 .split span").forEach((elem, index) => {
+
+            // if(scrollTop >= document.getElementById('section1').offsetTop - window.innerHeight/3){
+            //     document.querySelectorAll('#section1 .split span').forEach((elem,index) => {
             //         setTimeout(() => {
-            //             elem.classList.add("show");
-            //         }, 50 * index)
-            //     })
+            //             elem.classList.add('show');
+            //         },50*index);
+            //     });
             // }
 
-            // for
-            for( let i=0; i<10; i++ ){
-                if( scrollTop >= document.getElementById("section"+i).offsetTop - window.innerHeight ){
-                    document.querySelectorAll("#section .split span"+i).forEach((elem, index) => {
-                        setTimeout(() => {
-                            elem.classList.add("show");
-                        }, 50 * index)
-                    })
-                }
-            }
-          
-            // forEach
-            // document.querySelectorAll(".content-item .split").forEach(function(el){
-            //     if( scrollTop >= document.querySelectorAll(this).offsetTop - window.innerHeight ){
-            //     document.querySelectorAll(this).forEach((elem, index) => {
-            //         setTimeout(() => {
-            //             elem.classList.add("show");
-            //         }, 50 * index)
-            //     })
+            //for
+            // let count = document.querySelectorAll('.content-item').length;
+
+            // for (let i = 1; i<= count; i++) {
+            //     if (scrollTop >= document.getElementById('section' + i).offsetTop) {
+            //         document.querySelectorAll('#section' + i + '.split span').forEach((elem, index) => {
+            //             setTimeout(() => {
+            //                 elem.classList.add('show');
+            //             }, 50 * index);
+            //         });
+            //     }
             // }
+
+            //forEach()
+            // document.querySelectorAll('.content-item').forEach(function(item){
+            //     if(scrollTop >= item.offsetTop){
+            //         item.querySelectorAll('.split span').forEach((elem, index)=>{
+            //             setTimeout(() => {
+            //                 elem.classList.add('show');
+            //             }, 50 * index);
+            //         });
+            //     }
+            // });
 
 
             // gsap
-            // $(".content-item").each(function(index){
-            //     if( $(window).scrollTop() >= $(this).offset().top ){
-            //         gsap.to( $(this).find(".desc span"),{
-            //             duration: .5, 
-            //             opacity: 1,
-            //             stagger: .05,
-            //             y: 0,
-            //             ease: "power2.out",
-            //             rotation: 0,
-            //             scale: 1
-            //         });
-            //     }
-            //     // 메뉴
-            //     $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
-
-            // });
-
-            document.querySelectorAll(".content-item").forEach(function(index){
-                // if( window.scrollTop() >= )
-            })
+            document.querySelectorAll('.content-item').forEach((el,index) => {
+                if(scrollTop >= el.offsetTop){
+                    gsap.to(el.querySelectorAll(".desc span"),{
+                        duration: .5,
+                        opacity: 1,
+                        stagger: .05,
+                        y: 0,
+                        scale: 1,
+                        ease: "power2.out",
+                        rotation: 0,
+                    });
+                }
+            });
         });
     </script>
 </body>
