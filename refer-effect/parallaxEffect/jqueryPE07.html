@@ -586,7 +586,7 @@ $(window).scroll(function(){
 
             // gsap
             $(".content-item").each(function(index){
-                if( $(window).scrollTop() >= $(this).offset().top ){
+                if( $(window).scrollTop() >= $(this).offset().top - $(window).height()/2 ){
                     gsap.to( $(this).find(".desc span"),{
                         duration: .5, 
                         opacity: 1,
@@ -596,10 +596,10 @@ $(window).scroll(function(){
                         rotation: 0,
                         scale: 1
                     });
-                }
-                // 메뉴
-                $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
 
+                    // 메뉴
+                    $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+                }
             });
         })
     </script>
