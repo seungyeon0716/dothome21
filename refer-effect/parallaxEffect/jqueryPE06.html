@@ -214,21 +214,22 @@
                     </div>
                     <div class="view-cont">
                         <div class="html">
-<pre><code class="language-html">&lt;main&gt;
+<pre><code class="language-html">&lt;!-- main --&gt;
+&lt;main&gt;
     &lt;div class="paraScroll"&gt;scrollTop() : &lt;span&gt;0&lt;/span&gt;px&lt;/div&gt;&lt;!--//scrool--&gt;
-   
+    
 
     &lt;nav class="paraNav"&gt;
         &lt;ul&gt;    &lt;!--숫자 자동 더하기 {s$}--&gt;
-            &lt;li class="active"&gt;&lt;a href="#section1"&gt;메뉴1&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section2"&gt;메뉴2&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section3"&gt;메뉴3&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section4"&gt;메뉴4&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section5"&gt;메뉴5&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section6"&gt;메뉴6&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section7"&gt;메뉴7&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section8"&gt;메뉴8&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section9"&gt;메뉴9&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="active"&gt;&lt;a href="#section1"&gt;s1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section2"&gt;s2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section3"&gt;s3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section4"&gt;s4&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section5"&gt;s5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section6"&gt;s6&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section7"&gt;s7&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section8"&gt;s8&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section9"&gt;s9&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
     &lt;/nav&gt;
     &lt;!--//nav--&gt;
@@ -324,20 +325,24 @@
         &lt;/section&gt;
         &lt;!-- //section9 --&gt;
     &lt;/div&gt;
+    &lt;!-- //contents --&gt;
 &lt;/main&gt;
+&lt;!-- //main --&gt;
 </code></pre>
                         </div>
                         <div class="css">
-<pre><code class="language-css"> .paraNav {
-    top: -200px;
+<pre><code class="language-css">.paraNav {
+    top: 20px;
     transition: top 0.4s ease;
 }
-.paraNav.show {
-    top: 20px;
+.paraNav.hide {
+    top: -200px;
 }
 .paraNav li a {
     width: auto;    
-    padding: 5px 20px;    
+    padding: 5px; 
+    width: 30px;
+    height: 30px;   
 }
 .paraNav li.active a {
     border-radius: 30px;
@@ -351,24 +356,58 @@
     let index = target.index();
     let section = $(".content-item").eq(index);
     let offset = section.offset().top;
+
+    // 화면 이동
     $("html, body").animate({scrollTop : offset }, 600);
 });
 
 $(window).scroll(function(){
-    let scrollTop = $(window).scrollTop();
+let scrollTop = $(window).scrollTop();
 
-(scrollTop > 10)? $(".paraNav").addClass("show"):$(".paraNav").removeClass("show");
+// let offset1 = scrollTop - $("#section1").offset().top;
+// let offset2 = scrollTop - $("#section2").offset().top;
+// let offset3 = scrollTop - $("#section3").offset().top;
+// let offset4 = scrollTop - $("#section4").offset().top;
+// let offset5 = scrollTop - $("#section5").offset().top;
+// let offset6 = scrollTop - $("#section6").offset().top;
+// let offset7 = scrollTop - $("#section7").offset().top;
+// let offset8 = scrollTop - $("#section8").offset().top;
+// let offset9 = scrollTop - $("#section9").offset().top;
 
-    // 버튼용
-    $(".content-item").each(function(index, element){
-        if( scrollTop >= $(this).offset().top -2){
-            $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
-        };
-    });
+// $("#section1").css({transform: "translateX("+offset1+"px)"});
+// $("#section2").css({transform: "translateX("+offset2+"px)"});
+// $("#section3").css({transform: "translateX("+offset3+"px)"});
+// $("#section4").css({transform: "translateX("+offset4+"px)"});
+// $("#section5").css({transform: "translateX("+offset5+"px)"});
+// $("#section6").css({transform: "translateX("+offset6+"px)"});
+// $("#section7").css({transform: "translateX("+offset7+"px)"});
+// $("#section8").css({transform: "translateX("+offset8+"px)"});
+// $("#section9").css({transform: "translateX("+offset9+"px)"});
 
-    //출력용
-    $(".paraScroll span").text(scrollTop);
+// for문 
+// for(let i=1; i&lt;10; i++){
+//     let offset = scrollTop - $("#section"+i).offset().top;
+//     $("#section"+i+ " .desc").css({transform: "translateX("+offset+"px)"});
+// }
+
+// each
+$(".content-item").each(function(index){
+    let offset1  = (scrollTop - $(this).offset().top) * 0.1;
+    let offset2  = (scrollTop - $(this).offset().top) * 0.2;
+    
+
+    $(this).find(".img").css({transform: "translateY("+ offset2 +"px)"});
+    $(this).find(".desc").css({transform: "translateY("+ offset1 +"px)"});
+
+    // 메뉴
+    if( scrollTop > $(this).offset().top -2 ){
+        $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+    }
 });
+
+    // 출력용
+    (".paraScroll span").text(scrollTop);
+})
 </code></pre>
                         </div>
                     </div>
@@ -449,9 +488,6 @@ $(window).scroll(function(){
                     $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
                 }
             });
-
-          
-
 
             // 출력용
             $(".paraScroll span").text(scrollTop);

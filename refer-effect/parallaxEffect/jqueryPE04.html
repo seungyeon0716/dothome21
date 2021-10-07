@@ -211,9 +211,10 @@
                     </div>
                     <div class="view-cont">
                         <div class="html">
-<pre><code class="language-html">&lt;main&gt;
+<pre><code class="language-html"> &lt;!-- main --&gt;
+&lt;main&gt;
     &lt;div class="paraScroll"&gt;scrollTop() : &lt;span&gt;0&lt;/span&gt;px&lt;/div&gt;&lt;!--//scrool--&gt;
-   
+    
 
     &lt;nav class="paraNav"&gt;
         &lt;ul&gt;    &lt;!--숫자 자동 더하기 {s$}--&gt;
@@ -321,16 +322,18 @@
         &lt;/section&gt;
         &lt;!-- //section9 --&gt;
     &lt;/div&gt;
+    &lt;!-- //contents --&gt;
 &lt;/main&gt;
+&lt;!-- //main --&gt;
 </code></pre>
                         </div>
                         <div class="css">
-<pre><code class="language-css"> .paraNav {
-    top: -200px;
+<pre><code class="language-css">.paraNav {
+    top: 20px;
     transition: top 0.4s ease;
 }
-.paraNav.show {
-    top: 20px;
+.paraNav.hide {
+    top: -200px;
 }
 .paraNav li a {
     width: auto;    
@@ -348,24 +351,65 @@
     let index = target.index();
     let section = $(".content-item").eq(index);
     let offset = section.offset().top;
-    $("html, body").animate({scrollTop : offset }, 600);
+    $("html, body").animate({scrollTop: offset}, 600, "easeInOutCirc");
 });
+
+// $(window).scroll(function(){
+//     let scrollTop = $(this).scrollTop();
+//     let lastScrollTop = 0;
+
+//     if(scrollTop > lastScrollTop){
+//         $(".paraNav").addClass("hide");
+//     } else {
+//         $(".paraNav").removeClass("hide");
+//     }
+
+        // lastScrollTop = scrollTop;
+
+        // console.log("scrollTop : " +  scrollTop);
+        // console.log("lastScrollTop : " +  lastScrollTop);
+// });
+
+
+
+let nowScrollTop;
+let lastScrollTop = 0;
 
 $(window).scroll(function(){
-    let scrollTop = $(window).scrollTop();
+    nowScrollTop = true;
 
-(scrollTop > 10)? $(".paraNav").addClass("show"):$(".paraNav").removeClass("show");
-
-    // 버튼용
-    $(".content-item").each(function(index, element){
-        if( scrollTop >= $(this).offset().top -2){
-            $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
-        };
-    });
-
-    //출력용
-    $(".paraScroll span").text(scrollTop);
+    setInterval(() => {
+        if(nowScrollTop){
+            nowScrollTop = false;
+            hasScroll();    //true면 hasScroll이 실행됨
+        }
+    }, 500);
 });
+
+function hasScroll(){
+    let scrollTop = $(this).scrollTop();
+
+    if(scrollTop > lastScrollTop){
+        $(".paraNav").addClass("hide");
+    } else {
+        $(".paraNav").removeClass("hide");
+    }
+
+    lastScrollTop = scrollTop;
+
+    // console.log("scrollTop : " +  scrollTop);
+    // console.log("lastScrollTop : " +  lastScrollTop);
+
+    // 출력용
+    $(".paraScroll span").text(scrollTop);
+
+    // 메뉴
+    $(".content-item").each(function(i){
+        if(scrollTop > $(".content-item").eq(i).offset().top -2){
+            $(".paraNav ul li").eq(i).addClass("active").siblings().removeClass("active");
+        }
+    })
+}
 </code></pre>
                         </div>
                     </div>

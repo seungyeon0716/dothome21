@@ -244,21 +244,22 @@
                     </div>
                     <div class="view-cont">
                         <div class="html">
-<pre><code class="language-html">&lt;main&gt;
+<pre><code class="language-html">&lt;!-- main --&gt;
+&lt;main&gt;
     &lt;div class="paraScroll"&gt;scrollTop() : &lt;span&gt;0&lt;/span&gt;px&lt;/div&gt;&lt;!--//scrool--&gt;
-   
+    
 
     &lt;nav class="paraNav"&gt;
         &lt;ul&gt;    &lt;!--숫자 자동 더하기 {s$}--&gt;
-            &lt;li class="active"&gt;&lt;a href="#section1"&gt;메뉴1&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section2"&gt;메뉴2&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section3"&gt;메뉴3&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section4"&gt;메뉴4&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section5"&gt;메뉴5&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section6"&gt;메뉴6&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section7"&gt;메뉴7&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section8"&gt;메뉴8&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section9"&gt;메뉴9&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="active"&gt;&lt;a href="#section1"&gt;s1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section2"&gt;s2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section3"&gt;s3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section4"&gt;s4&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section5"&gt;s5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section6"&gt;s6&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section7"&gt;s7&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section8"&gt;s8&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section9"&gt;s9&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
     &lt;/nav&gt;
     &lt;!--//nav--&gt;
@@ -354,51 +355,237 @@
         &lt;/section&gt;
         &lt;!-- //section9 --&gt;
     &lt;/div&gt;
+    &lt;!-- //contents --&gt;
 &lt;/main&gt;
+&lt;!-- //main --&gt;
 </code></pre>
                         </div>
                         <div class="css">
-<pre><code class="language-css"> .paraNav {
-    top: -200px;
+<pre><code class="language-css">.paraNav {
+    top: 20px;
     transition: top 0.4s ease;
 }
-.paraNav.show {
-    top: 20px;
+.paraNav.hide {
+    top: -200px;
 }
 .paraNav li a {
     width: auto;    
-    padding: 5px 20px;    
+    padding: 5px; 
+    width: 30px;
+    height: 30px;   
 }
 .paraNav li.active a {
     border-radius: 30px;
 }
+
+/* 한번에 나타나기 */
+/* .content-item .desc {
+    opacity: 0;
+    transform: translateY(100px) skewX(30deg);
+    transition: all 0.33s ease-in-out;
+}
+.content-item .desc.show {
+    opacity: 1;
+    transform: translateY(0) skewX(0);
+} */
+
+/* 한글자씩 나타나기 */
+/* .content-item .desc span {
+    opacity: 0;
+    transform: translateY(100px) skewX(30deg);
+    transition: all 0.33s ease-in-out;
+}
+.content-item .desc span.show {
+    opacity: 1;
+    transform: translateY(0) skewX(0);
+} */
+
+/* gsap 한글자씩 나타나기 */
+.content-item .desc span {
+    opacity: 0;
+    display: inline-block;
+    min-width: 1vw;
+    transform: translateY(100px) rotate(90deg) scale(2);
+}
 </code></pre>
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript">$(".paraNav ul li").click(function(e){
-    e.preventDefault();
-    let target = $(this);
-    let index = target.index();
-    let section = $(".content-item").eq(index);
-    let offset = section.offset().top;
-    $("html, body").animate({scrollTop : offset }, 600);
-});
+<pre><code class="language-javascript">// 글씨 쪼개기(한개)
+    // let text = $("#section1 .desc").text();
+    // let split = text.split('').join("</span><span>");
+    // split = "<span>" + split + "</span>";
+    // $("#section1 .desc").html(split);
 
-$(window).scroll(function(){
-    let scrollTop = $(window).scrollTop();
-
-(scrollTop > 10)? $(".paraNav").addClass("show"):$(".paraNav").removeClass("show");
-
-    // 버튼용
-    $(".content-item").each(function(index, element){
-        if( scrollTop >= $(this).offset().top -2){
-            $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
-        };
+    // 글씨 쪼개기(여러개) each()
+    $(".content-item .desc").each(function (){
+        let text = $(this).text();
+        // 반응형 할 때는 aria속성을 이용해서 시각 장애인 분들에게 도움을 줌
+        let split = text.split('').join("</span><span aria-hidden='true'>");
+        split = "<span aria-hidden='true'>" + split + "</span>";
+        $(this).html(split).attr("aria-label", text);
     });
 
-    //출력용
-    $(".paraScroll span").text(scrollTop);
-});
+    $(window).scroll(function(){
+        // if( $(window).scrollTop() > $("#section1").offset().top ){
+        //     $("#section1 .desc").addClass("show");
+        // } else {
+        //     $("#section1 .desc").removeClass("show");
+        // }
+        // if( $(window).scrollTop() > $("#section2").offset().top ){
+        //     $("#section2 .desc").addClass("show");
+        // } else {
+        //     $("#section2 .desc").removeClass("show");
+        // }
+        // if( $(window).scrollTop() > $("#section3").offset().top ){
+        //     $("#section3 .desc").addClass("show");
+        // } else {
+        //     $("#section3 .desc").removeClass("show");
+        // }
+        // if( $(window).scrollTop() > $("#section4").offset().top ){
+        //     $("#section4 .desc").addClass("show");
+        // } else {
+        //     $("#section4 .desc").removeClass("show");
+        // }
+        // if( $(window).scrollTop() > $("#section5").offset().top ){
+        //     $("#section5 .desc").addClass("show");
+        // } else {
+        //     $("#section5 .desc").removeClass("show");
+        // }
+        // if( $(window).scrollTop() > $("#section6").offset().top ){
+        //     $("#section6 .desc").addClass("show");
+        // } else {
+        //     $("#section6 .desc").removeClass("show");
+        // }
+        // if( $(window).scrollTop() > $("#section7").offset().top ){
+        //     $("#section7 .desc").addClass("show");
+        // } else {
+        //     $("#section7 .desc").removeClass("show");
+        // }
+        // if( $(window).scrollTop() > $("#section8").offset().top ){
+        //     $("#section8 .desc").addClass("show");
+        // } else {
+        //     $("#section8 .desc").removeClass("show");
+        // }
+        // if( $(window).scrollTop() > $("#section9").offset().top ){
+        //     $("#section9 .desc").addClass("show");
+        // } else {
+        //     $("#section9 .desc").removeClass("show");
+        // }
+
+        // each()
+        // $(".content-item .desc").each(function(){
+        //     if( $(window).scrollTop() >= $(this).offset().top - $(window).height()/2 ){
+        //         $(this).addClass("show");
+        //     } else {
+        //         $(this).removeClass("show");
+        //     }
+        // });
+
+        // 한글자씩 나타나기
+        // if($(window).scrollTop() >= $("#section1").offset().top ){
+        //     $("#section1 .desc span").each(i => {
+        //         setTimeout(() => {
+        //             $("#section1 .desc span").eq(i).addClass("show");
+        //         }, 50 * i) //0.05초에 나오게 효과 but, i를 곱하면 위에 span을 기준으로 아래에 0.05초씩 show가 생김(시간차 주기위해) 
+        //     });
+        // }
+        // if($(window).scrollTop() >= $("#section2").offset().top ){
+        //     $("#section2 .desc span").each(i => {
+        //         setTimeout(() => {
+        //             $("#section2 .desc span").eq(i).addClass("show");
+        //         }, 50 * i) 
+        //     });
+        // }
+        // if($(window).scrollTop() >= $("#section3").offset().top ){
+        //     $("#section3 .desc span").each(i => {
+        //         setTimeout(() => {
+        //             $("#section3 .desc span").eq(i).addClass("show");
+        //         }, 50 * i) 
+        //     });
+        // }
+        // if($(window).scrollTop() >= $("#section4").offset().top ){
+        //     $("#section4 .desc span").each(i => {
+        //         setTimeout(() => {
+        //             $("#section4 .desc span").eq(i).addClass("show");
+        //         }, 50 * i) 
+        //     });
+        // }
+        // if($(window).scrollTop() >= $("#section5").offset().top ){
+        //     $("#section5 .desc span").each(i => {
+        //         setTimeout(() => {
+        //             $("#section5 .desc span").eq(i).addClass("show");
+        //         }, 50 * i) 
+        //     });
+        // }
+        // if($(window).scrollTop() >= $("#section6").offset().top ){
+        //     $("#section6 .desc span").each(i => {
+        //         setTimeout(() => {
+        //             $("#section6 .desc span").eq(i).addClass("show");
+        //         }, 50 * i) 
+        //     });
+        // }
+        // if($(window).scrollTop() >= $("#section7").offset().top ){
+        //     $("#section7 .desc span").each(i => {
+        //         setTimeout(() => {
+        //             $("#section7 .desc span").eq(i).addClass("show");
+        //         }, 50 * i) 
+        //     });
+        // }
+        // if($(window).scrollTop() >= $("#section8").offset().top ){
+        //     $("#section8 .desc span").each(i => {
+        //         setTimeout(() => {
+        //             $("#section8 .desc span").eq(i).addClass("show");
+        //         }, 50 * i) 
+        //     });
+        // }
+        // if($(window).scrollTop() >= $("#section9").offset().top ){
+        //     $("#section9 .desc span").each(i => {
+        //         setTimeout(() => {
+        //             $("#section9 .desc span").eq(i).addClass("show");
+        //         }, 50 * i) 
+        //     });
+        // }
+
+        // for문
+        // for( let i=1; i&lt;$(".content-item").length; i++ ){
+        //     if($(window).scrollTop() >= $("#section"+i).offset().top ){
+        //         $("#section"+i+" .desc span").each(i => {
+        //             setTimeout(() => {
+        //                 $("#section"+i+ ".desc span").eq(i).addClass("show");
+        //             }, 50 * i) 
+        //         });
+        //     }
+        // }
+
+        // each()
+        $('.content-item').each(function(index){
+            if($(window).scrollTop() &gt;= $(this).offset().top - $(window).height()/2){
+                $(this).find('.desc span').each(i => {
+                    setTimeout(()=>{
+                        $(this).find('span').eq(i).addClass('show');
+                    },50 * i);
+                });
+            }
+        });
+
+        // gsap
+        $(".content-item").each(function(index){
+            if( $(window).scrollTop() &gt;= $(this).offset().top - $(window).height()/2 ){
+                gsap.to( $(this).find(".desc span"),{
+                    duration: .5, 
+                    opacity: 1,
+                    stagger: .05,
+                    y: 0,
+                    ease: "power2.out",
+                    rotation: 0,
+                    scale: 1
+                });
+
+                // 메뉴
+                $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+            }
+        });
+    })
 </code></pre>
                         </div>
                     </div>

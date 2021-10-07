@@ -211,9 +211,10 @@
                     </div>
                     <div class="view-cont">
                         <div class="html">
-<pre><code class="language-html">&lt;main&gt;
+<pre><code class="language-html">&lt;!-- main --&gt;
+&lt;main&gt;
     &lt;div class="paraScroll"&gt;scrollTop() : &lt;span&gt;0&lt;/span&gt;px&lt;/div&gt;&lt;!--//scrool--&gt;
-   
+    
 
     &lt;nav class="paraNav"&gt;
         &lt;ul&gt;    &lt;!--숫자 자동 더하기 {s$}--&gt;
@@ -321,16 +322,18 @@
         &lt;/section&gt;
         &lt;!-- //section9 --&gt;
     &lt;/div&gt;
+    &lt;!-- //contents --&gt;
 &lt;/main&gt;
+&lt;!-- //main --&gt;
 </code></pre>
                         </div>
                         <div class="css">
-<pre><code class="language-css"> .paraNav {
-    top: -200px;
+<pre><code class="language-css">.paraNav {
+    top: 20px;
     transition: top 0.4s ease;
 }
-.paraNav.show {
-    top: 20px;
+.paraNav.hide {
+    top: -200px;
 }
 .paraNav li a {
     width: auto;    
@@ -342,35 +345,54 @@
 </code></pre>
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript">  document.querySelectorAll(".paraNav ul li a").forEach(el => {
-    el.addEventListener("click", e => {
+<pre><code class="language-javascript">document.querySelectorAll(".paraNav ul li a").forEach(li => {
+    li.addEventListener("click", e => {
         e.preventDefault();
-        document.querySelector(el.getAttribute("href")).scrollIntoView({
-            behavior: 'smooth'
+        document.querySelector(li.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
         })
-    });
-});
+    })
+})
 
-window.addEventListener('scroll', function(e){
-    let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset; //구버전
+let nowScrollTop;       //now(현재)와 last(지난) scrollTop값을 구하기 위해 변수 설정함
+let lastScrollTop = 0;
 
-    if (scrollTop > 10) {
-        document.querySelector('.paraNav').classList.add('show');
-    } else {
-        document.querySelector('.paraNav').classList.remove('show');
-    }
+window.addEventListener('scroll',()=>scrollProgress());
 
-    document.querySelectorAll('.content-item').forEach(function (item, idx) {
-        if (scrollTop >= item.offsetTop - 2) {
-            document.querySelectorAll('.paraNav ul li').forEach((li, liIdx) => {
-                document.querySelectorAll('.paraNav ul li').forEach(el => el.classList.remove('active'));
-            });
-            document.querySelector('.paraNav ul li:nth-child(' + (idx + 1) + ')').classList.add('active');
+function scrollProgress(){      //함수화 시킴
+    nowScrollTop = true;
+
+    setInterval( () => {
+        if( nowScrollTop ){
+            nowScrollTop = false;
+            hasScroll();
         }
-    });
+    }, 500);
+}
 
+function hasScroll(){
+    let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
+
+    if(scrollTop >= lastScrollTop){
+        document.querySelector(".paraNav").classList.add("hide");
+    } else { 
+        document.querySelector(".paraNav").classList.remove("hide");
+    }
+    lastScrollTop = scrollTop;
+
+    // 메뉴
+    document.querySelectorAll(".content-item").forEach((item, index) => {
+        if(scrollTop >= item.offsetTop ){
+            document.querySelectorAll(".paraNav ul li").forEach(li => {
+                li.classList.remove("active");
+            })
+            document.querySelector(".paraNav ul li:nth-child("+(index+1)+")").classList.add("active");
+        }
+    })
+
+    // 출력
     document.querySelector('.paraScroll span').innerText = parseInt(scrollTop);
-});
+}
 </code></pre>
                         </div>
                     </div>
@@ -386,6 +408,15 @@ window.addEventListener('scroll', function(e){
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
+        document.querySelector(".source button").addEventListener("click", function(){
+            document.querySelector("#modal").classList.add("show");
+            document.querySelector("#modal").classList.remove("hide");
+        });
+
+        document.querySelector(".modal-cont button").addEventListener("click", function(){
+            document.querySelector("#modal").classList.add("hide")
+        });
+
         document.querySelectorAll(".paraNav ul li a").forEach(li => {
             li.addEventListener("click", e => {
                 e.preventDefault();

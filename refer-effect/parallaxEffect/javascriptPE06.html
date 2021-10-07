@@ -214,21 +214,22 @@
                     </div>
                     <div class="view-cont">
                         <div class="html">
-<pre><code class="language-html">&lt;main&gt;
+<pre><code class="language-html">&lt;!-- main --&gt;
+&lt;main&gt;
     &lt;div class="paraScroll"&gt;scrollTop() : &lt;span&gt;0&lt;/span&gt;px&lt;/div&gt;&lt;!--//scrool--&gt;
-   
+    
 
     &lt;nav class="paraNav"&gt;
         &lt;ul&gt;    &lt;!--숫자 자동 더하기 {s$}--&gt;
-            &lt;li class="active"&gt;&lt;a href="#section1"&gt;메뉴1&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section2"&gt;메뉴2&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section3"&gt;메뉴3&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section4"&gt;메뉴4&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section5"&gt;메뉴5&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section6"&gt;메뉴6&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section7"&gt;메뉴7&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section8"&gt;메뉴8&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section9"&gt;메뉴9&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="active"&gt;&lt;a href="#section1"&gt;s1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section2"&gt;s2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section3"&gt;s3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section4"&gt;s4&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section5"&gt;s5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section6"&gt;s6&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section7"&gt;s7&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section8"&gt;s8&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section9"&gt;s9&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
     &lt;/nav&gt;
     &lt;!--//nav--&gt;
@@ -324,20 +325,24 @@
         &lt;/section&gt;
         &lt;!-- //section9 --&gt;
     &lt;/div&gt;
+    &lt;!-- //contents --&gt;
 &lt;/main&gt;
+&lt;!-- //main --&gt;
 </code></pre>
                         </div>
                         <div class="css">
-<pre><code class="language-css"> .paraNav {
-    top: -200px;
+<pre><code class="language-css">.paraNav {
+    top: 20px;
     transition: top 0.4s ease;
 }
-.paraNav.show {
-    top: 20px;
+.paraNav.hide {
+    top: -200px;
 }
 .paraNav li a {
     width: auto;    
-    padding: 5px 20px;    
+    padding: 5px; 
+    width: 30px;
+    height: 30px;   
 }
 .paraNav li.active a {
     border-radius: 30px;
@@ -345,30 +350,78 @@
 </code></pre>
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript">$(".paraNav ul li").click(function(e){
-    e.preventDefault();
-    let target = $(this);
-    let index = target.index();
-    let section = $(".content-item").eq(index);
-    let offset = section.offset().top;
-    $("html, body").animate({scrollTop : offset }, 600);
-});
+<pre><code class="language-javascript">// click함수화
+const scrollMenu = function(){
+    document.querySelectorAll('.paraNav ul li a').forEach((li, idx) => {
+        li.addEventListener('click', e => {
+            e.preventDefault();
+            document.querySelector(li.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+}
+scrollMenu();
 
-$(window).scroll(function(){
-    let scrollTop = $(window).scrollTop();
 
-(scrollTop > 10)? $(".paraNav").addClass("show"):$(".paraNav").removeClass("show");
+// 익명 함수
+const scrollProgress = function(){
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
 
-    // 버튼용
-    $(".content-item").each(function(index, element){
-        if( scrollTop >= $(this).offset().top -2){
-            $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
-        };
+    // let offset1 = scrollTop - document.getElementById("section1").offsetTop;
+    // let offset2 = scrollTop - document.getElementById("section2").offsetTop;
+    // let offset3 = scrollTop - document.getElementById("section3").offsetTop;
+    // let offset4 = scrollTop - document.getElementById("section4").offsetTop;
+    // let offset5 = scrollTop - document.getElementById("section5").offsetTop;
+    // let offset6 = scrollTop - document.getElementById("section6").offsetTop;
+    // let offset7 = scrollTop - document.getElementById("section7").offsetTop;
+    // let offset8 = scrollTop - document.getElementById("section8").offsetTop;
+    // let offset9 = scrollTop - document.getElementById("section9").offsetTop;
+
+    // document.getElementById("section1").style.transform = "translateX("+offset1+"px)";
+    // document.getElementById("section2").style.transform = "translateX("+offset2+"px)";
+    // document.getElementById("section3").style.transform = "translateX("+offset3+"px)";
+    // document.getElementById("section4").style.transform = "translateX("+offset4+"px)";
+    // document.getElementById("section5").style.transform = "translateX("+offset5+"px)";
+    // document.getElementById("section6").style.transform = "translateX("+offset6+"px)";
+    // document.getElementById("section7").style.transform = "translateX("+offset7+"px)";
+    // document.getElementById("section8").style.transform = "translateX("+offset8+"px)";
+    // document.getElementById("section9").style.transform = "translateX("+offset9+"px)";
+
+    // for
+    // for( let i=1; i&lt;10; i++ ){
+    //     let offset = scrollTop - document.getElementById("section"+i).offsetTop;
+    //     document.getElementById("section"+i).style.transform = "translateX("+offset+"px)";
+    // }
+
+    // forEach
+    document.querySelectorAll(".content-item").forEach(item => {
+        let offset1 = (scrollTop - item.offsetTop) * 0.1;
+        let offset2 = (scrollTop - item.offsetTop) * 0.2;
+
+        // 자바스크립트에서는 querySelector의 find 역할
+        item.querySelector(".img").style.transform = "translateX("+offset1+"px)";
+        item.querySelector(".desc").style.transform = "translateX("+-offset2+"px)";
     });
 
-    //출력용
-    $(".paraScroll span").text(scrollTop);
-});
+    // 메뉴
+    document.querySelectorAll(".content-item").forEach((item, index) => {
+        if (scrollTop >= item.offsetTop -2) {
+            document.querySelectorAll(".paraNav ul li").forEach(li => {
+                li.classList.remove("active");
+            });
+            document.querySelector(".paraNav ul li:nth-child(" + (index + 1) + ")").classList.add(
+                "active");
+        }
+    })
+    
+
+    // 출력
+    document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
+}
+
+
+window.addEventListener("scroll", scrollProgress)
 </code></pre>
                         </div>
                     </div>
