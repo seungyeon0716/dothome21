@@ -264,6 +264,9 @@
             // 이미지
             $(".mImg img").attr({ "style": "transform: translate(" + standardX/20 + "px," + standardY/20 + "px)"});
 
+             // 커서
+             gsap.to(".cursor", {duration: .3, left: pageX, top: pageY});
+             
             // 출력
             $(".pageX").text(pageX);
             $(".pageY").text(pageY);
