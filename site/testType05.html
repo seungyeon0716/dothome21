@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>롯데월드</title>
+    <style>
+        @font-face {
+            font-family: 'NEXONLv1Gothic';
+            font-weight: 300;
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
+            font-style: normal;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .testType05 {
+            font-family: 'NEXONLv1Gothic';
+        }
+
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .wrap {}
+
+        #header {
+            display: inline-block;
+            white-space: nowrap;
+            position: relative;
+            margin-top: 50px;
+        }
+
+        #header .header-box {}
+
+        #header .logo {
+            float: left;
+        }
+
+        #header .logo img {
+            width: 80px;
+            height: 80px;
+        }
+
+        #header .menu {
+            font-weight: 800;
+            position: absolute;
+            left: 60%;
+            top: 50%;
+            transform: translate(50%, -50%);
+        }
+
+        #header .menu span {
+            margin-right: 80px;
+        }
+
+        #banner {}
+
+        #banner .slider {
+            overflow: hidden;
+        }
+
+        #banner .slider ul {}
+
+        #banner .slider li {}
+
+        #banner .slider img {
+            width: 1200px;
+            height: 560px;
+            margin-bottom: 30px;
+        }
+
+        #main {
+            margin-bottom: 50px;
+        }
+        #main .main-box {
+            display: flex;
+        }
+        #main .main-box .main1 {
+            width: 585px;
+            height: 220px;
+            border: 2px solid rgb(192, 192, 192);
+            margin-right: 30px;
+            padding: 30px;
+        }
+        #main .main-box .main1 .title {
+            display: flex;
+            position: relative;
+            margin-bottom: 30px;
+        }
+        #main .main-box .main1 .title .title1 {
+            display: flex;
+        }
+        #main .main-box .main1 .title .title1 h2 {
+            font-weight: 700;
+            margin-right: 40px;
+        }
+        #main .main-box .main1 .title .title1  h2::before {
+            content: '|';
+            position: absolute;
+            left: 30%; top: 0%;
+        }
+        #main .main-box .main1 .title .title1  p {
+            font-size: 20px;
+            font-weight: 700;
+            color: rgb(160, 158, 158);
+            margin-right: 150px;
+        }
+        #main .main-box .main1 .title .title2 {
+            /* display: flex; */
+            white-space: nowrap;
+            position: relative;
+        }
+        #main .main-box .main1 .title .title2 p {
+
+        }
+        #main .main-box .main1 .title .title2 img {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: 120%; top: -50%;
+        }
+        #main .main-box .main1 .desc span {
+            font-size: 20px;
+            display: block;
+            margin-bottom: 20px;
+        }
+        #main .main-box .main2 {
+        }
+        #main .main-box .main2 img {
+            width: 585px;
+            height: 285px;
+        }
+
+        #content .section h2 {
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        #content .cont-box {
+            display: flex;
+            border-bottom: 2px solid rgb(192, 192, 192);
+            margin-bottom: 30px;
+        }
+        #content .cont-box .cont1 {
+            margin-right: 27px;
+            margin-bottom: 50px;
+        }
+        #content .cont-box .cont1 img {
+            width: 280px;
+            height: 280px;
+            margin-bottom: 30px;
+        }
+        #content .cont-box .cont1 h4 {
+            font-size: 20px;
+        }
+
+        #footer {
+            margin-bottom: 50px;
+        }
+        #footer .foot-title {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        #footer .foot-title p {
+            position: relative;
+            margin-right: 25px;
+        }
+        #footer .foot-title p::before {
+            content: '|';
+            position: absolute;
+            margin-left: 10px;
+            left: 100%; top: 0%;
+            color: rgb(192, 192, 192);;
+        }
+        #footer .foot-title span {}
+        #footer .foot-desc {
+            display: flex;
+            margin-bottom: 30px;
+        }
+        #footer .foot-desc p {
+            position: relative;
+            margin-right: 25px;
+        }
+        #footer .foot-desc p::before {
+            content: '|';
+            position: absolute;
+            margin-left: 10px;
+            left: 100%; top: 0%;
+            color: rgb(192, 192, 192);;
+        }
+        #footer .foot-desc .desc1 {
+            position: relative;
+            margin-right: 25px;
+        }
+        #footer .foot-desc .desc1::before {
+            content: '|';
+            position: absolute;
+            margin-left: 10px;
+            left: 100%; top: 0%;
+            color: rgb(192, 192, 192);;
+        }
+        #footer .foot-copy {}
+        #footer .foot-copy p {}
+    </style>
+</head>
+
+<body>
+    <div class="testType05">
+        <div class="container">
+            <div class="wrap">
+                <div id="header">
+                    <div class="header-box">
+                        <div class="logo">
+                            <img src="img/Untitled-3_03.jpg" alt="로고">
+                        </div>
+                        <div class="menu">
+                            <span>즐길거리</span>
+                            <span>요금/우대혜택</span>
+                            <span>참여프로그램</span>
+                            <span>이용가이드</span>
+                            <span>소통서비스</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="banner">
+                    <div class="slider">
+                        <ul>
+                            <li><img src="img/Untitled-3_05.jpg" alt="슬라이드"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="main">
+                    <div class="main-box">
+                        <div class="main1">
+                            <div class="title">
+                                <div class="title1">
+                                    <h2>롯데월드 소식</h2>
+                                    <p>뉴스.공지</p>
+                                </div>
+                                <div class="title2">
+                                    <p>더보기</p>
+                                    <img src="img/Untitled-3_11.jpg" alt="플러스">
+                                </div>
+                            </div>
+                            <div class="desc">
+                                <div class="desc1">
+                                    <span>그럴싸진관 미라클<br></span>
+                                    <span>드림스테이지 '힘내 소중한 너'<br></span>
+                                    <span>'힘내 소중한 너' 음원 발매<br></span>
+                                    <span>이용 요금 조정 안내<br></span>
+                                </div>
+                                <div class="desc2">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main2">
+                            <img src="img/Untitled-3_09.jpg" alt="혜택 이미지">
+                        </div>
+                    </div>
+                </div>
+                <div id="content">
+                    <div class="section">
+                        <h2>특별한 경험</h2>
+                        <div class="cont-box">
+                            <div class="cont1">
+                                <img src="img/Untitled-3_15.jpg" alt="연간회원">
+                                <h4>연간회원안내</h4>
+                            </div>
+                            <div class="cont1">
+                                <img src="img/Untitled-3_17.jpg" alt="프리미엄">
+                                <h4>프리미엄투어</h4>
+                            </div>
+                            <div class="cont1">
+                                <img src="img/Untitled-3_19.jpg" alt="공연">
+                                <h4>공연참여 프로그램</h4>
+                            </div>
+                            <div class="cont1">
+                                <img src="img/Untitled-3_21.jpg" alt="단체">
+                                <h4>단체프로그램</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="footer">
+                    <div class="foot-title">
+                        <p>서울특별시 송파구 올림픽대로 240 호텔롯데 롯데월드</p>
+                        <span>대표자: 박동기</span>
+                    </div>
+                    <div class="foot-desc">
+                        <p>사업자등록번호:219-85-00014</p>
+                        <span class="desc1">통신판매업신고번호:송파 제 5513호</span>
+                        <span>전화:1661-2000</span>
+                    </div>
+                    <div class="foot-copy">
+                        <p>COPYRIGHT 2018 LOTTEWORLD.ALL RIGHT RESERVED.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+    </script>
+</body>
+
+</html>
