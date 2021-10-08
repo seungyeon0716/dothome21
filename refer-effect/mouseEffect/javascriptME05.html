@@ -212,26 +212,26 @@
 </code></pre>
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript"> $(".moveImage").mousemove(function(e){
-    gsap.to(".cursor", {duration: .2, left: e.pageX -10, top: e.pageY -10});
+<pre><code class="language-javascript"> function mouseMove(e){
+    let pageX = e.pageX,
+        pageY = e.pageY;
+        standardX = window.innerWidth/2 - pageX;
+        standardY = window.innerHeight/2 - pageY;
 
-    // 1. 좌표값을 가운데로 정렬
-    let pageX = e.pageX;
-    let pageY = e.pageY;
-
-    // 2. img x축 마우스 값 출력(/20) y축 마우스 값 출력(/20)
-    let standardX = $(window).width()/2 - pageX;
-    let standardY = $(window).height()/2 - pageY;
-
-    // 이미지
-    $(".mImg img").attr({ "style": "transform: translate(" + standardX/20 + "px," + standardY/20 + "px)"});
-
+    // 커서
+    gsap.to(".cursor" , {duration : .2, left: e.pageX -10 , top : e.pageY -10})
+    
+    // 이미지 움직임
+    const move = document.querySelector(".mImg img");
+    move.style.transform = "translate("+standardX/20+"px, "+standardY/20 + "px)";
+    
     // 출력
-    $(".pageX").text(pageX);
-    $(".pageY").text(pageY);
-    $(".standardX").text(standardX);
-    $(".standardY").text(standardY);
-});
+    document.querySelector(".pageX").textContent = pageX;
+    document.querySelector(".pageY").textContent = pageY;
+    document.querySelector(".standardX").textContent = standardX;
+    document.querySelector(".standardY").textContent = standardY;
+}
+document.addEventListener("mousemove" , mouseMove);
 </code></pre>
                         </div>
                     </div>
@@ -257,6 +257,7 @@
             // 커서
             gsap.to(".cursor" , {duration : .2, left: e.pageX -10 , top : e.pageY -10})
             
+            // 이미지 움직임
             const move = document.querySelector(".mImg img");
             move.style.transform = "translate("+standardX/20+"px, "+standardY/20 + "px)";
             
