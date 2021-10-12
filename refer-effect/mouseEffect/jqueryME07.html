@@ -9,82 +9,123 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/highlight.css">
     <style>
-       .moveWrap {
-           display: flex;
-           align-items: center;
-           justify-content: center;
-           width: 100%; height: 100vh;
-       }
-       .moveImage {
-           position: relative;
-       }
-       .moveImage .mImg {
-            width: 50vw; 
-            height: 60vh;
+        .textWrap {
+            position: absolute;
+            left: 50%; top: 50%;
+            transform:  translate(-50%, -20%);
+            color: #fff;
+            font-size: 3vw;
+            line-height: 1.5;
+            font-family: 'NEXONLv1Gothic';
+        }
+        .textWrap .line {
+            width: 100%;
+            display: flex;
+        }
+        .textWrap .line .left {
+            width: 50vw;
+            color: aquamarine;
             overflow: hidden;
-            position: relative;
-            transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
-       }
-       .moveImage:hover .mImg {
-            transform: scale(1.025);
-       }
-       .moveImage .mImg img {
-           width: 100%;
-           position: absolute;
-           left: -5%; top: -5%;
-           width: 110%;
-           height: 110%;
-           object-fit: cover; 
-           transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
-       }
-       .moveImage .mText {
-           position: absolute;
-           left: 50%; top: 50%;
-           transform: translate(-50%, -50%);
-           text-align: center;
-           font-size: 1.3vw;
-           white-space: nowrap;
-           color: #fff;
-           padding: 1vw;
-           line-height: 1.6;
-           background: rgba(0,0,0,.3);
-           font-family: "NEXONLv1Gothic";
-       }
-       .cursor {
-           position: absolute;
-           width: 20px; height: 20px;
-           background: #fff;
-           border-radius: 50%;
-           z-index: 10000;
-           user-select: none;
-           pointer-events: none;
-       }
+            transform: skew(0deg, -15deg);
+        }
+        .textWrap .line .left .spanWrap {
+            width: 100vw;
+            text-align: center;
+        }
+        .textWrap .line .right {
+            width: 50vw;
+            overflow: hidden;
+            transform: skew(0deg, 15deg);
+        }
+        .textWrap .line .right .spanWrap {
+            width: 100vw;
+            text-align: center;
+            transform: translateX(-50vw);
+        }
+        .textWrap span {
+            display: inline-block;
+        }
+        .imgWrap {
+            position: absolute;
+            left: 50%; top: 50%;
+            transform:  translate(-50%, -50%);
+            z-index: -1;
+        }
+        .imgWrap img {
+            width: 100%;
+        }
     </style>
 </head>
-<body class="bg bg10 blue">
+<body class="bg bg9 blue">
 
     <!-- contents -->
     <main>
         <div class="cursor"></div>
         
-        <div class="moveWrap">
-            <article class="moveImage">
-                <div class="mImg">
-                    <img src="../assets/img/bg9.jpg" alt="이미지">
+        <div class="contents">
+            <div class="moveImage">
+                <div class="textWrap">
+                    <div class="line">
+                        <div class="left">
+                            <div class="spanWrap">
+                                <span class="spanSlow">Pain Past</span>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="spanWrap">
+                                <span class="spanSlow">Pain Past</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="left">
+                            <div class="spanWrap">
+                                <span class="spanFast">is pleasure.</span>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="spanWrap">
+                                <span class="spanFast">is pleasure.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="left">
+                            <div class="spanWrap">
+                                <span class="spanSlow">지나간 고통은</span>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="spanWrap">
+                                <span class="spanSlow">지나간 고통은</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="left">
+                            <div class="spanWrap">
+                                <span class="spanFast">쾌락이다.</span>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="spanWrap">
+                                <span class="spanFast">쾌락이다.</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="mText">
-                    <p>Seeing is believing.</p>
-                    <p>보는 것이 믿는 것이다. </p>
+                <div class="imgWrap">
+                    <img src="../assets/img/bg6.jpg" alt="이미지">
                 </div>
-            </article>
+            </div>
         </div>
     </main>
     <!-- //contents -->
 
     <!-- info -->
     <div class="info">
-        <h1><a href="index.html">Mouse Effect05 - jQuery</a></h1>
-        <p>마우스 이펙트 - 마우스 방향에 따라 움직이기</p>
+        <h1><a href="index.html">Mouse Effect07 - jQuery</a></h1>
+        <p>마우스 이펙트 - 텍스트 효과</p>
     </div>
 
     <div class="info right">
@@ -103,9 +144,9 @@
             <li><a href="jqueryME02.html">2</a></li>
             <li><a href="jqueryME03.html">3</a></li>
             <li><a href="jqueryME04.html">4</a></li>
-            <li class="active"><a href="jqueryME05.html">5</a></li>
+            <li><a href="jqueryME05.html">5</a></li>
             <li><a href="jqueryME06.html">6</a></li>
-            <li><a href="jqueryME07.html">7</a></li>
+            <li class="active"><a href="jqueryME07.html">7</a></li>
             <li><a href="jqueryME08.html">8</a></li>
         </ul>
     </div>
@@ -114,8 +155,6 @@
         <ul>
             <li>pageX : <span class="pageX">0</span></li>
             <li>pageY : <span class="pageY">0</span></li>
-            <li>standardX : <span class="standardX">0</span></li>
-            <li>standardY : <span class="standardY"></span></li>
         </ul>
     </div>
 
@@ -256,27 +295,20 @@
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        $(".moveImage").mousemove(function(e){
-            gsap.to(".cursor", {duration: .2, left: e.pageX -10, top: e.pageY -10});
+        // $(window).mousemove(function(){});
 
-            // 1. 좌표값을 가운데로 정렬
-            let pageX = e.pageX;
-            let pageY = e.pageY;
-
-            // 2. img x축 마우스 값 출력(/20) y축 마우스 값 출력(/20)
-            let standardX = $(window).width()/2 - pageX;
-            let standardY = $(window).height()/2 - pageY;
-
-            // 이미지
-            $(".mImg img").attr({ "style": "transform: translate(" + standardX/20 + "px," + standardY/20 + "px)"});
+        // 함수화
+        function mouseMove(e){
+            let positionSlow = (e.pageX - ( $(window).width()/2 )) * 0.1;
+            let positionFast = (e.pageX - ( $(window).width()/2 )) * 0.2;
 
 
-            // 출력
-            $(".pageX").text(pageX);
-            $(".pageY").text(pageY);
-            $(".standardX").text(standardX);
-            $(".standardY").text(standardY);
-        });
+            gsap.to(".spanSlow", {duration: 0.4, x: positionSlow});
+            gsap.to(".spanFast", {duration: 0.4, x: -positionFast});
+        }
+
+        // on은 이벤트 함수
+        $(window).on("mousemove", mouseMove);
     </script>
 </body>
 </html>
