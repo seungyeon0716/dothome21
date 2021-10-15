@@ -457,33 +457,22 @@
         </div>
     </section>
 
-    <script src="../refer-effect/assets/js/custom.js"></script>
-    <script src="../refer-effect/assets/js/highlight.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script>
-        const sliderWrap = document.querySelector(".slider-wrap");
-        const sliderInner = document.querySelector(".slider-inner");
-        const slider = document.querySelector(".slider");
+        const sliderImg = $(".slider-img");
+        const sliderInner = $(".slider-inner");
+        const slider = $(".slider");
 
         let currentIndex = 0;
-        let sliderCount = document.querySelectorAll(".slider").length;
-        let sliderHeight = slider.offsetHeight;
-        
-        let sliderClone = sliderInner.firstElementChild.cloneNode(true);
-        sliderInner.appendChild(sliderClone);
+        let sliderHeight = $(".slider").height();
 
         // // 이미지 연속으로 나오게 하기
-        setInterval(() => {
-            currentIndex++;
-            sliderInner.style.transition = "all 0.3s";
-            sliderInner.style.transform = "translateY("+ -sliderHeight * currentIndex +"px)";
-
-            if(currentIndex == sliderCount){
-                setTimeout(() => {
-                    sliderInner.style.transition = "0s";
-                    sliderInner.style.transform = "translateY(0)";
-                }, 300);
-                currentIndex = 0;
-            }
+        setInterval(function(){
+            sliderInner.animate({top: -sliderHeight}, 600, "easeOutExpo", function(){
+                $(".slider:first-child").appendTo(sliderInner);
+                sliderInner.css("top","");
+            });
         }, 3000);
     </script>
 </body>

@@ -194,12 +194,14 @@ setInterval(() => {
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        const sliderWrap = document.querySelector(".slider-wrap");
-        const sliderImg = document.querySelector(".slider-img");
-        const slider = document.querySelectorAll(".slider");
+         const sliderWrap = document.querySelector(".slider-wrap");
+        const sliderImg = sliderWrap.querySelector(".slider-img");
+        const sliderInner = sliderImg.querySelector(".slider-inner");
+        const slider = sliderInner.querySelectorAll(".slider");
 
-        let currentIndex = 0;      //현재 이미지        
-        let sliderCount = slider.length; 
+        let currentIndex = 0;
+        let sliderCount = slider.length;
+        let sliderInterval = 2000;
         
         setInterval(() => {
             let nextIndex = (currentIndex + 1) % sliderCount;   //0 1 2 3 4 0 1 2 3 4..
