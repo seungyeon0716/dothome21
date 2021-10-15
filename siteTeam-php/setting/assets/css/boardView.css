@@ -1,0 +1,274 @@
+.setting {
+    display: flex;
+}
+body {
+}
+/* 네비게이션 */
+#nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 1001;
+    padding: 20px 0;
+    transition: background 0.2s;
+    overflow-y: hidden;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+    width: 302px;
+    background: #466277;
+}
+#nav img {
+    padding: 40px 50px;
+    width: 184px;
+    height: 63px;
+}
+#nav ul {
+    padding: 30px 40px 542px;
+    font-size: 22px;
+    font-family: 'NEXONLv1Gothic';
+    font-weight: 700;
+    color: #fff;
+}
+#nav ul li a {
+    color: #fff;
+}
+#nav ul li {
+    margin: 35px 0;
+}
+/* 헤더 */
+#head {
+    opacity: 1;
+    transition: opacity 0.5s;
+    padding-left: 340px;
+    will-change: opacity;
+    flex: 1;
+    font-family: 'NEXONLv1Gothic';
+    height: 72px;
+    border-bottom: 3px solid #466277;
+}
+#head h3 {
+    margin: 15px 10px 10px 30px;
+    float: left;
+    color: #466277;
+    font-size: 24px;
+}
+#head p {
+    display: inline-block;
+    font-size: 20px;
+    color: #466277;
+    margin-top: 4%;
+}
+#head .heads {
+    float: right;
+    margin-right: 4%;
+}
+#head button {
+    float: right;
+    color: #466277;
+    font-weight: 900;
+    width: 95px;
+    height: 40px;
+    margin-left: 5px;
+    border-radius: 5px;
+    background-color: #e8e8e8;
+}
+#head button.btn1 {
+    margin-top: 2.5%;
+}
+.setting .Search .btn {
+    font-weight: 900;
+    font-size: 20px;
+    color: #fff;
+    width: 5%;
+    height: 53px;
+    border-radius: 5px;
+    background-color: #466277;
+}
+#board h3 {
+    font-weight: 900;
+    font-size: 28px;
+    color: #466277;
+}
+.Search {
+    margin-top: 25px;
+}
+/* 보드타입 */
+.boardType {
+    width: 960px;
+}
+#contents .boardType h2 {
+    margin-top: 15%;
+    font-size: 46px;
+    font-weight: 900;
+    color: #466277;
+}
+.boardType p {
+    font-size: 26px;
+    margin-bottom: 50px;
+    color: #466277;
+    font-weight: 900;
+    font-size: 30px;
+}
+.board-search {
+    float: right;
+    flex-direction: row-reverse;
+    margin-bottom: 20px;
+}
+.board-search .form-search {
+    border: 2px solid #466277;
+    border-radius: 5px;
+    padding: 7px 20px;
+}
+.board-search .form-select {
+    border: 2px solid #466277;
+    border-radius:  5px;
+    padding: 9px 20px;
+    background-color: transparent;
+}
+.board-search .form-btn  {
+    border: 2px solid #466277;
+    border-radius:  5px;
+    padding: 8px 20px;
+}
+.board-search .form-btn.black  {
+    border: 2px solid #466277;
+    background-color: #466277;
+    color: #fff;
+    padding: 10px 20px;
+}
+.board-table table {
+    width: 100%;
+   
+    border-top: 3px solid #466277;
+    border-bottom: 2px solid #466277;
+}
+.board-table table .height {
+    height: 400px;
+    vertical-align: top;
+}
+.board-table table .left {
+    text-align: left;
+    vertical-align: top;
+    padding-left: 20px;
+}
+.board-table .btn {
+    float: right;
+}
+.board-table .btn a {
+    background: #466277;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.board-table table th {
+    font-weight: 900;
+    font-size: 18px;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    z-index: 1000;
+    background-color: #466277;
+    padding: 19px 0;
+    text-align: center;
+}
+.board-table table td {
+    font-size: 18px;
+    border-bottom: 1px solid #466277;
+    padding: 19px 0;
+    text-align: center;
+}
+.thead {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+}
+.board-page {
+    margin-top: 50px;
+}
+.board-page ul {
+    display: flex;
+    justify-content: center;
+}
+.board-page li a {
+    display: block;
+    border: 1px solid #466277;
+    padding: 13px 10px;
+    margin-right: -1px;
+}
+.board-page li.active a {
+    background-color: #466277;
+    color: #fff;
+}
+.headline {
+    font-weight: 900;
+    font-size: 18px;
+    color: #466277;
+}
+.board-write label {
+    width: 100%;
+    display: block;
+    padding-bottom: 10px;
+}
+.board-write .title-text {
+    width: 100%;
+    display: block;
+    border: 1px solid #466277;
+    padding: 13px;
+    margin-bottom: 20px;
+    resize: none;
+}
+.board-write .board-btn {
+    font-size: 18px;
+    
+    float: right;
+    background: #466277;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 40px;
+}
+.content-article {
+    margin-left: 8%;
+    margin-top: 10%;
+}
+/* 푸터 */
+.footerWrap {
+    padding-left: 340px;
+    position: relative;
+    margin: 0 auto;
+    background: #466277;
+    height: 180px;
+}
+#footer {
+    position: absolute;
+    margin-top: 80%;
+    font-family: 'NEXONLv1Gothic';
+    width: 100%;
+}
+.fLogo {
+    position: absolute;
+    width: 193px;
+    height: 59px;
+    padding-top: 60px;
+}
+.fLogoTitle {
+    margin-left: 15%;
+    position: absolute;
+    padding-top: 70px;
+    font-size: 10.8px;
+    font-weight: bold;
+    color: #fff;
+}
+.textZon {
+    margin-left: 40%;
+    position: absolute;
+    padding-top: 50px;
+    color: #fff;
+    font-size: 13px;
+}
+.textZon ul li strong {
+    font-weight: bold;
+}
+@media (max-width:800) {
+    
+}

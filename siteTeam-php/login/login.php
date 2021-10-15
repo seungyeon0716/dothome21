@@ -1,5 +1,5 @@
-<!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,61 +7,63 @@
     <title>로그인</title>
 
     <!-- style -->
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../login/assets/css/fonts.css">
+    <link rel="stylesheet" href="../login/assets/css/var.css">
+    <link rel="stylesheet" href="../login/assets/css/reset.css">
+    <link rel="stylesheet" href="../login/assets/css/style.css">
 </head>
+
 <body>
-    
-    <!-- <div id="skip">
+
+    <div id="skip">
         <a href="#contents">로그인 바로가기</a>
         <a href="#footer">푸터 바로가기</a>
-    </div> -->
+    </div>
     <!-- //skip -->
 
-    <header id="header">  
-
-    </header>
-    <!-- //header -->
+    
 
     <main id="contents">
-        <section id="mainCont">
-            <h2 class="ir_so">로그인 컨텐츠</h2>
+        <section id="mainCont" class="gray">
             <article class="content-article">
-                <div class="member-form1">
-                    <div class="img">
-                        <img src="../img/login-img.jpg" alt="">
+                <div class="member-form">
+
+                    <!-- 이미지 -->
+                    <div class="login-left">
+                        <img src="../login/assets/img/login-img.jpg" alt="로그인">
                     </div>
                     
-                    <div class="login-box">
+                    <!-- 입력폼 -->
+                    <div class="login-right">
                         <div class="logo">
-                            <img class="img1" src="../img/Logoblack.png" alt="">
+                            <img src="../login/assets/img/logoTitle.svg" class="logoBlack" alt="로고">
                         </div>
-                        <form name="login" action="loginSave.php" method="POST">
+
+                        <form name="login" action="../main/mainOne.html" method="POST">
                             <fieldset>
                                 <legend class="ir_so">로그인 입력폼</legend>
                                 <div class="member-box">
                                     <div>
-                                        <div class="label-member-line">
-                                            <label for="youEmail" class="email">이메일</label>
-                                        </div>
-                                        <input type="email" name="youEmail" id="youEmail" class="input_write" placeholder="이메일을 입력해주세요" autocmplete="off" autofocus required img="">
+                                        <label for="youEmail">이메일</label>
+                                        <input type="email" name="youEmail" id="youEmail" class="input_early"
+                                            placeholder="이메일을 입력해주세요" autocmplete="off" autofocus required>
                                     </div>
                                     <div>
-                                        <div class="label-member-line">
-                                            <label for="youPass" class="password">비밀번호</label>
-                                        </div>
-                                        <input type="password" name="youPass" id="youPass" class="input_write1" maxlength="20" placeholder="비밀번호를 입력해주세요" autocmplete="off" required>
+                                        <label for="youPass">비밀번호</label>
+                                        <input type="password" name="youPass" id="youPass" class="input_early"
+                                            maxlength="20" placeholder="비밀번호를 입력해주세요" autocmplete="off" required>
                                     </div>
                                 </div>
                             </fieldset>
-                            <button id="loginBtn" class="btn_submit" type="submit">로그인</button>
+                            <button id="loginBtn" class="joinBtn" type="submit">로그인</button>
+                            <div class="loginBtn-bottom">
+                                <button class="joinBtn" type="button" onclick="location.href='join.php'">회원가입</button>
+                                <button class="findPw" type="button" onclick="location.href='findingPw.php'">비밀번호 찾기</button>
+                            </div>
                         </form>
-                        <div class="desc">
-                            <p class="info1"><a href="../login/join.php">회원가입</a></p>
-                            <p class="info2"><a href="#">비밀번호 찾기</a></p>
-                        </div>
                     </div>
+
+
                 </div>
             </article>
         </section>
@@ -71,7 +73,7 @@
     <footer id="footer">
         <div class="footerWrap">
             <div class="fLogo">
-                <img src="../img/Logowhite.png" alt="로그인 페이지 이미지입니다.">
+                <img src="../login/assets/img/Logowhite.png" alt="로그인 페이지 이미지입니다.">
             </div>
             <div class="fLogoTitle">
                 <ul>
@@ -91,5 +93,9 @@
         </div>
     </footer>
     <!-- //footer -->
+
+
+    <!-- Code injected by live-server -->
 </body>
+
 </html>

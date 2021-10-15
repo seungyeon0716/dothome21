@@ -1,0 +1,209 @@
+/* skip */
+#skip {
+    position: relative;
+    z-index: 10000;
+}
+
+#skip a {
+    position: absolute;
+    left: 0;
+    top: -100px;
+    background: #000;
+    color: #fff;
+    padding: 20px 30px;
+    display: inline-block;
+}
+
+#skip a:active,
+#skip a:focus {
+    top: 0;
+}
+
+/* layout */
+#contents {}
+
+/* #mainCont {
+    padding-top: 80px;
+} */
+
+/* #mainCont.gray {
+    background-color: #f4f4f4;
+} */
+
+/* container */
+.content-article {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    /* padding: 100px 0; */
+    /* background: rgba(0,0,0,0.3); */
+}
+
+.flow-article {
+    width: 100%;
+    background: #f7f6ff;
+    padding: 100px 0;
+}
+
+/* header */
+#header {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border-bottom: 3px solid #466277;
+}
+
+#header .member {
+    text-align: right;
+    padding: 20px;
+    width: 1200px;
+    margin: 0 auto;
+    
+}
+
+#header .member a {
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: background 0.3s, color 0.3s;
+    background-color: #E8E8E8;
+    color: #466277;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#header .member a:hover {
+    /* background: #000;
+    color: #fff; */
+}
+
+/* member-form */
+.member-form {
+    font-family: 'NEXONLv1Gothic';
+    display: grid;
+    grid-template-columns: repeat(2, 577px);
+    grid-template-rows: 965px;
+    gap: 20px;
+    margin: 0 auto;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.member-form h3 {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.member-form h4 {
+    font-size: 16px;
+    text-decoration: underline;
+    margin-bottom: 14px;
+}
+
+.member-form .join-info {
+    margin-bottom: 20px;
+}
+
+.member-form .join-privacy {
+    background: #F0F0F0;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.member-form button {
+    font-size: 18px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 40px;
+}
+.member-form .loginBtn-bottom button{
+    font-size: 18px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.member-form .loginBtn-bottom {
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+}
+
+.member-form .info {
+    padding-top: 20px;
+    color: #666;
+}
+
+.member-form .info a {
+    text-decoration: underline;
+    color: #666;
+}
+
+.member-box label {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #466277;
+    border-bottom: 1px solid #466277;
+}
+
+.member-box input {
+    margin-bottom: 40px;
+}
+
+
+
+
+/* 濡쒓렇�명럹�댁� 濡쒓퀬 �ㅻⅨ履� */
+.member-form .login-right {
+    margin: 0 auto;
+    margin-top: 150px;
+    width: 426px;
+}
+
+.member-form .logo {
+    text-align: center;
+    margin-bottom: 80px;
+}
+.member-form .logo-black {
+    width: 77px;
+    height: 124px;
+}
+.member-form .logo-black-title {
+    width: 327.8px;
+    height: 127.1px;
+}
+
+
+/* 鍮꾨�踰덊샇 蹂�寃� */
+.findPw-form {
+    margin: 0 auto;
+    margin-top: 150px;
+    width: 966px;
+    font-family: 'NEXONLv1Gothic';
+}
+
+.findPw-form h1 {
+    font-size: 80px;
+    color: #466277;
+}
+.findPw-form p {
+    font-size: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #466277;
+}
+.findPw-form button {
+    font-size: 18px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 40px;
+}
