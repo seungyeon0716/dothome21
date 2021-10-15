@@ -184,19 +184,30 @@
     &lt;div class="slider-wrap"&gt;
         &lt;div class="slider-img"&gt;
             &lt;div class="slider-inner"&gt;
-                &lt;div class="slider" data-name="이미지1"&gt;&lt;img src="../assets/img/bg6.jpg" alt="이미지1"&gt;&lt;/div&gt;
-                &lt;div class="slider" data-name="이미지2"&gt;&lt;img src="../assets/img/bg7.jpg" alt="이미지2"&gt;&lt;/div&gt;
-                &lt;div class="slider" data-name="이미지3"&gt;&lt;img src="../assets/img/bg8.jpg" alt="이미지3"&gt;&lt;/div&gt;
-                &lt;div class="slider" data-name="이미지4"&gt;&lt;img src="../assets/img/bg9.jpg" alt="이미지4"&gt;&lt;/div&gt;
-                &lt;div class="slider" data-name="이미지5"&gt;&lt;img src="../assets/img/bg10.jpg" alt="이미지5"&gt;&lt;/div&gt;
+                &lt;div class="slider" data-name="이미지1"&gt;&lt;img src="../assets/img/bg11.jpg" alt="이미지1"&gt;&lt;/div&gt;
+                &lt;div class="slider" data-name="이미지2"&gt;&lt;img src="../assets/img/bg12.jpg" alt="이미지2"&gt;&lt;/div&gt;
+                &lt;div class="slider" data-name="이미지3"&gt;&lt;img src="../assets/img/bg13.jpg" alt="이미지3"&gt;&lt;/div&gt;
+                &lt;div class="slider" data-name="이미지4"&gt;&lt;img src="../assets/img/bg14.jpg" alt="이미지4"&gt;&lt;/div&gt;
+                &lt;div class="slider" data-name="이미지5"&gt;&lt;img src="../assets/img/bg15.jpg" alt="이미지5"&gt;&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
+        &lt;div class="slider-btn"&gt;
+            &lt;a href="#" class="prev"&gt;prev&lt;/a&gt;
+            &lt;a href="#" class="next"&gt;next&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="slider-dot"&gt;
+            &lt;!-- &lt;a href="#" class="dot active"&gt;1&lt;/a&gt;
+            &lt;a href="#" class="dot"&gt;2&lt;/a&gt;
+            &lt;a href="#" class="dot"&gt;3&lt;/a&gt;
+            &lt;a href="#" class="dot"&gt;4&lt;/a&gt;
+            &lt;a href="#" class="dot"&gt;5&lt;/a&gt; --&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
-&lt;/main&gt;
+&lt;/main&gt;;
 </code></pre>
                         </div>
                         <div class="css">
-<pre><code class="language-css"> .slider-wrap {
+<pre><code class="language-css">.slider-wrap {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -215,7 +226,7 @@
 }
 .slider-inner {
     position: relative;
-    width: 4000px;
+    /* width: 4000px; */
     height: 480px;
     overflow: hidden;
 }
@@ -240,29 +251,136 @@
 .slider-inner .slider:nth-child(3) {z-index: 3;}
 .slider-inner .slider:nth-child(4) {z-index: 2;}
 .slider-inner .slider:nth-child(5) {z-index: 1;}
+
+.slider-btn a {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    transition: all 0.2s;
+    display: block;
+    background: rgba(0,0,0,.4);
+    color: #fff;
+    text-decoration: none;
+}
+.slider-btn a:hover {
+    background: rgba(241,96,86,1);
+}
+.slider-btn .prev {
+    left: 0;
+}
+.slider-btn .next {
+    right: 0;
+}
+.slider-dot {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+}
+.slider-dot .dot {
+    width: 20px;
+    height: 20px;
+    background: rgba(0,0,0,0.4);
+    display: inline-block;
+    border-radius: 50%;
+    transition: all 0.3s;
+    text-indent: -9999px;
+    margin: 3px;
+}
+.slider-dot .dot.active {
+    background: rgba(255,255,255,0.9);
+}
 </code></pre>
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript"> const sliderWrap = $(".slider-wrap");
-const sliderImg = $(".slider-img");
-const sliderInner = $(".slider-inner");
-const slider = $(".slider");
+<pre><code class="language-javascript">const sliderWrap = document.querySelector(".slider-wrap");
+const sliderImg = sliderWrap.querySelector(".slider-img");
+const sliderInner = sliderImg.querySelector(".slider-inner");
+const slider = sliderInner.querySelectorAll(".slider");
+const sliderBtn = sliderWrap.querySelector(".slider-btn");
+const sliderBtnPrev = sliderBtn.querySelector(".prev");
+const sliderBtnNext = sliderBtn.querySelector(".next");
+const sliderDot = sliderWrap.querySelector(".slider-dot");
 
-let currentIndex = 0;
 let sliderCount = slider.length;
-let sliderWidth = slider.width();
-let sliderDuration = 600;
-let sliderEasing = "easeOutExpo";
+let sliderWidth = document.querySelector(".slider").offsetWidth;
+let sliderTotalWidth = sliderWidth * sliderCount;
+let currentIndex = 0;
+let dotIndex = "";
 
-setInterval(function(){
-    (currentIndex &lt; sliderCount -1) ?  currentIndex++ : currentIndex = 0;    //삼항연산자
+// 즉시실행 함수
+(() => {
+    // 기본 세팅
+    sliderInner.style.width = sliderTotalWidth + "px";
+    sliderInner.style.transition = "all .3s ease-in";
+    sliderInner.style.left = 0;
 
-    let sliderPosition = currentIndex * -sliderWindth;
-    sliderInner.animate({ left: sliderPosition }, sliderDuration, sliderEasing);
+    // 닷 메뉴 세팅
+    slider.forEach((e, i) => {
+        let active = "";
+        if( i == 0) active = "active";
+        dotIndex += `&lt;a href='#' class='dot ${active}'&gt;${i}&lt;/a&gt;`;
+    })
+    sliderDot.innerHTML = dotIndex;
+})()
 
-    console.log(currentIndex);
-    console.log(sliderPosition);
-}, 2000);
+
+// 이미지 움직이기(익명함수)
+const gotoSlider = (num) => {
+    sliderInner.style.left = -sliderWidth * num + "px";
+    currentIndex = num;
+    dotActive();
+}
+
+// 왼쪽 버튼
+const btnPrev = (e) => {
+    e.preventDefault();
+    let prevIndex = (currentIndex - 1) % sliderCount;
+    if(currentIndex == 0) prevIndex = sliderCount - 1;
+    
+    gotoSlider(prevIndex);
+    
+}
+// 오른쪽 버튼
+const btnNext = (e) => {
+    e.preventDefault();
+    let nextIndex = currentIndex + 1 % sliderCount;
+
+    gotoSlider(nextIndex);
+}
+
+// 닷 메뉴 활성화
+// function dotActive(){
+//     sliderDot.querySelectorAll("a").forEach((e, i) => {
+//         if( e.classList.contains("active") ){
+//             e.classList.remove("active");
+//         }
+//     });
+//     sliderDot.querySelectorAll("a")[currentIndex].classList.add("active");
+// };
+
+function dotActive(){
+    sliderDot.querySelectorAll("a").forEach((el,index)=>{
+        index == currentIndex ? el.classList.add('active') : el.classList.remove('active');
+    });
+}
+
+// 닷 메뉴 버튼
+sliderDot.querySelectorAll("a").forEach((dot, index) => {
+    dot.addEventListener("click", (e) => {
+        e.preventDefault();
+        gotoSlider(index);
+        dotActive();
+    });
+});
+
+sliderBtnPrev.addEventListener("click", btnPrev);
+sliderBtnNext.addEventListener("click", btnNext);
 </code></pre>
                         </div>
                     </div>

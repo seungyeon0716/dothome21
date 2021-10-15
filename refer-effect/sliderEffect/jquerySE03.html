@@ -139,7 +139,7 @@
 </code></pre>
                         </div>
                         <div class="css">
-<pre><code class="language-css"> .slider-wrap {
+<pre><code class="language-css">  .slider-wrap {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -192,20 +192,17 @@ const sliderInner = $(".slider-inner");
 const slider = $(".slider");
 
 let currentIndex = 0;
-let sliderCount = slider.length;
 let sliderWidth = slider.width();
-let sliderDuration = 600;
-let sliderEasing = "easeOutExpo";
+// 이미지의 크기만큼 이동시키려고 크기를 구함(근데 하나만 움직임)
 
+// 콜백함수(함수 안에 함수 또 사용, 첫번쨰 함수 사용하고 두번째 함수 사용) 재귀함수(자기 자신을 한 번더 돌림) 의 차이점
 setInterval(function(){
-    (currentIndex &lt; sliderCount -1) ?  currentIndex++ : currentIndex = 0;    //삼항연산자
-
-    let sliderPosition = currentIndex * -sliderWindth;
-    sliderInner.animate({ left: sliderPosition }, sliderDuration, sliderEasing);
-
-    console.log(currentIndex);
-    console.log(sliderPosition);
-}, 2000);
+    sliderInner.animate({left: -sliderWidth}, 400, function(){
+        $(".slider:first-child").appendTo(sliderInner);
+        sliderInner.css("left","");
+    });
+    // animate안에는 함수를 또 적을 수 있음(꼭 콜백함수를 써야함)
+}, 3000);
 </code></pre>
                         </div>
                     </div>

@@ -132,13 +132,22 @@
                         <div class="html">
 <pre><code class="language-html">&lt;main&gt;
     &lt;div class="slider-wrap"&gt;
-        &lt;div class="slider-img"&gt;
-            &lt;div class="slider-inner"&gt;
-                &lt;div class="slider" data-name="이미지1"&gt;&lt;img src="../assets/img/bg6.jpg" alt="이미지1"&gt;&lt;/div&gt;
-                &lt;div class="slider" data-name="이미지2"&gt;&lt;img src="../assets/img/bg7.jpg" alt="이미지2"&gt;&lt;/div&gt;
-                &lt;div class="slider" data-name="이미지3"&gt;&lt;img src="../assets/img/bg8.jpg" alt="이미지3"&gt;&lt;/div&gt;
-                &lt;div class="slider" data-name="이미지4"&gt;&lt;img src="../assets/img/bg9.jpg" alt="이미지4"&gt;&lt;/div&gt;
-                &lt;div class="slider" data-name="이미지5"&gt;&lt;img src="../assets/img/bg10.jpg" alt="이미지5"&gt;&lt;/div&gt;
+        &lt;div class="slider-img slider-img1"&gt;
+            &lt;div class="slider-inner slider-inner1"&gt;
+                &lt;div class="slider slider1" data-name="이미지1"&gt;&lt;img src="../assets/img/bg6.jpg" alt="이미지1"&gt;&lt;/div&gt;
+                &lt;div class="slider slider1" data-name="이미지2"&gt;&lt;img src="../assets/img/bg7.jpg" alt="이미지2"&gt;&lt;/div&gt;
+                &lt;div class="slider slider1" data-name="이미지3"&gt;&lt;img src="../assets/img/bg8.jpg" alt="이미지3"&gt;&lt;/div&gt;
+                &lt;div class="slider slider1" data-name="이미지4"&gt;&lt;img src="../assets/img/bg9.jpg" alt="이미지4"&gt;&lt;/div&gt;
+                &lt;div class="slider slider1" data-name="이미지5"&gt;&lt;img src="../assets/img/bg10.jpg" alt="이미지5"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="slider-img slider-img2"&gt;
+            &lt;div class="slider-inner slider-inner2"&gt;
+                &lt;div class="slider slider2" data-name="이미지1"&gt;&lt;img src="../assets/img/bg6.jpg" alt="이미지1"&gt;&lt;/div&gt;
+                &lt;div class="slider slider2" data-name="이미지2"&gt;&lt;img src="../assets/img/bg7.jpg" alt="이미지2"&gt;&lt;/div&gt;
+                &lt;div class="slider slider2" data-name="이미지3"&gt;&lt;img src="../assets/img/bg8.jpg" alt="이미지3"&gt;&lt;/div&gt;
+                &lt;div class="slider slider2" data-name="이미지4"&gt;&lt;img src="../assets/img/bg9.jpg" alt="이미지4"&gt;&lt;/div&gt;
+                &lt;div class="slider slider2" data-name="이미지5"&gt;&lt;img src="../assets/img/bg10.jpg" alt="이미지5"&gt;&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
@@ -146,33 +155,31 @@
 </code></pre>
                         </div>
                         <div class="css">
-<pre><code class="language-css"> .slider-wrap {
+<pre><code class="language-css">.slider-wrap {
     display: flex;
+    height: 100vh;
     align-items: center;
     justify-content: center;
-    height: 100vh;
 }
 .slider-img img {
     width: 100%;
 }
 .slider-img {
-   position: absolute;
-   left: 50%; top: 50%;
-   transform: translate(-50%, -50%);
-   width: 800px;
-   height: 480px;
+   width: 600px;
+   height: 360px;
    overflow: hidden;
+   margin: 10px;
 }
 .slider-inner {
     position: relative;
-    width: 4000px;
-    height: 480px;
+    width: 600px;
+    height: 2160px;
     overflow: hidden;
 }
 .slider-inner .slider {
     float: left;
-    width: 800px;
-    height: 480px;
+    width: 600px;
+    height: 360px;
     position: relative;
 }
 
@@ -193,26 +200,53 @@
 </code></pre>
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript"> const sliderWrap = $(".slider-wrap");
-const sliderImg = $(".slider-img");
-const sliderInner = $(".slider-inner");
-const slider = $(".slider");
+<pre><code class="language-javascript"> // sample1
+const sliderImg1 = document.querySelector(".slider-img1");
+const sliderInner1 = document.querySelector(".slider-inner1");
+const slider1 = document.querySelector(".slider1");
 
-let currentIndex = 0;
-let sliderCount = slider.length;
-let sliderWidth = slider.width();
-let sliderDuration = 600;
-let sliderEasing = "easeOutExpo";
+let currentIndex1 = 0;
+let sliderHeight1 = slider1.offsetHeight;
 
-setInterval(function(){
-    (currentIndex &lt; sliderCount -1) ?  currentIndex++ : currentIndex = 0;    //삼항연산자
+sliderInner1.style.transition = "all 0.3s";
+sliderInner1.style.top = "0px";
 
-    let sliderPosition = currentIndex * -sliderWindth;
-    sliderInner.animate({ left: sliderPosition }, sliderDuration, sliderEasing);
+// 이미지 하나씩 나오게 하기
+setInterval(() => {
+    currentIndex1 &lt; 4 ? currentIndex1++ : currentIndex1 = 0;
+    let sliderPosition = currentIndex1 * -sliderHeight1 + "px";
 
-    console.log(currentIndex);
-    console.log(sliderPosition);
-}, 2000);
+    sliderInner1.style.transition = "all 0.3s";
+    sliderInner1.style.top = sliderPosition;
+}, 3000);
+
+
+// sample2
+const sliderImg2 = document.querySelector(".slider-img2");
+const sliderInner2 = document.querySelector(".slider-inner2");
+const slider2 = document.querySelector(".slider2");
+
+let currentIndex2 = 0;
+let sliderCount = document.querySelectorAll(".slider2").length;
+let sliderHeight2 = slider2.offsetHeight;
+
+let sliderClone = sliderInner2.firstElementChild.cloneNode(true);
+sliderInner2.appendChild(sliderClone);
+
+// // 이미지 연속으로 나오게 하기
+setInterval(() => {
+    currentIndex2++;
+    sliderInner2.style.transition = "all 0.3s";
+    sliderInner2.style.transform = "translateY("+ -sliderHeight2 * currentIndex2 +"px)";
+
+    if(currentIndex2 == sliderCount){
+        setTimeout(() => {
+            sliderInner2.style.transition = "0s";
+            sliderInner2.style.transform = "translateY(0)";
+        }, 300);
+        currentIndex2 = 0;
+    }
+}, 3000);
 </code></pre>
                         </div>
                     </div>

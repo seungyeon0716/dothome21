@@ -168,7 +168,7 @@
 </code></pre>
                         </div>
                         <div class="css">
-<pre><code class="language-css"> .slider-wrap {
+<pre><code class="language-css">.slider-wrap {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -212,29 +212,66 @@
 .slider-inner .slider:nth-child(3) {z-index: 3;}
 .slider-inner .slider:nth-child(4) {z-index: 2;}
 .slider-inner .slider:nth-child(5) {z-index: 1;}
+
+.slider-btn a {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    transition: all 0.2s;
+    display: block;
+    background: rgba(0,0,0,.4);
+    color: #fff;
+    text-decoration: none;
+}
+.slider-btn a:hover {
+    background: rgba(241,96,86,1);
+}
+.slider-btn .prev {
+    left: 0;
+}
+.slider-btn .next {
+    right: 0;
+}
 </code></pre>
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript"> const sliderWrap = $(".slider-wrap");
+<pre><code class="language-javascript">const sliderWrap = $(".slider-wrap");
 const sliderImg = $(".slider-img");
 const sliderInner = $(".slider-inner");
 const slider = $(".slider");
+const sliderBtn = $(".slider-btn");
 
-let currentIndex = 0;
-let sliderCount = slider.length;
 let sliderWidth = slider.width();
-let sliderDuration = 600;
-let sliderEasing = "easeOutExpo";
+let sliderCount = slider.length;
 
-setInterval(function(){
-    (currentIndex &lt; sliderCount -1) ?  currentIndex++ : currentIndex = 0;    //삼항연산자
+sliderInner.css({marginLeft: -sliderWidth});
+$(".slider:last-child").prependTo(sliderInner);
 
-    let sliderPosition = currentIndex * -sliderWindth;
-    sliderInner.animate({ left: sliderPosition }, sliderDuration, sliderEasing);
+function movePrev(){
+    sliderInner.animate({left: sliderWidth}, 400, function(){
+        $(".slider:last-child").prependTo(sliderInner);
+        sliderInner.css("left", "");
+    });
+}
+function moveNext(){
+    sliderInner.animate({left: -sliderWidth}, 400, function(){
+        $(".slider:first-child").appendTo(sliderInner);
+        sliderInner.css("left", "");
+    });
+}
 
-    console.log(currentIndex);
-    console.log(sliderPosition);
-}, 2000);
+sliderBtn.find(".prev").click(function(){
+    movePrev();
+});
+
+sliderBtn.find(".next").click(function(){
+    moveNext();
+});
 </code></pre>
                         </div>
                     </div>

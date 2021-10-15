@@ -158,12 +158,16 @@
     &lt;div class="slider-wrap"&gt;
         &lt;div class="slider-img"&gt;
             &lt;div class="slider-inner"&gt;
-                &lt;div class="slider" data-name="이미지1"&gt;&lt;img src="../assets/img/bg6.jpg" alt="이미지1"&gt;&lt;/div&gt;
-                &lt;div class="slider" data-name="이미지2"&gt;&lt;img src="../assets/img/bg7.jpg" alt="이미지2"&gt;&lt;/div&gt;
-                &lt;div class="slider" data-name="이미지3"&gt;&lt;img src="../assets/img/bg8.jpg" alt="이미지3"&gt;&lt;/div&gt;
-                &lt;div class="slider" data-name="이미지4"&gt;&lt;img src="../assets/img/bg9.jpg" alt="이미지4"&gt;&lt;/div&gt;
-                &lt;div class="slider" data-name="이미지5"&gt;&lt;img src="../assets/img/bg10.jpg" alt="이미지5"&gt;&lt;/div&gt;
+                &lt;div class="slider" data-name="이미지1"&gt;&lt;img src="../assets/img/bg1.jpg" alt="이미지1"&gt;&lt;/div&gt;
+                &lt;div class="slider" data-name="이미지2"&gt;&lt;img src="../assets/img/bg2.jpg" alt="이미지2"&gt;&lt;/div&gt;
+                &lt;div class="slider" data-name="이미지3"&gt;&lt;img src="../assets/img/bg3.jpg" alt="이미지3"&gt;&lt;/div&gt;
+                &lt;div class="slider" data-name="이미지4"&gt;&lt;img src="../assets/img/bg4.jpg" alt="이미지4"&gt;&lt;/div&gt;
+                &lt;div class="slider" data-name="이미지5"&gt;&lt;img src="../assets/img/bg5.jpg" alt="이미지5"&gt;&lt;/div&gt;
             &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="slider-btn"&gt;
+            &lt;a href="#" class="prev"&gt;prev&lt;/a&gt;
+            &lt;a href="#" class="next"&gt;next&lt;/a&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/main&gt;
@@ -214,29 +218,64 @@
 .slider-inner .slider:nth-child(3) {z-index: 3;}
 .slider-inner .slider:nth-child(4) {z-index: 2;}
 .slider-inner .slider:nth-child(5) {z-index: 1;}
+
+.slider-btn a {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    transition: all 0.2s;
+    display: block;
+    background: rgba(0,0,0,.4);
+    color: #fff;
+    text-decoration: none;
+}
+.slider-btn a:hover {
+    background: rgba(241,96,86,1);
+}
+.slider-btn .prev {
+    left: 0;
+}
+.slider-btn .next {
+    right: 0;
+}
 </code></pre>
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript"> const sliderWrap = $(".slider-wrap");
-const sliderImg = $(".slider-img");
-const sliderInner = $(".slider-inner");
-const slider = $(".slider");
+<pre><code class="language-javascript">const sliderWrap = document.querySelector(".slider-wrap");
+const sliderImg = sliderWrap.querySelector(".slider-img");
+const sliderInner = sliderImg.querySelector(".slider-inner");
+const slider = sliderInner.querySelectorAll(".slider");
+const sliderBtn = sliderWrap.querySelector(".slider-btn");
+const sliderBtnPrev = sliderBtn.querySelector(".prev");
+const sliderBtnNext = sliderBtn.querySelector(".next");
 
-let currentIndex = 0;
 let sliderCount = slider.length;
-let sliderWidth = slider.width();
-let sliderDuration = 600;
-let sliderEasing = "easeOutExpo";
+let sliderWidth = document.querySelector(".slider").offsetWidth;
+let currentIndex = 0;
 
-setInterval(function(){
-    (currentIndex &lt; sliderCount -1) ?  currentIndex++ : currentIndex = 0;    //삼항연산자
+function gotoSlider(num){
+    sliderInner.style.transition = "all 300ms";
+    sliderInner.style.transform = "translateX("+ -sliderWidth * num +"px)";
+    currentIndex = num;
+}
+function movePrev(){
+    let prevIndex = (currentIndex - 1) % sliderCount;
+    if(currentIndex == 0) prevIndex =  sliderCount -1 ;
+    gotoSlider(prevIndex);
+};
+function moveNext(){
+    // 1 2 3 4 0 1 2 3 4 ...
+    let nextIndex = (currentIndex + 1) % sliderCount;
+    gotoSlider(nextIndex);
+};
 
-    let sliderPosition = currentIndex * -sliderWindth;
-    sliderInner.animate({ left: sliderPosition }, sliderDuration, sliderEasing);
-
-    console.log(currentIndex);
-    console.log(sliderPosition);
-}, 2000);
+sliderBtnPrev.addEventListener("click", movePrev);
+sliderBtnNext.addEventListener("click", moveNext);
 </code></pre>
                         </div>
                     </div>

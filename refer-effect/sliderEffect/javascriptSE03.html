@@ -139,7 +139,7 @@
 </code></pre>
                         </div>
                         <div class="css">
-<pre><code class="language-css"> .slider-wrap {
+<pre><code class="language-css">.slider-wrap {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -186,25 +186,31 @@
 </code></pre>
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript"> const sliderWrap = $(".slider-wrap");
-const sliderImg = $(".slider-img");
-const sliderInner = $(".slider-inner");
-const slider = $(".slider");
+<pre><code class="language-javascript">const sliderWrap = document.querySelector(".slider-wrap");
+const sliderImg = document.querySelector(".slider-img");
+const sliderInner = document.querySelector(".slider-inner");
+const slider = document.querySelectorAll(".slider");
 
 let currentIndex = 0;
+let sliderWidth = document.querySelector(".slider").offsetWidth;
+// 패딩 보더 포함 값
 let sliderCount = slider.length;
-let sliderWidth = slider.width();
-let sliderDuration = 600;
-let sliderEasing = "easeOutExpo";
+let sliderClone = sliderInner.firstElementChild.cloneNode(true);
+sliderInner.appendChild(sliderClone);
 
-setInterval(function(){
-    (currentIndex &lt; sliderCount -1) ?  currentIndex++ : currentIndex = 0;    //삼항연산자
 
-    let sliderPosition = currentIndex * -sliderWindth;
-    sliderInner.animate({ left: sliderPosition }, sliderDuration, sliderEasing);
-
-    console.log(currentIndex);
-    console.log(sliderPosition);
+setInterval(() => {
+    currentIndex++; //0 1 2 3 4 5 6 7 ...
+    sliderInner.style.transition = "all 0.3s";
+    sliderInner.style.transform = "translate("+ -sliderWidth * currentIndex +"px)";
+    
+    if( currentIndex == sliderCount ){
+        setTimeout(() => {
+            sliderInner.style.transition = "0s";
+            sliderInner.style.transform = "translateX(0)";
+        }, 300);
+        currentIndex = 0;
+    }
 }, 2000);
 </code></pre>
                         </div>
