@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COOKIT</title>
+    <style>
+       @font-face {
+            font-family: 'S-CoreDream';
+            font-weight: normal;
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-1Thin.woff') format('woff');
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'TmonMonsori';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            width: 100%;
+            margin: 0 auto;
+        }
+        #test05 {
+            font-family: 'S-CoreDream';
+        }
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* 헤더 */
+        #header {
+            align-items: center;
+            justify-content: space-between;
+            display: flex;
+            margin-bottom: 20px;
+        }
+        #header .logo {
+            
+        }
+        #header .logo img {
+            display: block;
+            padding-top: 20px;
+            height: 40px;
+            width: 140px;
+        }
+        #header .menu {
+            font-family: 'TmonMonsori';
+        }
+        #header .menu a {
+            display: inline-block;
+            font-size: 20px;
+            font-weight: 800;
+            text-decoration: none;
+            color: #000;
+            padding-left: 60px;
+            padding-top: 40px;
+        }
+
+        /* 슬라이더 */
+        #main {
+            margin-bottom: 20px;
+        }
+        #main .slider-wrap {
+            display: flex;
+        }
+        #main .slider-img {
+            overflow: hidden;
+            width: 1000px;
+            height: 390.19px;
+        }
+        #main .slider-img img {
+            width: 100%;
+        }
+        #main .slider-inner {
+            position: relative;
+            overflow: hidden;
+            width: 1000px;
+            height: 1170.57px;
+        }
+        #main .slider {
+            position: relative;
+            width: 1000px;
+            height: 390.19px;
+            float: left;
+        }
+        #main .slider::before {
+            position: absolute;
+            left: 5px; top: 5px;
+        }
+        #main .slider::before {content: attr(data-name);}
+        #main .slider:nth-child(1) {z-index: 3;}
+        #main .slider:nth-child(2) {z-index: 2;}
+        #main .slider:nth-child(3) {z-index: 1;}
+
+        /* 배너 */
+        #banner {
+            display: flex;
+            margin-bottom: 30px;
+        }
+        #banner .banR {
+            border: 1px solid #F2F2F2;
+            background: #F2F2F2;
+            width: 450px;
+            height: 100px;
+            padding: 20px;
+            display: flex;
+            margin-right: 20px;
+        }
+        #banner .banL {
+            border: 1px solid #F2F2F2;
+            background: #F2F2F2;
+            width: 450px;
+            height: 100px;
+            padding: 20px;
+            display: flex;
+        }
+        #banner .ban-title {
+            
+        }
+        #banner .ban-title .banTitle1 {
+            margin-right: 60px;
+        }
+        #banner .ban-title h2 {
+            font-family: 'TmonMonsori';
+            font-size: 20px;
+            margin-right: 80px;
+            margin-bottom: 10px;
+            font-weight: 800;
+            white-space: nowrap;
+        }
+        #banner .ban-title p {
+            font-size: 13px;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+        #banner .banBtn {
+            display: flex;
+        }
+        #banner .banBtn .btn1 {
+            font-size: 13px;
+            font-weight: 900;
+        }
+        #banner .banBtn .btn2 {
+            font-size: 13px;
+            font-weight: 900;
+        }
+        #banner .banBtn .btn1 em {
+            font-family: 'TmonMonsori';
+            padding-right: 5px;
+        }
+        #banner .banBtn .btn2 em {
+            font-family: 'TmonMonsori';
+            padding-right: 5px;
+        }
+        #banner .banBtn .img1 {
+            padding-right: 5px;
+            width: 20px;
+        }
+        #banner .banBtn .img2 {
+            padding-right: 5px;
+            padding-top: 3px;
+            width: 20px;
+        }
+        #banner .ban-img {}
+        #banner .ban-img img {
+            width: 100px;
+            height: 80px;
+        }
+
+        /* 컨텐츠 */
+        #contents {}
+        .cont-title {
+            display: flex;
+            font-family: 'TmonMonsori';
+            margin-bottom: 30px;
+        }
+        .cont-title h2 {
+            font-size: 30px;
+            position: relative;
+            margin-right: 50px;
+        }
+        .cont-title h2::before {
+            content: '|';
+            position: absolute;
+            color: #9E9E9E;
+            left: 100%;
+            top: 0;
+            padding-left: 20px;
+        }
+        .cont-title p {
+            font-size: 30px;
+            color: #9E9E9E;
+        }
+        .cont-wrap {
+            display: flex;
+        }
+        .cont1 {
+            padding-right: 30px;
+        }
+        .cont1 img {
+            width: 313px;
+            margin-bottom: 20px;
+        }
+        .cont-box {
+            display: flex;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        .cont-box .contTitle {}
+        .cont-box .contTitle h3 {
+            font-family: 'TmonMonsori';
+            margin-bottom: 10px;
+        }
+        .cont-box .contTitle p {
+            font-size: 20px;
+        }
+        .cont-box .contTitle p em {
+            font-family: 'TmonMonsori';
+            padding-right: 10px;
+        }
+        .cont-box .contImg {}
+        .cont-box .contImg img {
+            width: 40px;
+            position: absolute;
+            right: 0; top: 20px;
+        }
+
+        /* 푸터 */
+        #footer {
+            width: 100%;
+            background: #202020;
+            padding-top: 30px;
+        }
+        .foot-wrap {
+            display: flex;
+            justify-content: space-between;
+        }
+        .footL {
+        }
+        .footL img {
+            width: 150px;
+        }
+        .footR {}
+        .footR .footMenu {
+            font-family: 'TmonMonsori';
+            display: flex;
+            font-size: 10px;
+            margin-bottom: 30px;
+        }
+        .footR .footMenu p {
+            margin-right: 30px;
+            color: #E7E7E7;
+        }
+        .footR .footMenu p::after {
+            font-family: 'S-CoreDream';
+            content: '|';
+            color: #808080;
+            padding-left: 20px;
+        }
+        .footR .footMenu .line-none::after {
+            display: none;
+        }
+        .footR .footDesc {
+            color: #808080;
+            font-family: 'TmonMonsori';
+        }
+        .footR .footDesc .first {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .footR .footDesc .first p {
+            font-size: 10px;
+            padding-right: 10px;
+        }
+        .footR .footDesc .first p::after {
+            font-family: 'S-CoreDream';
+            content: '|';
+            color: #808080;
+            padding-left: 10px;
+        }
+        .footR .footDesc .first .line-none::after {
+            display: none;
+        }
+        .footR .footDesc .second {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .footR .footDesc .second p {
+            font-size: 10px;
+            padding-right: 10px;
+        }
+        .footR .footDesc .second p::after {
+            font-family: 'S-CoreDream';
+            content: '|';
+            color: #808080;
+            padding-left: 10px;
+        }
+        .footR .footDesc .second .line-none::after {
+            display: none;
+        }
+        .footR .footDesc .last {
+            display: flex;
+            margin-bottom: 30px;
+        }
+        .footR .footDesc .last p {
+            font-size: 10px;
+            padding-right: 10px;
+        }
+        .footR .footDesc .last p::after {
+            font-family: 'S-CoreDream';
+            content: '|';
+            color: #808080;
+            padding-left: 10px;
+        }
+        .footR .footDesc .last .line-none::after {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <section id="test05">
+        <div class="container">
+            <div id="header">
+                <div class="logo">
+                    <img src="../site/img/Untitled-1_03.jpg" alt="로고">
+                </div>
+                <div class="menu">
+                    <a href="#">COOKIT소개</a>
+                    <a href="#">COOKIT메뉴</a>
+                    <a href="#">리뷰</a>
+                    <a href="#">이벤트</a>
+                    <a href="#">MY쿡킷</a>
+                </div>
+            </div>
+            <div id="main">
+                <div class="slider-wrap">
+                    <div class="slider-img">
+                        <div class="slider-inner">
+                            <div class="slider"><img src="../site/img/Untitled-1_06.jpg" alt="슬라이드 이미지"></div>
+                            <div class="slider"><img src="../site/img/Untitled-1_06.jpg" alt="슬라이드 이미지"></div>
+                            <div class="slider"><img src="../site/img/Untitled-1_06.jpg" alt="슬라이드 이미지"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="banner">
+                <div class="banR">
+                    <div class="ban-title">
+                        <h2 class="banTitle1">우리집도 COOKIT 배송이 되나요?</h2>
+                        <p>배송이 가능한지 알려드려요</p>
+                        <div class="banBtn">
+                            <img class="img1" src="/site/img/Untitled-1_15.jpg" alt="지도 이미지">
+                            <span class="btn1"><em>배송지 검색</em></span>
+                        </div>
+                    </div>
+                    <div class="ban-img">
+                        <img src="/site/img/Untitled-1_10.jpg" alt="배너 이미지1">
+                    </div>
+                </div>
+                <div class="banL">
+                    <div class="ban-title">
+                        <h2>7월 30일(화)에 받을 수 있어요</h2>
+                        <p>오전 7시까지 주문하시면 다음날 배송됩니다.</p>
+                        <div class="banBtn">
+                            <img class="img2" src="/site/img/Untitled-1_18.jpg" alt="시간 이미지">
+                            <span class="btn2"><em>63:28:32</em>남은시간</span>
+                        </div>
+                    </div>
+                    <div class="ban-img">
+                        <img src="/site/img/Untitled-1_12.jpg" alt="배너 이미지2">
+                    </div>
+                </div>
+            </div>
+            <div id="contents">
+                <div class="cont-title">
+                    <h2>실시간 베스트</h2>
+                    <p>생생한 리뷰</p>
+                </div>
+                <div class="cont-wrap">
+                    <div class="cont1">
+                        <img src="/site/img/Untitled-1_24.jpg" alt="평양식 이미지">
+                        <div class="cont-box">
+                            <div class="contTitle">
+                                <h3>평양식 어복쟁반</h3>
+                                <p><em>33,800원</em>/ 3인분</p>
+                            </div>
+                            <div class="contImg">
+                                <img src="/site/img/Untitled-1_33.jpg" alt="장바구니 이미지">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cont1">
+                        <img src="/site/img/Untitled-1_26.jpg" alt="새우주꾸미삼겹살 이미지">
+                        <div class="cont-box">
+                            <div class="contTitle">
+                                <h3>새우주꾸미삼겹살</h3>
+                                <p><em>29,800원</em>/ 3인분</p>
+                            </div>
+                            <div class="contImg">
+                                <img src="/site/img/Untitled-1_33.jpg" alt="장바구니 이미지">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cont1">
+                        <img src="/site/img/Untitled-1_28.jpg" alt="방풍나물 아귀찜 이미지">
+                        <div class="cont-box">
+                            <div class="contTitle">
+                                <h3>방풍나물 아귀찜</h3>
+                                <p><em>32,800원</em>/ 3인분</p>
+                            </div>
+                            <div class="contImg">
+                                <img src="/site/img/Untitled-1_33.jpg" alt="장바구니 이미지">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="container">
+                <div class="foot-wrap">
+                    <div class="footL">
+                        <img src="/site/img/Untitled-1_35.jpg" alt="푸터로고 이미지">
+                    </div>
+                    <div class="footR">
+                        <div class="footMenu">
+                            <p>이용약관</p>
+                            <p>개인정보처리 방침</p>
+                            <p>법적고지</p>
+                            <p class="line-none">사업자정보 확인</p>
+                        </div>
+                        <div class="footDesc">
+                            <span class="first">
+                                <p>씨제일제일제당(주)</p>
+                                <p class="line-none">대표자:신현재</p>
+                            </span>
+                            <span class="second">
+                                <p>주소:서울 중구 동호로330CJ제일제당 센터(우)04560</p>
+                                <p class="line-none">사업자등록번호:104-86-09535</p>
+                            </span>
+                            <span class="last">
+                                <p>통신판매업신고 중구 제 07767호</p>
+                                <p class="line-none">개인정보보호책임자:류화정</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../refer-effect/assets/js/custom.js"></script>
+    <script src="../refer-effect/assets/js/highlight.min.js"></script>
+    <script>
+        const sliderWrap = document.querySelector(".slider-wrap");
+        const sliderInner = document.querySelector(".slider-inner");
+        const slider = document.querySelector(".slider");
+
+        let currentIndex = 0;
+        let sliderCount = document.querySelectorAll(".slider").length;
+        let sliderHeight = slider.offsetHeight;
+        
+        let sliderClone = sliderInner.firstElementChild.cloneNode(true);
+        sliderInner.appendChild(sliderClone);
+
+        // // 이미지 연속으로 나오게 하기
+        setInterval(() => {
+            currentIndex++;
+            sliderInner.style.transition = "all 0.3s";
+            sliderInner.style.transform = "translateY("+ -sliderHeight * currentIndex +"px)";
+
+            if(currentIndex == sliderCount){
+                setTimeout(() => {
+                    sliderInner.style.transition = "0s";
+                    sliderInner.style.transform = "translateY(0)";
+                }, 300);
+                currentIndex = 0;
+            }
+        }, 3000);
+    </script>
+</body>
+</html>
