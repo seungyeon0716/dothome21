@@ -74,16 +74,16 @@ body {
             position: absolute;
             top: 8px; left: 8px;
             width: 10px; height: 10px;
-            background: #fff;
-            box-shadow: 0 14px 0 #fff;
+            background: #000;
+            box-shadow: 0 14px 0 #000;
         }
         &::after {
             content: '';
             position: absolute;
             bottom: 8px; right: 8px;
             width: 10px; height: 10px;
-            background: #fff;
-            box-shadow: 0 -14px 0 #fff;
+            background: #000;
+            box-shadow: 0 -14px 0 #000;
         }
     }
 }
