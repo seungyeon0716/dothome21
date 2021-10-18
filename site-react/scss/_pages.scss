@@ -24,10 +24,10 @@
 #mainCont {
     margin-top: 154px;
     background-color: #f6f1ed;
-    height: 100vh;
+    height: 70vh;
     color: #000;
     font-family: $font-main;
-    font-size: 150px;
+    font-size: 120px;
     font-weight: bold;
     line-height: 0.96;
     text-transform: uppercase;
@@ -46,19 +46,19 @@
     }
     img {
         position: absolute;
-        left: 25%;
-        top: 25%;
-        width: 412px;
-        height: 412px;
+        left: 20%;
+        top: 28%;
+        width: 400px;
+        height: 400px;
         border-radius: 50%;
     }
 
     .main__sub {
         position: absolute;
-        top: 72%;
+        top: 95%;
         font-family: $font-sub;
         font-weight: 500;
-        font-size: 3vw
+        font-size: 2.5vw
     }
 }
 
@@ -69,11 +69,12 @@
         img {
             width: 312px;
             height: 312px;
-            left: 25%;
-            top: 18%;
+            left: 20%;
+            top: 22%;
         }
         .main__sub {
-            top: 54%;
+            font-size: 5vw;
+            top: 73%;
         }
     }
 }
@@ -91,7 +92,8 @@
             top: 11%;
         }
         .main__sub {
-            top: 47%;
+            font-size: 5vw;
+            top: 62%;
         }
     }
 }
