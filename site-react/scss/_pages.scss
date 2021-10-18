@@ -1,0 +1,97 @@
+// #mainCont
+// #aboutCont
+// #referCont
+// #scriptCont
+// #portCont
+
+// #mainCont
+// #mainCont {
+//     background-color: #000;
+//     height: 100vh;
+//     color: #fff;
+//     font-family: $font-main;
+//     font-size: 9vw;
+//     line-height: .91;
+//     text-transform: uppercase;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     br {
+//         display: none;
+//     }
+// }
+
+#mainCont {
+    margin-top: 154px;
+    background-color: #f6f1ed;
+    height: 100vh;
+    color: #000;
+    font-family: $font-main;
+    font-size: 150px;
+    font-weight: bold;
+    line-height: 0.96;
+    text-transform: uppercase;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 71px;
+    position: relative;
+
+
+    div {
+        position: relative;
+        z-index: 1;
+        
+    }
+    img {
+        position: absolute;
+        left: 25%;
+        top: 25%;
+        width: 412px;
+        height: 412px;
+        border-radius: 50%;
+    }
+
+    .main__sub {
+        position: absolute;
+        top: 72%;
+        font-family: $font-sub;
+        font-weight: 500;
+        font-size: 3vw
+    }
+}
+
+@media (max-width: 800px){
+    #mainCont {
+        font-size: 14vw;
+
+        img {
+            width: 312px;
+            height: 312px;
+            left: 25%;
+            top: 18%;
+        }
+        .main__sub {
+            top: 54%;
+        }
+    }
+}
+
+
+
+@media (max-width: 600px){
+    #mainCont {
+        font-size: 14vw;
+
+        img {
+            width: 312px;
+            height: 312px;
+            left: 10%;
+            top: 11%;
+        }
+        .main__sub {
+            top: 47%;
+        }
+    }
+}

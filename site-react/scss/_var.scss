@@ -1,0 +1,23 @@
+
+$font-main : 'saol';
+$font-logo : 'Playfair Display';
+$font-sub : 'Rajdhani';
+$font-kor1 : 'Chosunilbo_myungjo';
+$font-kor2 : 'SCoreDreams';
+
+:root {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+@media (max-width : 1200px){
+    :root {
+        font-size: 14px;
+    }
+}
+
+@media (max-width : 800px){
+    :root {
+        font-size: 12px;
+    }
+}
