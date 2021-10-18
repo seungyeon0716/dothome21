@@ -993,8 +993,7 @@ body {
     top: 22%;
   }
   #mainCont .main__sub {
-    font-size: 5vw;
-    top: 73%;
+    display: none;
   }
 }
 @media (max-width: 600px) {
