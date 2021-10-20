@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Apple</title>
+    <style>
+        @font-face {
+            font-family: 'NEXONLv2Gothic';
+            font-weight: 300;
+            font-style: normal;
+            src: url(https://cdn.jsdelivr.net/gh/webfontworld/NEXONGothic/NEXONLv2GothicLight.woff) format('woff');
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'NEXONLv2Gothic';
+            font-weight: 400;
+            font-style: normal;
+            src: url(https://cdn.jsdelivr.net/gh/webfontworld/NEXONGothic/NEXONLv2Gothic.woff) format('woff');
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'NEXONLv2Gothic';
+            font-weight: 500;
+            font-style: normal;
+            src: url(https://cdn.jsdelivr.net/gh/webfontworld/NEXONGothic/NEXONLv2GothicMedium.woff) format('woff');
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'NEXONLv2Gothic';
+            font-weight: 700;
+            font-style: normal;
+            src: url(https://cdn.jsdelivr.net/gh/webfontworld/NEXONGothic/NEXONLv2GothicBold.woff) format('woff');
+            font-display: swap;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'NEXONLv2Gothic';
+        }
+        a {
+            text-decoration: none;
+        }
+        li {
+            list-style: none;
+        }
+        body {
+            height: 10000px;
+        }
+        .scroll {
+            position: fixed;
+            right: 10px; top: 10px;
+            width: 50px; height: 50px;
+            background: rgba(0,0,0,0.3);
+            text-align: center;
+            line-height: 50px;
+            color: #fff;
+            border-radius: 50%;
+            z-index: 10000;
+        }
+        #contents {
+
+        }
+        #section1 {
+            height: 7000px;
+        }
+        #section2 {
+            background: #000;
+            height: 7000px;
+        }
+        #section3 {}
+        #section4 {}
+        #section5 {}
+        #section6 {}
+        #section7 {}
+
+        img {
+            width: 100%;
+            vertical-align: top; 
+        }
+        .fixed {
+            position: fixed;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        /* section1 */
+        .s1Text1 {
+            font-size: 8vw;
+            font-weight: 700;
+        }
+        .s1Text2 {
+            font-size: 8vw;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+        .s1Text3 {
+            width: 100vw;
+        }
+        .s1Text3 img {
+            height: 100vh;
+            object-fit: cover;
+        }
+        .s1Text4 {
+            width: 30vw;
+            height: 30vw;
+            background: #000;
+            border-radius: 50%;
+        }
+        .s1Text4 span {
+            font-size: 4vw;
+            color: #fff;
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        /* section2 */
+        .s2Text1 {
+            font-size: 5vw;
+            text-align: center;
+            color: #fff;
+            white-space: nowrap;
+            font-weight: 700;
+            background-image: url(../assets/img/apple-text-bg.jpg);
+            background-size: cover;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-transform: capitalize;
+        }
+
+        .s2Text2 {
+            display: flex;
+            justify-content:space-between;
+            top: 30%;
+            color: #fff;
+            width: 55vw;
+            opacity: 0;
+        }
+        .s2Text2 h2 {
+            flex: 0 0 30%;
+            font-size: 2vw;
+            line-height: 1.3;        
+        }
+        .s2Text2 p {
+            flex: 0 0 60%;
+            font-size: 1.1vw;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        .s2Text3 {
+            width: 60vw;
+            height: 60vh;
+            background-image: url(../assets/img/apple-pad-mokup.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center top;
+            top: 70%;
+        }
+        .s2Text3 .img-wrap {
+            padding: 3.4%;
+        }
+        .s2Text3 .img-wrap img {
+            border-top-left-radius: 1vw;
+            border-top-right-radius: 1vw;
+        }
+        .s2Text3 .img-wrap .img1 {
+            display: flex;
+            position: relative;
+        }
+        .s2Text3 .img-wrap .img1 img {
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scroll">0</div>
+    <div id="contents">
+        <section id="section1">
+            <div class="s1Text1 fixed"
+                data-0 = "transform: translate(-50%, 0%); opacity:0;"
+                data-500 = "transform: translate(-50%, -50%); opacity:1;"
+                data-1000 = "transform: translate(-50%, -100%); opacity:0;"
+            > 안녕하세요!</div>
+            <div class="s1Text2 fixed"
+                data-1500 = "transform: translate(-50%, 0%); opacity:0;"
+                data-2000 = "transform: translate(-50%, -50%); opacity:1;"
+                data-2500 = "transform: translate(-50%, -50%); opacity:1;  font-size: 8vw;"
+                data-3500 = "transform: translate(-50%, -50%); opacity:1;  font-size: 0vw;"
+            > 프론트앤드 개발자입니다.
+            </div>
+            <div class="s1Text3 fixed"
+                data-3200 = "width: 0vw"
+                data-4200 = "width: 100vw"
+            > <img src="../assets/img/parallax.jpg" alt="이미지">
+            </div>
+            <div class="s1Text4 fixed"
+                data-3800 = "width: 0vw;  height: 0vw;"
+                data-4300 = "width: 40vw;  height: 40vw;"
+                data-5500 = "width: 40vw;  height: 40vw;"
+                data-6500 = "width: 250vw;  height: 250vw;"
+            > <span
+                data-3800 = "transform: translate(-50%, -50%) scale(0) rotate(-360deg)"
+                data-4300 = "transform: translate(-50%, -50%) scale(1) rotate(0deg)"
+                data-5500 = "transform: translate(-50%, -50%) scale(1) rotate(0deg)"
+                data-6500 = "transform: translate(-50%, -50%) scale(0) rotate(0deg)"
+            >Hello!</span>
+            </div>
+        </section>
+        <!-- //section1 -->
+
+        <section id="section2">
+            <div class="s2Text1 fixed"
+                data-7000 = "transform: translate(-50%,-50%) scale(1); top: 50%; opacity:0;"
+                data-8000 = "transform: translate(-50%,-50%) scale(1); top: 50%; opacity:1;"
+                data-9000 = "transform: translate(-50%,-50%) scale(0.7); top: 14%; opacity:1;"
+            > I've Been Working On Sites </div>
+            <div class="s2Text2 fixed"
+                data-9000 = "opacity: 0; top: 60%;"
+                data-10000 = "opacity: 1; top: 30%;"
+            >  
+                <h2>웹표준을 준수한<br>웹 표준 사이트 제작</h2>
+                <p>웹접근성지침서2.0을 바탕으로 사이트를 제작하였습니다. 
+                    웹 표준에 필요한 인식의 용이성, 운용의 용이성, 이해의 용이성, 
+                    견고성을 바탕으로 코딩을 하였으며, 크로스브라우징도 작업하였습니다.</p>
+            </div>
+            <div class="s2Text3 fixed"
+                data-8000 = "top: 210%; transform: translate(-50%,-50%) scale(3.4);"
+                data-9000 = "top: 70%; transform: translate(-50%,-50%) scale(1);"
+            >
+                <div class="img-wrap"
+                    data-11000 = ""
+                >
+                    <div class="img1">
+                        <img src="../assets/img/apple-site01.jpg" alt="사이트1">
+                        <img src="../assets/img/apple-site02.jpg" alt="사이트1">
+                        <img src="../assets/img/apple-site03.jpg" alt="사이트1">
+                        <img src="../assets/img/apple-site04.jpg" alt="사이트1">
+                    </div>
+                    <div class="img2"></div>
+                    <div class="img3"></div>
+                    <div class="img4"></div>
+                </div>
+            </div>
+        </section>
+        <!-- //section2 -->
+
+        <section id="section3"></section>
+        <!-- //section3 -->
+
+        <section id="section4"></section>
+        <!-- //section4 -->
+        
+        <section id="section5"></section>
+        <!-- //section5 -->
+
+        <section id="section6"></section>
+        <!-- //section6 -->
+
+        <section id="section7"></section>
+        <!-- //section7 -->
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+	<script>
+	    var s = skrollr.init();
+
+        window.addEventListener("scroll", function(){
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+
+            document.querySelector(".scroll").innerHTML = scrollTop;
+        });
+	</script>
+</body>
+</html>
