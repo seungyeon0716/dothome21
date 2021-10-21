@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parallax Effect</title>
+​
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
     <style>
         @font-face {
@@ -23,7 +24,7 @@
             margin: 0; padding: 0;
         }
         .parallax {
-            background: #dbccb2;
+            background: #222;
             color: #fff;
             font-family: 'NEXONLv1Gothic';
             font-weight: 400;
@@ -60,16 +61,15 @@
             box-sizing: border-box;
         }
         .content__item:nth-child(even){
-            background: #dbccb2;
+            background: #000;
         }
         .content__item__num {
             font-family: 'Lato';
             font-size: 25vw;
             line-height: 1;
-            /* opacity: 0.07; */
+            opacity: 0.07;
             position: absolute;
             right: 5vw; top: 0vw;
-            color: red;
         }
         .content__item__title {
             font-size: 2vw;
@@ -91,7 +91,12 @@
             height: 120%;
             background-repeat: no-repeat;
             background-size: cover;
+            background-position: center center;
             filter: saturate(0%);
+            transition: all 0.2s;
+        }
+        .content__item__img:hover {
+            filter: saturate(100%);
         }
         .content__item__desc {
             font-size: 4vw;
@@ -104,33 +109,36 @@
             padding-left: 30vw;
             padding-right: 10vw;
         }
+​
         .content__item:nth-child(1) .content__item__img {
-            background-image: url(https://webstoryboy.github.io/wtss/refer-effect/assets/img/bg1.jpg);
+            background-image: url(../assets/img/bg1.jpg);
         }
         .content__item:nth-child(2) .content__item__img {
-            background-image: url(https://webstoryboy.github.io/wtss/refer-effect/assets/img/bg2.jpg);
+            background-image: url(../assets/img/bg2.jpg);
         }
         .content__item:nth-child(3) .content__item__img {
-            background-image: url(https://webstoryboy.github.io/wtss/refer-effect/assets/img/bg3.jpg);
+            background-image: url(../assets/img/bg3.jpg);
         }
         .content__item:nth-child(4) .content__item__img {
-            background-image: url(https://webstoryboy.github.io/wtss/refer-effect/assets/img/bg4.jpg);
+            background-image: url(../assets/img/bg4.jpg);
         }
         .content__item:nth-child(5) .content__item__img {
-            background-image: url(https://webstoryboy.github.io/wtss/refer-effect/assets/img/bg5.jpg);
+            background-image: url(../assets/img/bg5.jpg);
         }
         .content__item:nth-child(6) .content__item__img {
-            background-image: url(https://webstoryboy.github.io/wtss/refer-effect/assets/img/bg6.jpg);
+            background-image: url(../assets/img/bg6.jpg);
         }
         .content__item:nth-child(7) .content__item__img {
-            background-image: url(https://webstoryboy.github.io/wtss/refer-effect/assets/img/bg7.jpg);
+            background-image: url(../assets/img/bg7.jpg);
         }
         .content__item:nth-child(8) .content__item__img {
-            background-image: url(https://webstoryboy.github.io/wtss/refer-effect/assets/img/bg8.jpg);
+            background-image: url(../assets/img/bg8.jpg);
         }
         .content__item:nth-child(9) .content__item__img {
-            background-image: url(https://webstoryboy.github.io/wtss/refer-effect/assets/img/bg9.jpg);
+            background-image: url(../assets/img/bg9.jpg);
         }
+​
+​
         /* nav */
         .paraNav {
             position: fixed;
@@ -160,200 +168,186 @@
             background: #fff;
             color: #000;
         }
-
+​
         /* info */
-        .info {
+        .paraScroll {
             position: fixed;
             left: 20px;
             bottom: 20px;
             z-index: 1000;
             background: rgba(0,0,0,.4);
-            border-radius: 5px;
-            padding: 10px 20px;
-        }
-        .info li {
-            list-style: none;
-            font-size: 12px;
-            padding: 2px;
             color: #fff;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 12px;
+            padding: 0px 20px;
         }
-        .character {
-            width: 400px;
-            height: 300px;
+        .paraInfo {
             position: fixed;
-            left: 50%; 
-            transform: translateX(-50%);
-            bottom: 0;
+            left: 20px;
+            bottom: 70px;
             z-index: 1000;
-            background-image: url(../assets/img/goy.gif);
+            background: rgba(0,0,0,.4);
+            color: #fff;
+            padding: 20px;
+            font-size: 12px;
+            line-height: 1.8;
+            border-radius: 10px;
         }
-        .character.walking {
-            animation: walk 0.8s steps(12, start) infinite;
-        }
-        .character.left {
-            background-position: 0 -300px;
-        }
-        .character.left.walking {
-            animation: backwalk 0.8s steps(12, start) infinite;
-        }
-        @keyframes walk {
-            0%   {background-position: 0 0;}
-            100% {background-position: 4800px 0;}
-        }
-        @keyframes backwalk {
-            0%   {background-position: 0 -300px;}
-            100% {background-position: -4800px -300px;}
+        .paraInfo li {
+            list-style: none;
         }
     </style>
 </head>
-
 <body class="parallax">
-
-    <div class="info">
+​
+    <!-- info -->
+    <div class="paraScroll">scrollTop() : <span>0</span>px</div>
+    <div class="paraInfo">
         <ul>
-            <li class="scrollTop">scrollTop() : <span>0</span>px</li>
-            <li class="contentWrapWidth">가로 전체 길이() : <span>0</span>px</li>
-
-            <li class="paraScrollTop">scrollTop() : <span>0</span>px</li>
-            <li class="paraScrollLeft">scrollLeft() : <span>0</span>px</li>
+            <li>전체 가로 값 : <span class="scrollTotalWidth">0</span>px</li>
+            <li>화면 가로 값 : <span class="wWidth">0</span>px</li>
+            <li>화면 세로 값 : <span class="wHeight">0</span>px</li>
+            <li>화면 가로 값 : <span class="nWidth">0</span>px</li>
+            <li>화면 세로 값 : <span class="nHeight">0</span>px</li>
+            <li>비율 값 : <span class="step">0</span>px</li>
+            <li>움직이는 세로 값 : <span class="goLeft">0</span>px</li>
         </ul>
     </div>
     <!-- //info -->
-
+​
     <header id="paraHeader">
-        <h1>Parallax Effect</h1>
+        <h1>Parallax Effect01</h1>
         <p>패럴랙스 스크롤링 효과 - 가로 모드</p>
     </header>
     <!-- //header -->
-
-    <div class="character"></div>
-  
+​
     <main id="paraCont">
         <div class="contentWrap">
             <section id="section1" class="content__item">
                 <span class="content__item__num">01</span>
-                <!-- <h2 class="content__item__title">Section1</h2>
+                <h2 class="content__item__title">Section1</h2>
                 <figure class="content__item__imgWrap">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc">높은 목표를 세우고, 스스로 채찍질 한다.</p> -->
+                <p class="content__item__desc">높은 목표를 세우고, 스스로 채찍질 한다.</p>
             </section>
             <!-- //section1 -->
+​
             <section id="section2" class="content__item">
                 <span class="content__item__num">02</span>
-                <!-- <h2 class="content__item__title">Section2</h2>
+                <h2 class="content__item__title">Section2</h2>
                 <figure class="content__item__imgWrap">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc">결과도 중요하지만, 과정을 더 중요하게 생각한다.</p> -->
+                <p class="content__item__desc">결과도 중요하지만, 과정을 더 중요하게 생각한다.</p>
             </section>
             <!-- //section2 -->
+​
             <section id="section3" class="content__item">
                 <span class="content__item__num">03</span>
-                <!-- <h2 class="content__item__title">Section3</h2>
+                <h2 class="content__item__title">Section3</h2>
                 <figure class="content__item__imgWrap">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc">매 순간에 최선을 다하고, 끊임없이 변화한다.</p> -->
+                <p class="content__item__desc">매 순간에 최선을 다하고, 끊임없이 변화한다.</p>
             </section>
             <!-- //section3 -->
+​
             <section id="section4" class="content__item">
                 <span class="content__item__num">04</span>
-                <!-- <h2 class="content__item__title">Section4</h2>
+                <h2 class="content__item__title">Section4</h2>
                 <figure class="content__item__imgWrap">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc">모든지 기본을 중요하게 생각하고 행동한다.</p> -->
+                <p class="content__item__desc">모든지 기본을 중요하게 생각하고 행동한다.</p>
             </section>
             <!-- //section4 -->
+​
             <section id="section5" class="content__item">
                 <span class="content__item__num">05</span>
-                <!-- <h2 class="content__item__title">Section5</h2>
+                <h2 class="content__item__title">Section5</h2>
                 <figure class="content__item__imgWrap">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc">열정을 잃지 않고 실패에서 실패로 걸어가는 것이 성공이다.</p> -->
+                <p class="content__item__desc">열정을 잃지 않고 실패에서 실패로 걸어가는 것이 성공이다.</p>
             </section>
             <!-- //section5 -->
+​
             <section id="section6" class="content__item">
                 <span class="content__item__num">06</span>
-                <!-- <h2 class="content__item__title">Section6</h2>
+                <h2 class="content__item__title">Section6</h2>
                 <figure class="content__item__imgWrap">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc">천 마디 말보단 하나의 행동이 더 값지다.</p> -->
+                <p class="content__item__desc">천 마디 말보단 하나의 행동이 더 값지다.</p>
             </section>
             <!-- //section6 -->
+​
             <section id="section7" class="content__item">
                 <span class="content__item__num">07</span>
-                <!-- <h2 class="content__item__title">Section7</h2>
+                <h2 class="content__item__title">Section7</h2>
                 <figure class="content__item__imgWrap">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc">조그만 성공에 만족하지 않으며, 방심을 경계한다.</p> -->
+                <p class="content__item__desc">조그만 성공에 만족하지 않으며, 방심을 경계한다.</p>
             </section>
             <!-- //section7 -->
+​
             <section id="section8" class="content__item">
                 <span class="content__item__num">08</span>
-                <!-- <h2 class="content__item__title">Section8</h2>
+                <h2 class="content__item__title">Section8</h2>
                 <figure class="content__item__imgWrap">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc">나는 내가 더 노력할수록 운이 더 좋아진다는 걸 발견했다</p> -->
+                <p class="content__item__desc">나는 내가 더 노력할수록 운이 더 좋아진다는 걸 발견했다</p>
             </section>
             <!-- //section8 -->
+​
             <section id="section9" class="content__item">
                 <span class="content__item__num">09</span>
-                <!-- <h2 class="content__item__title">Section9</h2>
+                <h2 class="content__item__title">Section9</h2>
                 <figure class="content__item__imgWrap">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc">꿈이 있다면, 그 꿈을 잡고 절대 놓아주지마라.</p> -->
+                <p class="content__item__desc">꿈이 있다면, 그 꿈을 잡고 절대 놓아주지마라.</p>
             </section>
             <!-- //section9 -->
         </div>
     </main>
     <!-- //main -->
-
-
+​
+​
     <!-- script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script>
-        const contentWrap = $(".contentWrap").width();
-        $("body").css("height", contentWrap);
-        const scrollHeight = $(window).height();
+        const contentWrap = $(".contentWrap");
+        const contentItem = $(".content__item");
+​
         let lastScrollTop = 0;
-
+        let scrollTotalWidth = contentWrap.width();
+        $("body").height(scrollTotalWidth);
+        
+​
         $(window).scroll(function(){
             let scrollTop = $(window).scrollTop();
-
-            $(".contentWrap").css({"transform": "translateX(" + -scrollTop + "px)"})
-
-            clearTimeout($.data(this, "scrollCheck"));
-
-            // 움직이지 않았을 때
-            $.data(this, "scrollCheck", setTimeout(function(){
-                $(".character").removeClass("walking");
-            }, 50));
-
-            // 움직일때
-            if(scrollTop > lastScrollTop){
-                $(".character").removeClass("left");
-                $(".character").addClass("walking");
-            } else {
-                $(".character").addClass("left");
-                $(".character").addClass("walking");
-            }
-            lastScrollTop = scrollTop;
-
-
-            // 출력
-            $(".scrollTop span").text(parseInt(scrollTop));
-            $(".contentWrapWidth span").text(parseInt(contentWrap));
-        })
-    
+​
+​
+            //출력
+            $(".paraScroll span").text(scrollTop);
+            $(".wWidth").text(wWidth);
+            $(".wHeight").text(wHeight);
+            $(".nWidth").text(nWidth);
+            $(".nHeight").text(nHeight);
+            $(".step").text(step);
+            $(".goLeft").text(goLeft);
+        });
+​
+        //출력
+        $(".scrollTotalWidth").text(scrollTotalWidth);
     </script>
 </body>
 </html>
