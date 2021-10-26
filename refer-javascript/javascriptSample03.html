@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font.css">
+    <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism-okaidia.min.css" integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @font-face {
+            font-family: 'NEXON Lv1 Gothic OTF';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'NEXON Lv1 Gothic OTF';
+        }
+        body {
+            padding: 5%;
+            margin-bottom: 400px;
+        }
+        h1 {
+            padding-bottom: 20px;
+        }
+        hr {
+            margin: 5% 0;
+            border-style: dashed;
+            border-color: #e6e6e6;
+            border-width: 1px;
+        }
+        img {
+            vertical-align: top;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        .sample {
+            border: 1px solid #e6e6e6;
+            border-radius: 5px;
+        }
+        .sample h2 {
+            position: relative;
+            font-size: 16px;
+            background-color: #f2f2f2;
+            padding: 15px;
+            border-bottom: 1px solid #e6e6e6;
+            border-radius: 5px 5px 0 0;
+        }
+        .sample h2 .dot {
+            width: 10px;
+            height: 10px;
+            background: #989898;
+            display: block;
+            border-radius: 50%;
+            position: absolute;
+            right: 30px;
+            top: 20px;
+        }
+        .sample h2 .dot::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #989898;
+            border-radius: 50%;
+            position: absolute;
+            left: -15px;
+            top: 0;
+        }
+        .sample h2 .dot::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #989898;
+            position: absolute;
+            border-radius: 50%;
+            right: -15px; 
+            top: 0;
+        }
+        .sample .ex {
+            padding: 20px;
+        }
+        .sample .ex .text {
+            margin: 10px 0;
+        }
+        .sample .re {
+            padding: 20px;
+            border-top: 1px solid #e6e6e6;
+        }
+        .sample .re a {
+            color: #333;
+            text-decoration: none;
+            border: 1px solid #333;
+            border-radius: 30px;
+            padding: 10px 30px;
+            margin: 5px;
+            display: inline-block;
+        }
+        .sample .re a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+        .sample .problem {
+            padding: 25px;
+            border-bottom: 1px solid #e6e6e6;
+            line-height: 1.6;
+        }
+        .sample pre {margin: 0 !important; border-radius: 0;;}
+        .sample .desc {
+            padding: 25px;
+            border-bottom: 1px solid #e6e6e6;
+        }
+        .sample .desc dt {
+            padding: 3px 0;
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        .sample .desc dd {
+            padding: 3px 0 16px 0;
+            line-height: 1.6;
+        }
+        .sample .sam {
+            padding: 25px;
+            border-bottom: 1px solid #e6e6e6;
+        }
+        .sample .sam dt {
+            padding: 3px 0;
+            margin-bottom: 6px;
+        }
+        .sample .sam dd {
+            padding: 3px 0 16px 0;
+        }
+        ol {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+        ol li {
+            border: 1px solid #000;
+            display: inline-block;
+            width: 40px; height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+        }
+        ol li.active {
+            background: #000;
+        }
+        ol li.active a {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Javascript 알고리즘 공부하기</h1>
+    <ol>
+        <li><a href="javascriptSample01.html">01</a></li>
+        <li><a href="javascriptSample02.html">02</a></li>
+        <li class="active"><a href="javascriptSample03.html">03</a></li>
+        <li><a href="javascriptSample04.html">04</a></li>
+        <li><a href="javascriptSample05.html">05</a></li>
+        <li><a href="javascriptSample06.html">06</a></li>
+        <li><a href="javascriptSample07.html">07</a></li>
+        <li><a href="javascriptSample08.html">08</a></li>
+        <li><a href="javascriptSample09.html">09</a></li>
+        <li><a href="javascriptSample10.html">10</a></li>
+    </ol>
+
+    <div id="sample1" class="sample">
+        <h2>1부터 N까지 합 출력하기<span class="dot"></span></h2>
+        <p class="problem">Q : 자연수 N이 입력되면 1부터 N까지의 합을 출력하는 프로그램을 작성하시오.
+        </p>
+        <div class="desc">
+            <dl>
+                <dt><i class="fa fa-bullhorn" aria-hidden="true"></i> 입력 설명</dt>
+                <dd>20이하의 자연수 N이 입력됩니다.</dd>
+                <dt><i class="fa fa-bullhorn" aria-hidden="true"></i> 출력 설명</dt>
+                <dd>1부터 N까지의 합이 출력됩니다.</dd>
+            </dl>
+            <!-- ul : 목록형 태그(순서X)
+            ol : 목록형 태그(순서o)
+            dd : 정의형 목록형 태그 -->
+        </div>
+        <div class="sam">
+            <dl>
+                <dt><i class="fa fa-keyboard-o" aria-hidden="true"></i> 입력 예제</dt>
+                <dd>10</dd>
+                <dt><i class="fa fa-line-chart" aria-hidden="true"></i> 출력 예제</dt>
+                <dt>55</dt>
+            </dl>
+        </div>
+        <div class="code">
+<pre class="line-number"><code class="language-js"> function solution(num){
+    let answer = 0;
+
+    for(let i=1; i&lt;=num; i++){
+        answer += i;
+    }
+    return answer;
+}
+console.log(solution(10));
+</pre></code>
+        </div>
+    </div>
+
+    <hr>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
+    <script>
+       function solution(num){
+            let answer = 0;
+
+            for(let i=1; i<=num; i++){
+                answer += i;
+            }
+            return answer;
+        }
+        console.log(solution(10));
+    </script>
+</body>
+</html>
