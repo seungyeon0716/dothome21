@@ -109,6 +109,9 @@
             padding: 1vw;
             background-color: rgb(207, 232, 228);
         }
+        .cardWrap.is-disabled {
+            pointer-events: none;
+        }
         .cardWrap .card {
             width: 8vw;
             height: 20vh;
@@ -201,7 +204,7 @@
             <div class="score">
                 <p class="turns">기회 : <span>5</span>번</p>
                 <p class="attempts">시도 : <span>0</span></p>
-                <p class="wins">우승 : <span>0</span></p>
+                <p class="wins">성공 : <span>0</span></p>
             </div>
         </article>
         <div class="success">
@@ -209,7 +212,7 @@
             <div class="score">
                 <p class="turns">기회 : <span>5</span></p>
                 <p class="attempts">시도 : <span>0</span></p>
-                <p class="wins">우승 : <span>0</span></p>
+                <p class="wins">성공 : <span>0</span></p>
             </div>
             <button class="btn-continue">다시 도전하기</button>
         </div>
@@ -307,6 +310,7 @@
               selectedClass = "is-selected"
               playSoundClass = "is-playing",
               visibleClass = "is-visible",
+              playStop = "is-disabled",
               timeoutLength = 400;
 
         let sound  = [
@@ -350,12 +354,15 @@
 
             // 만약에 카드1와 카드2가 같다면 dataMatched -> true로 변경
             if(selectedCards.length == 2){
+                // 버그 방지
+                $cardWrap.addClass(playStop);
                 card1 = selectedCards.eq(0).attr(dataType);
                 card2 = selectedCards.eq(1).attr(dataType);
 
                 if(card1 == card2){
                     // 만약에 카드1과 카드2가 같으면 dataMatched -> true로 변경 / 음악 재생(정답)
                     selectedCards.attr(dataMatch, true).removeClass(selectedClass);
+                    $cardWrap.removeClass(playStop);
 
                     // 성공 음악 재생 //음악 off -> 재생 x
                     if($btnSound.hasClass(playSoundClass)){
@@ -372,6 +379,7 @@
                         turnsCount--;
                         $turns.html(turnsCount);
                         selectedCards.removeClass(selectedClass);
+                        $cardWrap.removeClass(playStop);
                     }, timeoutLength);
 
                     // 기회가 없을 때 시도 +1 기회 +5
