@@ -165,10 +165,10 @@
     
     <h1>Javascript 알고리즘 공부하기</h1>
     <ol>
-        <li class="active"><a href="javascriptSample01.html">01</a></li>
+        <li><a href="javascriptSample01.html">01</a></li>
         <li><a href="javascriptSample02.html">02</a></li>
         <li><a href="javascriptSample03.html">03</a></li>
-        <li><a href="javascriptSample04.html">04</a></li>
+        <li class="active"><a href="javascriptSample04.html">04</a></li>
         <li><a href="javascriptSample05.html">05</a></li>
         <li><a href="javascriptSample06.html">06</a></li>
         <li><a href="javascriptSample07.html">07</a></li>
@@ -178,16 +178,18 @@
     </ol>
 
     <div id="sample1" class="sample">
-        <h2>세 수 중 최솟값<span class="dot"></span></h2>
-        <p class="problem">Q : 100이하의 자연수 A, B, C를 입력받아 세 수 중 가장 작은 값을
-            출력하는 프로그램을 작성하세요.
+        <h2>홀수<span class="dot"></span></h2>
+        <p class="problem">Q : 7개의 수가 주어지면 그 숫자 중 가장 작은 수를 출력하는 프로그램을 작성하시오.
+            예를 들어 7개의 자연수 12, 77, 38, 41, 53, 92, 85가 주어지면 이 중 홀수는 
+            77, 41, 53, 85이므로 그 합은 256이 되고
+            최소값은 41이 됩니다.
         </p>
         <div class="desc">
             <dl>
                 <dt><i class="fa fa-bullhorn" aria-hidden="true"></i> 입력 설명</dt>
-                <dd>첫 번째 줄에 100이하의 세 자연수가 입력된다.</dd>
+                <dd>자연수 7개가 주어지고 주어지는 자연수를 100보다 작고 홀수는 한 개 이상 반드시 존재합니다.</dd>
                 <dt><i class="fa fa-bullhorn" aria-hidden="true"></i> 출력 설명</dt>
-                <dd>첫 번째 줄에 가장 작은 수를 출력한다.</dd>
+                <dd>홀수의 합을 출력하고, 홀수 중에 최소값을 출력합니다.</dd>
             </dl>
             <!-- ul : 목록형 태그(순서X)
             ol : 목록형 태그(순서o)
@@ -196,121 +198,64 @@
         <div class="sam">
             <dl>
                 <dt><i class="fa fa-keyboard-o" aria-hidden="true"></i> 입력 예제</dt>
-                <dd>10 50 85</dd>
+                <dd>12 77 38 41 53 92 85</dd>
                 <dt><i class="fa fa-line-chart" aria-hidden="true"></i> 출력 예제</dt>
-                <dt>10</dt>
+                <dt>256 41</dt>
             </dl>
         </div>
         <div class="code">
-<pre class="line-number"><code class="language-js">function solution(a,b,c){
-    let answer;
+<pre class="line-number"><code class="language-js"> function solution(num){
+let answer = [];
+let sum = 0;
+let min = Number.MAX_SAFE_INTEGER;
 
-    if( a &lt; b ){
-        answer = a;
+    for(let x of arr){
+        if( x  % 2 === 1 ){
+            sum += x;
+
+            if( x &lt; min ){
+                min = x;
+            }
+        }
     } 
-    if( c &lt; answer ){
-        answer = c;
-    }
+    answer.push(sum);   
+    answer.push(min);   
+
     return answer;
 }
-console.log(solution(10, 50, 85));
+let arr = [12, 77, 38, 41, 53, 92, 85];
+console.log(solution(arr));
 </pre></code>
         </div>
     </div>
 
     <hr>
 
-    <div id="sample1" class="sample">
-        <h2>최솟값 구하기<span class="dot"></span></h2>
-        <p class="problem">Q : 7개의 수가 주어지면 그 숫자 중 가장 작은 수를 출력하는 프로그램을 작성하시오.
-        </p>
-        <div class="desc">
-            <dl>
-                <dt><i class="fa fa-bullhorn" aria-hidden="true"></i> 입력 설명</dt>
-                <dd>7개의 수가 주어진다.</dd>
-                <dt><i class="fa fa-bullhorn" aria-hidden="true"></i> 출력 설명</dt>
-                <dd>가장 작은 수를 출력한다.</dd>
-            </dl>
-            <!-- ul : 목록형 태그(순서X)
-            ol : 목록형 태그(순서o)
-            dd : 정의형 목록형 태그 -->
-        </div>
-        <div class="sam">
-            <dl>
-                <dt><i class="fa fa-keyboard-o" aria-hidden="true"></i> 입력 예제</dt>
-                <dd>5 3 7 11 2 15 17</dd>
-                <dt><i class="fa fa-line-chart" aria-hidden="true"></i> 출력 예제</dt>
-                <dt>2</dt>
-            </dl>
-        </div>
-        <div class="code">
-<pre class="line-number"><code class="language-js">let arr = [5, 3, 7, 11, 2, 15, 17];
-function solution(num){
-    let answer;
-    let min = 2;
-
-    for(let i=0; i&lt;arr.lengthl; i++){
-        if(arr[i] &lt; min){
-            min = arr[i];
-        }
-    }
-    answer = min;
-    return answer;
-}
-console.log(solution(arr));
-
-function solution2(){
-    let answer = Math.min(5, 3, 7, 11, 2, 15, 17);
-
-    return answer;
-}
-console.log(solution2());
-
-function solution3(arr3){
-    let answer = Math.min(...arr3);
-
-    return answer;
-}
-let arr3 = [5, 3, 7, 11, 2, 15, 17];
-console.log(solution3(arr3));
-</pre></code>
-        </div>
-    </div>
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
     <script>
-        let arr = [5, 3, 7, 11, 2, 15, 17];
+       function solution(num){
+           let answer = [];
+           let sum = 0;
+           let min = Number.MAX_SAFE_INTEGER;
 
-        function solution(num){
-            let answer;
-            let min = 2;
+            for(let x of arr){
+                if( x  % 2 === 1 ){
+                    sum += x;
 
-            for(let i=0; i<arr.lengthl; i++){
-                if(arr[i] < min){
-                    min = arr[i];
+                    if( x < min ){
+                        min = x;
+                    }
                 }
-            }
-            answer = min;
+            } 
+            answer.push(sum);   
+            answer.push(min);   
+
             return answer;
         }
+        let arr = [12, 77, 38, 41, 53, 92, 85];
         console.log(solution(arr));
-
-        function solution2(){
-            let answer = Math.min(5, 3, 7, 11, 2, 15, 17);
-
-            return answer;
-        }
-        console.log(solution2());
-
-        function solution3(arr3){
-            let answer = Math.min(...arr3);
-
-            return answer;
-        }
-        let arr3 = [5, 3, 7, 11, 2, 15, 17];
-        console.log(solution3(arr3));
     </script>
 </body>
 </html>
