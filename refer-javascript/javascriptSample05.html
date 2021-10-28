@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font.css">
+    <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism-okaidia.min.css" integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @font-face {
+            font-family: 'NEXON Lv1 Gothic OTF';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'NEXON Lv1 Gothic OTF';
+        }
+        body {
+            padding: 5%;
+            margin-bottom: 400px;
+        }
+        h1 {
+            padding-bottom: 20px;
+        }
+        hr {
+            margin: 5% 0;
+            border-style: dashed;
+            border-color: #e6e6e6;
+            border-width: 1px;
+        }
+        img {
+            vertical-align: top;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        .sample {
+            border: 1px solid #e6e6e6;
+            border-radius: 5px;
+        }
+        .sample h2 {
+            position: relative;
+            font-size: 16px;
+            background-color: #f2f2f2;
+            padding: 15px;
+            border-bottom: 1px solid #e6e6e6;
+            border-radius: 5px 5px 0 0;
+        }
+        .sample h2 .dot {
+            width: 10px;
+            height: 10px;
+            background: #989898;
+            display: block;
+            border-radius: 50%;
+            position: absolute;
+            right: 30px;
+            top: 20px;
+        }
+        .sample h2 .dot::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #989898;
+            border-radius: 50%;
+            position: absolute;
+            left: -15px;
+            top: 0;
+        }
+        .sample h2 .dot::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #989898;
+            position: absolute;
+            border-radius: 50%;
+            right: -15px; 
+            top: 0;
+        }
+        .sample .ex {
+            padding: 20px;
+        }
+        .sample .ex .text {
+            margin: 10px 0;
+        }
+        .sample .re {
+            padding: 20px;
+            border-top: 1px solid #e6e6e6;
+        }
+        .sample .re a {
+            color: #333;
+            text-decoration: none;
+            border: 1px solid #333;
+            border-radius: 30px;
+            padding: 10px 30px;
+            margin: 5px;
+            display: inline-block;
+        }
+        .sample .re a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+        .sample .problem {
+            padding: 25px;
+            border-bottom: 1px solid #e6e6e6;
+            line-height: 1.6;
+        }
+        .sample pre {margin: 0 !important; border-radius: 0;;}
+        .sample .desc {
+            padding: 25px;
+            border-bottom: 1px solid #e6e6e6;
+        }
+        .sample .desc dt {
+            padding: 3px 0;
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        .sample .desc dd {
+            padding: 3px 0 16px 0;
+            line-height: 1.6;
+        }
+        .sample .sam {
+            padding: 25px;
+            border-bottom: 1px solid #e6e6e6;
+        }
+        .sample .sam dt {
+            padding: 3px 0;
+            margin-bottom: 6px;
+        }
+        .sample .sam dd {
+            padding: 3px 0 16px 0;
+        }
+        ol {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+        ol li {
+            border: 1px solid #000;
+            display: inline-block;
+            width: 40px; height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+        }
+        ol li.active {
+            background: #000;
+        }
+        ol li.active a {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Javascript 알고리즘 공부하기</h1>
+    <ol>
+        <li><a href="javascriptSample01.html">01</a></li>
+        <li><a href="javascriptSample02.html">02</a></li>
+        <li><a href="javascriptSample03.html">03</a></li>
+        <li><a href="javascriptSample04.html">04</a></li>
+        <li class="active"><a href="javascriptSample05.html">05</a></li>
+        <li><a href="javascriptSample06.html">06</a></li>
+        <li><a href="javascriptSample07.html">07</a></li>
+        <li><a href="javascriptSample08.html">08</a></li>
+        <li><a href="javascriptSample09.html">09</a></li>
+        <li><a href="javascriptSample10.html">10</a></li>
+    </ol>
+
+    <div id="sample1" class="sample">
+        <h2>홀수<span class="dot"></span></h2>
+        <p class="problem">Q : 서울시는 6월 1일부터 교통 혼잡을 막기위해서 자동차 10부제를 시행한다. 자동차 10부제는 자동차
+            번호의 일의 자리 숫자와 날짜의 일의 자리 숫자가 일치하면 자동차의 운행을 금지하는 것이다.
+            예를 들어 자동차 번호의 일의 자리 숫자가 7이면 7일, 17일, 27일에 운행하지 못한다.
+            또한 자동차 번호의 일의 자리가 숫자가 0이면 10일, 20일, 30일에는 운행하지 못한다.
+            여러분들이 일일 경찰관이 되어 10부제를 위반하는 자동차의 대수를 세는 봉사활동을 하려고 한다.
+            날짜의 일의 자리 숫자가 주어지고 7대의 자동차 번호의 끝 두자리 수가 주어졌을 때 위반하는 자동차의 대수를 출력하는
+            프로그램을 작성합니다.
+        </p>
+        <div class="desc">
+            <dl>
+                <dt><i class="fa fa-bullhorn" aria-hidden="true"></i> 입력 설명</dt>
+                <dd>날짜의 일의 자리 숫자가 주어지고, 7대의 자동차 번호의 끝 두자리가 주어진다.</dd>
+                <dt><i class="fa fa-bullhorn" aria-hidden="true"></i> 출력 설명</dt>
+                <dd>주어진 날짜와 자동차의 일의 자리 숫자를 10부제를 위반하는 차량의 대수를 출력한다.</dd>
+            </dl>
+            <!-- ul : 목록형 태그(순서X)
+            ol : 목록형 태그(순서o)
+            dd : 정의형 목록형 태그 -->
+        </div>
+        <div class="sam">
+            <dl>
+                <dt><i class="fa fa-keyboard-o" aria-hidden="true"></i> 입력 예제</dt>
+                <dd>3<br>25 23 11 47 53 17 33</dd>
+                <dt><i class="fa fa-line-chart" aria-hidden="true"></i> 출력 예제</dt>
+                <dt>3</dt>
+            </dl>
+        </div>
+        <div class="code">
+<pre class="line-number"><code class="language-js">function solution(day, arr){
+    let answer = 0;
+     
+    for( let x of arr ){
+        if( x % 10 === day ){
+         answer++;
+        }
+    }
+     return answer;
+ }
+ let arr = [25, 23, 11, 47, 53, 17, 33];
+ console.log(solution(3, arr));
+</pre></code>
+        </div>
+    </div>
+
+    <hr>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
+    <script>
+       function solution(day, arr){
+           let answer = 0;
+            
+           for( let x of arr ){
+               if( x % 10 === day ){
+                answer++;
+               }
+           }
+            return answer;
+        }
+        let arr = [25, 23, 11, 47, 53, 17, 33];
+        console.log(solution(3, arr));
+    </script>
+</body>
+</html>

@@ -67,6 +67,9 @@
         li {
             list-style: none;
         }
+        iframe {
+            border: 0;
+        }
         body {
             height: 10000px;
         }
@@ -95,10 +98,14 @@
         }
         #section3 {
             /* background: blue; */
-            height: 20000px;
+            height: 17000px;
             z-index: 3000;
         }
-        #section4 {}
+        #section4 {
+            background: black;
+            height: 13000px;
+            z-index: 4000;
+        }
         #section5 {}
         #section6 {}
         #section7 {}
@@ -380,58 +387,217 @@
                 display: inline-block;
             }
             .s3Text1 .s1 {
-                transform: translate(-20vw, -10vw);
+                transform: translate(-50vw, -20vw);
                 /* color: orange; */
             }
             .s3Text1 .s2 {
-                transform: translate(-20vw, 20vw);
+                transform: translate(-60vw, 20vw);
                 /* color: greenyellow; */
             }
             .s3Text1 .s3 {
-                transform: translate(-10vw, -20vw);
+                transform: translate(-70vw, -20vw);
                 /* color: cornflowerblue; */
             }
             .s3Text1 .s4 {
-                transform: translate(10vw, -20vw);
+                transform: translate(50vw, -20vw);
                 /* color: palegoldenrod; */
             }
             .s3Text1 .s5 {
-                transform: translate(10vw, 20vw);
+                transform: translate(60vw, 20vw);
                 /* color: violet; */
             }
             .s3Text1 .s6 {
-                transform: translate(30vw, 20vw);
+                transform: translate(70vw, 3vw);
                 /* color: mediumvioletred; */
+            }
+            .s3Text2 {
+                perspective: 600px;
+            }
+            .s3Text2 iframe {
+                width: 60vw;
+                height: 60vh;
+                transform-style: preserve-3d;
+                transform: translate3d(0,0,0);
+            }
+            .il-text {
+                position: absolute;
+                left: 0; top: 0%;
+            }
+            .il-text-desc  {
+                width: 60vw;
+                height: 60vh;
+                transform-style: preserve-3d;
+                transform: translate3d(0,0,0);
+                font-size: 20px;
+            }
+            .s3Text2 .i1, .i2, .i3 {
+                position: absolute;
+                left: 0; top: 0%;
             }
         </style>
         <section id="section3">
-            <div class="s3Text1 fixed">
+            <div class="s3Text1 fixed"
+                data-25000 = "top:150%; height: 0vh;"
+                data-27000 = "top:50%; height: 100vh;"
+                data-40000 = "top:50%; height: 100vh;"
+                data-41000 = "top:-50%; height: 100vh;"
+            >
                 <span class="s1"
-                    data-26000 = "transform: translate(-20vw, -10vw) scale(0.3); border-bottom: 0;"
-                    data-27000 = "transform: translate(0vw, -0vw) scale(1.2); border-bottom: 10px solid red;"
-                    data-32000 = "transform: translate(0vw, -0vw) scale(1.2); border-bottom: 10px solid red;"
-                    data-38000 = "transform: translate(-20vw, -20vw) scale(0.3); border-width: 10px solid red;"
+                    data-26000="transform: translate(-50vw, -20vw); font-size: 10vw; border-bottom: 0px solid #ffecd2;"
+                    data-27000="transform: translate(0vw, 0vw); font-size: 8vw;"
+                    data-30000="transform: translate(0vw, 0vw); font-size: 8vw; border-bottom: 10px solid #ffecd2;"
+                    data-32000="transform: translate(0vw, 0vw); font-size: 8vw;"
                 >s</span><span class="s2"
-                    data-27000 = "transform: translate(-20vw, 20vw) scale(0.3); border-bottom: 0;"
-                    data-28000 = "transform: translate(0vw, -0vw) scale(1.2); border-bottom: 10px solid orange;"
+                    data-26500="transform: translate(-60vw, 20vw); font-size: 10vw; border-bottom: 0px solid #fcb69f;"
+                    data-27500="transform: translate(0vw, 0vw); font-size: 8vw;"
+                    data-30000="transform: translate(0vw, 0vw); font-size: 8vw; border-bottom: 10px solid #fcb69f;"
+                    data-32000="transform: translate(0vw, 0vw); font-size: 8vw;"
                 >c</span><span class="s3"
-                    data-28000 = "transform: translate(-10vw, 20vw) scale(0.3); border-bottom: 0;"
-                    data-29000 = "transform: translate(0vw, -0vw) scale(1.2); border-bottom: 10px solid yellow;"
+                    data-27000="transform: translate(-70vw, -20vw); font-size: 10vw; border-bottom: 0px solid #ff9a9e;"
+                    data-28000="transform: translate(0vw, 0vw); font-size: 8vw;"
+                    data-30000="transform: translate(0vw, 0vw); font-size: 8vw; border-bottom: 10px solid #ff9a9e;"
+                    data-32000="transform: translate(0vw, 0vw); font-size: 8vw;"
                 >r</span><span class="s4"
-                    data-29000 = "transform: translate(10vw, -20vw) scale(0.3); border-bottom: 0;"
-                    data-30000 = "transform: translate(0vw, -0vw) scale(1.2); border-bottom: 10px solid greenyellow;"
+                    data-27500="transform: translate(50vw, -20vw); font-size: 10vw; border-bottom: 0px solid #fecfef;"
+                    data-28500="transform: translate(0vw, 0vw); font-size: 8vw;"
+                    data-30000="transform: translate(0vw, 0vw); font-size: 8vw; border-bottom: 10px solid #fecfef;"
+                    data-32000="transform: translate(0vw, 0vw); font-size: 8vw;"
                 >i</span><span class="s5"
-                    data-30000 = "transform: translate(10vw, 20vw) scale(0.3); border-bottom: 0;"
-                    data-31000 = "transform: translate(0vw, 0vw) scale(1.2); border-bottom: 10px solid blue;"
+                    data-28000="transform: translate(60vw, 20vw); font-size: 10vw; border-bottom: 0px solid #fbc2eb;"
+                    data-29000="transform: translate(0vw, 0vw); font-size: 8vw;"
+                    data-30000="transform: translate(0vw, 0vw); font-size: 8vw; border-bottom: 10px solid #fbc2eb;"
+                    data-32000="transform: translate(0vw, 0vw); font-size: 8vw;"
                 >p</span><span class="s6"
-                    data-31000 = " transform: translate(30vw, 20vw) scale(0.3); border-bottom: 0;"
-                    data-32000 = "transform: translate(0vw, 0vw) scale(1.2); border-bottom: 10px solid violet;"
+                    data-28500="transform: translate(70vw, 3vw); font-size: 10vw; border-bottom: 0px solid #fbc8d4;"
+                    data-29500="transform: translate(0vw, 0vw); font-size: 8vw;"
+                    data-30000="transform: translate(0vw, 0vw); font-size: 8vw; border-bottom: 10px solid #fbc8d4;"
+                    data-32000="transform: translate(0vw, 0vw); font-size: 8vw;"
                 >t</span>
+            </div>
+            <div class="s3Text2 fixed">
+                <div class="il-text">
+                   <div class="il-text-desc"></div> 
+                </div>
+                <iframe class="i1" src="../mouseEffect/javascriptME01.html" alt="mouse"
+                    data-33000 = "transform: translate3d(-80%, -50%, -10000px; opacity: 0"
+                    data-34000 = "transform: translate3d(-80%, -50%, 0px); opacity: 1"
+                    data-39000 = "transform: translate3d(-80%, -50%, 0px); opacity: 1"
+                    data-40000 = "transform: translate3d(-80%, -50%, 1000px); opacity: 0">
+                </iframe>
+                <iframe class="i2" src="../menuEffect/javascriptME01.html" alt="mouse"
+                    data-34000 = "transform: translate3d(-50%, -80%, -10000px; opacity: 0"
+                    data-35000 = "transform: translate3d(-50%, -80%, 0px); opacity: 1"
+                    data-38500 = "transform: translate3d(-50%, -80%, 0px); opacity: 1"
+                    data-39500 = "transform: translate3d(-50%, -80%, 1000px); opacity: 0">
+                </iframe>
+                <iframe class="i3" src="../parallaxEffect/javascriptPE01.html" alt="mouse"
+                    data-36000 = "transform: translate3d(-30%, -30%, -10000px; opacity: 0"
+                    data-37000 = "transform: translate3d(-30%, -30%, 0px); opacity: 1"
+                    data-38000 = "transform: translate3d(-30%, -30%, 0px); opacity: 1"
+                    data-39000 = "transform: translate3d(-30%, -30%, 1000px); opacity: 0">
+                </iframe>
             </div>
         </section>
         <!-- //section3 -->
 
-        <section id="section4"></section>
+        <style>
+            .s4Text1 {
+            }
+            .s4Text1 > div {
+                width: 10vw; height: 10vw;
+                background: #000;
+                border-radius: 50%;
+            }
+            .s4Text1 .cicle1 {
+                left: 20%; top: 20%;
+            }
+            .s4Text1 .cicle2 {
+                left: 80%; top: 50%;
+            }
+            .s4Text1 .cicle3 {
+                left: 40%; top: 60%;
+            }
+            .s4Text1 .cicle4 {
+                left: 90%; top: 10%;
+            }
+            .s4Text1 .cicle5 {
+                left: 20%; top: 90%;
+            }
+            .s4Text1 .cicle6 {
+                left: 40%; top: 30%;
+            }
+
+            .s4Text2 {
+               
+            }
+            .s4Text2 span {
+                font-size: 8vw;
+                background-image: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+                color: transparent;
+                -webkit-background-clip: text;
+            }
+            .s4Text3 iframe {
+                width: 60vw;
+                height: 60vh;
+                transform-style: preserve-3d;
+                transform: translate3d(-50%,-50%,0);
+            }
+            .s4Text3 .i1, .i2, .i3 {
+                position: absolute;
+                left: 0; top: 0%;
+            }
+        </style>
+        <section id="section4">
+            <div class="s4Text1"
+                data-0 = "display: none;"
+                data-39999 = "display: none;"
+                data-40000 = "display: block;"
+                data-43000 = "display: block;"
+                data-43001 = "display: none;"
+            >
+                <div class="cicle1 fixed"
+                    data-40000 = "width: 0vw; height: 0vw;"
+                    data-43000 = "width: 200vw; height: 200vw;"
+                ></div>
+                <div class="cicle2 fixed"
+                    data-40050 = "width: 0vw; height: 0vw;"
+                    data-42000 = "width: 200vw; height: 200vw;"
+                ></div>
+                <div class="cicle3 fixed"
+                    data-40100 = "width: 0vw; height: 0vw;"
+                    data-43000 = "width: 200vw; height: 200vw;"
+                ></div>
+                <div class="cicle4 fixed"
+                    data-40150 = "width: 0vw; height: 0vw;"
+                    data-44000 = "width: 200vw; height: 200vw;"
+                ></div>
+                <div class="cicle5 fixed"
+                    data-40200 = "width: 0vw; height: 0vw;"
+                    data-45000 = "width: 200vw; height: 200vw;"
+                ></div>
+                <div class="cicle6 fixed"
+                    data-40250 = "width: 0vw; height: 0vw;"
+                    data-46000 = "width: 200vw; height: 200vw;"
+                ></div>
+            </div>
+            <div class="s4Text2 fixed">
+                <div class="textt"   data-43000="top:80%; left: 50%;">
+                    <span>Animation</span> 
+                </div>
+                <!-- <div class="animation"   data-43000="opacity: 0">
+                    <iframe src="../parallaxEffect/codepen.html" frameborder="0"></iframe>
+                    <iframe src="../parallaxEffect/codepen2.html" frameborder="0"></iframe>
+                    <iframe src="../parallaxEffect/codepen3.html" frameborder="0"></iframe>
+                </div> -->
+            </div>
+            <div class="s4Text3 fixed">
+                <div class="animation">
+                    <iframe class="i1" src="../parallaxEffect/codepen.html" frameborder="0"></iframe>
+                    <iframe class="i2" src="../parallaxEffect/codepen2.html" frameborder="0"></iframe>
+                    <iframe class="i3" src="../parallaxEffect/codepen3.html" frameborder="0"></iframe>
+                </div>
+            </div>
+        </section>
         <!-- //section4 -->
         
         <section id="section5"></section>
