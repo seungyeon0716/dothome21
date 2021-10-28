@@ -542,9 +542,27 @@
                 transform-style: preserve-3d;
                 transform: translate3d(-50%,-50%,0);
             }
-            .s4Text3 .i1, .i2, .i3 {
+            .animation .i1, .i2, .i3 {
                 position: absolute;
                 left: 0; top: 0%;
+            }
+            .s4Text4 {
+                width: 60vw;
+                height: 60vh;
+                transform-style: preserve-3d;
+                transform: translate3d(-50%,-50%,0);
+            }
+            .s4Text5 {
+                width: 60vw;
+                height: 60vh;
+                transform-style: preserve-3d;
+                transform: translate3d(-50%,-50%,0);
+            }
+            .s4Text6 {
+                width: 60vw;
+                height: 60vh;
+                transform-style: preserve-3d;
+                transform: translate3d(-50%,-50%,0);
             }
         </style>
         <section id="section4">
@@ -580,8 +598,12 @@
                     data-46000 = "width: 200vw; height: 200vw;"
                 ></div>
             </div>
-            <div class="s4Text2 fixed">
-                <div class="textt"   data-43000="top:80%; left: 50%;">
+            <div class="s4Text2 fixed"
+                data-0 = "transform: translate(-50%, 80%); display: none;"
+                data-41000 = "transform: translate(-50%, 100%); display: block;"
+                data-43000 = "transform: translate(-50%, -250%); display: block;"
+            >
+                <div class="textt">
                     <span>Animation</span> 
                 </div>
                 <!-- <div class="animation"   data-43000="opacity: 0">
@@ -590,11 +612,29 @@
                     <iframe src="../parallaxEffect/codepen3.html" frameborder="0"></iframe>
                 </div> -->
             </div>
-            <div class="s4Text3 fixed">
+            <div class="s4Text3 fixed"
+                data-0 = "transform: translate(-50%, 80%); display: none;"
+                data-43100 = "transform: translate(-50%, 100%); display: block;"
+                data-45000 = "transform: translate(-50%, -100%); display: block;"
+            >
                 <div class="animation">
-                    <iframe class="i1" src="../parallaxEffect/codepen.html" frameborder="0"></iframe>
-                    <iframe class="i2" src="../parallaxEffect/codepen2.html" frameborder="0"></iframe>
-                    <iframe class="i3" src="../parallaxEffect/codepen3.html" frameborder="0"></iframe>
+                    <div class="s4Text4"
+                        data-43500 = "transform: translate(90%, -50%); display: block;"
+                        data-46000 = "transform: translate(-250%, -50%); display: block;">
+                        <iframe class="i1" src="../parallaxEffect/codepen.html" scrolling=“no” frameborder="0"></iframe>
+                    </div>
+                    <div class="s4Text5"
+                        data-43600 = "transform: translate(230%, -50%); display: block;"
+                        data-47000 = "transform: translate(-300%, -50%); display: block;"
+                    >
+                        <iframe class="i2" src="../parallaxEffect/codepen2.html" frameborder="0"></iframe>
+                    </div>
+                   <div class="s4Text6"
+                    data-43700 = "transform: translate(350%, -50%); display: block;"
+                    data-48000 = "transform: translate(-350%, -50%); display: block;"
+                   >
+                        <iframe class="i3" src="../parallaxEffect/codepen3.html" frameborder="0"></iframe>
+                   </div>
                 </div>
             </div>
         </section>
