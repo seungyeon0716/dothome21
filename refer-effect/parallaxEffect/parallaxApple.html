@@ -71,7 +71,7 @@
             border: 0;
         }
         body {
-            height: 10000px;
+            /* height: 6000px; */
         }
         .scroll {
             position: fixed;
@@ -103,10 +103,14 @@
         }
         #section4 {
             background: black;
-            height: 13000px;
+            height: 15000px;
             z-index: 4000;
         }
-        #section5 {}
+        #section5 {
+            /* background: orange; */
+            height: 5000px;
+            z-index: 5000;
+        }
         #section6 {}
         #section7 {}
 
@@ -602,6 +606,8 @@
                 data-0 = "transform: translate(-50%, 80%); display: none;"
                 data-41000 = "transform: translate(-50%, 100%); display: block;"
                 data-43000 = "transform: translate(-50%, -250%); display: block;"
+                data-47000 = "transform: translate(-50%, -250%); display: block;"
+                data-47500 = "transform: translate(-50%, 200%); display: none;"
             >
                 <div class="textt">
                     <span>Animation</span> 
@@ -614,24 +620,28 @@
             </div>
             <div class="s4Text3 fixed"
                 data-0 = "transform: translate(-50%, 80%); display: none;"
-                data-43100 = "transform: translate(-50%, 100%); display: block;"
+                data-44000 = "transform: translate(-50%, 100%); display: block;"
                 data-45000 = "transform: translate(-50%, -100%); display: block;"
             >
                 <div class="animation">
-                    <div class="s4Text4"
-                        data-43500 = "transform: translate(90%, -50%); display: block;"
-                        data-46000 = "transform: translate(-250%, -50%); display: block;">
+                    <div class="s4Text4 fixed"
+                        data-44100 = "transform: translate(100%, 20%); display: block;"
+                        data-46000 = "transform: translate(-250%, 20%); display: block;"
+                        data-46000 = "transform: translate(-250%, 20%); display: none;"
+                        >
                         <iframe class="i1" src="../parallaxEffect/codepen.html" scrolling=“no” frameborder="0"></iframe>
                     </div>
-                    <div class="s4Text5"
-                        data-43600 = "transform: translate(230%, -50%); display: block;"
-                        data-47000 = "transform: translate(-300%, -50%); display: block;"
+                    <div class="s4Text5 fixed"
+                        data-44500 = "transform: translate(230%, 20%); display: block;"
+                        data-47000 = "transform: translate(-300%, 20%); display: block;"
+                        data-48000 = "transform: translate(-300%, 20%); display: none;"
                     >
                         <iframe class="i2" src="../parallaxEffect/codepen2.html" frameborder="0"></iframe>
                     </div>
-                   <div class="s4Text6"
-                    data-43700 = "transform: translate(350%, -50%); display: block;"
-                    data-48000 = "transform: translate(-350%, -50%); display: block;"
+                   <div class="s4Text6 fixed"
+                    data-44800 = "transform: translate(350%, 20%); display: block;"
+                    data-48000 = "transform: translate(-350%, 20%); display: block;"
+                    data-49000 = "transform: translate(-350%, 20%); display: none;"
                    >
                         <iframe class="i3" src="../parallaxEffect/codepen3.html" frameborder="0"></iframe>
                    </div>
@@ -640,7 +650,49 @@
         </section>
         <!-- //section4 -->
         
-        <section id="section5"></section>
+        <style>
+            .s5Text1 {
+                font-family: 'NEXONLv1Gothic';
+            }
+            .texttt {
+                font-size: 10vw;
+                color: #fff;
+                white-space: nowrap;
+            }
+            .s5Text2 {
+                width: 55vw; height: 20vw;
+                border: 2px solid #fff;
+                border-radius: 10px;
+                background-color: #fff;
+                text-align: center;
+            }
+            .s5Text2 span {
+                display: block;
+                padding-top: 60px;
+                line-height: 2;
+                font-size: 2vw;
+                color: #000;
+                text-transform: uppercase;
+            }
+        </style>
+        <section id="section5">
+            <div class="s5Text1 fixed"
+                data-0 = "display: none;"
+                data-40000 = "transform: translate(150%, 20%); display: none;"
+                data-47600 = "transform: translate(-200%, -20%); display: block;"
+                data-49100 = "transform: translate(-50%, -20%); display: block;"
+                data-49500 = "transform: translate(-50%, -200%); display: block;"
+            ><div class="texttt">CONTACT ME</div>
+            </div>
+            <div class="s5Text2 fixed"
+                data-49000 = "transform: translate(-50%, -50%); display: none;"
+                data-49600 = "transform: translate(-50%, 200%); display: block;"
+                data-50000 = "transform: translate(-50%, -50%); display: block;"
+            >
+                <span>https://seungyeon0716.github.io/dothome21/</span>
+                <span>seungyeon716@naver.com</span>
+            </div>
+        </section>
         <!-- //section5 -->
 
         <section id="section6"></section>
