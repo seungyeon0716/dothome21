@@ -1,0 +1,438 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정부 24</title>
+    <style>
+        @font-face {
+            font-family: 'NEXONLv1Gothic';
+            font-weight: 300;
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'NEXONLv1Gothic';
+            font-weight: 400;
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'NEXONLv1Gothic';
+            font-weight: 700;
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff') format('woff');
+            font-style: normal;
+        }
+        * {
+            margin: 0; padding: 0;
+            font-family: 'NEXONLv1Gothic';
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        li {
+            list-style: none;
+        }
+
+
+        #wrap {
+            width: 1000px;
+            margin: 0 auto;
+            padding-top: 50px;
+        }
+        #aside {
+            float: left;
+            width: 250px;
+        }
+        #contents {
+            float: right;
+            width: 700px;
+        }
+        #footer {
+            float: left;
+        }
+
+
+
+        /* aside */
+        #aside h1 {
+            margin-bottom: 20px;
+        }
+        #aside h1 img {
+            width: 150px;
+        }
+        #aside .nav {}
+        #aside .nav ul {  
+        }
+        #aside .nav li {
+            position: relative;
+            padding: 10px;
+            padding-bottom: 10px;
+            
+        }
+        #aside .nav li a {
+            font-size: 18px;
+            font-weight: 700;
+        }
+        #aside .nav li.active a {
+            /*color: #2d66bb;*/
+        } 
+        #aside .subMenu {
+            width: 150px;
+            right: -140px; top: 0;
+            display: none;
+        }
+        #aside .subMenu li {}
+        #aside .subMenu li a {
+            display: block; 
+            font-size: 15px; 
+            color: #333; 
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        #aside .subMenu li a:hover {}
+
+        /* banner */
+        .banner {}
+        .slider-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .slider-img img {
+            width: 100%;
+        }
+        .slider-img {
+            width: 700;
+            height: 360px;
+            overflow: hidden;
+            margin: 10px;
+        }
+        .slider-inner {
+            position: relative;
+            overflow: hidden;
+            width: 700;
+            height: 1080;
+        }
+        .slider-inner .slider {
+            float: left;
+            width: 700;
+            height: 360px;
+            position: relative;
+        }
+        .slider-inner .slider::before {
+            position: absolute;
+            left: 5px; top: 5px;
+            background: rgba(0,0,0,.4);
+            color: #fff;
+            padding: 5px 10px 3px;
+        }
+        .slider-inner .slider img {
+            width: 700px;
+        }
+        .slider-inner .slider::before {content: attr(data-name);}
+        .slider-inner .slider:nth-child(1) {z-index: 5;}
+        .slider-inner .slider:nth-child(2) {z-index: 4;}
+        .slider-inner .slider:nth-child(3) {z-index: 3;}
+
+
+        /*tab*/
+        .tab {
+            padding: 40px 0;
+            height: 200px;
+            position: relative;
+            width: 100%;
+        }
+        .tab img {
+            width: 100px;
+        }
+        .tab ul {
+            text-align: center;
+        }
+        .tab ul li {
+            display: inline;
+            padding: 5px;
+        }
+        .tab ul li a {
+            font-size: 20px;
+            color: #ccc;
+        }
+        .tab ul li ul {
+            position: absolute;
+            left: 0; top: 100px; width: 100%;
+            overflow: hidden;
+        }
+        .tab ul li ul li {
+            width: 20%; 
+            float: left;
+            box-sizing: border-box;
+        }
+        .tab ul li ul li a {
+            font: 13px;
+            color: 000;
+        }
+        .tab ul li ul li a span {
+            display: block;
+            font-size: 15px;
+
+        }
+        .tab ul li.active a {
+            color: #000;
+        }
+
+
+        /*board*/
+        .board-wrap {
+            width: 95%;
+            height: 310px;
+            background: #f7f7f7;
+            padding: 15px;
+        }
+        .board {
+            position: relative;
+            float: left;
+            width: 32%;
+            padding: 6% 3%;
+            text-align: center;
+            margin-right: 2%;
+            background: #fff;
+            border: 2px solid #ccc;
+            box-sizing: border-box;
+        }
+        .board:last-child {
+            margin-right: 0;
+        }
+        .board h3 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .board img {
+            width: 100px;
+            padding: 20px 0;
+        }
+        .board ul {}
+        .board ul li {
+            font-size: 13px;
+            color: #444;
+            text-align: left;
+            padding-bottom: 5px;
+            overflow: hidden;
+            white-space: nowrap; 
+            text-overflow: ellipsis;
+        }
+        .board .more {
+            width: 30px;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+
+        /*footer*/
+        #footer {
+            width: 100%;
+            height: 120px;
+            background: #EDF2F8;
+            padding: 10px; 
+            box-sizing: border-box; 
+            margin-top: 20px;}
+        #footer h2 {
+            float: left;
+        }
+        #footer h2 img {
+            width: 70px;
+        }
+        #footer address {
+            float: left; 
+            font-style: normal; 
+            font-size: 15px;
+            padding: 20px 0 0 20px;
+        }
+        #footer .sns {
+            float: right; 
+            margin-top: 20px;
+        }
+        #footer .sns ul {
+            overflow: hidden;
+            padding-top: 10px;
+        }
+        #footer .sns li {}
+        #footer .sns li img {
+            width: 180px;
+        }
+    </style>
+
+</head>
+<body>
+   <div id="wrap">
+       <aside id="aside">
+           <h1><img src="img/Coding_img3_06.jpg" alt="상단로고"></h1>
+           <nav class="nav">
+               <ul>
+                   <li class="active"><a href="#">서비스</a>
+                       <ul class="subMenu">
+                           <li><a href="#">분야별 정책정보</a></li>
+                           <li><a href="#">정책뉴스</a></li>
+                           <li><a href="#">연구보고서</a></li>
+                           <li><a href="#">간행물</a></li>
+                           <li><a href="#">정책자료</a></li>
+                       </ul>
+                   </li>
+                   <li><a href="#">정책정보</a>
+                       <ul class="subMenu">
+                            <li><a href="#">분야별 정책정보</a></li>
+                            <li><a href="#">정책뉴스</a></li>
+                            <li><a href="#">연구보고서</a></li>
+                            <li><a href="#">간행물</a></li>
+                            <li><a href="#">정책자료</a></li>
+                       </ul>
+                   </li>
+                   <li><a href="#">기관정보</a>
+                       <ul class="subMenu">
+                            <li><a href="#">분야별 정책정보</a></li>
+                            <li><a href="#">정책뉴스</a></li>
+                            <li><a href="#">연구보고서</a></li>
+                            <li><a href="#">간행물</a></li>
+                            <li><a href="#">정책자료</a></li>
+                       </ul>
+                   </li>
+                   <li><a href="#">고객센터</a>
+                       <ul class="subMenu">
+                            <li><a href="#">분야별 정책정보</a></li>
+                            <li><a href="#">정책뉴스</a></li>
+                            <li><a href="#">연구보고서</a></li>
+                            <li><a href="#">간행물</a></li>
+                            <li><a href="#">정책자료</a></li>
+                       </ul>
+                   </li>
+               </ul>
+           </nav>
+       </aside>
+       <section id="contents">
+            <article class="banner">
+                <div class="slider-wrap">
+                    <div class="slider-img">
+                        <div class="slider-inner">
+                            <div class="slider" data-name="슬라이드1"><img src="img/Coding_img3_03.jpg" alt="슬라이드1"></div>
+                            <div class="slider" data-name="슬라이드2"><img src="img/Coding_img3_03.jpg" alt="슬라이드2"></div>
+                            <div class="slider" data-name="슬라이드3"><img src="img/Coding_img3_03.jpg" alt="슬라이드3"></div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="tab">
+                <ul>
+                    <li class="active"><a href="#">자주 찾는 서비스 |</a>
+                        <ul>
+                            <li><a href="#"><img src="img/Coding_img3_11.jpg" alt="이미지1"><span>주민등록표본<br>(초본) 교부</span></a></li>
+                            <li><a href="#"><img src="img/Coding_img3_13.jpg" alt="이미지2"><span>토지(임야)대장<br>열람/등본 발급신청</span></a></li>
+                            <li><a href="#"><img src="img/Coding_img3_15.jpg" alt="이미지3"><span>건축물대장 등/초본<br>발급(열람) 신청</span></a></li>
+                            <li><a href="#"><img src="img/Coding_img3_17.jpg" alt="이미지4"><span>지방세 납세증명</span></a></li>
+                            <li><a href="#"><img src="img/Coding_img3_19.jpg" alt="이미지5"><span>지적도(임야도) 등본<br>발급 및 열람</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">키워드 서비스</a>
+                        <ul style="display: none;">
+                            <li><a href="#"><img src="img/Coding_img3_13.jpg" alt="이미지5"><span>주민등록표본<br>(초본) 교부</span></a></li>
+                            <li><a href="#"><img src="img/Coding_img3_19.jpg" alt="이미지4"><span>토지(임야)대장<br>열람/등본 발급신청</span></a></li>
+                            <li><a href="#"><img src="img/Coding_img3_11.jpg" alt="이미지3"><span>건축물대장 등/초본<br>발급(열람) 신청</span></a></li>
+                            <li><a href="#"><img src="img/Coding_img3_15.jpg" alt="이미지2"><span>지방세 납세증명</span></a></li>
+                            <li><a href="#"><img src="img/Coding_img3_17.jpg" alt="이미지1"><span>지적도(임야도) 등본<br>발급 및 열람</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </article>
+            <article class="board-wrap">
+                <div class="board">
+                    <h3>공지사항</h3>
+                    <img src="img/Coding_img3_31.jpg" alt="공지사항">
+                    <ul>
+                        <li>[어디서나 대학민원] 호서대학교 팩스...</li>
+                        <li>[전라북도 고창군] 새올행정시스템...</li>
+                        <li>교육부 행정전자서명인증센터 시스템</li>
+                    </ul>
+                    <img src="img/Coding_img3_27.jpg" alt="more" class="more">
+                </div>
+                <div class="board">
+                    <h3>자료실</h3>
+                    <img src="img/Coding_img3_33.jpg" alt="자료실">
+                    <ul>
+                        <li>[어디서나 대학민원] 호서대학교 팩스...</li>
+                        <li>[전라북도 고창군] 새올행정시스템...</li>
+                        <li>교육부 행정전자서명인증센터 시스템</li>
+                    </ul>
+                    <img src="img/Coding_img3_27.jpg" alt="more" class="more">
+                </div>
+                <div class="board">
+                    <h3>FAQ</h3>
+                    <img src="img/Coding_img3_34.jpg" alt="FAQ"> 
+                    <ul>
+                        <li>[어디서나 대학민원] 호서대학교 팩스...</li>
+                        <li>[전라북도 고창군] 새올행정시스템...</li>
+                        <li>교육부 행정전자서명인증센터 시스템</li>
+                    </ul>
+                    <img src="img/Coding_img3_27.jpg" alt="more" class="more">
+                </div>
+            </article>
+       </section>
+       <footer id="footer">
+            <h2><img src="img/Coding_img3_40.jpg" alt="하단로고"></h2>
+            <address>
+                서울 특별시 세종대로 209 행정안전부<br>
+                정부 콜센터 1588-2188<br>
+                Copyright © All right reserved
+            </address>
+            <div class="sns">
+                <ul>
+                    <li><a href="#"><img src="img/sns.jpg" alt="sns"></a></li>
+                </ul>
+            </div>
+       </footer>
+
+       <!-- script -->
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+       <script>
+            //탭메뉴
+            $(".tab ul li").click(function(){
+                let target = $(this);
+                $(".tab ul li").removeClass("active");
+                target.addClass("active");
+
+                let index = target.index();
+                $(".tab ul li ul").css("display","none");
+                $(".tab ul li ul").eq(index).css("display","block");
+            });
+
+
+
+            //사이드 메뉴
+            $(".nav > ul > li").hover(
+                function(){
+                    $(this).find(".subMenu").stop().slideDown();
+                },function(){
+                    $(this).find(".subMenu").stop().slideUp();
+            });
+
+            //슬라이더        
+            const sliderWrap = $(".slider-wrap");
+            let currentIndex = 0;
+
+            const sliderImg = $(".slider-img");
+            const sliderInner = $(".slider-inner");
+            const slider = $(".slider");
+
+            let sliderHeight = slider.height();
+            
+            setInterval(function(){
+                sliderInner.animate({ top: -sliderHeight }, 700, "easeOutExpo", function(){
+                    $(".slider:first-child").appendTo(sliderInner);
+                    sliderInner.css("top","");
+                });
+            }, 3000);
+       </script>
+   </div> 
+</body>
+</html>
