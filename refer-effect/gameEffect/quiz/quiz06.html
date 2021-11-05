@@ -321,6 +321,41 @@
             cursor: pointer;
         }
 
+        .question__result {
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            background: #ccc;
+            padding: 30px;
+            display: none;
+        }
+        .question__result.show {
+            display: block;
+        }
+        .question__result .title {
+            font-size: 30px;
+            margin-bottom: 30px;
+        } 
+        .question__result .score {
+            font-size: 15px;
+            margin-bottom: 50px;
+        }
+        .question__result .score span {
+            color: red;
+        }
+        .question__result .buttons {
+            display: flex;
+        }
+        .question__result .buttons .question__restart {
+            font-family: 'DungGeunMo';
+            width: 150px; height: 50px;
+            border-radius: 5px;
+            border-bottom: 6px ridge #cacaca;
+            background: #fff;
+            color: #000;
+            margin-right: 10px;
+        }
+
         @media (max-width:1200px){
             .ham {display: block;}
             nav {
@@ -409,11 +444,20 @@
                     <!-- <span class="cu">1</span> / <span class="to">5</span> -->
                 </div>
                 <button class="question__answer__next ">다음 문제</button>
-                <!-- <div class="question__answer__view"></div>
-                <div class="question__answer__ex"></div> -->
+                <div class="question__answer__view"></div>
+                <div class="question__answer__ex"></div>
             </div>
         </div>
         <div class="question__start active"><span>start</span></div>
+        <div class="question__result">
+            <div class="title">퀴즈를 완성하였습니다. 축하합니다~</div>
+            <div class="score">
+                <!-- 축하합니다. 당신은 <span>(몇)</span> 문제 중에 <span>(몇)</span> 개를 맞추었습니다. -->
+            </div>
+            <div class="buttons">
+                <button class="question__restart">다시 도전하기</button>
+            </div>
+        </div>
     </div>
    
 
@@ -455,7 +499,7 @@
                     "점증",
                     "강조"
                 ],
-                quizEx: "시각 디자인의 4대 매체는 포스터 디자인, 신문 광고 디자인, TV 광고 디자인, 잡지 광고 디자인입니다."
+                quizEx: "바다 위의 빨깐 등대, 무성한 나뭇잎들 사이에서 핀 꽃, 별이 총총한 밤하늘에 뜬 달, 평평한 벽에 생긴 갈라진 틈 등은 강조를 나타낸 디자인입니다."
             }
         ]
         //선택자
@@ -466,14 +510,21 @@
         const questionSelect = quizWrap.querySelector(".question__answer__selects");
         const questionNext = quizWrap.querySelector(".question__answer__next");
         const questionLength = quizWrap.querySelector(".question__answer__count");
+        const questionAnswerView = quizWrap.querySelector(".question__answer__view");
+        const questionAnswerEx = quizWrap.querySelector(".question__answer__ex");
         const questionTimer = quizWrap.querySelector(".question__timer__sec");
         const questionTimerLine = quizWrap.querySelector(".question__timer__line");
-
+        const questionResult = quizWrap.querySelector(".question__result");
+        const questionResultScore = quizWrap.querySelector(".question__result .score");
+        const questionRestart = quizWrap.querySelector(".question__restart");
+        
+        
         
         let quizCount = 0;
         let quizNum = 1;
         let counter;
         let counterLine;
+        let userScore = 0;
         
         
        // 시작 버튼 클릭
@@ -485,6 +536,19 @@
             startTimerLine(0);
         };
 
+        // 다시 시작버튼 클릭
+        questionRestart.onclick = () => {
+            questionResult.classList.remove("show");
+            quizCount = 0;
+            quizNum = 1;
+            userScore = 0;
+
+            showQuestion(0);
+            questionCount(1);
+            startTimer(15);
+            startTimerLine(0);
+        }
+
         //문제 출력하기
         function showQuestion(index){
             let questionsTag = `
@@ -494,7 +558,7 @@
             let choiceTag = `
                 <label for="select1">
                     <input class="select" type="radio" name="select" id="select1" value="1">
-                    <span class="choice">${quizInfo[index].quizChoice[0]}</span>
+                    <span class="choice">${quizInfo[index].quizChoice[0]}<i></i></span>
                 </label>
                 <label for="select2">
                     <input class="select" type="radio" name="select" id="select2" value="2">
@@ -511,11 +575,18 @@
             `;
             questionTitle.innerHTML = questionsTag;
             questionSelect.innerHTML = choiceTag;
+            questionAnswerView.innerHTML = quizInfo[0].quizAnswer;
+            questionAnswerEx.innerHTML = quizInfo[0].quizEx;
+
             let choice = questionSelect.querySelectorAll(".choice");
 
             for( let i=0; i< choice.length; i++ ){
                 choice[i].setAttribute("onclick", "choiceSelected(this)")
             }
+
+            //정답, 설명 감추기
+            questionAnswerView.style.display = "none";
+            questionAnswerEx.style.display = "none";
         }
 
         //정답 확인하기
@@ -525,35 +596,62 @@
             let userAnswer = answer.textContent.trim();
             let currentAnswer = quizInfo[quizCount].quizAnswer.trim();
             let allChoices = questionSelect.children.length;
+            let iconYes = '<i class="fa fa-check-circle" aria-hidden="true"></i>';
+            let iconNo = '<i class="fa fa-times-circle" aria-hidden="true"></i>';
 
             if( userAnswer == currentAnswer ){
                 console.log("정답입니다.");
                 //클래스 추가 correct
                 answer.parentNode.classList.add("correct");
+                answer.insertAdjacentHTML("beforeend", iconYes);
+                userScore++;
+                questionAnswerView.style.display = "block";
             } else {
                 console.log("틀렸습니다.")
                 //클래스 추가 incorrect
                 answer.parentNode.classList.add("incorrect");
+                answer.insertAdjacentHTML("beforeend", iconNo);
+                questionAnswerEx.style.display = "block";
                 //틀렸을 때 정답 알려주기
                 for (let i=0; i<allChoices; i++) {
                     if (questionSelect.children[i].querySelector(".choice").textContent == currentAnswer){
                         questionSelect.children[i].classList.add("correct");
+                        questionSelect.children[i].querySelector(".choice").insertAdjacentHTML("beforeend", iconYes);
                     }
                 }
+
+                const p = document.createElement("p");
+                        questionSelect.appendChild(p).innerHTML = quizInfo[quizCount].quizEx;
             }
 
             //모든 문제 클래스 추가 disabled
             for( let i=0; i<allChoices; i++ ){
                 questionSelect.children[i].classList.add("disabled");
             }
+
+            clearInterval(counter);
+            clearInterval(counterLine);
+            questionNext.classList.add("show");
         }
 
         //다음 문제 클릭시
         questionNext.onclick = () => {
-            quizCount++;
-            quizNum++;
-            showQuestion(quizCount);
-            questionCount(quizNum);
+            if( quizCount < quizInfo.length -1 ){
+                quizCount++;
+                quizNum++;
+                showQuestion(quizCount);
+                questionCount(quizNum);
+
+                questionNext.classList.remove("show");
+                clearInterval(counter);
+                clearInterval(counterLine);
+                startTimer(15);
+                startTimerLine(0);
+            } else {
+                clearInterval(counter);
+                clearInterval(counterLine);
+                showResult();
+            }
         }
 
         //문제 카운팅
@@ -605,6 +703,14 @@
                     clearInterval(counterLine);
                 }
             }, 10);        
+        }
+
+        // 결과 보여주기
+        function showResult(){
+            questionResult.classList.add("show")
+
+            const scoreTag = `축하합니다. 당신은 <span>${quizInfo.length}</span> 문제 중에 <span>${userScore}</span> 개를 맞추었습니다.`
+            questionResultScore.innerHTML = scoreTag
         }
 
     </script>
