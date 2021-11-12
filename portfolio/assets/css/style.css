@@ -1,0 +1,26 @@
+/* reset */
+* {
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+#wrap {}
+.container {
+    width: 1520px;
+    margin: 0 auto;
+}
+#header {}
+#main {}
+#contents {}
+#footer {}
+
+/* header */
+.head_img {}
+.head_menu {}
+.head_title {}
