@@ -34,6 +34,9 @@
 #p2 {
     background-color: #f1d9f2;
 }
+#p3 {
+    background-color: #fff;
+}
 #main {
     height: 1080px;
     display: flex;
@@ -53,11 +56,13 @@
 }
 .head_img .himg2 {
     position: absolute;
-    top: 521px;
+    height: 218px;
+    top: 492px;
 }
 .head_img .himg3 {
     position: absolute;
-    top: 788px;
+    top: 754px;
+    left: 670px;
 }
 .head_menu {
     float: right;
@@ -89,20 +94,24 @@
 }
 .head_title div {
     position: relative;
-    top: -50px;
+    top: -47px;
     width: 100%;
-    border: 2px solid #000;
+    border: 1px solid #000;
 }
 .head_scroll {
+    float: right;
     display: flex;
+    align-items: center;
+    margin-top: -73px;
 }
 .head_scroll span {
     font-family: "GmarketSans";
     font-weight: 700;
+    font-size: 30px;
 }
 .head_scroll img {
-    width: 80px;
-    height: 80px;
+    width: 200px;
+    height: 200px;
 }
 
 /* main */
@@ -117,10 +126,40 @@
     line-height: 0.96;
 }
 .main_title h3 {
+    font-weight: 100;
 }
 .main_img {
     width: 675px;
     height: 675px;
     border-radius: 50%;
+    padding-top: 52px;
     /* background: #000; */
 }
+
+/* contents */
+#p3 .container {
+    width: 100%;
+    position: relative;
+}
+.cont_img {
+    background-image: url(../img/Rectangle\ 10099.jpg);
+    background-repeat: no-repeat;
+}
+.cont_img img {
+    width: 100%;
+}
+.cont_title {
+    text-align: center;
+    position: absolute;
+    bottom: -19px; left: 255px;
+}
+.cont_box {
+    width: 1405px;
+    height: 440px;
+    background-color: #fff;
+
+}
+.cont_title span {
+
+}
+.cont_title em {}
