@@ -4,7 +4,7 @@
 }
 #wrap {}
 .container {
-    width: 1520px;
+    width: 1680px;
     margin: 0 auto;
 }
 #header {
@@ -17,12 +17,18 @@
 #p3 {
     background-color: #fff;
 }
+#p4 {}
 #main {
     height: 1080px;
     display: flex;
 }
-#cont1 {}
-#cont2 {}
+#cont1 {
+    margin-bottom: 300px;
+}
+#cont2 {
+}
+#cont3 {}
+
 #footer {}
 
 /* header */
@@ -141,7 +147,6 @@
     width: 1405px;
     height: 481px;
     background-color: #fff;
-
 }
 .cont_title span {
     font-weight: 100;
@@ -150,19 +155,89 @@
     font-weight: 800;
 }
 
-#p3 .container2 {
-    width: 1520px;
+#p4 .container {
+    width: 1680px;
     margin: 0 auto;
 }
 
-.cont_php {
-
+/* 01 */
+#p4 .img1 {
+    position: relative;
 }
-.cont_php img {}
-.cont_php h4 {}
-.cont_php h3 {}
-.cont_php .cont_line {}
-.cont_php .cont_desc {}
-.cont_php .cont_button {}
-.cont_php .cont_button .btn1 {}
-.cont_php .cont_button .btn2 {}
+.cont_img2 {
+    position: absolute;
+    left: 0; top: 350%;
+}
+.cont_img2 img {
+    width: 1500px;
+}
+.cont_php {
+    position: absolute;
+    right: 10%;
+    top: 388%;
+    text-align: right;
+    font-family: "GmarketSans";
+}
+.cont_php img {
+    margin-bottom: 10px;
+}
+.cont_php h4 {
+    font-size: 26px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.cont_php h3 {
+    font-size: 70px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.cont_php .cont_desc {
+    font-size: 24px;
+    font-weight: 300;
+    border-top: 1px solid #000;
+    padding-top: 40px;
+}
+.cont_button {
+    float: right;
+    margin-top: 60px;
+}
+.cont_button .btn1 {
+    width: 387px;
+    height: 59px;
+    background-color: #fff;
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 10px;
+    text-align: right;
+    padding-right: 20px;
+}
+.cont_button .btn2 {
+    width: 387px;
+    height: 59px;
+    background-color: #000;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    display: block;
+    text-align: right;
+    padding-right: 20px;
+}
+
+/* 02 */
+#p4 .img2 {
+    float: right;
+    position: relative;
+}
+#cont3 .cont_img2 {
+    position: absolute;
+    right: 0;
+    top: 450%;
+}
+#cont3 .cont_img2 img {}
+#cont3 .cont_php {}
+#cont3 img {}
+#cont3 .cont_button {}
+#cont3 .cont_button .btn1  {}
+#cont3 .cont_button .btn1  {}
