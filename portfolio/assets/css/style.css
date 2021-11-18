@@ -26,6 +26,14 @@
     text-align: right;
     display: block;
 }
+/* .menu .active {
+    border: 1px solid #000;
+    background-color: #000;
+    color: #fff;
+    width: 126px;
+    height: 36px;
+    float: right;
+} */
 .main {
     padding-top: 4.3vw;
 }
@@ -33,13 +41,11 @@
     white-space: nowrap;
     font-size: 7.5vw;
     font-weight: 300;
-    text-decoration: underline;
 }
 .main .mt1 {
 
 }
 .main .mt2 {
-    
     text-align: center;
 }
 .main .mt3 {
