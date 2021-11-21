@@ -1069,19 +1069,23 @@
 
 /* p15 */
 #p15 {
-    height: 200vh;
+    height: 120vh;
 }
 #p15 h2 {
     font-size: 70px;
     font-weight: 700;
+    margin-bottom: 15vh;
 }
 .ani_wrap1 {}
-.ani_img1 {}
+.ani_img1 {
+    display: flex;
+    justify-content: center;
+}
 .ani_img1 > div {
-    width: 20vw;
-    height: 20vw;
-    margin: 1vw;
-    float: left;  
+    width: 12vw;
+    height: 24vw;
+    margin: 0.2vw;
+    /* float: left; */
     perspective: 35.7vw;
 }
 .ani_img1 > div span {
@@ -1091,40 +1095,67 @@
     border-radius: 50%;
     background: url("../img/ani1.jpg");
     background-attachment: fixed;
-    background-size: cover;
+    background-size: cover; /* 나중에 여기 바꿔서 사진 크게 맞추기 */
     display: block;
     transition: all 0.4s;
     transform-style: preserve-3d;
     transform: rotateY(0deg);
 }
-.ani_img1>div span:nth-child(1) {
-    border-radius: 100px 0 0 100px;
+.ani_img1>div:nth-child(1) span {
+    border-radius: 300px 0 0 300px;
 }
-.ani_img1>div span:nth-child(2) {
-   border-radius: 0 100px 100px 0;
+.ani_img1>div:nth-child(2) span {
+    border-radius: 300px 0 0 300px;
 }
-.ani_view {}
-.ani_view a {}
+.ani_img1>div:nth-child(3) span {
+    border-radius: 300px 0 0 300px;
+}
+.ani_img1>div:nth-child(4) span {
+    border-radius: 0 300px 300px 0;
+}
+.ani_img1>div:nth-child(5) span {
+    border-radius: 0 300px 300px 0px;
+}
+.ani_img1>div:nth-child(6) span {
+    border-radius: 0 300px 300px 0;
+}
+.ani_view {
+    float: right;
+    margin-top: 10vh;
+}
+.ani_view a {
+    width: 272px;
+    height: 60px;
+    background-color: #000;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 10px 70px;
+}
 
 /* p16 */
 #p16 {
-    height: 200vh;
+    height: 120vh;
 }
 
 #p16 h2 {
     font-size: 70px;
     font-weight: 700;
+    margin-bottom: 15vh;
 }
 
 .ani_wrap2 {}
 
-.ani_img2 {}
+.ani_img2 {
+    display: flex;
+    justify-content: center;
+}
 
 .ani_img2>div {
-    width: 20vw;
-    height: 20vw;
-    margin: 1vw;
-    float: left;
+    width: 12vw;
+    height: 24vw;
+    margin: 0.2vw;
+    /* float: left; */
     perspective: 35.7vw;
 }
 
@@ -1136,43 +1167,61 @@
     background: url("../img/ani2.jpg");
     background-attachment: fixed;
     background-size: cover;
+    /* 나중에 여기 바꿔서 사진 크게 맞추기 */
     display: block;
     transition: all 0.4s;
     transform-style: preserve-3d;
     transform: rotateY(0deg);
 }
 
-.ani_img2>div span:nth-child(1) {
-    border-radius: 100px 0 0 100px;
+.ani_img2>div:nth-child(1) span {
+    border-radius: 300px 0 0 300px;
 }
 
-.ani_img2>div span:nth-child(2) {
-    border-radius: 0 100px 100px 0;
+.ani_img2>div:nth-child(2) span {
+    border-radius: 300px 0 0 300px;
 }
 
-.ani_view {}
+.ani_img2>div:nth-child(3) span {
+    border-radius: 300px 0 0 300px;
+}
 
-.ani_view a {}
+.ani_img2>div:nth-child(4) span {
+    border-radius: 0 300px 300px 0;
+}
+
+.ani_img2>div:nth-child(5) span {
+    border-radius: 0 300px 300px 0px;
+}
+
+.ani_img2>div:nth-child(6) span {
+    border-radius: 0 300px 300px 0;
+}
+
 
 /* p17 */
 #p17 {
-    height: 200vh;
+    height: 120vh;
 }
 
 #p17 h2 {
     font-size: 70px;
     font-weight: 700;
+    margin-bottom: 15vh;
 }
 
 .ani_wrap3 {}
 
-.ani_img3 {}
+.ani_img3 {
+    display: flex;
+    justify-content: center;
+}
 
 .ani_img3>div {
-    width: 20vw;
-    height: 20vw;
-    margin: 1vw;
-    float: left;
+    width: 12vw;
+    height: 24vw;
+    margin: 0.2vw;
+    /* float: left; */
     perspective: 35.7vw;
 }
 
@@ -1184,44 +1233,61 @@
     background: url("../img/ani3.jpg");
     background-attachment: fixed;
     background-size: cover;
+    /* 나중에 여기 바꿔서 사진 크게 맞추기 */
     display: block;
     transition: all 0.4s;
     transform-style: preserve-3d;
     transform: rotateY(0deg);
 }
 
-.ani_img3>div span:nth-child(1) {
-    border-radius: 100px 0 0 100px;
+.ani_img3>div:nth-child(1) span {
+    border-radius: 300px 0 0 300px;
 }
 
-.ani_img3>div span:nth-child(2) {
-    border-radius: 0 100px 100px 0;
+.ani_img3>div:nth-child(2) span {
+    border-radius: 300px 0 0 300px;
 }
 
-.ani_view {}
+.ani_img3>div:nth-child(3) span {
+    border-radius: 300px 0 0 300px;
+}
 
-.ani_view a {}
+.ani_img3>div:nth-child(4) span {
+    border-radius: 0 300px 300px 0;
+}
+
+.ani_img3>div:nth-child(5) span {
+    border-radius: 0 300px 300px 0px;
+}
+
+.ani_img3>div:nth-child(6) span {
+    border-radius: 0 300px 300px 0;
+}
+
 
 /* p18 */
 #p18 {
-    height: 100vh;
-    margin-bottom: 30vh;
+    height: 150vh;
 }
 
 #p18 h2 {
     font-size: 70px;
     font-weight: 700;
+    margin-bottom: 15vh;
 }
 
 .ani_wrap4 {}
 
-.ani_img4 {}
+.ani_img4 {
+    display: flex;
+    justify-content: center;
+}
 
 .ani_img4>div {
-    width: 20vw;
-    height: 20vw;
-    margin: 1vw;
-    float: left;
+    width: 12vw;
+    height: 24vw;
+    margin: 0.2vw;
+    /* float: left; */
     perspective: 35.7vw;
 }
 
@@ -1233,23 +1299,36 @@
     background: url("../img/ani4.jpg");
     background-attachment: fixed;
     background-size: cover;
+    /* 나중에 여기 바꿔서 사진 크게 맞추기 */
     display: block;
     transition: all 0.4s;
     transform-style: preserve-3d;
     transform: rotateY(0deg);
 }
 
-.ani_img4>div span:nth-child(1) {
-    border-radius: 100px 0 0 100px;
+.ani_img4>div:nth-child(1) span {
+    border-radius: 300px 0 0 300px;
 }
 
-.ani_img4>div span:nth-child(2) {
-    border-radius: 0 100px 100px 0;
+.ani_img4>div:nth-child(2) span {
+    border-radius: 300px 0 0 300px;
 }
 
-.ani_view {}
+.ani_img4>div:nth-child(3) span {
+    border-radius: 300px 0 0 300px;
+}
 
-.ani_view a {}
+.ani_img4>div:nth-child(4) span {
+    border-radius: 0 300px 300px 0;
+}
+
+.ani_img4>div:nth-child(5) span {
+    border-radius: 0 300px 300px 0px;
+}
+
+.ani_img4>div:nth-child(6) span {
+    border-radius: 0 300px 300px 0;
+}
 
 /* P19 */
 #p19 {
