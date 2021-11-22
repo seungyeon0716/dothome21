@@ -1425,12 +1425,15 @@
     font-size: 70px; 
     font-weight: 700;
     line-height: 1;
+    margin-bottom: 90px;
 }
 .right h3 {
     font-size: 24px;
     font-weight: 500;
+    margin-bottom: 15px;
 }
 .right p {
     font-weight: 24;
     font-weight: 300;
+    margin-bottom: 15px;
 }
