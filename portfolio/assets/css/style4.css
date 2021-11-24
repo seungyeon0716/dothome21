@@ -5,8 +5,9 @@
     /* background-color: #ccc; */
 }
 #content2 {
-    height: 2000px;
+    /* height: 2000px; */
     background-color: #F1D9F2;
+    padding-bottom: 3vw;
 }
 #content3 {
     height: 2000px;
@@ -204,17 +205,14 @@
         display: none;
     }
     .cont1 {
-        height: 40vh;
+        height: 100vh;
     }
     .ham {
         visibility: visible;
     }
 
     #content1 {
-        height: 40vh;
-    }
-    #content2 {
-        height: 220px;
+        height: 100vh;
     }
 
     .aboutDesc {
