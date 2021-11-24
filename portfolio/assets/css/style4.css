@@ -10,7 +10,6 @@
 }
 #content3 {
     height: 2000px;
-    background-color: #ccc;
 }
 #content4 {}
 #content5 {}
@@ -152,7 +151,6 @@
 .aboutTitle {
     margin: 5.5vw 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #ccc;
 }
 .aboutTitle .about1 {}
 .aboutTitle  strong {
@@ -174,18 +172,26 @@
 .aboutImg ul li {}
 .aboutImg ul li.active {}
 .aboutImg ul li.active img {}
-.aboutImg ul li img {}
+.aboutImg ul li img {
+    position: relative;
+    z-index: 1;
+}
 .aboutDesc {
-    width: 675px;
-    height: 675px;
+    width: 35vw;
+    height: 35vw;
     border-radius: 50%;
     background-color: #fff;
     position: absolute;
     right: 0;
-    bottom: 0;
+    top: 15vw;
 }
 .aboutDesc p {
-
+    font-weight: 300;
+    font-size: 1.1vw;
+    white-space: nowrap;
+    position: absolute;
+    right: 4.5vw;
+    bottom: 5.5vw;
 }
 
 
@@ -202,5 +208,16 @@
     }
     .ham {
         visibility: visible;
+    }
+
+    #content1 {
+        height: 40vh;
+    }
+    #content2 {
+        height: 220px;
+    }
+
+    .aboutDesc {
+        display: none;
     }
 }
