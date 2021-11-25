@@ -2,12 +2,13 @@
 #contents {}
 #content1 {
     height: 100vh;
+    padding: 0 0 10vw;
     /* background-color: #ccc; */
 }
 #content2 {
     /* height: 2000px; */
     background-color: #F1D9F2;
-    padding-bottom: 3vw;
+    padding: 10vw 0 10vw;
 }
 #content3 {
     height: 2000px;
@@ -153,33 +154,35 @@
     margin: 5.5vw 0;
     font-family: 'Poppins', sans-serif;
 }
-.aboutTitle .about1 {}
+/* .aboutTitle .active:hover .aboutImg .active {
+    display: block;
+} */
 .aboutTitle  strong {
     line-height: 0.9;
     font-weight: 100;
     font-size: 7vw;
+    cursor: pointer;
 }
-.aboutTitle  .bg {}
-.aboutTitle .about2 {}
-.aboutTitle .about3 {}
-.aboutTitle .about4 {}
-.aboutTitle .about5 {}
-.aboutTitle .about6 {}
+
 .aboutImg {
-    /* width: 40vw; */
-    margin: 2vw 0;
-}
-.aboutImg ul {}
-.aboutImg ul li {}
-.aboutImg ul li.active {}
-.aboutImg ul li.active img {}
-.aboutImg ul li img {
     position: relative;
     z-index: 1;
+    width: 40%;
+    margin: 2vw 0;
 }
+.aboutImg img {
+    position: absolute;
+    opacity: 0;
+}
+
+.aboutImg .show {
+    opacity: 1;
+    /* transition: ; */
+}
+
 .aboutName {
     position: absolute;
-    right: 5vw;
+    right: 4vw;
     top: 13vw;
 }
 .aboutName h2 {
@@ -193,7 +196,7 @@
     background-color: #fff;
     position: absolute;
     right: 0;
-    top: 15vw;
+    top: 16vw;
 }
 .aboutDesc p {
     font-weight: 300;
@@ -278,11 +281,20 @@
     .ham {
         visibility: visible;
     }
+    #content1 {
+        height: 40vh;
+    }
+    .cont1 {
+        height: 40vh;
+    }
 
     .aboutName {
         position: absolute;
-        right: 13vw;
-        top: 53vw;
+        right: 16vw;
+        top: 47vw;
+    }
+    .aboutImg {
+        width: 50%;
     }
     .aboutDesc {
         display: none;

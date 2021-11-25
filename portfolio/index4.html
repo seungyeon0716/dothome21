@@ -65,20 +65,18 @@
                         <div class="about6"><strong>creative</strong><span class="bg"></span></div>
                     </div>
                     <div class="aboutImg">
-                        <ul>
-                            <li class="active"><img src="assets/img/me.svg" alt="어바웃 이미지1"></li>
-                            <!-- <li><img src="assets/img/about2.svg" alt="어바웃 이미지2"></li>
-                            <li><img src="" alt=""></li>
-                            <li><img src="" alt=""></li>
-                            <li><img src="" alt=""></li>
-                            <li><img src="" alt=""></li>  -->
-                        </ul>
+                        <div><img class="aboImg1 show" src="assets/img/me.svg" alt="어바웃 이미지1"></div> 
+                        <div><img class="aboImg2" src="assets/img/about2.svg" alt="어바웃 이미지2"></div>
+                        <div><img class="aboImg3" src="assets/img/about3.svg" alt="어바웃 이미지3"></div>
+                        <div><img class="aboImg4" src="assets/img/about4.svg" alt="어바웃 이미지4"></div>
+                        <div><img class="aboImg5" src="assets/img/about5.svg" alt="어바웃 이미지5"></div>
+                        <div><img class="aboImg6" src="assets/img/about6.svg" alt="어바웃 이미지6"></div>
                     </div>
                     <div class="aboutName">
                         <h2>Heo Seung Yeon</h2>
                     </div>
                     <div class="aboutDesc">
-                        <p>
+                        <p> 
                             안녕하세요. 저는 신입  프론트앤드 허승연입니다.<br>
                             어릴 때부터 오빠가 하던 모든 것은 따라하고 싶던<br>
                             저는 개발자인 오빠를 보며 코딩에 대해 흥미를<br>
@@ -159,5 +157,29 @@
         <section id="content7"></section>
     </div>
     <!-- //contents -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        const content2 = document.getElementById("content2");
+        const aboutTitleList = document.querySelectorAll(".aboutTitle strong");
+        const aboutTitle = document.querySelector(".aboutTitle");
+        const aboutImg = document.querySelectorAll(".aboutImg img");
+        const aboutImgWrap = document.querySelector(".aboutImg");
+
+        //이미지 보여주기
+        aboutTitleList.forEach((list, index) => {
+            // console.log(index);
+            aboutTitle.addEventListener("mouseout", function () {
+                aboutImg[index].classList.remove("show");
+            });
+            list.addEventListener("mouseover", function () {
+                console.log(list)
+                aboutImg.forEach((el, imgIndex) => {
+                    el.classList.remove("show");
+                });
+                aboutImg[index].classList.add("show");
+            });
+        });
+    </script>
 </body>
 </html>
