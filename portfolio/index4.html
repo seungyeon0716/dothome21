@@ -160,24 +160,16 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-        const content2 = document.getElementById("content2");
-        const aboutTitleList = document.querySelectorAll(".aboutTitle strong");
-        const aboutTitle = document.querySelector(".aboutTitle");
-        const aboutImg = document.querySelectorAll(".aboutImg img");
-        const aboutImgWrap = document.querySelector(".aboutImg");
+        const aboutTitle = document.querySelectorAll('.aboutTitle div');
+        const aboutImg = document.querySelectorAll('.aboutImg img');
 
         //이미지 보여주기
-        aboutTitleList.forEach((list, index) => {
-            // console.log(index);
-            aboutTitle.addEventListener("mouseout", function () {
-                aboutImg[index].classList.remove("show");
-            });
-            list.addEventListener("mouseover", function () {
-                console.log(list)
-                aboutImg.forEach((el, imgIndex) => {
-                    el.classList.remove("show");
+        aboutTitle.forEach((element, index) => {
+            element.addEventListener('mouseover', () => {
+                aboutImg.forEach(el => {
+                    el.classList.remove('show');
                 });
-                aboutImg[index].classList.add("show");
+                aboutImg[index].classList.add('show');
             });
         });
     </script>
