@@ -1,0 +1,59 @@
+/* 여백 초기화 */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+button,
+figure,
+figcaption {
+    margin: 0;
+    padding: 0
+}
+
+/* 링크 초기화 */
+a {
+    color: #222;
+    text-decoration: none
+}
+
+/* 목록 초기화 */
+ol,
+ul {
+    list-style: none
+}
+
+/* 스타일 초기화 */
+strong {
+    font-weight: normal;
+}
+
+em {
+    font-style: normal;
+}
+
+/* img {
+    width: 100%;
+    vertical-align: top;
+} */
