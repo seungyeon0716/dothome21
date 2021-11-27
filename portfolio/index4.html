@@ -162,27 +162,31 @@
                     <h2><strong class="split">portfolio</strong><em class="split">site</em></h2>
                 </div>
             </div>
-            <div class="site_wrap s1">
-                <div class="container1">
-                    <div class="site odd">
-                        <div class="left">
-                            <img src="assets/img/apple mockup01.png"
-                                alt="dd" />
-                        </div>
-                        <div class="right">
-                            <img src="assets/img/1.svg" alt="me 이미지">
-                            <span>WEBSTANDARD SITE 01</span>
-                            <h3>PHP 사이트<div class="bg"></div></h3>
-                            <p>
-                                새로운 변화가 끊임없이 일어나는 웹 환경에서 <br>
-                                최신 트렌드에 뒤처지지 않기 위해 스터디 모임과 세미나에<br>
-                                많이 참여하여 핵심 사이트를 벤치마킹하고 업무 시간 외에도<br>
-                                꾸준히 부족한 부분과 유행하는 기술들을 공부하여<br>
-                                자기개발에 힘쓰겠습니다.
-                            </p>
-                            <div>
-                                <a href="http://hsysy716.dothome.co.kr/site-php/pages/main.php">SITE VIEW</a><br />
-                                <a href="#">CODE</a>
+            <div class="site_wrap">
+                <div class="site_box s1">
+                    <div class="container1">
+                        <div class="site odd">
+                            <div class="left">
+                                <img class="mockup" src="assets/img/apple mockup.png"
+                                    alt="dd">
+                                <div class="frame">
+                                    <img src="assets/img/phpSite.png" alt="php site 이미지">
+                                </div>
+                            </div>
+                            <div class="right">
+                                <img src="assets/img/1.svg" alt="me 이미지">
+                                <span>WEBSTANDARD SITE 01</span>
+                                <h3>PHP 사이트<div class="bg"></div></h3>
+                                <p>
+                                    새로운 변화가 끊임없이 일어나는 웹 환경에서 <br>
+                                    최신 트렌드에 뒤처지지 않기 위해 스터디 모임과 세미나에<br>
+                                    많이 참여하여 핵심 사이트를 벤치마킹하고 업무 시간 외에도<br>
+                                    꾸준히 부족한 부분과 유행하는 기술들을 공부하여<br>
+                                    자기개발에 힘쓰겠습니다.
+                                </p>
+                                <div>
+                                    <a href="http://hsysy716.dothome.co.kr/site-php/pages/main.php">SITE VIEW</a><br />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -197,7 +201,6 @@
     <!-- //contents -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         const aboutTitle = document.querySelectorAll('.aboutTitle div');
         const aboutImg = document.querySelectorAll('.aboutImg img');
@@ -221,55 +224,24 @@
             document.querySelector(".scroll").innerText = parseInt(scrollTop);
       
             nowScrollTop = true;
-        })
+        });
 
-        // $(window).scroll(function () {
-        //     let scrollTop = $(window).scrollTop();
-        //     $(".scroll").text(scrollTop);
+        // 사이트 소개 스크롤 - window.onload 조심하기
+        window.onload = () => {
+            let siteWrap = document.querySelectorAll('.site_wrap > div')
+            siteWrap.forEach(function(el) {
+                let imgHeight = el.querySelector('.frame img').clientHeight;
+                el.querySelector('.frame').addEventListener('mouseover', () => {
+                    el.style.transform = "translateY(-700px)";
+                    
+                });
+            });
+        };
 
-        //     nowScrollTop = true;
+        //div:not( :hover ){ ... }
 
-        //     // content3
-        //     if (scrollTop > $("#content3").offset().top / 1.5) {
-        //         gsap.to(".site_img", {
-        //             opacity: 1,
-        //             duration: 3,
-        //             ease: "power2.out"
-        //         })
-        //     }
-        //     if (scrollTop > $("#content3 .cont3").offset().top) {
-        //         gsap.to("#content3 .cont3 .site_img h2 strong span", {
-        //             opacity: 1,
-        //             y: 0,
-        //             stagger: 0.08
-        //         })
-        //         gsap.to("#content3 .cont3 .site_img h2 em span", {
-        //             opacity: 1,
-        //             y: 0,
-        //             stagger: 0.1,
-        //             delay: 0.5
-        //         })
-        //     }
+        // 이미지 height 값을 들고와서 -> transform translate 'y'
 
-        //     setInterval(() => {
-        //         if (nowScrollTop) {
-        //             nowScrollTop = false;
-        //             hasScroll();
-        //         }
-        //     }, 300);
-
-        //     function hasScroll() {
-        //         let scrollTop = $(this).scrollTop();
-
-        //         if (scrollTop > lastScrollTop) {
-        //             $(".nav").addClass("hide");
-        //         } else {
-        //             $(".nav").removeClass("hide");
-        //         }
-
-        //         lastScrollTop = scrollTop;
-        //     }
-        // });
     </script>
 </body>
 
