@@ -191,6 +191,33 @@
                         </div>
                     </div>
                 </div>
+                <div class="site_box s2">
+                    <div class="container1">
+                        <div class="site even">
+                            <div class="left">
+                                <img class="mockup" src="assets/img/apple mockup.png"
+                                    alt="dd">
+                                <div class="frame">
+                                    <img src="assets/img/megaSite.png" alt="mega site 이미지">
+                                </div>
+                            </div>
+                            <div class="right">
+                                <img src="assets/img/2.svg" alt="me 이미지">
+                                <span>WEBSTANDARD SITE 02</span>
+                                <h3>MEGABOX 사이트<div class="bg"></div></h3>
+                                <p>
+                                    메가박스 반응형 사이트 입니다. 이미지 슬라이더, 탭메뉴,<br>
+                                    모달 등 다양한 스크립트 요소를 활용 하였고, Swiper<br>
+                                    플러그인을 이용하여 css효과를 주었고, 크로스<br>
+                                    브라우징은 익스클로러 8버전부터 지원합니다.
+                                </p>
+                                <div>
+                                    <a href="https://seungyeon0716.github.io/dothome21/site-megabox/index.html">SITE VIEW</a><br />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="content4"></section>
@@ -227,16 +254,16 @@
         });
 
         // 사이트 소개 스크롤 - window.onload 조심하기
-        window.onload = () => {
-            let siteWrap = document.querySelectorAll('.site_wrap > div')
-            siteWrap.forEach(function(el) {
-                let imgHeight = el.querySelector('.frame img').clientHeight;
-                el.querySelector('.frame').addEventListener('mouseover', () => {
-                    el.style.transform = "translateY(-700px)";
+        // window.onload = () => {
+        //     let siteWrap = document.querySelectorAll('.site_wrap > div')
+        //     siteWrap.forEach(function(el) {
+        //         let imgHeight = el.querySelector('.frame img').clientHeight;
+        //         el.querySelector('.frame').addEventListener('mouseover', () => {
+        //             el.style.transform = "translateY(-700px)";
                     
-                });
-            });
-        };
+        //         });
+        //     });
+        // };
 
         //div:not( :hover ){ ... }
 
