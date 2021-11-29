@@ -218,16 +218,133 @@
                         </div>
                     </div>
                 </div>
+                <div class="site_box s3">
+                    <div class="container1">
+                        <div class="site odd">
+                            <div class="left">
+                                <img class="mockup" src="assets/img/apple mockup.png"
+                                    alt="dd">
+                                <div class="frame">
+                                    <img src="assets/img/teamSite.png" alt="team site 이미지">
+                                </div>
+                            </div>
+                            <div class="right">
+                                <img src="assets/img/3.svg" alt="me 이미지">
+                                <span>WEBSTANDARD SITE 03</span>
+                                <h3>새벽일기 사이트<div class="bg"></div></h3>
+                                <p>
+                                    조별 활동을 통하여 만든 사이트입니다.<br>
+                                    일용직 분들의 인금을 조금이라도 보장 받을 수 있게 하려는<br>
+                                    목적으로 만든 사이트로서 '새벽일기'라는<br>
+                                    주제로 작업하였습니다.
+                                </p>
+                                <div>
+                                    <a href="https://ducks1077.cafe24.com/main/mainOne.html">SITE VIEW</a><br />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="site_box s4">
+                    <div class="container1">
+                        <div class="site even">
+                            <div class="left">
+                                <img class="mockup" src="assets/img/apple mockup.png"
+                                    alt="dd">
+                                <div class="frame">
+                                    <img src="assets/img/reactSite.png" alt="react site 이미지">
+                                </div>
+                            </div>
+                            <div class="right">
+                                <img src="assets/img/4.svg" alt="me 이미지">
+                                <span>WEBSTANDARD SITE 04</span>
+                                <h3>REACT 사이트<div class="bg"></div></h3>
+                                <p>
+                                    웹 표준 지침서를 준수하여 코딩한 웹표준 사이트 입니다.<br>
+                                    모든 사용자가 웹사이트 이용에 불편이 없도록 대체<br>
+                                    텍스트로 웹 접근성을 고려하였습니다.
+                                </p>
+                                <div>
+                                    <a href="https://syreact.web.app/">SITE VIEW</a><br />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <section id="content4"></section>
+        <!-- //content3 -->
+
+        <section id="content4">
+            <div class="cont4">
+                <div class="site_img">
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span style="background: #fff"></span></div>
+                    <div><span style="background: #fff"></span></div>
+                    <div><span style="background: #fff"></span></div>
+                    <div><span style="background: #fff"></span></div>
+                    <div><span style="background: #fff"></span></div>
+                    <div><span style="background: #fff"></span></div>
+                    <div><span style="background: #fff"></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span style="background: #fff"></span></div>
+                    <div><span style="background: #fff"></span></div>
+                    <div><span style="background: #fff"></span></div>
+                    <div><span style="background: #fff"></span></div>
+                    <div><span style="background: #fff"></span></div>
+                    <div><span style="background: #fff"></span></div>
+                    <div><span style="background: #fff"></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <h2><strong class="split">portfolio</strong><em class="split">script</em></h2>
+                </div>
+            </div>
+        </section>
+        <!-- //content4 -->
         <section id="content5"></section>
         <section id="content6"></section>
         <section id="content7"></section>
     </div>
     <!-- //contents -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script>
         const aboutTitle = document.querySelectorAll('.aboutTitle div');
         const aboutImg = document.querySelectorAll('.aboutImg img');
@@ -251,6 +368,28 @@
             document.querySelector(".scroll").innerText = parseInt(scrollTop);
       
             nowScrollTop = true;
+
+            //section3 gsap
+            if (scrollTop > document.getElementById("content3").offsetTop / 1.5) {
+                gsap.to(".site_img", {
+                    opacity: 1,
+                    duration: 3,
+                    ease: "power2.out"
+                })
+            }
+            // if (scrollTop > document.querySelector("#content3 .cont3").offsetTop) {
+            //     gsap.to("#content3 .cont3 .site_img h2 .split", {
+            //         opacity: 1,
+            //         y: 0,
+            //         stagger: 0.08
+            //     })
+            //     gsap.to("#content3 .cont3 .site_img h2 .split", {
+            //         opacity: 1,
+            //         y: 0,
+            //         stagger: 0.1,
+            //         delay: 0.5
+            //     })
+            // }
         });
 
         // 사이트 소개 스크롤 - window.onload 조심하기
