@@ -774,7 +774,16 @@ figcaption {
   background: #fff;
   color: #000;
 }
+@media (max-width: 1410px) {
+  #nav li a {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 8px;
+  }
 
+}
 @media (max-width: 800px) {
   #contents h1 {
     font-size: 15vw;
