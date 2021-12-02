@@ -1017,11 +1017,11 @@
     display: flex;
 }
 
-.left {
+.footer .left {
     padding: 120px 0 0 100px;
 }
 
-.left img {
+.footer .left img {
     margin-bottom: 50px;
     width: 12vw;
     height: 12vw;
@@ -1029,41 +1029,41 @@
     object-fit: cover;
 }
 
-.left h3 {
+.footer .left h3 {
     font-size: 23px;
     font-weight: 500;
     margin-bottom: 15px;
 }
 
-.left .sns {
+.footer .left .sns {
     margin-top: 50px;
 }
 
-.left .sns img {
+.footer .left .sns img {
     margin-right: 50px;
     width: 2vw;
     height: 2vw;
     object-fit: cover;
 }
 
-.right {
+.footer .right {
     padding: 120px 0 0 250px;
 }
 
-.right h2 {
+.footer .right h2 {
     font-size: 70px;
     font-weight: 700;
     line-height: 1;
     margin-bottom: 60px;
 }
 
-.right h3 {
+.footer .right h3 {
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 15px;
 }
 
-.right p {
+.footer .right p {
     font-weight: 24;
     font-weight: 300;
     margin-bottom: 15px;
