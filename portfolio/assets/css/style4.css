@@ -17,10 +17,18 @@
     /* height: 2000px; */
 }
 #content5 {
-    height: 2000px;
+    /* height: 2000px; */
 }
-#content6 {}
-#content7 {}
+#content6 {
+    /* height: 2000px; */
+}
+#content7 {
+    /* height: 2000px; */
+}
+#footer {
+    background-color: #F1D9F2;
+    /* height: 2000px; */
+}
 
 .container {
     width: 100%;
@@ -300,11 +308,11 @@
     display: inline-block;
     transform: translateY(10vw);
 }
-.cont3 .site_img:hover>div:nth-child(even) span {
+/* .cont3 .site_img:hover>div:nth-child(even) span {
     transform: rotateY(180deg);
     width: 50%;
     height: 50%;
-}
+} */
 
 /* site-wrap */
 .site_wrap {
@@ -513,11 +521,11 @@
     transform: translateY(10vw);
 }
 
-.cont4 .site_img:hover>div:nth-child(even) span {
+/* .cont4 .site_img:hover>div:nth-child(even) span {
     transform: rotateY(180deg);
     width: 50%;
     height: 50%;
-}
+} */
 
 /* sec4 */
 .sec4 {
@@ -535,7 +543,7 @@
 .sec4 .script_wrap .script .left {
     width: 30%;
     position: relative;
-    top: -7vw;
+    /* top: -7vw; */
     z-index: 1;
 }
 .sec4 .script_wrap .script .left .script_img {}
@@ -556,7 +564,7 @@
     font-weight: 300;
 }
 .sec4 .script_wrap .script .left .script_btn {
-    margin-top: 50px;
+    margin-top: 40px;
 }
 .sec4 .script_wrap .script .left .script_btn a {
     width: 200px;
@@ -577,7 +585,7 @@
     position: absolute;
     right: 0;
     width: 56vw;
-    height: 28vw;
+    height: 38vw;
 }
 
 .script_wrap .script:nth-child(even) {
@@ -587,7 +595,8 @@
 .script_wrap .script:nth-child(even) .left {
     text-align: right;
     position: relative;
-    top: -7vw;
+    /* top: -7vw; */
+    width: 50%;
     z-index: 1;
 }
 .script_wrap .script:nth-child(even) .left .script_btn {
@@ -670,10 +679,394 @@
     transform: translateY(10vw);
 }
 
-.cont5 .site_img:hover>div:nth-child(even) span {
+/* .cont5 .site_img:hover>div:nth-child(even) span {
     transform: rotateY(180deg);
     width: 50%;
     height: 50%;
+} */
+
+/* sec5 */
+.sec5 {
+    font-family: "GmarketSans";
+    margin-top: 400px;
+}
+.sec5 .ani {
+    margin-bottom: 300px;
+}
+.sec5 .ani h2 {
+    font-size: 3vw;
+    font-weight: 700;
+    margin-bottom: 100px;
+}
+.ani_view {
+    float: right;
+    margin-top: 10vh;
+}
+
+.ani_view a {
+    width: 272px;
+    height: 60px;
+    background-color: #000;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 10px 70px;
+}
+
+/* ani_img1 */
+.sec5 .ani .ani_img1 {
+    display: flex;
+    justify-content: center;
+}
+
+.sec5 .ani .ani_img1>div {
+    width: 12vw;
+    height: 24vw;
+    margin: 0.2vw;
+    /* float: left; */
+    perspective: 35.7vw;
+}
+
+.sec5 .ani .ani_img1>div span {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 50%;
+    background: url("../img/ani1.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    /* 나중에 여기 바꿔서 사진 크게 맞추기 */
+    display: block;
+    transition: all 0.4s;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+}
+
+.sec5 .ani .ani_img1>div:nth-child(1) span {
+    border-radius: 300px 0 0 300px;
+}
+
+.sec5 .ani .ani_img1>div:nth-child(2) span {
+    border-radius: 300px 0 0 300px;
+}
+
+.sec5 .ani .ani_img1>div:nth-child(3) span {
+    border-radius: 300px 0 0 300px;
+}
+
+.sec5 .ani .ani_img1>div:nth-child(4) span {
+    border-radius: 0 300px 300px 0;
+}
+
+.sec5 .ani .ani_img1>div:nth-child(5) span {
+    border-radius: 0 300px 300px 0px;
+}
+
+.sec5 .ani .ani_img1>div:nth-child(6) span {
+    border-radius: 0 300px 300px 0;
+}
+
+/* ani_img2 */
+.sec5 .ani .ani_img2 {
+    display: flex;
+    justify-content: center;
+}
+
+.sec5 .ani .ani_img2>div {
+    width: 12vw;
+    height: 24vw;
+    margin: 0.2vw;
+    /* float: left; */
+    perspective: 35.7vw;
+}
+
+.sec5 .ani .ani_img2>div span {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 50%;
+    background: url("../img/ani2.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    /* 나중에 여기 바꿔서 사진 크게 맞추기 */
+    display: block;
+    transition: all 0.4s;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+}
+
+.sec5 .ani .ani_img2>div:nth-child(1) span {
+    border-radius: 300px 0 0 300px;
+}
+
+.sec5 .ani .ani_img2>div:nth-child(2) span {
+    border-radius: 300px 0 0 300px;
+}
+
+.sec5 .ani .ani_img2>div:nth-child(3) span {
+    border-radius: 300px 0 0 300px;
+}
+
+.sec5 .ani .ani_img2>div:nth-child(4) span {
+    border-radius: 0 300px 300px 0;
+}
+
+.sec5 .ani .ani_img2>div:nth-child(5) span {
+    border-radius: 0 300px 300px 0px;
+}
+
+.sec5 .ani .ani_img2>div:nth-child(6) span {
+    border-radius: 0 300px 300px 0;
+}
+
+/* ani_img3 */
+.sec5 .ani .ani_img3 {
+    display: flex;
+    justify-content: center;
+}
+
+.sec5 .ani .ani_img3>div {
+    width: 12vw;
+    height: 24vw;
+    margin: 0.2vw;
+    /* float: left; */
+    perspective: 35.7vw;
+}
+
+.sec5 .ani .ani_img3>div span {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 50%;
+    background: url("../img/ani3.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    /* 나중에 여기 바꿔서 사진 크게 맞추기 */
+    display: block;
+    transition: all 0.4s;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+}
+
+.sec5 .ani .ani_img3>div:nth-child(1) span {
+    border-radius: 300px 0 0 300px;
+}
+
+.sec5 .ani .ani_img3>div:nth-child(2) span {
+    border-radius: 300px 0 0 300px;
+}
+
+.sec5 .ani .ani_img3>div:nth-child(3) span {
+    border-radius: 300px 0 0 300px;
+}
+
+.sec5 .ani .ani_img3>div:nth-child(4) span {
+    border-radius: 0 300px 300px 0;
+}
+
+.sec5 .ani .ani_img3>div:nth-child(5) span {
+    border-radius: 0 300px 300px 0px;
+}
+
+.sec5 .ani .ani_img3>div:nth-child(6) span {
+    border-radius: 0 300px 300px 0;
+}
+
+/* ani_img4 */
+.sec5 .ani .ani_img4 {
+    display: flex;
+    justify-content: center;
+}
+
+.sec5 .ani .ani_img4>div {
+    width: 12vw;
+    height: 24vw;
+    margin: 0.2vw;
+    /* float: left; */
+    perspective: 35.7vw;
+}
+
+.sec5 .ani .ani_img4>div span {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 50%;
+    background: url("../img/ani4.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    /* 나중에 여기 바꿔서 사진 크게 맞추기 */
+    display: block;
+    transition: all 0.4s;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+}
+
+.sec5 .ani .ani_img4>div:nth-child(1) span {
+    border-radius: 300px 0 0 300px;
+}
+
+.sec5 .ani .ani_img4>div:nth-child(2) span {
+    border-radius: 300px 0 0 300px;
+}
+
+.sec5 .ani .ani_img4>div:nth-child(3) span {
+    border-radius: 300px 0 0 300px;
+}
+
+.sec5 .ani .ani_img4>div:nth-child(4) span {
+    border-radius: 0 300px 300px 0;
+}
+
+.sec5 .ani .ani_img4>div:nth-child(5) span {
+    border-radius: 0 300px 300px 0px;
+}
+
+.sec5 .ani .ani_img4>div:nth-child(6) span {
+    border-radius: 0 300px 300px 0;
+}
+
+/* cont6 */
+.cont6 {
+    font-family: "GmarketSans";
+    position: relative;
+    margin-top: 300px;
+    margin-bottom: 500px;
+}
+.cont6 .ready_line1 {
+    width: 100%;
+    border: 1px solid #000;
+}
+.cont6 h2 {
+    font-size: 160px;
+    font-weight: 500;
+    text-align: right;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    white-space: nowrap;
+}
+.cont6 .ready_img {
+    position: absolute;
+    left: 19%;
+    top: 23%;
+}
+.cont6 .ready_img img {
+    width: 9vw;
+    height: 9vw;
+    border-radius: 70%;
+    object-fit: cover;
+    padding: 0 15px;
+}
+.cont6 .ready_line2 {
+    width: 100%;
+    border: 1px solid #000;
+}
+
+/* cont7 */
+.cont7 {
+    margin-bottom: 500px;
+}
+.cont7 h3 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.cont7 h2 {
+    text-align: center;
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.skill {
+
+}
+
+.cont7 .skill_icon1 {
+    padding: 150px 0 100px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cont7 .skill_icon1 img {
+    margin: 0 7.5vw;
+}
+
+.cont7 .skill_icon2 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cont7 .skill_icon2 img {
+    margin: 0 6.6vw;
+}
+
+/* footer */
+.footer {
+    font-family: "GmarketSans";
+}
+.contact_wrap {
+    display: flex;
+}
+.contact_wrap img {
+    width: 30%;
+    height: 1000px;
+    object-fit: cover;
+}
+
+.contact {
+    display: flex;
+}
+
+.left {
+    padding: 120px 0 0 100px;
+}
+
+.left img {
+    margin-bottom: 50px;
+    width: 12vw;
+    height: 12vw;
+    border-radius: 70%;
+    object-fit: cover;
+}
+
+.left h3 {
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.left .sns {
+    margin-top: 50px;
+}
+
+.left .sns img {
+    margin-right: 50px;
+    width: 2vw;
+    height: 2vw;
+    object-fit: cover;
+}
+
+.right {
+    padding: 120px 0 0 250px;
+}
+
+.right h2 {
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 60px;
+}
+
+.right h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.right p {
+    font-weight: 24;
+    font-weight: 300;
+    margin-bottom: 15px;
 }
 
 
