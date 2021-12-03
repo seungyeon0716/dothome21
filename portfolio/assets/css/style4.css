@@ -538,7 +538,7 @@
 .sec4 .script_wrap .script {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 300px;
+    margin-bottom: 400px;
 }
 .sec4 .script_wrap .script .left {
     width: 30%;
@@ -557,18 +557,16 @@
     font-size: 4vw;
     font-weight: 700;
     white-space: nowrap;
-    margin-bottom: 20px;
+    margin-bottom: 1vw;
 }
 .sec4 .script_wrap .script .left p {
-    font-size: 1.2vw;
+    font-size: 1vw;
     font-weight: 300;
 }
 .sec4 .script_wrap .script .left .script_btn {
-    margin-top: 40px;
+    margin-top: 2vw;
 }
 .sec4 .script_wrap .script .left .script_btn a {
-    width: 200px;
-    display: block;
     background-color: #000;
     color: #fff;
     font-size: 1vw;
@@ -585,12 +583,12 @@
     position: absolute;
     right: 0;
     width: 56vw;
-    height: 38vw;
+    height: 28vw;
 }
 
 .script_wrap .script:nth-child(even) {
     flex-direction: row-reverse;
-    margin-bottom: 200px;
+    margin-bottom: 500px;
 }
 .script_wrap .script:nth-child(even) .left {
     text-align: right;
@@ -693,24 +691,34 @@
 .sec5 .ani {
     margin-bottom: 300px;
 }
+.sec5 .ani img {
+    width: 6vw;
+    height: 6vw;
+    border-radius: 70%;
+    object-fit: cover;
+}
 .sec5 .ani h2 {
     font-size: 3vw;
     font-weight: 700;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
+}
+.sec5 .ani p {
+    text-align: right;
+    margin-top: 3.8vw;
+    font-size: 1vw;
+    font-weight: 300;
 }
 .ani_view {
     float: right;
-    margin-top: 10vh;
+    margin-top: 3vh;
 }
 
 .ani_view a {
-    width: 272px;
-    height: 60px;
     background-color: #000;
     color: #fff;
-    font-size: 30px;
-    font-weight: 500;
-    padding: 10px 70px;
+    font-size: 1vw;
+    font-weight: 700;
+    padding: 10px 30px;
 }
 
 /* ani_img1 */
@@ -838,7 +846,7 @@
     height: 100%;
     background: #fff;
     border-radius: 50%;
-    background: url("../img/ani3.jpg");
+    background: url("../img/ani4.jpg");
     background-attachment: fixed;
     background-size: cover;
     /* 나중에 여기 바꿔서 사진 크게 맞추기 */
@@ -872,136 +880,11 @@
     border-radius: 0 300px 300px 0;
 }
 
-/* ani_img4 */
-.sec5 .ani .ani_img4 {
-    display: flex;
-    justify-content: center;
-}
 
-.sec5 .ani .ani_img4>div {
-    width: 12vw;
-    height: 24vw;
-    margin: 0.2vw;
-    /* float: left; */
-    perspective: 35.7vw;
-}
-
-.sec5 .ani .ani_img4>div span {
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    border-radius: 50%;
-    background: url("../img/ani4.jpg");
-    background-attachment: fixed;
-    background-size: cover;
-    /* 나중에 여기 바꿔서 사진 크게 맞추기 */
-    display: block;
-    transition: all 0.4s;
-    transform-style: preserve-3d;
-    transform: rotateY(0deg);
-}
-
-.sec5 .ani .ani_img4>div:nth-child(1) span {
-    border-radius: 300px 0 0 300px;
-}
-
-.sec5 .ani .ani_img4>div:nth-child(2) span {
-    border-radius: 300px 0 0 300px;
-}
-
-.sec5 .ani .ani_img4>div:nth-child(3) span {
-    border-radius: 300px 0 0 300px;
-}
-
-.sec5 .ani .ani_img4>div:nth-child(4) span {
-    border-radius: 0 300px 300px 0;
-}
-
-.sec5 .ani .ani_img4>div:nth-child(5) span {
-    border-radius: 0 300px 300px 0px;
-}
-
-.sec5 .ani .ani_img4>div:nth-child(6) span {
-    border-radius: 0 300px 300px 0;
-}
-
-/* cont6 */
-.cont6 {
-    font-family: "GmarketSans";
-    position: relative;
-    margin-top: 300px;
-    margin-bottom: 500px;
-}
-.cont6 .ready_line1 {
-    width: 100%;
-    border: 1px solid #000;
-}
-.cont6 h2 {
-    font-size: 160px;
-    font-weight: 500;
-    text-align: right;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    white-space: nowrap;
-}
-.cont6 .ready_img {
-    position: absolute;
-    left: 19%;
-    top: 23%;
-}
-.cont6 .ready_img img {
-    width: 9vw;
-    height: 9vw;
-    border-radius: 70%;
-    object-fit: cover;
-    padding: 0 15px;
-}
-.cont6 .ready_line2 {
-    width: 100%;
-    border: 1px solid #000;
-}
-
-/* cont7 */
-.cont7 {
-    margin-bottom: 500px;
-}
-.cont7 h3 {
-    text-align: center;
-    font-size: 20px;
-    font-weight: 300;
-}
-
-.cont7 h2 {
-    text-align: center;
-    font-size: 70px;
-    font-weight: 700;
-}
-
-.skill {
-
-}
-
-.cont7 .skill_icon1 {
-    padding: 150px 0 100px;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.cont7 .skill_icon1 img {
-    margin: 0 7.5vw;
-}
-
-.cont7 .skill_icon2 {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.cont7 .skill_icon2 img {
-    margin: 0 6.6vw;
-}
 
 /* footer */
 .footer {
+    margin-top: 300px;
     font-family: "GmarketSans";
 }
 .contact_wrap {
@@ -1041,8 +924,8 @@
 
 .footer .left .sns img {
     margin-right: 50px;
-    width: 2vw;
-    height: 2vw;
+    width: 2.2vw;
+    height: 2.2vw;
     object-fit: cover;
 }
 
@@ -1067,6 +950,28 @@
     font-weight: 24;
     font-weight: 300;
     margin-bottom: 15px;
+}
+.footer .right .icon {
+    margin-top: 50px;
+}
+.footer .right .icon .icon1 {
+    display: flex;
+    text-align: right;
+}
+.footer .right .icon .icon1 img {
+    width: 2.2vw;
+    height: 2.2vw;
+    object-fit: cover;
+    margin: 0 50px 50px 0;
+}
+.footer .right .icon .icon2 {
+    display: flex;
+}
+.footer .right .icon .icon2 img {
+    width: 2.2vw;
+    height: 2.2vw;
+    object-fit: cover;
+    margin: 0 50px 0 0;
 }
 
 
