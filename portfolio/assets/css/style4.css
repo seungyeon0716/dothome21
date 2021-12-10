@@ -130,6 +130,7 @@
     font-size: 8vw;
     white-space: nowrap;
     position: relative;
+    overflow: hidden;
 }
 .titleWrap > div:nth-child(1) {
     margin-top: 0;
