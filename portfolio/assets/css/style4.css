@@ -373,7 +373,7 @@
 }
 .site_wrap .site .left .frame2 img:hover {
     bottom: -2vw;
-    transform: translateY(-1280px);
+    transform: translateY(-1100px);
     transition: 2s;
 }
 
@@ -387,9 +387,9 @@
     overflow: hidden;
 }
 .site_wrap .site .left .frame3 img:hover {
-    bottom: -2vw;
+    /* bottom: -2vw;
     transform: translateY(-1800px);
-    transition: 2s;
+    transition: 2s; */
 }
 
 /* frame4 */
@@ -402,8 +402,8 @@
     overflow: hidden;
 }
 .site_wrap .site .left .frame4 img:hover {
-    transform: scaleY(1.5);
-    transition: 2s;
+    /* transform: scaleY(1.5);
+    transition: 2s; */
 }
 
 .site_wrap .site .right {
