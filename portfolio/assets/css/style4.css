@@ -357,9 +357,9 @@
     overflow: hidden;
 }
 .site_wrap .site .left .frame1 img:hover {
-    bottom: -2vw;
+    /* bottom: -2vw;
     transform: translateY(-780px);
-    transition: 2s;
+    transition: 2s; */
 }
 
 /* frame2 */
